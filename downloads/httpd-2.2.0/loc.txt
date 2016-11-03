@@ -1,0 +1,31 @@
+     100 files     200 files     300 files     400 files     500 files     600 files     700 files     800 files     900 files    1000 files    1100 files    1200 files    1300 files    1400 files    1500 files    1600 files    1700 files    1800 files    1900 files    2000 files    2100 files    2164 text files.
+classified 2144 filesDuplicate file check 2144 files (1740 known unique)Unique:      100 files                                          Unique:      200 files                                          Unique:      300 files                                          Unique:      400 files                                          Unique:      500 files                                          Unique:      600 files                                          Unique:      700 files                                          Unique:      800 files                                          Unique:      900 files                                          Unique:     1000 files                                          Unique:     1100 files                                          Unique:     1200 files                                          Unique:     1300 files                                          Unique:     1400 files                                          Unique:     1500 files                                          Unique:     1600 files                                          Unique:     1700 files                                              2103 unique files.                              
+Counting:  100Counting:  200Counting:  300Counting:  400Counting:  500Counting:  600Counting:  700Counting:  800Counting:  900Counting:  1000Counting:  1100Counting:  1200Counting:  1300Counting:  1400Counting:  1500Counting:  1600Counting:  1700Counting:  1800Counting:  1900Counting:  2000Counting:  2100    1257 files ignored.
+
+http://cloc.sourceforge.net v 1.60  T=4.16 s (213.1 files/s, 66829.6 lines/s)
+--------------------------------------------------------------------------------
+Language                      files          blank        comment           code
+--------------------------------------------------------------------------------
+C                               221          22394          31986         128462
+XML                             197           9719           2938          45635
+C/C++ Header                     98           2513           9800           6868
+XSLT                             34           1133           1399           4974
+HTML                            175            269             13           1340
+CSS                               6            306            340           1326
+m4                               33            180            123           1202
+Bourne Shell                     17            195            361           1008
+Perl                              9            210            190            837
+awk                               7             75            118            520
+Pascal                            1             65              0            255
+JCL                               2              0              2            177
+DTD                               6            121            104            166
+Teamcenter def                   40             26              0            145
+lex                               1             24             61            141
+IDL                               2              0              0            112
+yacc                              1             23             31            100
+Bourne Again Shell                1              9             38             80
+DOS Batch                         2             19              5             48
+Expect                           34              0              0             34
+--------------------------------------------------------------------------------
+SUM:                            887          37281          47509         193430
+--------------------------------------------------------------------------------
