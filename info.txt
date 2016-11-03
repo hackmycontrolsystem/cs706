@@ -16,5 +16,12 @@ cflow:
 manual: https://www.gnu.org/software/cflow/manual/cflow.html 
 cflow server/main.c server/*.c modules/aaa/*.c modules/arch/*.c modules/cache/*.c support/*.c os/beos/beosd.c os/bs2000/*.c os/netware/*.c os/os2/*.c os/tpf/*.c os/unix/*.c os/win32/*.c  -o ~/cs706/all.txt
 
+Useful cflow options:
+-l  :   Print nesting level of call tree
+-n  :   Print line numbers
+-o  :   Print output in a file instead of stdout
+
+cflow -nl server.c -o cflow_output
+
 Google Cloud IP:
 instance-1: 104.198.35.166
