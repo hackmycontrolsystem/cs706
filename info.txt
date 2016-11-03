@@ -12,5 +12,9 @@ ctags:   To generate tags for all symbols in project
 cscope:  To navigate through the C functions in project
 Command: ctags -RV -x --c-types=f * > tags_functns_v1
 
+cflow:
+manual: https://www.gnu.org/software/cflow/manual/cflow.html 
+cflow server/main.c server/*.c modules/aaa/*.c modules/arch/*.c modules/cache/*.c support/*.c os/beos/beosd.c os/bs2000/*.c os/netware/*.c os/os2/*.c os/tpf/*.c os/unix/*.c os/win32/*.c  -o ~/cs706/all.txt
+
 Google Cloud IP:
 instance-1: 104.198.35.166
