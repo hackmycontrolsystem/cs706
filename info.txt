@@ -1,0 +1,16 @@
+Details on the project:
+
+httpd release taken:
+httpd 2.2.0:   https://github.com/apache/httpd/releases/tag/2.2.0 
+Release Data:  on Nov 29, 2005
+Downld link:   https://github.com/apache/httpd/archive/2.2.0.tar.gz 
+
+
+Packages used:
+cloc: For lines of code in the project
+ctags:   To generate tags for all symbols in project
+cscope:  To navigate through the C functions in project
+Command: ctags -RV -x --c-types=f * > tags_functns_v1
+
+Google Cloud IP:
+instance-1: 104.198.35.166
