@@ -78,4 +78,23 @@ for main_file in main_filelist:
 	print "main is modified to ", new_name, "at", main_file_location, main_file_value, "\n"
 #	c = c+1
 
+### Run cflow and get results 
+
+
+## Again copy back the .bak files to original files
+
+#c = 1
+for main_file in main_filelist:
+#	if c > 1:
+#		sys.exit()
+
+	main_file_location = main_file				## file location
+	main_file_location_bak = main_file_location + ".bak"
+
+	copyfile(main_file_location_bak, main_file_location)
+	print "Restored file", main_file_location_bak, "to ", main_file_location, "and deleted bakup file"	
+	os.remove(main_file_location_bak)
+	#print "Deleted the backup copy"
+#	c = c+1
+
 
