@@ -25,3 +25,8 @@ cflow -nl server.c -o cflow_output
 
 Google Cloud IP:
 instance-1: 104.198.35.166
+
+Test:
+cflow ./test/*.c ./server/*.c ./server/mpm/mpmt_os2/*.c ./server/mpm/winnt/*.c ./server/mpm/prefork/*.c ./server/mpm/netware/*.c ./server/mpm/beos/*.c ./server/mpm/worker/*.c ./server/mpm/experimental/event/*.c ./support/*.c ./srclib/pcre/*.c -o test_op1 
+
+
