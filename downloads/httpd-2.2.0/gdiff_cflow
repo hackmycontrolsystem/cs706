@@ -1361,7 +1361,7 @@ find_child_by_pid() <int find_child_by_pid (apr_proc_t *pid) at server/scoreboar
     ap_mpm_query()
 fork() <pid_t fork (void) at os/tpf/os.c:41>:
 initgroups() <int initgroups (const char *name, gid_t basegid) at support/suexec.c:69>:
-main_ab() <int main_ab (int argc, const char *const argv[]) at support/ab.c:1899>:
+main() <int main_ab (int argc, const char *const argv[]) at support/ab.c:1899>:
     SSLv23_client_method()
     apr_app_initialize()
     apr_terminate()
@@ -2127,12 +2127,12 @@ main_ab() <int main_ab (int argc, const char *const argv[]) at support/ab.c:1899
             comprando() <int comprando (struct data *a, struct data *b) at support/ab.c:692>
             SANE()
     apr_pool_destroy()
-main_checkgid() <int main_checkgid (int argc, char *argv[]) at support/checkgid.c:47>:
-main_gen_test_char() <int main_gen_test_char (int argc, char *argv[]) at server/gen_test_char.c:37>:
+main() <int main_checkgid (int argc, char *argv[]) at support/checkgid.c:47>:
+main() <int main_gen_test_char (int argc, char *argv[]) at server/gen_test_char.c:37>:
     apr_isalnum()
     apr_iscntrl()
     apr_isprint()
-main_htcacheclean() <int main_htcacheclean (int argc, const char *const argv[]) at support/htcacheclean.c:751>:
+main() <int main_htcacheclean (int argc, const char *const argv[]) at support/htcacheclean.c:751>:
     apr_app_initialize()
     apr_terminate()
     apr_filepath_name_get()
@@ -2218,7 +2218,7 @@ main_htcacheclean() <int main_htcacheclean (int argc, const char *const argv[]) 
         APR_RING_REMOVE()
         APR_RING_EMPTY()
     apr_pool_destroy()
-main_htdbm() <int main_htdbm (int argc, const char *const argv[]) at support/htdbm.c:378>:
+main() <int main_htdbm (int argc, const char *const argv[]) at support/htdbm.c:378>:
     apr_app_initialize()
     terminate() <void terminate (void) at support/htdbm.c:109>:
         apr_terminate()
@@ -2266,7 +2266,7 @@ main_htdbm() <int main_htdbm (int argc, const char *const argv[]) at support/htd
         apr_dbm_store()
     htdbm_terminate() <void htdbm_terminate (htdbm_t *htdbm) at support/htdbm.c:117>:
         apr_dbm_close()
-main_htdigest() <int main_htdigest (int argc, const char *const argv[]) at support/htdigest.c:183>:
+main() <int main_htdigest (int argc, const char *const argv[]) at support/htdigest.c:183>:
     apr_app_initialize()
     terminate() <void terminate (void) at support/htdigest.c:175>:
         apr_terminate()
@@ -2306,7 +2306,7 @@ main_htdigest() <int main_htdigest (int argc, const char *const argv[]) at suppo
         apr_file_putc()
     getword() <void getword (char *word, char *line, char stop) at support/htdigest.c:78>
     apr_file_copy()
-main_htpasswd() <int main_htpasswd (int argc, const char *const argv[]) at support/htpasswd.c:390>:
+main() <int main_htpasswd (int argc, const char *const argv[]) at support/htpasswd.c:390>:
     apr_app_initialize()
     terminate() <void terminate (void) at support/htpasswd.c:267>:
         apr_terminate()
@@ -2345,7 +2345,7 @@ main_htpasswd() <int main_htpasswd (int argc, const char *const argv[]) at suppo
         apr_file_puts()
     apr_file_close()
     apr_file_copy()
-main_httxt2dbm() <int main_httxt2dbm (int argc, const char *const argv[]) at support/httxt2dbm.c:176>:
+main() <int main_httxt2dbm (int argc, const char *const argv[]) at support/httxt2dbm.c:176>:
     apr_initialize()
     apr_terminate()
     apr_pool_create()
@@ -2371,7 +2371,7 @@ main_httxt2dbm() <int main_httxt2dbm (int argc, const char *const argv[]) at sup
         apr_file_printf()
         apr_dbm_store()
     apr_dbm_close()
-main_logresolve() <int main_logresolve (int argc, char *argv[]) at support/logresolve.c:302>:
+main() <int main_logresolve (int argc, char *argv[]) at support/logresolve.c:302>:
     WSAStartup()
     MAKEWORD()
     get_line() <int get_line (char *s, int n) at support/logresolve.c:290>:
@@ -2379,7 +2379,7 @@ main_logresolve() <int main_logresolve (int argc, char *argv[]) at support/logre
     cgethost() <void cgethost (struct in_addr ipnum, char *string, int check) at support/logresolve.c:150>:
     WSACleanup()
     stats() <void stats (FILE *output) at support/logresolve.c:233>:
-main_main() <int main_main (int argc, const char *const argv[]) at server/main.c:417>:
+main() <int main_main (int argc, const char *const argv[]) at server/main.c:417>:
     APR_OPTIONAL_FN_TYPE()
     ap_signal_server() <int ap_signal_server (int *exit_status, apr_pool_t *pconf) at server/mpm_common.c:898>:
         ap_read_pid()
@@ -2450,7 +2450,7 @@ main_main() <int main_main (int argc, const char *const argv[]) at server/main.c
     apr_pool_lock()
     ap_run_optional_fn_retrieve()
     ap_mpm_run()
-main_rotatelogs() <int main_rotatelogs (int argc, const char *const argv[]) at support/rotatelogs.c:63>:
+main() <int main_rotatelogs (int argc, const char *const argv[]) at support/rotatelogs.c:63>:
     apr_app_initialize()
     apr_terminate()
     apr_pool_create()
@@ -2467,7 +2467,7 @@ main_rotatelogs() <int main_rotatelogs (int argc, const char *const argv[]) at s
     apr_file_trunc()
     apr_file_write()
     apr_file_close()
-main_suexec() <int main_suexec (int argc, char *argv[]) at support/suexec.c:248>:
+main() <int main_suexec (int argc, char *argv[]) at support/suexec.c:248>:
     clean_env() <void clean_env (void) at support/suexec.c:204>:
         log_err() <void log_err (const char *fmt, ...) at support/suexec.c:180>:
             err_output() <void err_output (int is_error, const char *fmt, va_list ap) at support/suexec.c:147>:
