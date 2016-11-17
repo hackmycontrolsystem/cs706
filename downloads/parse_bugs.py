@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from xml.dom import minidom
 import re
-doc = minidom.parse("show_bug1.xml")
+doc = minidom.parse("show_bug.xml")
 
 cflowData = open("all_cflow",'r')
 funcData = ""
