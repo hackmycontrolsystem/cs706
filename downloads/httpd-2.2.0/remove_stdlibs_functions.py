@@ -22,6 +22,15 @@ output_filename = open("gdiff_cflow","w")
 removed_counter = 0
 for line in input_filename:
 	#line = line.strip()
+	if line[0] == 'm' and line[1] == 'a' and line[2] == 'i' and line[3] == 'n':
+		#print line
+		line1 = line.split(') <')
+		nline = "main() <" + line1[1]
+		#print nline
+		output_filename.write(nline)
+		continue
+			
+
 	if line.strip() in std_funs:
 		#print line
 		removed_counter = removed_counter + 1
@@ -29,6 +38,6 @@ for line in input_filename:
 	else:
 		output_filename.write(line)
 
-print "Total functions removed: ", removed_counter
+print "Total standard library functions removed: ", removed_counter
 input_filename.close()
 output_filename.close()
