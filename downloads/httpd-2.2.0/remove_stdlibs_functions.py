@@ -3,7 +3,7 @@ import os
 
 print "******** Cleaning up stdlib functions from cflow output  ********"
 
-functions_filename = open("std_functions",'r')
+functions_filename = open("std_functions_list",'r')
 std_funs = set()
 
 for line in functions_filename:
