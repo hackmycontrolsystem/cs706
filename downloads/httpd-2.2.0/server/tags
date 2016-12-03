@@ -1,0 +1,1777 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACCEPT_FILTER_NAME	./core.c	477;"	d	file:
+ACCEPT_FILTER_NAME	./core.c	480;"	d	file:
+ACCEPT_FILTER_NAME	./core.c	481;"	d	file:
+APACHE_MPM_BEOS_H	./mpm/beos/beos.h	25;"	d
+APACHE_MPM_BEOS_H	./mpm/beos/mpm.h	27;"	d
+APACHE_MPM_DEFAULT_H	./mpm/beos/mpm_default.h	25;"	d
+APACHE_MPM_DEFAULT_H	./mpm/experimental/event/mpm_default.h	27;"	d
+APACHE_MPM_DEFAULT_H	./mpm/mpmt_os2/mpm_default.h	26;"	d
+APACHE_MPM_DEFAULT_H	./mpm/netware/mpm_default.h	25;"	d
+APACHE_MPM_DEFAULT_H	./mpm/prefork/mpm_default.h	26;"	d
+APACHE_MPM_DEFAULT_H	./mpm/winnt/mpm_default.h	26;"	d
+APACHE_MPM_DEFAULT_H	./mpm/worker/mpm_default.h	26;"	d
+APACHE_MPM_EVENT_H	./mpm/experimental/event/mpm.h	30;"	d
+APACHE_MPM_H	./mpm/winnt/mpm.h	31;"	d
+APACHE_MPM_MPMT_OS2_H	./mpm/mpmt_os2/mpm.h	26;"	d
+APACHE_MPM_PREFORK_H	./mpm/prefork/mpm.h	32;"	d
+APACHE_MPM_THREADED_H	./mpm/netware/mpm.h	29;"	d
+APACHE_MPM_WINNT_H	./mpm/winnt/mpm_winnt.h	26;"	d
+APACHE_MPM_WORKER_H	./mpm/worker/mpm.h	30;"	d
+APR_HOOK_LINK	./connection.c	/^            APR_HOOK_LINK(create_connection)$/;"	f
+APR_WANT_IOVEC	./core.c	25;"	d	file:
+APR_WANT_IOVEC	./core_filters.c	30;"	d	file:
+APR_WANT_MEMFUNC	./core.c	27;"	d	file:
+APR_WANT_MEMFUNC	./core_filters.c	32;"	d	file:
+APR_WANT_MEMFUNC	./protocol.c	33;"	d	file:
+APR_WANT_STDIO	./config.c	38;"	d	file:
+APR_WANT_STDIO	./log.c	32;"	d	file:
+APR_WANT_STDIO	./main.c	24;"	d	file:
+APR_WANT_STDIO	./mpm/netware/mpm_netware.c	49;"	d	file:
+APR_WANT_STDIO	./mpm/prefork/prefork.c	23;"	d	file:
+APR_WANT_STDIO	./protocol.c	31;"	d	file:
+APR_WANT_STDIO	./util.c	34;"	d	file:
+APR_WANT_STRFUNC	./config.c	39;"	d	file:
+APR_WANT_STRFUNC	./core.c	26;"	d	file:
+APR_WANT_STRFUNC	./core_filters.c	31;"	d	file:
+APR_WANT_STRFUNC	./listen.c	20;"	d	file:
+APR_WANT_STRFUNC	./log.c	33;"	d	file:
+APR_WANT_STRFUNC	./main.c	25;"	d	file:
+APR_WANT_STRFUNC	./mpm/experimental/event/event.c	58;"	d	file:
+APR_WANT_STRFUNC	./mpm/experimental/event/pod.h	27;"	d
+APR_WANT_STRFUNC	./mpm/netware/mpm_netware.c	50;"	d	file:
+APR_WANT_STRFUNC	./mpm/prefork/prefork.c	24;"	d	file:
+APR_WANT_STRFUNC	./mpm/worker/pod.h	27;"	d
+APR_WANT_STRFUNC	./mpm/worker/worker.c	33;"	d	file:
+APR_WANT_STRFUNC	./mpm_common.c	32;"	d	file:
+APR_WANT_STRFUNC	./protocol.c	32;"	d	file:
+APR_WANT_STRFUNC	./request.c	32;"	d	file:
+APR_WANT_STRFUNC	./scoreboard.c	22;"	d	file:
+APR_WANT_STRFUNC	./util.c	35;"	d	file:
+APR_WANT_STRFUNC	./util_debug.c	17;"	d	file:
+APR_WANT_STRFUNC	./util_filter.c	17;"	d	file:
+APR_WANT_STRFUNC	./util_pcre.c	50;"	d	file:
+APR_WANT_STRFUNC	./util_script.c	21;"	d	file:
+APR_WANT_STRFUNC	./vhost.c	27;"	d	file:
+AP_CHILD_THREAD_FROM_ID	./mpm/beos/mpm_default.h	30;"	d
+AP_CORE_DECLARE_NONSTD	./protocol.c	/^AP_CORE_DECLARE_NONSTD(apr_status_t) ap_content_length_filter($/;"	f
+AP_CORE_DECLARE_NONSTD	./protocol.c	/^AP_CORE_DECLARE_NONSTD(apr_status_t) ap_old_write_filter($/;"	f
+AP_CORE_DECLARE_NONSTD	./request.c	/^AP_CORE_DECLARE_NONSTD(apr_status_t) ap_sub_req_output_filter(ap_filter_t *f,$/;"	f
+AP_DECLARE	./core.c	/^AP_DECLARE(apr_off_t) ap_get_limit_req_body(const request_rec *r)$/;"	f
+AP_DECLARE	./core.c	/^AP_DECLARE(apr_port_t) ap_get_server_port(const request_rec *r)$/;"	f
+AP_DECLARE	./core.c	/^AP_DECLARE(apr_size_t) ap_register_request_note(void)$/;"	f
+AP_DECLARE	./core.c	/^AP_DECLARE(size_t) ap_get_limit_xml_body(const request_rec *r)$/;"	f
+AP_DECLARE	./log.c	/^AP_DECLARE(apr_status_t) ap_read_pid(apr_pool_t *p, const char *filename,$/;"	f
+AP_DECLARE	./log.c	/^AP_DECLARE(apr_status_t) ap_replace_stderr_log(apr_pool_t *p,$/;"	f
+AP_DECLARE	./mpm/beos/beos.c	/^AP_DECLARE(apr_status_t) ap_mpm_query(int query_code, int *result)$/;"	f
+AP_DECLARE	./mpm/experimental/event/event.c	/^AP_DECLARE(apr_status_t) ap_mpm_query(int query_code, int *result)$/;"	f
+AP_DECLARE	./mpm/experimental/event/pod.c	/^AP_DECLARE(apr_status_t) ap_mpm_pod_close(ap_pod_t * pod)$/;"	f
+AP_DECLARE	./mpm/experimental/event/pod.c	/^AP_DECLARE(apr_status_t) ap_mpm_pod_open(apr_pool_t * p, ap_pod_t ** pod)$/;"	f
+AP_DECLARE	./mpm/experimental/event/pod.c	/^AP_DECLARE(apr_status_t) ap_mpm_pod_signal(ap_pod_t * pod, int graceful)$/;"	f
+AP_DECLARE	./mpm/mpmt_os2/mpmt_os2.c	/^AP_DECLARE(apr_status_t) ap_mpm_query(int query_code, int *result)$/;"	f
+AP_DECLARE	./mpm/netware/mpm_netware.c	/^AP_DECLARE(apr_status_t) ap_mpm_query(int query_code, int *result)$/;"	f
+AP_DECLARE	./mpm/prefork/prefork.c	/^AP_DECLARE(apr_status_t) ap_mpm_query(int query_code, int *result)$/;"	f
+AP_DECLARE	./mpm/winnt/mpm_winnt.c	/^AP_DECLARE(apr_status_t) ap_mpm_query(int query_code, int *result)$/;"	f
+AP_DECLARE	./mpm/worker/pod.c	/^AP_DECLARE(apr_status_t) ap_mpm_pod_close(ap_pod_t *pod)$/;"	f
+AP_DECLARE	./mpm/worker/pod.c	/^AP_DECLARE(apr_status_t) ap_mpm_pod_open(apr_pool_t *p, ap_pod_t **pod)$/;"	f
+AP_DECLARE	./mpm/worker/pod.c	/^AP_DECLARE(apr_status_t) ap_mpm_pod_signal(ap_pod_t *pod, int graceful)$/;"	f
+AP_DECLARE	./mpm/worker/worker.c	/^AP_DECLARE(apr_status_t) ap_mpm_query(int query_code, int *result)$/;"	f
+AP_DECLARE	./mpm_common.c	/^AP_DECLARE(apr_status_t) ap_mpm_pod_check(ap_pod_t *pod)$/;"	f
+AP_DECLARE	./mpm_common.c	/^AP_DECLARE(apr_status_t) ap_mpm_pod_close(ap_pod_t *pod)$/;"	f
+AP_DECLARE	./mpm_common.c	/^AP_DECLARE(apr_status_t) ap_mpm_pod_open(apr_pool_t *p, ap_pod_t **pod)$/;"	f
+AP_DECLARE	./mpm_common.c	/^AP_DECLARE(apr_status_t) ap_mpm_pod_signal(ap_pod_t *pod)$/;"	f
+AP_DECLARE	./mpm_common.c	/^AP_DECLARE(gid_t) ap_gname2id(const char *name)$/;"	f
+AP_DECLARE	./mpm_common.c	/^AP_DECLARE(uid_t) ap_uname2id(const char *name)$/;"	f
+AP_DECLARE	./protocol.c	/^AP_DECLARE(apr_status_t) ap_rgetline(char **s, apr_size_t n,$/;"	f
+AP_DECLARE	./protocol.c	/^AP_DECLARE(apr_status_t) ap_rgetline_core(char **s, apr_size_t n,$/;"	f
+AP_DECLARE	./protocol.c	/^AP_DECLARE(apr_status_t) ap_send_fd(apr_file_t *fd, request_rec *r,$/;"	f
+AP_DECLARE	./protocol.c	/^AP_DECLARE(apr_time_t) ap_rationalize_mtime(request_rec *r, apr_time_t mtime)$/;"	f
+AP_DECLARE	./protocol.c	/^AP_DECLARE(size_t) ap_send_mmap(apr_mmap_t *mm, request_rec *r, size_t offset,$/;"	f
+AP_DECLARE	./provider.c	/^AP_DECLARE(apr_status_t) ap_register_provider(apr_pool_t *pool,$/;"	f
+AP_DECLARE	./util.c	/^AP_DECLARE(apr_size_t) ap_escape_errorlog_item(char *dest, const char *source,$/;"	f
+AP_DECLARE	./util.c	/^AP_DECLARE(apr_status_t) ap_pcfg_openfile(ap_configfile_t **ret_cfg,$/;"	f
+AP_DECLARE	./util_filter.c	/^AP_DECLARE(apr_status_t) ap_fflush(ap_filter_t *f, apr_bucket_brigade *bb)$/;"	f
+AP_DECLARE	./util_filter.c	/^AP_DECLARE(apr_status_t) ap_get_brigade(ap_filter_t *next,$/;"	f
+AP_DECLARE	./util_filter.c	/^AP_DECLARE(apr_status_t) ap_pass_brigade(ap_filter_t *next,$/;"	f
+AP_DECLARE	./util_filter.c	/^AP_DECLARE(apr_status_t) ap_save_brigade(ap_filter_t *f,$/;"	f
+AP_DECLARE	./util_pcre.c	/^AP_DECLARE(apr_size_t) ap_regerror(int errcode, const ap_regex_t *preg,$/;"	f
+AP_DECLARE	./util_time.c	/^AP_DECLARE(apr_status_t) ap_explode_recent_gmt(apr_time_exp_t * tm,$/;"	f
+AP_DECLARE	./util_time.c	/^AP_DECLARE(apr_status_t) ap_explode_recent_localtime(apr_time_exp_t * tm,$/;"	f
+AP_DECLARE	./util_time.c	/^AP_DECLARE(apr_status_t) ap_recent_ctime(char *date_str, apr_time_t t)$/;"	f
+AP_DECLARE	./util_time.c	/^AP_DECLARE(apr_status_t) ap_recent_rfc822_date(char *date_str, apr_time_t t)$/;"	f
+AP_DECLARE_NONSTD	./util_filter.c	/^AP_DECLARE_NONSTD(apr_status_t) ap_filter_flush(apr_bucket_brigade *bb,$/;"	f
+AP_DECLARE_NONSTD	./util_filter.c	/^AP_DECLARE_NONSTD(apr_status_t) ap_fprintf(ap_filter_t *f,$/;"	f
+AP_DECLARE_NONSTD	./util_filter.c	/^AP_DECLARE_NONSTD(apr_status_t) ap_fputstrs(ap_filter_t *f,$/;"	f
+AP_DEFAULT_LIMIT_REQ_BODY	./core.c	56;"	d	file:
+AP_DEFAULT_LIMIT_XML_BODY	./core.c	60;"	d	file:
+AP_DEFAULT_SERVICE_NAME	./mpm/winnt/mpm_winnt.h	35;"	d
+AP_GRACEFUL	./mpm/experimental/event/pod.h	44;"	d
+AP_GRACEFUL	./mpm/worker/pod.h	44;"	d
+AP_ID_FROM_CHILD_THREAD	./mpm/beos/mpm_default.h	28;"	d
+AP_LIMIT_REQ_BODY_UNSET	./core.c	55;"	d	file:
+AP_LIMIT_UNSET	./core.c	59;"	d	file:
+AP_MAX_ARGC	./config.c	716;"	d	file:
+AP_MAX_INCLUDE_DEPTH	./core.c	66;"	d	file:
+AP_MAX_INCLUDE_DIR_DEPTH	./config.c	193;"	d	file:
+AP_MIN_SENDFILE_BYTES	./core.c	62;"	d	file:
+AP_MIN_SENDFILE_BYTES	./core_filters.c	59;"	d	file:
+AP_MPM_DISABLE_NAGLE_ACCEPTED_SOCK	./mpm/experimental/event/mpm.h	50;"	d
+AP_MPM_DISABLE_NAGLE_ACCEPTED_SOCK	./mpm/mpmt_os2/mpm.h	39;"	d
+AP_MPM_DISABLE_NAGLE_ACCEPTED_SOCK	./mpm/netware/mpm.h	45;"	d
+AP_MPM_DISABLE_NAGLE_ACCEPTED_SOCK	./mpm/prefork/mpm.h	51;"	d
+AP_MPM_DISABLE_NAGLE_ACCEPTED_SOCK	./mpm/worker/mpm.h	50;"	d
+AP_MPM_USES_POD	./mpm/prefork/mpm.h	53;"	d
+AP_MPM_WANT_FATAL_SIGNAL_HANDLER	./mpm/experimental/event/mpm.h	49;"	d
+AP_MPM_WANT_FATAL_SIGNAL_HANDLER	./mpm/prefork/mpm.h	49;"	d
+AP_MPM_WANT_FATAL_SIGNAL_HANDLER	./mpm/worker/mpm.h	49;"	d
+AP_MPM_WANT_PROCESS_CHILD_STATUS	./mpm/beos/mpm.h	38;"	d
+AP_MPM_WANT_PROCESS_CHILD_STATUS	./mpm/experimental/event/mpm.h	38;"	d
+AP_MPM_WANT_PROCESS_CHILD_STATUS	./mpm/prefork/mpm.h	40;"	d
+AP_MPM_WANT_PROCESS_CHILD_STATUS	./mpm/worker/mpm.h	38;"	d
+AP_MPM_WANT_RECLAIM_CHILD_PROCESSES	./mpm/beos/mpm.h	36;"	d
+AP_MPM_WANT_RECLAIM_CHILD_PROCESSES	./mpm/experimental/event/mpm.h	36;"	d
+AP_MPM_WANT_RECLAIM_CHILD_PROCESSES	./mpm/prefork/mpm.h	38;"	d
+AP_MPM_WANT_RECLAIM_CHILD_PROCESSES	./mpm/worker/mpm.h	36;"	d
+AP_MPM_WANT_SET_ACCEPT_LOCK_MECH	./mpm/experimental/event/mpm.h	44;"	d
+AP_MPM_WANT_SET_ACCEPT_LOCK_MECH	./mpm/prefork/mpm.h	46;"	d
+AP_MPM_WANT_SET_ACCEPT_LOCK_MECH	./mpm/worker/mpm.h	44;"	d
+AP_MPM_WANT_SET_COREDUMPDIR	./mpm/beos/mpm.h	42;"	d
+AP_MPM_WANT_SET_COREDUMPDIR	./mpm/experimental/event/mpm.h	43;"	d
+AP_MPM_WANT_SET_COREDUMPDIR	./mpm/prefork/mpm.h	45;"	d
+AP_MPM_WANT_SET_COREDUMPDIR	./mpm/winnt/mpm.h	39;"	d
+AP_MPM_WANT_SET_COREDUMPDIR	./mpm/worker/mpm.h	43;"	d
+AP_MPM_WANT_SET_GRACEFUL_SHUTDOWN	./mpm/experimental/event/mpm.h	48;"	d
+AP_MPM_WANT_SET_GRACEFUL_SHUTDOWN	./mpm/prefork/mpm.h	50;"	d
+AP_MPM_WANT_SET_GRACEFUL_SHUTDOWN	./mpm/worker/mpm.h	48;"	d
+AP_MPM_WANT_SET_LOCKFILE	./mpm/experimental/event/mpm.h	41;"	d
+AP_MPM_WANT_SET_LOCKFILE	./mpm/prefork/mpm.h	43;"	d
+AP_MPM_WANT_SET_LOCKFILE	./mpm/worker/mpm.h	41;"	d
+AP_MPM_WANT_SET_MAX_MEM_FREE	./mpm/beos/mpm.h	43;"	d
+AP_MPM_WANT_SET_MAX_MEM_FREE	./mpm/experimental/event/mpm.h	46;"	d
+AP_MPM_WANT_SET_MAX_MEM_FREE	./mpm/mpmt_os2/mpm.h	40;"	d
+AP_MPM_WANT_SET_MAX_MEM_FREE	./mpm/netware/mpm.h	43;"	d
+AP_MPM_WANT_SET_MAX_MEM_FREE	./mpm/prefork/mpm.h	48;"	d
+AP_MPM_WANT_SET_MAX_MEM_FREE	./mpm/winnt/mpm.h	41;"	d
+AP_MPM_WANT_SET_MAX_MEM_FREE	./mpm/worker/mpm.h	46;"	d
+AP_MPM_WANT_SET_MAX_REQUESTS	./mpm/beos/mpm.h	41;"	d
+AP_MPM_WANT_SET_MAX_REQUESTS	./mpm/experimental/event/mpm.h	42;"	d
+AP_MPM_WANT_SET_MAX_REQUESTS	./mpm/mpmt_os2/mpm.h	38;"	d
+AP_MPM_WANT_SET_MAX_REQUESTS	./mpm/netware/mpm.h	42;"	d
+AP_MPM_WANT_SET_MAX_REQUESTS	./mpm/prefork/mpm.h	44;"	d
+AP_MPM_WANT_SET_MAX_REQUESTS	./mpm/winnt/mpm.h	38;"	d
+AP_MPM_WANT_SET_MAX_REQUESTS	./mpm/worker/mpm.h	42;"	d
+AP_MPM_WANT_SET_PIDFILE	./mpm/beos/mpm.h	39;"	d
+AP_MPM_WANT_SET_PIDFILE	./mpm/experimental/event/mpm.h	39;"	d
+AP_MPM_WANT_SET_PIDFILE	./mpm/mpmt_os2/mpm.h	37;"	d
+AP_MPM_WANT_SET_PIDFILE	./mpm/prefork/mpm.h	41;"	d
+AP_MPM_WANT_SET_PIDFILE	./mpm/winnt/mpm.h	37;"	d
+AP_MPM_WANT_SET_PIDFILE	./mpm/worker/mpm.h	39;"	d
+AP_MPM_WANT_SET_SCOREBOARD	./mpm/beos/mpm.h	40;"	d
+AP_MPM_WANT_SET_SCOREBOARD	./mpm/experimental/event/mpm.h	40;"	d
+AP_MPM_WANT_SET_SCOREBOARD	./mpm/prefork/mpm.h	42;"	d
+AP_MPM_WANT_SET_SCOREBOARD	./mpm/winnt/mpm.h	40;"	d
+AP_MPM_WANT_SET_SCOREBOARD	./mpm/worker/mpm.h	40;"	d
+AP_MPM_WANT_SET_STACKSIZE	./mpm/experimental/event/mpm.h	47;"	d
+AP_MPM_WANT_SET_STACKSIZE	./mpm/netware/mpm.h	44;"	d
+AP_MPM_WANT_SET_STACKSIZE	./mpm/winnt/mpm.h	42;"	d
+AP_MPM_WANT_SET_STACKSIZE	./mpm/worker/mpm.h	47;"	d
+AP_MPM_WANT_SIGNAL_SERVER	./mpm/experimental/event/mpm.h	45;"	d
+AP_MPM_WANT_SIGNAL_SERVER	./mpm/prefork/mpm.h	47;"	d
+AP_MPM_WANT_SIGNAL_SERVER	./mpm/worker/mpm.h	45;"	d
+AP_MPM_WANT_WAIT_OR_TIMEOUT	./mpm/beos/mpm.h	37;"	d
+AP_MPM_WANT_WAIT_OR_TIMEOUT	./mpm/experimental/event/mpm.h	37;"	d
+AP_MPM_WANT_WAIT_OR_TIMEOUT	./mpm/prefork/mpm.h	39;"	d
+AP_MPM_WANT_WAIT_OR_TIMEOUT	./mpm/worker/mpm.h	37;"	d
+AP_RESTART	./mpm/experimental/event/pod.h	43;"	d
+AP_RESTART	./mpm/worker/pod.h	43;"	d
+AP_WIN9XCONHOOK_H	./mpm/winnt/Win9xConHook.h	26;"	d
+BEOS_MPM	./mpm/beos/mpm.h	29;"	d
+BRIGADE_NORMALIZE	./core_filters.c	64;"	d	file:
+CHILD_HANDLE	./mpm/winnt/mpm_winnt.c	853;"	d	file:
+COMP_CONTEXT	./mpm/winnt/mpm_winnt.h	/^} COMP_CONTEXT, *PCOMP_CONTEXT;$/;"	t	typeref:struct:CompContext
+CONTAINING_RECORD	./mpm/winnt/mpm_winnt.h	92;"	d
+CONTAINING_RECORD	./mpm/winnt/mpm_winnt.h	94;"	d
+CORE_PRIVATE	./config.c	42;"	d	file:
+CORE_PRIVATE	./connection.c	20;"	d	file:
+CORE_PRIVATE	./core.c	30;"	d	file:
+CORE_PRIVATE	./core_filters.c	35;"	d	file:
+CORE_PRIVATE	./listen.c	23;"	d	file:
+CORE_PRIVATE	./log.c	43;"	d	file:
+CORE_PRIVATE	./main.c	28;"	d	file:
+CORE_PRIVATE	./mpm/beos/beos.c	34;"	d	file:
+CORE_PRIVATE	./mpm/experimental/event/event.c	78;"	d	file:
+CORE_PRIVATE	./mpm/mpmt_os2/mpmt_os2.c	39;"	d	file:
+CORE_PRIVATE	./mpm/mpmt_os2/mpmt_os2_child.c	17;"	d	file:
+CORE_PRIVATE	./mpm/netware/mpm_netware.c	64;"	d	file:
+CORE_PRIVATE	./mpm/prefork/prefork.c	34;"	d	file:
+CORE_PRIVATE	./mpm/winnt/child.c	19;"	d	file:
+CORE_PRIVATE	./mpm/winnt/mpm_winnt.c	19;"	d	file:
+CORE_PRIVATE	./mpm/winnt/nt_eventlog.c	17;"	d	file:
+CORE_PRIVATE	./mpm/winnt/service.c	22;"	d	file:
+CORE_PRIVATE	./mpm/worker/worker.c	53;"	d	file:
+CORE_PRIVATE	./protocol.c	36;"	d	file:
+CORE_PRIVATE	./request.c	35;"	d	file:
+CORE_PRIVATE	./util.c	45;"	d	file:
+CORE_PRIVATE	./util_cfgtree.c	17;"	d	file:
+CORE_PRIVATE	./util_script.c	28;"	d	file:
+CORE_PRIVATE	./vhost.c	30;"	d	file:
+CommandLineInterpreter	./mpm/netware/mpm_netware.c	/^static int CommandLineInterpreter(scr_t screenID, const char *commandLine)$/;"	f	file:
+CompContext	./mpm/winnt/mpm_winnt.h	/^typedef struct CompContext {$/;"	s
+ConsoleHandler	./mpm/netware/mpm_netware.c	/^static  CommandParser_t ConsoleHandler = {0, NULL, 0};$/;"	v	file:
+DBPRINT0	./mpm/netware/mpm_netware.c	160;"	d	file:
+DBPRINT0	./mpm/netware/mpm_netware.c	164;"	d	file:
+DBPRINT1	./mpm/netware/mpm_netware.c	161;"	d	file:
+DBPRINT1	./mpm/netware/mpm_netware.c	165;"	d	file:
+DBPRINT2	./mpm/netware/mpm_netware.c	162;"	d	file:
+DBPRINT2	./mpm/netware/mpm_netware.c	166;"	d	file:
+DEFAULT_LOCKFILE	./mpm/experimental/event/mpm_default.h	56;"	d
+DEFAULT_LOCKFILE	./mpm/prefork/mpm_default.h	51;"	d
+DEFAULT_LOCKFILE	./mpm/worker/mpm_default.h	55;"	d
+DEFAULT_MAX_FREE_DAEMON	./mpm/experimental/event/mpm_default.h	41;"	d
+DEFAULT_MAX_FREE_DAEMON	./mpm/netware/mpm_default.h	39;"	d
+DEFAULT_MAX_FREE_DAEMON	./mpm/prefork/mpm_default.h	40;"	d
+DEFAULT_MAX_FREE_DAEMON	./mpm/worker/mpm_default.h	40;"	d
+DEFAULT_MAX_FREE_THREADS	./mpm/beos/mpm_default.h	56;"	d
+DEFAULT_MAX_FREE_THREADS	./mpm/netware/mpm_default.h	75;"	d
+DEFAULT_MAX_REQUESTS_PER_CHILD	./mpm/experimental/event/mpm_default.h	75;"	d
+DEFAULT_MAX_REQUESTS_PER_CHILD	./mpm/mpmt_os2/mpm_default.h	64;"	d
+DEFAULT_MAX_REQUESTS_PER_CHILD	./mpm/netware/mpm_default.h	112;"	d
+DEFAULT_MAX_REQUESTS_PER_CHILD	./mpm/prefork/mpm_default.h	70;"	d
+DEFAULT_MAX_REQUESTS_PER_CHILD	./mpm/winnt/mpm_default.h	85;"	d
+DEFAULT_MAX_REQUESTS_PER_CHILD	./mpm/worker/mpm_default.h	74;"	d
+DEFAULT_MAX_REQUESTS_PER_THREAD	./mpm/beos/mpm_default.h	80;"	d
+DEFAULT_MAX_SPARE_THREAD	./mpm/mpmt_os2/mpm_default.h	39;"	d
+DEFAULT_MIN_FREE_DAEMON	./mpm/experimental/event/mpm_default.h	47;"	d
+DEFAULT_MIN_FREE_DAEMON	./mpm/netware/mpm_default.h	45;"	d
+DEFAULT_MIN_FREE_DAEMON	./mpm/prefork/mpm_default.h	46;"	d
+DEFAULT_MIN_FREE_DAEMON	./mpm/worker/mpm_default.h	46;"	d
+DEFAULT_MIN_FREE_THREADS	./mpm/beos/mpm_default.h	61;"	d
+DEFAULT_MIN_FREE_THREADS	./mpm/netware/mpm_default.h	81;"	d
+DEFAULT_MIN_SPARE_THREAD	./mpm/mpmt_os2/mpm_default.h	45;"	d
+DEFAULT_NUM_DAEMON	./mpm/winnt/mpm_default.h	61;"	d
+DEFAULT_PIDLOG	./mpm/beos/mpm_default.h	66;"	d
+DEFAULT_PIDLOG	./mpm/experimental/event/mpm_default.h	61;"	d
+DEFAULT_PIDLOG	./mpm/mpmt_os2/mpm_default.h	50;"	d
+DEFAULT_PIDLOG	./mpm/prefork/mpm_default.h	56;"	d
+DEFAULT_PIDLOG	./mpm/winnt/mpm_default.h	71;"	d
+DEFAULT_PIDLOG	./mpm/worker/mpm_default.h	60;"	d
+DEFAULT_REL_RUNTIMEDIR	./mpm/netware/mpm_default.h	86;"	d
+DEFAULT_REL_RUNTIMEDIR	./mpm/winnt/mpm_default.h	66;"	d
+DEFAULT_SERVER_LIMIT	./mpm/experimental/event/event.c	111;"	d	file:
+DEFAULT_SERVER_LIMIT	./mpm/prefork/prefork.c	77;"	d	file:
+DEFAULT_SERVER_LIMIT	./mpm/worker/worker.c	85;"	d	file:
+DEFAULT_START_DAEMON	./mpm/experimental/event/mpm_default.h	33;"	d
+DEFAULT_START_DAEMON	./mpm/mpmt_os2/mpm_default.h	31;"	d
+DEFAULT_START_DAEMON	./mpm/netware/mpm_default.h	31;"	d
+DEFAULT_START_DAEMON	./mpm/prefork/mpm_default.h	32;"	d
+DEFAULT_START_DAEMON	./mpm/worker/mpm_default.h	32;"	d
+DEFAULT_START_THREADS	./mpm/beos/mpm_default.h	36;"	d
+DEFAULT_START_THREADS	./mpm/netware/mpm_default.h	67;"	d
+DEFAULT_THREADS	./mpm/beos/mpm_default.h	40;"	d
+DEFAULT_THREADS	./mpm/beos/mpm_default.h	43;"	d
+DEFAULT_THREADS_PER_CHILD	./mpm/experimental/event/mpm_default.h	51;"	d
+DEFAULT_THREADS_PER_CHILD	./mpm/netware/mpm_default.h	60;"	d
+DEFAULT_THREADS_PER_CHILD	./mpm/winnt/mpm_default.h	51;"	d
+DEFAULT_THREADS_PER_CHILD	./mpm/worker/mpm_default.h	50;"	d
+DEFAULT_THREAD_LIMIT	./mpm/experimental/event/event.c	129;"	d	file:
+DEFAULT_THREAD_LIMIT	./mpm/winnt/mpm_default.h	36;"	d
+DEFAULT_THREAD_LIMIT	./mpm/worker/worker.c	103;"	d	file:
+DEFAULT_THREAD_STACKSIZE	./mpm/netware/mpm_default.h	118;"	d
+DO_NOTHING	./mpm_common.c	/^typedef enum {DO_NOTHING, SEND_SIGTERM, SEND_SIGKILL, GIVEUP} action_t;$/;"	e	enum:__anon17	file:
+DbgPrintf	./mpm/winnt/Win9xConHook.c	/^VOID DbgPrintf($/;"	f
+EVENT_MPM	./mpm/experimental/event/mpm.h	32;"	d
+EnumttyWindow	./mpm/winnt/Win9xConHook.c	/^static BOOL CALLBACK EnumttyWindow(HWND wnd, LPARAM retwnd)$/;"	f	file:
+FDQUEUE_H	./mpm/experimental/event/fdqueue.h	26;"	d
+FDQUEUE_H	./mpm/worker/fdqueue.h	26;"	d
+FILTER_POOL	./util_filter.c	30;"	d	file:
+GIVEUP	./mpm_common.c	/^typedef enum {DO_NOTHING, SEND_SIGTERM, SEND_SIGKILL, GIVEUP} action_t;$/;"	e	enum:__anon17	file:
+GRACEFUL_CHAR	./mpm/experimental/event/pod.h	41;"	d
+GRACEFUL_CHAR	./mpm/worker/pod.h	41;"	d
+HANDLEDCOMMAND	./mpm/netware/mpm_netware.c	152;"	d	file:
+HARD_SERVER_LIMIT	./mpm/beos/beos.c	75;"	d	file:
+HARD_SERVER_LIMIT	./mpm/mpmt_os2/mpmt_os2.c	64;"	d	file:
+HARD_SERVER_LIMIT	./mpm/mpmt_os2/mpmt_os2_child.c	45;"	d	file:
+HARD_SERVER_LIMIT	./mpm/netware/mpm_netware.c	103;"	d	file:
+HARD_SERVER_LIMIT	./mpm/winnt/mpm_default.h	56;"	d
+HARD_THREAD_LIMIT	./mpm/beos/beos.c	85;"	d	file:
+HARD_THREAD_LIMIT	./mpm/beos/beos.c	88;"	d	file:
+HARD_THREAD_LIMIT	./mpm/mpmt_os2/mpmt_os2.c	69;"	d	file:
+HARD_THREAD_LIMIT	./mpm/mpmt_os2/mpmt_os2_child.c	50;"	d	file:
+HARD_THREAD_LIMIT	./mpm/netware/mpm_default.h	56;"	d
+HARD_THREAD_LIMIT	./mpm/prefork/prefork.c	88;"	d	file:
+HookProc	./mpm/winnt/Win9xConHook.c	/^int HookProc(int hc, HWND *hwnd, UINT *msg, WPARAM *wParam, LPARAM *lParam)$/;"	f
+ID_FROM_CHILD_THREAD	./mpm/experimental/event/event.c	203;"	d	file:
+ID_FROM_CHILD_THREAD	./mpm/mpmt_os2/mpmt_os2_child.c	53;"	d	file:
+ID_FROM_CHILD_THREAD	./mpm/worker/worker.c	156;"	d	file:
+INCL_DOS	./mpm/mpmt_os2/mpmt_os2.c	41;"	d	file:
+INCL_DOS	./mpm/mpmt_os2/mpmt_os2_child.c	19;"	d	file:
+INCL_DOS	./util_script.c	42;"	d	file:
+INCL_DOSERRORS	./mpm/mpmt_os2/mpmt_os2.c	42;"	d	file:
+INCL_DOSERRORS	./mpm/mpmt_os2/mpmt_os2_child.c	20;"	d	file:
+INCL_NOPMAPI	./mpm/mpmt_os2/mpmt_os2.c	40;"	d	file:
+INCL_NOPMAPI	./mpm/mpmt_os2/mpmt_os2_child.c	18;"	d	file:
+INSERT_BEFORE	./util_filter.c	39;"	d	file:
+INTERVAL_OF_WRITABLE_PROBES	./mpm_common.c	314;"	d	file:
+IOCP_CONNECTION_ACCEPTED	./mpm/winnt/mpm_winnt.h	/^    IOCP_CONNECTION_ACCEPTED = 1,$/;"	e	enum:__anon9
+IOCP_SHUTDOWN	./mpm/winnt/mpm_winnt.h	/^    IOCP_SHUTDOWN = 4$/;"	e	enum:__anon9
+IOCP_WAIT_FOR_RECEIVE	./mpm/winnt/mpm_winnt.h	/^    IOCP_WAIT_FOR_RECEIVE = 2,$/;"	e	enum:__anon9
+IOCP_WAIT_FOR_TRANSMITFILE	./mpm/winnt/mpm_winnt.h	/^    IOCP_WAIT_FOR_TRANSMITFILE = 3,$/;"	e	enum:__anon9
+IPHASH_TABLE_SIZE	./vhost.c	77;"	d	file:
+IS_IN6ADDR_ANY	./listen.c	348;"	d	file:
+IS_INADDR_ANY	./listen.c	343;"	d	file:
+IS_SLASH	./util.c	80;"	d	file:
+IS_SLASH	./util.c	82;"	d	file:
+InstallConsoleHandler	./mpm/netware/mpm_netware.c	/^static int InstallConsoleHandler(void)$/;"	f	file:
+LISTENER_SIGNAL	./mpm/experimental/event/event.c	252;"	d	file:
+LISTENER_SIGNAL	./mpm/worker/worker.c	214;"	d	file:
+MALFORMED_HEADER_LENGTH_TO_SHOW	./util_script.c	54;"	d	file:
+MALFORMED_MESSAGE	./util_script.c	53;"	d	file:
+MAXHOSTNAMELEN	./util.c	1988;"	d	file:
+MAX_ACCEPTEX_ERR_COUNT	./mpm/winnt/child.c	487;"	d	file:
+MAX_IOVEC_TO_WRITE	./core_filters.c	521;"	d	file:
+MAX_IOVEC_TO_WRITE	./core_filters.c	524;"	d	file:
+MAX_IOVEC_TO_WRITE	./core_filters.c	526;"	d	file:
+MAX_SECS_TO_LINGER	./connection.c	66;"	d	file:
+MAX_SELECT_ERRORS	./mpm/winnt/child.c	270;"	d	file:
+MAX_SERVER_LIMIT	./mpm/experimental/event/event.c	118;"	d	file:
+MAX_SERVER_LIMIT	./mpm/prefork/prefork.c	84;"	d	file:
+MAX_SERVER_LIMIT	./mpm/worker/worker.c	92;"	d	file:
+MAX_SIGNAL_NAME	./mpm/winnt/mpm_winnt.c	239;"	d	file:
+MAX_SPAWN_RATE	./mpm/beos/beos.c	681;"	d	file:
+MAX_SPAWN_RATE	./mpm/experimental/event/event.c	1613;"	d	file:
+MAX_SPAWN_RATE	./mpm/netware/mpm_netware.c	593;"	d	file:
+MAX_SPAWN_RATE	./mpm/prefork/prefork.c	770;"	d	file:
+MAX_SPAWN_RATE	./mpm/worker/worker.c	1366;"	d	file:
+MAX_THREAD_LIMIT	./mpm/experimental/event/event.c	136;"	d	file:
+MAX_THREAD_LIMIT	./mpm/winnt/mpm_default.h	44;"	d
+MAX_THREAD_LIMIT	./mpm/worker/worker.c	110;"	d	file:
+MAX_WB_RETRIES	./mpm/netware/mpm_netware.c	315;"	d	file:
+MIN_LINE_ALLOC	./protocol.c	187;"	d	file:
+MPMT_OS2_MPM	./mpm/mpmt_os2/mpm.h	28;"	d
+MPM_ACCEPT_FUNC	./mpm/experimental/event/mpm.h	54;"	d
+MPM_ACCEPT_FUNC	./mpm/prefork/mpm.h	56;"	d
+MPM_ACCEPT_FUNC	./mpm/worker/mpm.h	54;"	d
+MPM_CHILD_PID	./mpm/beos/mpm.h	33;"	d
+MPM_CHILD_PID	./mpm/experimental/event/mpm.h	52;"	d
+MPM_CHILD_PID	./mpm/netware/mpm.h	50;"	d
+MPM_CHILD_PID	./mpm/prefork/mpm.h	54;"	d
+MPM_CHILD_PID	./mpm/worker/mpm.h	52;"	d
+MPM_NAME	./mpm/beos/mpm.h	32;"	d
+MPM_NAME	./mpm/experimental/event/mpm.h	34;"	d
+MPM_NAME	./mpm/mpmt_os2/mpm.h	34;"	d
+MPM_NAME	./mpm/netware/mpm.h	33;"	d
+MPM_NAME	./mpm/prefork/mpm.h	36;"	d
+MPM_NAME	./mpm/winnt/mpm.h	35;"	d
+MPM_NAME	./mpm/worker/mpm.h	34;"	d
+MPM_NOTE_CHILD_KILLED	./mpm/beos/mpm.h	34;"	d
+MPM_NOTE_CHILD_KILLED	./mpm/experimental/event/mpm.h	53;"	d
+MPM_NOTE_CHILD_KILLED	./mpm/netware/mpm.h	51;"	d
+MPM_NOTE_CHILD_KILLED	./mpm/prefork/mpm.h	55;"	d
+MPM_NOTE_CHILD_KILLED	./mpm/worker/mpm.h	53;"	d
+NOTMYCOMMAND	./mpm/netware/mpm_netware.c	153;"	d	file:
+NOUSER	./mpm/winnt/service.c	33;"	d	file:
+NUM_WAIT_HANDLES	./mpm/winnt/mpm_winnt.c	852;"	d	file:
+Overlapped	./mpm/winnt/mpm_winnt.h	/^    OVERLAPPED Overlapped;$/;"	m	struct:CompContext
+PADDED_ADDR_SIZE	./mpm/winnt/mpm_winnt.h	100;"	d
+PADDED_ADDR_SIZE	./mpm/winnt/mpm_winnt.h	98;"	d
+PCOMP_CONTEXT	./mpm/winnt/mpm_winnt.h	/^} COMP_CONTEXT, *PCOMP_CONTEXT;$/;"	t	typeref:struct:CompContext
+POLLSET_SCALE_FACTOR	./mpm/experimental/event/event.c	840;"	d	file:
+POSIX_MALLOC_THRESHOLD	./util_pcre.c	54;"	d	file:
+PREFORK_MPM	./mpm/prefork/mpm.h	34;"	d
+PRODREGKEY	./mpm/winnt/service.c	55;"	d	file:
+PT_ACCEPT	./mpm/experimental/event/event.c	/^    PT_ACCEPT$/;"	e	enum:__anon15	file:
+PT_CSD	./mpm/experimental/event/event.c	/^    PT_CSD,$/;"	e	enum:__anon15	file:
+READ_BLOCKSIZE	./util_xml.c	29;"	d	file:
+RESTART_CHAR	./mpm/experimental/event/pod.h	40;"	d
+RESTART_CHAR	./mpm/worker/pod.h	40;"	d
+RESTART_HANDLE	./mpm/winnt/mpm_winnt.c	855;"	d	file:
+RegisterWindows9xService	./mpm/winnt/Win9xConHook.c	/^static LRESULT WINAPI RegisterWindows9xService(BOOL set_service)$/;"	f	file:
+RemoveConsoleHandler	./mpm/netware/mpm_netware.c	/^static void RemoveConsoleHandler(void)$/;"	f	file:
+ReportStatusToSCMgr	./mpm/winnt/service.c	/^static int ReportStatusToSCMgr(int currentState, int exitCode, int waitHint)$/;"	f	file:
+SAFE_ACCEPT	./mpm/prefork/prefork.c	248;"	d	file:
+SAFE_ACCEPT	./mpm/prefork/prefork.c	250;"	d	file:
+SAFE_ACCEPT	./mpm/worker/worker.c	203;"	d	file:
+SAFE_ACCEPT	./mpm/worker/worker.c	205;"	d	file:
+SCOREBOARD_MAINTENANCE_INTERVAL	./mpm/beos/mpm_default.h	73;"	d
+SCOREBOARD_MAINTENANCE_INTERVAL	./mpm/experimental/event/mpm_default.h	68;"	d
+SCOREBOARD_MAINTENANCE_INTERVAL	./mpm/mpmt_os2/mpm_default.h	57;"	d
+SCOREBOARD_MAINTENANCE_INTERVAL	./mpm/netware/mpm_default.h	105;"	d
+SCOREBOARD_MAINTENANCE_INTERVAL	./mpm/prefork/mpm_default.h	63;"	d
+SCOREBOARD_MAINTENANCE_INTERVAL	./mpm/winnt/mpm_default.h	78;"	d
+SCOREBOARD_MAINTENANCE_INTERVAL	./mpm/worker/mpm_default.h	67;"	d
+SECONDS_TO_LINGER	./connection.c	97;"	d	file:
+SEND_SIGKILL	./mpm_common.c	/^typedef enum {DO_NOTHING, SEND_SIGTERM, SEND_SIGKILL, GIVEUP} action_t;$/;"	e	enum:__anon17	file:
+SEND_SIGTERM	./mpm_common.c	/^typedef enum {DO_NOTHING, SEND_SIGTERM, SEND_SIGKILL, GIVEUP} action_t;$/;"	e	enum:__anon17	file:
+SERVICECONFIG	./mpm/winnt/mpm_winnt.h	39;"	d
+SERVICECONFIG9X	./mpm/winnt/mpm_winnt.h	38;"	d
+SERVICEPARAMS	./mpm/winnt/mpm_winnt.h	40;"	d
+SERVICE_APACHE_RESTART	./mpm/winnt/mpm_winnt.h	32;"	d
+SERVICE_UNSET	./mpm/winnt/mpm_winnt.c	1064;"	d	file:
+SHUTDOWN_HANDLE	./mpm/winnt/mpm_winnt.c	854;"	d	file:
+SIGNAL_PARENT_RESTART	./mpm/winnt/mpm_winnt.h	/^    SIGNAL_PARENT_RESTART,$/;"	e	enum:__anon8
+SIGNAL_PARENT_RESTART_GRACEFUL	./mpm/winnt/mpm_winnt.h	/^    SIGNAL_PARENT_RESTART_GRACEFUL$/;"	e	enum:__anon8
+SIGNAL_PARENT_SHUTDOWN	./mpm/winnt/mpm_winnt.h	/^    SIGNAL_PARENT_SHUTDOWN,$/;"	e	enum:__anon8
+SMALL_EXPANSION	./util.c	770;"	d	file:
+ST_GRACEFUL	./mpm/experimental/event/event.c	294;"	d	file:
+ST_GRACEFUL	./mpm/worker/worker.c	255;"	d	file:
+ST_INIT	./mpm/experimental/event/event.c	293;"	d	file:
+ST_INIT	./mpm/worker/worker.c	254;"	d	file:
+ST_UNGRACEFUL	./mpm/experimental/event/event.c	295;"	d	file:
+ST_UNGRACEFUL	./mpm/worker/worker.c	256;"	d	file:
+SrvTk_FULL	./core.c	/^    SrvTk_FULL,         \/* eg: Apache\/2.0.41 (UNIX) PHP\/4.2.2 FooBar\/1.2b *\/$/;"	e	enum:server_token_type	file:
+SrvTk_MAJOR	./core.c	/^    SrvTk_MAJOR,        \/* eg: Apache\/2 *\/$/;"	e	enum:server_token_type	file:
+SrvTk_MINIMAL	./core.c	/^    SrvTk_MINIMAL,      \/* eg: Apache\/2.0.41 *\/$/;"	e	enum:server_token_type	file:
+SrvTk_MINOR	./core.c	/^    SrvTk_MINOR,        \/* eg. Apache\/2.0 *\/$/;"	e	enum:server_token_type	file:
+SrvTk_OS	./core.c	/^    SrvTk_OS,           \/* eg: Apache\/2.0.41 (UNIX) *\/$/;"	e	enum:server_token_type	file:
+SrvTk_PRODUCT_ONLY	./core.c	/^    SrvTk_PRODUCT_ONLY  \/* eg: Apache *\/$/;"	e	enum:server_token_type	file:
+TEST_CHAR	./util.c	74;"	d	file:
+THREADED_MPM	./mpm/netware/mpm.h	31;"	d
+TIMEOUT_FUDGE_FACTOR	./mpm/experimental/event/event.c	830;"	d	file:
+TIME_CACHE_MASK	./util_time.c	37;"	d	file:
+TIME_CACHE_SIZE	./util_time.c	29;"	d	file:
+TRANS	./log.c	/^} TRANS;$/;"	t	typeref:struct:__anon3	file:
+TRIE_INITIAL_SIZE	./util_filter.c	65;"	d	file:
+T_ESCAPE_FORENSIC	./gen_test_char.c	35;"	d	file:
+T_ESCAPE_LOGITEM	./gen_test_char.c	34;"	d	file:
+T_ESCAPE_PATH_SEGMENT	./gen_test_char.c	31;"	d	file:
+T_ESCAPE_SHELL_CMD	./gen_test_char.c	30;"	d	file:
+T_HTTP_TOKEN_STOP	./gen_test_char.c	33;"	d	file:
+T_OS_ESCAPE_PATH	./gen_test_char.c	32;"	d	file:
+ThreadDispatchIOCP	./mpm/winnt/child.c	/^static HANDLE ThreadDispatchIOCP = NULL;$/;"	v	file:
+USE_ICASE	./core.c	1785;"	d	file:
+USE_ICASE	./core.c	1787;"	d	file:
+WORKER_DEAD	./mpm/netware/mpm_netware.c	106;"	d	file:
+WORKER_IDLE_KILL	./mpm/netware/mpm_netware.c	109;"	d	file:
+WORKER_MPM	./mpm/worker/mpm.h	32;"	d
+WORKER_READY	./mpm/netware/mpm_netware.c	108;"	d	file:
+WORKER_STARTING	./mpm/netware/mpm_netware.c	107;"	d	file:
+WORKTYPE_CONN	./mpm/mpmt_os2/mpmt_os2_child.c	60;"	d	file:
+WORKTYPE_EXIT	./mpm/mpmt_os2/mpmt_os2_child.c	61;"	d	file:
+WndProc	./mpm/winnt/Win9xConHook.c	/^static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg,$/;"	f	file:
+_WINUSER_	./mpm/winnt/service.c	23;"	d	file:
+_WINUSER_	./mpm/winnt/service.c	35;"	d	file:
+__declspec	./mpm/winnt/Win9xConHook.c	/^BOOL __declspec(dllexport) APIENTRY DllMain(HINSTANCE hModule, ULONG ulReason,$/;"	f
+__declspec	./mpm/winnt/Win9xConHook.c	/^BOOL __declspec(dllexport) WINAPI FixConsoleCtrlHandler($/;"	f
+__declspec	./mpm/winnt/Win9xConHook.c	/^BOOL __declspec(dllexport) WINAPI Windows9xServiceCtrlHandler($/;"	f
+__declspec	./mpm/winnt/Win9xConHook.c	/^LRESULT __declspec(dllexport) CALLBACK CallWndProc(INT hc, WPARAM wParam,$/;"	f
+__declspec	./mpm/winnt/Win9xConHook.c	/^LRESULT __declspec(dllexport) CALLBACK GetMsgProc(INT hc, WPARAM wParam,$/;"	f
+accept_mutex	./mpm/beos/beos.c	/^apr_thread_mutex_t *accept_mutex = NULL;$/;"	v
+accept_mutex	./mpm/mpmt_os2/mpmt_os2.c	/^    HMTX accept_mutex;$/;"	m	struct:__anon6	file:
+accept_mutex	./mpm/prefork/prefork.c	/^static apr_proc_mutex_t *accept_mutex;$/;"	v	file:
+accept_mutex	./mpm/worker/worker.c	/^static apr_proc_mutex_t *accept_mutex;$/;"	v	file:
+accept_mutex_off	./mpm/prefork/prefork.c	/^static void accept_mutex_off(void)$/;"	f	file:
+accept_mutex_on	./mpm/prefork/prefork.c	/^static void accept_mutex_on(void)$/;"	f	file:
+accept_socket	./mpm/winnt/mpm_winnt.h	/^    SOCKET accept_socket;$/;"	m	struct:CompContext
+action_t	./mpm_common.c	/^typedef enum {DO_NOTHING, SEND_SIGTERM, SEND_SIGKILL, GIVEUP} action_t;$/;"	t	typeref:enum:__anon17	file:
+add	./request.c	/^        allow_options_t add;$/;"	m	struct:core_opts_t	file:
+add_any_filter	./util_filter.c	/^static ap_filter_t *add_any_filter(const char *name, void *ctx,$/;"	f	file:
+add_any_filter_handle	./util_filter.c	/^static ap_filter_t *add_any_filter_handle(ap_filter_rec_t *frec, void *ctx,$/;"	f	file:
+add_ct_output_filters	./core.c	/^static const char *add_ct_output_filters(cmd_parms *cmd, void *conf_,$/;"	f	file:
+add_job	./mpm/winnt/child.c	/^static void add_job(SOCKET sock)$/;"	f	file:
+add_name_vhost_config	./vhost.c	/^static int add_name_vhost_config(apr_pool_t *p, server_rec *main_s,$/;"	f	file:
+add_worker	./mpm/mpmt_os2/mpmt_os2_child.c	/^void add_worker()$/;"	f
+alloc_listener	./listen.c	/^static const char *alloc_listener(process_rec *process, char *addr,$/;"	f	file:
+allowed_globals	./mpm/winnt/child.c	/^globals allowed_globals = {NULL, NULL, NULL, NULL, 0};$/;"	v
+ap_accept_lock_mech	./mpm_common.c	/^apr_lockmech_e ap_accept_lock_mech = APR_LOCK_DEFAULT;$/;"	v
+ap_add_cgi_vars	./util_script.c	/^AP_DECLARE(void) ap_add_cgi_vars(request_rec *r)$/;"	f
+ap_add_common_vars	./util_script.c	/^AP_DECLARE(void) ap_add_common_vars(request_rec *r)$/;"	f
+ap_add_file_conf	./core.c	/^AP_CORE_DECLARE(void) ap_add_file_conf(core_dir_config *conf, void *url_config)$/;"	f
+ap_add_input_filter	./util_filter.c	/^AP_DECLARE(ap_filter_t *) ap_add_input_filter(const char *name, void *ctx,$/;"	f
+ap_add_input_filter_handle	./util_filter.c	/^AP_DECLARE(ap_filter_t *) ap_add_input_filter_handle(ap_filter_rec_t *f,$/;"	f
+ap_add_loaded_module	./config.c	/^AP_DECLARE(const char *) ap_add_loaded_module(module *mod, apr_pool_t *p)$/;"	f
+ap_add_module	./config.c	/^AP_DECLARE(const char *) ap_add_module(module *m, apr_pool_t *p)$/;"	f
+ap_add_module_commands	./config.c	/^static void ap_add_module_commands(module *m, apr_pool_t *p)$/;"	f	file:
+ap_add_node	./util_cfgtree.c	/^ap_directive_t *ap_add_node(ap_directive_t **parent, ap_directive_t *current,$/;"	f
+ap_add_output_filter	./util_filter.c	/^AP_DECLARE(ap_filter_t *) ap_add_output_filter(const char *name, void *ctx,$/;"	f
+ap_add_output_filter_handle	./util_filter.c	/^AP_DECLARE(ap_filter_t *) ap_add_output_filter_handle(ap_filter_rec_t *f,$/;"	f
+ap_add_output_filters_by_type	./core.c	/^void ap_add_output_filters_by_type(request_rec *r)$/;"	f
+ap_add_per_dir_conf	./core.c	/^AP_CORE_DECLARE(void) ap_add_per_dir_conf(server_rec *s, void *dir_config)$/;"	f
+ap_add_per_url_conf	./core.c	/^AP_CORE_DECLARE(void) ap_add_per_url_conf(server_rec *s, void *url_config)$/;"	f
+ap_add_version_component	./core.c	/^AP_DECLARE(void) ap_add_version_component(apr_pool_t *pconf, const char *component)$/;"	f
+ap_allow_options	./core.c	/^AP_DECLARE(int) ap_allow_options(request_rec *r)$/;"	f
+ap_allow_overrides	./core.c	/^AP_DECLARE(int) ap_allow_overrides(request_rec *r)$/;"	f
+ap_append_pid	./util.c	/^AP_DECLARE(char *) ap_append_pid(apr_pool_t *p, const char *string,$/;"	f
+ap_apply_accept_filter	./listen.c	/^static void ap_apply_accept_filter(apr_pool_t *p, ap_listen_rec *lis,$/;"	f	file:
+ap_auth_name	./core.c	/^AP_DECLARE(const char *) ap_auth_name(request_rec *r)$/;"	f
+ap_auth_type	./core.c	/^AP_DECLARE(const char *) ap_auth_type(request_rec *r)$/;"	f
+ap_bucket_eoc_create	./eoc_bucket.c	/^AP_DECLARE(apr_bucket *) ap_bucket_eoc_create(apr_bucket_alloc_t *list)$/;"	f
+ap_bucket_eoc_make	./eoc_bucket.c	/^AP_DECLARE(apr_bucket *) ap_bucket_eoc_make(apr_bucket *b)$/;"	f
+ap_bucket_error_create	./error_bucket.c	/^AP_DECLARE(apr_bucket *) ap_bucket_error_create(int error, const char *buf,$/;"	f
+ap_bucket_error_make	./error_bucket.c	/^AP_DECLARE(apr_bucket *) ap_bucket_error_make(apr_bucket *b, int error,$/;"	f
+ap_bucket_type_eoc	./eoc_bucket.c	/^AP_DECLARE_DATA const apr_bucket_type_t ap_bucket_type_eoc = {$/;"	v
+ap_bucket_type_error	./error_bucket.c	/^AP_DECLARE_DATA const apr_bucket_type_t ap_bucket_type_error = {$/;"	v
+ap_build_config	./config.c	/^AP_DECLARE(const char *) ap_build_config(cmd_parms *parms,$/;"	f
+ap_build_config_sub	./config.c	/^static const char *ap_build_config_sub(apr_pool_t *p, apr_pool_t *temp_pool,$/;"	f	file:
+ap_build_cont_config	./config.c	/^AP_DECLARE(const char *) ap_build_cont_config(apr_pool_t *p,$/;"	f
+ap_calc_scoreboard_size	./scoreboard.c	/^AP_DECLARE(int) ap_calc_scoreboard_size(void)$/;"	f
+ap_cfg_closefile	./util.c	/^AP_DECLARE(int) ap_cfg_closefile(ap_configfile_t *cfp)$/;"	f
+ap_cfg_getc	./util.c	/^AP_DECLARE(int) ap_cfg_getc(ap_configfile_t *cfp)$/;"	f
+ap_cfg_getline	./util.c	/^AP_DECLARE(int) ap_cfg_getline(char *buf, size_t bufsize, ap_configfile_t *cfp)$/;"	f
+ap_check_cmd_context	./core.c	/^AP_DECLARE(const char *) ap_check_cmd_context(cmd_parms *cmd,$/;"	f
+ap_check_signals	./mpm/prefork/prefork.c	187;"	d	file:
+ap_cleanup_scoreboard	./scoreboard.c	/^apr_status_t ap_cleanup_scoreboard(void *d)$/;"	f
+ap_cleanup_shared_mem	./scoreboard.c	/^static apr_status_t ap_cleanup_shared_mem(void *d)$/;"	f	file:
+ap_close_listeners	./listen.c	/^AP_DECLARE_NONSTD(void) ap_close_listeners(void)$/;"	f
+ap_close_piped_log	./log.c	/^AP_DECLARE(void) ap_close_piped_log(piped_log *pl)$/;"	f
+ap_config_hash	./config.c	/^static apr_hash_t *ap_config_hash = NULL;$/;"	v	file:
+ap_conftree	./config.c	/^AP_DECLARE_DATA ap_directive_t *ap_conftree = NULL;$/;"	v
+ap_construct_server	./util.c	/^AP_DECLARE(char *) ap_construct_server(apr_pool_t *p, const char *hostname,$/;"	f
+ap_construct_url	./core.c	/^AP_DECLARE(char *) ap_construct_url(apr_pool_t *p, const char *uri,$/;"	f
+ap_content_length_filter_handle	./core.c	/^AP_DECLARE_DATA ap_filter_rec_t *ap_content_length_filter_handle;$/;"	v
+ap_content_type_tolower	./util.c	/^AP_DECLARE(void) ap_content_type_tolower(char *str)$/;"	f
+ap_core_input_filter	./core_filters.c	/^int ap_core_input_filter(ap_filter_t *f, apr_bucket_brigade *b,$/;"	f
+ap_core_input_filter_handle	./core.c	/^AP_DECLARE_DATA ap_filter_rec_t *ap_core_input_filter_handle;$/;"	v
+ap_core_output_filter	./core_filters.c	/^apr_status_t ap_core_output_filter(ap_filter_t *f, apr_bucket_brigade *b)$/;"	f
+ap_core_output_filter_handle	./core.c	/^AP_DECLARE_DATA ap_filter_rec_t *ap_core_output_filter_handle;$/;"	v
+ap_core_reorder_directories	./core.c	/^void ap_core_reorder_directories(apr_pool_t *p, server_rec *s)$/;"	f
+ap_core_translate	./core.c	/^AP_DECLARE_NONSTD(int) ap_core_translate(request_rec *r)$/;"	f
+ap_coredump_dir	./mpm/winnt/mpm_winnt.c	/^static char ap_coredump_dir[MAX_STRING_LEN];$/;"	v	file:
+ap_coredump_dir	./mpm_common.c	/^char ap_coredump_dir[MAX_STRING_LEN];$/;"	v
+ap_coredumpdir_configured	./mpm_common.c	/^int ap_coredumpdir_configured;$/;"	v
+ap_count_dirs	./util.c	/^AP_DECLARE(int) ap_count_dirs(const char *path)$/;"	f
+ap_create_conn_config	./config.c	/^AP_CORE_DECLARE(ap_conf_vector_t *) ap_create_conn_config(apr_pool_t *p)$/;"	f
+ap_create_environment	./util_script.c	/^AP_DECLARE(char **) ap_create_environment(apr_pool_t *p, apr_table_t *t)$/;"	f
+ap_create_per_dir_config	./config.c	/^AP_CORE_DECLARE(ap_conf_vector_t *) ap_create_per_dir_config(apr_pool_t *p)$/;"	f
+ap_create_request_config	./config.c	/^AP_CORE_DECLARE(ap_conf_vector_t *) ap_create_request_config(apr_pool_t *p)$/;"	f
+ap_create_sb_handle	./scoreboard.c	/^AP_DECLARE(void) ap_create_sb_handle(ap_sb_handle_t **new_sbh, apr_pool_t *p,$/;"	f
+ap_create_scoreboard	./scoreboard.c	/^int ap_create_scoreboard(apr_pool_t *p, ap_scoreboard_e sb_type)$/;"	f
+ap_custom_response	./core.c	/^AP_DECLARE(void) ap_custom_response(request_rec *r, int status,$/;"	f
+ap_daemons_limit	./mpm/experimental/event/event.c	/^static int ap_daemons_limit = 0;$/;"	v	file:
+ap_daemons_limit	./mpm/prefork/prefork.c	/^static int ap_daemons_limit=0;      \/* MaxClients *\/$/;"	v	file:
+ap_daemons_limit	./mpm/worker/worker.c	/^static int ap_daemons_limit = 0;$/;"	v	file:
+ap_daemons_max_free	./mpm/prefork/prefork.c	/^static int ap_daemons_max_free=0;$/;"	v	file:
+ap_daemons_min_free	./mpm/prefork/prefork.c	/^static int ap_daemons_min_free=0;$/;"	v	file:
+ap_daemons_to_start	./mpm/experimental/event/event.c	/^static int ap_daemons_to_start = 0;$/;"	v	file:
+ap_daemons_to_start	./mpm/mpmt_os2/mpmt_os2.c	/^static int ap_daemons_to_start = 0;$/;"	v	file:
+ap_daemons_to_start	./mpm/prefork/prefork.c	/^static int ap_daemons_to_start=0;$/;"	v	file:
+ap_daemons_to_start	./mpm/worker/worker.c	/^static int ap_daemons_to_start = 0;$/;"	v	file:
+ap_default_type	./core.c	/^AP_DECLARE(const char *) ap_default_type(request_rec *r)$/;"	f
+ap_destroy_sub_req	./request.c	/^AP_DECLARE(void) ap_destroy_sub_req(request_rec *r)$/;"	f
+ap_directory_walk	./request.c	/^AP_DECLARE(int) ap_directory_walk(request_rec *r)$/;"	f
+ap_document_root	./core.c	/^AP_DECLARE(const char *) ap_document_root(request_rec *r) \/* Don't use this! *\/$/;"	f
+ap_error_log2stderr	./log.c	/^AP_DECLARE(void) ap_error_log2stderr(server_rec *s) {$/;"	f
+ap_escape_html	./util.c	/^AP_DECLARE(char *) ap_escape_html(apr_pool_t *p, const char *s)$/;"	f
+ap_escape_logitem	./util.c	/^AP_DECLARE(char *) ap_escape_logitem(apr_pool_t *p, const char *str)$/;"	f
+ap_escape_path_segment	./util.c	/^AP_DECLARE(char *) ap_escape_path_segment(apr_pool_t *p, const char *segment)$/;"	f
+ap_escape_quotes	./util.c	/^AP_DECLARE(char *) ap_escape_quotes(apr_pool_t *p, const char *instring)$/;"	f
+ap_escape_shell_cmd	./util.c	/^AP_DECLARE(char *) ap_escape_shell_cmd(apr_pool_t *p, const char *str)$/;"	f
+ap_exists_config_define	./core.c	/^AP_DECLARE(int) ap_exists_config_define(const char *name)$/;"	f
+ap_exists_scoreboard_image	./scoreboard.c	/^AP_DECLARE(int) ap_exists_scoreboard_image(void)$/;"	f
+ap_extended_status	./scoreboard.c	/^AP_DECLARE_DATA int ap_extended_status = 0;$/;"	v
+ap_fatal_signal_child_setup	./mpm_common.c	/^apr_status_t ap_fatal_signal_child_setup(server_rec *s)$/;"	f
+ap_fatal_signal_setup	./mpm_common.c	/^apr_status_t ap_fatal_signal_setup(server_rec *s, apr_pool_t *in_pconf)$/;"	f
+ap_field_noparam	./util.c	/^AP_DECLARE(char *) ap_field_noparam(apr_pool_t *p, const char *intype)$/;"	f
+ap_file_walk	./request.c	/^AP_DECLARE(int) ap_file_walk(request_rec *r)$/;"	f
+ap_filter_protocol	./util_filter.c	/^AP_DECLARE(void) ap_filter_protocol(ap_filter_t *f, unsigned int flags)$/;"	f
+ap_finalize_request_protocol	./protocol.c	/^AP_DECLARE(void) ap_finalize_request_protocol(request_rec *r)$/;"	f
+ap_finalize_sub_req_protocol	./protocol.c	/^AP_DECLARE(void) ap_finalize_sub_req_protocol(request_rec *sub)$/;"	f
+ap_find_command	./config.c	/^AP_CORE_DECLARE(const command_rec *) ap_find_command(const char *name,$/;"	f
+ap_find_command_in_modules	./config.c	/^AP_CORE_DECLARE(const command_rec *) ap_find_command_in_modules($/;"	f
+ap_find_last_token	./util.c	/^AP_DECLARE(int) ap_find_last_token(apr_pool_t *p, const char *line,$/;"	f
+ap_find_linked_module	./config.c	/^AP_DECLARE(module *) ap_find_linked_module(const char *name)$/;"	f
+ap_find_list_item	./util.c	/^AP_DECLARE(int) ap_find_list_item(apr_pool_t *p, const char *line,$/;"	f
+ap_find_module_name	./config.c	/^AP_DECLARE(const char *) ap_find_module_name(module *m)$/;"	f
+ap_find_path_info	./util_script.c	/^AP_DECLARE(int) ap_find_path_info(const char *uri, const char *path_info)$/;"	f
+ap_find_token	./util.c	/^AP_DECLARE(int) ap_find_token(apr_pool_t *p, const char *line, const char *tok)$/;"	f
+ap_fini_vhost_config	./vhost.c	/^AP_DECLARE(void) ap_fini_vhost_config(apr_pool_t *p, server_rec *main_s)$/;"	f
+ap_fixup_virtual_hosts	./config.c	/^AP_DECLARE(void) ap_fixup_virtual_hosts(apr_pool_t *p, server_rec *main_server)$/;"	f
+ap_get_basic_auth_pw	./protocol.c	/^AP_DECLARE(int) ap_get_basic_auth_pw(request_rec *r, const char **pw)$/;"	f
+ap_get_input_filter_handle	./util_filter.c	/^AP_DECLARE(ap_filter_rec_t *)ap_get_input_filter_handle(const char *name)$/;"	f
+ap_get_list_item	./util.c	/^AP_DECLARE(char *) ap_get_list_item(apr_pool_t *p, const char **field)$/;"	f
+ap_get_local_host	./util.c	/^char *ap_get_local_host(apr_pool_t *a)$/;"	f
+ap_get_mime_headers	./protocol.c	/^AP_DECLARE(void) ap_get_mime_headers(request_rec *r)$/;"	f
+ap_get_mime_headers_core	./protocol.c	/^AP_DECLARE(void) ap_get_mime_headers_core(request_rec *r, apr_bucket_brigade *bb)$/;"	f
+ap_get_module_config	./util_debug.c	/^AP_DECLARE(void *) ap_get_module_config(const ap_conf_vector_t *cv,$/;"	f
+ap_get_module_config	./util_debug.c	98;"	d	file:
+ap_get_output_filter_handle	./util_filter.c	/^AP_DECLARE(ap_filter_rec_t *)ap_get_output_filter_handle(const char *name)$/;"	f
+ap_get_remote_host	./core.c	/^AP_DECLARE(const char *) ap_get_remote_host(conn_rec *conn, void *dir_config,$/;"	f
+ap_get_remote_logname	./core.c	/^AP_DECLARE(const char *) ap_get_remote_logname(request_rec *r)$/;"	f
+ap_get_request_note	./core.c	/^AP_DECLARE(void **) ap_get_request_note(request_rec *r, apr_size_t note_num)$/;"	f
+ap_get_scoreboard_global	./scoreboard.c	/^AP_DECLARE(global_score *) ap_get_scoreboard_global()$/;"	f
+ap_get_scoreboard_lb	./scoreboard.c	/^AP_DECLARE(lb_score *) ap_get_scoreboard_lb(int lb_num)$/;"	f
+ap_get_scoreboard_process	./scoreboard.c	/^AP_DECLARE(process_score *) ap_get_scoreboard_process(int x)$/;"	f
+ap_get_scoreboard_worker	./scoreboard.c	/^AP_DECLARE(worker_score *) ap_get_scoreboard_worker(int x, int y)$/;"	f
+ap_get_server_built	./buildmark.c	/^AP_DECLARE(const char *) ap_get_server_built()$/;"	f
+ap_get_server_name	./core.c	/^AP_DECLARE(const char *) ap_get_server_name(request_rec *r)$/;"	f
+ap_get_server_protocol	./core.c	/^AP_DECLARE(const char*) ap_get_server_protocol(server_rec* s)$/;"	f
+ap_get_server_revision	./core.c	/^AP_DECLARE(void) ap_get_server_revision(ap_version_t *version)$/;"	f
+ap_get_server_version	./core.c	/^AP_DECLARE(const char *) ap_get_server_version(void)$/;"	f
+ap_get_status_table	./mpm/winnt/mpm_winnt.c	/^AP_DECLARE(apr_array_header_t *) ap_get_status_table(apr_pool_t *p)$/;"	f
+ap_get_token	./util.c	/^AP_DECLARE(char *) ap_get_token(apr_pool_t *p, const char **accept_line,$/;"	f
+ap_getline	./protocol.c	/^AP_DECLARE(int) ap_getline(char *s, int n, request_rec *r, int fold)$/;"	f
+ap_getparents	./util.c	/^AP_DECLARE(void) ap_getparents(char *name)$/;"	f
+ap_getword	./util.c	/^AP_DECLARE(char *) ap_getword(apr_pool_t *atrans, const char **line, char stop)$/;"	f
+ap_getword_conf	./util.c	/^AP_DECLARE(char *) ap_getword_conf(apr_pool_t *p, const char **line)$/;"	f
+ap_getword_conf_nc	./util.c	/^AP_DECLARE(char *) ap_getword_conf_nc(apr_pool_t *p, char **line)$/;"	f
+ap_getword_nc	./util.c	/^AP_DECLARE(char *) ap_getword_nc(apr_pool_t *atrans, char **line, char stop)$/;"	f
+ap_getword_nulls	./util.c	/^AP_DECLARE(char *) ap_getword_nulls(apr_pool_t *atrans, const char **line,$/;"	f
+ap_getword_nulls_nc	./util.c	/^AP_DECLARE(char *) ap_getword_nulls_nc(apr_pool_t *atrans, char **line,$/;"	f
+ap_getword_white	./util.c	/^AP_DECLARE(char *) ap_getword_white(apr_pool_t *atrans, const char **line)$/;"	f
+ap_getword_white_nc	./util.c	/^AP_DECLARE(char *) ap_getword_white_nc(apr_pool_t *atrans, char **line)$/;"	f
+ap_graceful_shutdown_timeout	./mpm_common.c	/^int ap_graceful_shutdown_timeout = 0;$/;"	v
+ap_graceful_stop_signalled	./mpm/beos/beos.c	/^int ap_graceful_stop_signalled(void)$/;"	f
+ap_graceful_stop_signalled	./mpm/experimental/event/event.c	/^int ap_graceful_stop_signalled(void)$/;"	f
+ap_graceful_stop_signalled	./mpm/mpmt_os2/mpmt_os2.c	/^int ap_graceful_stop_signalled(void)$/;"	f
+ap_graceful_stop_signalled	./mpm/netware/mpm_netware.c	/^int ap_graceful_stop_signalled(void)$/;"	f
+ap_graceful_stop_signalled	./mpm/prefork/prefork.c	/^int ap_graceful_stop_signalled(void)$/;"	f
+ap_graceful_stop_signalled	./mpm/winnt/mpm_winnt.c	/^AP_DECLARE(int) ap_graceful_stop_signalled(void)$/;"	f
+ap_graceful_stop_signalled	./mpm/worker/worker.c	/^int ap_graceful_stop_signalled(void)$/;"	f
+ap_hdrs_from_ascii	./util_charset.c	/^apr_xlate_t *ap_hdrs_to_ascii, *ap_hdrs_from_ascii;$/;"	v
+ap_hdrs_to_ascii	./util_charset.c	/^apr_xlate_t *ap_hdrs_to_ascii, *ap_hdrs_from_ascii;$/;"	v
+ap_ht_time	./util.c	/^AP_DECLARE(char *) ap_ht_time(apr_pool_t *p, apr_time_t t, const char *fmt,$/;"	f
+ap_increment_counts	./scoreboard.c	/^AP_DECLARE(void) ap_increment_counts(ap_sb_handle_t *sb, request_rec *r)$/;"	f
+ap_ind	./util.c	/^AP_DECLARE(int) ap_ind(const char *s, char c)$/;"	f
+ap_init_ebcdic	./util_ebcdic.c	/^apr_status_t ap_init_ebcdic(apr_pool_t *pool)$/;"	f
+ap_init_scoreboard	./scoreboard.c	/^void ap_init_scoreboard(void *shared_score)$/;"	f
+ap_init_vhost_config	./vhost.c	/^AP_DECLARE(void) ap_init_vhost_config(apr_pool_t *p)$/;"	f
+ap_init_virtual_host	./config.c	/^AP_CORE_DECLARE(const char *) ap_init_virtual_host(apr_pool_t *p,$/;"	f
+ap_invoke_filter_init	./config.c	/^static int ap_invoke_filter_init(ap_filter_t *filters)$/;"	f	file:
+ap_invoke_handler	./config.c	/^AP_CORE_DECLARE(int) ap_invoke_handler(request_rec *r)$/;"	f
+ap_is_directory	./util.c	/^AP_DECLARE(int) ap_is_directory(apr_pool_t *p, const char *path)$/;"	f
+ap_is_initial_req	./request.c	/^AP_DECLARE(int) ap_is_initial_req(request_rec *r)$/;"	f
+ap_is_matchexp	./util.c	/^AP_DECLARE(int) ap_is_matchexp(const char *str)$/;"	f
+ap_is_rdirectory	./util.c	/^AP_DECLARE(int) ap_is_rdirectory(apr_pool_t *p, const char *path)$/;"	f
+ap_is_recursion_limit_exceeded	./core.c	/^AP_DECLARE(int) ap_is_recursion_limit_exceeded(const request_rec *r)$/;"	f
+ap_is_url	./util.c	/^AP_DECLARE(int) ap_is_url(const char *u)$/;"	f
+ap_limit_section	./core.c	/^AP_CORE_DECLARE_NONSTD(const char *) ap_limit_section(cmd_parms *cmd,$/;"	f
+ap_lingering_close	./connection.c	/^AP_DECLARE(void) ap_lingering_close(conn_rec *c)$/;"	f
+ap_list_provider_names	./provider.c	/^AP_DECLARE(apr_array_header_t *) ap_list_provider_names(apr_pool_t *pool,$/;"	f
+ap_listen_pre_config	./listen.c	/^AP_DECLARE(void) ap_listen_pre_config(void)$/;"	f
+ap_listenbacklog	./listen.c	/^static int ap_listenbacklog;$/;"	v	file:
+ap_listeners	./listen.c	/^AP_DECLARE_DATA ap_listen_rec *ap_listeners = NULL;$/;"	v
+ap_loaded_modules	./config.c	/^AP_DECLARE_DATA module **ap_loaded_modules=NULL;$/;"	v
+ap_location_walk	./request.c	/^AP_DECLARE(int) ap_location_walk(request_rec *r)$/;"	f
+ap_lock_fname	./mpm_common.c	/^const char *ap_lock_fname = NULL;$/;"	v
+ap_log_assert	./log.c	/^AP_DECLARE(void) ap_log_assert(const char *szExp, const char *szFile,$/;"	f
+ap_log_cerror	./log.c	/^AP_DECLARE(void) ap_log_cerror(const char *file, int line, int level,$/;"	f
+ap_log_error	./log.c	/^AP_DECLARE(void) ap_log_error(const char *file, int line, int level,$/;"	f
+ap_log_perror	./log.c	/^AP_DECLARE(void) ap_log_perror(const char *file, int line, int level,$/;"	f
+ap_log_pid	./log.c	/^AP_DECLARE(void) ap_log_pid(apr_pool_t *p, const char *filename)$/;"	f
+ap_log_rerror	./log.c	/^AP_DECLARE(void) ap_log_rerror(const char *file, int line, int level,$/;"	f
+ap_logs_child_init	./log.c	/^void ap_logs_child_init(apr_pool_t *p, server_rec *s)$/;"	f
+ap_lookup_provider	./provider.c	/^AP_DECLARE(void *) ap_lookup_provider(const char *provider_group,$/;"	f
+ap_make_content_type	./protocol.c	/^AP_DECLARE(const char *)ap_make_content_type(request_rec *r, const char *type)$/;"	f
+ap_make_dirstr_parent	./util.c	/^AP_DECLARE(char *) ap_make_dirstr_parent(apr_pool_t *p, const char *s)$/;"	f
+ap_make_dirstr_prefix	./util.c	/^AP_DECLARE(char *) ap_make_dirstr_prefix(char *d, const char *s, int n)$/;"	f
+ap_make_full_path	./util.c	/^AP_DECLARE(char *) ap_make_full_path(apr_pool_t *a, const char *src1,$/;"	f
+ap_matches_request_vhost	./vhost.c	/^AP_DECLARE(int) ap_matches_request_vhost(request_rec *r, const char *host,$/;"	f
+ap_max_child_assigned	./mpm/beos/beos.c	/^int ap_max_child_assigned = -1;$/;"	v
+ap_max_daemons_limit	./mpm/experimental/event/event.c	/^int ap_max_daemons_limit = -1;$/;"	v
+ap_max_daemons_limit	./mpm/mpmt_os2/mpmt_os2.c	/^int ap_max_daemons_limit = -1;$/;"	v
+ap_max_daemons_limit	./mpm/prefork/prefork.c	/^int ap_max_daemons_limit = -1;$/;"	v
+ap_max_daemons_limit	./mpm/worker/worker.c	/^int ap_max_daemons_limit = -1;$/;"	v
+ap_max_mem_free	./mpm_common.c	/^apr_uint32_t ap_max_mem_free = APR_ALLOCATOR_MAX_FREE_UNLIMITED;$/;"	v
+ap_max_requests_per_child	./mpm/mpmt_os2/mpmt_os2.c	/^static int ap_max_requests_per_child = 0;$/;"	v	file:
+ap_max_requests_per_child	./mpm_common.c	/^int ap_max_requests_per_child = 0;$/;"	v
+ap_max_requests_per_thread	./mpm/beos/beos.c	/^static int ap_max_requests_per_thread = 0;$/;"	v	file:
+ap_max_spare_threads	./mpm/mpmt_os2/mpmt_os2.c	/^int ap_max_spare_threads = 0;$/;"	v
+ap_max_threads_limit	./mpm/beos/beos.c	/^int ap_max_threads_limit = -1;$/;"	v
+ap_max_workers_limit	./mpm/netware/mpm_netware.c	/^int ap_max_workers_limit = -1;$/;"	v
+ap_md5	./util_md5.c	/^AP_DECLARE(char *) ap_md5(apr_pool_t *p, const unsigned char *string)$/;"	f
+ap_md5_binary	./util_md5.c	/^AP_DECLARE(char *) ap_md5_binary(apr_pool_t *p, const unsigned char *buf, int length)$/;"	f
+ap_md5contextTo64	./util_md5.c	/^AP_DECLARE(char *) ap_md5contextTo64(apr_pool_t *a, apr_md5_ctx_t *context)$/;"	f
+ap_md5digest	./util_md5.c	/^AP_DECLARE(char *) ap_md5digest(apr_pool_t *p, apr_file_t *infile)$/;"	f
+ap_merge_per_dir_configs	./config.c	/^AP_CORE_DECLARE(ap_conf_vector_t *) ap_merge_per_dir_configs(apr_pool_t *p,$/;"	f
+ap_method_is_limited	./config.c	/^AP_DECLARE(int) ap_method_is_limited(cmd_parms *cmd, const char *method)$/;"	f
+ap_min_spare_threads	./mpm/mpmt_os2/mpmt_os2.c	/^int ap_min_spare_threads = 0;$/;"	v
+ap_mod_list	./config.c	/^typedef struct ap_mod_list_struct ap_mod_list;$/;"	t	typeref:struct:ap_mod_list_struct	file:
+ap_mod_list_struct	./config.c	/^struct ap_mod_list_struct {$/;"	s	file:
+ap_mpm_accept_mutex	./mpm/mpmt_os2/mpmt_os2.c	/^HMTX ap_mpm_accept_mutex = 0;$/;"	v
+ap_mpm_child_main	./mpm/mpmt_os2/mpmt_os2_child.c	/^void ap_mpm_child_main(apr_pool_t *pconf)$/;"	f
+ap_mpm_pod_check	./mpm/experimental/event/pod.c	/^AP_DECLARE(int) ap_mpm_pod_check(ap_pod_t * pod)$/;"	f
+ap_mpm_pod_check	./mpm/worker/pod.c	/^AP_DECLARE(int) ap_mpm_pod_check(ap_pod_t *pod)$/;"	f
+ap_mpm_pod_killpg	./mpm/experimental/event/pod.c	/^AP_DECLARE(void) ap_mpm_pod_killpg(ap_pod_t * pod, int num, int graceful)$/;"	f
+ap_mpm_pod_killpg	./mpm/worker/pod.c	/^AP_DECLARE(void) ap_mpm_pod_killpg(ap_pod_t *pod, int num, int graceful)$/;"	f
+ap_mpm_pod_killpg	./mpm_common.c	/^void ap_mpm_pod_killpg(ap_pod_t *pod, int num)$/;"	f
+ap_mpm_rewrite_args	./mpm_common.c	/^void ap_mpm_rewrite_args(process_rec *process)$/;"	f
+ap_mpm_run	./mpm/beos/beos.c	/^int ap_mpm_run(apr_pool_t *_pconf, apr_pool_t *plog, server_rec *s)$/;"	f
+ap_mpm_run	./mpm/experimental/event/event.c	/^int ap_mpm_run(apr_pool_t * _pconf, apr_pool_t * plog, server_rec * s)$/;"	f
+ap_mpm_run	./mpm/mpmt_os2/mpmt_os2.c	/^int ap_mpm_run(apr_pool_t *_pconf, apr_pool_t *plog, server_rec *s )$/;"	f
+ap_mpm_run	./mpm/netware/mpm_netware.c	/^int ap_mpm_run(apr_pool_t *_pconf, apr_pool_t *plog, server_rec *s)$/;"	f
+ap_mpm_run	./mpm/prefork/prefork.c	/^int ap_mpm_run(apr_pool_t *_pconf, apr_pool_t *plog, server_rec *s)$/;"	f
+ap_mpm_run	./mpm/winnt/mpm_winnt.c	/^AP_DECLARE(int) ap_mpm_run(apr_pool_t *_pconf, apr_pool_t *plog, server_rec *s )$/;"	f
+ap_mpm_run	./mpm/worker/worker.c	/^int ap_mpm_run(apr_pool_t *_pconf, apr_pool_t *plog, server_rec *s)$/;"	f
+ap_mpm_set_accept_lock_mech	./mpm_common.c	/^AP_DECLARE(const char *) ap_mpm_set_accept_lock_mech(cmd_parms *cmd,$/;"	f
+ap_mpm_set_coredumpdir	./mpm_common.c	/^const char *ap_mpm_set_coredumpdir(cmd_parms *cmd, void *dummy,$/;"	f
+ap_mpm_set_exception_hook	./mpm_common.c	/^const char *ap_mpm_set_exception_hook(cmd_parms *cmd, void *dummy,$/;"	f
+ap_mpm_set_graceful_shutdown	./mpm_common.c	/^const char * ap_mpm_set_graceful_shutdown(cmd_parms *cmd, void *dummy,$/;"	f
+ap_mpm_set_lockfile	./mpm_common.c	/^const char *ap_mpm_set_lockfile(cmd_parms *cmd, void *dummy,$/;"	f
+ap_mpm_set_max_mem_free	./mpm_common.c	/^const char *ap_mpm_set_max_mem_free(cmd_parms *cmd, void *dummy,$/;"	f
+ap_mpm_set_max_requests	./mpm_common.c	/^const char *ap_mpm_set_max_requests(cmd_parms *cmd, void *dummy,$/;"	f
+ap_mpm_set_pidfile	./mpm_common.c	/^const char *ap_mpm_set_pidfile(cmd_parms *cmd, void *dummy,$/;"	f
+ap_mpm_set_scoreboard	./mpm_common.c	/^const char * ap_mpm_set_scoreboard(cmd_parms *cmd, void *dummy,$/;"	f
+ap_mpm_set_thread_stacksize	./mpm_common.c	/^const char *ap_mpm_set_thread_stacksize(cmd_parms *cmd, void *dummy,$/;"	f
+ap_my_addrspace	./mpm/netware/mpm_netware.c	/^static char *ap_my_addrspace = NULL;$/;"	v	file:
+ap_my_generation	./mpm/beos/beos.c	/^ap_generation_t volatile ap_my_generation = 0;$/;"	v
+ap_my_generation	./mpm/experimental/event/event.c	/^ap_generation_t volatile ap_my_generation;$/;"	v
+ap_my_generation	./mpm/mpmt_os2/mpmt_os2.c	/^ap_generation_t volatile ap_my_generation=0; \/* Used by the scoreboard *\/$/;"	v
+ap_my_generation	./mpm/netware/mpm_netware.c	/^ap_generation_t volatile ap_my_generation=0;$/;"	v
+ap_my_generation	./mpm/prefork/prefork.c	/^ap_generation_t volatile ap_my_generation=0;$/;"	v
+ap_my_generation	./mpm/winnt/mpm_winnt.c	/^ap_generation_t volatile ap_my_generation=0;$/;"	v
+ap_my_generation	./mpm/worker/worker.c	/^ap_generation_t volatile ap_my_generation;$/;"	v
+ap_my_pid	./mpm/experimental/event/event.c	/^static pid_t ap_my_pid;         \/* Linux getpid() doesn't work except in main$/;"	v	file:
+ap_my_pid	./mpm/netware/mpm_netware.c	/^static pid_t ap_my_pid;  \/* it seems silly to call getpid all the time *\/$/;"	v	file:
+ap_my_pid	./mpm/prefork/prefork.c	/^static pid_t ap_my_pid; \/* it seems silly to call getpid all the time *\/$/;"	v	file:
+ap_my_pid	./mpm/worker/worker.c	/^static pid_t ap_my_pid; \/* Linux getpid() doesn't work except in main$/;"	v	file:
+ap_no2slash	./util.c	/^AP_DECLARE(void) ap_no2slash(char *name)$/;"	f
+ap_note_auth_failure	./protocol.c	/^AP_DECLARE(void) ap_note_auth_failure(request_rec *r)$/;"	f
+ap_note_basic_auth_failure	./protocol.c	/^AP_DECLARE(void) ap_note_basic_auth_failure(request_rec *r)$/;"	f
+ap_note_digest_auth_failure	./protocol.c	/^AP_DECLARE(void) ap_note_digest_auth_failure(request_rec *r)$/;"	f
+ap_open_logs	./log.c	/^int ap_open_logs(apr_pool_t *pconf, apr_pool_t *p \/* plog *\/,$/;"	f
+ap_open_piped_log	./log.c	/^AP_DECLARE(piped_log *) ap_open_piped_log(apr_pool_t *p, const char *program)$/;"	f
+ap_open_stderr_log	./log.c	/^AP_DECLARE(void) ap_open_stderr_log(apr_pool_t *p)$/;"	f
+ap_os_escape_path	./util.c	/^AP_DECLARE(char *) ap_os_escape_path(apr_pool_t *p, const char *path, int partial)$/;"	f
+ap_os_is_path_absolute	./util.c	/^AP_DECLARE(int) ap_os_is_path_absolute(apr_pool_t *p, const char *dir)$/;"	f
+ap_parse_htaccess	./config.c	/^AP_CORE_DECLARE(int) ap_parse_htaccess(ap_conf_vector_t **result,$/;"	f
+ap_parse_uri	./protocol.c	/^AP_CORE_DECLARE(void) ap_parse_uri(request_rec *r, const char *uri)$/;"	f
+ap_parse_vhost_addrs	./vhost.c	/^const char *ap_parse_vhost_addrs(apr_pool_t *p,$/;"	f
+ap_pbase64decode	./util.c	/^AP_DECLARE(char *) ap_pbase64decode(apr_pool_t *p, const char *bufcoded)$/;"	f
+ap_pbase64encode	./util.c	/^AP_DECLARE(char *) ap_pbase64encode(apr_pool_t *p, char *string)$/;"	f
+ap_pcfg_open_custom	./util.c	/^AP_DECLARE(ap_configfile_t *) ap_pcfg_open_custom(apr_pool_t *p,$/;"	f
+ap_pid_fname	./mpm/mpmt_os2/mpmt_os2.c	/^static const char *ap_pid_fname=NULL;$/;"	v	file:
+ap_pid_fname	./mpm_common.c	/^const char *ap_pid_fname = NULL;$/;"	v
+ap_pod_t	./mpm/experimental/event/pod.h	/^struct ap_pod_t$/;"	s
+ap_pod_t	./mpm/experimental/event/pod.h	/^typedef struct ap_pod_t ap_pod_t;$/;"	t	typeref:struct:ap_pod_t
+ap_pod_t	./mpm/worker/pod.h	/^struct ap_pod_t {$/;"	s
+ap_pod_t	./mpm/worker/pod.h	/^typedef struct ap_pod_t ap_pod_t;$/;"	t	typeref:struct:ap_pod_t
+ap_pop_pool	./mpm/experimental/event/fdqueue.c	/^void ap_pop_pool(apr_pool_t ** recycled_pool, fd_queue_info_t * queue_info)$/;"	f
+ap_pregcomp	./util.c	/^AP_DECLARE(ap_regex_t *) ap_pregcomp(apr_pool_t *p, const char *pattern,$/;"	f
+ap_pregfree	./util.c	/^AP_DECLARE(void) ap_pregfree(apr_pool_t *p, ap_regex_t *reg)$/;"	f
+ap_pregsub	./util.c	/^AP_DECLARE(char *) ap_pregsub(apr_pool_t *p, const char *input,$/;"	f
+ap_process_child_status	./mpm_common.c	/^int ap_process_child_status(apr_proc_t *pid, apr_exit_why_e why, int status)$/;"	f
+ap_process_config_tree	./config.c	/^AP_DECLARE(int) ap_process_config_tree(server_rec *s,$/;"	f
+ap_process_connection	./connection.c	/^AP_CORE_DECLARE(void) ap_process_connection(conn_rec *c, void *csd)$/;"	f
+ap_process_request_internal	./request.c	/^AP_DECLARE(int) ap_process_request_internal(request_rec *r)$/;"	f
+ap_process_resource_config	./config.c	/^AP_DECLARE(const char *) ap_process_resource_config(server_rec *s,$/;"	f
+ap_psignature	./core.c	/^AP_DECLARE(const char *) ap_psignature(const char *prefix, request_rec *r)$/;"	f
+ap_push_pool	./mpm/experimental/event/fdqueue.c	/^void ap_push_pool(fd_queue_info_t * queue_info,$/;"	f
+ap_queue_destroy	./mpm/experimental/event/fdqueue.c	/^static apr_status_t ap_queue_destroy(void *data)$/;"	f	file:
+ap_queue_destroy	./mpm/worker/fdqueue.c	/^static apr_status_t ap_queue_destroy(void *data)$/;"	f	file:
+ap_queue_empty	./mpm/experimental/event/fdqueue.c	259;"	d	file:
+ap_queue_empty	./mpm/worker/fdqueue.c	230;"	d	file:
+ap_queue_full	./mpm/experimental/event/fdqueue.c	253;"	d	file:
+ap_queue_full	./mpm/worker/fdqueue.c	224;"	d	file:
+ap_queue_info_create	./mpm/experimental/event/fdqueue.c	/^apr_status_t ap_queue_info_create(fd_queue_info_t ** queue_info,$/;"	f
+ap_queue_info_create	./mpm/worker/fdqueue.c	/^apr_status_t ap_queue_info_create(fd_queue_info_t **queue_info,$/;"	f
+ap_queue_info_set_idle	./mpm/experimental/event/fdqueue.c	/^apr_status_t ap_queue_info_set_idle(fd_queue_info_t * queue_info,$/;"	f
+ap_queue_info_set_idle	./mpm/worker/fdqueue.c	/^apr_status_t ap_queue_info_set_idle(fd_queue_info_t *queue_info,$/;"	f
+ap_queue_info_term	./mpm/experimental/event/fdqueue.c	/^apr_status_t ap_queue_info_term(fd_queue_info_t * queue_info)$/;"	f
+ap_queue_info_term	./mpm/worker/fdqueue.c	/^apr_status_t ap_queue_info_term(fd_queue_info_t *queue_info)$/;"	f
+ap_queue_info_wait_for_idler	./mpm/experimental/event/fdqueue.c	/^apr_status_t ap_queue_info_wait_for_idler(fd_queue_info_t * queue_info)$/;"	f
+ap_queue_info_wait_for_idler	./mpm/worker/fdqueue.c	/^apr_status_t ap_queue_info_wait_for_idler(fd_queue_info_t *queue_info,$/;"	f
+ap_queue_init	./mpm/experimental/event/fdqueue.c	/^apr_status_t ap_queue_init(fd_queue_t * queue, int queue_capacity,$/;"	f
+ap_queue_init	./mpm/worker/fdqueue.c	/^apr_status_t ap_queue_init(fd_queue_t *queue, int queue_capacity, apr_pool_t *a)$/;"	f
+ap_queue_interrupt_all	./mpm/experimental/event/fdqueue.c	/^apr_status_t ap_queue_interrupt_all(fd_queue_t * queue)$/;"	f
+ap_queue_interrupt_all	./mpm/worker/fdqueue.c	/^apr_status_t ap_queue_interrupt_all(fd_queue_t *queue)$/;"	f
+ap_queue_pop	./mpm/experimental/event/fdqueue.c	/^apr_status_t ap_queue_pop(fd_queue_t * queue, apr_socket_t ** sd,$/;"	f
+ap_queue_pop	./mpm/worker/fdqueue.c	/^apr_status_t ap_queue_pop(fd_queue_t *queue, apr_socket_t **sd, apr_pool_t **p)$/;"	f
+ap_queue_push	./mpm/experimental/event/fdqueue.c	/^apr_status_t ap_queue_push(fd_queue_t * queue, apr_socket_t * sd,$/;"	f
+ap_queue_push	./mpm/worker/fdqueue.c	/^apr_status_t ap_queue_push(fd_queue_t *queue, apr_socket_t *sd, apr_pool_t *p)$/;"	f
+ap_queue_term	./mpm/experimental/event/fdqueue.c	/^apr_status_t ap_queue_term(fd_queue_t * queue)$/;"	f
+ap_queue_term	./mpm/worker/fdqueue.c	/^apr_status_t ap_queue_term(fd_queue_t *queue)$/;"	f
+ap_read_config	./config.c	/^AP_DECLARE(server_rec*) ap_read_config(process_rec *process, apr_pool_t *ptemp,$/;"	f
+ap_read_request	./protocol.c	/^request_rec *ap_read_request(conn_rec *conn)$/;"	f
+ap_real_exit_code	./mpm/winnt/service.c	/^AP_DECLARE_DATA int ap_real_exit_code = 1;$/;"	v
+ap_reclaim_child_processes	./mpm_common.c	/^void ap_reclaim_child_processes(int terminate)$/;"	f
+ap_regcomp	./util_pcre.c	/^AP_DECLARE(int) ap_regcomp(ap_regex_t *preg, const char *pattern, int cflags)$/;"	f
+ap_regexec	./util_pcre.c	/^AP_DECLARE(int) ap_regexec(const ap_regex_t *preg, const char *string,$/;"	f
+ap_regfree	./util_pcre.c	/^AP_DECLARE(void) ap_regfree(ap_regex_t *preg)$/;"	f
+ap_register_extra_mpm_process	./mpm_common.c	/^void ap_register_extra_mpm_process(pid_t pid)$/;"	f
+ap_register_hooks	./config.c	/^AP_DECLARE(void) ap_register_hooks(module *m, apr_pool_t *p)$/;"	f
+ap_register_input_filter	./util_filter.c	/^AP_DECLARE(ap_filter_rec_t *) ap_register_input_filter(const char *name,$/;"	f
+ap_register_output_filter	./util_filter.c	/^AP_DECLARE(ap_filter_rec_t *) ap_register_output_filter(const char *name,$/;"	f
+ap_register_output_filter_protocol	./util_filter.c	/^AP_DECLARE(ap_filter_rec_t *) ap_register_output_filter_protocol($/;"	f
+ap_registry_get_server_root	./mpm/winnt/service.c	/^apr_status_t ap_registry_get_server_root(apr_pool_t *p, char **buf)$/;"	f
+ap_relieve_child_processes	./mpm_common.c	/^void ap_relieve_child_processes(void)$/;"	f
+ap_remove_input_filter	./util_filter.c	/^AP_DECLARE(void) ap_remove_input_filter(ap_filter_t *f)$/;"	f
+ap_remove_loaded_module	./config.c	/^AP_DECLARE(void) ap_remove_loaded_module(module *mod)$/;"	f
+ap_remove_module	./config.c	/^AP_DECLARE(void) ap_remove_module(module *m)$/;"	f
+ap_remove_output_filter	./util_filter.c	/^AP_DECLARE(void) ap_remove_output_filter(ap_filter_t *f)$/;"	f
+ap_reopen_scoreboard	./scoreboard.c	/^apr_status_t ap_reopen_scoreboard(apr_pool_t *p, apr_shm_t **shm, int detached)$/;"	f
+ap_requires	./core.c	/^AP_DECLARE(const apr_array_header_t *) ap_requires(request_rec *r)$/;"	f
+ap_reset_connection_status	./mpm/winnt/mpm_winnt.c	/^AP_DECLARE(void) ap_reset_connection_status(long conn_id)$/;"	f
+ap_resolve_env	./util.c	/^AP_DECLARE(const char *) ap_resolve_env(apr_pool_t *p, const char * word)$/;"	f
+ap_response_code_string	./core.c	/^char *ap_response_code_string(request_rec *r, int error_index)$/;"	f
+ap_rflush	./protocol.c	/^AP_DECLARE(int) ap_rflush(request_rec *r)$/;"	f
+ap_rind	./util.c	/^AP_DECLARE(int) ap_rind(const char *s, char c)$/;"	f
+ap_rprintf	./protocol.c	/^AP_DECLARE_NONSTD(int) ap_rprintf(request_rec *r, const char *fmt, ...)$/;"	f
+ap_rputc	./protocol.c	/^AP_DECLARE(int) ap_rputc(int c, request_rec *r)$/;"	f
+ap_rputs	./protocol.c	/^AP_DECLARE(int) ap_rputs(const char *str, request_rec *r)$/;"	f
+ap_run_rewrite_args	./config.c	/^AP_DECLARE(void) ap_run_rewrite_args(process_rec *process)$/;"	f
+ap_run_sub_req	./request.c	/^AP_DECLARE(int) ap_run_sub_req(request_rec *r)$/;"	f
+ap_rvputs	./protocol.c	/^AP_DECLARE_NONSTD(int) ap_rvputs(request_rec *r, ...)$/;"	f
+ap_rvputs_proto_in_ascii	./util_ebcdic.c	/^int ap_rvputs_proto_in_ascii(request_rec *r, ...)$/;"	f
+ap_rwrite	./protocol.c	/^AP_DECLARE(int) ap_rwrite(const void *buf, int nbyte, request_rec *r)$/;"	f
+ap_satisfies	./core.c	/^AP_DECLARE(int) ap_satisfies(request_rec *r)$/;"	f
+ap_sb_handle_t	./scoreboard.c	/^struct ap_sb_handle_t {$/;"	s	file:
+ap_scan_script_header_err	./util_script.c	/^AP_DECLARE(int) ap_scan_script_header_err(request_rec *r, apr_file_t *f,$/;"	f
+ap_scan_script_header_err_brigade	./util_script.c	/^AP_DECLARE(int) ap_scan_script_header_err_brigade(request_rec *r,$/;"	f
+ap_scan_script_header_err_core	./util_script.c	/^AP_DECLARE(int) ap_scan_script_header_err_core(request_rec *r, char *buffer,$/;"	f
+ap_scan_script_header_err_strs	./util_script.c	/^AP_DECLARE_NONSTD(int) ap_scan_script_header_err_strs(request_rec *r,$/;"	f
+ap_scoreboard_fname	./scoreboard.c	/^AP_DECLARE_DATA const char *ap_scoreboard_fname = NULL;$/;"	v
+ap_scoreboard_image	./scoreboard.c	/^AP_DECLARE_DATA scoreboard *ap_scoreboard_image = NULL;$/;"	v
+ap_scoreboard_shm	./scoreboard.c	/^        apr_shm_t *ap_scoreboard_shm = NULL;$/;"	v	file:
+ap_server_argv0	./config.c	/^AP_DECLARE_DATA const char *ap_server_argv0 = NULL;$/;"	v
+ap_server_conf	./mpm/beos/beos.c	/^server_rec *ap_server_conf;$/;"	v
+ap_server_conf	./mpm/experimental/event/event.c	/^server_rec *ap_server_conf;$/;"	v
+ap_server_conf	./mpm/mpmt_os2/mpmt_os2.c	/^server_rec *ap_server_conf;$/;"	v
+ap_server_conf	./mpm/netware/mpm_netware.c	/^server_rec *ap_server_conf;$/;"	v
+ap_server_conf	./mpm/prefork/prefork.c	/^server_rec *ap_server_conf;$/;"	v
+ap_server_conf	./mpm/winnt/mpm_winnt.c	/^server_rec *ap_server_conf;$/;"	v
+ap_server_conf	./mpm/worker/worker.c	/^server_rec *ap_server_conf;$/;"	v
+ap_server_config_defines	./config.c	/^AP_DECLARE_DATA apr_array_header_t *ap_server_config_defines = NULL;$/;"	v
+ap_server_post_read_config	./config.c	/^AP_DECLARE_DATA apr_array_header_t *ap_server_post_read_config = NULL;$/;"	v
+ap_server_pre_read_config	./config.c	/^AP_DECLARE_DATA apr_array_header_t *ap_server_pre_read_config = NULL;$/;"	v
+ap_server_root	./config.c	/^AP_DECLARE_DATA const char *ap_server_root = NULL;$/;"	v
+ap_server_root_relative	./config.c	/^AP_DECLARE(char *) ap_server_root_relative(apr_pool_t *p, const char *file)$/;"	f
+ap_server_tokens	./core.c	/^static enum server_token_type ap_server_tokens = SrvTk_FULL;$/;"	v	typeref:enum:server_token_type	file:
+ap_set_config_vectors	./config.c	/^AP_CORE_DECLARE(void *) ap_set_config_vectors(server_rec *server,$/;"	f
+ap_set_content_length	./protocol.c	/^AP_DECLARE(void) ap_set_content_length(request_rec *r, apr_off_t clength)$/;"	f
+ap_set_deprecated	./config.c	/^AP_DECLARE_NONSTD(const char *) ap_set_deprecated(cmd_parms *cmd,$/;"	f
+ap_set_file_slot	./config.c	/^AP_DECLARE_NONSTD(const char *) ap_set_file_slot(cmd_parms *cmd, void *struct_ptr,$/;"	f
+ap_set_flag_slot	./config.c	/^AP_DECLARE_NONSTD(const char *) ap_set_flag_slot(cmd_parms *cmd,$/;"	f
+ap_set_int_slot	./config.c	/^AP_DECLARE_NONSTD(const char *) ap_set_int_slot(cmd_parms *cmd,$/;"	f
+ap_set_last_modified	./protocol.c	/^AP_DECLARE(void) ap_set_last_modified(request_rec *r)$/;"	f
+ap_set_listenbacklog	./listen.c	/^AP_DECLARE_NONSTD(const char *) ap_set_listenbacklog(cmd_parms *cmd,$/;"	f
+ap_set_listener	./listen.c	/^AP_DECLARE_NONSTD(const char *) ap_set_listener(cmd_parms *cmd, void *dummy,$/;"	f
+ap_set_module_config	./util_debug.c	/^AP_DECLARE(void) ap_set_module_config(ap_conf_vector_t *cv, const module *m,$/;"	f
+ap_set_module_config	./util_debug.c	119;"	d	file:
+ap_set_name_virtual_host	./vhost.c	/^const char *ap_set_name_virtual_host(cmd_parms *cmd, void *dummy,$/;"	f
+ap_set_receive_buffer_size	./listen.c	/^AP_DECLARE_NONSTD(const char *) ap_set_receive_buffer_size(cmd_parms *cmd,$/;"	f
+ap_set_send_buffer_size	./listen.c	/^AP_DECLARE_NONSTD(const char *) ap_set_send_buffer_size(cmd_parms *cmd,$/;"	f
+ap_set_server_protocol	./core.c	/^AP_DECLARE(void) ap_set_server_protocol(server_rec* s, const char* proto)$/;"	f
+ap_set_string_slot	./config.c	/^AP_DECLARE_NONSTD(const char *) ap_set_string_slot(cmd_parms *cmd,$/;"	f
+ap_set_string_slot_lower	./config.c	/^AP_DECLARE_NONSTD(const char *) ap_set_string_slot_lower(cmd_parms *cmd,$/;"	f
+ap_set_sub_req_protocol	./protocol.c	/^AP_DECLARE(void) ap_set_sub_req_protocol(request_rec *rnew,$/;"	f
+ap_set_version	./core.c	/^static void ap_set_version(apr_pool_t *pconf)$/;"	f	file:
+ap_setup_listeners	./listen.c	/^AP_DECLARE(int) ap_setup_listeners(server_rec *s)$/;"	f
+ap_setup_make_content_type	./protocol.c	/^AP_DECLARE(void) ap_setup_make_content_type(apr_pool_t *pool)$/;"	f
+ap_setup_prelinked_modules	./config.c	/^AP_DECLARE(const char *) ap_setup_prelinked_modules(process_rec *process)$/;"	f
+ap_show_directives	./config.c	/^AP_DECLARE(void) ap_show_directives(void)$/;"	f
+ap_show_modules	./config.c	/^AP_DECLARE(void) ap_show_modules(void)$/;"	f
+ap_show_mpm	./config.c	/^AP_DECLARE(const char *) ap_show_mpm(void)$/;"	f
+ap_signal_parent	./mpm/winnt/mpm_winnt.c	/^AP_DECLARE(void) ap_signal_parent(ap_signal_parent_e type)$/;"	f
+ap_signal_parent_e	./mpm/winnt/mpm_winnt.h	/^} ap_signal_parent_e;$/;"	t	typeref:enum:__anon8
+ap_signal_server	./mpm_common.c	/^int ap_signal_server(int *exit_status, apr_pool_t *pconf)$/;"	f
+ap_single_module_configure	./config.c	/^AP_DECLARE(void) ap_single_module_configure(apr_pool_t *p, server_rec *s,$/;"	f
+ap_size_list_item	./util.c	/^AP_DECLARE(const char *) ap_size_list_item(const char **field, int *len)$/;"	f
+ap_soak_end_container	./config.c	/^AP_DECLARE(const char *) ap_soak_end_container(cmd_parms *cmd, char *directive)$/;"	f
+ap_sock_disable_nagle	./mpm_common.c	/^void ap_sock_disable_nagle(apr_socket_t *s)$/;"	f
+ap_some_auth_required	./request.c	/^AP_DECLARE(int) ap_some_auth_required(request_rec *r)$/;"	f
+ap_start_restart	./mpm/beos/beos.c	/^static void ap_start_restart(int graceful)$/;"	f	file:
+ap_start_restart	./mpm/experimental/event/event.c	/^static void ap_start_restart(int graceful)$/;"	f	file:
+ap_start_restart	./mpm/worker/worker.c	/^static void ap_start_restart(int graceful)$/;"	f	file:
+ap_start_shutdown	./mpm/beos/beos.c	/^static void ap_start_shutdown(void)$/;"	f	file:
+ap_start_shutdown	./mpm/experimental/event/event.c	/^static void ap_start_shutdown(int graceful)$/;"	f	file:
+ap_start_shutdown	./mpm/worker/worker.c	/^static void ap_start_shutdown(int graceful)$/;"	f	file:
+ap_str_tolower	./util.c	/^AP_DECLARE(void) ap_str_tolower(char *str)$/;"	f
+ap_strcasecmp_match	./util.c	/^AP_DECLARE(int) ap_strcasecmp_match(const char *str, const char *expected)$/;"	f
+ap_strcasestr	./util.c	/^AP_DECLARE(char *) ap_strcasestr(const char *s1, const char *s2)$/;"	f
+ap_strchr	./util_debug.c	/^AP_DECLARE(char *) ap_strchr(char *s, int c)$/;"	f
+ap_strchr	./util_debug.c	38;"	d	file:
+ap_strchr_c	./util_debug.c	/^AP_DECLARE(const char *) ap_strchr_c(const char *s, int c)$/;"	f
+ap_strchr_c	./util_debug.c	48;"	d	file:
+ap_strcmp_match	./util.c	/^AP_DECLARE(int) ap_strcmp_match(const char *str, const char *expected)$/;"	f
+ap_stripprefix	./util.c	/^AP_DECLARE(const char *) ap_stripprefix(const char *bigstring,$/;"	f
+ap_strrchr	./util_debug.c	/^AP_DECLARE(char *) ap_strrchr(char *s, int c)$/;"	f
+ap_strrchr	./util_debug.c	58;"	d	file:
+ap_strrchr_c	./util_debug.c	/^AP_DECLARE(const char *) ap_strrchr_c(const char *s, int c)$/;"	f
+ap_strrchr_c	./util_debug.c	68;"	d	file:
+ap_strstr	./util_debug.c	/^AP_DECLARE(char *) ap_strstr(char *s, const char *c)$/;"	f
+ap_strstr	./util_debug.c	78;"	d	file:
+ap_strstr_c	./util_debug.c	/^AP_DECLARE(const char *) ap_strstr_c(const char *s, const char *c)$/;"	f
+ap_strstr_c	./util_debug.c	88;"	d	file:
+ap_sub_req_lookup_dirent	./request.c	/^AP_DECLARE(request_rec *) ap_sub_req_lookup_dirent(const apr_finfo_t *dirent,$/;"	f
+ap_sub_req_lookup_file	./request.c	/^AP_DECLARE(request_rec *) ap_sub_req_lookup_file(const char *new_file,$/;"	f
+ap_sub_req_lookup_uri	./request.c	/^AP_DECLARE(request_rec *) ap_sub_req_lookup_uri(const char *new_uri,$/;"	f
+ap_sub_req_method_uri	./request.c	/^AP_DECLARE(request_rec *) ap_sub_req_method_uri(const char *method,$/;"	f
+ap_thread_limit	./mpm/beos/beos.c	/^static int ap_thread_limit=0;$/;"	v	file:
+ap_thread_limit	./mpm/mpmt_os2/mpmt_os2.c	/^static int ap_thread_limit = 0;$/;"	v	file:
+ap_thread_stacksize	./mpm_common.c	/^apr_size_t ap_thread_stacksize = 0; \/* use system default *\/$/;"	v
+ap_threads_limit	./mpm/netware/mpm_netware.c	/^static int ap_threads_limit=0;$/;"	v	file:
+ap_threads_max_free	./mpm/netware/mpm_netware.c	/^static int ap_threads_max_free=0;$/;"	v	file:
+ap_threads_min_free	./mpm/netware/mpm_netware.c	/^static int ap_threads_min_free=0;$/;"	v	file:
+ap_threads_per_child	./mpm/experimental/event/event.c	/^int ap_threads_per_child = 0;   \/* Worker threads per child *\/$/;"	v
+ap_threads_per_child	./mpm/netware/mpm_netware.c	/^int ap_threads_per_child=0;         \/* Worker threads per child *\/$/;"	v
+ap_threads_per_child	./mpm/prefork/prefork.c	/^int ap_threads_per_child=0;         \/* Worker threads per child *\/$/;"	v
+ap_threads_per_child	./mpm/winnt/mpm_winnt.c	/^int ap_threads_per_child = 0;$/;"	v
+ap_threads_per_child	./mpm/worker/worker.c	/^int ap_threads_per_child = 0;         \/* Worker threads per child *\/$/;"	v
+ap_threads_to_start	./mpm/beos/beos.c	/^static int ap_threads_to_start=0;$/;"	v	file:
+ap_threads_to_start	./mpm/netware/mpm_netware.c	/^static int ap_threads_to_start=0;$/;"	v	file:
+ap_time_process_request	./scoreboard.c	/^void ap_time_process_request(ap_sb_handle_t *sbh, int status)$/;"	f
+ap_top_module	./config.c	/^AP_DECLARE_DATA module *ap_top_module = NULL;$/;"	v
+ap_unescape_url	./util.c	/^AP_DECLARE(int) ap_unescape_url(char *url)$/;"	f
+ap_unescape_url_keep2f	./util.c	/^AP_DECLARE(int) ap_unescape_url_keep2f(char *url)$/;"	f
+ap_unregister_extra_mpm_process	./mpm_common.c	/^int ap_unregister_extra_mpm_process(pid_t pid)$/;"	f
+ap_update_child_status	./scoreboard.c	/^AP_DECLARE(int) ap_update_child_status(ap_sb_handle_t *sbh, int status,$/;"	f
+ap_update_child_status_from_indexes	./scoreboard.c	/^AP_DECLARE(int) ap_update_child_status_from_indexes(int child_num,$/;"	f
+ap_update_connection_status	./mpm/winnt/mpm_winnt.c	/^AP_DECLARE(void) ap_update_connection_status(long conn_id, const char *key, \\$/;"	f
+ap_update_mtime	./request.c	/^AP_DECLARE(void) ap_update_mtime(request_rec *r, apr_time_t dependency_mtime)$/;"	f
+ap_update_vhost_from_headers	./vhost.c	/^AP_DECLARE(void) ap_update_vhost_from_headers(request_rec *r)$/;"	f
+ap_update_vhost_given_ip	./vhost.c	/^AP_DECLARE(void) ap_update_vhost_given_ip(conn_rec *conn)$/;"	f
+ap_valid_accept_mutex_string	./mpm_common.c	/^const char ap_valid_accept_mutex_string[] =$/;"	v
+ap_vhost_iterate_given_conn	./vhost.c	/^AP_DECLARE(int) ap_vhost_iterate_given_conn(conn_rec *conn,$/;"	f
+ap_vrprintf	./protocol.c	/^AP_DECLARE(int) ap_vrprintf(request_rec *r, const char *fmt, va_list va)$/;"	f
+ap_vrprintf_data	./protocol.c	/^struct ap_vrprintf_data {$/;"	s	file:
+ap_wait_or_timeout	./mpm_common.c	/^void ap_wait_or_timeout(apr_exit_why_e *status, int *exitcode, apr_proc_t *ret,$/;"	f
+ap_walk_config	./config.c	/^AP_DECLARE(const char *) ap_walk_config(ap_directive_t *current,$/;"	f
+ap_walk_config_sub	./config.c	/^static const char *ap_walk_config_sub(const ap_directive_t *current,$/;"	f	file:
+ap_xlate_proto_from_ascii	./util_ebcdic.c	/^void ap_xlate_proto_from_ascii(char *buffer, apr_size_t len)$/;"	f
+ap_xlate_proto_to_ascii	./util_ebcdic.c	/^void ap_xlate_proto_to_ascii(char *buffer, apr_size_t len)$/;"	f
+ap_xml_parse_input	./util_xml.c	/^AP_DECLARE(int) ap_xml_parse_input(request_rec * r, apr_xml_doc **pdoc)$/;"	f
+arg	./util_script.c	/^    int arg;$/;"	m	struct:vastrs	file:
+args	./util_script.c	/^    va_list args;$/;"	m	struct:vastrs	file:
+arr_elts_close	./config.c	/^static int arr_elts_close(void *param)$/;"	f	file:
+arr_elts_getstr	./config.c	/^static void *arr_elts_getstr(void *buf, size_t bufsiz, void *param)$/;"	f	file:
+arr_elts_param_t	./config.c	/^} arr_elts_param_t;$/;"	t	typeref:struct:__anon1	file:
+array	./config.c	/^    apr_array_header_t *array;$/;"	m	struct:__anon1	file:
+avg_retries	./mpm/netware/mpm_netware.c	/^static int avg_retries = 0;$/;"	v	file:
+ba	./mpm/winnt/mpm_winnt.h	/^    apr_bucket_alloc_t *ba;$/;"	m	struct:CompContext
+basis_64	./util_md5.c	/^static char basis_64[] =$/;"	v	file:
+baton	./mpm/experimental/event/event.c	/^    void *baton;$/;"	m	struct:__anon16	file:
+bb	./protocol.c	/^    apr_bucket_brigade *bb;$/;"	m	struct:__anon18	file:
+beos_accept	./mpm/beos/beos.c	/^static apr_status_t beos_accept(void **accepted, ap_listen_rec *lr, apr_pool_t *ptrans)$/;"	f	file:
+beos_cmds	./mpm/beos/beos.c	/^static const command_rec beos_cmds[] = {$/;"	v	file:
+beos_hooks	./mpm/beos/beos.c	/^static void beos_hooks(apr_pool_t *p)$/;"	f	file:
+beos_pre_config	./mpm/beos/beos.c	/^static int beos_pre_config(apr_pool_t *pconf, apr_pool_t *plog, apr_pool_t *ptemp)$/;"	f	file:
+bounds	./mpm/experimental/event/fdqueue.h	/^    int bounds;$/;"	m	struct:fd_queue_t
+bounds	./mpm/worker/fdqueue.h	/^    int                 bounds;$/;"	m	struct:fd_queue_t
+brigade_move	./core_filters.c	/^static void brigade_move(apr_bucket_brigade *b, apr_bucket_brigade *a,$/;"	f	file:
+buff	./mpm/winnt/mpm_winnt.h	/^    char buff[2*PADDED_ADDR_SIZE];$/;"	m	struct:CompContext
+buff	./protocol.c	/^    char *buff;$/;"	m	struct:ap_vrprintf_data	file:
+buffer_output	./protocol.c	/^static apr_status_t buffer_output(request_rec *r,$/;"	f	file:
+c	./util_filter.c	/^    int c;$/;"	m	struct:__anon19	file:
+c2x	./util.c	/^static APR_INLINE unsigned char *c2x(unsigned what, unsigned char prefix,$/;"	f	file:
+c2x_table	./util.c	/^static const char c2x_table[] = "0123456789abcdef";$/;"	v	file:
+cached	./request.c	/^    const char         *cached;          \/* The identifier we matched *\/$/;"	m	struct:walk_cache_t	file:
+cached_explode	./util_time.c	/^static apr_status_t cached_explode(apr_time_exp_t *xt, apr_time_t t,$/;"	f	file:
+cfg_close	./util.c	/^static apr_status_t cfg_close(void *param)$/;"	f	file:
+cfg_getch	./util.c	/^static int cfg_getch(void *param)$/;"	f	file:
+cfg_getstr	./util.c	/^static void *cfg_getstr(void *buf, size_t bufsiz, void *param)$/;"	f	file:
+changed_limit_at_restart	./mpm/experimental/event/event.c	/^static int changed_limit_at_restart;$/;"	v	file:
+changed_limit_at_restart	./mpm/prefork/prefork.c	/^static int changed_limit_at_restart;$/;"	v	file:
+changed_limit_at_restart	./mpm/winnt/mpm_winnt.c	/^static int changed_limit_at_restart;$/;"	v	file:
+changed_limit_at_restart	./mpm/worker/worker.c	/^static int changed_limit_at_restart;$/;"	v	file:
+charset_pattern	./protocol.c	/^static const apr_strmatch_pattern *charset_pattern;$/;"	v	file:
+chdir_for_gprof	./mpm/prefork/prefork.c	/^static void chdir_for_gprof(void)$/;"	f	file:
+chdir_for_gprof	./mpm/prefork/prefork.c	182;"	d	file:
+check_hostalias	./vhost.c	/^static void check_hostalias(request_rec *r)$/;"	f	file:
+check_infinite_requests	./mpm/experimental/event/event.c	/^static void check_infinite_requests(void)$/;"	f	file:
+check_infinite_requests	./mpm/worker/worker.c	/^static void check_infinite_requests(void)$/;"	f	file:
+check_restart	./mpm/beos/beos.c	/^static void check_restart(void *data)$/;"	f	file:
+check_serverpath	./vhost.c	/^static void check_serverpath(request_rec *r)$/;"	f	file:
+check_signal	./mpm/experimental/event/event.c	/^static int check_signal(int signum)$/;"	f	file:
+check_signal	./mpm/worker/worker.c	/^static int check_signal(int signum)$/;"	f	file:
+child	./util_filter.c	/^    filter_trie_node *child;$/;"	m	struct:__anon19	file:
+child_control_handler	./mpm/winnt/service.c	/^static BOOL CALLBACK child_control_handler(DWORD ctrl_type)$/;"	f	file:
+child_fatal	./mpm/beos/beos.c	/^static int volatile child_fatal;$/;"	v	file:
+child_fatal	./mpm/experimental/event/event.c	/^static volatile int child_fatal;$/;"	v	file:
+child_fatal	./mpm/worker/worker.c	/^static volatile int child_fatal;$/;"	v	file:
+child_lock	./mpm/winnt/child.c	/^static apr_thread_mutex_t  *child_lock;$/;"	v	file:
+child_main	./mpm/experimental/event/event.c	/^static void child_main(int child_num_arg)$/;"	f	file:
+child_main	./mpm/prefork/prefork.c	/^static void child_main(int child_num_arg)$/;"	f	file:
+child_main	./mpm/winnt/child.c	/^void child_main(apr_pool_t *pconf)$/;"	f
+child_main	./mpm/worker/worker.c	/^static void child_main(int child_num_arg)$/;"	f	file:
+child_num	./scoreboard.c	/^    int child_num;$/;"	m	struct:ap_sb_handle_t	file:
+child_num_arg	./mpm/experimental/event/event.c	/^    int child_num_arg;$/;"	m	struct:__anon14	file:
+child_num_arg	./mpm/worker/worker.c	/^    int child_num_arg;$/;"	m	struct:__anon12	file:
+child_slot	./mpm/mpmt_os2/mpmt_os2_child.c	/^static int child_slot;$/;"	v	file:
+children	./util_filter.c	/^    filter_trie_child_ptr *children;$/;"	m	struct:filter_trie_node	file:
+clean_child_exit	./mpm/beos/beos.c	/^static void clean_child_exit(int code, int slot)$/;"	f	file:
+clean_child_exit	./mpm/experimental/event/event.c	/^static void clean_child_exit(int code)$/;"	f	file:
+clean_child_exit	./mpm/mpmt_os2/mpmt_os2_child.c	/^static void clean_child_exit(int code)$/;"	f	file:
+clean_child_exit	./mpm/netware/mpm_netware.c	/^static void clean_child_exit(int code, int worker_num, apr_pool_t *ptrans,$/;"	f	file:
+clean_child_exit	./mpm/prefork/prefork.c	/^static void clean_child_exit(int code)$/;"	f	file:
+clean_child_exit	./mpm/worker/worker.c	/^static void clean_child_exit(int code)$/;"	f	file:
+cleanup_global_providers	./provider.c	/^static apr_status_t cleanup_global_providers(void *ctx)$/;"	f	file:
+cleanup_thread	./mpm/winnt/child.c	/^static void cleanup_thread(HANDLE *handles, int *thread_cnt, int thread_to_clean)$/;"	f	file:
+clear_handle_list	./log.c	/^static apr_status_t clear_handle_list(void *v)$/;"	f	file:
+clone_headers_no_body	./protocol.c	/^static void clone_headers_no_body(request_rec *rnew,$/;"	f	file:
+close_handle_in_child	./log.c	/^static void close_handle_in_child(apr_pool_t *p, apr_file_t *f)$/;"	f	file:
+close_listeners_on_exec	./listen.c	/^static apr_status_t close_listeners_on_exec(void *v)$/;"	f	file:
+close_worker_sockets	./mpm/experimental/event/event.c	/^static void close_worker_sockets(void)$/;"	f	file:
+close_worker_sockets	./mpm/worker/worker.c	/^static void close_worker_sockets(void)$/;"	f	file:
+cmd	./config.c	/^    const command_rec *cmd;$/;"	m	struct:ap_mod_list_struct	file:
+conn_sd	./mpm/mpmt_os2/mpmt_os2_child.c	/^    apr_socket_t *conn_sd;$/;"	m	struct:__anon4	file:
+console_control_handler	./mpm/winnt/service.c	/^static BOOL CALLBACK console_control_handler(DWORD ctrl_type)$/;"	f	file:
+content_length_ctx	./protocol.c	/^struct content_length_ctx {$/;"	s	file:
+core_cmds	./core.c	/^static const command_rec core_cmds[] = {$/;"	v	file:
+core_create_conn	./core.c	/^static conn_rec *core_create_conn(apr_pool_t *ptrans, server_rec *server,$/;"	f	file:
+core_create_proxy_req	./core.c	/^static int core_create_proxy_req(request_rec *r, request_rec *pr)$/;"	f	file:
+core_create_req	./core.c	/^static int core_create_req(request_rec *r)$/;"	f	file:
+core_insert_filter	./core.c	/^static void core_insert_filter(request_rec *r)$/;"	f	file:
+core_map_to_storage	./core.c	/^static int core_map_to_storage(request_rec *r)$/;"	f	file:
+core_module	./core.c	/^AP_DECLARE_DATA module core_module = {$/;"	v
+core_opts_merge	./request.c	/^static void core_opts_merge(const ap_conf_vector_t *sec, core_opts_t *opts)$/;"	f	file:
+core_opts_t	./request.c	/^typedef struct core_opts_t {$/;"	s	file:
+core_opts_t	./request.c	/^} core_opts_t;$/;"	t	typeref:struct:core_opts_t	file:
+core_override_type	./core.c	/^static int core_override_type(request_rec *r)$/;"	f	file:
+core_post_config	./core.c	/^static int core_post_config(apr_pool_t *pconf, apr_pool_t *plog, apr_pool_t *ptemp, server_rec *s)$/;"	f	file:
+core_pre_connection	./core.c	/^static int core_pre_connection(conn_rec *c, void *csd)$/;"	f	file:
+create_core_dir_config	./core.c	/^static void *create_core_dir_config(apr_pool_t *a, char *dir)$/;"	f	file:
+create_core_server_config	./core.c	/^static void *create_core_server_config(apr_pool_t *a, server_rec *s)$/;"	f	file:
+create_default_per_dir_config	./config.c	/^static ap_conf_vector_t *create_default_per_dir_config(apr_pool_t *p)$/;"	f	file:
+create_empty_config	./config.c	/^static ap_conf_vector_t *create_empty_config(apr_pool_t *p)$/;"	f	file:
+create_listener_thread	./mpm/experimental/event/event.c	/^static void create_listener_thread(thread_starter * ts)$/;"	f	file:
+create_listener_thread	./mpm/winnt/child.c	/^static void create_listener_thread()$/;"	f	file:
+create_listener_thread	./mpm/worker/worker.c	/^static void create_listener_thread(thread_starter *ts)$/;"	f	file:
+create_namebased_scoreboard	./scoreboard.c	/^static apr_status_t create_namebased_scoreboard(apr_pool_t *pool,$/;"	f	file:
+create_process	./main.c	/^static process_rec *create_process(int argc, const char * const *argv)$/;"	f	file:
+create_process	./mpm/winnt/mpm_winnt.c	/^static int create_process(apr_pool_t *p, HANDLE *child_proc, HANDLE *child_exit_event,$/;"	f	file:
+create_server_config	./config.c	/^static ap_conf_vector_t *create_server_config(apr_pool_t *p, server_rec *s)$/;"	f	file:
+cs	./mpm/experimental/event/fdqueue.h	/^    conn_state_t *cs;$/;"	m	struct:fd_queue_elem_t
+curpos	./util_script.c	/^    const char *curpos;$/;"	m	struct:vastrs	file:
+curr_idx	./config.c	/^    int curr_idx;$/;"	m	struct:__anon1	file:
+dash_k_arg	./mpm_common.c	/^static const char *dash_k_arg;$/;"	v	file:
+data	./mpm/experimental/event/fdqueue.h	/^    fd_queue_elem_t *data;$/;"	m	struct:fd_queue_t
+data	./mpm/worker/fdqueue.h	/^    fd_queue_elem_t    *data;$/;"	m	struct:fd_queue_t
+data_sent	./protocol.c	/^    int data_sent;  \/* true if the C-L filter has already sent at$/;"	m	struct:content_length_ctx	file:
+decl_die	./request.c	/^static int decl_die(int status, char *phase, request_rec *r)$/;"	f	file:
+default_handler	./core.c	/^static int default_handler(request_rec *r)$/;"	f	file:
+default_list	./vhost.c	/^static ipaddr_chain *default_list;$/;"	v	file:
+default_parms	./config.c	/^static cmd_parms default_parms =$/;"	v	file:
+destroy_and_exit_process	./main.c	/^static void destroy_and_exit_process(process_rec *process,$/;"	f	file:
+die_now	./mpm/netware/mpm_netware.c	/^static int die_now = 0;$/;"	v	file:
+die_now	./mpm/prefork/prefork.c	/^static volatile int die_now = 0;$/;"	v	file:
+die_on_logoff	./mpm/winnt/service.c	/^static BOOL  die_on_logoff = FALSE;$/;"	v	file:
+dir_conf_merged	./request.c	/^    ap_conf_vector_t   *dir_conf_merged; \/* Base per_dir_config *\/$/;"	m	struct:walk_cache_t	file:
+dir_conf_tested	./request.c	/^    ap_conf_vector_t  **dir_conf_tested; \/* The sections we matched against *\/$/;"	m	struct:walk_cache_t	file:
+dir_maker_func	./config.c	/^typedef void *(*dir_maker_func)(apr_pool_t *, char *);$/;"	t	file:
+dirsection	./core.c	/^static const char *dirsection(cmd_parms *cmd, void *mconfig, const char *arg)$/;"	f	file:
+display_name	./mpm/winnt/nt_eventlog.c	/^static char  *display_name  = NULL;$/;"	v	file:
+display_settings	./mpm/netware/mpm_netware.c	/^static void display_settings ()$/;"	f	file:
+do_double_reverse	./core.c	/^static APR_INLINE void do_double_reverse (conn_rec *conn)$/;"	f	file:
+do_nothing	./core.c	/^static int do_nothing(request_rec *r) { return OK; }$/;"	f	file:
+dummy_connection	./mpm_common.c	/^static apr_status_t dummy_connection(ap_pod_t *pod)$/;"	f	file:
+dummy_signal_handler	./mpm/experimental/event/event.c	/^static void dummy_signal_handler(int sig)$/;"	f	file:
+dummy_signal_handler	./mpm/worker/worker.c	/^static void dummy_signal_handler(int sig)$/;"	f	file:
+dump_a_vhost	./vhost.c	/^static void dump_a_vhost(apr_file_t *f, ipaddr_chain *ic)$/;"	f	file:
+dump_iphash_statistics	./vhost.c	/^static void dump_iphash_statistics(server_rec *main_s)$/;"	f	file:
+dump_vhost_config	./vhost.c	/^static void dump_vhost_config(apr_file_t *f)$/;"	f	file:
+dying	./mpm/experimental/event/event.c	/^static int dying = 0;$/;"	v	file:
+dying	./mpm/worker/worker.c	/^static int dying = 0;$/;"	v	file:
+dynamic_modules	./config.c	/^static int dynamic_modules = 0;$/;"	v	file:
+elt	./core.c	/^    ap_conf_vector_t *elt;$/;"	m	struct:reorder_sort_rec	file:
+emulate_sendfile	./core_filters.c	/^static apr_status_t emulate_sendfile(core_net_rec *c, apr_file_t *fd,$/;"	f	file:
+end_output_stream	./protocol.c	/^static void end_output_stream(request_rec *r)$/;"	f	file:
+eoc_bucket_read	./eoc_bucket.c	/^static apr_status_t eoc_bucket_read(apr_bucket *b, const char **str,$/;"	f	file:
+error_bucket_destroy	./error_bucket.c	/^static void error_bucket_destroy(void *data)$/;"	f	file:
+error_bucket_read	./error_bucket.c	/^static apr_status_t error_bucket_read(apr_bucket *b, const char **str,$/;"	f	file:
+errordocument_default	./core.c	/^static char errordocument_default;$/;"	v	file:
+event_cmds	./mpm/experimental/event/event.c	/^static const command_rec event_cmds[] = {$/;"	v	file:
+event_hooks	./mpm/experimental/event/event.c	/^static void event_hooks(apr_pool_t * p)$/;"	f	file:
+event_pollset	./mpm/experimental/event/event.c	/^static apr_pollset_t *event_pollset;$/;"	v	file:
+exception_hook_enabled	./mpm_common.c	/^static int exception_hook_enabled;$/;"	v	file:
+execute_now	./config.c	/^static const char *execute_now(char *cmd_line, const char *args,$/;"	f	file:
+exit_event	./mpm/winnt/child.c	/^HANDLE exit_event;$/;"	v
+exploded_cache_gmt	./util_time.c	/^static struct exploded_time_cache_element exploded_cache_gmt[TIME_CACHE_SIZE];$/;"	v	typeref:struct:exploded_time_cache_element	file:
+exploded_cache_localtime	./util_time.c	/^static struct exploded_time_cache_element exploded_cache_localtime[TIME_CACHE_SIZE];$/;"	v	typeref:struct:exploded_time_cache_element	file:
+exploded_time_cache_element	./util_time.c	/^struct exploded_time_cache_element {$/;"	s	file:
+extra_process_t	./mpm_common.c	/^typedef struct extra_process_t {$/;"	s	file:
+extra_process_t	./mpm_common.c	/^} extra_process_t;$/;"	t	typeref:struct:extra_process_t	file:
+extras	./mpm_common.c	/^static extra_process_t *extras;$/;"	v	file:
+facilities	./log.c	/^static const TRANS facilities[] = {$/;"	v	file:
+fd_queue_elem_t	./mpm/experimental/event/fdqueue.h	/^struct fd_queue_elem_t$/;"	s
+fd_queue_elem_t	./mpm/experimental/event/fdqueue.h	/^typedef struct fd_queue_elem_t fd_queue_elem_t;$/;"	t	typeref:struct:fd_queue_elem_t
+fd_queue_elem_t	./mpm/worker/fdqueue.h	/^struct fd_queue_elem_t {$/;"	s
+fd_queue_elem_t	./mpm/worker/fdqueue.h	/^typedef struct fd_queue_elem_t fd_queue_elem_t;$/;"	t	typeref:struct:fd_queue_elem_t
+fd_queue_info_t	./mpm/experimental/event/fdqueue.c	/^struct fd_queue_info_t$/;"	s	file:
+fd_queue_info_t	./mpm/experimental/event/fdqueue.h	/^typedef struct fd_queue_info_t fd_queue_info_t;$/;"	t	typeref:struct:fd_queue_info_t
+fd_queue_info_t	./mpm/worker/fdqueue.c	/^struct fd_queue_info_t {$/;"	s	file:
+fd_queue_info_t	./mpm/worker/fdqueue.h	/^typedef struct fd_queue_info_t fd_queue_info_t;$/;"	t	typeref:struct:fd_queue_info_t
+fd_queue_t	./mpm/experimental/event/fdqueue.h	/^struct fd_queue_t$/;"	s
+fd_queue_t	./mpm/experimental/event/fdqueue.h	/^typedef struct fd_queue_t fd_queue_t;$/;"	t	typeref:struct:fd_queue_t
+fd_queue_t	./mpm/worker/fdqueue.h	/^struct fd_queue_t {$/;"	s
+fd_queue_t	./mpm/worker/fdqueue.h	/^typedef struct fd_queue_t fd_queue_t;$/;"	t	typeref:struct:fd_queue_t
+filesection	./core.c	/^static const char *filesection(cmd_parms *cmd, void *mconfig, const char *arg)$/;"	f	file:
+filter_cleanup	./util_filter.c	/^static apr_status_t filter_cleanup(void *ctx)$/;"	f	file:
+filter_trie_child_ptr	./util_filter.c	/^} filter_trie_child_ptr;$/;"	t	typeref:struct:__anon19	file:
+filter_trie_node	./util_filter.c	/^struct filter_trie_node {$/;"	s	file:
+filter_trie_node	./util_filter.c	/^typedef struct filter_trie_node filter_trie_node;$/;"	t	typeref:struct:filter_trie_node	file:
+find_accf_name	./listen.c	/^static const char* find_accf_name(server_rec *s, const char *proto)$/;"	f	file:
+find_child_by_pid	./scoreboard.c	/^int find_child_by_pid(apr_proc_t *pid)$/;"	f
+find_default_server	./vhost.c	/^static ipaddr_chain *find_default_server(apr_port_t port)$/;"	f	file:
+find_ipaddr	./vhost.c	/^static APR_INLINE ipaddr_chain *find_ipaddr(apr_sockaddr_t *sa)$/;"	f	file:
+find_parent	./core.c	/^static const ap_directive_t * find_parent(const ap_directive_t *dirp,$/;"	f	file:
+find_ready_listener	./mpm/winnt/child.c	/^static APR_INLINE ap_listen_rec *find_ready_listener(fd_set * main_fds)$/;"	f	file:
+first_server_limit	./mpm/experimental/event/event.c	/^static int first_server_limit = 0;$/;"	v	file:
+first_server_limit	./mpm/prefork/prefork.c	/^static int first_server_limit = 0;$/;"	v	file:
+first_server_limit	./mpm/worker/worker.c	/^static int first_server_limit = 0;$/;"	v	file:
+first_thread_limit	./mpm/experimental/event/event.c	/^static int first_thread_limit = 0;$/;"	v	file:
+first_thread_limit	./mpm/winnt/mpm_winnt.c	/^static int first_thread_limit = 0;$/;"	v	file:
+first_thread_limit	./mpm/worker/worker.c	/^static int first_thread_limit = 0;$/;"	v	file:
+fix_hostname	./vhost.c	/^static void fix_hostname(request_rec *r)$/;"	f	file:
+fname	./config.c	/^    char *fname;$/;"	m	struct:__anon2	file:
+fname_alphasort	./config.c	/^static int fname_alphasort(const void *fn1, const void *fn2)$/;"	f	file:
+fnames	./config.c	/^} fnames;$/;"	t	typeref:struct:__anon2	file:
+frec	./util_filter.c	/^    ap_filter_rec_t *frec;$/;"	m	struct:filter_trie_node	file:
+g_blocked_threads	./mpm/winnt/child.c	/^static unsigned int g_blocked_threads = 0;$/;"	v	file:
+get_addresses	./vhost.c	/^static const char *get_addresses(apr_pool_t *p, const char *w_,$/;"	f	file:
+get_filter_handle	./util_filter.c	/^static ap_filter_rec_t *get_filter_handle(const char *name,$/;"	f	file:
+get_handles_from_parent	./mpm/winnt/mpm_winnt.c	/^void get_handles_from_parent(server_rec *s, HANDLE *child_exit_event,$/;"	f
+get_listeners_from_parent	./mpm/winnt/mpm_winnt.c	/^void get_listeners_from_parent(server_rec *s)$/;"	f
+get_server_name_for_url	./core.c	/^static const char *get_server_name_for_url(request_rec *r)$/;"	f	file:
+get_worker	./mpm/experimental/event/event.c	/^static int get_worker(int *have_idle_worker_p)$/;"	f	file:
+getsfunc_BRIGADE	./util_script.c	/^static int getsfunc_BRIGADE(char *buf, int len, void *arg)$/;"	f	file:
+getsfunc_FILE	./util_script.c	/^static int getsfunc_FILE(char *buf, int len, void *f)$/;"	f	file:
+getsfunc_STRING	./util_script.c	/^static int getsfunc_STRING(char *w, int len, void *pvastrs)$/;"	f	file:
+global_providers	./provider.c	/^static apr_hash_t *global_providers = NULL;$/;"	v	file:
+global_providers_names	./provider.c	/^static apr_hash_t *global_providers_names = NULL;$/;"	v	file:
+globals	./mpm/winnt/child.c	/^} globals;$/;"	t	typeref:struct:globals_s	file:
+globals_s	./mpm/winnt/child.c	/^typedef struct globals_s {$/;"	s	file:
+globdat	./mpm/winnt/service.c	/^} globdat;$/;"	v	typeref:struct:__anon10	file:
+gwltty_phandler	./mpm/winnt/Win9xConHook.c	102;"	d	file:
+gwltty_ttywnd	./mpm/winnt/Win9xConHook.c	103;"	d	file:
+hServiceStatus	./mpm/winnt/service.c	/^    SERVICE_STATUS_HANDLE hServiceStatus;$/;"	m	struct:__anon10	file:
+handle	./log.c	/^    apr_file_t *handle;$/;"	m	struct:read_handle_t	file:
+handler_func	./config.c	/^typedef int (*handler_func)(request_rec *);$/;"	t	file:
+hash_addr	./vhost.c	/^static APR_INLINE unsigned hash_addr(struct apr_sockaddr_t *sa)$/;"	f	file:
+hash_inaddr	./vhost.c	/^static APR_INLINE unsigned hash_inaddr(unsigned key)$/;"	f	file:
+head_listener	./mpm/winnt/child.c	/^static ap_listen_rec *head_listener;$/;"	v	file:
+hhkGetMessage	./mpm/winnt/Win9xConHook.c	/^static HHOOK hhkGetMessage;$/;"	v	file:
+hmodHook	./mpm/winnt/Win9xConHook.c	/^static HMODULE hmodHook = NULL;$/;"	v	file:
+hold_console_open_on_error	./mpm/winnt/service.c	/^void hold_console_open_on_error(void)$/;"	f
+hold_off_on_exponential_spawning	./mpm/beos/beos.c	/^static int hold_off_on_exponential_spawning;$/;"	v	file:
+hold_off_on_exponential_spawning	./mpm/experimental/event/event.c	/^static int hold_off_on_exponential_spawning;$/;"	v	file:
+hold_off_on_exponential_spawning	./mpm/netware/mpm_netware.c	/^static int hold_off_on_exponential_spawning;$/;"	v	file:
+hold_off_on_exponential_spawning	./mpm/prefork/prefork.c	/^static int hold_off_on_exponential_spawning;$/;"	v	file:
+hold_off_on_exponential_spawning	./mpm/worker/worker.c	/^static int hold_off_on_exponential_spawning;$/;"	v	file:
+hold_screen_on_exit	./mpm/netware/mpm_netware.c	/^int hold_screen_on_exit = 0; \/* Indicates whether the screen should be held open *\/$/;"	v
+hookwndmsg	./mpm/winnt/Win9xConHook.c	/^static UINT hookwndmsg = 0;$/;"	v	file:
+hookwndprop	./mpm/winnt/Win9xConHook.c	/^static LPCTSTR hookwndprop;$/;"	v	file:
+http2env	./util_script.c	/^static char *http2env(apr_pool_t *a, const char *w)$/;"	f	file:
+hwtty	./mpm/winnt/Win9xConHook.c	/^static HWND hwtty = NULL;$/;"	v	file:
+idle_spawn_rate	./mpm/experimental/event/event.c	/^static int idle_spawn_rate = 1;$/;"	v	file:
+idle_spawn_rate	./mpm/netware/mpm_netware.c	/^static int idle_spawn_rate = 1;$/;"	v	file:
+idle_spawn_rate	./mpm/prefork/prefork.c	/^static int idle_spawn_rate = 1;$/;"	v	file:
+idle_spawn_rate	./mpm/worker/worker.c	/^static int idle_spawn_rate = 1;$/;"	v	file:
+idlers	./mpm/experimental/event/fdqueue.c	/^    apr_int32_t idlers;      \/**$/;"	m	struct:fd_queue_info_t	file:
+idlers	./mpm/worker/fdqueue.c	/^    apr_uint32_t idlers;$/;"	m	struct:fd_queue_info_t	file:
+idlers_mutex	./mpm/experimental/event/fdqueue.c	/^    apr_thread_mutex_t *idlers_mutex;$/;"	m	struct:fd_queue_info_t	file:
+idlers_mutex	./mpm/worker/fdqueue.c	/^    apr_thread_mutex_t *idlers_mutex;$/;"	m	struct:fd_queue_info_t	file:
+ignore_cmd	./mpm/mpmt_os2/mpmt_os2.c	/^static const char *ignore_cmd(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+include_config	./core.c	/^static const char *include_config (cmd_parms *cmd, void *dummy,$/;"	f	file:
+init_config_globals	./config.c	/^static void init_config_globals(apr_pool_t *p)$/;"	f	file:
+init_server_config	./config.c	/^static server_rec *init_server_config(process_rec *process, apr_pool_t *p)$/;"	f	file:
+initgroups	./mpm_common.c	/^int initgroups(const char *name, gid_t basegid)$/;"	f
+inst_argc	./mpm/winnt/mpm_winnt.c	/^static int inst_argc;$/;"	v	file:
+inst_argv	./mpm/winnt/mpm_winnt.c	/^static const char * const *inst_argv;$/;"	v	file:
+instance	./mpm/winnt/Win9xConHook.c	/^    HINSTANCE instance;$/;"	m	struct:__anon7	file:
+invoke_cmd	./config.c	/^static const char *invoke_cmd(const command_rec *cmd, cmd_parms *parms,$/;"	f	file:
+io_state_e	./mpm/winnt/mpm_winnt.h	/^} io_state_e;$/;"	t	typeref:enum:__anon9
+ipaddr_chain	./vhost.c	/^struct ipaddr_chain {$/;"	s	file:
+ipaddr_chain	./vhost.c	/^typedef struct ipaddr_chain ipaddr_chain;$/;"	t	typeref:struct:ipaddr_chain	file:
+iphash_compare	./vhost.c	/^static int iphash_compare(const void *a, const void *b)$/;"	f	file:
+iphash_table	./vhost.c	/^static ipaddr_chain *iphash_table[IPHASH_TABLE_SIZE];$/;"	v	file:
+is_graceful	./mpm/beos/beos.c	/^static int volatile is_graceful;$/;"	v	file:
+is_graceful	./mpm/experimental/event/event.c	/^static int volatile is_graceful;$/;"	v	file:
+is_graceful	./mpm/mpmt_os2/mpmt_os2.c	/^static int volatile is_graceful = 0;$/;"	v	file:
+is_graceful	./mpm/mpmt_os2/mpmt_os2_child.c	/^static int volatile is_graceful = 1;$/;"	v	file:
+is_graceful	./mpm/netware/mpm_netware.c	/^static int volatile is_graceful;$/;"	v	file:
+is_graceful	./mpm/prefork/prefork.c	/^static int volatile is_graceful;$/;"	v	file:
+is_graceful	./mpm/winnt/mpm_winnt.c	/^int volatile is_graceful = 0;$/;"	v
+is_graceful	./mpm/worker/worker.c	/^static int volatile is_graceful;$/;"	v	file:
+is_parent_process	./mpm/mpmt_os2/mpmt_os2.c	/^static int is_parent_process=TRUE;$/;"	v	file:
+is_service	./mpm/winnt/Win9xConHook.c	/^static BOOL is_service = 0;$/;"	v	file:
+is_subclassed	./mpm/winnt/Win9xConHook.c	/^static BOOL is_subclassed = 0;$/;"	v	file:
+is_tty	./mpm/winnt/Win9xConHook.c	/^static int is_tty = -1;$/;"	v	file:
+jobcount	./mpm/winnt/child.c	/^    int jobcount;$/;"	m	struct:globals_s	file:
+jobhead	./mpm/winnt/child.c	/^    joblist *jobhead;$/;"	m	struct:globals_s	file:
+joblist	./mpm/winnt/child.c	/^} joblist;$/;"	t	typeref:struct:joblist_s	file:
+joblist_s	./mpm/winnt/child.c	/^typedef struct joblist_s {$/;"	s	file:
+jobmutex	./mpm/winnt/child.c	/^    apr_thread_mutex_t *jobmutex;$/;"	m	struct:globals_s	file:
+jobsemaphore	./mpm/winnt/child.c	/^    HANDLE jobsemaphore;$/;"	m	struct:globals_s	file:
+jobtail	./mpm/winnt/child.c	/^    joblist *jobtail;$/;"	m	struct:globals_s	file:
+join_start_thread	./mpm/experimental/event/event.c	/^static void join_start_thread(apr_thread_t * start_thread_id)$/;"	f	file:
+join_start_thread	./mpm/worker/worker.c	/^static void join_start_thread(apr_thread_t *start_thread_id)$/;"	f	file:
+join_workers	./mpm/experimental/event/event.c	/^static void join_workers(apr_thread_t * listener, apr_thread_t ** threads)$/;"	f	file:
+join_workers	./mpm/worker/worker.c	/^static void join_workers(apr_thread_t *listener, apr_thread_t **threads)$/;"	f	file:
+just_die	./mpm/experimental/event/event.c	/^static void just_die(int sig)$/;"	f	file:
+just_die	./mpm/prefork/prefork.c	/^static void just_die(int sig)$/;"	f	file:
+just_die	./mpm/worker/worker.c	/^static void just_die(int sig)$/;"	f	file:
+lb_limit	./scoreboard.c	/^static int server_limit, thread_limit, lb_limit;$/;"	v	file:
+listen_fd	./mpm/mpmt_os2/mpmt_os2.c	/^    apr_os_sock_t listen_fd;$/;"	m	struct:__anon5	file:
+listen_socket_t	./mpm/mpmt_os2/mpmt_os2.c	/^} listen_socket_t;$/;"	t	typeref:struct:__anon5	file:
+listener	./mpm/experimental/event/event.c	/^    apr_thread_t *listener;$/;"	m	struct:__anon14	file:
+listener	./mpm/worker/worker.c	/^    apr_thread_t *listener;$/;"	m	struct:__anon12	file:
+listener_may_exit	./mpm/experimental/event/event.c	/^static int listener_may_exit = 0;$/;"	v	file:
+listener_may_exit	./mpm/worker/worker.c	/^static int listener_may_exit = 0;$/;"	v	file:
+listener_os_thread	./mpm/experimental/event/event.c	/^static apr_os_thread_t *listener_os_thread;$/;"	v	file:
+listener_os_thread	./mpm/worker/worker.c	/^static apr_os_thread_t *listener_os_thread;$/;"	v	file:
+listener_poll_type	./mpm/experimental/event/event.c	/^} listener_poll_type;$/;"	t	typeref:struct:__anon16	file:
+listener_thread	./mpm/experimental/event/event.c	/^static void *listener_thread(apr_thread_t * thd, void *dummy)$/;"	f	file:
+listener_thread	./mpm/worker/worker.c	/^static void *listener_thread(apr_thread_t *thd, void * dummy)$/;"	f	file:
+listeners	./mpm/mpmt_os2/mpmt_os2.c	/^    listen_socket_t listeners[1];$/;"	m	struct:__anon6	file:
+listenfds	./mpm/netware/mpm_netware.c	/^static fd_set listenfds;$/;"	v	file:
+listenmaxfd	./mpm/netware/mpm_netware.c	/^static int listenmaxfd;$/;"	v	file:
+log_backtrace	./core.c	/^static void log_backtrace(const request_rec *r)$/;"	f	file:
+log_child	./log.c	/^static int log_child(apr_pool_t *p, const char *progname,$/;"	f	file:
+log_child_errfn	./log.c	/^static void log_child_errfn(apr_pool_t *pool, apr_status_t err,$/;"	f	file:
+log_error_core	./log.c	/^static void log_error_core(const char *file, int line, int level,$/;"	f	file:
+m	./config.c	/^    module *m;$/;"	m	struct:ap_mod_list_struct	file:
+main	./gen_test_char.c	/^int main(int argc, char *argv[])$/;"	f
+main	./main.c	/^int main(int argc, const char * const argv[])$/;"	f
+make_child	./mpm/experimental/event/event.c	/^static int make_child(server_rec * s, int slot)$/;"	f	file:
+make_child	./mpm/netware/mpm_netware.c	/^static int make_child(server_rec *s, int slot)$/;"	f	file:
+make_child	./mpm/prefork/prefork.c	/^static int make_child(server_rec *s, int slot)$/;"	f	file:
+make_child	./mpm/worker/worker.c	/^static int make_child(server_rec *s, int slot)$/;"	f	file:
+make_sock	./listen.c	/^static apr_status_t make_sock(apr_pool_t *p, ap_listen_rec *server)$/;"	f	file:
+make_sub_request	./request.c	/^static request_rec *make_sub_request(const request_rec *r,$/;"	f	file:
+make_worker	./mpm/beos/beos.c	/^static int make_worker(int slot)$/;"	f	file:
+master_main	./mpm/mpmt_os2/mpmt_os2.c	/^static char master_main()$/;"	f	file:
+master_main	./mpm/winnt/mpm_winnt.c	/^static int master_main(server_rec *s, HANDLE shutdown_event, HANDLE restart_event)$/;"	f	file:
+matched	./request.c	/^    ap_conf_vector_t *matched; \/* A dir_conf sections we matched *\/$/;"	m	struct:walk_walked_t	file:
+matches_aliases	./vhost.c	/^static int matches_aliases(server_rec *s, const char *host)$/;"	f	file:
+max_idlers	./mpm/experimental/event/fdqueue.c	/^    int max_idlers;$/;"	m	struct:fd_queue_info_t	file:
+max_idlers	./mpm/worker/fdqueue.c	/^    int max_idlers;$/;"	m	struct:fd_queue_info_t	file:
+max_num_completion_contexts	./mpm/winnt/child.c	/^static int max_num_completion_contexts = 0;$/;"	v	file:
+max_requests_per_child_event	./mpm/winnt/child.c	/^static HANDLE max_requests_per_child_event;$/;"	v	file:
+max_spare_threads	./mpm/beos/beos.c	/^static int max_spare_threads=0;$/;"	v	file:
+max_spare_threads	./mpm/experimental/event/event.c	/^static int max_spare_threads = 0;$/;"	v	file:
+max_spare_threads	./mpm/worker/worker.c	/^static int max_spare_threads = 0;$/;"	v	file:
+merge_core_dir_configs	./core.c	/^static void *merge_core_dir_configs(apr_pool_t *a, void *basev, void *newv)$/;"	f	file:
+merge_core_server_configs	./core.c	/^static void *merge_core_server_configs(apr_pool_t *p, void *basev, void *virtv)$/;"	f	file:
+merge_ct_filters	./core.c	/^static void *merge_ct_filters(apr_pool_t *p,$/;"	f	file:
+merge_server_configs	./config.c	/^static void merge_server_configs(apr_pool_t *p, ap_conf_vector_t *base,$/;"	f	file:
+merged	./request.c	/^    ap_conf_vector_t *merged;  \/* The dir_conf merged result *\/$/;"	m	struct:walk_walked_t	file:
+merger_func	./config.c	/^typedef void *(*merger_func)(apr_pool_t *, void *, void *);$/;"	t	file:
+min_spare_threads	./mpm/beos/beos.c	/^static int min_spare_threads=0;$/;"	v	file:
+min_spare_threads	./mpm/experimental/event/event.c	/^static int min_spare_threads = 0;$/;"	v	file:
+min_spare_threads	./mpm/worker/worker.c	/^static int min_spare_threads = 0;$/;"	v	file:
+missing_container_arg	./core.c	/^static char *missing_container_arg(cmd_parms *cmd)$/;"	f	file:
+monitor_hwnd	./mpm/winnt/Win9xConHook.c	/^static HWND monitor_hwnd = NULL;$/;"	v	file:
+monitor_service_9x_proc	./mpm/winnt/service.c	/^static LRESULT CALLBACK monitor_service_9x_proc(HWND hWnd, UINT msg,$/;"	f	file:
+monitor_service_9x_thread	./mpm/winnt/service.c	/^static DWORD WINAPI monitor_service_9x_thread(void *service_name)$/;"	f	file:
+mpm_beos_module	./mpm/beos/beos.c	/^module AP_MODULE_DECLARE_DATA mpm_beos_module = {$/;"	v
+mpm_display_name	./mpm/winnt/service.c	/^static char *mpm_display_name = NULL;$/;"	v	file:
+mpm_event_module	./mpm/experimental/event/event.c	/^module AP_MODULE_DECLARE_DATA mpm_event_module = {$/;"	v
+mpm_get_completion_context	./mpm/winnt/child.c	/^PCOMP_CONTEXT mpm_get_completion_context(void)$/;"	f
+mpm_merge_service_args	./mpm/winnt/service.c	/^apr_status_t mpm_merge_service_args(apr_pool_t *p,$/;"	f
+mpm_mpmt_os2_module	./mpm/mpmt_os2/mpmt_os2.c	/^module AP_MODULE_DECLARE_DATA mpm_mpmt_os2_module = {$/;"	v
+mpm_netware_module	./mpm/netware/mpm_netware.c	/^module AP_MODULE_DECLARE_DATA mpm_netware_module = {$/;"	v
+mpm_new_argv	./mpm/winnt/mpm_winnt.c	/^apr_array_header_t *mpm_new_argv;$/;"	v
+mpm_nt_eventlog_stderr_flush	./mpm/winnt/nt_eventlog.c	/^void mpm_nt_eventlog_stderr_flush(void)$/;"	f
+mpm_nt_eventlog_stderr_open	./mpm/winnt/nt_eventlog.c	/^void mpm_nt_eventlog_stderr_open(char *argv0, apr_pool_t *p)$/;"	f
+mpm_post_completion_context	./mpm/winnt/child.c	/^apr_status_t mpm_post_completion_context(PCOMP_CONTEXT context,$/;"	f
+mpm_prefork_module	./mpm/prefork/prefork.c	/^module AP_MODULE_DECLARE_DATA mpm_prefork_module = {$/;"	v
+mpm_recycle_completion_context	./mpm/winnt/child.c	/^void mpm_recycle_completion_context(PCOMP_CONTEXT context)$/;"	f
+mpm_service_install	./mpm/winnt/service.c	/^apr_status_t mpm_service_install(apr_pool_t *ptemp, int argc,$/;"	f
+mpm_service_name	./mpm/winnt/service.c	/^static char *mpm_service_name = NULL;$/;"	v	file:
+mpm_service_set_name	./mpm/winnt/service.c	/^apr_status_t mpm_service_set_name(apr_pool_t *p, const char **display_name,$/;"	f
+mpm_service_start	./mpm/winnt/service.c	/^apr_status_t mpm_service_start(apr_pool_t *ptemp, int argc,$/;"	f
+mpm_service_started	./mpm/winnt/service.c	/^apr_status_t mpm_service_started(void)$/;"	f
+mpm_service_stopping	./mpm/winnt/service.c	/^void mpm_service_stopping(void)$/;"	f
+mpm_service_to_start	./mpm/winnt/service.c	/^apr_status_t mpm_service_to_start(const char **display_name, apr_pool_t *p)$/;"	f
+mpm_service_uninstall	./mpm/winnt/service.c	/^apr_status_t mpm_service_uninstall(void)$/;"	f
+mpm_signal_service	./mpm/winnt/service.c	/^void mpm_signal_service(apr_pool_t *ptemp, int signal)$/;"	f
+mpm_start_child_console_handler	./mpm/winnt/service.c	/^void mpm_start_child_console_handler(void)$/;"	f
+mpm_start_console_handler	./mpm/winnt/service.c	/^void mpm_start_console_handler(void)$/;"	f
+mpm_state	./mpm/beos/beos.c	/^static int mpm_state = AP_MPMQ_STARTING;$/;"	v	file:
+mpm_state	./mpm/experimental/event/event.c	/^static int mpm_state = AP_MPMQ_STARTING;$/;"	v	file:
+mpm_state	./mpm/netware/mpm_netware.c	/^static int mpm_state = AP_MPMQ_STARTING;$/;"	v	file:
+mpm_state	./mpm/prefork/prefork.c	/^static int mpm_state = AP_MPMQ_STARTING;$/;"	v	file:
+mpm_state	./mpm/worker/worker.c	/^static int mpm_state = AP_MPMQ_STARTING;$/;"	v	file:
+mpm_term	./mpm/netware/mpm_netware.c	/^static void mpm_term(void)$/;"	f	file:
+mpm_thread	./mpm/winnt/service.c	/^    HANDLE mpm_thread;       \/* primary thread handle of the apache server *\/$/;"	m	struct:__anon10	file:
+mpm_winnt_module	./mpm/winnt/mpm_winnt.c	/^AP_MODULE_DECLARE_DATA module mpm_winnt_module = {$/;"	v
+mpm_worker_module	./mpm/worker/worker.c	/^module AP_MODULE_DECLARE_DATA mpm_worker_module = {$/;"	v
+mpmt_os2_cmds	./mpm/mpmt_os2/mpmt_os2.c	/^static const command_rec mpmt_os2_cmds[] = {$/;"	v	file:
+mpmt_os2_hooks	./mpm/mpmt_os2/mpmt_os2.c	/^static void mpmt_os2_hooks(apr_pool_t *p)$/;"	f	file:
+mpmt_os2_pre_config	./mpm/mpmt_os2/mpmt_os2.c	/^static int mpmt_os2_pre_config(apr_pool_t *pconf, apr_pool_t *plog, apr_pool_t *ptemp)$/;"	f	file:
+my_child_num	./mpm/prefork/prefork.c	/^static int my_child_num;$/;"	v	file:
+my_pid	./mpm/winnt/mpm_winnt.c	/^DWORD my_pid;$/;"	v
+my_pid	./mpm_common.c	/^static pid_t parent_pid, my_pid;$/;"	v	file:
+name	./mpm/mpmt_os2/mpmt_os2.c	/^    struct sockaddr_in name;$/;"	m	struct:__anon5	typeref:struct:__anon5::sockaddr_in	file:
+name	./mpm/winnt/Win9xConHook.c	/^    LPCSTR name;$/;"	m	struct:__anon7	file:
+name_chain	./vhost.c	/^struct name_chain {$/;"	s	file:
+name_chain	./vhost.c	/^typedef struct name_chain name_chain;$/;"	t	typeref:struct:name_chain	file:
+name_vhost_list	./vhost.c	/^static server_addr_rec *name_vhost_list;$/;"	v	file:
+name_vhost_list_tail	./vhost.c	/^static server_addr_rec **name_vhost_list_tail;$/;"	v	file:
+names	./vhost.c	/^    name_chain *names;          \/* if non-NULL then a list of name-vhosts$/;"	m	struct:ipaddr_chain	file:
+nchildren	./util_filter.c	/^    int nchildren;$/;"	m	struct:filter_trie_node	file:
+needcset	./protocol.c	/^static const char *needcset[] = {$/;"	v	file:
+needcset_patterns	./protocol.c	/^static const apr_strmatch_pattern **needcset_patterns;$/;"	v	file:
+nelts	./mpm/experimental/event/fdqueue.h	/^    int nelts;$/;"	m	struct:fd_queue_t
+nelts	./mpm/worker/fdqueue.h	/^    int                 nelts;$/;"	m	struct:fd_queue_t
+netware_mpm_cmds	./mpm/netware/mpm_netware.c	/^static const command_rec netware_mpm_cmds[] = {$/;"	v	file:
+netware_mpm_hooks	./mpm/netware/mpm_netware.c	/^static void netware_mpm_hooks(apr_pool_t *p)$/;"	f	file:
+netware_pre_config	./mpm/netware/mpm_netware.c	/^static int netware_pre_config(apr_pool_t *p, apr_pool_t *plog, apr_pool_t *ptemp)$/;"	f	file:
+netware_rewrite_args	./mpm/netware/mpm_netware.c	/^void netware_rewrite_args(process_rec *process)$/;"	f
+new_ipaddr_chain	./vhost.c	/^static ipaddr_chain *new_ipaddr_chain(apr_pool_t *p,$/;"	f	file:
+new_name_chain	./vhost.c	/^static name_chain *new_name_chain(apr_pool_t *p,$/;"	f	file:
+next	./config.c	/^    struct ap_mod_list_struct *next;$/;"	m	struct:ap_mod_list_struct	typeref:struct:ap_mod_list_struct::ap_mod_list_struct	file:
+next	./log.c	/^    struct read_handle_t *next;$/;"	m	struct:read_handle_t	typeref:struct:read_handle_t::read_handle_t	file:
+next	./mpm/experimental/event/fdqueue.c	/^    struct recycled_pool *next;$/;"	m	struct:recycled_pool	typeref:struct:recycled_pool::recycled_pool	file:
+next	./mpm/winnt/child.c	/^    struct joblist_s *next;$/;"	m	struct:joblist_s	typeref:struct:joblist_s::joblist_s	file:
+next	./mpm/winnt/mpm_winnt.h	/^    struct CompContext *next;$/;"	m	struct:CompContext	typeref:struct:CompContext::CompContext
+next	./mpm/worker/fdqueue.c	/^    struct recycled_pool *next;$/;"	m	struct:recycled_pool	typeref:struct:recycled_pool::recycled_pool	file:
+next	./mpm_common.c	/^    struct extra_process_t *next;$/;"	m	struct:extra_process_t	typeref:struct:extra_process_t::extra_process_t	file:
+next	./vhost.c	/^    ipaddr_chain *next;$/;"	m	struct:ipaddr_chain	file:
+next	./vhost.c	/^    name_chain *next;$/;"	m	struct:name_chain	file:
+nlmUnloadSignaled	./mpm/netware/mpm_netware.c	/^int nlmUnloadSignaled(int wait)$/;"	f
+no_set_limit	./core.c	/^static const char *no_set_limit(cmd_parms *cmd, void *conf_,$/;"	f	file:
+not_empty	./mpm/experimental/event/fdqueue.h	/^    apr_thread_cond_t *not_empty;$/;"	m	struct:fd_queue_t
+not_empty	./mpm/worker/fdqueue.h	/^    apr_thread_cond_t  *not_empty;$/;"	m	struct:fd_queue_t
+num_completion_contexts	./mpm/winnt/child.c	/^static int num_completion_contexts = 0;$/;"	v	file:
+num_listening_sockets	./mpm/beos/beos.c	/^static int num_listening_sockets = 0;$/;"	v	file:
+num_listensocks	./mpm/experimental/event/event.c	/^static int num_listensocks = 0;$/;"	v	file:
+num_listensocks	./mpm/prefork/prefork.c	/^static int num_listensocks = 0;$/;"	v	file:
+num_listensocks	./mpm/worker/worker.c	/^static int num_listensocks = 0;$/;"	v	file:
+num_request_notes	./core.c	/^static apr_size_t num_request_notes = AP_NUM_STD_NOTES;$/;"	v	file:
+old_listeners	./listen.c	/^static ap_listen_rec *old_listeners;$/;"	v	file:
+old_write_filter_ctx	./protocol.c	/^} old_write_filter_ctx;$/;"	t	typeref:struct:__anon18	file:
+one_big_mutex	./mpm/experimental/event/fdqueue.h	/^    apr_thread_mutex_t *one_big_mutex;$/;"	m	struct:fd_queue_t
+one_big_mutex	./mpm/worker/fdqueue.h	/^    apr_thread_mutex_t *one_big_mutex;$/;"	m	struct:fd_queue_t
+one_process	./mpm/beos/beos.c	/^static int one_process = 0;$/;"	v	file:
+one_process	./mpm/experimental/event/event.c	/^static int one_process = 0;$/;"	v	file:
+one_process	./mpm/mpmt_os2/mpmt_os2.c	/^static int one_process = 0;$/;"	v	file:
+one_process	./mpm/prefork/prefork.c	/^static int one_process = 0;$/;"	v	file:
+one_process	./mpm/winnt/mpm_winnt.c	/^static int one_process = 0;$/;"	v	file:
+one_process	./mpm/worker/worker.c	/^static int one_process = 0;$/;"	v	file:
+open_error_log	./log.c	/^static int open_error_log(server_rec *s, apr_pool_t *p)$/;"	f	file:
+open_listeners	./listen.c	/^static int open_listeners(apr_pool_t *pool)$/;"	f	file:
+open_scoreboard	./scoreboard.c	/^static apr_status_t open_scoreboard(apr_pool_t *pconf)$/;"	f	file:
+opts	./request.c	/^        allow_options_t opts;$/;"	m	struct:core_opts_t	file:
+orig_index	./core.c	/^    int orig_index;$/;"	m	struct:reorder_sort_rec	file:
+original_uri	./util_script.c	/^static char *original_uri(request_rec *r)$/;"	f	file:
+origwndprop	./mpm/winnt/Win9xConHook.c	/^static LPCTSTR origwndprop;$/;"	v	file:
+osver	./mpm/winnt/mpm_winnt.c	/^OSVERSIONINFO osver; \/* VER_PLATFORM_WIN32_NT *\/$/;"	v
+override	./request.c	/^        overrides_t override;$/;"	m	struct:core_opts_t	file:
+override_opts	./request.c	/^        overrides_t override_opts;$/;"	m	struct:core_opts_t	file:
+p	./mpm/experimental/event/fdqueue.h	/^    apr_pool_t *p;$/;"	m	struct:fd_queue_elem_t
+p	./mpm/experimental/event/pod.h	/^    apr_pool_t *p;$/;"	m	struct:ap_pod_t
+p	./mpm/worker/fdqueue.h	/^    apr_pool_t        *p;$/;"	m	struct:fd_queue_elem_t
+p	./mpm/worker/pod.h	/^    apr_pool_t *p;$/;"	m	struct:ap_pod_t
+parent	./mpm/winnt/Win9xConHook.c	/^    HWND parent;$/;"	m	struct:__anon7	file:
+parent_info_t	./mpm/mpmt_os2/mpmt_os2.c	/^} parent_info_t;$/;"	t	typeref:struct:__anon6	file:
+parent_pid	./mpm/experimental/event/event.c	/^static pid_t parent_pid;$/;"	v	file:
+parent_pid	./mpm/prefork/prefork.c	/^static pid_t parent_pid;$/;"	v	file:
+parent_pid	./mpm/winnt/mpm_winnt.c	/^static DWORD parent_pid;$/;"	v	file:
+parent_pid	./mpm/worker/worker.c	/^static pid_t parent_pid;$/;"	v	file:
+parent_pid	./mpm_common.c	/^static pid_t parent_pid, my_pid;$/;"	v	file:
+pchild	./mpm/experimental/event/event.c	/^static apr_pool_t *pchild;      \/* Pool for httpd child stuff *\/$/;"	v	file:
+pchild	./mpm/mpmt_os2/mpmt_os2_child.c	/^static apr_pool_t *pchild = NULL;$/;"	v	file:
+pchild	./mpm/prefork/prefork.c	/^static apr_pool_t *pchild;              \/* Pool for httpd child stuff *\/$/;"	v	file:
+pchild	./mpm/winnt/child.c	/^static apr_pool_t *pchild;$/;"	v	file:
+pchild	./mpm/worker/worker.c	/^static apr_pool_t *pchild;                \/* Pool for httpd child stuff *\/$/;"	v	file:
+pconf	./mpm/beos/beos.c	/^static apr_pool_t *pconf;    \/* Pool for config stuff *\/$/;"	v	file:
+pconf	./mpm/experimental/event/event.c	/^static apr_pool_t *pconf;       \/* Pool for config stuff *\/$/;"	v	file:
+pconf	./mpm/mpmt_os2/mpmt_os2.c	/^static apr_pool_t *pconf = NULL;  \/* Pool for config stuff *\/$/;"	v	file:
+pconf	./mpm/netware/mpm_netware.c	/^static apr_pool_t *pconf;               \/* Pool for config stuff *\/$/;"	v	file:
+pconf	./mpm/prefork/prefork.c	/^static apr_pool_t *pconf;               \/* Pool for config stuff *\/$/;"	v	file:
+pconf	./mpm/winnt/mpm_winnt.c	/^apr_pool_t *pconf;$/;"	v
+pconf	./mpm/worker/worker.c	/^static apr_pool_t *pconf;                 \/* Pool for config stuff *\/$/;"	v	file:
+pconf	./mpm_common.c	/^apr_pool_t *pconf;$/;"	v
+pconn	./mpm/mpmt_os2/mpmt_os2_child.c	/^    apr_pool_t *pconn;$/;"	m	struct:__anon4	file:
+per_dir_result	./request.c	/^    ap_conf_vector_t   *per_dir_result;  \/* per_dir_config += walked result *\/$/;"	m	struct:walk_cache_t	file:
+perform_idle_server_maintenance	./mpm/beos/beos.c	/^static void perform_idle_server_maintenance(void)$/;"	f	file:
+perform_idle_server_maintenance	./mpm/experimental/event/event.c	/^static void perform_idle_server_maintenance(void)$/;"	f	file:
+perform_idle_server_maintenance	./mpm/netware/mpm_netware.c	/^static void perform_idle_server_maintenance(apr_pool_t *p)$/;"	f	file:
+perform_idle_server_maintenance	./mpm/prefork/prefork.c	/^static void perform_idle_server_maintenance(apr_pool_t *p)$/;"	f	file:
+perform_idle_server_maintenance	./mpm/worker/worker.c	/^static void perform_idle_server_maintenance(void)$/;"	f	file:
+phandler	./mpm/winnt/Win9xConHook.c	/^    PHANDLER_ROUTINE phandler;$/;"	m	struct:__anon7	file:
+pid	./mpm/experimental/event/event.c	/^    int pid;$/;"	m	struct:__anon13	file:
+pid	./mpm/worker/worker.c	/^    int pid;$/;"	m	struct:__anon11	file:
+pid	./mpm_common.c	/^    pid_t pid;$/;"	m	struct:extra_process_t	file:
+piped_log_cleanup	./log.c	/^static apr_status_t piped_log_cleanup(void *data)$/;"	f	file:
+piped_log_cleanup_for_exec	./log.c	/^static apr_status_t piped_log_cleanup_for_exec(void *data)$/;"	f	file:
+piped_log_maintenance	./log.c	/^static void piped_log_maintenance(int reason, void *data, apr_wait_t status)$/;"	f	file:
+piped_log_spawn	./log.c	/^static apr_status_t piped_log_spawn(piped_log *pl)$/;"	f	file:
+pmain	./mpm/netware/mpm_netware.c	/^static apr_pool_t *pmain;               \/* Pool for httpd child stuff *\/$/;"	v	file:
+pod	./mpm/experimental/event/event.c	/^static ap_pod_t *pod;$/;"	v	file:
+pod	./mpm/experimental/event/pod.h	/^AP_DECLARE(apr_status_t) ap_mpm_pod_close(ap_pod_t * pod);$/;"	v
+pod	./mpm/experimental/event/pod.h	/^AP_DECLARE(int) ap_mpm_pod_check(ap_pod_t * pod);$/;"	v
+pod	./mpm/prefork/prefork.c	/^static ap_pod_t *pod;$/;"	v	file:
+pod	./mpm/worker/pod.h	/^AP_DECLARE(apr_status_t) ap_mpm_pod_close(ap_pod_t *pod);$/;"	v
+pod	./mpm/worker/pod.h	/^AP_DECLARE(int) ap_mpm_pod_check(ap_pod_t *pod);$/;"	v
+pod	./mpm/worker/worker.c	/^static ap_pod_t *pod;$/;"	v	file:
+pod_in	./mpm/experimental/event/pod.h	/^    apr_file_t *pod_in;$/;"	m	struct:ap_pod_t
+pod_in	./mpm/worker/pod.h	/^    apr_file_t *pod_in;$/;"	m	struct:ap_pod_t
+pod_out	./mpm/experimental/event/pod.h	/^    apr_file_t *pod_out;$/;"	m	struct:ap_pod_t
+pod_out	./mpm/worker/pod.h	/^    apr_file_t *pod_out;$/;"	m	struct:ap_pod_t
+pod_signal_internal	./mpm/experimental/event/pod.c	/^static apr_status_t pod_signal_internal(ap_pod_t * pod, int graceful)$/;"	f	file:
+pod_signal_internal	./mpm/worker/pod.c	/^static apr_status_t pod_signal_internal(ap_pod_t *pod, int graceful)$/;"	f	file:
+pod_signal_internal	./mpm_common.c	/^static apr_status_t pod_signal_internal(ap_pod_t *pod)$/;"	f	file:
+poll_type_e	./mpm/experimental/event/event.c	/^} poll_type_e;$/;"	t	typeref:enum:__anon15	file:
+pool	./mpm/experimental/event/fdqueue.c	/^    apr_pool_t *pool;$/;"	m	struct:recycled_pool	file:
+pool	./mpm/worker/fdqueue.c	/^    apr_pool_t *pool;$/;"	m	struct:recycled_pool	file:
+prefork_cmds	./mpm/prefork/prefork.c	/^static const command_rec prefork_cmds[] = {$/;"	v	file:
+prefork_hooks	./mpm/prefork/prefork.c	/^static void prefork_hooks(apr_pool_t *p)$/;"	f	file:
+prefork_open_logs	./mpm/prefork/prefork.c	/^static int prefork_open_logs(apr_pool_t *p, apr_pool_t *plog, apr_pool_t *ptemp, server_rec *s)$/;"	f	file:
+prefork_pre_config	./mpm/prefork/prefork.c	/^static int prefork_pre_config(apr_pool_t *p, apr_pool_t *plog, apr_pool_t *ptemp)$/;"	f	file:
+prep_walk_cache	./request.c	/^static walk_cache_t *prep_walk_cache(apr_size_t t, request_rec *r)$/;"	f	file:
+priorities	./log.c	/^static const TRANS priorities[] = {$/;"	v	file:
+proc_info	./mpm/experimental/event/event.c	/^} proc_info;$/;"	t	typeref:struct:__anon13	file:
+proc_info	./mpm/worker/worker.c	/^} proc_info;$/;"	t	typeref:struct:__anon11	file:
+process_command_config	./config.c	/^static const char *process_command_config(server_rec *s,$/;"	f	file:
+process_resource_config_nofnmatch	./config.c	/^static const char *process_resource_config_nofnmatch(server_rec *s,$/;"	f	file:
+process_socket	./mpm/experimental/event/event.c	/^static int process_socket(apr_pool_t * p, apr_socket_t * sock,$/;"	f	file:
+process_socket	./mpm/worker/worker.c	/^static void process_socket(apr_pool_t *p, apr_socket_t *sock, int my_child_num,$/;"	f	file:
+pstring	./util_pcre.c	/^static const char *const pstring[] = {$/;"	v	file:
+ptrans	./mpm/winnt/mpm_winnt.h	/^    apr_pool_t *ptrans;$/;"	m	struct:CompContext
+push2worker	./mpm/experimental/event/event.c	/^static apr_status_t push2worker(const apr_pollfd_t * pfd,$/;"	f	file:
+qhead	./mpm/winnt/child.c	/^static PCOMP_CONTEXT qhead = NULL;$/;"	v	file:
+qlock	./mpm/winnt/child.c	/^static apr_thread_mutex_t  *qlock;$/;"	v	file:
+qtail	./mpm/winnt/child.c	/^static PCOMP_CONTEXT qtail = NULL;$/;"	v	file:
+queue_info_cleanup	./mpm/experimental/event/fdqueue.c	/^static apr_status_t queue_info_cleanup(void *data_)$/;"	f	file:
+queue_info_cleanup	./mpm/worker/fdqueue.c	/^static apr_status_t queue_info_cleanup(void *data_)$/;"	f	file:
+qwait_event	./mpm/winnt/child.c	/^static HANDLE qwait_event = NULL;$/;"	v	file:
+r	./protocol.c	/^    request_rec *r;$/;"	m	struct:ap_vrprintf_data	file:
+r_flush	./protocol.c	/^static apr_status_t r_flush(apr_vformatter_buff_t *buff)$/;"	f	file:
+raise_sigstop_flags	./mpm/beos/beos.c	/^int raise_sigstop_flags;$/;"	v
+raise_sigstop_flags	./mpm/experimental/event/event.c	/^int raise_sigstop_flags;$/;"	v
+raise_sigstop_flags	./mpm/worker/worker.c	/^int raise_sigstop_flags;$/;"	v
+read_handle_t	./log.c	/^typedef struct read_handle_t {$/;"	s	file:
+read_handle_t	./log.c	/^} read_handle_t;$/;"	t	typeref:struct:read_handle_t	file:
+read_handles	./log.c	/^static read_handle_t *read_handles;$/;"	v	file:
+read_request_line	./protocol.c	/^static int read_request_line(request_rec *r, apr_bucket_brigade *bb)$/;"	f	file:
+reap_children	./mpm/prefork/prefork.c	/^int reap_children(int *exitcode, apr_exit_why_e *status)$/;"	f
+rebuild_conf_hash	./config.c	/^static void rebuild_conf_hash(apr_pool_t *p, int add_prelinked)$/;"	f	file:
+receive_buffer_size	./listen.c	/^static int receive_buffer_size;$/;"	v	file:
+reclaim_one_pid	./mpm_common.c	/^static int reclaim_one_pid(pid_t pid, action_t action)$/;"	f	file:
+recycled_pool	./mpm/experimental/event/fdqueue.c	/^typedef struct recycled_pool$/;"	s	file:
+recycled_pool	./mpm/experimental/event/fdqueue.c	/^} recycled_pool;$/;"	t	typeref:struct:recycled_pool	file:
+recycled_pool	./mpm/worker/fdqueue.c	/^typedef struct recycled_pool {$/;"	s	file:
+recycled_pool	./mpm/worker/fdqueue.c	/^} recycled_pool;$/;"	t	typeref:struct:recycled_pool	file:
+recycled_pools	./mpm/experimental/event/fdqueue.c	/^    recycled_pool *recycled_pools;$/;"	m	struct:fd_queue_info_t	file:
+recycled_pools	./mpm/worker/fdqueue.c	/^    recycled_pool  *recycled_pools;$/;"	m	struct:fd_queue_info_t	file:
+regex_cleanup	./util.c	/^static apr_status_t regex_cleanup(void *preg)$/;"	f	file:
+register_filter	./util_filter.c	/^static ap_filter_rec_t *register_filter(const char *name,$/;"	f	file:
+register_hooks	./core.c	/^static void register_hooks(apr_pool_t *p)$/;"	f	file:
+registered_input_filters	./util_filter.c	/^static filter_trie_node *registered_input_filters = NULL;$/;"	v	file:
+registered_output_filters	./util_filter.c	/^static filter_trie_node *registered_output_filters = NULL;$/;"	v	file:
+reload_conf_hash	./config.c	/^static apr_status_t reload_conf_hash(void *baton)$/;"	f	file:
+remove	./request.c	/^        allow_options_t remove;$/;"	m	struct:core_opts_t	file:
+remove_any_filter	./util_filter.c	/^static void remove_any_filter(ap_filter_t *f, ap_filter_t **r_filt, ap_filter_t **p_filt,$/;"	f	file:
+remove_job	./mpm/winnt/child.c	/^static SOCKET remove_job(void)$/;"	f	file:
+remove_unused_name_vhosts	./vhost.c	/^static void remove_unused_name_vhosts(server_rec *main_s, ipaddr_chain **pic)$/;"	f	file:
+reorder_sort_rec	./core.c	/^struct reorder_sort_rec {$/;"	s	file:
+reorder_sorter	./core.c	/^static int reorder_sorter(const void *va, const void *vb)$/;"	f	file:
+request_count	./mpm/netware/mpm_netware.c	/^static int request_count;$/;"	v	file:
+requests_this_child	./mpm/experimental/event/event.c	/^static int requests_this_child;$/;"	v	file:
+requests_this_child	./mpm/prefork/prefork.c	/^static int requests_this_child;$/;"	v	file:
+requests_this_child	./mpm/worker/worker.c	/^static int requests_this_child;$/;"	v	file:
+require	./core.c	/^static const char *require(cmd_parms *cmd, void *c_, const char *arg)$/;"	f	file:
+reset_request_notes	./core.c	/^static apr_status_t reset_request_notes(void *dummy)$/;"	f	file:
+reset_version	./core.c	/^static apr_status_t reset_version(void *dummy)$/;"	f	file:
+resolve_symlink	./request.c	/^static int resolve_symlink(char *d, apr_finfo_t *lfi, int opts, apr_pool_t *p)$/;"	f	file:
+resource_shortage	./mpm/experimental/event/event.c	/^static int resource_shortage = 0;$/;"	v	file:
+resource_shortage	./mpm/worker/worker.c	/^static int resource_shortage = 0;$/;"	v	file:
+restart	./mpm/beos/beos.c	/^static void restart(int sig)$/;"	f	file:
+restart	./mpm/experimental/event/event.c	/^static void restart(int sig)$/;"	f	file:
+restart	./mpm/netware/mpm_netware.c	/^static void restart(void)$/;"	f	file:
+restart	./mpm/prefork/prefork.c	/^static void restart(int sig)$/;"	f	file:
+restart	./mpm/worker/worker.c	/^static void restart(int sig)$/;"	f	file:
+restart_event	./mpm/winnt/mpm_winnt.c	/^static HANDLE restart_event;   \/* used to signal the parent to restart *\/$/;"	v	file:
+restart_pending	./mpm/beos/beos.c	/^static int volatile restart_pending;$/;"	v	file:
+restart_pending	./mpm/experimental/event/event.c	/^static int volatile restart_pending;$/;"	v	file:
+restart_pending	./mpm/mpmt_os2/mpmt_os2.c	/^static int volatile restart_pending;$/;"	v	file:
+restart_pending	./mpm/netware/mpm_netware.c	/^static int volatile restart_pending;$/;"	v	file:
+restart_pending	./mpm/prefork/prefork.c	/^static int volatile restart_pending;$/;"	v	file:
+restart_pending	./mpm/worker/worker.c	/^static int volatile restart_pending;$/;"	v	file:
+retry_fail	./mpm/netware/mpm_netware.c	/^static int retry_fail = 0;$/;"	v	file:
+retry_success	./mpm/netware/mpm_netware.c	/^static int retry_success = 0;$/;"	v	file:
+run_fatal_exception_hook	./mpm_common.c	/^static void run_fatal_exception_hook(int sig)$/;"	f	file:
+sa_client	./mpm/winnt/mpm_winnt.h	/^    struct sockaddr *sa_client;$/;"	m	struct:CompContext	typeref:struct:CompContext::sockaddr
+sa_client_len	./mpm/winnt/mpm_winnt.h	/^    int sa_client_len;$/;"	m	struct:CompContext
+sa_server	./mpm/winnt/mpm_winnt.h	/^    struct sockaddr *sa_server;$/;"	m	struct:CompContext	typeref:struct:CompContext::sockaddr
+sa_server_len	./mpm/winnt/mpm_winnt.h	/^    int sa_server_len;$/;"	m	struct:CompContext
+sar	./vhost.c	/^    server_addr_rec *sar;       \/* the record causing it to be in$/;"	m	struct:ipaddr_chain	file:
+sar	./vhost.c	/^    server_addr_rec *sar;       \/* the record causing it to be in$/;"	m	struct:name_chain	file:
+satisfy	./core.c	/^static const char *satisfy(cmd_parms *cmd, void *c_, const char *arg)$/;"	f	file:
+scoreboard_size	./scoreboard.c	/^static apr_size_t scoreboard_size;$/;"	v	file:
+sd	./mpm/experimental/event/event.c	/^    int sd;$/;"	m	struct:__anon13	file:
+sd	./mpm/experimental/event/fdqueue.h	/^    apr_socket_t *sd;$/;"	m	struct:fd_queue_elem_t
+sd	./mpm/worker/fdqueue.h	/^    apr_socket_t      *sd;$/;"	m	struct:fd_queue_elem_t
+sd	./mpm/worker/worker.c	/^    int sd;$/;"	m	struct:__anon11	file:
+send_buffer_size	./listen.c	/^static int send_buffer_size;$/;"	v	file:
+send_handles_to_child	./mpm/winnt/mpm_winnt.c	/^static int send_handles_to_child(apr_pool_t *p,$/;"	f	file:
+send_listeners_to_child	./mpm/winnt/mpm_winnt.c	/^static int send_listeners_to_child(apr_pool_t *p, DWORD dwProcessId,$/;"	f	file:
+send_signal	./mpm_common.c	/^static int send_signal(pid_t pid, int sig)$/;"	f	file:
+sendfile_it_all	./core_filters.c	/^static apr_status_t sendfile_it_all(core_net_rec *c,$/;"	f	file:
+server	./vhost.c	/^    server_rec *server;         \/* the server to use if this matches *\/$/;"	m	struct:ipaddr_chain	file:
+server	./vhost.c	/^    server_rec *server;         \/* the server to use on a match *\/$/;"	m	struct:name_chain	file:
+server_built	./buildmark.c	/^static const char server_built[] = "unknown";$/;"	v	file:
+server_built	./buildmark.c	/^static const char server_built[] = __DATE__ " " __TIME__;$/;"	v	file:
+server_hostname_port	./core.c	/^static const char *server_hostname_port(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+server_limit	./mpm/experimental/event/event.c	/^static int server_limit = DEFAULT_SERVER_LIMIT;$/;"	v	file:
+server_limit	./mpm/prefork/prefork.c	/^static int server_limit = DEFAULT_SERVER_LIMIT;$/;"	v	file:
+server_limit	./mpm/worker/worker.c	/^static int server_limit = DEFAULT_SERVER_LIMIT;$/;"	v	file:
+server_limit	./scoreboard.c	/^static int server_limit, thread_limit, lb_limit;$/;"	v	file:
+server_main_loop	./mpm/beos/beos.c	/^static void server_main_loop(int remaining_threads_to_start)$/;"	f	file:
+server_main_loop	./mpm/experimental/event/event.c	/^static void server_main_loop(int remaining_children_to_start)$/;"	f	file:
+server_main_loop	./mpm/worker/worker.c	/^static void server_main_loop(int remaining_children_to_start)$/;"	f	file:
+server_maintenance	./mpm/mpmt_os2/mpmt_os2_child.c	/^static void server_maintenance(void *vpArg)$/;"	f	file:
+server_pid	./mpm/beos/beos.c	/^static int server_pid;$/;"	v	file:
+server_token_type	./core.c	/^enum server_token_type {$/;"	g	file:
+server_version	./core.c	/^static char *server_version = NULL;$/;"	v	file:
+service_init	./mpm/winnt/service.c	/^    HANDLE service_init;     \/* controller thread init mutex *\/$/;"	m	struct:__anon10	file:
+service_name	./mpm/winnt/mpm_winnt.c	/^static char *service_name = NULL;$/;"	v	file:
+service_nt_ctrl	./mpm/winnt/service.c	/^static VOID WINAPI service_nt_ctrl(DWORD dwCtrlCode)$/;"	f	file:
+service_nt_dispatch_thread	./mpm/winnt/service.c	/^DWORD WINAPI service_nt_dispatch_thread(LPVOID nada)$/;"	f
+service_nt_main_fn	./mpm/winnt/service.c	/^static void __stdcall service_nt_main_fn(DWORD argc, LPTSTR *argv)$/;"	f	file:
+service_set	./mpm/winnt/mpm_winnt.c	/^static apr_status_t service_set = SERVICE_UNSET;$/;"	v	file:
+service_stderr_thread	./mpm/winnt/nt_eventlog.c	/^static DWORD WINAPI service_stderr_thread(LPVOID hPipe)$/;"	f	file:
+service_stopped	./mpm/winnt/service.c	/^void service_stopped(void)$/;"	f
+service_term	./mpm/winnt/service.c	/^    HANDLE service_term;     \/* NT service thread kill signal *\/$/;"	m	struct:__anon10	file:
+service_thread	./mpm/winnt/service.c	/^    HANDLE service_thread;   \/* thread service\/monitor handle *\/$/;"	m	struct:__anon10	file:
+service_thread_id	./mpm/winnt/service.c	/^    DWORD  service_thread_id;\/* thread service\/monitor ID *\/$/;"	m	struct:__anon10	file:
+service_to_start_success	./mpm/winnt/mpm_winnt.c	/^static apr_status_t service_to_start_success;$/;"	v	file:
+set_accept_path_info	./core.c	/^static const char *set_accept_path_info(cmd_parms *cmd, void *d_, const char *arg)$/;"	f	file:
+set_access_name	./core.c	/^static const char *set_access_name(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_accf_map	./core.c	/^static const char *set_accf_map(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_add_default_charset	./core.c	/^static const char *set_add_default_charset(cmd_parms *cmd,$/;"	f	file:
+set_allow2f	./core.c	/^static const char *set_allow2f(cmd_parms *cmd, void *d_, int arg)$/;"	f	file:
+set_allow_opts	./core.c	/^static const char *set_allow_opts(cmd_parms *cmd, allow_options_t *opts,$/;"	f	file:
+set_authname	./core.c	/^static const char *set_authname(cmd_parms *cmd, void *mconfig,$/;"	f	file:
+set_content_md5	./core.c	/^static const char *set_content_md5(cmd_parms *cmd, void *d_, int arg)$/;"	f	file:
+set_cookie_doo_doo	./util_script.c	/^static int set_cookie_doo_doo(void *v, const char *key, const char *val)$/;"	f	file:
+set_daemons_to_start	./mpm/experimental/event/event.c	/^static const char *set_daemons_to_start(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_daemons_to_start	./mpm/mpmt_os2/mpmt_os2.c	/^static const char *set_daemons_to_start(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_daemons_to_start	./mpm/prefork/prefork.c	/^static const char *set_daemons_to_start(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_daemons_to_start	./mpm/worker/worker.c	/^static const char *set_daemons_to_start(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_disable_acceptex	./mpm/winnt/mpm_winnt.c	/^static const char *set_disable_acceptex(cmd_parms *cmd, void *dummy, char *arg)$/;"	f	file:
+set_document_root	./core.c	/^static const char *set_document_root(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_enable_mmap	./core.c	/^static const char *set_enable_mmap(cmd_parms *cmd, void *d_,$/;"	f	file:
+set_enable_sendfile	./core.c	/^static const char *set_enable_sendfile(cmd_parms *cmd, void *d_,$/;"	f	file:
+set_error_document	./core.c	/^static const char *set_error_document(cmd_parms *cmd, void *conf_,$/;"	f	file:
+set_etag_bits	./core.c	/^static const char *set_etag_bits(cmd_parms *cmd, void *mconfig,$/;"	f	file:
+set_gprof_dir	./core.c	/^static const char *set_gprof_dir(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_hostname_lookups	./core.c	/^static const char *set_hostname_lookups(cmd_parms *cmd, void *d_,$/;"	f	file:
+set_limit_cpu	./core.c	/^static const char *set_limit_cpu(cmd_parms *cmd, void *conf_,$/;"	f	file:
+set_limit_mem	./core.c	/^static const char *set_limit_mem(cmd_parms *cmd, void *conf_,$/;"	f	file:
+set_limit_nproc	./core.c	/^static const char *set_limit_nproc(cmd_parms *cmd, void *conf_,$/;"	f	file:
+set_limit_req_body	./core.c	/^static const char *set_limit_req_body(cmd_parms *cmd, void *conf_,$/;"	f	file:
+set_limit_req_fields	./core.c	/^static const char *set_limit_req_fields(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_limit_req_fieldsize	./core.c	/^static const char *set_limit_req_fieldsize(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_limit_req_line	./core.c	/^static const char *set_limit_req_line(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_limit_xml_req_body	./core.c	/^static const char *set_limit_xml_req_body(cmd_parms *cmd, void *conf_,$/;"	f	file:
+set_loglevel	./core.c	/^static const char *set_loglevel(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_max_clients	./mpm/experimental/event/event.c	/^static const char *set_max_clients(cmd_parms * cmd, void *dummy,$/;"	f	file:
+set_max_clients	./mpm/prefork/prefork.c	/^static const char *set_max_clients (cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_max_clients	./mpm/worker/worker.c	/^static const char *set_max_clients (cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_max_free_servers	./mpm/prefork/prefork.c	/^static const char *set_max_free_servers(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_max_free_threads	./mpm/netware/mpm_netware.c	/^static const char *set_max_free_threads(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_max_requests_per_thread	./mpm/beos/beos.c	/^static const char *set_max_requests_per_thread (cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_max_spare_threads	./mpm/beos/beos.c	/^static const char *set_max_spare_threads(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_max_spare_threads	./mpm/experimental/event/event.c	/^static const char *set_max_spare_threads(cmd_parms * cmd, void *dummy,$/;"	f	file:
+set_max_spare_threads	./mpm/mpmt_os2/mpmt_os2.c	/^static const char *set_max_spare_threads(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_max_spare_threads	./mpm/worker/worker.c	/^static const char *set_max_spare_threads(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_min_free_servers	./mpm/prefork/prefork.c	/^static const char *set_min_free_servers(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_min_free_threads	./mpm/netware/mpm_netware.c	/^static const char *set_min_free_threads(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_min_spare_threads	./mpm/beos/beos.c	/^static const char *set_min_spare_threads(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_min_spare_threads	./mpm/experimental/event/event.c	/^static const char *set_min_spare_threads(cmd_parms * cmd, void *dummy,$/;"	f	file:
+set_min_spare_threads	./mpm/mpmt_os2/mpmt_os2.c	/^static const char *set_min_spare_threads(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_min_spare_threads	./mpm/worker/worker.c	/^static const char *set_min_spare_threads(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_options	./core.c	/^static const char *set_options(cmd_parms *cmd, void *d_, const char *l)$/;"	f	file:
+set_override	./core.c	/^static const char *set_override(cmd_parms *cmd, void *d_, const char *l)$/;"	f	file:
+set_protocol	./core.c	/^static const char *set_protocol(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_recursion_limit	./core.c	/^static const char *set_recursion_limit(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_serv_tokens	./core.c	/^static const char *set_serv_tokens(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_server_alias	./core.c	/^static const char *set_server_alias(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_server_limit	./mpm/experimental/event/event.c	/^static const char *set_server_limit (cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_server_limit	./mpm/prefork/prefork.c	/^static const char *set_server_limit (cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_server_limit	./mpm/worker/worker.c	/^static const char *set_server_limit (cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_server_root	./core.c	/^static const char *set_server_root(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_server_string_slot	./core.c	/^static const char *set_server_string_slot(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_serverpath	./core.c	/^static const char *set_serverpath(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_service_description	./mpm/winnt/service.c	/^static void set_service_description(void)$/;"	f	file:
+set_signals	./mpm/beos/beos.c	/^static void set_signals(void)$/;"	f	file:
+set_signals	./mpm/experimental/event/event.c	/^static void set_signals(void)$/;"	f	file:
+set_signals	./mpm/mpmt_os2/mpmt_os2.c	/^static void set_signals()$/;"	f	file:
+set_signals	./mpm/mpmt_os2/mpmt_os2_child.c	/^static void set_signals()$/;"	f	file:
+set_signals	./mpm/netware/mpm_netware.c	/^static void set_signals(void)$/;"	f	file:
+set_signals	./mpm/prefork/prefork.c	/^static void set_signals(void)$/;"	f	file:
+set_signals	./mpm/worker/worker.c	/^static void set_signals(void)$/;"	f	file:
+set_signature_flag	./core.c	/^static const char *set_signature_flag(cmd_parms *cmd, void *d_,$/;"	f	file:
+set_thread_limit	./mpm/experimental/event/event.c	/^static const char *set_thread_limit(cmd_parms * cmd, void *dummy,$/;"	f	file:
+set_thread_limit	./mpm/netware/mpm_netware.c	/^static const char *set_thread_limit (cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_thread_limit	./mpm/winnt/mpm_winnt.c	/^static const char *set_thread_limit (cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_thread_limit	./mpm/worker/worker.c	/^static const char *set_thread_limit (cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_threads_limit	./mpm/beos/beos.c	/^static const char *set_threads_limit (cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_threads_per_child	./mpm/experimental/event/event.c	/^static const char *set_threads_per_child(cmd_parms * cmd, void *dummy,$/;"	f	file:
+set_threads_per_child	./mpm/winnt/mpm_winnt.c	/^static const char *set_threads_per_child (cmd_parms *cmd, void *dummy, char *arg)$/;"	f	file:
+set_threads_per_child	./mpm/worker/worker.c	/^static const char *set_threads_per_child (cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_threads_to_start	./mpm/beos/beos.c	/^static const char *set_threads_to_start(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_threads_to_start	./mpm/netware/mpm_netware.c	/^static const char *set_threads_to_start(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_timeout	./core.c	/^static const char *set_timeout(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+set_trace_enable	./core.c	/^static const char *set_trace_enable(cmd_parms *cmd, void *dummy,$/;"	f	file:
+set_use_canonical_name	./core.c	/^static const char *set_use_canonical_name(cmd_parms *cmd, void *d_,$/;"	f	file:
+set_use_canonical_phys_port	./core.c	/^static const char *set_use_canonical_phys_port(cmd_parms *cmd, void *d_,$/;"	f	file:
+setup_listeners	./mpm/netware/mpm_netware.c	/^static int setup_listeners(server_rec *s)$/;"	f	file:
+setup_signal_names	./mpm/winnt/mpm_winnt.c	/^void setup_signal_names(char *prefix)$/;"	f
+show_compile_settings	./main.c	/^static void show_compile_settings(void)$/;"	f	file:
+show_mpm_settings	./main.c	/^static void show_mpm_settings(void)$/;"	f	file:
+show_overrides	./config.c	/^static void show_overrides(const command_rec *pc, module *pm)$/;"	f	file:
+show_server_data	./mpm/netware/mpm_netware.c	/^static void show_server_data()$/;"	f	file:
+show_settings	./mpm/netware/mpm_netware.c	/^static int show_settings = 0;$/;"	v	file:
+shutdown_event	./mpm/mpmt_os2/mpmt_os2_child.c	/^HEV shutdown_event; \/* signaled when this child is shutting down *\/$/;"	v
+shutdown_event	./mpm/winnt/mpm_winnt.c	/^static HANDLE shutdown_event;  \/* used to signal the parent to shutdown *\/$/;"	v	file:
+shutdown_in_progress	./mpm/winnt/child.c	/^static int shutdown_in_progress = 0;$/;"	v	file:
+shutdown_listeners	./mpm/netware/mpm_netware.c	/^static int shutdown_listeners()$/;"	f	file:
+shutdown_pending	./mpm/beos/beos.c	/^static int volatile shutdown_pending;$/;"	v	file:
+shutdown_pending	./mpm/experimental/event/event.c	/^static int volatile shutdown_pending;$/;"	v	file:
+shutdown_pending	./mpm/mpmt_os2/mpmt_os2.c	/^static int volatile shutdown_pending;$/;"	v	file:
+shutdown_pending	./mpm/mpmt_os2/mpmt_os2_child.c	/^static int shutdown_pending = 0;$/;"	v	file:
+shutdown_pending	./mpm/netware/mpm_netware.c	/^static int volatile shutdown_pending;$/;"	v	file:
+shutdown_pending	./mpm/prefork/prefork.c	/^static int volatile shutdown_pending;$/;"	v	file:
+shutdown_pending	./mpm/worker/worker.c	/^static int volatile shutdown_pending;$/;"	v	file:
+sick_child_detected	./mpm/experimental/event/event.c	/^static int sick_child_detected;$/;"	v	file:
+sick_child_detected	./mpm/worker/worker.c	/^static int sick_child_detected;$/;"	v	file:
+sig_coredump	./mpm/beos/beos.c	/^static void sig_coredump(int sig)$/;"	f	file:
+sig_coredump	./mpm_common.c	/^static void sig_coredump(int sig)$/;"	f	file:
+sig_hup	./mpm/mpmt_os2/mpmt_os2_child.c	/^static void sig_hup(int sig)$/;"	f	file:
+sig_restart	./mpm/mpmt_os2/mpmt_os2.c	/^static void sig_restart(int sig)$/;"	f	file:
+sig_term	./mpm/beos/beos.c	/^static void sig_term(int sig)$/;"	f	file:
+sig_term	./mpm/experimental/event/event.c	/^static void sig_term(int sig)$/;"	f	file:
+sig_term	./mpm/mpmt_os2/mpmt_os2.c	/^static void sig_term(int sig)$/;"	f	file:
+sig_term	./mpm/mpmt_os2/mpmt_os2_child.c	/^static void sig_term(int sig)$/;"	f	file:
+sig_term	./mpm/netware/mpm_netware.c	/^static void sig_term(int sig)$/;"	f	file:
+sig_term	./mpm/prefork/prefork.c	/^static void sig_term(int sig)$/;"	f	file:
+sig_term	./mpm/worker/worker.c	/^static void sig_term(int sig)$/;"	f	file:
+signal_arg	./mpm/winnt/mpm_winnt.c	/^static char const* signal_arg = NULL;$/;"	v	file:
+signal_name_prefix	./mpm/winnt/mpm_winnt.c	/^char signal_name_prefix[MAX_SIGNAL_NAME];$/;"	v
+signal_restart_name	./mpm/winnt/mpm_winnt.c	/^char signal_restart_name[MAX_SIGNAL_NAME];$/;"	v
+signal_service_transition	./mpm/winnt/service.c	/^static int signal_service_transition(SC_HANDLE schService, DWORD signal, DWORD pending, DWORD complete)$/;"	f	file:
+signal_shutdown_name	./mpm/winnt/mpm_winnt.c	/^char signal_shutdown_name[MAX_SIGNAL_NAME];$/;"	v
+signal_threads	./mpm/experimental/event/event.c	/^static void signal_threads(int mode)$/;"	f	file:
+signal_threads	./mpm/worker/worker.c	/^static void signal_threads(int mode)$/;"	f	file:
+size	./util_filter.c	/^    int size;$/;"	m	struct:filter_trie_node	file:
+sock	./mpm/winnt/child.c	/^    SOCKET sock;$/;"	m	struct:joblist_s	file:
+sock	./mpm/winnt/mpm_winnt.h	/^    apr_socket_t *sock;$/;"	m	struct:CompContext
+socket_family	./mpm/winnt/mpm_winnt.h	/^    short socket_family;$/;"	m	struct:CompContext
+spawn_child	./mpm/mpmt_os2/mpmt_os2.c	/^static void spawn_child(int slot)$/;"	f	file:
+spawn_rate	./mpm/beos/beos.c	/^static int spawn_rate = 1;$/;"	v	file:
+ssStatus	./mpm/winnt/service.c	/^    SERVICE_STATUS ssStatus;$/;"	m	struct:__anon10	file:
+start_ifdefine	./core.c	/^static const char *start_ifdefine(cmd_parms *cmd, void *dummy, const char *arg)$/;"	f	file:
+start_ifmod	./core.c	/^static const char *start_ifmod(cmd_parms *cmd, void *mconfig, const char *arg)$/;"	f	file:
+start_mutex	./mpm/winnt/child.c	/^apr_proc_mutex_t *start_mutex;$/;"	v
+start_thread_may_exit	./mpm/experimental/event/event.c	/^static int start_thread_may_exit = 0;$/;"	v	file:
+start_thread_may_exit	./mpm/worker/worker.c	/^static int start_thread_may_exit = 0;$/;"	v	file:
+start_threads	./mpm/experimental/event/event.c	/^static void *APR_THREAD_FUNC start_threads(apr_thread_t * thd, void *dummy)$/;"	f	file:
+start_threads	./mpm/worker/worker.c	/^static void * APR_THREAD_FUNC start_threads(apr_thread_t *thd, void *dummy)$/;"	f	file:
+startup_children	./mpm/experimental/event/event.c	/^static void startup_children(int number_to_start)$/;"	f	file:
+startup_children	./mpm/prefork/prefork.c	/^static void startup_children(int number_to_start)$/;"	f	file:
+startup_children	./mpm/worker/worker.c	/^static void startup_children(int number_to_start)$/;"	f	file:
+startup_threads	./mpm/beos/beos.c	/^static void startup_threads(int number_to_start)$/;"	f	file:
+startup_workers	./mpm/netware/mpm_netware.c	/^static void startup_workers(int number_to_start)$/;"	f	file:
+status	./mpm/experimental/event/event.c	/^    int status;        \/*XXX what is this for?  0 and 1 don't make it clear *\/$/;"	m	struct:__anon16	file:
+stderr_log	./log.c	/^static apr_file_t *stderr_log = NULL;$/;"	v	file:
+stderr_ready	./mpm/winnt/nt_eventlog.c	/^static HANDLE stderr_ready;$/;"	v	file:
+stderr_thread	./mpm/winnt/nt_eventlog.c	/^static HANDLE stderr_thread = NULL;$/;"	v	file:
+stop_child_console_handler	./mpm/winnt/service.c	/^static void stop_child_console_handler(void)$/;"	f	file:
+stop_console_handler	./mpm/winnt/service.c	/^static void stop_console_handler(void)$/;"	f	file:
+stop_listening	./mpm/prefork/prefork.c	/^static void stop_listening(int sig)$/;"	f	file:
+strchr	./util_debug.c	25;"	d	file:
+strrchr	./util_debug.c	29;"	d	file:
+strstr	./util_debug.c	33;"	d	file:
+substring_conf	./util.c	/^static char *substring_conf(apr_pool_t *p, const char *start, int len,$/;"	f	file:
+suck_in_APR	./main.c	/^const void *suck_in_APR(void)$/;"	f
+t	./util_time.c	/^    apr_int64_t t;$/;"	m	struct:exploded_time_cache_element	file:
+t_name	./log.c	/^    char    *t_name;$/;"	m	struct:__anon3	file:
+t_val	./log.c	/^    int      t_val;$/;"	m	struct:__anon3	file:
+t_validate	./util_time.c	/^    apr_int64_t t_validate; \/* please see comments in cached_explode() *\/$/;"	m	struct:exploded_time_cache_element	file:
+tell_workers_to_exit	./mpm/beos/beos.c	/^static void tell_workers_to_exit(void)$/;"	f	file:
+terminate_mode	./mpm/experimental/event/event.c	/^static int terminate_mode = ST_INIT;$/;"	v	file:
+terminate_mode	./mpm/worker/worker.c	/^static int terminate_mode = ST_INIT;$/;"	v	file:
+terminated	./mpm/experimental/event/fdqueue.c	/^    int terminated;$/;"	m	struct:fd_queue_info_t	file:
+terminated	./mpm/experimental/event/fdqueue.h	/^    int terminated;$/;"	m	struct:fd_queue_t
+terminated	./mpm/worker/fdqueue.c	/^    int terminated;$/;"	m	struct:fd_queue_info_t	file:
+terminated	./mpm/worker/fdqueue.h	/^    int                 terminated;$/;"	m	struct:fd_queue_t
+thread_exception_handler	./mpm/mpmt_os2/mpmt_os2_child.c	/^ULONG APIENTRY thread_exception_handler(EXCEPTIONREPORTRECORD *pReportRec,$/;"	f
+thread_limit	./mpm/experimental/event/event.c	/^static int thread_limit = DEFAULT_THREAD_LIMIT;$/;"	v	file:
+thread_limit	./mpm/winnt/mpm_winnt.c	/^static int thread_limit = DEFAULT_THREAD_LIMIT;$/;"	v	file:
+thread_limit	./mpm/worker/worker.c	/^static int thread_limit = DEFAULT_THREAD_LIMIT;$/;"	v	file:
+thread_limit	./scoreboard.c	/^static int server_limit, thread_limit, lb_limit;$/;"	v	file:
+thread_num	./scoreboard.c	/^    int thread_num;$/;"	m	struct:ap_sb_handle_t	file:
+thread_starter	./mpm/experimental/event/event.c	/^} thread_starter;$/;"	t	typeref:struct:__anon14	file:
+thread_starter	./mpm/worker/worker.c	/^} thread_starter;$/;"	t	typeref:struct:__anon12	file:
+threadattr	./mpm/experimental/event/event.c	/^    apr_threadattr_t *threadattr;$/;"	m	struct:__anon14	file:
+threadattr	./mpm/worker/worker.c	/^    apr_threadattr_t *threadattr;$/;"	m	struct:__anon12	file:
+threads	./mpm/experimental/event/event.c	/^    apr_thread_t **threads;$/;"	m	struct:__anon14	file:
+threads	./mpm/worker/worker.c	/^    apr_thread_t **threads;$/;"	m	struct:__anon12	file:
+tid	./mpm/experimental/event/event.c	/^    int tid;$/;"	m	struct:__anon13	file:
+tid	./mpm/worker/worker.c	/^    int tid;$/;"	m	struct:__anon11	file:
+timeout_head	./mpm/experimental/event/event.c	/^static struct timeout_head_t timeout_head;$/;"	v	typeref:struct:timeout_head_t	file:
+timeout_mutex	./mpm/experimental/event/event.c	/^apr_thread_mutex_t *timeout_mutex;$/;"	v
+total_modules	./config.c	/^static int total_modules = 0;$/;"	v	file:
+tpf_child	./mpm/prefork/prefork.c	/^int tpf_child = 0;$/;"	v
+tpf_server_name	./mpm/prefork/prefork.c	/^char tpf_server_name[INETD_SERVNAME_LENGTH+1];$/;"	v
+trie_node_alloc	./util_filter.c	/^static filter_trie_node *trie_node_alloc(apr_pool_t *p,$/;"	f	file:
+trie_node_link	./util_filter.c	/^static void trie_node_link(apr_pool_t *p, filter_trie_node *parent,$/;"	f	file:
+ttyConsoleCtrlThread	./mpm/winnt/Win9xConHook.c	/^static DWORD WINAPI ttyConsoleCtrlThread(LPVOID tty)$/;"	f	file:
+ttyConsoleCtrlWndProc	./mpm/winnt/Win9xConHook.c	/^static LRESULT CALLBACK ttyConsoleCtrlWndProc(HWND hwnd, UINT msg,$/;"	f	file:
+tty_info	./mpm/winnt/Win9xConHook.c	/^} tty_info;$/;"	t	typeref:struct:__anon7	file:
+type	./mpm/experimental/event/event.c	/^    poll_type_e type;$/;"	m	struct:__anon16	file:
+type	./mpm/winnt/Win9xConHook.c	/^    INT type;$/;"	m	struct:__anon7	file:
+type	./mpm/winnt/mpm_winnt.h	/^AP_DECLARE(void) ap_signal_parent(ap_signal_parent_e type);$/;"	v
+udp_sa	./mpm/beos/beos.c	/^static apr_sockaddr_t *udp_sa;$/;"	v	file:
+udp_sock	./mpm/beos/beos.c	/^static apr_socket_t *udp_sock;$/;"	v	file:
+unblock_signal	./mpm/experimental/event/event.c	/^static void unblock_signal(int sig)$/;"	f	file:
+unblock_signal	./mpm/worker/worker.c	/^static void unblock_signal(int sig)$/;"	f	file:
+unclosed_directive	./core.c	/^static char *unclosed_directive(cmd_parms *cmd)$/;"	f	file:
+urlsection	./core.c	/^static const char *urlsection(cmd_parms *cmd, void *mconfig, const char *arg)$/;"	f	file:
+usage	./main.c	/^static void usage(process_rec *process)$/;"	f	file:
+use_acceptex	./mpm/winnt/mpm_winnt.c	/^int use_acceptex = 1;$/;"	v
+vastrs	./util_script.c	/^struct vastrs {$/;"	s	file:
+vbuff	./protocol.c	/^    apr_vformatter_buff_t vbuff;$/;"	m	struct:ap_vrprintf_data	file:
+version_locked	./core.c	/^static int version_locked = 0;$/;"	v	file:
+virtualhost_section	./core.c	/^static const char *virtualhost_section(cmd_parms *cmd, void *dummy,$/;"	f	file:
+wait_for_idler	./mpm/experimental/event/fdqueue.c	/^    apr_thread_cond_t *wait_for_idler;$/;"	m	struct:fd_queue_info_t	file:
+wait_for_idler	./mpm/worker/fdqueue.c	/^    apr_thread_cond_t *wait_for_idler;$/;"	m	struct:fd_queue_info_t	file:
+wait_or_timeout_counter	./mpm_common.c	/^static int wait_or_timeout_counter;$/;"	v	file:
+wait_to_finish	./mpm/netware/mpm_netware.c	/^static int volatile wait_to_finish=1;$/;"	v	file:
+waitlist_e	./mpm/winnt/mpm_winnt.c	/^enum waitlist_e {$/;"	g	file:
+waitlist_ready	./mpm/winnt/mpm_winnt.c	/^    waitlist_ready = 0,$/;"	e	enum:waitlist_e	file:
+waitlist_term	./mpm/winnt/mpm_winnt.c	/^    waitlist_term = 1$/;"	e	enum:waitlist_e	file:
+wakeup_listener	./mpm/experimental/event/event.c	/^static void wakeup_listener(void)$/;"	f	file:
+wakeup_listener	./mpm/worker/worker.c	/^static void wakeup_listener(void)$/;"	f	file:
+walk_cache_t	./request.c	/^typedef struct walk_cache_t {$/;"	s	file:
+walk_cache_t	./request.c	/^} walk_cache_t;$/;"	t	typeref:struct:walk_cache_t	file:
+walk_walked_t	./request.c	/^typedef struct walk_walked_t {$/;"	s	file:
+walk_walked_t	./request.c	/^} walk_walked_t;$/;"	t	typeref:struct:walk_walked_t	file:
+walked	./request.c	/^    apr_array_header_t *walked;          \/* The list of walk_walked_t results *\/$/;"	m	struct:walk_cache_t	file:
+win9x_accept	./mpm/winnt/child.c	/^static unsigned int __stdcall win9x_accept(void * dummy)$/;"	f	file:
+win9x_get_connection	./mpm/winnt/child.c	/^static PCOMP_CONTEXT win9x_get_connection(PCOMP_CONTEXT context)$/;"	f	file:
+winnt_accept	./mpm/winnt/child.c	/^static unsigned int __stdcall winnt_accept(void *lr_)$/;"	f	file:
+winnt_child_init	./mpm/winnt/mpm_winnt.c	/^static void winnt_child_init(apr_pool_t *pchild, struct server_rec *s)$/;"	f	file:
+winnt_cmds	./mpm/winnt/mpm_winnt.c	/^static const command_rec winnt_cmds[] = {$/;"	v	file:
+winnt_get_connection	./mpm/winnt/child.c	/^static PCOMP_CONTEXT winnt_get_connection(PCOMP_CONTEXT context)$/;"	f	file:
+winnt_hooks	./mpm/winnt/mpm_winnt.c	/^static void winnt_hooks(apr_pool_t *p)$/;"	f	file:
+winnt_mpm_state	./mpm/winnt/mpm_winnt.c	/^int winnt_mpm_state = AP_MPMQ_STARTING;$/;"	v
+winnt_open_logs	./mpm/winnt/mpm_winnt.c	/^static int winnt_open_logs(apr_pool_t *p, apr_pool_t *plog, apr_pool_t *ptemp, server_rec *s)$/;"	f	file:
+winnt_post_config	./mpm/winnt/mpm_winnt.c	/^static int winnt_post_config(apr_pool_t *pconf, apr_pool_t *plog, apr_pool_t *ptemp, server_rec* s)$/;"	f	file:
+winnt_pre_config	./mpm/winnt/mpm_winnt.c	/^static int winnt_pre_config(apr_pool_t *pconf_, apr_pool_t *plog, apr_pool_t *ptemp)$/;"	f	file:
+winnt_rewrite_args	./mpm/winnt/mpm_winnt.c	/^void winnt_rewrite_args(process_rec *process)$/;"	f
+worker_args_t	./mpm/mpmt_os2/mpmt_os2_child.c	/^} worker_args_t;$/;"	t	typeref:struct:__anon4	file:
+worker_cmds	./mpm/worker/worker.c	/^static const command_rec worker_cmds[] = {$/;"	v	file:
+worker_hooks	./mpm/worker/worker.c	/^static void worker_hooks(apr_pool_t *p)$/;"	f	file:
+worker_main	./mpm/mpmt_os2/mpmt_os2_child.c	/^static void worker_main(void *vpArg)$/;"	f	file:
+worker_main	./mpm/netware/mpm_netware.c	/^void worker_main(void *arg)$/;"	f
+worker_main	./mpm/winnt/child.c	/^static unsigned int __stdcall worker_main(void *thread_num_val)$/;"	f	file:
+worker_open_logs	./mpm/experimental/event/event.c	/^static int worker_open_logs(apr_pool_t * p, apr_pool_t * plog,$/;"	f	file:
+worker_open_logs	./mpm/worker/worker.c	/^static int worker_open_logs(apr_pool_t *p, apr_pool_t *plog, apr_pool_t *ptemp, server_rec *s)$/;"	f	file:
+worker_pre_config	./mpm/experimental/event/event.c	/^static int worker_pre_config(apr_pool_t * pconf, apr_pool_t * plog,$/;"	f	file:
+worker_pre_config	./mpm/worker/worker.c	/^static int worker_pre_config(apr_pool_t *pconf, apr_pool_t *plog,$/;"	f	file:
+worker_queue	./mpm/experimental/event/event.c	/^static fd_queue_t *worker_queue;$/;"	v	file:
+worker_queue	./mpm/worker/worker.c	/^static fd_queue_t *worker_queue;$/;"	v	file:
+worker_queue_info	./mpm/experimental/event/event.c	/^static fd_queue_info_t *worker_queue_info;$/;"	v	file:
+worker_queue_info	./mpm/worker/worker.c	/^static fd_queue_info_t *worker_queue_info;$/;"	v	file:
+worker_sockets	./mpm/experimental/event/event.c	/^static apr_socket_t **worker_sockets;$/;"	v	file:
+worker_sockets	./mpm/worker/worker.c	/^static apr_socket_t **worker_sockets;$/;"	v	file:
+worker_thread	./mpm/beos/beos.c	/^static int32 worker_thread(void *dummy)$/;"	f	file:
+worker_thread	./mpm/experimental/event/event.c	/^static void *APR_THREAD_FUNC worker_thread(apr_thread_t * thd, void *dummy)$/;"	f	file:
+worker_thread	./mpm/worker/worker.c	/^static void * APR_THREAD_FUNC worker_thread(apr_thread_t *thd, void * dummy)$/;"	f	file:
+worker_thread_count	./mpm/netware/mpm_netware.c	/^static unsigned long worker_thread_count;$/;"	v	file:
+workers_may_exit	./mpm/experimental/event/event.c	/^static int workers_may_exit = 0;$/;"	v	file:
+workers_may_exit	./mpm/winnt/child.c	/^static int workers_may_exit = 0;$/;"	v	file:
+workers_may_exit	./mpm/worker/worker.c	/^static int workers_may_exit = 0;$/;"	v	file:
+would_block	./mpm/netware/mpm_netware.c	/^static int would_block = 0;$/;"	v	file:
+writev_it_all	./core_filters.c	/^static apr_status_t writev_it_all(apr_socket_t *s,$/;"	f	file:
+x2c	./util.c	/^static char x2c(const char *what)$/;"	f	file:
+xt	./util_time.c	/^    apr_time_exp_t xt;$/;"	m	struct:exploded_time_cache_element	file:
