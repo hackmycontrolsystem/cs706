@@ -27,18 +27,19 @@ def get_attachments(data):
     patch_id = attempt.find('a')['href']
     print " ## Rahul ## ", patch_id
     #loc = http.get("https://bugzilla.mozilla.org/" + patch_id).count('\n')
-    attachment_data = urllib2.urlopen("https://bugzilla.redhat.com/" + patch_id).read()
+    #attachment_data = urllib2.urlopen("https://bugzilla.redhat.com/" + patch_id).read()
+    attachment_data = urllib2.urlopen("https://bz.apache.org/bugzilla/" + patch_id).read()
     print "Got attahment", str(attachment_data)
     attachment_data = str(attachment_data)
     #loc_per_attempt.append(str(loc))
+    return attachment_data
 
   #return Attachment(len(attempts), loc_per_attempt)
-  return attachment_data
+  return "No attachment found."
 
 
 def download(bug):
   #data = http.get(bug)
-  print " #### Rahul #### ", bug
   data = urllib2.urlopen(bug).read()
 
   #if "not a valid bug number nor an alias to a bug" in data:
@@ -50,8 +51,7 @@ def download(bug):
   status = soup.find('span', attrs={'id':'static_bug_status'})
   status = status.text
   status = status.replace('\n','')
-  print status
-
+  print "Status of Bug:",get_id(bug),":",  status
 
 
   attachment = get_attachments(data)
