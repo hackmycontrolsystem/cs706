@@ -4,6 +4,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+void test_fn (int level, char *name) 
+{
+	if (level == 0 && name == NULL)
+		fprintf (stderr, "I don't know!\n");
+		return;
+	else {
+		return;
+	}
+
+}
+*/
+
 int
 who_am_i (void)
 {
@@ -19,6 +32,7 @@ who_am_i (void)
 	   return 1;
 	 }
 	printf ("%s\n", user);
+	//test_fn();
 	return 0;
 }
 

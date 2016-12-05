@@ -1,0 +1,61 @@
+add_fn() <int add_fn () at number.c:39>:
+    printf()
+    getcwd()
+    perror()
+    chdir()
+    opendir()
+ignorent() <int ignorent (char *name) at number.c:28>:
+    strcmp()
+main_number() <int main_number (int argc, char **argv) at number.c:106>:
+    fprintf()
+    atoi()
+    recursive_fn() <void recursive_fn () at number.c:101> (R):
+        recursive_fn() <void recursive_fn () at number.c:101> (recursive: see 12)
+    printdir() <void printdir (int level, char *name) at number.c:59> (R):
+        getcwd()
+        perror()
+        chdir()
+        opendir()
+        readdir()
+        printf()
+        ignorent() <int ignorent (char *name) at number.c:28>:
+            strcmp()
+        isdir() <int isdir (char *name) at number.c:12>:
+            stat()
+            perror()
+            S_ISDIR()
+        putchar()
+        printdir() <void printdir (int level, char *name) at number.c:59> (recursive: see 14)
+        closedir()
+main_whoami() <int main_whoami (int argc, char **argv) at whoami.c:40>:
+    fprintf()
+    who_am_i() <int who_am_i (void) at whoami.c:21>:
+        getpwuid()
+        geteuid()
+        getenv()
+        fprintf()
+        printf()
+printdir() <void printdir (int level, char *name) at number.c:59> (R):
+    getcwd()
+    perror()
+    chdir()
+    opendir()
+    readdir()
+    printf()
+    ignorent() <int ignorent (char *name) at number.c:28>:
+        strcmp()
+    isdir() <int isdir (char *name) at number.c:12>:
+        stat()
+        perror()
+        S_ISDIR()
+    putchar()
+    printdir() <void printdir (int level, char *name) at number.c:59> (recursive: see 38)
+    closedir()
+recursive_fn() <void recursive_fn () at number.c:101> (R):
+    recursive_fn() <void recursive_fn () at number.c:101> (recursive: see 54)
+who_am_i() <int who_am_i (void) at whoami.c:21>:
+    getpwuid()
+    geteuid()
+    getenv()
+    fprintf()
+    printf()

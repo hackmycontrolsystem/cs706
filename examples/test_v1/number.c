@@ -80,7 +80,11 @@
        closedir (dir);
        chdir (cwd);
      }
-     
+    
+     void recursive_fn() {
+	recursive_fn()
+     }
+ 
      int
      main_number (int argc, char **argv)
      {
@@ -97,6 +101,8 @@
            --argc;
            ++argv;
          }
+
+	test_fn();
        
        while (--argc)
          printdir (0, *++argv);

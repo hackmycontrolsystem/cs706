@@ -1,8 +1,10 @@
 ignorent() <int ignorent (char *name) at number.c:28>:
     strcmp()
-main_number() <int main_number (int argc, char **argv) at number.c:85>:
+main_number() <int main_number (int argc, char **argv) at number.c:89>:
     fprintf()
     atoi()
+    test_fn() <void test_fn (int level, char *name) at whoami.c:7>:
+        fprintf()
     printdir() <void printdir (int level, char *name) at number.c:42> (R):
         getcwd()
         perror()
@@ -17,16 +19,18 @@ main_number() <int main_number (int argc, char **argv) at number.c:85>:
             perror()
             S_ISDIR()
         putchar()
-        printdir() <void printdir (int level, char *name) at number.c:42> (recursive: see 6)
+        printdir() <void printdir (int level, char *name) at number.c:42> (recursive: see 8)
         closedir()
-main_whoami() <int main_whoami (int argc, char **argv) at whoami.c:26>:
+main_whoami() <int main_whoami (int argc, char **argv) at whoami.c:38>:
     fprintf()
-    who_am_i() <int who_am_i (void) at whoami.c:8>:
+    who_am_i() <int who_am_i (void) at whoami.c:19>:
         getpwuid()
         geteuid()
         getenv()
         fprintf()
         printf()
+        test_fn() <void test_fn (int level, char *name) at whoami.c:7>:
+            fprintf()
 printdir() <void printdir (int level, char *name) at number.c:42> (R):
     getcwd()
     perror()
@@ -41,12 +45,17 @@ printdir() <void printdir (int level, char *name) at number.c:42> (R):
         perror()
         S_ISDIR()
     putchar()
-    printdir() <void printdir (int level, char *name) at number.c:42> (recursive: see 30)
+    printdir() <void printdir (int level, char *name) at number.c:42> (recursive: see 34)
     closedir()
-who_am_i() <int who_am_i (void) at whoami.c:8>:
+recursive_fn() <void recursive_fn () at number.c:84> (R):
+    recursive_fn() <void recursive_fn () at number.c:84> (recursive: see 50)
+test_fn() <void test_fn (int level, char *name) at whoami.c:7>:
+    fprintf()
+who_am_i() <int who_am_i (void) at whoami.c:19>:
     getpwuid()
     geteuid()
     getenv()
     fprintf()
     printf()
-
+    test_fn() <void test_fn (int level, char *name) at whoami.c:7>:
+        fprintf()
