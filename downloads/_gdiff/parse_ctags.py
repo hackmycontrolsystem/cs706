@@ -11,7 +11,7 @@ print "*****Starting GDiff Parsing ctags script...******\n"
 
 # Read the gdiff_tags file
 print "Reading Generated ctags from file gdiff_tags..."
-filename = open("gdiff_tags", 'r')
+filename = open(sys.argv[1], 'r')
 
 # Files that contain main functions
 # Dictionary: {filename: line_number for main()}
