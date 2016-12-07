@@ -1,0 +1,118 @@
+Index: modules/ldap/util_ldap.c
+===================================================================
+--- modules/ldap/util_ldap.c	(revision 1159851)
++++ modules/ldap/util_ldap.c	(working copy)
+@@ -130,8 +130,8 @@
+         return OK;
+ 
+     ap_rputs(DOCTYPE_HTML_3_2
+-             "<html><head><title>LDAP Cache Information</title></head>\n", r);
+-    ap_rputs("<body bgcolor='#ffffff'><h1 align=center>LDAP Cache Information"
++             "<html><head><title>LDAP Cache Information</title></head>\n"
++             "<body bgcolor='#ffffff'><h1 align=center>LDAP Cache Information"
+              "</h1>\n", r);
+ 
+     util_ald_cache_display(r, st);
+Index: modules/ssl/ssl_scache.c
+===================================================================
+--- modules/ssl/ssl_scache.c	(revision 1159851)
++++ modules/ssl/ssl_scache.c	(working copy)
+@@ -199,12 +199,12 @@
+     if (mc == NULL || flags & AP_STATUS_SHORT || mc->sesscache == NULL)
+         return OK;
+ 
+-    ap_rputs("<hr>\n", r);
+-    ap_rputs("<table cellspacing=0 cellpadding=0>\n", r);
+-    ap_rputs("<tr><td bgcolor=\"#000000\">\n", r);
+-    ap_rputs("<b><font color=\"#ffffff\" face=\"Arial,Helvetica\">SSL/TLS Session Cache Status:</font></b>\r", r);
+-    ap_rputs("</td></tr>\n", r);
+-    ap_rputs("<tr><td bgcolor=\"#ffffff\">\n", r);
++    ap_rputs("<hr>\n"
++             "<table cellspacing=0 cellpadding=0>\n"
++             "<tr><td bgcolor=\"#000000\">\n"
++             "<b><font color=\"#ffffff\" face=\"Arial,Helvetica\">SSL/TLS Session Cache Status:</font></b>\r"
++             "</td></tr>\n"
++             "<tr><td bgcolor=\"#ffffff\">\n", r);
+ 
+     if (mc->sesscache->flags & AP_SOCACHE_FLAG_NOTMPSAFE) {
+         ssl_mutex_on(r->server);
+@@ -216,8 +216,8 @@
+         ssl_mutex_off(r->server);
+     }
+ 
+-    ap_rputs("</td></tr>\n", r);
+-    ap_rputs("</table>\n", r);
++    ap_rputs("</td></tr>\n"
++             "</table>\n", r);
+     return OK;
+ }
+ Index: modules/proxy/mod_proxy_balancer.c
+===================================================================
+--- modules/proxy/mod_proxy_balancer.c	(revision 1159851)
++++ modules/proxy/mod_proxy_balancer.c	(working copy)
+@@ -1152,9 +1152,9 @@
+ 
+     if (apr_table_get(params, "xml")) {
+         ap_set_content_type(r, "text/xml");
+-        ap_rputs("<?xml version='1.0' encoding='UTF-8' ?>\n", r);
+-        ap_rputs("<httpd:manager xmlns:httpd='http://httpd.apache.org'>\n", r);
+-        ap_rputs("  <httpd:balancers>\n", r);
++        ap_rputs("<?xml version='1.0' encoding='UTF-8' ?>\n"
++                 "<httpd:manager xmlns:httpd='http://httpd.apache.org'>\n"
++                 "  <httpd:balancers>\n", r);
+         balancer = (proxy_balancer *)conf->balancers->elts;
+         for (i = 0; i < conf->balancers->nelts; i++) {
+             ap_rputs("    <httpd:balancer>\n", r);
+@@ -1173,18 +1173,18 @@
+                 ap_rputs("        </httpd:worker>\n", r);
+                 ++workers;
+             }
+-            ap_rputs("      </httpd:workers>\n", r);
+-            ap_rputs("    </httpd:balancer>\n", r);
++            ap_rputs("      </httpd:workers>\n"
++                     "    </httpd:balancer>\n", r);
+             ++balancer;
+         }
+-        ap_rputs("  </httpd:balancers>\n", r);
+-        ap_rputs("</httpd:manager>", r);
++        ap_rputs("  </httpd:balancers>\n"
++                 "</httpd:manager>", r);
+     }
+     else {
+         ap_set_content_type(r, "text/html; charset=ISO-8859-1");
+         ap_rputs(DOCTYPE_HTML_3_2
+-                 "<html><head><title>Balancer Manager</title></head>\n", r);
+-        ap_rputs("<body><h1>Load Balancer Manager for ", r);
++                 "<html><head><title>Balancer Manager</title></head>\n"
++                 "<body><h1>Load Balancer Manager for ", r);
+         ap_rvputs(r, ap_get_server_name(r), "</h1>\n\n", NULL);
+         ap_rvputs(r, "<dl><dt>Server Version: ",
+                   ap_get_server_description(), "</dt>\n", NULL);
+@@ -1197,8 +1199,7 @@
+             ap_rvputs(r, "<a href='", r->uri, "?b=",
+                       balancer->name + sizeof(BALANCER_PREFIX) - 1,
+                       "&nonce=", balancer->s->nonce,
+-                      "'>", NULL);
+-            ap_rvputs(r, balancer->name, "</a></h3>\n\n", NULL);
++                      "'>", balancer->name, "</a></h3>\n\n", NULL);
+             ap_rputs("\n\n<table border='0' style='text-align: left;'><tr>"
+                 "<th>MaxMembers</th><th>StickySession</th><th>DisableFailover</th><th>Timeout</th><th>FailoverAttempts</th><th>Method</th>"
+                 "</tr>\n<tr>", r);
+Index: modules/cache/mod_socache_dbm.c
+===================================================================
+--- modules/cache/mod_socache_dbm.c	(revision 1159851)
++++ modules/cache/mod_socache_dbm.c	(working copy)
+@@ -491,9 +491,10 @@
+         avg = (int)(size / (long)elts);
+     else
+         avg = 0;
+-    ap_rprintf(r, "cache type: <b>DBM</b>, maximum size: <b>unlimited</b><br>");
+-    ap_rprintf(r, "current entries: <b>%d</b>, current size: <b>%ld</b> bytes<br>", elts, size);
+-    ap_rprintf(r, "average entry size: <b>%d</b> bytes<br>", avg);
++    ap_rprintf(r, "cache type: <b>DBM</b>, maximum size: <b>unlimited</b><br>"
++                  "current entries: <b>%d</b>, current size: <b>%ld</b> bytes<br>"
++                  "average entry size: <b>%d</b> bytes<br>",
++                  elts, size, avg);
+     return;
+ }
+ 

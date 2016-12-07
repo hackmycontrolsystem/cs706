@@ -1,0 +1,13 @@
+Index: network_io/unix/sockaddr.c
+===================================================================
+--- network_io/unix/sockaddr.c	(revision 428331)
++++ network_io/unix/sockaddr.c	(working copy)
+@@ -315,7 +315,7 @@
+          * by the name listed in /etc/services; a numeric or unknown
+          * servname gets an EAI_SERVICE error.  So just resolve the
+          * appropriate anyaddr and fill in the port later. */
+-        hostname = family == AF_INET6 ? "::" : "0.0.0.0";
++        hostname = family != AF_INET ? "::" : "0.0.0.0";
+         servname = NULL;
+ #ifdef AI_NUMERICHOST
+         hints.ai_flags |= AI_NUMERICHOST;

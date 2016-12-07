@@ -1,0 +1,13 @@
+Index: core.c
+===================================================================
+--- core.c	(revision 1332524)
++++ core.c	(working copy)
+@@ -1421,7 +1421,7 @@
+         if (cmd->server->is_virtual) {
+             ap_log_perror(APLOG_MARK, APLOG_STARTUP, 0,
+                           cmd->pool, APLOGNO(00112)
+-                          "Warning: DocumentRoot [%s] does not exist",
++                          "Warning: DocumentRoot [%s] does not exist or is not a directory",
+                           arg);
+             conf->ap_document_root = arg;
+         }

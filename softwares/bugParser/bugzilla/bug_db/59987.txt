@@ -1,0 +1,32 @@
+--- server/mpm_unix.c	2016-08-08 15:13:33.000000000 +0800
++++ server/mpm_unix_new.c	2016-08-08 15:15:14.000000000 +0800
+@@ -705,7 +705,12 @@
+         len = strlen(data);
+     }
+ 
+-    apr_socket_send(sock, data, &len);
++    rv = apr_socket_send(sock, data, &len);
++    if (rv != APR_SUCCESS) {
++        ap_log_error(APLOG_MARK, APLOG_ERR, rv, ap_server_conf, APLOGNO()
++                     "Send data failed");
++    }
++    
+     apr_socket_close(sock);
+     apr_pool_destroy(p);
+ 
+--- modules/proxy/proxy_util.c	2016-08-08 15:08:31.000000000 +0800
++++ modules/proxy/proxy_util_new.c	2016-08-08 15:08:38.000000000 +0800
+@@ -2588,7 +2588,12 @@
+                            "Proxy-agent: %s" CRLF CRLF,
+                            ap_get_server_banner());
+     ap_xlate_proto_to_ascii(buffer, nbytes);
+-    apr_socket_send(backend->sock, buffer, &nbytes);
++    
++    status = apr_socket_send(backend->sock, buffer, &nbytes);
++    if (status != APR_SUCCESS) {
++        ap_log_error(APLOG_MARK, APLOG_ERR, status, s, APLOGNO()
++                     "Send data failed");
++    }
+ 
+     /* Receive the whole CONNECT response */
+     left = sizeof(buffer) - 1;

@@ -1,0 +1,820 @@
+[Tue Feb 17 10:34:59.366118 2015] [ssl:warn] [pid 4040:tid 428] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 10:34:59.366118 2015] [ssl:warn] [pid 4040:tid 428] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 10:34:59.412999 2015] [core:warn] [pid 4040:tid 428] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Feb 17 10:34:59.694264 2015] [ssl:warn] [pid 4040:tid 428] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Feb 17 10:34:59.709894 2015] [ssl:warn] [pid 4040:tid 428] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 10:34:59.709894 2015] [ssl:warn] [pid 4040:tid 428] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 10:34:59.709894 2015] [mpm_winnt:notice] [pid 4040:tid 428] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Tue Feb 17 10:34:59.709894 2015] [mpm_winnt:notice] [pid 4040:tid 428] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Tue Feb 17 10:34:59.709894 2015] [core:notice] [pid 4040:tid 428] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Tue Feb 17 10:34:59.709894 2015] [mpm_winnt:notice] [pid 4040:tid 428] AH00418: Parent: Created child process 3380
+[Tue Feb 17 10:35:00.350562 2015] [core:warn] [pid 3380:tid 344] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Tue Feb 17 10:35:00.553737 2015] [ssl:warn] [pid 3380:tid 344] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 10:35:00.553737 2015] [ssl:warn] [pid 3380:tid 344] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 10:35:00.584946 2015] [core:warn] [pid 3380:tid 344] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Feb 17 10:35:00.834953 2015] [ssl:warn] [pid 3380:tid 344] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Feb 17 10:35:00.850580 2015] [ssl:warn] [pid 3380:tid 344] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 10:35:00.850580 2015] [ssl:warn] [pid 3380:tid 344] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 10:35:00.866208 2015] [mpm_winnt:notice] [pid 3380:tid 344] AH00354: Child: Starting 250 worker threads.
+[Tue Feb 17 10:44:02.804164 2015] [mpm_winnt:notice] [pid 4040:tid 428] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Feb 17 10:44:04.823409 2015] [mpm_winnt:notice] [pid 3380:tid 344] AH00364: Child: All worker threads have exited.
+[Tue Feb 17 10:44:04.839037 2015] [mpm_winnt:notice] [pid 4040:tid 428] AH00430: Parent: Child process 3380 exited successfully.
+[Tue Feb 17 10:46:34.098594 2015] [ssl:warn] [pid 3048:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 10:46:34.098594 2015] [ssl:warn] [pid 3048:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 10:46:34.129863 2015] [core:warn] [pid 3048:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Feb 17 10:46:34.379859 2015] [ssl:warn] [pid 3048:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Feb 17 10:46:34.379859 2015] [ssl:warn] [pid 3048:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 10:46:34.379859 2015] [ssl:warn] [pid 3048:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 10:46:34.395487 2015] [mpm_winnt:notice] [pid 3048:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Tue Feb 17 10:46:34.395487 2015] [mpm_winnt:notice] [pid 3048:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Tue Feb 17 10:46:34.395487 2015] [core:notice] [pid 3048:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Tue Feb 17 10:46:34.395487 2015] [mpm_winnt:notice] [pid 3048:tid 420] AH00418: Parent: Created child process 1340
+[Tue Feb 17 10:46:34.754863 2015] [core:warn] [pid 1340:tid 344] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Tue Feb 17 10:46:34.848616 2015] [ssl:warn] [pid 1340:tid 344] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 10:46:34.848616 2015] [ssl:warn] [pid 1340:tid 344] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 10:46:34.864242 2015] [core:warn] [pid 1340:tid 344] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Feb 17 10:46:34.973622 2015] [ssl:warn] [pid 1340:tid 344] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Feb 17 10:46:34.973622 2015] [ssl:warn] [pid 1340:tid 344] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 10:46:34.973622 2015] [ssl:warn] [pid 1340:tid 344] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 10:46:35.004882 2015] [mpm_winnt:notice] [pid 1340:tid 344] AH00354: Child: Starting 250 worker threads.
+[Tue Feb 17 11:01:36.235014 2015] [autoindex:error] [pid 1340:tid 2616] [client 10.1.10.45:50801] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 17 11:05:18.213269 2015] [mpm_winnt:notice] [pid 3048:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Feb 17 11:05:20.244313 2015] [mpm_winnt:notice] [pid 1340:tid 344] AH00364: Child: All worker threads have exited.
+[Tue Feb 17 11:05:20.259932 2015] [mpm_winnt:notice] [pid 3048:tid 420] AH00430: Parent: Child process 1340 exited successfully.
+[Tue Feb 17 11:18:06.678197 2015] [ssl:warn] [pid 5668:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 11:18:06.678197 2015] [ssl:warn] [pid 5668:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 11:18:06.725058 2015] [core:warn] [pid 5668:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Feb 17 11:18:07.021942 2015] [ssl:warn] [pid 5668:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Feb 17 11:18:07.037587 2015] [ssl:warn] [pid 5668:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 11:18:07.037587 2015] [ssl:warn] [pid 5668:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 11:18:07.037587 2015] [mpm_winnt:notice] [pid 5668:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Tue Feb 17 11:18:07.037587 2015] [mpm_winnt:notice] [pid 5668:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Tue Feb 17 11:18:07.037587 2015] [core:notice] [pid 5668:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Tue Feb 17 11:18:07.037587 2015] [mpm_winnt:notice] [pid 5668:tid 420] AH00418: Parent: Created child process 6980
+[Tue Feb 17 11:18:07.693802 2015] [core:warn] [pid 6980:tid 340] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Tue Feb 17 11:18:07.912546 2015] [ssl:warn] [pid 6980:tid 340] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 11:18:07.912546 2015] [ssl:warn] [pid 6980:tid 340] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 11:18:07.943798 2015] [core:warn] [pid 6980:tid 340] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Feb 17 11:18:08.209417 2015] [ssl:warn] [pid 6980:tid 340] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Feb 17 11:18:08.225039 2015] [ssl:warn] [pid 6980:tid 340] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 11:18:08.225039 2015] [ssl:warn] [pid 6980:tid 340] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 11:18:08.225039 2015] [mpm_winnt:notice] [pid 6980:tid 340] AH00354: Child: Starting 250 worker threads.
+[Tue Feb 17 11:19:10.568121 2015] [autoindex:error] [pid 6980:tid 2616] [client 10.1.10.45:51836] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 17 13:57:28.783233 2015] [autoindex:error] [pid 6980:tid 2612] [client 10.1.10.45:62490] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 17 14:06:49.307041 2015] [mpm_winnt:notice] [pid 5668:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Feb 17 14:06:51.369599 2015] [mpm_winnt:notice] [pid 6980:tid 340] AH00364: Child: All worker threads have exited.
+[Tue Feb 17 14:06:51.416457 2015] [mpm_winnt:notice] [pid 5668:tid 420] AH00430: Parent: Child process 6980 exited successfully.
+[Tue Feb 17 14:07:21.776294 2015] [ssl:warn] [pid 6460:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 14:07:21.776294 2015] [ssl:warn] [pid 6460:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 14:07:21.823182 2015] [core:warn] [pid 6460:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Feb 17 14:07:22.104406 2015] [ssl:warn] [pid 6460:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Feb 17 14:07:22.120031 2015] [ssl:warn] [pid 6460:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 14:07:22.120031 2015] [ssl:warn] [pid 6460:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 14:07:22.120031 2015] [mpm_winnt:notice] [pid 6460:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Tue Feb 17 14:07:22.120031 2015] [mpm_winnt:notice] [pid 6460:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Tue Feb 17 14:07:22.120031 2015] [core:notice] [pid 6460:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Tue Feb 17 14:07:22.120031 2015] [mpm_winnt:notice] [pid 6460:tid 420] AH00418: Parent: Created child process 1208
+[Tue Feb 17 14:07:22.776294 2015] [core:warn] [pid 1208:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Tue Feb 17 14:07:23.010682 2015] [ssl:warn] [pid 1208:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 14:07:23.010682 2015] [ssl:warn] [pid 1208:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 14:07:23.041929 2015] [core:warn] [pid 1208:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Feb 17 14:07:23.323178 2015] [ssl:warn] [pid 1208:tid 332] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Feb 17 14:07:23.323178 2015] [ssl:warn] [pid 1208:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 14:07:23.323178 2015] [ssl:warn] [pid 1208:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 14:07:23.338807 2015] [mpm_winnt:notice] [pid 1208:tid 332] AH00354: Child: Starting 250 worker threads.
+[Tue Feb 17 14:11:58.857790 2015] [mpm_winnt:notice] [pid 6460:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Feb 17 14:12:00.873296 2015] [mpm_winnt:notice] [pid 1208:tid 332] AH00364: Child: All worker threads have exited.
+[Tue Feb 17 14:12:00.888923 2015] [mpm_winnt:notice] [pid 6460:tid 420] AH00430: Parent: Child process 1208 exited successfully.
+[Tue Feb 17 14:14:34.756176 2015] [ssl:warn] [pid 3040:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 14:14:34.756176 2015] [ssl:warn] [pid 3040:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 14:14:34.787463 2015] [core:warn] [pid 3040:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Feb 17 14:14:35.053375 2015] [ssl:warn] [pid 3040:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Feb 17 14:14:35.069017 2015] [ssl:warn] [pid 3040:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 14:14:35.069017 2015] [ssl:warn] [pid 3040:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 14:14:35.069017 2015] [mpm_winnt:notice] [pid 3040:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Tue Feb 17 14:14:35.069017 2015] [mpm_winnt:notice] [pid 3040:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Tue Feb 17 14:14:35.069017 2015] [core:notice] [pid 3040:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Tue Feb 17 14:14:35.069017 2015] [mpm_winnt:notice] [pid 3040:tid 420] AH00418: Parent: Created child process 1740
+[Tue Feb 17 14:14:35.647772 2015] [core:warn] [pid 1740:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Tue Feb 17 14:14:35.819827 2015] [ssl:warn] [pid 1740:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 14:14:35.819827 2015] [ssl:warn] [pid 1740:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 14:14:35.835474 2015] [core:warn] [pid 1740:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Feb 17 14:14:36.023174 2015] [ssl:warn] [pid 1740:tid 332] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Feb 17 14:14:36.023174 2015] [ssl:warn] [pid 1740:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Feb 17 14:14:36.023174 2015] [ssl:warn] [pid 1740:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Feb 17 14:14:36.054456 2015] [mpm_winnt:notice] [pid 1740:tid 332] AH00354: Child: Starting 250 worker threads.
+[Tue Feb 17 14:25:43.424405 2015] [autoindex:error] [pid 1740:tid 2664] [client 10.1.10.45:50635] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 17 14:36:11.083988 2015] [autoindex:error] [pid 1740:tid 2612] [client 10.1.10.45:51475] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 17 14:56:19.840281 2015] [autoindex:error] [pid 1740:tid 2608] [client 10.1.10.45:53132] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 17 15:07:17.594084 2015] [autoindex:error] [pid 1740:tid 2564] [client 10.1.14.92:2344] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 17 15:09:41.250861 2015] [autoindex:error] [pid 1740:tid 2568] [client 10.1.14.92:2519] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 17 15:21:16.533206 2015] [autoindex:error] [pid 1740:tid 2568] [client 10.1.14.92:2709] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Feb 18 08:44:09.000918 2015] [autoindex:error] [pid 1740:tid 2608] [client 10.1.10.45:51853] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Feb 18 09:12:29.602868 2015] [autoindex:error] [pid 1740:tid 2560] [client 10.1.17.98:56782] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Feb 18 16:51:27.099565 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Feb 18 16:53:20.506707 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Feb 19 08:39:24.698237 2015] [autoindex:error] [pid 1740:tid 2596] [client 10.1.14.92:2025] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 08:54:24.268247 2015] [autoindex:error] [pid 1740:tid 2564] [client 10.1.10.45:52044] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 09:02:59.553782 2015] [autoindex:error] [pid 1740:tid 2596] [client 10.1.10.45:52910] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 09:38:09.883976 2015] [autoindex:error] [pid 1740:tid 2580] [client 10.1.10.45:56025] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 10:28:35.690621 2015] [autoindex:error] [pid 1740:tid 2612] [client 10.1.17.98:62906] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 10:31:42.770263 2015] [autoindex:error] [pid 1740:tid 2596] [client 10.1.10.45:60841] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 15:23:02.380435 2015] [autoindex:error] [pid 1740:tid 2496] [client 10.1.10.45:51875] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 15:24:26.381215 2015] [autoindex:error] [pid 1740:tid 2512] [client 10.1.10.45:52039] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 15:25:22.037834 2015] [autoindex:error] [pid 1740:tid 2496] [client 10.1.10.45:52167] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 15:28:08.789224 2015] [autoindex:error] [pid 1740:tid 2512] [client 10.1.10.45:52404] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 15:39:45.529454 2015] [autoindex:error] [pid 1740:tid 2516] [client 10.1.10.45:53405] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 15:44:29.830474 2015] [autoindex:error] [pid 1740:tid 2568] [client 10.1.10.45:53911] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 19 16:12:05.666045 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Feb 19 16:12:05.666045 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 08:26:56.551857 2015] [autoindex:error] [pid 1740:tid 2520] [client 10.1.10.45:50152] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Feb 20 09:59:23.689553 2015] [autoindex:error] [pid 1740:tid 2532] [client 10.1.17.98:61354] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Feb 20 11:33:27.580482 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:33:29.455491 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:33:37.877443 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:34:48.924912 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:36:28.925777 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:37:05.316667 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:37:30.301257 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:37:54.988958 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:38:44.020642 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:39:59.146258 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:40:00.177519 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:40:23.427706 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:40:50.834205 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:41:12.943745 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:41:12.943745 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:41:12.943745 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:41:28.225117 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:41:32.318907 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:42:28.256866 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:42:44.069512 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:43:29.898026 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:43:31.273032 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:43:34.788689 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:43:35.398077 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:43:35.538695 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:44:06.101459 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:44:06.101459 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:44:20.429695 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:45:37.539707 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 11:46:38.071546 2015] [mpm_winnt:warn] [pid 1740:tid 3048] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 20 14:13:18.020248 2015] [autoindex:error] [pid 1740:tid 2520] [client 10.1.14.92:1222] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Feb 20 21:47:00.889738 2015] [mpm_winnt:notice] [pid 3040:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Feb 20 21:47:06.202283 2015] [mpm_winnt:notice] [pid 1740:tid 332] AH00364: Child: All worker threads have exited.
+[Fri Feb 20 21:47:06.358519 2015] [mpm_winnt:notice] [pid 3040:tid 420] AH00430: Parent: Child process 1740 exited successfully.
+[Fri Feb 20 21:53:10.016952 2015] [ssl:warn] [pid 3488:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Feb 20 21:53:10.016952 2015] [ssl:warn] [pid 3488:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 20 21:53:10.063832 2015] [core:warn] [pid 3488:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Fri Feb 20 21:53:11.032614 2015] [ssl:warn] [pid 3488:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Feb 20 21:53:11.032614 2015] [ssl:warn] [pid 3488:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Feb 20 21:53:11.032614 2015] [ssl:warn] [pid 3488:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 20 21:53:11.048226 2015] [mpm_winnt:notice] [pid 3488:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Fri Feb 20 21:53:11.048226 2015] [mpm_winnt:notice] [pid 3488:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Fri Feb 20 21:53:11.048226 2015] [core:notice] [pid 3488:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Fri Feb 20 21:53:11.048226 2015] [mpm_winnt:notice] [pid 3488:tid 420] AH00418: Parent: Created child process 4776
+[Fri Feb 20 21:53:11.610721 2015] [core:warn] [pid 4776:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Fri Feb 20 21:53:12.516979 2015] [ssl:warn] [pid 4776:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Feb 20 21:53:12.516979 2015] [ssl:warn] [pid 4776:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 20 21:53:12.563853 2015] [core:warn] [pid 4776:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Fri Feb 20 21:53:13.063859 2015] [ssl:warn] [pid 4776:tid 332] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Feb 20 21:53:13.079491 2015] [ssl:warn] [pid 4776:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Feb 20 21:53:13.079491 2015] [ssl:warn] [pid 4776:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Feb 20 21:53:13.423242 2015] [mpm_winnt:notice] [pid 4776:tid 332] AH00354: Child: Starting 250 worker threads.
+[Mon Feb 23 08:54:10.920258 2015] [mpm_winnt:warn] [pid 4776:tid 2864] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Feb 23 09:04:37.644272 2015] [mpm_winnt:warn] [pid 4776:tid 2864] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Feb 23 10:43:39.412789 2015] [autoindex:error] [pid 4776:tid 2524] [client 10.1.14.92:2718] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Feb 23 13:52:27.369542 2015] [autoindex:error] [pid 4776:tid 2520] [client 10.1.10.45:49995] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Feb 23 14:57:13.480260 2015] [autoindex:error] [pid 4776:tid 2508] [client 10.1.10.45:55365] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Feb 23 15:25:58.115153 2015] [autoindex:error] [pid 4776:tid 2532] [client 10.1.10.45:57958] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Feb 23 16:21:22.998737 2015] [autoindex:error] [pid 4776:tid 2584] [client 10.1.17.98:56640] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Feb 23 16:26:43.048210 2015] [autoindex:error] [pid 4776:tid 2508] [client 10.1.14.92:1927] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 24 09:29:40.644641 2015] [autoindex:error] [pid 4776:tid 2528] [client 10.1.10.45:59590] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 24 09:30:36.191948 2015] [autoindex:error] [pid 4776:tid 2592] [client 10.1.10.45:59740] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 24 09:41:23.265266 2015] [autoindex:error] [pid 4776:tid 2512] [client 10.1.14.92:3001] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 24 09:58:08.343843 2015] [autoindex:error] [pid 4776:tid 2528] [client 10.1.10.45:62377] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 24 16:38:39.123569 2015] [mpm_winnt:warn] [pid 4776:tid 2864] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Feb 24 18:56:49.154306 2015] [mpm_winnt:warn] [pid 4776:tid 2864] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Feb 24 18:56:49.154306 2015] [mpm_winnt:warn] [pid 4776:tid 2864] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Feb 24 18:58:02.856561 2015] [mpm_winnt:warn] [pid 4776:tid 2864] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Feb 24 18:58:02.856561 2015] [mpm_winnt:warn] [pid 4776:tid 2864] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Feb 25 09:41:47.323927 2015] [autoindex:error] [pid 4776:tid 2600] [client 10.1.10.45:57794] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Feb 25 10:23:03.966627 2015] [autoindex:error] [pid 4776:tid 2596] [client 10.1.10.45:61501] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Feb 25 12:56:17.786521 2015] [mpm_winnt:warn] [pid 4776:tid 2864] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Feb 25 12:56:17.786521 2015] [mpm_winnt:warn] [pid 4776:tid 2864] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Feb 25 16:17:47.112218 2015] [autoindex:error] [pid 4776:tid 2612] [client 10.1.14.92:2596] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Feb 25 19:01:05.272481 2015] [mpm_winnt:warn] [pid 4776:tid 2864] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Feb 26 08:51:20.936206 2015] [autoindex:error] [pid 4776:tid 2608] [client 10.1.17.98:49339] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 26 09:22:45.967594 2015] [autoindex:error] [pid 4776:tid 2596] [client 10.1.17.98:49918] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 26 10:08:32.316122 2015] [autoindex:error] [pid 4776:tid 2524] [client 10.1.17.81:52593] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 26 14:46:39.518358 2015] [autoindex:error] [pid 4776:tid 2500] [client 10.1.10.45:62310] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 26 15:23:00.458539 2015] [mpm_winnt:notice] [pid 3488:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Feb 26 15:23:02.489835 2015] [mpm_winnt:notice] [pid 4776:tid 332] AH00364: Child: All worker threads have exited.
+[Thu Feb 26 15:23:02.536660 2015] [mpm_winnt:notice] [pid 3488:tid 420] AH00430: Parent: Child process 4776 exited successfully.
+[Thu Feb 26 15:30:17.915495 2015] [ssl:warn] [pid 7188:tid 376] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:30:17.915495 2015] [ssl:warn] [pid 7188:tid 376] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:30:17.962241 2015] [core:warn] [pid 7188:tid 376] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Feb 26 15:30:18.290306 2015] [ssl:warn] [pid 7188:tid 376] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Feb 26 15:30:18.305954 2015] [ssl:warn] [pid 7188:tid 376] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:30:18.305954 2015] [ssl:warn] [pid 7188:tid 376] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:30:18.305954 2015] [mpm_winnt:notice] [pid 7188:tid 376] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Thu Feb 26 15:30:18.305954 2015] [mpm_winnt:notice] [pid 7188:tid 376] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Thu Feb 26 15:30:18.305954 2015] [core:notice] [pid 7188:tid 376] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Thu Feb 26 15:30:18.305954 2015] [mpm_winnt:notice] [pid 7188:tid 376] AH00418: Parent: Created child process 5312
+[Thu Feb 26 15:30:18.993448 2015] [core:warn] [pid 5312:tid 336] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Thu Feb 26 15:30:19.259064 2015] [ssl:warn] [pid 5312:tid 336] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:30:19.259064 2015] [ssl:warn] [pid 5312:tid 336] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:30:19.305954 2015] [core:warn] [pid 5312:tid 336] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Feb 26 15:30:19.618444 2015] [ssl:warn] [pid 5312:tid 336] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Feb 26 15:30:19.618444 2015] [ssl:warn] [pid 5312:tid 336] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:30:19.618444 2015] [ssl:warn] [pid 5312:tid 336] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:30:19.634087 2015] [mpm_winnt:notice] [pid 5312:tid 336] AH00354: Child: Starting 250 worker threads.
+[Thu Feb 26 15:41:41.811675 2015] [mpm_winnt:notice] [pid 7188:tid 376] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Feb 26 15:41:43.842951 2015] [mpm_winnt:notice] [pid 5312:tid 336] AH00364: Child: All worker threads have exited.
+[Thu Feb 26 15:41:43.858572 2015] [mpm_winnt:notice] [pid 7188:tid 376] AH00430: Parent: Child process 5312 exited successfully.
+[Thu Feb 26 15:42:30.702695 2015] [ssl:warn] [pid 4676:tid 344] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:42:30.702695 2015] [ssl:warn] [pid 4676:tid 344] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:42:30.733943 2015] [core:warn] [pid 4676:tid 344] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Feb 26 15:42:30.921432 2015] [ssl:warn] [pid 4676:tid 344] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Feb 26 15:42:30.921432 2015] [ssl:warn] [pid 4676:tid 344] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:42:30.921432 2015] [ssl:warn] [pid 4676:tid 344] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:42:30.937060 2015] [mpm_winnt:notice] [pid 4676:tid 344] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Thu Feb 26 15:42:30.937060 2015] [mpm_winnt:notice] [pid 4676:tid 344] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Thu Feb 26 15:42:30.937060 2015] [core:notice] [pid 4676:tid 344] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Thu Feb 26 15:42:30.937060 2015] [mpm_winnt:notice] [pid 4676:tid 344] AH00418: Parent: Created child process 8108
+[Thu Feb 26 15:42:31.202688 2015] [core:warn] [pid 8108:tid 348] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Thu Feb 26 15:42:31.312066 2015] [ssl:warn] [pid 8108:tid 348] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:42:31.312066 2015] [ssl:warn] [pid 8108:tid 348] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:42:31.327690 2015] [core:warn] [pid 8108:tid 348] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Feb 26 15:42:31.624615 2015] [ssl:warn] [pid 8108:tid 348] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Feb 26 15:42:31.640215 2015] [ssl:warn] [pid 8108:tid 348] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:42:31.640215 2015] [ssl:warn] [pid 8108:tid 348] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:42:31.655840 2015] [mpm_winnt:notice] [pid 8108:tid 348] AH00354: Child: Starting 250 worker threads.
+[Thu Feb 26 15:50:37.753683 2015] [mpm_winnt:notice] [pid 4676:tid 344] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Feb 26 15:50:39.784933 2015] [mpm_winnt:notice] [pid 8108:tid 348] AH00364: Child: All worker threads have exited.
+[Thu Feb 26 15:50:39.800576 2015] [mpm_winnt:notice] [pid 4676:tid 344] AH00430: Parent: Child process 8108 exited successfully.
+[Thu Feb 26 15:51:30.097839 2015] [ssl:warn] [pid 4588:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:51:30.097839 2015] [ssl:warn] [pid 4588:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:51:30.144721 2015] [core:warn] [pid 4588:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Feb 26 15:51:30.472848 2015] [ssl:warn] [pid 4588:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Feb 26 15:51:30.472848 2015] [ssl:warn] [pid 4588:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:51:30.472848 2015] [ssl:warn] [pid 4588:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:51:30.488477 2015] [mpm_winnt:notice] [pid 4588:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Thu Feb 26 15:51:30.488477 2015] [mpm_winnt:notice] [pid 4588:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Thu Feb 26 15:51:30.488477 2015] [core:notice] [pid 4588:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Thu Feb 26 15:51:30.488477 2015] [mpm_winnt:notice] [pid 4588:tid 420] AH00418: Parent: Created child process 8584
+[Thu Feb 26 15:51:31.129094 2015] [core:warn] [pid 8584:tid 336] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Thu Feb 26 15:51:31.347855 2015] [ssl:warn] [pid 8584:tid 336] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:51:31.347855 2015] [ssl:warn] [pid 8584:tid 336] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:51:31.379101 2015] [core:warn] [pid 8584:tid 336] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Feb 26 15:51:31.644723 2015] [ssl:warn] [pid 8584:tid 336] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Feb 26 15:51:31.660357 2015] [ssl:warn] [pid 8584:tid 336] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Feb 26 15:51:31.660357 2015] [ssl:warn] [pid 8584:tid 336] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Feb 26 15:51:31.675980 2015] [mpm_winnt:notice] [pid 8584:tid 336] AH00354: Child: Starting 250 worker threads.
+[Thu Feb 26 15:52:38.895295 2015] [autoindex:error] [pid 8584:tid 2592] [client 10.1.10.45:52547] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Feb 27 08:02:21.752145 2015] [autoindex:error] [pid 8584:tid 2576] [client 10.1.10.45:51618] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Feb 27 09:14:11.061175 2015] [autoindex:error] [pid 8584:tid 2560] [client 10.1.14.92:2558] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Feb 27 09:36:58.651139 2015] [autoindex:error] [pid 8584:tid 2576] [client 10.1.10.45:60741] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Feb 27 10:37:03.525113 2015] [mpm_winnt:warn] [pid 8584:tid 3208] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 27 10:37:03.525113 2015] [mpm_winnt:warn] [pid 8584:tid 3208] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Feb 27 12:26:58.859422 2015] [autoindex:error] [pid 8584:tid 2612] [client 10.1.14.92:2149] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Feb 27 14:18:47.603157 2015] [autoindex:error] [pid 8584:tid 2592] [client 10.1.14.92:3365] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 02 09:51:18.279629 2015] [autoindex:error] [pid 8584:tid 2580] [client 10.1.14.92:1266] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 02 11:27:07.033351 2015] [mpm_winnt:warn] [pid 8584:tid 3208] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Mar 02 11:27:07.033351 2015] [mpm_winnt:warn] [pid 8584:tid 3208] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 03 08:16:14.237436 2015] [autoindex:error] [pid 8584:tid 2608] [client 10.1.14.92:1532] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 03 08:20:49.067823 2015] [autoindex:error] [pid 8584:tid 2580] [client 10.1.17.81:49888] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 03 10:46:18.712393 2015] [mpm_winnt:notice] [pid 4588:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Mar 03 10:46:20.759262 2015] [mpm_winnt:notice] [pid 8584:tid 336] AH00364: Child: All worker threads have exited.
+[Tue Mar 03 10:46:20.806142 2015] [mpm_winnt:notice] [pid 4588:tid 420] AH00430: Parent: Child process 8584 exited successfully.
+[Tue Mar 03 10:48:33.472438 2015] [ssl:warn] [pid 3024:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:48:33.472438 2015] [ssl:warn] [pid 3024:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:48:33.519327 2015] [core:warn] [pid 3024:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Mar 03 10:48:33.784943 2015] [ssl:warn] [pid 3024:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:48:33.800571 2015] [ssl:warn] [pid 3024:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:48:33.800571 2015] [ssl:warn] [pid 3024:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:48:33.800571 2015] [mpm_winnt:notice] [pid 3024:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Tue Mar 03 10:48:33.800571 2015] [mpm_winnt:notice] [pid 3024:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Tue Mar 03 10:48:33.800571 2015] [core:notice] [pid 3024:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Tue Mar 03 10:48:33.800571 2015] [mpm_winnt:notice] [pid 3024:tid 420] AH00418: Parent: Created child process 3056
+[Tue Mar 03 10:48:34.206814 2015] [core:warn] [pid 3056:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Tue Mar 03 10:48:34.284942 2015] [ssl:warn] [pid 3056:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:48:34.284942 2015] [ssl:warn] [pid 3056:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:48:34.300566 2015] [core:warn] [pid 3056:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Mar 03 10:48:34.425569 2015] [ssl:warn] [pid 3056:tid 332] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Mar 03 10:48:34.425569 2015] [ssl:warn] [pid 3056:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Mar 03 10:48:34.425569 2015] [ssl:warn] [pid 3056:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Mar 03 10:48:34.519324 2015] [mpm_winnt:notice] [pid 3056:tid 332] AH00354: Child: Starting 250 worker threads.
+[Tue Mar 03 10:49:19.144996 2015] [autoindex:error] [pid 3056:tid 2616] [client 10.1.17.98:63139] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 03 14:01:12.884116 2015] [autoindex:error] [pid 3056:tid 2588] [client 10.1.14.92:4335] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 03 15:30:46.182739 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 03 15:31:02.932856 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 03 15:33:25.512189 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 04 08:51:09.953830 2015] [autoindex:error] [pid 3056:tid 2544] [client 10.1.10.45:52947] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Mar 04 08:59:03.566509 2015] [autoindex:error] [pid 3056:tid 2556] [client 10.1.10.45:53857] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Mar 04 09:21:14.072844 2015] [autoindex:error] [pid 3056:tid 2544] [client 10.1.10.45:55802] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Mar 04 14:13:13.950348 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 04 14:13:13.950348 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 04 14:24:11.779891 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 04 14:24:11.779891 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 04 14:24:11.779891 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 04 17:21:27.534961 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 05 08:34:34.036593 2015] [autoindex:error] [pid 3056:tid 2584] [client 10.1.10.45:49229] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Mar 05 08:37:46.944490 2015] [autoindex:error] [pid 3056:tid 2584] [client 10.1.10.45:49529] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Mar 05 14:37:58.291501 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 05 14:37:58.291501 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 05 19:15:07.405158 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 05 19:15:07.405158 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 05 19:15:07.405158 2015] [mpm_winnt:warn] [pid 3056:tid 2732] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 06 08:10:56.555790 2015] [autoindex:error] [pid 3056:tid 2540] [client 10.1.10.45:61009] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 06 08:15:39.503595 2015] [mpm_winnt:notice] [pid 3024:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Mar 06 08:15:47.769509 2015] [mpm_winnt:notice] [pid 3056:tid 332] AH00364: Child: All worker threads have exited.
+[Fri Mar 06 08:15:47.800730 2015] [mpm_winnt:notice] [pid 3024:tid 420] AH00430: Parent: Child process 3056 exited successfully.
+[Fri Mar 06 08:17:39.382648 2015] [ssl:warn] [pid 5832:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Mar 06 08:17:39.382648 2015] [ssl:warn] [pid 5832:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Mar 06 08:17:39.429540 2015] [core:warn] [pid 5832:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Fri Mar 06 08:17:39.710793 2015] [ssl:warn] [pid 5832:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Mar 06 08:17:39.726413 2015] [ssl:warn] [pid 5832:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Mar 06 08:17:39.726413 2015] [ssl:warn] [pid 5832:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Mar 06 08:17:39.726413 2015] [mpm_winnt:notice] [pid 5832:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Fri Mar 06 08:17:39.726413 2015] [mpm_winnt:notice] [pid 5832:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Fri Mar 06 08:17:39.726413 2015] [core:notice] [pid 5832:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Fri Mar 06 08:17:39.726413 2015] [mpm_winnt:notice] [pid 5832:tid 420] AH00418: Parent: Created child process 8608
+[Fri Mar 06 08:17:40.382682 2015] [core:warn] [pid 8608:tid 356] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Fri Mar 06 08:17:40.570183 2015] [ssl:warn] [pid 8608:tid 356] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Mar 06 08:17:40.570183 2015] [ssl:warn] [pid 8608:tid 356] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Mar 06 08:17:40.601445 2015] [core:warn] [pid 8608:tid 356] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Fri Mar 06 08:17:40.851454 2015] [ssl:warn] [pid 8608:tid 356] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Mar 06 08:17:40.867076 2015] [ssl:warn] [pid 8608:tid 356] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Mar 06 08:17:40.867076 2015] [ssl:warn] [pid 8608:tid 356] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Mar 06 08:17:40.882701 2015] [mpm_winnt:notice] [pid 8608:tid 356] AH00354: Child: Starting 250 worker threads.
+[Fri Mar 06 08:18:45.494281 2015] [autoindex:error] [pid 8608:tid 2612] [client 10.1.10.45:62409] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 06 11:27:59.131311 2015] [autoindex:error] [pid 8608:tid 2588] [client 10.1.10.45:61566] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 06 15:56:50.288086 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 06 15:56:50.288086 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 06 16:42:28.318719 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 06 16:43:03.319930 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 06 16:43:03.319930 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Mar 09 08:14:24.890296 2015] [autoindex:error] [pid 8608:tid 2408] [client 10.1.17.98:53689] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 09 10:05:05.959963 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Mar 09 11:19:00.126377 2015] [autoindex:error] [pid 8608:tid 2164] [client 10.1.14.92:3906] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 10 08:59:43.188190 2015] [autoindex:error] [pid 8608:tid 2360] [client 10.1.14.92:2582] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 10 12:58:51.019969 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 10 12:58:51.019969 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 10 13:25:16.964503 2015] [autoindex:error] [pid 8608:tid 2504] [client 10.1.10.45:49301] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Mar 11 09:50:25.188805 2015] [autoindex:error] [pid 8608:tid 2452] [client 10.1.10.45:62240] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Mar 11 12:07:23.420827 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 11 13:36:42.212466 2015] [autoindex:error] [pid 8608:tid 2304] [client 10.1.10.45:64110] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Mar 11 14:17:21.410589 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 11 14:32:45.348256 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 11 15:13:06.555247 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 11 15:24:27.031526 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 11 17:00:48.853172 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 11 18:48:18.405815 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 12 08:23:19.922527 2015] [autoindex:error] [pid 8608:tid 2148] [client 10.1.14.92:1388] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Mar 12 09:55:32.157586 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 12 09:55:32.157586 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 12 09:55:32.157586 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 12 14:12:25.125150 2015] [autoindex:error] [pid 8608:tid 2316] [client 10.1.17.81:63269] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 13 11:29:26.093109 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 11:29:26.108718 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 11:29:26.108718 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 11:29:26.124347 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 11:29:26.124347 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 11:29:26.124347 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 11:29:26.124347 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 11:33:21.101102 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 13:02:47.955527 2015] [autoindex:error] [pid 8608:tid 2120] [client 10.1.14.92:4109] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 13 15:51:30.315414 2015] [autoindex:error] [pid 8608:tid 1584] [client 10.1.10.45:57798] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 13 16:08:01.382597 2015] [autoindex:error] [pid 8608:tid 1604] [client 10.200.40.72:49622] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 13 17:35:48.546328 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 17:35:48.546328 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 18:30:51.971226 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 18:30:51.986790 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 13 18:31:12.737500 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Mar 16 08:29:35.258386 2015] [autoindex:error] [pid 8608:tid 2612] [client 10.1.14.92:1964] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 16 09:24:06.888241 2015] [autoindex:error] [pid 8608:tid 2596] [client 10.1.10.45:58014] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 16 15:32:21.909273 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Mar 16 15:33:30.067843 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Mar 16 15:33:30.067843 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Mar 16 15:33:47.990336 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 17 09:10:22.351037 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 17 09:10:22.366628 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 17 09:29:39.796637 2015] [autoindex:error] [pid 8608:tid 2576] [client 10.1.17.98:53301] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 17 11:01:56.375588 2015] [autoindex:error] [pid 8608:tid 2608] [client 10.1.10.45:50980] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 17 13:41:31.628756 2015] [autoindex:error] [pid 8608:tid 2620] [client 10.1.10.45:64270] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 17 15:57:49.335481 2015] [autoindex:error] [pid 8608:tid 2164] [client 10.1.14.92:3104] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 17 16:10:30.048852 2015] [autoindex:error] [pid 8608:tid 2164] [client 10.1.10.45:61961] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Mar 18 14:27:17.741412 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 18 14:27:17.756976 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Mar 18 14:45:53.791333 2015] [mpm_winnt:warn] [pid 8608:tid 3180] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 19 10:13:01.967193 2015] [mpm_winnt:notice] [pid 5832:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Mar 19 10:13:16.904206 2015] [mpm_winnt:notice] [pid 8608:tid 356] AH00364: Child: All worker threads have exited.
+[Thu Mar 19 10:13:16.997929 2015] [mpm_winnt:notice] [pid 5832:tid 420] AH00430: Parent: Child process 8608 exited successfully.
+[Thu Mar 19 10:16:51.720859 2015] [ssl:warn] [pid 1908:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Mar 19 10:16:51.720859 2015] [ssl:warn] [pid 1908:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Mar 19 10:16:51.752105 2015] [core:warn] [pid 1908:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Mar 19 10:16:52.048963 2015] [ssl:warn] [pid 1908:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Mar 19 10:16:52.048963 2015] [ssl:warn] [pid 1908:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Mar 19 10:16:52.048963 2015] [ssl:warn] [pid 1908:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Mar 19 10:16:52.064586 2015] [mpm_winnt:notice] [pid 1908:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Thu Mar 19 10:16:52.064586 2015] [mpm_winnt:notice] [pid 1908:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Thu Mar 19 10:16:52.064586 2015] [core:notice] [pid 1908:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Thu Mar 19 10:16:52.064586 2015] [mpm_winnt:notice] [pid 1908:tid 420] AH00418: Parent: Created child process 2448
+[Thu Mar 19 10:16:52.548924 2015] [core:warn] [pid 2448:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Thu Mar 19 10:16:52.689545 2015] [ssl:warn] [pid 2448:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Mar 19 10:16:52.689545 2015] [ssl:warn] [pid 2448:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Mar 19 10:16:52.705169 2015] [core:warn] [pid 2448:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Mar 19 10:16:52.845778 2015] [ssl:warn] [pid 2448:tid 332] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Mar 19 10:16:52.845778 2015] [ssl:warn] [pid 2448:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Mar 19 10:16:52.845778 2015] [ssl:warn] [pid 2448:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Mar 19 10:16:52.923920 2015] [mpm_winnt:notice] [pid 2448:tid 332] AH00354: Child: Starting 250 worker threads.
+[Thu Mar 19 14:28:21.581930 2015] [autoindex:error] [pid 2448:tid 2608] [client 10.1.14.92:2056] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Mar 19 17:53:18.452387 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 20 10:41:27.506388 2015] [autoindex:error] [pid 2448:tid 2600] [client 10.1.17.57:54720] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 20 10:56:14.645935 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 20 10:56:14.645935 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 20 16:55:53.672896 2015] [autoindex:error] [pid 2448:tid 2556] [client 10.1.14.92:1477] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 23 10:25:26.728967 2015] [autoindex:error] [pid 2448:tid 2564] [client 10.1.14.92:2251] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 24 10:13:35.680133 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 24 15:52:04.355229 2015] [autoindex:error] [pid 2448:tid 2360] [client 10.1.14.92:2970] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 24 16:20:37.301623 2015] [autoindex:error] [pid 2448:tid 2484] [client 10.1.10.45:50653] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Mar 25 15:38:15.022355 2015] [autoindex:error] [pid 2448:tid 2404] [client 10.1.10.45:59584] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Mar 26 09:22:44.766227 2015] [autoindex:error] [pid 2448:tid 2460] [client 10.1.10.45:57512] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Mar 26 15:57:24.457328 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 26 15:57:24.457328 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 26 16:06:04.600014 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 26 16:06:04.600014 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 26 16:06:04.600014 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 26 16:57:16.751371 2015] [autoindex:error] [pid 2448:tid 2464] [client 10.1.10.45:63264] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Mar 26 16:58:01.206031 2015] [autoindex:error] [pid 2448:tid 2428] [client 10.1.10.45:63325] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 27 08:58:32.885892 2015] [autoindex:error] [pid 2448:tid 2436] [client 10.1.10.45:49933] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 27 10:58:03.754953 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Mar 27 11:11:17.672442 2015] [autoindex:error] [pid 2448:tid 2444] [client 10.1.17.57:54006] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Mar 27 14:37:21.421060 2015] [autoindex:error] [pid 2448:tid 2360] [client 10.1.10.45:60977] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 30 08:10:59.190115 2015] [autoindex:error] [pid 2448:tid 2352] [client 10.1.17.115:55639] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 30 08:30:30.120589 2015] [autoindex:error] [pid 2448:tid 2468] [client 10.1.14.92:1487] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 30 10:04:28.841150 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Mar 30 10:34:03.526508 2015] [autoindex:error] [pid 2448:tid 2480] [client 10.1.10.45:61755] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 30 14:31:06.746523 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Mar 30 14:31:06.762152 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Mar 30 16:33:36.572528 2015] [autoindex:error] [pid 2448:tid 2292] [client 10.1.10.45:59918] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Mar 30 16:35:00.231619 2015] [autoindex:error] [pid 2448:tid 2292] [client 10.1.10.45:60130] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 31 09:07:37.589641 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Mar 31 11:34:45.659146 2015] [autoindex:error] [pid 2448:tid 2528] [client 10.1.10.45:64536] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 31 11:44:12.760124 2015] [autoindex:error] [pid 2448:tid 2528] [client 10.1.17.57:53660] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 31 16:22:55.438132 2015] [autoindex:error] [pid 2448:tid 2368] [client 10.1.14.92:4075] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Mar 31 16:56:00.990021 2015] [mpm_winnt:warn] [pid 2448:tid 3300] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Apr 01 08:54:47.297763 2015] [autoindex:error] [pid 2448:tid 2288] [client 10.1.14.92:1837] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 01 09:38:24.121099 2015] [autoindex:error] [pid 2448:tid 2340] [client 10.1.14.92:1377] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 01 11:48:29.287059 2015] [autoindex:error] [pid 2448:tid 2340] [client 10.1.17.115:51062] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 02 10:03:49.041017 2015] [mpm_winnt:notice] [pid 1908:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Apr 02 10:03:51.268996 2015] [mpm_winnt:notice] [pid 2448:tid 332] AH00364: Child: All worker threads have exited.
+[Thu Apr 02 10:03:51.315859 2015] [mpm_winnt:notice] [pid 1908:tid 420] AH00430: Parent: Child process 2448 exited successfully.
+[Thu Apr 02 10:06:17.773512 2015] [ssl:warn] [pid 1844:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Apr 02 10:06:17.773512 2015] [ssl:warn] [pid 1844:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Apr 02 10:06:17.820388 2015] [core:warn] [pid 1844:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Apr 02 10:06:18.086032 2015] [ssl:warn] [pid 1844:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Apr 02 10:06:18.101665 2015] [ssl:warn] [pid 1844:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Apr 02 10:06:18.101665 2015] [ssl:warn] [pid 1844:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Apr 02 10:06:18.101665 2015] [mpm_winnt:notice] [pid 1844:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Thu Apr 02 10:06:18.117313 2015] [mpm_winnt:notice] [pid 1844:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Thu Apr 02 10:06:18.117313 2015] [core:notice] [pid 1844:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Thu Apr 02 10:06:18.117313 2015] [mpm_winnt:notice] [pid 1844:tid 420] AH00418: Parent: Created child process 2400
+[Thu Apr 02 10:06:18.789375 2015] [core:warn] [pid 2400:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Thu Apr 02 10:06:19.054881 2015] [ssl:warn] [pid 2400:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Apr 02 10:06:19.054881 2015] [ssl:warn] [pid 2400:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Apr 02 10:06:19.101760 2015] [core:warn] [pid 2400:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Apr 02 10:06:19.523699 2015] [ssl:warn] [pid 2400:tid 332] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Apr 02 10:06:19.539331 2015] [ssl:warn] [pid 2400:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Apr 02 10:06:19.539331 2015] [ssl:warn] [pid 2400:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Apr 02 10:06:19.601854 2015] [mpm_winnt:notice] [pid 2400:tid 332] AH00354: Child: Starting 250 worker threads.
+[Thu Apr 02 10:14:40.305764 2015] [mpm_winnt:warn] [pid 2400:tid 2908] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Apr 02 10:38:19.133015 2015] [mpm_winnt:warn] [pid 2400:tid 2908] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Apr 02 10:38:19.133015 2015] [mpm_winnt:warn] [pid 2400:tid 2908] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Apr 02 13:02:28.070504 2015] [autoindex:error] [pid 2400:tid 2564] [client 10.1.14.92:3539] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 02 15:24:33.568048 2015] [mpm_winnt:notice] [pid 1844:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Apr 02 15:24:35.602848 2015] [mpm_winnt:notice] [pid 2400:tid 332] AH00364: Child: All worker threads have exited.
+[Thu Apr 02 15:24:35.634087 2015] [mpm_winnt:notice] [pid 1844:tid 420] AH00430: Parent: Child process 2400 exited successfully.
+[Thu Apr 02 15:26:59.118064 2015] [ssl:warn] [pid 1528:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Apr 02 15:26:59.118064 2015] [ssl:warn] [pid 1528:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Apr 02 15:26:59.149318 2015] [core:warn] [pid 1528:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Apr 02 15:26:59.461842 2015] [ssl:warn] [pid 1528:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Apr 02 15:26:59.477437 2015] [ssl:warn] [pid 1528:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Apr 02 15:26:59.477437 2015] [ssl:warn] [pid 1528:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Apr 02 15:26:59.477437 2015] [mpm_winnt:notice] [pid 1528:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Thu Apr 02 15:26:59.477437 2015] [mpm_winnt:notice] [pid 1528:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Thu Apr 02 15:26:59.477437 2015] [core:notice] [pid 1528:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Thu Apr 02 15:26:59.477437 2015] [mpm_winnt:notice] [pid 1528:tid 420] AH00418: Parent: Created child process 2132
+[Thu Apr 02 15:27:00.149327 2015] [core:warn] [pid 2132:tid 56] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Thu Apr 02 15:27:00.368088 2015] [ssl:warn] [pid 2132:tid 56] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Apr 02 15:27:00.368088 2015] [ssl:warn] [pid 2132:tid 56] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Apr 02 15:27:00.414966 2015] [core:warn] [pid 2132:tid 56] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Thu Apr 02 15:27:00.696238 2015] [ssl:warn] [pid 2132:tid 56] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Thu Apr 02 15:27:00.711851 2015] [ssl:warn] [pid 2132:tid 56] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu Apr 02 15:27:00.711851 2015] [ssl:warn] [pid 2132:tid 56] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Apr 02 15:27:00.743094 2015] [mpm_winnt:notice] [pid 2132:tid 56] AH00354: Child: Starting 250 worker threads.
+[Thu Apr 02 16:12:12.402716 2015] [autoindex:error] [pid 2132:tid 2592] [client 10.1.14.92:1502] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 03 08:55:57.184755 2015] [autoindex:error] [pid 2132:tid 2608] [client 10.1.10.45:63197] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 03 09:53:29.295865 2015] [autoindex:error] [pid 2132:tid 2604] [client 10.1.17.57:64641] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 03 12:10:13.662228 2015] [mpm_winnt:warn] [pid 2132:tid 3304] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 03 12:10:13.662228 2015] [mpm_winnt:warn] [pid 2132:tid 3304] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 03 13:27:31.826862 2015] [mpm_winnt:notice] [pid 1528:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Apr 03 13:27:33.858166 2015] [mpm_winnt:notice] [pid 2132:tid 56] AH00364: Child: All worker threads have exited.
+[Fri Apr 03 13:27:33.889427 2015] [mpm_winnt:notice] [pid 1528:tid 420] AH00430: Parent: Child process 2132 exited successfully.
+[Fri Apr 03 13:27:51.186662 2015] [ssl:warn] [pid 5792:tid 424] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 03 13:27:51.186662 2015] [ssl:warn] [pid 5792:tid 424] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 03 13:27:51.233540 2015] [core:warn] [pid 5792:tid 424] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Fri Apr 03 13:27:51.592906 2015] [ssl:warn] [pid 5792:tid 424] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Apr 03 13:27:51.608531 2015] [ssl:warn] [pid 5792:tid 424] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 03 13:27:51.608531 2015] [ssl:warn] [pid 5792:tid 424] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 03 13:27:51.608531 2015] [mpm_winnt:notice] [pid 5792:tid 424] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Fri Apr 03 13:27:51.608531 2015] [mpm_winnt:notice] [pid 5792:tid 424] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Fri Apr 03 13:27:51.608531 2015] [core:notice] [pid 5792:tid 424] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Fri Apr 03 13:27:51.608531 2015] [mpm_winnt:notice] [pid 5792:tid 424] AH00418: Parent: Created child process 5872
+[Fri Apr 03 13:27:52.264791 2015] [core:warn] [pid 5872:tid 280] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Fri Apr 03 13:27:52.483543 2015] [ssl:warn] [pid 5872:tid 280] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 03 13:27:52.483543 2015] [ssl:warn] [pid 5872:tid 280] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 03 13:27:52.514805 2015] [core:warn] [pid 5872:tid 280] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Fri Apr 03 13:27:52.764794 2015] [ssl:warn] [pid 5872:tid 280] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Apr 03 13:27:52.780429 2015] [ssl:warn] [pid 5872:tid 280] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 03 13:27:52.780429 2015] [ssl:warn] [pid 5872:tid 280] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 03 13:27:52.811719 2015] [mpm_winnt:notice] [pid 5872:tid 280] AH00354: Child: Starting 250 worker threads.
+[Fri Apr 03 13:28:30.546856 2015] [mpm_winnt:notice] [pid 5792:tid 424] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Apr 03 13:28:42.836454 2015] [cgi:error] [pid 5872:tid 2572] (OS 19)Média protégé en écriture.  : [client 10.117.0.219:3946] couldn't create child process: 720019: php-cgi.exe, referer: http://annuaire-telephonique/php-bin/Webclient.php?action=browse&resultsAction=listNode&baseDn=o%3DdirectoryRoot
+[Fri Apr 03 13:28:42.836454 2015] [cgi:error] [pid 5872:tid 2572] (OS 19)Média protégé en écriture.  : [client 10.117.0.219:3946] AH01223: couldn't spawn child process: D:/8770/php/php-cgi.exe, referer: http://annuaire-telephonique/php-bin/Webclient.php?action=browse&resultsAction=listNode&baseDn=o%3DdirectoryRoot
+[Fri Apr 03 13:28:42.930201 2015] [mpm_winnt:notice] [pid 5872:tid 280] AH00364: Child: All worker threads have exited.
+[Fri Apr 03 13:28:42.945836 2015] [mpm_winnt:notice] [pid 5792:tid 424] AH00430: Parent: Child process 5872 exited successfully.
+[Fri Apr 03 13:31:06.550869 2015] [ssl:warn] [pid 364:tid 376] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 03 13:31:06.550869 2015] [ssl:warn] [pid 364:tid 376] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 03 13:31:06.675877 2015] [core:warn] [pid 364:tid 376] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Fri Apr 03 13:31:07.050876 2015] [ssl:warn] [pid 364:tid 376] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Apr 03 13:31:07.066501 2015] [ssl:warn] [pid 364:tid 376] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 03 13:31:07.066501 2015] [ssl:warn] [pid 364:tid 376] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 03 13:31:07.066501 2015] [mpm_winnt:notice] [pid 364:tid 376] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Fri Apr 03 13:31:07.066501 2015] [mpm_winnt:notice] [pid 364:tid 376] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Fri Apr 03 13:31:07.066501 2015] [core:notice] [pid 364:tid 376] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Fri Apr 03 13:31:07.066501 2015] [mpm_winnt:notice] [pid 364:tid 376] AH00418: Parent: Created child process 2564
+[Fri Apr 03 13:31:07.675890 2015] [core:warn] [pid 2564:tid 340] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Fri Apr 03 13:31:07.972779 2015] [ssl:warn] [pid 2564:tid 340] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 03 13:31:07.972779 2015] [ssl:warn] [pid 2564:tid 340] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 03 13:31:08.004040 2015] [core:warn] [pid 2564:tid 340] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Fri Apr 03 13:31:08.316561 2015] [ssl:warn] [pid 2564:tid 340] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Apr 03 13:31:08.332175 2015] [ssl:warn] [pid 2564:tid 340] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 03 13:31:08.332175 2015] [ssl:warn] [pid 2564:tid 340] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 03 13:31:08.425919 2015] [mpm_winnt:notice] [pid 2564:tid 340] AH00354: Child: Starting 250 worker threads.
+[Fri Apr 03 13:32:35.475210 2015] [autoindex:error] [pid 2564:tid 2616] [client 10.1.10.45:49958] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 03 13:43:18.820475 2015] [mpm_winnt:warn] [pid 2564:tid 3040] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 03 13:43:18.836028 2015] [mpm_winnt:warn] [pid 2564:tid 3040] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 03 13:49:12.042544 2015] [autoindex:error] [pid 2564:tid 2588] [client 10.1.10.45:51590] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 03 14:37:15.582073 2015] [autoindex:error] [pid 2564:tid 2592] [client 10.1.17.115:56338] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 07 08:12:40.108406 2015] [autoindex:error] [pid 2564:tid 2548] [client 10.1.14.92:1821] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 07 08:53:29.444083 2015] [mpm_winnt:notice] [pid 364:tid 376] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Apr 07 08:53:31.475384 2015] [mpm_winnt:notice] [pid 2564:tid 340] AH00364: Child: All worker threads have exited.
+[Tue Apr 07 08:53:31.522301 2015] [mpm_winnt:notice] [pid 364:tid 376] AH00430: Parent: Child process 2564 exited successfully.
+[Tue Apr 07 09:22:06.967249 2015] [ssl:warn] [pid 3504:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Apr 07 09:22:06.967249 2015] [ssl:warn] [pid 3504:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 07 09:22:06.998532 2015] [core:warn] [pid 3504:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Apr 07 09:22:07.389562 2015] [ssl:warn] [pid 3504:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Apr 07 09:22:07.389562 2015] [ssl:warn] [pid 3504:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Apr 07 09:22:07.389562 2015] [ssl:warn] [pid 3504:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 07 09:22:07.389562 2015] [mpm_winnt:notice] [pid 3504:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Tue Apr 07 09:22:07.389562 2015] [mpm_winnt:notice] [pid 3504:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Tue Apr 07 09:22:07.389562 2015] [core:notice] [pid 3504:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Tue Apr 07 09:22:07.405196 2015] [mpm_winnt:notice] [pid 3504:tid 420] AH00418: Parent: Created child process 3604
+[Tue Apr 07 09:22:08.335289 2015] [core:warn] [pid 3604:tid 336] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Tue Apr 07 09:22:08.652615 2015] [ssl:warn] [pid 3604:tid 336] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Apr 07 09:22:08.652615 2015] [ssl:warn] [pid 3604:tid 336] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 07 09:22:08.696656 2015] [core:warn] [pid 3604:tid 336] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Tue Apr 07 09:22:09.028996 2015] [ssl:warn] [pid 3604:tid 336] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Tue Apr 07 09:22:09.047020 2015] [ssl:warn] [pid 3604:tid 336] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Tue Apr 07 09:22:09.047020 2015] [ssl:warn] [pid 3604:tid 336] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Apr 07 09:22:09.104072 2015] [mpm_winnt:notice] [pid 3604:tid 336] AH00354: Child: Starting 250 worker threads.
+[Tue Apr 07 09:25:11.783274 2015] [autoindex:error] [pid 3604:tid 2604] [client 10.1.14.92:4881] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 07 14:55:32.969386 2015] [autoindex:error] [pid 3604:tid 2592] [client 10.1.10.45:61615] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 07 15:00:26.164129 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 07 15:00:26.164129 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 07 15:00:26.164129 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 07 15:00:26.164129 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 07 15:00:26.164129 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 07 15:00:26.164129 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 07 15:00:26.164129 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 07 15:00:26.164129 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 07 15:00:26.164129 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 07 16:53:34.366852 2015] [autoindex:error] [pid 3604:tid 2512] [client 10.1.17.115:55339] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 07 21:36:04.845497 2015] [autoindex:error] [pid 3604:tid 2548] [client 10.1.10.45:59172] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 08 08:36:20.783003 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Apr 08 09:11:57.799275 2015] [autoindex:error] [pid 3604:tid 2484] [client 10.1.17.57:60731] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 08 10:45:00.444768 2015] [autoindex:error] [pid 3604:tid 2488] [client 10.1.17.115:57424] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 08 11:02:48.952489 2015] [autoindex:error] [pid 3604:tid 2488] [client 10.1.17.115:56757] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 08 14:38:09.453618 2015] [autoindex:error] [pid 3604:tid 2488] [client 10.1.10.45:57439] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 09 08:21:08.773587 2015] [autoindex:error] [pid 3604:tid 2476] [client 10.1.14.92:1643] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 09 08:25:10.919353 2015] [autoindex:error] [pid 3604:tid 2572] [client 10.1.17.115:54859] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 09 08:51:40.484237 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Apr 09 08:51:40.484237 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Apr 09 12:04:40.283447 2015] [autoindex:error] [pid 3604:tid 2620] [client 10.1.10.45:60239] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 09 16:12:12.135807 2015] [mpm_winnt:warn] [pid 3604:tid 3356] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 08:27:16.274634 2015] [autoindex:error] [pid 3604:tid 2604] [client 10.1.14.92:1613] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 10:02:10.571053 2015] [autoindex:error] [pid 3604:tid 2548] [client 10.1.10.45:52847] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 10:04:39.089857 2015] [autoindex:error] [pid 3604:tid 2496] [client 10.1.8.201:49650] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 10:07:42.753737 2015] [autoindex:error] [pid 3604:tid 2560] [client 10.1.8.201:49785] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 10:07:43.066241 2015] [autoindex:error] [pid 3604:tid 2520] [client 10.1.8.201:49787] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 10:08:11.127631 2015] [autoindex:error] [pid 3604:tid 2484] [client 10.1.8.201:49857] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 10:08:11.315089 2015] [autoindex:error] [pid 3604:tid 2516] [client 10.1.8.201:49860] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 10:21:21.840365 2015] [autoindex:error] [pid 3604:tid 2548] [client 10.1.8.201:49964] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 10:43:32.290398 2015] [autoindex:error] [pid 3604:tid 2616] [client 10.1.17.115:62877] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 11:29:52.858718 2015] [autoindex:error] [pid 3604:tid 2504] [client 10.1.8.201:50284] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 11:31:17.594922 2015] [autoindex:error] [pid 3604:tid 2516] [client 10.1.8.201:50415] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 11:34:45.552490 2015] [autoindex:error] [pid 3604:tid 2616] [client 10.1.8.201:50542] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 11:39:45.418147 2015] [autoindex:error] [pid 3604:tid 2520] [client 10.1.8.201:50639] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 11:41:41.654977 2015] [autoindex:error] [pid 3604:tid 2520] [client 10.1.8.201:50688] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 11:43:45.235705 2015] [autoindex:error] [pid 3604:tid 2520] [client 10.1.8.201:50795] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 11:43:47.813898 2015] [autoindex:error] [pid 3604:tid 2520] [client 10.1.8.201:50804] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 12:23:19.332829 2015] [autoindex:error] [pid 3604:tid 2516] [client 10.1.8.201:50944] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 14:37:42.726289 2015] [autoindex:error] [pid 3604:tid 1980] [client 10.1.10.45:59175] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 14:40:46.776993 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 14:40:46.808247 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.021276 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:47:49.036901 2015] [mpm_winnt:warn] [pid 3604:tid 7680] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 10 15:55:54.994604 2015] [mpm_winnt:notice] [pid 3504:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Apr 10 15:55:57.025883 2015] [mpm_winnt:notice] [pid 3604:tid 336] AH00364: Child: All worker threads have exited.
+[Fri Apr 10 15:55:57.119619 2015] [mpm_winnt:notice] [pid 3504:tid 420] AH00430: Parent: Child process 3604 exited successfully.
+[Fri Apr 10 15:56:14.604371 2015] [ssl:warn] [pid 8004:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 10 15:56:14.604371 2015] [ssl:warn] [pid 8004:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 10 15:56:14.651263 2015] [core:warn] [pid 8004:tid 420] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Fri Apr 10 15:56:15.010621 2015] [ssl:warn] [pid 8004:tid 420] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Apr 10 15:56:15.010621 2015] [ssl:warn] [pid 8004:tid 420] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 10 15:56:15.010621 2015] [ssl:warn] [pid 8004:tid 420] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 10 15:56:15.010621 2015] [mpm_winnt:notice] [pid 8004:tid 420] AH00455: Apache/2.4.10 (Win32) OpenSSL/1.0.1j configured -- resuming normal operations
+[Fri Apr 10 15:56:15.010621 2015] [mpm_winnt:notice] [pid 8004:tid 420] AH00456: Apache Lounge VC11 Server built: Jul 17 2014 11:50:08
+[Fri Apr 10 15:56:15.010621 2015] [core:notice] [pid 8004:tid 420] AH00094: Command line: 'D:\\8770\\apache2\\bin\\httpd.exe -d D:/8770/Apache2 -f D:\\8770\\data\\apache2\\httpd.conf'
+[Fri Apr 10 15:56:15.026266 2015] [mpm_winnt:notice] [pid 8004:tid 420] AH00418: Parent: Created child process 13308
+[Fri Apr 10 15:56:15.713763 2015] [core:warn] [pid 13308:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+AH00548: NameVirtualHost has no effect and will be removed in the next release D:/8770/data/Apache2/httpd-ssl.conf:39
+[Fri Apr 10 15:56:16.073200 2015] [ssl:warn] [pid 13308:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 10 15:56:16.073200 2015] [ssl:warn] [pid 13308:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 10 15:56:16.120081 2015] [core:warn] [pid 13308:tid 332] AH00117: Ignoring deprecated use of DefaultType in line 445 of D:/8770/data/Apache2/httpd.conf.
+[Fri Apr 10 15:56:16.479410 2015] [ssl:warn] [pid 13308:tid 332] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Fri Apr 10 15:56:16.479410 2015] [ssl:warn] [pid 13308:tid 332] AH01906: VM-8770R2.cg56.fr:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Fri Apr 10 15:56:16.479410 2015] [ssl:warn] [pid 13308:tid 332] AH01909: VM-8770R2.cg56.fr:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Apr 10 15:56:16.495039 2015] [mpm_winnt:notice] [pid 13308:tid 332] AH00354: Child: Starting 250 worker threads.
+[Fri Apr 10 15:57:29.574713 2015] [autoindex:error] [pid 13308:tid 2600] [client 10.1.10.45:50364] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 10 16:40:12.589622 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 13 08:24:48.470054 2015] [autoindex:error] [pid 13308:tid 2564] [client 10.1.14.92:2367] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Apr 13 11:46:03.427072 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 13 11:46:03.427072 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 13 11:46:03.442685 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 13 16:15:52.285308 2015] [autoindex:error] [pid 13308:tid 2612] [client 10.1.17.115:56778] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Apr 13 16:16:25.950072 2015] [autoindex:error] [pid 13308:tid 2552] [client 10.1.10.45:49567] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 14 10:23:58.933655 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 14 10:23:58.933655 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 14 10:23:58.933655 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 14 10:23:58.933655 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 14 13:08:41.928187 2015] [autoindex:error] [pid 13308:tid 2596] [client 10.1.14.92:4189] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 14 13:10:16.320794 2015] [autoindex:error] [pid 13308:tid 2608] [client 10.1.14.92:4281] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 14 13:37:07.948753 2015] [autoindex:error] [pid 13308:tid 2560] [client 10.1.17.115:64228] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 14 15:08:54.987061 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Apr 15 12:13:39.776705 2015] [autoindex:error] [pid 13308:tid 2588] [client 10.1.14.92:1476] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 15 13:27:14.854492 2015] [autoindex:error] [pid 13308:tid 2572] [client 10.1.14.92:2277] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 15 14:39:22.680425 2015] [autoindex:error] [pid 13308:tid 2612] [client 10.1.14.92:3046] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 15 14:47:08.534028 2015] [autoindex:error] [pid 13308:tid 2568] [client 10.1.17.115:64038] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 15 16:46:01.948749 2015] [autoindex:error] [pid 13308:tid 2612] [client 10.1.17.115:65158] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 16 10:12:20.863436 2015] [autoindex:error] [pid 13308:tid 2588] [client 10.1.14.92:2670] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 16 11:25:05.678904 2015] [autoindex:error] [pid 13308:tid 2608] [client 10.1.10.45:50779] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 16 13:35:27.095699 2015] [autoindex:error] [pid 13308:tid 2560] [client 10.1.10.45:60969] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 16 15:18:42.179896 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Apr 16 15:18:42.179896 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Apr 16 16:04:53.527723 2015] [autoindex:error] [pid 13308:tid 2600] [client 10.1.10.45:57418] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 17 09:15:45.196079 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 17 09:15:45.196079 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 17 09:20:30.702185 2015] [autoindex:error] [pid 13308:tid 2552] [client 10.1.14.92:2508] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 17 09:56:18.278774 2015] [autoindex:error] [pid 13308:tid 2556] [client 10.1.10.45:60449] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Fri Apr 17 10:20:32.153600 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 17 10:20:32.153600 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 17 10:20:32.153600 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 17 10:20:32.153600 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 17 10:20:32.153600 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 17 10:20:32.153600 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Fri Apr 17 11:55:44.930744 2015] [autoindex:error] [pid 13308:tid 2596] [client 10.1.17.119:53685] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Sat Apr 18 23:03:35.886729 2015] [proxy:error] [pid 13308:tid 2556] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 18 23:03:35.886729 2015] [proxy_ajp:error] [pid 13308:tid 2556] [client ::1:57110] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 18 23:03:36.089860 2015] [proxy:error] [pid 13308:tid 2600] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 18 23:03:36.089860 2015] [proxy_ajp:error] [pid 13308:tid 2600] [client ::1:57108] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 18 23:08:39.346273 2015] [proxy:error] [pid 13308:tid 2556] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 18 23:08:39.346273 2015] [proxy_ajp:error] [pid 13308:tid 2556] [client ::1:57230] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 18 23:08:39.502520 2015] [proxy:error] [pid 13308:tid 2600] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 18 23:08:39.502520 2015] [proxy_ajp:error] [pid 13308:tid 2600] [client ::1:57228] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 18 23:13:42.555836 2015] [proxy:error] [pid 13308:tid 2556] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 18 23:13:42.555836 2015] [proxy_ajp:error] [pid 13308:tid 2556] [client ::1:57353] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 18 23:13:42.555836 2015] [proxy:error] [pid 13308:tid 2600] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 18 23:13:42.555836 2015] [proxy_ajp:error] [pid 13308:tid 2600] [client ::1:57351] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Mon Apr 20 10:57:21.946322 2015] [autoindex:error] [pid 13308:tid 2560] [client 10.1.14.92:4033] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Apr 20 16:28:24.854342 2015] [autoindex:error] [pid 13308:tid 2552] [client 10.1.17.115:57316] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 21 14:12:33.424551 2015] [autoindex:error] [pid 13308:tid 2536] [client 10.1.14.92:1410] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 21 15:07:02.978086 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 21 16:28:17.596854 2015] [autoindex:error] [pid 13308:tid 2612] [client 10.1.14.92:2514] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 21 23:01:27.982867 2015] [proxy:error] [pid 13308:tid 2528] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Tue Apr 21 23:01:27.982867 2015] [proxy_ajp:error] [pid 13308:tid 2528] [client ::1:58069] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Tue Apr 21 23:01:27.998490 2015] [proxy:error] [pid 13308:tid 2580] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Tue Apr 21 23:01:27.998490 2015] [proxy_ajp:error] [pid 13308:tid 2580] [client ::1:58071] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Tue Apr 21 23:06:31.286159 2015] [proxy:error] [pid 13308:tid 2580] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Tue Apr 21 23:06:31.286159 2015] [proxy_ajp:error] [pid 13308:tid 2580] [client ::1:58199] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Tue Apr 21 23:06:31.286159 2015] [proxy:error] [pid 13308:tid 2528] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Tue Apr 21 23:06:31.286159 2015] [proxy_ajp:error] [pid 13308:tid 2528] [client ::1:58201] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Tue Apr 21 23:11:34.323839 2015] [proxy:error] [pid 13308:tid 2528] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Tue Apr 21 23:11:34.323839 2015] [proxy_ajp:error] [pid 13308:tid 2528] [client ::1:58319] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Tue Apr 21 23:11:34.323839 2015] [proxy:error] [pid 13308:tid 2580] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Tue Apr 21 23:11:34.323839 2015] [proxy_ajp:error] [pid 13308:tid 2580] [client ::1:58320] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Wed Apr 22 09:06:10.629829 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Apr 22 09:06:10.629829 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Apr 22 09:08:51.539568 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Apr 22 09:55:10.551426 2015] [autoindex:error] [pid 13308:tid 2576] [client 10.1.17.115:59553] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Wed Apr 22 11:41:10.217223 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Apr 22 14:08:47.125651 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Wed Apr 22 23:01:17.753213 2015] [proxy:error] [pid 13308:tid 2604] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Wed Apr 22 23:01:17.753213 2015] [proxy_ajp:error] [pid 13308:tid 2604] [client ::1:54910] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Wed Apr 22 23:01:17.753213 2015] [proxy:error] [pid 13308:tid 2532] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Wed Apr 22 23:01:17.753213 2015] [proxy_ajp:error] [pid 13308:tid 2532] [client ::1:54909] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Wed Apr 22 23:06:21.009448 2015] [proxy:error] [pid 13308:tid 2604] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Wed Apr 22 23:06:21.009448 2015] [proxy_ajp:error] [pid 13308:tid 2604] [client ::1:55051] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Wed Apr 22 23:06:21.071933 2015] [proxy:error] [pid 13308:tid 2532] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Wed Apr 22 23:06:21.071933 2015] [proxy_ajp:error] [pid 13308:tid 2532] [client ::1:55049] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Wed Apr 22 23:11:24.093985 2015] [proxy:error] [pid 13308:tid 2532] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Wed Apr 22 23:11:24.093985 2015] [proxy_ajp:error] [pid 13308:tid 2532] [client ::1:55203] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Wed Apr 22 23:11:24.093985 2015] [proxy:error] [pid 13308:tid 2604] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Wed Apr 22 23:11:24.093985 2015] [proxy_ajp:error] [pid 13308:tid 2604] [client ::1:55204] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Thu Apr 23 10:46:05.134514 2015] [autoindex:error] [pid 13308:tid 2560] [client 10.1.10.45:60582] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Thu Apr 23 11:45:07.704646 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Apr 23 16:03:30.372834 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Apr 23 16:03:30.372834 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Apr 23 23:03:25.969352 2015] [proxy:error] [pid 13308:tid 2528] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Thu Apr 23 23:03:25.969352 2015] [proxy_ajp:error] [pid 13308:tid 2528] [client ::1:51161] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Thu Apr 23 23:03:26.266232 2015] [proxy:error] [pid 13308:tid 2548] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Thu Apr 23 23:03:26.266232 2015] [proxy_ajp:error] [pid 13308:tid 2548] [client ::1:51163] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Thu Apr 23 23:08:29.491402 2015] [proxy:error] [pid 13308:tid 2528] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Thu Apr 23 23:08:29.491402 2015] [proxy_ajp:error] [pid 13308:tid 2528] [client ::1:51282] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Thu Apr 23 23:08:29.491402 2015] [proxy:error] [pid 13308:tid 2548] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Thu Apr 23 23:08:29.491402 2015] [proxy_ajp:error] [pid 13308:tid 2548] [client ::1:51281] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Thu Apr 23 23:13:32.732187 2015] [proxy:error] [pid 13308:tid 2528] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Thu Apr 23 23:13:32.732187 2015] [proxy_ajp:error] [pid 13308:tid 2528] [client ::1:51567] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Thu Apr 23 23:13:32.747823 2015] [proxy:error] [pid 13308:tid 2548] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Thu Apr 23 23:13:32.747823 2015] [proxy_ajp:error] [pid 13308:tid 2548] [client ::1:51568] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 25 23:03:45.510482 2015] [proxy:error] [pid 13308:tid 2536] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 25 23:03:45.510482 2015] [proxy_ajp:error] [pid 13308:tid 2536] [client ::1:58107] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 25 23:03:45.651099 2015] [proxy:error] [pid 13308:tid 2508] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 25 23:03:45.651099 2015] [proxy_ajp:error] [pid 13308:tid 2508] [client ::1:58108] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 25 23:08:48.891910 2015] [proxy:error] [pid 13308:tid 2536] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 25 23:08:48.891910 2015] [proxy_ajp:error] [pid 13308:tid 2536] [client ::1:58231] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 25 23:08:48.970493 2015] [proxy:error] [pid 13308:tid 2508] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 25 23:08:48.970493 2015] [proxy_ajp:error] [pid 13308:tid 2508] [client ::1:58229] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 25 23:13:52.038944 2015] [proxy:error] [pid 13308:tid 2508] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 25 23:13:52.038944 2015] [proxy_ajp:error] [pid 13308:tid 2508] [client ::1:58468] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Sat Apr 25 23:13:52.070256 2015] [proxy:error] [pid 13308:tid 2536] (OS 10061)Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.  : AH00957: AJP: attempt to connect to 127.0.0.1:8009 (*) failed
+[Sat Apr 25 23:13:52.070256 2015] [proxy_ajp:error] [pid 13308:tid 2536] [client ::1:58470] AH00896: failed to make connection to backend: localhost, referer: http://vm-8770r2.cg56.fr/nms8770-web/alarms/alarm.jsp
+[Mon Apr 27 08:39:50.237381 2015] [autoindex:error] [pid 13308:tid 2552] [client 10.1.14.92:2788] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Apr 27 10:23:31.817024 2015] [autoindex:error] [pid 13308:tid 2556] [client 10.1.17.109:65385] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Mon Apr 27 17:31:17.627922 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 08:54:49.918220 2015] [autoindex:error] [pid 13308:tid 2404] [client 10.1.10.45:51291] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 28 09:24:08.138835 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 09:24:08.138835 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 09:25:21.281063 2015] [mpm_winnt:warn] [pid 13308:tid 3248] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 09:47:31.749707 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 09:47:31.749707 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 09:49:03.111035 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 09:52:36.711448 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 09:52:36.711448 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 09:52:36.711448 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 09:52:36.711448 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 10:03:12.956927 2015] [mpm_winnt:warn] [pid 13308:tid 3024] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 10:10:58.810779 2015] [mpm_winnt:warn] [pid 13308:tid 3248] (OS 64)Le nom réseau spécifié n’est plus disponible.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Tue Apr 28 14:15:27.637960 2015] [autoindex:error] [pid 13308:tid 2488] [client 10.1.10.45:62328] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Apr 28 14:19:29.924351 2015] [autoindex:error] [pid 13308:tid 2152] [client 10.1.17.109:53865] AH01276: Cannot serve directory D:/8770/Client/Help/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive

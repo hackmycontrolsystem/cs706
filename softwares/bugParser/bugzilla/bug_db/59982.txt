@@ -1,0 +1,184 @@
+--- modules/aaa/mod_auth_digest.c	2016-08-08 13:55:46.000000000 +0800
++++ modules/aaa/mod_auth_digest_new.c	2016-08-11 15:45:34.000000000 +0800
+@@ -735,6 +735,7 @@
+ static client_entry *get_client(unsigned long key, const request_rec *r)
+ {
+     int bucket;
++    apr_status_t rv;
+     client_entry *entry, *prev = NULL;
+ 
+ 
+@@ -743,7 +744,11 @@
+     bucket = key % client_list->tbl_len;
+     entry  = client_list->table[bucket];
+ 
+-    apr_global_mutex_lock(client_lock);
++    rv = apr_global_mutex_lock(client_lock);
++    if (rv != APR_SUCCESS) {
++        ap_log_rerror(APLOG_MARK, APLOG_ERR, rv, r, APLOGNO() 
++                      "get_client(): apr_global_mutex_lock(client_lock) failed");
++    }    
+ 
+     while (entry && key != entry->key) {
+         prev  = entry;
+@@ -756,7 +761,11 @@
+         client_list->table[bucket] = entry;
+     }
+ 
+-    apr_global_mutex_unlock(client_lock);
++    rv = apr_global_mutex_unlock(client_lock);
++    if (rv != APR_SUCCESS) {
++        ap_log_rerror(APLOG_MARK, APLOG_ERR, rv, r, APLOGNO()
++                      "get_client(): apr_global_mutex_unlock(client_lock) failed");
++    }
+ 
+     if (entry) {
+         ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(01764)
+@@ -818,6 +827,7 @@
+                                 server_rec *s)
+ {
+     int bucket;
++    apr_status_t rv;
+     client_entry *entry;
+ 
+ 
+@@ -827,7 +837,11 @@
+ 
+     bucket = key % client_list->tbl_len;
+ 
+-    apr_global_mutex_lock(client_lock);
++    rv = apr_global_mutex_lock(client_lock);
++    if (rv != APR_SUCCESS) {
++        ap_log_error(APLOG_MARK, APLOG_ERR, rv, s, APLOGNO()
++                      "add_client(): apr_global_mutex_lock(client_lock) failed");
++    }
+ 
+     /* try to allocate a new entry */
+ 
+@@ -844,7 +858,11 @@
+         if (!entry) {
+             ap_log_error(APLOG_MARK, APLOG_ERR, 0, s, APLOGNO(01767)
+                          "unable to allocate new auth_digest client");
+-            apr_global_mutex_unlock(client_lock);
++            rv = apr_global_mutex_unlock(client_lock);
++            if (rv != APR_SUCCESS) {
++                ap_log_error(APLOG_MARK, APLOG_ERR, rv, s, APLOGNO()
++                              "add_client(): apr_global_mutex_unlock(client_lock) failed");
++            }
+             return NULL;       /* give up */
+         }
+     }
+@@ -858,7 +876,11 @@
+     client_list->num_created++;
+     client_list->num_entries++;
+ 
+-    apr_global_mutex_unlock(client_lock);
++    rv = apr_global_mutex_unlock(client_lock);
++    if (rv != APR_SUCCESS) {
++        ap_log_error(APLOG_MARK, APLOG_ERR, rv, s, APLOGNO()
++                     "add_client(): apr_global_mutex_unlock(client_lock) failed");
++    }
+ 
+     ap_log_error(APLOG_MARK, APLOG_DEBUG, 0, s, APLOGNO(01768)
+                  "allocated new client %lu", key);
+@@ -1105,15 +1127,24 @@
+ static client_entry *gen_client(const request_rec *r)
+ {
+     unsigned long op;
++    apr_status_t rv;    
+     client_entry new_entry = { 0, NULL, 0, "" }, *entry;
+ 
+     if (!opaque_cntr) {
+         return NULL;
+     }
+ 
+-    apr_global_mutex_lock(opaque_lock);
++    rv = apr_global_mutex_lock(opaque_lock);
++    if (rv != APR_SUCCESS) {
++        ap_log_rerror(APLOG_MARK, APLOG_ERR, rv, r, APLOGNO()
++                      "get_client(): apr_global_mutex_lock(opaque_lock) failed");
++    }
+     op = (*opaque_cntr)++;
+-    apr_global_mutex_unlock(opaque_lock);
++    rv = apr_global_mutex_unlock(opaque_lock);
++    if (rv != APR_SUCCESS) {
++        ap_log_rerror(APLOG_MARK, APLOG_ERR, rv, r, APLOGNO()
++                      "get_client(): apr_global_mutex_unlock(opaque_lock) failed");
++    }
+ 
+     if (!(entry = add_client(op, &new_entry, r->server))) {
+         ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r, APLOGNO(01769)
+--- modules/proxy/proxy_util.c	2016-08-11 21:53:52.000000000 +0800
++++ modules/proxy/proxy_util_new.c	2016-08-11 22:10:09.000000000 +0800
+@@ -1880,14 +1880,22 @@
+         ap_log_error(APLOG_MARK, APLOG_DEBUG, 0, s, APLOGNO(00927)
+                      "initializing worker %s local",
+                      ap_proxy_worker_name(p, worker));
+-        apr_global_mutex_lock(proxy_mutex);
++        rv = apr_global_mutex_lock(proxy_mutex);
++        if (rv != APR_SUCCESS) {
++            ap_log_error(APLOG_MARK, APLOG_ERR, rv, s, APLOGNO()
++                         "apr_global_mutex_lock(proxy_mutex) failed");
++        }
+         /* Now init local worker data */
+         if (worker->tmutex == NULL) {
+             rv = apr_thread_mutex_create(&(worker->tmutex), APR_THREAD_MUTEX_DEFAULT, p);
+             if (rv != APR_SUCCESS) {
+                 ap_log_error(APLOG_MARK, APLOG_ERR, 0, s, APLOGNO(00928)
+                              "can not create worker thread mutex");
+-                apr_global_mutex_unlock(proxy_mutex);
++                rv = apr_global_mutex_unlock(proxy_mutex);
++                if (rv != APR_SUCCESS) {
++                    ap_log_error(APLOG_MARK, APLOG_ERR, rv, s, APLOGNO()
++                                 "apr_global_mutex_unlock(proxy_mutex) failed");
++                }
+                 return rv;
+             }
+         }
+@@ -1896,7 +1904,11 @@
+         if (worker->cp == NULL) {
+             ap_log_error(APLOG_MARK, APLOG_ERR, 0, s, APLOGNO(00929)
+                          "can not create connection pool");
+-            apr_global_mutex_unlock(proxy_mutex);
++            rv = apr_global_mutex_unlock(proxy_mutex);
++            if (rv != APR_SUCCESS) {
++                ap_log_error(APLOG_MARK, APLOG_ERR, rv, s, APLOGNO()
++                             "apr_global_mutex_unlock(proxy_mutex) failed");
++            }
+             return APR_EGENERAL;
+         }
+ 
+@@ -1932,7 +1944,11 @@
+                  "initialized single connection worker in child %" APR_PID_T_FMT " for (%s)",
+                  getpid(), worker->s->hostname);
+         }
+-        apr_global_mutex_unlock(proxy_mutex);
++        rv = apr_global_mutex_unlock(proxy_mutex);
++        if (rv != APR_SUCCESS) {
++            ap_log_error(APLOG_MARK, APLOG_ERR, rv, s, APLOGNO()
++                         "apr_global_mutex_unlock(proxy_mutex) failed");
++        }
+ 
+     }
+     if (rv == APR_SUCCESS) {
+@@ -3292,10 +3308,18 @@
+         }
+         if (!found) {
+             proxy_worker **runtime;
+-            apr_global_mutex_lock(proxy_mutex);
++            rv = apr_global_mutex_lock(proxy_mutex);
++            if (rv != APR_SUCCESS) {
++                ap_log_error(APLOG_MARK, APLOG_ERR, rv, s, APLOGNO()
++                             "apr_global_mutex_lock(proxy_mutex) failed");
++            }
+             runtime = apr_array_push(b->workers);
+             *runtime = apr_palloc(conf->pool, sizeof(proxy_worker));
+-            apr_global_mutex_unlock(proxy_mutex);
++            rv = apr_global_mutex_unlock(proxy_mutex);
++            if (rv != APR_SUCCESS) {
++                ap_log_error(APLOG_MARK, APLOG_ERR, rv, s, APLOGNO()
++                             "apr_global_mutex_unlock(proxy_mutex) failed");
++            }
+             (*runtime)->hash = shm->hash;
+             (*runtime)->context = NULL;
+             (*runtime)->cp = NULL;

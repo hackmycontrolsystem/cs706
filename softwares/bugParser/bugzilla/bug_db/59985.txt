@@ -1,0 +1,17 @@
+--- server/mpm/event/event.c	2016-08-08 15:33:58.000000000 +0800
++++ server/mpm/event/event_new.c	2016-08-08 15:34:06.000000000 +0800
+@@ -443,8 +443,13 @@
+ static void disable_listensocks(int process_slot)
+ {
+     int i;
++    apr_status_t rv;
+     for (i = 0; i < num_listensocks; i++) {
+-        apr_pollset_remove(event_pollset, &listener_pollfd[i]);
++        rv = apr_pollset_remove(event_pollset, &listener_pollfd[i]);
++        if (rv != APR_SUCCESS) {
++            ap_log_error(APLOG_MARK, APLOG_ERR, rv, ap_server_conf, APLOGNO()
++                         "Pollset remove failed");
++        }  
+     }
+     ap_scoreboard_image->parent[process_slot].not_accepting = 1;
+ }

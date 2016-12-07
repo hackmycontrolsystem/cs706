@@ -1,0 +1,1493 @@
+Index: os/bs2000/ebcdic.c
+===================================================================
+--- os/bs2000/ebcdic.c	(Revision 1755424)
++++ os/bs2000/ebcdic.c	(Arbeitskopie)
+@@ -25,7 +25,7 @@
+ "native BS2000", namely EBCDIC.
+ 
+ EBCDIC Table. (Yes, in EBCDIC, the letters 'a'..'z' are not contiguous!)
+-This apr_table_t is bijective, i.e. there are no ambigous or duplicate characters
++This apr_table_t is bijective, i.e. there are no ambiguous or duplicate characters
+ 00    00 01 02 03 85 09 86 7f  87 8d 8e 0b 0c 0d 0e 0f  *................*
+ 10    10 11 12 13 8f 0a 08 97  18 19 9c 9d 1c 1d 1e 1f  *................*
+ 20    80 81 82 83 84 92 17 1b  88 89 8a 8b 8c 05 06 07  *................*
+Index: os/netware/pre_nw.h
+===================================================================
+--- os/netware/pre_nw.h	(Revision 1755424)
++++ os/netware/pre_nw.h	(Arbeitskopie)
+@@ -55,7 +55,7 @@
+ #endif
+ #endif
+ 
+-/* C9X defintion used by MSL C++ library */
++/* C9X definition used by MSL C++ library */
+ #define DECIMAL_DIG 17
+ 
+ /* some code may want to use the MS convention for long long */
+Index: os/win32/ap_regkey.c
+===================================================================
+--- os/win32/ap_regkey.c	(Revision 1755424)
++++ os/win32/ap_regkey.c	(Arbeitskopie)
+@@ -488,7 +488,7 @@
+ #if APR_HAS_ANSI_FS
+     ELSE_WIN_OS_IS_ANSI
+     {
+-        /* Small possiblity the array is either unterminated
++        /* Small possibility the array is either unterminated
+          * or single NULL terminated.  Avert.
+          */
+         buf = (char *)value;
+Index: support/checkgid.c
+===================================================================
+--- support/checkgid.c	(Revision 1755424)
++++ support/checkgid.c	(Arbeitskopie)
+@@ -15,7 +15,7 @@
+  */
+ 
+ /*
+- * Given one or more group identifers on the command line (e.g.,
++ * Given one or more group identifiers on the command line (e.g.,
+  * "httpd" or "#-1"), figure out whether they'll be valid for
+  * the server to use at run-time.
+  *
+Index: support/htcacheclean.c
+===================================================================
+--- support/htcacheclean.c	(Revision 1755424)
++++ support/htcacheclean.c	(Arbeitskopie)
+@@ -1046,9 +1046,9 @@
+          return;
+     }
+ 
+-    /* process remaining entries oldest to newest, the check for an emtpy
++    /* process remaining entries oldest to newest, the check for an empty
+      * ring actually isn't necessary except when the compiler does
+-     * corrupt 64bit arithmetics which happend to me once, so better safe
++     * corrupt 64bit arithmetics which happened to me once, so better safe
+      * than sorry
+      */
+     while (!((!s.max || s.sum <= s.max) && (!s.inodes || s.nodes <= s.inodes))
+Index: support/logresolve.c
+===================================================================
+--- support/logresolve.c	(Revision 1755424)
++++ support/logresolve.c	(Arbeitskopie)
+@@ -258,7 +258,7 @@
+         resolves++;
+ 
+         /* From here on our we cache each result, even if it was not
+-         * succesful
++         * successful
+          */
+         cachesize++;
+ 
+Index: support/logresolve.pl.in
+===================================================================
+--- support/logresolve.pl.in	(Revision 1755424)
++++ support/logresolve.pl.in	(Arbeitskopie)
+@@ -41,7 +41,7 @@
+ # logfile lines processed per hour compared to ~45,000 per hour
+ # with 'logresolve'.
+ #
+-# I haven't yet seen any noticable reduction in the percentage of IPs
++# I haven't yet seen any noticeable reduction in the percentage of IPs
+ # that fail to get resolved. Your mileage will no doubt vary. 5s is long
+ # enough to wait IMO.
+ #
+@@ -207,7 +207,7 @@
+ 
+ 	 # do the hostname lookup inside an eval. The eval will use the
+ 	 # already configured SIGnal handler and drop out of the {} block
+-	 # regardless of whether the alarm occured or not.
++	 # regardless of whether the alarm occurred or not.
+ 	eval {
+ 		alarm($TIMEOUT);
+ 		$hostname = gethostbyaddr(gethostbyname($ip), AF_INET);
+Index: test/make_sni.sh
+===================================================================
+--- test/make_sni.sh	(Revision 1755424)
++++ test/make_sni.sh	(Arbeitskopie)
+@@ -82,7 +82,7 @@
+ done
+ 
+ if [ $# = 1 ]; then
+-    echo "Aborted - just specifing one vhost makes no sense for SNI testing. Go wild !"
++    echo "Aborted - just specifying one vhost makes no sense for SNI testing. Go wild !"
+     exit 1
+ fi
+ 
+Index: include/http_config.h
+===================================================================
+--- include/http_config.h	(Revision 1755424)
++++ include/http_config.h	(Arbeitskopie)
+@@ -50,7 +50,7 @@
+     RAW_ARGS,           /**< cmd_func parses command line itself */
+     TAKE1,              /**< one argument only */
+     TAKE2,              /**< two arguments only */
+-    ITERATE,            /**< one argument, occuring multiple times
++    ITERATE,            /**< one argument, occurring multiple times
+                          * (e.g., IndexIgnore)
+                          */
+     ITERATE2,           /**< two arguments, 2nd occurs multiple times
+@@ -812,7 +812,7 @@
+ /**
+  * Detach from open ap_configfile_t, calling the close handler
+  * @param cfp The file to close
+- * @return 1 on sucess, 0 on failure
++ * @return 1 on success, 0 on failure
+  */
+ AP_DECLARE(int) ap_cfg_closefile(ap_configfile_t *cfp);
+ 
+Index: include/http_log.h
+===================================================================
+--- include/http_log.h	(Revision 1755424)
++++ include/http_log.h	(Arbeitskopie)
+@@ -141,7 +141,7 @@
+  * Constant to store module_index for the current file.
+  * Objects with static storage duration are set to NULL if not
+  * initialized explicitly. This means that if aplog_module_index
+- * is not initalized using the ::APLOG_USE_MODULE or the
++ * is not initialized using the ::APLOG_USE_MODULE or the
+  * ::AP_DECLARE_MODULE macro, we can safely fall back to
+  * use ::APLOG_NO_MODULE. This variable will usually be optimized away.
+  */
+Index: include/http_request.h
+===================================================================
+--- include/http_request.h	(Revision 1755424)
++++ include/http_request.h	(Arbeitskopie)
+@@ -218,7 +218,7 @@
+  * Determine whether access control hooks will be run for all internal
+  * requests with URIs distinct from that of the initial request, or only
+  * those for which different configurations apply than those which applied
+- * to the initial request.  To accomodate legacy external modules which
++ * to the initial request.  To accommodate legacy external modules which
+  * may expect access control hooks to be run for all internal requests
+  * with distinct URIs, this is the default behaviour unless all access
+  * control hooks and authentication and authorization providers are
+Index: include/httpd.h
+===================================================================
+--- include/httpd.h	(Revision 1755424)
++++ include/httpd.h	(Arbeitskopie)
+@@ -309,7 +309,7 @@
+ 
+ /**
+  * APR_HAS_LARGE_FILES introduces the problem of spliting sendfile into
+- * mutiple buckets, no greater than MAX(apr_size_t), and more granular
++ * multiple buckets, no greater than MAX(apr_size_t), and more granular
+  * than that in case the brigade code/filters attempt to read it directly.
+  * ### 16mb is an invention, no idea if it is reasonable.
+  */
+@@ -354,7 +354,7 @@
+  * use by modules.  The difference between #AP_DECLARE and
+  * #AP_DECLARE_NONSTD is that the latter is required for any functions
+  * which use varargs or are used via indirect function call.  This
+- * is to accomodate the two calling conventions in windows dlls.
++ * is to accommodate the two calling conventions in windows dlls.
+  */
+ # define AP_DECLARE_NONSTD(type)    type
+ #endif
+Index: include/util_ldap.h
+===================================================================
+--- include/util_ldap.h	(Revision 1755424)
++++ include/util_ldap.h	(Arbeitskopie)
+@@ -254,7 +254,7 @@
+  * @param dn The first DN to compare.
+  * @param reqdn The DN to compare the first DN to.
+  * @param compare_dn_on_server Flag to determine whether the DNs should be checked using
+- *                             LDAP calls or with a direct string comparision. A direct
++ *                             LDAP calls or with a direct string comparison. A direct
+  *                             string comparison is faster, but not as accurate - false
+  *                             negative comparisons are possible.
+  * @tip Two DNs can be equal and still fail a string comparison. Eg "dc=example,dc=com"
+Index: server/config.c
+===================================================================
+--- server/config.c	(Revision 1755424)
++++ server/config.c	(Arbeitskopie)
+@@ -15,7 +15,7 @@
+  */
+ 
+ /*
+- * http_config.c: once was auxillary functions for reading httpd's config
++ * http_config.c: once was auxiliary functions for reading httpd's config
+  * file and converting filenames into a namespace
+  *
+  * Rob McCool
+@@ -737,7 +737,7 @@
+      *
+      *  Note: 1. We cannot determine if the module was successfully
+      *           removed by ap_remove_module().
+-     *        2. We have not to complain explicity when the module
++     *        2. We have not to complain explicitly when the module
+      *           is not found because ap_remove_module() did it
+      *           for us already.
+      */
+@@ -1326,7 +1326,7 @@
+         if (retval != NULL && strcmp(retval, DECLINE_CMD) != 0) {
+             /* If the directive in error has already been set, don't
+              * replace it.  Otherwise, an error inside a container
+-             * will be reported as occuring on the first line of the
++             * will be reported as occurring on the first line of the
+              * container.
+              */
+             if (!parms->err_directive) {
+Index: server/gen_test_char.c
+===================================================================
+--- server/gen_test_char.c	(Revision 1755424)
++++ server/gen_test_char.c	(Arbeitskopie)
+@@ -90,7 +90,7 @@
+          * since Win32/OS2 use carets or doubled-double quotes,
+          * and neither lf nor cr can be escaped.  We escape unix
+          * specific as well, to assure that cross-compiled unix
+-         * applications behave similiarly when invoked on win32/os2.
++         * applications behave similarly when invoked on win32/os2.
+          *
+          * Rem please keep in-sync with apr's list in win32/filesys.c
+          */
+Index: server/listen.c
+===================================================================
+--- server/listen.c	(Revision 1755424)
++++ server/listen.c	(Arbeitskopie)
+@@ -763,7 +763,7 @@
+     /* Check once whether or not SO_REUSEPORT is supported. */
+     if (ap_have_so_reuseport < 0) {
+         /* This is limited to Linux with defined SO_REUSEPORT (ie. 3.9+) for
+-         * now since the implementation evenly distributes connections accross
++         * now since the implementation evenly distributes connections across
+          * all the listening threads/processes.
+          *
+          * *BSDs have SO_REUSEPORT too but with a different semantic: the first
+Index: server/mpm/event/event.c
+===================================================================
+--- server/mpm/event/event.c	(Revision 1755424)
++++ server/mpm/event/event.c	(Arbeitskopie)
+@@ -347,7 +347,7 @@
+ #endif
+     int hold_off_on_exponential_spawning;
+     /*
+-     * Current number of listeners buckets and maximum reached accross
++     * Current number of listeners buckets and maximum reached across
+      * restarts (to size retained data according to dynamic num_buckets,
+      * eg. idle_spawn_rate).
+      */
+@@ -2830,7 +2830,7 @@
+     if (ap_daemons_to_start < num_buckets)
+         ap_daemons_to_start = num_buckets;
+     /* We want to create as much children at a time as the number of buckets,
+-     * so to optimally accept connections (evenly distributed accross buckets).
++     * so to optimally accept connections (evenly distributed across buckets).
+      * Thus min_spare_threads should at least maintain num_buckets children,
+      * and max_spare_threads allow num_buckets more children w/o triggering
+      * immediately (e.g. num_buckets idle threads margin, one per bucket).
+Index: server/mpm/prefork/prefork.c
+===================================================================
+--- server/mpm/prefork/prefork.c	(Revision 1755424)
++++ server/mpm/prefork/prefork.c	(Arbeitskopie)
+@@ -703,7 +703,7 @@
+         SAFE_ACCEPT(accept_mutex_off());      /* unlock after "accept" */
+ 
+         if (status == APR_EGENERAL) {
+-            /* resource shortage or should-not-occur occured */
++            /* resource shortage or should-not-occur occurred */
+             clean_child_exit(APEXIT_CHILDSICK);
+         }
+         else if (status != APR_SUCCESS) {
+Index: server/mpm/winnt/mpm_winnt.c
+===================================================================
+--- server/mpm/winnt/mpm_winnt.c	(Revision 1755424)
++++ server/mpm/winnt/mpm_winnt.c	(Arbeitskopie)
+@@ -1004,7 +1004,7 @@
+      *   -k config
+      *   -k uninstall
+      *   -k stop
+-     *   -k shutdown (same as -k stop). Maintained for backward compatability.
++     *   -k shutdown (same as -k stop). Maintained for backward compatibility.
+      *
+      * We can't leave this phase until we know our identity
+      * and modify the command arguments appropriately.
+@@ -1050,7 +1050,7 @@
+         my_pid = GetCurrentProcessId();
+         parent_pid = (DWORD) atol(pid);
+ 
+-        /* Prevent holding open the (nonexistant) console */
++        /* Prevent holding open the (nonexistent) console */
+         ap_real_exit_code = 0;
+ 
+         /* The parent gave us stdin, we need to remember this
+Index: server/mpm/winnt/service.c
+===================================================================
+--- server/mpm/winnt/service.c	(Revision 1755424)
++++ server/mpm/winnt/service.c	(Arbeitskopie)
+@@ -104,7 +104,7 @@
+  *
+  * If ap_real_exit_code is reset to 0, it will not be set or trigger this
+  * behavior on exit.  All service and child processes are expected to
+- * reset this flag to zero to avoid undesireable side effects.
++ * reset this flag to zero to avoid undesirable side effects.
+  */
+ AP_DECLARE_DATA int ap_real_exit_code = 1;
+ 
+Index: server/mpm/worker/worker.c
+===================================================================
+--- server/mpm/worker/worker.c	(Revision 1755424)
++++ server/mpm/worker/worker.c	(Arbeitskopie)
+@@ -168,7 +168,7 @@
+ #endif
+     int hold_off_on_exponential_spawning;
+     /*
+-     * Current number of listeners buckets and maximum reached accross
++     * Current number of listeners buckets and maximum reached across
+      * restarts (to size retained data according to dynamic num_buckets,
+      * eg. idle_spawn_rate).
+      */
+@@ -1837,7 +1837,7 @@
+     if (ap_daemons_to_start < num_buckets)
+         ap_daemons_to_start = num_buckets;
+     /* We want to create as much children at a time as the number of buckets,
+-     * so to optimally accept connections (evenly distributed accross buckets).
++     * so to optimally accept connections (evenly distributed across buckets).
+      * Thus min_spare_threads should at least maintain num_buckets children,
+      * and max_spare_threads allow num_buckets more children w/o triggering
+      * immediately (e.g. num_buckets idle threads margin, one per bucket).
+Index: modules/NWGNUmakefile
+===================================================================
+--- modules/NWGNUmakefile	(Revision 1755424)
++++ modules/NWGNUmakefile	(Arbeitskopie)
+@@ -22,7 +22,7 @@
+ endif
+ endif
+ 
+-# If USE_STDSOCKETS is defined we allways build mod_ssl
++# If USE_STDSOCKETS is defined we always build mod_ssl
+ ifdef USE_STDSOCKETS
+ WITH_SSL = 1
+ endif
+Index: modules/aaa/mod_allowmethods.c
+===================================================================
+--- modules/aaa/mod_allowmethods.c	(Revision 1755424)
++++ modules/aaa/mod_allowmethods.c	(Arbeitskopie)
+@@ -26,7 +26,7 @@
+  * This module makes it easy to restrict what HTTP methods can be ran against
+  * a server.
+  *
+- * It provides one comand:
++ * It provides one command:
+  *    AllowMethods
+  * This command takes a list of HTTP methods to allow.
+  *
+Index: modules/aaa/mod_auth_basic.c
+===================================================================
+--- modules/aaa/mod_auth_basic.c	(Revision 1755424)
++++ modules/aaa/mod_auth_basic.c	(Arbeitskopie)
+@@ -381,7 +381,7 @@
+ 
+         apr_table_unset(r->notes, AUTHN_PROVIDER_NAME_NOTE);
+ 
+-        /* Something occured. Stop checking. */
++        /* Something occurred. Stop checking. */
+         if (auth_result != AUTH_USER_NOT_FOUND) {
+             break;
+         }
+Index: modules/aaa/mod_auth_form.c
+===================================================================
+--- modules/aaa/mod_auth_form.c	(Revision 1755424)
++++ modules/aaa/mod_auth_form.c	(Arbeitskopie)
+@@ -798,7 +798,7 @@
+ 
+         apr_table_unset(r->notes, AUTHN_PROVIDER_NAME_NOTE);
+ 
+-        /* Something occured. Stop checking. */
++        /* Something occurred. Stop checking. */
+         if (auth_result != AUTH_USER_NOT_FOUND) {
+             break;
+         }
+Index: modules/aaa/mod_authz_core.c
+===================================================================
+--- modules/aaa/mod_authz_core.c	(Revision 1755424)
++++ modules/aaa/mod_authz_core.c	(Arbeitskopie)
+@@ -976,7 +976,7 @@
+     /*
+      * If the argument to the 'all' provider is 'granted' then just let
+      * everybody in. This would be equivalent to the previous syntax of
+-     * 'allow from all'. If the argument is 'denied' we reject everbody,
++     * 'allow from all'. If the argument is 'denied' we reject everybody,
+      * which is equivalent to 'deny from all'.
+      */
+     if (strcasecmp(require_line, "granted") == 0) {
+Index: modules/aaa/mod_authz_groupfile.c
+===================================================================
+--- modules/aaa/mod_authz_groupfile.c	(Revision 1755424)
++++ modules/aaa/mod_authz_groupfile.c	(Arbeitskopie)
+@@ -18,7 +18,7 @@
+  *
+  *          AuthGroupFile standard /path/to/file
+  *
+- * and the presense of a
++ * and the presence of a
+  *
+  *         require group <list-of-groups>
+  *
+Index: modules/arch/netware/mod_nw_ssl.c
+===================================================================
+--- modules/arch/netware/mod_nw_ssl.c	(Revision 1755424)
++++ modules/arch/netware/mod_nw_ssl.c	(Arbeitskopie)
+@@ -778,7 +778,7 @@
+ 
+     for (sl = ap_seclisteners; sl != NULL; sl = sl->next) {
+         /* If we find a pre-existing listen socket and it has already been
+-           created, then no neeed to go any further, just reuse it. */
++           created, then no need to go any further, just reuse it. */
+         if (((sl->fd = find_secure_listener(sl)) >= 0) && (sl->used)) {
+             continue;
+         }
+Index: modules/arch/win32/mod_isapi.c
+===================================================================
+--- modules/arch/win32/mod_isapi.c	(Revision 1755424)
++++ modules/arch/win32/mod_isapi.c	(Arbeitskopie)
+@@ -27,7 +27,7 @@
+  * It is a complete implementation of the ISAPI 2.0 specification,
+  * except for "Microsoft extensions" to the API which provide
+  * asynchronous I/O.  It is further extended to include additional
+- * "Microsoft extentions" through IIS 5.0, with some deficiencies
++ * "Microsoft extensions" through IIS 5.0, with some deficiencies
+  * where one-to-one mappings don't exist.
+  *
+  * Refer to /manual/mod/mod_isapi.html for additional details on
+@@ -152,7 +152,7 @@
+         return NULL;
+     }
+ 
+-    /* Load the extention as cached (with null request_rec) */
++    /* Load the extension as cached (with null request_rec) */
+     rv = isapi_lookup(cmd->pool, cmd->server, NULL, fspec, &isa);
+     if (rv != APR_SUCCESS) {
+         ap_log_error(APLOG_MARK, APLOG_WARNING, rv, cmd->server, APLOGNO(02106)
+@@ -753,7 +753,7 @@
+         /* Well... either there is no dwHttpStatusCode or it's HTTP_OK.
+          * In any case, we don't have a good status to return yet...
+          * Perhaps the one we came in with will be better. Let's use it,
+-         * if we were given one (note this is a pendantic case, it would
++         * if we were given one (note this is a pedantic case, it would
+          * normally be covered above unless the scan script code unset
+          * the r->status). Should there be a check here as to whether
+          * we are setting a valid response code?
+Index: modules/arch/win32/mod_isapi.h
+===================================================================
+--- modules/arch/win32/mod_isapi.h	(Revision 1755424)
++++ modules/arch/win32/mod_isapi.h	(Arbeitskopie)
+@@ -136,7 +136,7 @@
+ #define HSE_IO_NODELAY 4096
+ 
+ /* The Completion function prototype.  This callback may be fixed with
+- * the HSE_REQ_IO_COMPLETION ServerSupportFunction call, or overriden
++ * the HSE_REQ_IO_COMPLETION ServerSupportFunction call, or overridden
+  * for the HSE_REQ_TRANSMIT_FILE call.
+  */
+ typedef void (APR_THREAD_FUNC *PFN_HSE_IO_COMPLETION)
+Index: modules/cache/mod_cache.c
+===================================================================
+--- modules/cache/mod_cache.c	(Revision 1755424)
++++ modules/cache/mod_cache.c	(Arbeitskopie)
+@@ -1277,7 +1277,7 @@
+ 
+     /* It's safe to cache the response.
+      *
+-     * There are two possiblities at this point:
++     * There are two possibilities at this point:
+      * - cache->handle == NULL. In this case there is no previously
+      * cached entity anywhere on the system. We must create a brand
+      * new entity and store the response in it.
+Index: modules/cluster/README.heartbeat
+===================================================================
+--- modules/cluster/README.heartbeat	(Revision 1755424)
++++ modules/cluster/README.heartbeat	(Arbeitskopie)
+@@ -14,7 +14,7 @@
+   Every 1 second, this module generates a single multicast UDP packet,
+   containing the number of busy and idle workers.
+   
+-  The packet is a simple ASCII format, similiar to GET query parameters in UDP.
++  The packet is a simple ASCII format, similar to GET query parameters in UDP.
+   
+   An Example packet:
+     v=1&ready=75&busy=0
+Index: modules/core/mod_macro.c
+===================================================================
+--- modules/core/mod_macro.c	(Revision 1755424)
++++ modules/core/mod_macro.c	(Arbeitskopie)
+@@ -377,7 +377,7 @@
+ }
+ 
+ /*
+-  find first occurence of args in buf.
++  find first occurrence of args in buf.
+   in case of conflict, the LONGEST argument is kept. (could be the FIRST?).
+   returns the pointer and the whichone found, or NULL.
+ */
+@@ -464,7 +464,7 @@
+     /* for each line of the macro body */
+     for (i = 0; i < contents->nelts; i++) {
+         const char *errmsg;
+-        /* copy the line and subtitute macro parameters */
++        /* copy the line and substitute macro parameters */
+         strncpy(line, ((char **) contents->elts)[i], MAX_STRING_LEN - 1);
+         errmsg = substitute_macro_args(line, MAX_STRING_LEN,
+                                        macro, replacements, used);
+@@ -916,7 +916,7 @@
+ /*
+   macro module commands.
+   configuration file macro stuff
+-  they are processed immediatly when found, hence the EXEC_ON_READ.
++  they are processed immediately when found, hence the EXEC_ON_READ.
+ */
+ static const command_rec macro_cmds[] = {
+     AP_INIT_RAW_ARGS(BEGIN_MACRO, macro_section, NULL, EXEC_ON_READ | OR_ALL,
+Index: modules/core/mod_so.c
+===================================================================
+--- modules/core/mod_so.c	(Revision 1755424)
++++ modules/core/mod_so.c	(Arbeitskopie)
+@@ -193,7 +193,7 @@
+     const char *error;
+ 
+     /* we need to setup this value for dummy to make sure that we don't try
+-     * to add a non-existant tree into the build when we return to
++     * to add a non-existent tree into the build when we return to
+      * execute_now.
+      */
+     *(ap_directive_t **)dummy = NULL;
+@@ -321,7 +321,7 @@
+ 
+ /*
+  * This implements the LoadFile directive and loads an arbitrary
+- * shared object file into the adress space of the server process.
++ * shared object file into the address space of the server process.
+  */
+ 
+ static const char *load_file(cmd_parms *cmd, void *dummy, const char *filename)
+Index: modules/dav/main/mod_dav.h
+===================================================================
+--- modules/dav/main/mod_dav.h	(Revision 1755424)
++++ modules/dav/main/mod_dav.h	(Arbeitskopie)
+@@ -418,7 +418,7 @@
+ ** the sub-pools are a bit more general and heavyweight than these buffers.
+ */
+ 
+-/* buffer for reuse; can grow to accomodate needed size */
++/* buffer for reuse; can grow to accommodate needed size */
+ typedef struct
+ {
+     apr_size_t alloc_len;       /* how much has been allocated */
+@@ -436,7 +436,7 @@
+ DAV_DECLARE(void) dav_buffer_init(apr_pool_t *p, dav_buffer *pbuf,
+                                   const char *str);
+ 
+-/* check that the buffer can accomodate <extra_needed> more bytes */
++/* check that the buffer can accommodate <extra_needed> more bytes */
+ DAV_DECLARE(void) dav_check_bufsize(apr_pool_t *p, dav_buffer *pbuf,
+                                     apr_size_t extra_needed);
+ 
+@@ -867,7 +867,7 @@
+ **
+ ** This structure is used as a standard way to determine if a particular
+ ** property is a live property. Its use is not part of the mandated liveprop
+-** interface, but can be used by liveprop providers in conjuction with the
++** interface, but can be used by liveprop providers in conjunction with the
+ ** utility routines below.
+ **
+ ** spec->name == NULL is the defined end-sentinel for a list of specs.
+@@ -2314,7 +2314,7 @@
+     ** exist. Any <DAV:mkworkspace> element is passed to the provider
+     ** in the "doc" structure; it may be empty.
+     **
+-    ** If workspace creation is succesful, the state of the resource
++    ** If workspace creation is successful, the state of the resource
+     ** object is updated appropriately.
+     **
+     ** This hook is optional; if the provider does not support workspaces,
+@@ -2337,7 +2337,7 @@
+     ** Create an activity resource. The resource must not already
+     ** exist.
+     **
+-    ** If activity creation is succesful, the state of the resource
++    ** If activity creation is successful, the state of the resource
+     ** object is updated appropriately.
+     **
+     ** This hook is optional; if the provider does not support activities,
+Index: modules/dav/main/util.c
+===================================================================
+--- modules/dav/main/util.c	(Revision 1755424)
++++ modules/dav/main/util.c	(Arbeitskopie)
+@@ -428,7 +428,7 @@
+     apr_hash_set(xi->prefix_uri, prefix, APR_HASH_KEY_STRING, uri);
+ 
+     /* note: this may overwrite an existing URI->prefix mapping, but it
+-       doesn't matter -- any prefix is usuable to specify the URI. */
++       doesn't matter -- any prefix is usable to specify the URI. */
+     apr_hash_set(xi->uri_prefix, uri, APR_HASH_KEY_STRING, prefix);
+ }
+ 
+@@ -587,7 +587,7 @@
+ }
+ 
+ /* fetch_next_token returns the substring from str+1
+- * to the next occurence of char term, or \0, whichever
++ * to the next occurrence of char term, or \0, whichever
+  * occurs first.  Leading whitespace is ignored.
+  */
+ static char *dav_fetch_next_token(char **str, char term)
+Index: modules/examples/README
+===================================================================
+--- modules/examples/README	(Revision 1755424)
++++ modules/examples/README	(Arbeitskopie)
+@@ -32,7 +32,7 @@
+ 
+     A. copy modules\examples\mod_example_hooks.c modules\examples\mod_myexample.c
+     B. copy modules\examples\mod_example_hooks.dsp modules\examples\mod_myexample.dsp
+-    C. replace the occurances of 'example_hooks' with your module name.
++    C. replace the occurrences of 'example_hooks' with your module name.
+     D. add the new .dsp to your Apache.dsw workspace, with dependencies
+        on the libapr, libaprutil and libhttpd projects.  With the newer
+        Developer Studio 2002 through 2005, when you add the new .dsp
+Index: modules/http/http_core.c
+===================================================================
+--- modules/http/http_core.c	(Revision 1755424)
++++ modules/http/http_core.c	(Arbeitskopie)
+@@ -66,7 +66,7 @@
+      * set for the main server, because if no http_module directive is used
+      * for a vhost, it will inherit the http_srv_cfg from the main server.
+      * However keep_alive_timeout_set helps determine whether the vhost should
+-     * use its own configured timeout or the one from the vhost delared first
++     * use its own configured timeout or the one from the vhost declared first
+      * on the same IP:port (ie. c->base_server, and the legacy behaviour).
+      */
+     if (cmd->server->is_virtual) {
+Index: modules/http/http_filters.c
+===================================================================
+--- modules/http/http_filters.c	(Revision 1755424)
++++ modules/http/http_filters.c	(Arbeitskopie)
+@@ -1295,7 +1295,7 @@
+     }
+ 
+     /*
+-     * Control cachability for non-cachable responses if not already set by
++     * Control cachability for non-cacheable responses if not already set by
+      * some other part of the server configuration.
+      */
+     if (r->no_cache && !apr_table_get(r->headers_out, "Expires")) {
+Index: modules/http2/README.h2
+===================================================================
+--- modules/http2/README.h2	(Revision 1755424)
++++ modules/http2/README.h2	(Arbeitskopie)
+@@ -60,7 +60,7 @@
+ 
+ If you want to use HTTP/2 with a browser, most modern browsers will support
+ it without further configuration. However, browsers so far only support
+-HTTP/2 over TLS and are expecially picky about the certificate and
++HTTP/2 over TLS and are especially picky about the certificate and
+ encryption ciphers used.
+ 
+ Server admins may look for up-to-date information about "modern" TLS
+Index: modules/http2/h2_conn.h
+===================================================================
+--- modules/http2/h2_conn.h	(Revision 1755424)
++++ modules/http2/h2_conn.h	(Arbeitskopie)
+@@ -31,7 +31,7 @@
+ /**
+  * Run the HTTP/2 connection in synchronous fashion. 
+  * Return when the HTTP/2 session is done
+- * and the connection will close or a fatal error occured.
++ * and the connection will close or a fatal error occurred.
+  *
+  * @param ctx the http2 context to run
+  * @return APR_SUCCESS when session is done.
+Index: modules/http2/h2_h2.h
+===================================================================
+--- modules/http2/h2_h2.h	(Revision 1755424)
++++ modules/http2/h2_h2.h	(Arbeitskopie)
+@@ -17,7 +17,7 @@
+ #define __mod_h2__h2_h2__
+ 
+ /**
+- * List of ALPN protocol identifiers that we suport in cleartext
++ * List of ALPN protocol identifiers that we support in cleartext
+  * negotiations. NULL terminated.
+  */
+ extern const char *h2_clear_protos[];
+@@ -36,7 +36,7 @@
+ const char *h2_h2_err_description(unsigned int h2_error);
+ 
+ /*
+- * One time, post config intialization.
++ * One time, post config initialization.
+  */
+ apr_status_t h2_h2_init(apr_pool_t *pool, server_rec *s);
+ 
+Index: modules/http2/h2_proxy_util.c
+===================================================================
+--- modules/http2/h2_proxy_util.c	(Revision 1755424)
++++ modules/http2/h2_proxy_util.c	(Arbeitskopie)
+@@ -279,7 +279,7 @@
+ void h2_iq_sort(h2_iqueue *q, h2_iq_cmp *cmp, void *ctx)
+ {
+     /* Assume that changes in ordering are minimal. This needs,
+-     * best case, q->nelts - 1 comparisions to check that nothing
++     * best case, q->nelts - 1 comparisons to check that nothing
+      * changed.
+      */
+     if (q->nelts > 0) {
+Index: modules/http2/h2_push.c
+===================================================================
+--- modules/http2/h2_push.c	(Revision 1755424)
++++ modules/http2/h2_push.c	(Arbeitskopie)
+@@ -561,7 +561,7 @@
+         
+         diary->NMax        = ceil_power_of_2(N);
+         diary->N           = diary->NMax;
+-        /* the mask we use in value comparision depends on where we got
++        /* the mask we use in value comparison depends on where we got
+          * the values from. If we calculate them ourselves, we can use
+          * the full 64 bits.
+          * If we set the diary via a compressed golomb set, we have less
+Index: modules/http2/h2_response.h
+===================================================================
+--- modules/http2/h2_response.h	(Revision 1755424)
++++ modules/http2/h2_response.h	(Arbeitskopie)
+@@ -62,7 +62,7 @@
+ h2_response *h2_response_clone(apr_pool_t *pool, h2_response *from);
+ 
+ /**
+- * Set the trailers in the reponse. Will replace any existing trailers. Will
++ * Set the trailers in the response. Will replace any existing trailers. Will
+  * *not* clone the table.
+  *
+  * @param response the repsone to set the trailers for
+Index: modules/http2/h2_session.c
+===================================================================
+--- modules/http2/h2_session.c	(Revision 1755424)
++++ modules/http2/h2_session.c	(Arbeitskopie)
+@@ -1566,7 +1566,7 @@
+                 /* successful read, reset our idle timers */
+                 rstatus = APR_SUCCESS;
+                 if (block) {
+-                    /* successfull blocked read, try unblocked to
++                    /* successful blocked read, try unblocked to
+                      * get more. */
+                     block = 0;
+                 }
+Index: modules/http2/h2_session.h
+===================================================================
+--- modules/http2/h2_session.h	(Revision 1755424)
++++ modules/http2/h2_session.h	(Arbeitskopie)
+@@ -31,7 +31,7 @@
+  * New incoming HEADER frames are converted into a h2_stream+h2_task instance
+  * that both represent a HTTP/2 stream, but may have separate lifetimes. This
+  * allows h2_task to be scheduled in other threads without semaphores
+- * all over the place. It allows task memory to be freed independant of
++ * all over the place. It allows task memory to be freed independent of
+  * session lifetime and sessions may close down while tasks are still running.
+  *
+  *
+@@ -100,7 +100,7 @@
+     unsigned int flush         : 1; /* flushing output necessary */
+     unsigned int have_read     : 1; /* session has read client data */
+     unsigned int have_written  : 1; /* session did write data to client */
+-    apr_interval_time_t  wait_us;   /* timout during BUSY_WAIT state, micro secs */
++    apr_interval_time_t  wait_us;   /* timeout during BUSY_WAIT state, micro secs */
+     
+     struct h2_push_diary *push_diary; /* remember pushes, avoid duplicates */
+     
+@@ -156,7 +156,7 @@
+ 
+ /**
+  * Process the given HTTP/2 session until it is ended or a fatal
+- * error occured.
++ * error occurred.
+  *
+  * @param session the sessionm to process
+  */
+@@ -175,7 +175,7 @@
+ void h2_session_eoc_callback(h2_session *session);
+ 
+ /**
+- * Called when a serious error occured and the session needs to terminate
++ * Called when a serious error occurred and the session needs to terminate
+  * without further connection io.
+  * @param session the session to abort
+  * @param reason  the apache status that caused the abort
+Index: modules/http2/h2_stream.h
+===================================================================
+--- modules/http2/h2_stream.h	(Revision 1755424)
++++ modules/http2/h2_stream.h	(Arbeitskopie)
+@@ -157,13 +157,13 @@
+ 
+ /**
+  * Schedule the stream for execution. All header information must be
+- * present. Use the given priority comparision callback to determine 
++ * present. Use the given priority comparison callback to determine 
+  * order in queued streams.
+  * 
+  * @param stream the stream to schedule
+  * @param eos    != 0 iff no more input will arrive
+- * @param cmp    priority comparision
+- * @param ctx    context for comparision
++ * @param cmp    priority comparison
++ * @param ctx    context for comparison
+  */
+ apr_status_t h2_stream_schedule(h2_stream *stream, int eos, int push_enabled,
+                                 h2_stream_pri_cmp *cmp, void *ctx);
+Index: modules/http2/h2_switch.h
+===================================================================
+--- modules/http2/h2_switch.h	(Revision 1755424)
++++ modules/http2/h2_switch.h	(Arbeitskopie)
+@@ -17,7 +17,7 @@
+ #define __mod_h2__h2_switch__
+ 
+ /*
+- * One time, post config intialization.
++ * One time, post config initialization.
+  */
+ apr_status_t h2_switch_init(apr_pool_t *pool, server_rec *s);
+ 
+Index: modules/http2/h2_util.h
+===================================================================
+--- modules/http2/h2_util.h	(Revision 1755424)
++++ modules/http2/h2_util.h	(Arbeitskopie)
+@@ -365,7 +365,7 @@
+ 
+ /**
+  * Transfer buckets from one brigade to another with a limit on the 
+- * maximum amount of bytes transfered. Does no setaside magic, lifetime
++ * maximum amount of bytes transferred. Does no setaside magic, lifetime
+  * of brigades must fit. 
+  * @param to   brigade to transfer buckets to
+  * @param from brigades to remove buckets from
+Index: modules/ldap/util_ldap_cache_mgr.c
+===================================================================
+--- modules/ldap/util_ldap_cache_mgr.c	(Revision 1755424)
++++ modules/ldap/util_ldap_cache_mgr.c	(Arbeitskopie)
+@@ -497,7 +497,7 @@
+         }
+     }
+ 
+-    /* Take a copy of the payload before proceeeding. */
++    /* Take a copy of the payload before proceeding. */
+     tmp_payload = (*cache->copy)(cache, payload);
+     if (tmp_payload == NULL) {
+         /*
+Index: modules/loggers/mod_log_config.c
+===================================================================
+--- modules/loggers/mod_log_config.c	(Revision 1755424)
++++ modules/loggers/mod_log_config.c	(Arbeitskopie)
+@@ -39,7 +39,7 @@
+  * the request will be logged to the log file(s) defined outside
+  * the virtual host section. If a TransferLog or CustomLog directive
+  * appears in the VirtualHost section, the log files defined outside
+- * the VirtualHost will _not_ be used. This makes this module compatable
++ * the VirtualHost will _not_ be used. This makes this module compatible
+  * with the CLF and config log modules, where the use of TransferLog
+  * inside the VirtualHost section overrides its use outside.
+  *
+Index: modules/lua/mod_lua.c
+===================================================================
+--- modules/lua/mod_lua.c	(Revision 1755424)
++++ modules/lua/mod_lua.c	(Arbeitskopie)
+@@ -905,7 +905,7 @@
+ } cr_ctx;
+ 
+ 
+-/* Okay, this deserves a little explaination -- in order for the errors that lua
++/* Okay, this deserves a little explanation -- in order for the errors that lua
+  * generates to be 'accuarate', including line numbers, we basically inject
+  * N line number new lines into the 'top' of the chunk reader.....
+  *
+Index: modules/mappers/mod_actions.c
+===================================================================
+--- modules/mappers/mod_actions.c	(Revision 1755424)
++++ modules/mappers/mod_actions.c	(Arbeitskopie)
+@@ -118,7 +118,7 @@
+     }
+     else {
+         /* ap_method_register recognizes already registered methods,
+-         * so don't bother to check its previous existence explicitely.
++         * so don't bother to check its previous existence explicitly.
+          */
+         methnum = ap_method_register(cmd->pool, method);
+     }
+Index: modules/mappers/mod_negotiation.c
+===================================================================
+--- modules/mappers/mod_negotiation.c	(Revision 1755424)
++++ modules/mappers/mod_negotiation.c	(Arbeitskopie)
+@@ -2252,7 +2252,7 @@
+ }
+ 
+ /* check for environment variables 'no-gzip' and
+- * 'gzip-only-text/html' to get a behaviour similiar
++ * 'gzip-only-text/html' to get a behaviour similar
+  * to mod_deflate
+  */
+ static int discard_variant_by_env(var_rec *variant, int discard)
+@@ -2775,7 +2775,7 @@
+      * see that Vary header yet at this point in the control flow.
+      * This won't cause any cache consistency problems _unless_ the
+      * CGI script also returns a Cache-Control header marking the
+-     * response as cachable.  This needs to be fixed, also there are
++     * response as cacheable.  This needs to be fixed, also there are
+      * problems if a CGI returns an Etag header which also need to be
+      * fixed.
+      */
+@@ -3127,7 +3127,7 @@
+     ap_internal_fast_redirect(sub_req, r);
+ 
+     /* give no advise for time on this subrequest.  Perhaps we
+-     * should tally the last mtime amoung all variants, and date
++     * should tally the last mtime among all variants, and date
+      * the most recent, but that could confuse the proxies.
+      */
+     r->mtime = 0;
+Index: modules/mappers/mod_rewrite.c
+===================================================================
+--- modules/mappers/mod_rewrite.c	(Revision 1755424)
++++ modules/mappers/mod_rewrite.c	(Arbeitskopie)
+@@ -4077,7 +4077,7 @@
+     /* Ok, we already know the pattern has matched, but we now
+      * additionally have to check for all existing preconditions
+      * (RewriteCond) which have to be also true. We do this at
+-     * this very late stage to avoid unnessesary checks which
++     * this very late stage to avoid unnecessary checks which
+      * would slow down the rewriting engine.
+      */
+     rewriteconds = p->rewriteconds;
+@@ -4871,7 +4871,7 @@
+ 
+     /*
+      *  Do the Options check after engine check, so
+-     *  the user is able to explicitely turn RewriteEngine Off.
++     *  the user is able to explicitly turn RewriteEngine Off.
+      */
+     if (!(ap_allow_options(r) & (OPT_SYM_LINKS | OPT_SYM_OWNER))) {
+         /* FollowSymLinks is mandatory! */
+@@ -4886,7 +4886,7 @@
+     /*
+      *  remember the current filename before rewriting for later check
+      *  to prevent deadlooping because of internal redirects
+-     *  on final URL/filename which can be equal to the inital one.
++     *  on final URL/filename which can be equal to the initial one.
+      *  also, we'll restore original r->filename if we decline this
+      *  request
+      */
+Index: modules/metadata/mod_env.c
+===================================================================
+--- modules/metadata/mod_env.c	(Revision 1755424)
++++ modules/metadata/mod_env.c	(Arbeitskopie)
+@@ -63,7 +63,7 @@
+      *     table_set( res->vars, $element.key, $element.val );
+      *
+      * add->unsetenv already removed the vars from add->vars,
+-     * if they preceeded the UnsetEnv directive.
++     * if they preceded the UnsetEnv directive.
+      */
+     res->vars = apr_table_copy(p, base->vars);
+     res->unsetenv = NULL;
+Index: modules/metadata/mod_mime_magic.c
+===================================================================
+--- modules/metadata/mod_mime_magic.c	(Revision 1755424)
++++ modules/metadata/mod_mime_magic.c	(Arbeitskopie)
+@@ -161,7 +161,7 @@
+         unsigned char hl[4];   /* 2 bytes of a fixed-endian "long" */
+     } value;                   /* either number or string */
+     unsigned long mask;        /* mask before comparison with value */
+-    char nospflag;             /* supress space character */
++    char nospflag;             /* suppress space character */
+ 
+     /* NOTE: this string is suspected of overrunning - find it! */
+     char desc[MAXDESC];        /* description */
+Index: modules/metadata/mod_version.c
+===================================================================
+--- modules/metadata/mod_version.c	(Revision 1755424)
++++ modules/metadata/mod_version.c	(Arbeitskopie)
+@@ -49,7 +49,7 @@
+  * = / ==       match; regex must be surrounded by slashes
+  * ~            match; regex MAY NOT be surrounded by slashes
+  *
+- * Note that all operators may be preceeded by an exclamation mark
++ * Note that all operators may be preceded by an exclamation mark
+  * (without spaces) in order to reverse their meaning.
+  *
+  */
+Index: modules/proxy/mod_proxy_ajp.c
+===================================================================
+--- modules/proxy/mod_proxy_ajp.c	(Revision 1755424)
++++ modules/proxy/mod_proxy_ajp.c	(Arbeitskopie)
+@@ -141,7 +141,7 @@
+  * XXX: AJP Auto Flushing
+  *
+  * When processing CMD_AJP13_SEND_BODY_CHUNK AJP messages we will do a poll
+- * with FLUSH_WAIT miliseconds timeout to determine if more data is currently
++ * with FLUSH_WAIT milliseconds timeout to determine if more data is currently
+  * available at the backend. If there is no more data available, we flush
+  * the data to the client by adding a flush bucket to the brigade we pass
+  * up the filter chain.
+@@ -358,7 +358,7 @@
+         }
+         return HTTP_INTERNAL_SERVER_ERROR;
+     }
+-    /* parse the reponse */
++    /* parse the response */
+     result = ajp_parse_type(r, conn->data);
+     output_brigade = apr_brigade_create(p, r->connection->bucket_alloc);
+ 
+Index: modules/proxy/proxy_util.c
+===================================================================
+--- modules/proxy/proxy_util.c	(Revision 1755424)
++++ modules/proxy/proxy_util.c	(Arbeitskopie)
+@@ -1798,13 +1798,13 @@
+             if (worker->s->smax == -1 || worker->s->smax > worker->s->hmax) {
+                 worker->s->smax = worker->s->hmax;
+             }
+-            /* Set min to be lower then smax */
++            /* Set min to be lower than smax */
+             if (worker->s->min > worker->s->smax) {
+                 worker->s->min = worker->s->smax;
+             }
+         }
+         else {
+-            /* This will supress the apr_reslist creation */
++            /* This will suppress the apr_reslist creation */
+             worker->s->min = worker->s->smax = worker->s->hmax = 0;
+         }
+     }
+@@ -2328,7 +2328,7 @@
+                 }
+ 
+                 /*
+-                 * Worker can have the single constant backend adress.
++                 * Worker can have the single constant backend address.
+                  * The single DNS lookup is used once per worker.
+                  * If dynamic change is needed then set the addr to NULL
+                  * inside dynamic config to force the lookup.
+@@ -3469,7 +3469,7 @@
+      *
+      * The HTTP/1.1 Via: header is designed for passing client
+      * information through proxies to a server, and should be used in
+-     * a forward proxy configuation instead of X-Forwarded-*. See the
++     * a forward proxy configuration instead of X-Forwarded-*. See the
+      * ProxyVia option for details.
+      */
+     if (dconf->add_forwarded_headers) {
+Index: modules/slotmem/mod_slotmem_shm.c
+===================================================================
+--- modules/slotmem/mod_slotmem_shm.c	(Revision 1755424)
++++ modules/slotmem/mod_slotmem_shm.c	(Arbeitskopie)
+@@ -753,7 +753,7 @@
+     &slotmem_fgrab
+ };
+ 
+-/* make the storage usuable from outside */
++/* make the storage usable from outside */
+ static const ap_slotmem_provider_t *slotmem_shm_getstorage(void)
+ {
+     return (&storage);
+Index: modules/ssl/README
+===================================================================
+--- modules/ssl/README	(Revision 1755424)
++++ modules/ssl/README	(Arbeitskopie)
+@@ -59,7 +59,7 @@
+  For an overview how these are related and chained together have a look at the
+  page in README.dsov.{fig,ps}. It contains overview diagrams for those data
+  structures. It's designed for DIN A4 paper size, but you can easily generate
+- a smaller version inside XFig by specifing a magnification on the Export
++ a smaller version inside XFig by specifying a magnification on the Export
+  panel.
+ 
+ INCOMPATIBILITIES
+@@ -81,7 +81,7 @@
+  o The DBM based session cache is now based on APR's DBM API only.
+  o The shared memory based session cache is now based on APR's APIs.
+  o SSL I/O is now implemented in terms of filters rather than BUFF
+- o Eliminated ap_global_ctx. Storing Persistant information in 
++ o Eliminated ap_global_ctx. Storing Persistent information in 
+    process_rec->pool->user_data. The ssl_pphrase_Handle_CB() and 
+    ssl_config_global_* () functions have an extra parameter now - 
+    "server_rec *" -  which is used to retrieve the SSLModConfigRec.
+Index: modules/ssl/ssl_engine_init.c
+===================================================================
+--- modules/ssl/ssl_engine_init.c	(Revision 1755424)
++++ modules/ssl/ssl_engine_init.c	(Arbeitskopie)
+@@ -924,7 +924,7 @@
+      * SSLCACertificateFile and also use client authentication mod_ssl
+      * would accept all clients also issued by this CA. Obviously this
+      * isn't what we want in this situation. So this feature here exists
+-     * to allow one to explicity configure CA certificates which are
++     * to allow one to explicitly configure CA certificates which are
+      * used only for the server certificate chain.
+      */
+     if (!chain) {
+Index: modules/ssl/ssl_engine_io.c
+===================================================================
+--- modules/ssl/ssl_engine_io.c	(Revision 1755424)
++++ modules/ssl/ssl_engine_io.c	(Arbeitskopie)
+@@ -218,7 +218,7 @@
+      *
+      * Historically, this flush call was performed only for an SSLv2
+      * connection or for a proxy connection.  Calling _out_flush can
+-     * be expensive in cases where requests/reponses are pipelined,
++     * be expensive in cases where requests/responses are pipelined,
+      * so limit the performance impact to handshake time.
+      */
+ #if OPENSSL_VERSION_NUMBER < 0x0009080df
+@@ -1528,7 +1528,7 @@
+ static apr_status_t ssl_io_filter_coalesce(ap_filter_t *f,
+                                            apr_bucket_brigade *bb)
+ {
+-    apr_bucket *e, *upto;
++    apr_bucket *e, *up to;
+     apr_size_t bytes = 0;
+     struct coalesce_ctx *ctx = f->ctx;
+     unsigned count = 0;
+@@ -1558,7 +1558,7 @@
+         if (e->length) count++; /* don't count zero-length buckets */
+         bytes += e->length;
+     }
+-    upto = e;
++    up to = e;
+ 
+     /* Coalesce the prefix, if:
+      * a) more than one bucket is found to coalesce, or
+@@ -1567,7 +1567,7 @@
+      */
+     if (bytes > 0
+         && (count > 1
+-            || (upto == APR_BRIGADE_SENTINEL(bb))
++            || (up to == APR_BRIGADE_SENTINEL(bb))
+             || (ctx && ctx->bytes > 0))) {
+         /* If coalescing some bytes, ensure a context has been
+          * created. */
+@@ -1585,7 +1585,7 @@
+          * normal path of sending the buffer + remaining buckets in
+          * brigade.  */
+         e = APR_BRIGADE_FIRST(bb);
+-        while (e != upto) {
++        while (e != up to) {
+             apr_size_t len;
+             const char *data;
+             apr_bucket *next;
+Index: modules/ssl/ssl_engine_kernel.c
+===================================================================
+--- modules/ssl/ssl_engine_kernel.c	(Revision 1755424)
++++ modules/ssl/ssl_engine_kernel.c	(Arbeitskopie)
+@@ -1017,7 +1017,7 @@
+                 return HTTP_FORBIDDEN;
+             }
+ 
+-            /* Full renegotiation successfull, we now have handshaken with
++            /* Full renegotiation successful, we now have handshaken with
+              * this server's parameters.
+              */
+             sslconn->server = r->server;
+@@ -1159,7 +1159,7 @@
+  *  Fake a Basic authentication from the X509 client certificate.
+  *
+  *  This must be run fairly early on to prevent a real authentication from
+- *  occuring, in particular it must be run before anything else that
++ *  occurring, in particular it must be run before anything else that
+  *  authenticates a user.  This means that the Module statement for this
+  *  module should be LAST in the Configuration file.
+  */
+Index: modules/ssl/ssl_engine_vars.c
+===================================================================
+--- modules/ssl/ssl_engine_vars.c	(Revision 1755424)
++++ modules/ssl/ssl_engine_vars.c	(Arbeitskopie)
+@@ -1083,7 +1083,7 @@
+     }
+ 
+     count = X509_get_ext_count(xs);
+-    /* Create an array large enough to accomodate every extension. This is
++    /* Create an array large enough to accommodate every extension. This is
+      * likely overkill, but safe.
+      */
+     array = apr_array_make(p, count, sizeof(char *));
+Index: include/apreq.h
+===================================================================
+--- include/apreq.h	(Revision 1756272)
++++ include/apreq.h	(Arbeitskopie)
+@@ -227,7 +227,7 @@
+  * and apreq_post_initialize() instead.
+  *
+  * @param pool a base pool persisting while libapreq2 is used
+- * @remarks after you detroy the pool, you have to call this function again
++ * @remarks after you destroy the pool, you have to call this function again
+  *    with a new pool if you still plan to use libapreq2
+  */
+ APREQ_DECLARE(apr_status_t) apreq_initialize(apr_pool_t *pool);
+@@ -241,7 +241,7 @@
+  * create a post-config hook using APR_HOOK_MIDDLE.
+  *
+  * @param pool a base pool persisting while libapreq2 is used
+- * @remarks after you detroyed the pool, you have to call this function again
++ * @remarks after you destroyed the pool, you have to call this function again
+  *    with a new pool if you still plan to use libapreq2
+  */
+ APREQ_DECLARE(apr_status_t) apreq_pre_initialize(apr_pool_t *pool);
+Index: include/apreq_parser.h
+===================================================================
+--- include/apreq_parser.h	(Revision 1756272)
++++ include/apreq_parser.h	(Arbeitskopie)
+@@ -278,7 +278,7 @@
+ 
+ /**
+  * Special purpose utility for locating a parameter
+- * during parsing.  The hook's ctx shoud be initialized
++ * during parsing.  The hook's ctx should be initialized
+  * to an apreq_hook_find_param_ctx_t *, with the name
+  * attribute set to the sought parameter name, the param
+  * attribute set to NULL, and the prev attribute set to
+Index: include/apreq_util.h
+===================================================================
+--- include/apreq_util.h	(Revision 1756272)
++++ include/apreq_util.h	(Arbeitskopie)
+@@ -158,7 +158,7 @@
+  * @return ::APREQ_ERROR_BADSEQ or ::APREQ_ERROR_BADCHAR on malformed input.
+  *
+  * @remarks In the non-success case, dlen will be set to include
+- *          the last succesfully decoded value.  This function decodes
++ *          the last successfully decoded value.  This function decodes
+  *          \%uXXXX into a utf8 (wide) character, following ECMA-262
+  *          (the Javascript spec) Section B.2.1.
+  */
+@@ -181,7 +181,7 @@
+  * @return ::APREQ_ERROR_BADSEQ or ::APREQ_ERROR_BADCHAR on malformed input.
+  *
+  * @remarks In the non-APR_SUCCESS case, dlen will be set to include
+- *          the last succesfully decoded value.  This function decodes
++ *          the last successfully decoded value.  This function decodes
+  *          \%uXXXX into a utf8 (wide) character, following ECMA-262
+  *          (the Javascript spec) Section B.2.1.
+  */
+Index: include/http_config.h
+===================================================================
+--- include/http_config.h	(Revision 1756272)
++++ include/http_config.h	(Arbeitskopie)
+@@ -418,7 +418,7 @@
+  * The AP_MAYBE_USELESS macro is used vor variable declarations that
+  * might potentially exhibit "unused var" warnings on some compilers if
+  * left untreated.
+- * Since static intializers are not part of the C language (C89), making
++ * Since static initializers are not part of the C language (C89), making
+  * (void) usage is not possible. However many compiler have proprietary 
+  * mechanism to suppress those warnings.  
+  */
+Index: modules/filters/mod_sed.c
+===================================================================
+--- modules/filters/mod_sed.c	(Revision 1756272)
++++ modules/filters/mod_sed.c	(Arbeitskopie)
+@@ -59,7 +59,7 @@
+ module AP_MODULE_DECLARE_DATA sed_module;
+ 
+ /* This function will be call back from libsed functions if there is any error
+- * happend during execution of sed scripts
++ * happened during execution of sed scripts
+  */
+ static apr_status_t log_sed_errf(void *data, const char *error)
+ {
+@@ -412,7 +412,7 @@
+      * the buckets in bbinp and read the data from buckets and invoke
+      * sed_eval_buffer on the data. libsed will generate its output using
+      * sed_write_output which will add data in ctx->bb. Do it until it have
+-     * atleast one bucket in ctx->bb. At the end of data eos bucket
++     * at least one bucket in ctx->bb. At the end of data eos bucket
+      * should be there.
+      *
+      * Once eos bucket is seen, then invoke sed_finalize_eval to clear the
+Index: modules/http/http_request.c
+===================================================================
+--- modules/http/http_request.c	(Revision 1756272)
++++ modules/http/http_request.c	(Arbeitskopie)
+@@ -368,7 +368,7 @@
+ 
+     /* The EOR bucket has either been handled by an output filter (eg.
+      * deleted or moved to a buffered_bb => no more in bb), or an error
+-     * occured before that (eg. c->aborted => still in bb) and we ought
++     * occurred before that (eg. c->aborted => still in bb) and we ought
+      * to destroy it now. So cleanup any remaining bucket along with
+      * the orphan request (if any).
+      */
+@@ -762,7 +762,7 @@
+ 
+     AP_INTERNAL_REDIRECT(r->uri, new_uri);
+ 
+-    /* ap_die was already called, if an error occured */
++    /* ap_die was already called, if an error occurred */
+     if (!new) {
+         return;
+     }
+@@ -786,7 +786,7 @@
+     int access_status;
+     request_rec *new = internal_internal_redirect(new_uri, r);
+ 
+-    /* ap_die was already called, if an error occured */
++    /* ap_die was already called, if an error occurred */
+     if (!new) {
+         return;
+     }
+Index: modules/http2/h2_config.c
+===================================================================
+--- modules/http2/h2_config.c	(Revision 1756272)
++++ modules/http2/h2_config.c	(Arbeitskopie)
+@@ -406,7 +406,7 @@
+     else if (!strcasecmp("BEFORE", sdependency)) {
+         dependency = H2_DEPENDANT_BEFORE;
+         if (sweight) {
+-            return "dependecy 'Before' does not allow a weight";
++            return "dependency 'Before' does not allow a weight";
+         }
+     } 
+     else if (!strcasecmp("INTERLEAVED", sdependency)) {
+Index: modules/http2/h2_ngn_shed.c
+===================================================================
+--- modules/http2/h2_ngn_shed.c	(Revision 1756272)
++++ modules/http2/h2_ngn_shed.c	(Arbeitskopie)
+@@ -267,7 +267,7 @@
+     if (H2_REQ_ENTRIES_EMPTY(&ngn->entries)) {
+         if (want_shutdown) {
+             ap_log_cerror(APLOG_MARK, APLOG_TRACE1, 0, shed->c,
+-                          "h2_ngn_shed(%ld): emtpy queue, shutdown engine %s", 
++                          "h2_ngn_shed(%ld): empty queue, shutdown engine %s", 
+                           shed->c->id, ngn->id);
+             ngn->shutdown = 1;
+         }
+Index: modules/http2/h2_task.h
+===================================================================
+--- modules/http2/h2_task.h	(Revision 1756272)
++++ modules/http2/h2_task.h	(Arbeitskopie)
+@@ -20,7 +20,7 @@
+ 
+ /**
+  * A h2_task fakes a HTTP/1.1 request from the data in a HTTP/2 stream 
+- * (HEADER+CONT.+DATA) the module recieves.
++ * (HEADER+CONT.+DATA) the module receives.
+  *
+  * In order to answer a HTTP/2 stream, we want all Apache httpd infrastructure
+  * to be involved as usual, as if this stream can as a separate HTTP/1.1
+@@ -118,7 +118,7 @@
+ 
+ void h2_task_register_hooks(void);
+ /*
+- * One time, post config intialization.
++ * One time, post config initialization.
+  */
+ apr_status_t h2_task_init(apr_pool_t *pool, server_rec *s);
+ 
+Index: modules/http2/h2_util.c
+===================================================================
+--- modules/http2/h2_util.c	(Revision 1756272)
++++ modules/http2/h2_util.c	(Arbeitskopie)
+@@ -482,7 +482,7 @@
+ void h2_iq_sort(h2_iqueue *q, h2_iq_cmp *cmp, void *ctx)
+ {
+     /* Assume that changes in ordering are minimal. This needs,
+-     * best case, q->nelts - 1 comparisions to check that nothing
++     * best case, q->nelts - 1 comparisons to check that nothing
+      * changed.
+      */
+     if (q->nelts > 0) {
+Index: modules/lua/lua_request.c
+===================================================================
+--- modules/lua/lua_request.c	(Revision 1756272)
++++ modules/lua/lua_request.c	(Arbeitskopie)
+@@ -334,7 +334,7 @@
+     return NULL;
+ } 
+ 
+-/* r:parsebody(): Parses regular (url-enocded) or multipart POST data and returns two tables*/
++/* r:parsebody(): Parses regular (url-encoded) or multipart POST data and returns two tables*/
+ static int req_parsebody(lua_State *L)
+ {
+     apr_array_header_t          *pairs;
+@@ -1599,7 +1599,7 @@
+ 
+ /**
+  * ap_os_escape_path (apr_pool_t *p, const char *path, int partial)
+- * convert an OS path to a URL in an OS dependant way.
++ * convert an OS path to a URL in an OS dependent way.
+  * @param p The pool to allocate from
+  * @param path The path to convert
+  * @param partial if set, assume that the path will be appended to something
+Index: modules/mappers/mod_imagemap.c
+===================================================================
+--- modules/mappers/mod_imagemap.c	(Revision 1756272)
++++ modules/mappers/mod_imagemap.c	(Arbeitskopie)
+@@ -858,7 +858,7 @@
+         /* There's not much else we can do ... we've already sent the headers
+          * to the client.
+          */
+-        ap_rputs("\n\n[an internal server error occured]\n", r);
++        ap_rputs("\n\n[an internal server error occurred]\n", r);
+         menu_footer(r);
+         return OK;
+     }
+Index: modules/proxy/mod_serf.h
+===================================================================
+--- modules/proxy/mod_serf.h	(Revision 1756272)
++++ modules/proxy/mod_serf.h	(Arbeitskopie)
+@@ -77,7 +77,7 @@
+      * unable to contact any of the servers, a 502 will be returned to the
+      * client.
+      *
+-     * Returns OK on sucess, all other return codes will result in a 500.
++     * Returns OK on success, all other return codes will result in a 500.
+      *
+      * This field must be set.
+      */
+Index: modules/ssl/mod_ssl_ct.c
+===================================================================
+--- modules/ssl/mod_ssl_ct.c	(Revision 1756272)
++++ modules/ssl/mod_ssl_ct.c	(Arbeitskopie)
+@@ -2387,7 +2387,7 @@
+                                            NULL, NULL,
+                                            client_extension_parse_callback, cbi)) {
+             ap_log_error(APLOG_MARK, APLOG_EMERG, 0, s,
+-                         APLOGNO(02740) "Unable to initalize Certificate "
++                         APLOGNO(02740) "Unable to initialize Certificate "
+                          "Transparency client extension callbacks "
+                          "(callback for %d already registered?)",
+                          CT_EXTENSION_TYPE);
+@@ -2409,7 +2409,7 @@
+                                            NULL, NULL,
+                                            server_extension_parse_callback, cbi)) {
+             ap_log_error(APLOG_MARK, APLOG_EMERG, 0, s,
+-                         APLOGNO(02741) "Unable to initalize Certificate "
++                         APLOGNO(02741) "Unable to initialize Certificate "
+                          "Transparency server extension callback "
+                          "(callbacks for %d already registered?)",
+                          CT_EXTENSION_TYPE);
+Index: server/apreq_cookie.c
+===================================================================
+--- server/apreq_cookie.c	(Revision 1756272)
++++ server/apreq_cookie.c	(Arbeitskopie)
+@@ -429,7 +429,7 @@
+ APREQ_DECLARE(int) apreq_cookie_serialize(const apreq_cookie_t *c,
+                                           char *buf, apr_size_t len)
+ {
+-    /*  The format string must be large enough to accomodate all
++    /*  The format string must be large enough to accommodate all
+      *  of the cookie attributes.  The current attributes sum to
+      *  ~90 characters (w/ 6-8 padding chars per attr), so anything
+      *  over 100 should be fine.
+Index: server/apreq_module_cgi.c
+===================================================================
+--- server/apreq_module_cgi.c	(Revision 1756272)
++++ server/apreq_module_cgi.c	(Arbeitskopie)
+@@ -42,7 +42,7 @@
+ 
+ /** Interactive patch:
+  * TODO Don't use 65K buffer
+- * TODO Handle empty/non-existant parameters
++ * TODO Handle empty/non-existent parameters
+  * TODO Allow body elements to be files
+  * TODO When running body/get/cookies all at once, include previous cached
+  * values (and don't start at 0 in count)
+@@ -947,7 +947,7 @@
+  Always check query_string before prompting user,
+   but rewrite body/cookies to get if interactive
+ 
+- Definately more work needed here...
++ Definitely more work needed here...
+ */
+ static int is_interactive_mode(apr_pool_t *pool)
+ {

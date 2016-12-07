@@ -1,0 +1,85 @@
+--- server/mpm/event/event.c	2016-08-10 18:55:01.000000000 +0800
++++ server/mpm/event/event_new.c	2016-08-10 18:57:49.000000000 +0800
+@@ -2578,7 +2578,11 @@
+         clean_child_exit(APEXIT_CHILDFATAL);
+     }
+ 
+-    apr_thread_mutex_create(&g_timer_skiplist_mtx, APR_THREAD_MUTEX_DEFAULT, pchild);
++    rv = apr_thread_mutex_create(&g_timer_skiplist_mtx, APR_THREAD_MUTEX_DEFAULT, pchild);
++    if (rv != APR_SUCCESS) {
++        ap_log_error(APLOG_MARK, APLOG_ERR, rv, ap_server_conf,
++                     "creation of the g_timer_skiplist_mtx mutex failed.");
++    }  
+     APR_RING_INIT(&timer_free_ring, timer_event_t, link);
+     apr_pool_create(&pskip, pchild);
+     apr_skiplist_init(&timer_skiplist, pskip);
+--- server/core.c	2016-08-08 13:54:05.000000000 +0800
++++ server/core_new.c	2016-08-10 19:01:40.000000000 +0800
+@@ -5345,12 +5345,17 @@
+ static void core_child_init(apr_pool_t *pchild, server_rec *s)
+ {
+     apr_proc_t proc;
++    apr_status_t rv;
+ #if APR_HAS_THREADS
+     int threaded_mpm;
+     if (ap_mpm_query(AP_MPMQ_IS_THREADED, &threaded_mpm) == APR_SUCCESS
+         && threaded_mpm)
+     {
+-        apr_thread_mutex_create(&rng_mutex, APR_THREAD_MUTEX_DEFAULT, pchild);
++        rv = apr_thread_mutex_create(&rng_mutex, APR_THREAD_MUTEX_DEFAULT, pchild);
++        if (rv != APR_SUCCESS) {
++            ap_log_error(APLOG_MARK, APLOG_ERR, rv, s,
++                         "creation of the rng_mutex mutex failed.");
++        }   
+     }
+ #endif
+     /* The MPMs use plain fork() and not apr_proc_fork(), so we have to call
+--- modules/http/http_request.c	2016-08-08 13:54:28.000000000 +0800
++++ modules/http/http_request_new.c	2016-08-10 19:08:52.000000000 +0800
+@@ -409,7 +409,13 @@
+     }
+ 
+ #if APR_HAS_THREADS
+-    apr_thread_mutex_create(&r->invoke_mtx, APR_THREAD_MUTEX_DEFAULT, r->pool);
++    apr_status_t rv;
++    rv = apr_thread_mutex_create(&r->invoke_mtx, APR_THREAD_MUTEX_DEFAULT, 
++                                 r->pool);
++    if (rv != APR_SUCCESS) {
++        ap_log_rerror(APLOG_MARK, APLOG_ERR, rv, r,
++                     "creation of the invoke_mtx mutex failed.");
++    }
+     apr_thread_mutex_lock(r->invoke_mtx);
+ #endif
+     access_status = ap_run_quick_handler(r, 0);  /* Not a look-up request */
+--- modules/ssl/ssl_util.c	2016-08-08 13:56:48.000000000 +0800
++++ modules/ssl/ssl_util_new.c	2016-08-10 19:14:07.000000000 +0800
+@@ -433,7 +433,12 @@
+     lock_cs = apr_palloc(p, lock_num_locks * sizeof(*lock_cs));
+ 
+     for (i = 0; i < lock_num_locks; i++) {
+-        apr_thread_mutex_create(&(lock_cs[i]), APR_THREAD_MUTEX_DEFAULT, p);
++        apr_status_t rv;
++        rv = apr_thread_mutex_create(&(lock_cs[i]), APR_THREAD_MUTEX_DEFAULT, p);
++        if (rv != APR_SUCCESS) {
++            ap_log_perror(APLOG_MARK, APLOG_ERR, rv, p, APLOGNO()
++                          "Failed to create thread mutex for lock_cs");
++        }   
+     }
+ 
+ #if OPENSSL_VERSION_NUMBER >= 0x10000000L
+--- modules/mappers/mod_rewrite.c	2016-08-10 19:15:58.000000000 +0800
++++ modules/mappers/mod_rewrite_new.c	2016-08-10 19:19:05.000000000 +0800
+@@ -1104,7 +1104,12 @@
+ 
+     cachep->maps = apr_hash_make(cachep->pool);
+ #if APR_HAS_THREADS
+-    (void)apr_thread_mutex_create(&(cachep->lock), APR_THREAD_MUTEX_DEFAULT, p);
++    apr_status_t rv;
++    rv = apr_thread_mutex_create(&(cachep->lock), APR_THREAD_MUTEX_DEFAULT, p);
++    if (rv != APR_SUCCESS) {
++        ap_log_perror(APLOG_MARK, APLOG_ERR, rv, p,
++                     "creation of the cachep->lock mutex failed.");
++    }
+ #endif
+ 
+     return 1;

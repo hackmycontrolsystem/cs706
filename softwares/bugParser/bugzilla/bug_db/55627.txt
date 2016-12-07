@@ -1,0 +1,57 @@
+Index: modules/ldap/util_ldap.c
+===================================================================
+--- modules/ldap/util_ldap.c	(revision 1529303)
++++ modules/ldap/util_ldap.c	(working copy)
+@@ -374,7 +374,7 @@
+ 
+     if (ldc->ChaseReferrals != AP_LDAP_CHASEREFERRALS_SDKDEFAULT) {
+         /* Set options for rebind and referrals. */
+-        ap_log_error(APLOG_MARK, APLOG_TRACE4, 0, r->server, APLOGNO(01278)
++        ap_log_error(APLOG_MARK, APLOG_TRACE4, 0, r->server,
+                 "LDAP: Setting referrals to %s.",
+                 ((ldc->ChaseReferrals == AP_LDAP_CHASEREFERRALS_ON) ? "On" : "Off"));
+         apr_ldap_set_option(r->pool, ldc->ldap,
+Index: modules/lua/mod_lua.c
+===================================================================
+--- modules/lua/mod_lua.c	(revision 1529303)
++++ modules/lua/mod_lua.c	(working copy)
+@@ -198,7 +198,7 @@
+     else {
+         spec->file = r->filename;
+     }
+-    ap_log_rerror(APLOG_MARK, APLOG_TRACE2, 0, r, APLOGNO(02313)
++    ap_log_rerror(APLOG_MARK, APLOG_TRACE2, 0, r,
+                   "%s details: scope: %s, file: %s, func: %s",
+                   what, scope_to_string(spec->scope), spec->file,
+                   function ? function : "-");
+@@ -282,7 +282,7 @@
+         ) {
+         return DECLINED;
+     }
+-    ap_log_rerror(APLOG_MARK, APLOG_TRACE1, 0, r, APLOGNO(01472)
++    ap_log_rerror(APLOG_MARK, APLOG_TRACE1, 0, r,
+                   "handling [%s] in mod_lua", r->filename);
+ 
+     /* XXX: This seems wrong because it may generate wrong headers for HEAD requests */
+@@ -302,7 +302,7 @@
+             ap_lua_release_state(L, spec, r);
+             return HTTP_INTERNAL_SERVER_ERROR;
+         }
+-        ap_log_rerror(APLOG_MARK, APLOG_TRACE3, 0, r, APLOGNO(01474) "got a vm!");
++        ap_log_rerror(APLOG_MARK, APLOG_TRACE3, 0, r, "got a vm!");
+         lua_getglobal(L, "handle");
+         if (!lua_isfunction(L, -1)) {
+             ap_log_rerror(APLOG_MARK, APLOG_CRIT, 0, r, APLOGNO(01475)
+Index: modules/proxy/ajp_header.c
+===================================================================
+--- modules/proxy/ajp_header.c	(revision 1529303)
++++ modules/proxy/ajp_header.c	(working copy)
+@@ -226,7 +226,7 @@
+     ap_log_rerror(APLOG_MARK, APLOG_TRACE8, 0, r, "Into ajp_marshal_into_msgb");
+ 
+     if ((method = sc_for_req_method_by_id(r)) == UNKNOWN_METHOD) {
+-        ap_log_rerror(APLOG_MARK, APLOG_TRACE8, 0, r, APLOGNO(02437)
++        ap_log_rerror(APLOG_MARK, APLOG_TRACE8, 0, r,
+                "ajp_marshal_into_msgb - Sending unknown method %s as request attribute",
+                r->method);
+         method = SC_M_JK_STORED;

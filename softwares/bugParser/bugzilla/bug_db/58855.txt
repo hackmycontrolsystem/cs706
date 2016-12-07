@@ -1,0 +1,219 @@
+Index: modules/aaa/mod_authnz_fcgi.c
+===================================================================
+--- modules/aaa/mod_authnz_fcgi.c	(revision 1724539)
++++ modules/aaa/mod_authnz_fcgi.c	(working copy)
+@@ -855,7 +855,7 @@
+             const char *err;
+             const char *user = ap_expr_str_exec(r, dconf->user_expr,
+                                                 &err);
+-            if (user && strlen(user)) {
++            if (user && *user != '\0') {
+                 r->user = apr_pstrdup(r->pool, user);
+                 ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r,
+                               APLOGNO(02519) "%s: Setting user to '%s'",
+Index: modules/aaa/mod_authnz_ldap.c
+===================================================================
+--- modules/aaa/mod_authnz_ldap.c	(revision 1724539)
++++ modules/aaa/mod_authnz_ldap.c	(working copy)
+@@ -748,13 +748,13 @@
+      */
+ 
+ 
+-    if (!strlen(r->user)) {
++    if (*r->user == '\0') {
+         ap_log_rerror(APLOG_MARK, APLOG_WARNING, 0, r, APLOGNO(01699)
+             "ldap authorize: Userid is blank, AuthType=%s",
+             r->ap_auth_type);
+     }
+ 
+-    if (req->dn == NULL || strlen(req->dn) == 0) {
++    if (req->dn == NULL || *req->dn == '\0') {
+         ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(01702)
+                       "auth_ldap authorize: require user: user's DN has not "
+                       "been defined; failing authorization");
+@@ -910,7 +910,7 @@
+      * and populated with the userid and DN of the account in LDAP
+      */
+ 
+-    if (!strlen(r->user)) {
++    if (*r->user == '\0') {
+         ap_log_rerror(APLOG_MARK, APLOG_WARNING, 0, r, APLOGNO(01709)
+             "ldap authorize: Userid is blank, AuthType=%s",
+             r->ap_auth_type);
+@@ -920,7 +920,7 @@
+     ent = (struct mod_auth_ldap_groupattr_entry_t *) sec->groupattr->elts;
+ 
+     if (sec->group_attrib_is_dn) {
+-        if (req->dn == NULL || strlen(req->dn) == 0) {
++        if (req->dn == NULL || *req->dn == '\0') {
+             ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(01712)
+                           "auth_ldap authorize: require group: user's DN has "
+                           "not been defined; failing authorization for user %s",
+@@ -929,7 +929,7 @@
+         }
+     }
+     else {
+-        if (req->user == NULL || strlen(req->user) == 0) {
++        if (req->user == NULL || *req->user == '\0') {
+             /* We weren't called in the authentication phase, so we didn't have a
+              * chance to set the user field. Do so now. */
+             req->user = r->user;
+@@ -1063,7 +1063,7 @@
+      * and populated with the userid and DN of the account in LDAP
+      */
+ 
+-    if (!strlen(r->user)) {
++    if (*r->user == '\0') {
+         ap_log_rerror(APLOG_MARK, APLOG_WARNING, 0, r, APLOGNO(01722)
+             "ldap authorize: Userid is blank, AuthType=%s",
+             r->ap_auth_type);
+@@ -1091,7 +1091,7 @@
+ 
+     t = require;
+ 
+-    if (req->dn == NULL || strlen(req->dn) == 0) {
++    if (req->dn == NULL || *req->dn == '\0') {
+         ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(01725)
+                       "auth_ldap authorize: require dn: user's DN has not "
+                       "been defined; failing authorization");
+@@ -1163,7 +1163,7 @@
+      * and populated with the userid and DN of the account in LDAP
+      */
+ 
+-    if (!strlen(r->user)) {
++    if (*r->user == '\0') {
+         ap_log_rerror(APLOG_MARK, APLOG_WARNING, 0, r, APLOGNO(01730)
+             "ldap authorize: Userid is blank, AuthType=%s",
+             r->ap_auth_type);
+@@ -1181,7 +1181,7 @@
+         ldc = get_connection_for_authz(r, LDAP_COMPARE);
+     }
+ 
+-    if (req->dn == NULL || strlen(req->dn) == 0) {
++    if (req->dn == NULL || *req->dn == '\0') {
+         ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(01733)
+                       "auth_ldap authorize: require ldap-attribute: user's DN "
+                       "has not been defined; failing authorization");
+@@ -1272,7 +1272,7 @@
+      * and populated with the userid and DN of the account in LDAP
+      */
+ 
+-    if (!strlen(r->user)) {
++    if (*r->user == '\0') {
+         ap_log_rerror(APLOG_MARK, APLOG_WARNING, 0, r, APLOGNO(01739)
+             "ldap authorize: Userid is blank, AuthType=%s",
+             r->ap_auth_type);
+@@ -1290,7 +1290,7 @@
+         ldc = get_connection_for_authz(r, LDAP_SEARCH);
+     }
+ 
+-    if (req->dn == NULL || strlen(req->dn) == 0) {
++    if (req->dn == NULL || *req->dn == '\0') {
+         ap_log_rerror(APLOG_MARK, APLOG_DEBUG, 0, r, APLOGNO(01742)
+                       "auth_ldap authorize: require ldap-filter: user's DN "
+                       "has not been defined; failing authorization");
+Index: modules/http2/h2_config.c
+===================================================================
+--- modules/http2/h2_config.c	(revision 1724539)
++++ modules/http2/h2_config.c	(working copy)
+@@ -300,7 +300,7 @@
+ static const char *h2_add_alt_svc(cmd_parms *parms,
+                                   void *arg, const char *value)
+ {
+-    if (value && strlen(value)) {
++    if (value && *value != '\0') {
+         h2_config *cfg = (h2_config *)h2_config_sget(parms->server);
+         h2_alt_svc *as = h2_alt_svc_parse(value, parms->pool);
+         if (!as) {
+@@ -398,7 +398,7 @@
+     h2_priority *priority;
+     int weight;
+     
+-    if (!strlen(ctype)) {
++    if (*ctype == '\0') {
+         return "1st argument must be a mime-type, like 'text/css' or '*'";
+     }
+     
+Index: modules/ldap/util_ldap_cache_mgr.c
+===================================================================
+--- modules/ldap/util_ldap_cache_mgr.c	(revision 1724539)
++++ modules/ldap/util_ldap_cache_mgr.c	(working copy)
+@@ -674,7 +674,7 @@
+         return NULL;
+     }
+ 
+-    if (r->args && strlen(r->args)) {
++    if (r->args && *r->args != '\0') {
+         char cachetype[5], lint[2];
+         unsigned int id, off;
+         char date_str[APR_CTIME_LEN];
+Index: modules/loggers/mod_log_config.c
+===================================================================
+--- modules/loggers/mod_log_config.c	(revision 1724539)
++++ modules/loggers/mod_log_config.c	(working copy)
+@@ -371,7 +371,7 @@
+     if (rvalue == NULL) {
+         rvalue = "-";
+     }
+-    else if (strlen(rvalue) == 0) {
++    else if (*rvalue == '\0') {
+         rvalue = "\"\"";
+     }
+     else {
+Index: modules/lua/lua_dbd.c
+===================================================================
+--- modules/lua/lua_dbd.c	(revision 1724539)
++++ modules/lua/lua_dbd.c	(working copy)
+@@ -782,7 +782,7 @@
+                 arguments = lua_tostring(L, 3);
+                 lua_settop(L, 0);
+                 
+-                if (strlen(arguments)) {
++                if (*arguments != '\0') {
+                     rc = apr_dbd_open_ex(dbdhandle->driver, pool, 
+                             arguments, &dbdhandle->handle, &error);
+                     if (rc == APR_SUCCESS) {
+Index: modules/lua/lua_request.c
+===================================================================
+--- modules/lua/lua_request.c	(revision 1724539)
++++ modules/lua/lua_request.c	(working copy)
+@@ -381,7 +381,7 @@
+             sscanf(start + len + 2,
+                 "Content-Disposition: form-data; name=\"%255[^\"]\"; filename=\"%255[^\"]\"",
+                 key, filename);
+-            if (strlen(key)) {
++            if (*key != '\0') {
+                 req_aprtable2luatable_cb_len(L, key, buffer, vlen);
+             }
+         }
+@@ -2108,8 +2108,8 @@
+             secure ? "Secure;" : "", 
+             expires ? strexpires : "", 
+             httponly ? "HttpOnly;" : "", 
+-            strlen(strdomain) ? strdomain : "", 
+-            strlen(strpath) ? strpath : "");
++            *strdomain != '\0' ? strdomain : "", 
++            *strpath != '\0' ? strpath : "");
+     
+     apr_table_add(r->err_headers_out, "Set-Cookie", out);
+     return 0;
+Index: modules/proxy/mod_proxy_balancer.c
+===================================================================
+--- modules/proxy/mod_proxy_balancer.c	(revision 1724539)
++++ modules/proxy/mod_proxy_balancer.c	(working copy)
+@@ -1084,13 +1084,13 @@
+             }
+         }
+         if ((val = apr_table_get(params, "w_wr"))) {
+-            if (strlen(val) && strlen(val) < sizeof(wsel->s->route))
++            if (*val != '\0' && strlen(val) < sizeof(wsel->s->route))
+                 strcpy(wsel->s->route, val);
+             else
+                 *wsel->s->route = '\0';
+         }
+         if ((val = apr_table_get(params, "w_rr"))) {
+-            if (strlen(val) && strlen(val) < sizeof(wsel->s->redirect))
++            if (*val != '\0' && strlen(val) < sizeof(wsel->s->redirect))
+                 strcpy(wsel->s->redirect, val);
+             else
+                 *wsel->s->redirect = '\0';

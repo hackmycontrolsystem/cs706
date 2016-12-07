@@ -1,0 +1,82 @@
+--- server/mpm/event/event.c	2016-08-10 14:31:12.000000000 +0800
++++ server/mpm/event/event_new.c	2016-08-10 14:35:25.000000000 +0800
+@@ -1356,6 +1356,7 @@
+     ap_listen_rec *lr;
+     listener_poll_type *pt;
+     int i = 0;
++    apr_status_t rv;
+ 
+     listener_pollfd = apr_palloc(p, sizeof(apr_pollfd_t) * num_listensocks);
+     for (lr = my_bucket->listeners; lr != NULL; lr = lr->next, i++) {
+@@ -1372,8 +1373,12 @@
+ 
+         pfd->client_data = pt;
+ 
+-        apr_socket_opt_set(pfd->desc.s, APR_SO_NONBLOCK, 1);
+-        apr_pollset_add(event_pollset, pfd);
++        rv = apr_socket_opt_set(pfd->desc.s, APR_SO_NONBLOCK, 1);
++        if (rv != APR_SUCCESS && !APR_STATUS_IS_ENOTIMPL(rv)) {
++            ap_log_perror(APLOG_MARK, APLOG_WARNING, rv, p, APLOGNO()
++                              "Failed to enable APR_SO_NONBLOCK");
++        } 
++	apr_pollset_add(event_pollset, pfd);
+ 
+         lr->accept_func = ap_unixd_accept;
+     }
+--- server/connection.c	2016-08-08 13:54:05.000000000 +0800
++++ server/connection_new.c	2016-08-10 14:36:46.000000000 +0800
+@@ -160,6 +160,7 @@
+     apr_size_t nbytes;
+     apr_time_t now, timeup = 0;
+     apr_socket_t *csd = ap_get_conn_socket(c);
++    apr_status_t rv;
+ 
+     if (ap_start_lingering_close(c)) {
+         return;
+@@ -171,7 +172,11 @@
+      * Apache 1.3 which seems to work well), give up.
+      */
+     apr_socket_timeout_set(csd, apr_time_from_sec(SECONDS_TO_LINGER));
+-    apr_socket_opt_set(csd, APR_INCOMPLETE_READ, 1);
++    rv = apr_socket_opt_set(csd, APR_INCOMPLETE_READ, 1);
++    if (rv != APR_SUCCESS && !APR_STATUS_IS_ENOTIMPL(rv)) {
++        ap_log_error(APLOG_MARK, APLOG_WARNING, rv, c, APLOGNO()
++                      "Failed to enable APR_INCOMPLETE_READ");
++    }
+ 
+     /* The common path here is that the initial apr_socket_recv() call
+      * will return 0 bytes read; so that case must avoid the expensive
+--- server/core_filters.c	2016-08-08 13:54:17.000000000 +0800
++++ server/core_filters_new.c	2016-08-10 14:47:07.000000000 +0800
+@@ -527,16 +527,28 @@
+             if ((apr_file_flags_get(fd) & APR_SENDFILE_ENABLED) &&
+                 (bucket->length >= AP_MIN_SENDFILE_BYTES)) {
+                 if (nvec > 0) {
+-                    (void)apr_socket_opt_set(s, APR_TCP_NOPUSH, 1);
++                    rv = apr_socket_opt_set(s, APR_TCP_NOPUSH, 1);
++                    if (rv != APR_SUCCESS && !APR_STATUS_IS_ENOTIMPL(rv)) {
++                        ap_log_error(APLOG_MARK, APLOG_WARNING, rv, c, APLOGNO()
++                                     "Failed to enable APR_TCP_NOPUSH");
++                    }  
+                     rv = writev_nonblocking(s, vec, nvec, bb, bytes_written, c);
+                     if (rv != APR_SUCCESS) {
+-                        (void)apr_socket_opt_set(s, APR_TCP_NOPUSH, 0);
++                        rv = apr_socket_opt_set(s, APR_TCP_NOPUSH, 0);
++                        if (rv != APR_SUCCESS && !APR_STATUS_IS_ENOTIMPL(rv)) {
++                            ap_log_error(APLOG_MARK, APLOG_WARNING, rv, c, APLOGNO()
++                                         "Failed to enable APR_TCP_NOPUSH");
++                        } 
+                         return rv;
+                     }
+                 }
+                 rv = sendfile_nonblocking(s, bucket, bytes_written, c);
+                 if (nvec > 0) {
+-                    (void)apr_socket_opt_set(s, APR_TCP_NOPUSH, 0);
++                    rv = apr_socket_opt_set(s, APR_TCP_NOPUSH, 0);
++                    if (rv != APR_SUCCESS && !APR_STATUS_IS_ENOTIMPL(rv)) {
++                        ap_log_error(APLOG_MARK, APLOG_WARNING, rv, c, APLOGNO()
++                                     "Failed to enable APR_TCP_NOPUSH");
++                    }
+                     nvec = 0;
+                 }
+                 if (rv != APR_SUCCESS) {

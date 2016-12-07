@@ -1,0 +1,13 @@
+--- modules/mappers/mod_rewrite.c	2016-08-08 15:46:26.000000000 +0800
++++ modules/mappers/mod_rewrite_new.c	2016-08-08 15:46:28.000000000 +0800
+@@ -1395,6 +1395,10 @@
+    }
+ 
+     stmt = apr_hash_get(db->prepared, label, APR_HASH_KEY_STRING);
++    if (stmt == NULL) {
++        ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r, APLOGNO()
++                     "A prepared statement could not be found");
++    } 
+ 
+     rv = apr_dbd_pvselect(db->driver, r->pool, db->handle, &res,
+                           stmt, 0, key, NULL);

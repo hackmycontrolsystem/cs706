@@ -1,0 +1,56 @@
+--- modules/ssl/mod_ssl.c	2016-08-08 22:23:29.000000000 +0800
++++ modules/ssl/mod_ssl_new.c	2016-08-08 22:25:08.000000000 +0800
+@@ -359,6 +359,7 @@
+                                apr_pool_t *ptemp)
+ {
+ 
++    apr_status_t rv;
+ #if HAVE_VALGRIND
+      ssl_running_on_valgrind = RUNNING_ON_VALGRIND;
+ #endif
+@@ -398,12 +399,23 @@
+     ssl_scache_status_register(pconf);
+ 
+     /* Register mutex type names so they can be configured with Mutex */
+-    ap_mutex_register(pconf, SSL_CACHE_MUTEX_TYPE, NULL, APR_LOCK_DEFAULT, 0);
++    rv = ap_mutex_register(pconf, SSL_CACHE_MUTEX_TYPE, NULL, APR_LOCK_DEFAULT, 0); 
++    if (rv != APR_SUCCESS)
++        ap_log_perror(APLOG_MARK, APLOG_CRIT, rv, plog, APLOGNO()
++                      "failed to register %s mutex", SSL_CACHE_MUTEX_TYPE);
++
+ #ifdef HAVE_OCSP_STAPLING
+-    ap_mutex_register(pconf, SSL_STAPLING_CACHE_MUTEX_TYPE, NULL,
+-                      APR_LOCK_DEFAULT, 0);
+-    ap_mutex_register(pconf, SSL_STAPLING_REFRESH_MUTEX_TYPE, NULL,
+-                      APR_LOCK_DEFAULT, 0);
++    rv = ap_mutex_register(pconf, SSL_STAPLING_CACHE_MUTEX_TYPE, NULL,
++                           APR_LOCK_DEFAULT, 0);
++    if (rv != APR_SUCCESS)
++        ap_log_perror(APLOG_MARK, APLOG_CRIT, rv, plog, APLOGNO()
++                      "failed to register %s mutex", SSL_STAPLING_CACHE_MUTEX_TYPE);
++
++    rv = ap_mutex_register(pconf, SSL_STAPLING_REFRESH_MUTEX_TYPE, NULL,
++                           APR_LOCK_DEFAULT, 0);
++    if (rv != APR_SUCCESS)
++        ap_log_perror(APLOG_MARK, APLOG_CRIT, rv, plog, APLOGNO()
++                      "failed to register %s mutex", SSL_STAPLING_REFRESH_MUTEX_TYPE);
+ #endif
+ 
+     return OK;
+--- modules/mappers/mod_rewrite.c	2016-08-08 15:46:26.000000000 +0800
++++ modules/mappers/mod_rewrite_new.c	2016-08-08 22:31:21.000000000 +0800
+@@ -4458,9 +4458,13 @@
+                       apr_pool_t *plog,
+                       apr_pool_t *ptemp)
+ {
++    apr_status_t rv;
+     APR_OPTIONAL_FN_TYPE(ap_register_rewrite_mapfunc) *map_pfn_register;
+ 
+-    ap_mutex_register(pconf, rewritemap_mutex_type, NULL, APR_LOCK_DEFAULT, 0);
++    rv = ap_mutex_register(pconf, rewritemap_mutex_type, NULL, APR_LOCK_DEFAULT, 0);
++    if (rv != APR_SUCCESS)
++         ap_log_perror(APLOG_MARK, APLOG_CRIT, rv, plog, APLOGNO()
++                       "failed to register %s mutex", rewritemap_mutex_type);
+ 
+     /* register int: rewritemap handlers */
+     map_pfn_register = APR_RETRIEVE_OPTIONAL_FN(ap_register_rewrite_mapfunc);
