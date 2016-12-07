@@ -1,0 +1,27 @@
+main() <int main_htpasswd (int argc, const char *const argv[]) at support/htpasswd.c:390>:
+    apr_app_initialize()
+    terminate() <void terminate (void) at support/htpasswd.c:267>:
+        apr_terminate()
+        pressanykey()
+        terminate() <void terminate (void) at support/htpasswd.c:267> (recursive: see 97)
+    check_args() <void check_args (apr_pool_t *pool, int argc, const char *const argv[], int *alg, int *mask, char **user, char **pwfilename, char **password) at support/htpasswd.c:275>:
+        usage() <void usage (void) at support/htpasswd.c:206>:
+            apr_file_printf()
+        apr_file_printf()
+        apr_pstrdup()
+    exists() <int exists (char *fname, apr_pool_t *pool) at support/htpasswd.c:258>:
+        apr_stat()
+    accessible() <int accessible (apr_pool_t *pool, char *fname, int mode) at support/htpasswd.c:244>:
+        apr_file_open()
+        apr_file_close()
+    mkrecord() <int mkrecord (char *user, char *record, apr_size_t rlen, char *passwd, int alg) at support/htpasswd.c:128>:
+        apr_password_get()
+        time() <apr_time_t time at modules/aaa/mod_auth_digest.c:170>
+        to64() <void to64 (char *s, unsigned long v, int n) at support/htpasswd.c:107>:
+        apr_md5_encode()
+    apr_temp_dir_get()
+    apr_psprintf()
+    putline() <void putline (apr_file_t *f, const char *l) at support/htpasswd.c:118>:
+        apr_file_puts()
+    apr_file_close()
+    apr_file_copy()

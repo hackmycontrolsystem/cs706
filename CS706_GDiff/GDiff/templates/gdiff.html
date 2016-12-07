@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GDiff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/images/GDiff.ico">
+	
+	
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="/static/css/jquery.edittable.min.css">
+	<link rel="stylesheet" href="/static/css/graph.css">	
+ </head>
+  <body style="padding-top: 70px;">
+  <div class="navbar navbar-default navbar-fixed-top" id="nav">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	    	<a href="/GDiff"><img src="/static/images/GDiff.ico" class="img-rounded" alt="GDiff" width="180" height="50"></a>
+	    </div>
+	  </div>
+	</div>
+	<div class="container">
+	<div id="myTabContent" class="tab-content">
+  	<div class="tab-pane fade active in" id="home">
+<form method="post" role="form" class="form-horizontal" id="mainForm" name="mainForm">
+	<div id="msgs">
+		<div id="alertDiv" class="alert alert-dismissible alert-danger fade in col-md-offset-7" style="display:none;">
+		 	<button type="button" class="close">×</button>
+		 	<p id="validation-info"></p>
+		</div>
+	</div>
+	<div class="tab-content col-md-12">
+		<div class="tab-pane active" role="tabpanel" id="about-tab">
+			<form method="post" role="form" class="form-horizontal">
+				<legend>Call Graph</legend>
+				<a id="expand_all" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus-sign"></span>Expand All</a>  
+				<a id="expand_changed" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus-sign"></span>Expand Only Modified Paths</a>  
+    			<a id='collapse_all' class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove-sign"></span>Collapse All</a>
+    			<!--  <a id='collapse_changed' class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove-sign"></span>Collapse Non-modified Paths</a>-->
+			</form>
+		</div>
+	</div><!-- tab content -->
+</form>
+</div>
+<div class="tab-pane fade" id="profile">
+
+</div>
+</div>
+</div><!-- end of container -->
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.edittable.min.js"></script>
+    <!--  <script type="text/javascript" src="/static/js/jquery-ui.js"></script>-->
+    <script type="text/javascript" src="/static/js/bootstrap-remote-tabs.js"></script>
+    <script type="text/javascript" src="/static/js/Blob.js"></script>
+    <script type="text/javascript" src="/static/js/FileSaver.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script>
+    $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    
+    $("#expand_all").click(function(){
+    	expandAll();
+    });
+    
+    $("#expand_changed").click(function(){
+    	collapseAll();
+    	expandChanged();
+    });
+    
+	$("#collapse_all").click(function(){
+    	collapseAll();
+    });
+	
+	$("#collapse_changed").click(function(){
+		collapseChanged();
+    });
+	
+    	jQuery(document).ajaxStart(function () {
+    		ajaxindicatorstart('');
+    	}).ajaxStop(function () {
+    		ajaxindicatorstop();
+    	});
+    	
+    	function ajaxindicatorstop(){
+    	    jQuery('#resultLoading .bg').height('100%');
+    	    jQuery('#resultLoading').fadeOut(300);
+    	    jQuery('body').css('cursor', 'default');
+    	}
+    	
+    	function ajaxindicatorstart(text){
+    		if(jQuery('body').find('#resultLoading').attr('id') != 'resultLoading'){
+    			jQuery('body').append('<div id="resultLoading" style="display:none"><div><img src="/static/images/ajax-loader.gif"><div>'+text+'</div></div><div class="bg"></div></div>');
+    	}
+
+    	jQuery('#resultLoading').css({
+    		'width':'100%',
+    		'height':'100%',
+    		'position':'fixed',
+    		'z-index':'10000000',
+    		'top':'0',
+    		'left':'0',
+    		'right':'0',
+    		'bottom':'0',
+    		'margin':'auto'
+    	});
+
+    	jQuery('#resultLoading .bg').css({
+    		'background':'#000000',
+    		'opacity':'0.7',
+    		'width':'100%',
+    		'height':'100%',
+    		'position':'absolute',
+    		'top':'0'
+    	});
+
+    	jQuery('#resultLoading>div:first').css({
+    		'width': '250px',
+    		'height':'75px',
+    		'text-align': 'center',
+    		'position': 'fixed',
+    		'top':'0',
+    		'left':'0',
+    		'right':'0',
+    		'bottom':'0',
+    		'margin':'auto',
+    		'font-size':'16px',
+    		'z-index':'10',
+    		'color':'#ffffff'
+
+    	});
+
+        jQuery('#resultLoading .bg').height('100%');
+        jQuery('#resultLoading').fadeIn(300);
+        jQuery('body').css('cursor', 'wait');
+    }
+    	
+    	jQuery('[data-dismiss="modal"]').on('click', function(){
+    	    jQuery('.modal').modal('hide');
+    	});
+    	
+    	function expand(d, expandAll){   
+    	    var children = (d.children)?d.children:d._children;
+    	    if (d._children) {        
+    	        d.children = d._children;
+    	        d._children = null;       
+    	    }
+    	    if(children){
+    	    	for(var i=0; i<children.length; i++){
+    	    		if(expandAll == false && children[i].childrenChangedFlag != 0)
+    	    			expand(children[i], expandAll)
+    	    		if(expandAll == false && children[i].childrenChangedFlag == 0)
+    	    			collapse(children[i], expandAll)
+    	    		else if(expandAll == true)
+    	    			expand(children[i], expandAll)
+    	    	}
+    	    	//children.forEach(expand);
+    	    }
+    	}
+
+    	function expandAll(){
+    	    expand(root, true); 
+    	    update(root);
+    	}
+
+    	function expandChanged(){
+    		expand(root, false); 
+    	    update(root);
+    	}
+    	
+    	function collapseAll(){
+    		if(typeof root.children != 'undefined'){
+	    	    //root.children.forEach(collapse);
+	    	    childrenArray = root.children
+    			for(var i=0; i<childrenArray.length; i++){
+    	    		collapse(childrenArray[i], true)
+    	    	}
+	    	    collapse(root, true);
+	    	    update(root);
+    		}
+    	}
+    	
+    	function collapseChanged(){
+    		if(typeof root.children != 'undefined'){
+    			childrenArray = root.children
+    			for(var i=0; i<childrenArray.length; i++){
+    	    		if(childrenArray[i].childrenChangedFlag == 0)
+    	    			collapse(childrenArray[i], false)
+    	    	}
+	    	    //root.children.forEach(collapse);
+	    	    collapse(root, false);
+	    	    update(root);
+    		}
+    	}
+
+    	var margin = {top: 20, right: 120, bottom: 20, left: 120},
+    	    width = 1500 - margin.right - margin.left,
+    	    height = 750 - margin.top - margin.bottom;
+    	    
+    	var i = 0,
+    	    duration = 750,
+    	    root;
+
+    	//var color = d3.scaleOrdinal(d3.schemeCategory20);
+    	
+    	var tree = d3.layout.tree()
+    	    .size([height, width]);
+
+    	var diagonal = d3.svg.diagonal()
+    	    .projection(function(d) { return [d.y, d.x]; });
+
+    	var svg = d3.select("body").append("svg")
+    	    .attr("width", width + margin.right + margin.left)
+    	    .attr("height", height + margin.top + margin.bottom)
+    	  .append("g")
+    	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    	{% autoescape false %}
+    	var flare = {{ graphData }};
+    	{% endautoescape %}
+    	
+    	root = flare;
+    	root.x0 = height / 2;
+    	root.y0 = 0;
+
+    	var fill = d3.scale.category20();
+    	
+    	function update(source) {
+
+    		  // Compute the new tree layout.
+    		  var nodes = tree.nodes(root).reverse(),
+    		      links = tree.links(nodes);
+
+    		  // Normalize for fixed-depth.
+    		  nodes.forEach(function(d) { d.y = d.depth * 180; });
+
+    		  // Update the nodes…
+    		  var node = svg.selectAll("g.node")
+    		      .data(nodes, function(d) { return d.id || (d.id = ++i); });
+    		      //.attr("fill", function(d) { return color(d.idx);});
+
+    		  // Enter any new nodes at the parent's previous position.
+    		  var nodeEnter = node.enter().append("g")
+    		      .attr("class", "node")
+    		      //.attr("class", function (d) {
+				  //      if (d.recursive === 1) {
+				  //         return "rectangle";
+				  //      } else {
+				  //         return "circle";
+				  //      }
+				  //  })
+    		      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+    		      .on("click", click)
+    		      .on("mouseover", mouseover)
+    		      .on("mouseout", mouseout);
+
+    		  
+    		  nodeEnter.append("circle")
+    		      .attr("r", 1e-6)
+    		      .style("fill", function(d) { return d._children ? fill(d.idx) : "#fff"; })
+    		      .style("stroke", function(d) { 
+    		    	  if(d.recursive == 1)
+    		    		  return d3.rgb(fill(d.idx)).darker();
+    		    	  return d3.rgb(fill(d.idx)).darker(); 
+    		    	})
+    		    	.style("stroke-dasharray", function(d) { 
+    		    	  if(d.recursive == 1)
+    		    		  return "2,2";
+    		    	  return "";
+    		    	});
+
+    		  //nodeEnter.append("rectangle")
+    		  //  .attr("width", 20)
+    		  //  .attr("height", 20)
+    		  //  .style("fill", function(d) { return d._children ? fill(d.idx) : "#fff"; })
+    		  //  .style("stroke", function(d) { return d3.rgb(fill(d.idx)).darker(); });
+    		  
+    		  nodeEnter.append("text")
+    		      .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
+    		      .attr("dy", ".35em")
+    		      .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+    		      .text(function(d) { return d.name; })
+    		      .style("fill-opacity", 1e-6);
+
+    		  // Transition nodes to their new position.
+    		  var nodeUpdate = node.transition()
+    		      .duration(duration)
+    		      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+    		  nodeUpdate.select("circle")
+    		      .attr("r", 4.5)
+    		      .style("fill", function(d) { return d._children ? fill(d.idx) : "#fff"; })
+    		      .style("stroke", function(d) { return d3.rgb(fill(d.idx)).darker(); });
+
+    		  nodeUpdate.select("text")
+    		      .style("fill-opacity", 1);
+
+    		  // Transition exiting nodes to the parent's new position.
+    		  var nodeExit = node.exit().transition()
+    		      .duration(duration)
+    		      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+    		      .remove();
+
+    		  nodeExit.select("circle")
+    		      .attr("r", 1e-6);
+
+    		  nodeExit.select("text")
+    		      .style("fill-opacity", 1e-6);
+
+    		  // Update the links…
+    		  var link = svg.selectAll("path.link")
+    		      .data(links, function(d) { return d.target.id; })
+    		      .text(function(d) { return "link"; });
+
+    		  // Enter any new links at the parent's previous position.
+    		  link.enter().insert("path", "g")
+    		      .attr("class", "link")
+    		      .attr("d", function(d) {
+    		        var o = {x: source.x0, y: source.y0};
+    		        return diagonal({source: o, target: o});
+    		      })
+    		      .attr("stroke", function (d) { 
+    		    	  var linkCount = d.target.linkCount
+    		    	  var color = 'black'
+    		    	  if(linkCount == -1) color = 'red';
+    		    	  else if(linkCount == 1) color = 'green';
+    		    	  return color; });
+
+    		  // Transition links to their new position.
+    		  link.transition()
+    		      .duration(duration)
+    		      .attr("d", diagonal);
+
+    		  // Transition exiting nodes to the parent's new position.
+    		  link.exit().transition()
+    		      .duration(duration)
+    		      .attr("d", function(d) {
+    		        var o = {x: source.x, y: source.y};
+    		        return diagonal({source: o, target: o});
+    		      })
+    		      .remove();
+
+    		  // Stash the old positions for transition.
+    		  nodes.forEach(function(d) {
+    		    d.x0 = d.x;
+    		    d.y0 = d.y;
+    		  });
+    		}
+
+    		// Toggle children on click.
+    		function click(d) {
+    		  if (d.children) {
+    		    d._children = d.children;
+    		    d.children = null;
+    		  } else {
+    		    d.children = d._children;
+    		    d._children = null;
+    		  }
+    		  update(d);
+    		}
+
+    		function mouseover(d) {
+    			var showText = d.name;
+    			if(d.filename!="")
+    				showText = showText + ": " + d.filename
+    		    d3.select(this).append("text")
+    		        .attr("class", "hover")
+    		        .attr('transform', function(d){ 
+    		            return 'translate(5, -10)';
+    		        })
+    		        .text(showText);
+    		    d3.select(this).select("circle").transition()
+    		      .duration(750)
+    		      .attr("r", 12);
+    		}
+
+    		// Toggle children on click.
+    		function mouseout(d) {
+    		    d3.select(this).select("text.hover").remove();
+    		    d3.select(this).select("circle").transition()
+    		      .duration(750)
+    		      .attr("r", 4.5);
+    		}
+
+    		function collapse(d, collapseAll) {
+    		  if (d.children) {
+    		    d._children = d.children;
+    		    //d._children.forEach(collapse);
+    		    children = d._children
+    		    for(var i=0; i<children.length; i++){
+    	    		if(collapseAll == false && children[i].childrenChangedFlag == 0)
+    	    			collapse(children[i], collapseAll)
+    	    		else if(collapseAll == true)
+    	    			collapse(children[i], collapseAll)
+    	    	}
+    		    d.children = null;
+    		  }
+    		}
+
+    		update(root);
+    		d3.select(self.frameElement).style("height", "1000px");
+    
+	</script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+main() <int main_htpasswd (int argc, const char *const argv[]) at support/htpasswd.c:439>:
+    apr_app_initialize()
+    terminate() <void terminate (void) at support/htpasswd.c:316>:
+        apr_terminate()
+        pressanykey()
+        terminate() <void terminate (void) at support/htpasswd.c:267> (recursive: see 97)
+    check_args() <void check_args (apr_pool_t *pool, int argc, const char *const argv[], int *alg, int *mask, char **user, char **pwfilename, char **password) at support/htpasswd.c:324>:
+        usage() <void usage (void) at support/htpasswd.c:259>:
+            apr_file_printf()
+        apr_file_printf()
+        apr_pstrdup()
+    exists() <int exists (char *fname, apr_pool_t *pool) at support/htpasswd.c:307>:
+        apr_stat()
+    accessible() <int accessible (apr_pool_t *pool, char *fname, int mode) at support/htpasswd.c:293>:
+        apr_file_open()
+        apr_file_close()
+    mkrecord() <int mkrecord (char *user, char *record, apr_size_t rlen, char *passwd, int alg) at support/htpasswd.c:168>:
+        apr_password_get()
+        seed_rand() <apr_status_t seed_rand (void) at support/htpasswd.c:137>:
+            apr_generate_random_bytes()
+            apr_file_printf()
+        generate_salt() <void generate_salt (char *s, size_t size) at support/htpasswd.c:126>:
+        apr_md5_encode()
+        to64() <void to64 (char *s, unsigned long v, int n) at support/htpasswd.c:114>:
+        apr_file_printf()
+    apr_temp_dir_get()
+    apr_psprintf()
+    putline() <void putline (apr_file_t *f, const char *l) at support/htpasswd.c:150>:
+        apr_file_puts()
+        apr_strerror()
+        apr_file_printf()
+        apr_file_close()
+    apr_file_close()
+    apr_file_copy()

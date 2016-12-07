@@ -1,0 +1,52 @@
+{"idx": "-1", "name": "root", "filename": "", "linkCount": 0, "childrenChangedFlag": 0, "recursive": 0, "children":[
+{"idx": "0","name": "main","filename": "htpasswd.c","linkCount": 0,"childrenChangedFlag": 1,"recursive": 0,"children": [
+	{"idx": "1","name": "accessible","filename": "htpasswd.c","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": [
+		{"idx": "2","name": "apr_file_close","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "apr_file_open","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []}
+		
+		]},
+	{"idx": "1","name": "apr_app_initialize","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+	{"idx": "1","name": "apr_file_close","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+	{"idx": "1","name": "apr_file_copy","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+	{"idx": "1","name": "apr_psprintf","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+	{"idx": "1","name": "apr_temp_dir_get","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+	{"idx": "1","name": "check_args","filename": "htpasswd.c","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": [
+		{"idx": "2","name": "apr_file_printf","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "apr_pstrdup","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "usage","filename": "htpasswd.c","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": [
+			{"idx": "3","name": "apr_file_printf","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []}
+			
+			]}
+		]},
+	{"idx": "1","name": "exists","filename": "htpasswd.c","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": [
+		{"idx": "2","name": "apr_stat","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []}
+		
+		]},
+	{"idx": "1","name": "mkrecord","filename": "htpasswd.c","linkCount": 0,"childrenChangedFlag": 1,"recursive": 0,"children": [
+		{"idx": "2","name": "apr_file_printf","filename": "","linkCount": 1,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "apr_md5_encode","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "apr_password_get","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "generate_salt","filename": "htpasswd.c","linkCount": 1,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "seed_rand","filename": "htpasswd.c","linkCount": 1,"childrenChangedFlag": 1,"recursive": 0,"children": [
+			{"idx": "3","name": "apr_file_printf","filename": "","linkCount": 1,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+			{"idx": "3","name": "apr_generate_random_bytes","filename": "","linkCount": 1,"childrenChangedFlag": 0,"recursive": 0,"children": []}
+			
+		]},
+		{"idx": "2","name": "time","filename": "mod_auth_digest.c","linkCount": -1,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "to64","filename": "htpasswd.c","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []}
+		
+		]},
+	{"idx": "1","name": "putline","filename": "htpasswd.c","linkCount": 0,"childrenChangedFlag": 1,"recursive": 0,"children": [
+		{"idx": "2","name": "apr_file_close","filename": "","linkCount": 1,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "apr_file_printf","filename": "","linkCount": 1,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "apr_file_puts","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "apr_strerror","filename": "","linkCount": 1,"childrenChangedFlag": 0,"recursive": 0,"children": []}
+		
+		]},
+	{"idx": "1","name": "terminate","filename": "htpasswd.c","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": [
+		{"idx": "2","name": "apr_terminate","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "pressanykey","filename": "","linkCount": 0,"childrenChangedFlag": 0,"recursive": 0,"children": []},
+		{"idx": "2","name": "terminate","filename": "htpasswd.c","linkCount": 0,"childrenChangedFlag": 0,"recursive": 1,"children": []}
+		]}
+	]}
+]}

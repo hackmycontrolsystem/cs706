@@ -1,0 +1,24 @@
+.requiredClass{ border:1px solid #f00; }
+
+.modal-dialog {
+  transform: none; /*translate(0px, 0px);*/
+}
+
+.module {
+  background: white;
+  border: 0px solid #ccc;
+}
+
+.module > h2 {
+  padding: 1rem;
+  margin: 0 0 0.5rem 0;
+}
+.module > p {
+  padding: 0 1rem;
+}
+
+.stripe-2 {
+  color: black;
+  background: repeating-linear-gradient(45deg, rgba(212, 208, 208, 0), rgb(236, 221, 221) 2px, #F7EAEA 1px, rgb(255, 255, 255) 5px), linear-gradient(to bottom, rgb(243, 212, 212), rgb(255, 255, 255));
+  //background: -webkit-repeating-linear-gradient(45deg, transparent, rgb(255, 255, 255) 2px, #DEC0C0 1px, #E8D7D7 20px), -webkit-linear-gradient(top, #FFF, #FFFFFF);
+}

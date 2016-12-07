@@ -1,0 +1,122 @@
+$mast
+system_name System
+$end
+
+$structure
+coord_type fractional
+
+begin elementmap
+X1 Si
+X2 C
+end
+
+#begin lattice and coordinates irrelavent for defect type calc, where initial coordinates (POSCAR) are required to provided.
+begin lattice
+3.5 0 0
+0 3.5 0
+0 0 3.5
+end
+
+begin coordinates
+X1 0.0000000000 0.0000000000 0.0000000000
+X1 0.5000000000 0.5000000000 0.0000000000
+X1 0.0000000000 0.5000000000 0.5000000000
+X1 0.5000000000 0.0000000000 0.5000000000
+end
+
+$end
+
+$ingredients
+begin GAvasp
+mast_nodes 1
+mast_multiplyencut 1.5
+mast_walltime 24
+mast_ppn 16
+mast_queue pre
+mast_exec python /home/hko8/Canopy/appdata/canopy-1.4.1.1975.rh5-x86_64/lib/python2.7/site-packages/MAST-1.2.9.4-py2.7.egg/MAST/structopt/Optimizer.py
+mast_write_method            write_singlerun
+mast_ready_method            ready_singlerun
+mast_run_method              run_singlerun
+mast_complete_method         complete_singlerun
+mast_update_children_method  give_structure
+mast_program   structopt
+
+## INCAR parameters
+istart 0
+ibrion 2
+nsw 3
+#nsw 39		# HK : In the current setting, if one structure did not converged for 3 runs, A low fitness(high energy) is arbitrary assigned so that this structure is excluded. 
+isif 2
+ismear 0
+sigma 0.2
+encut 300
+#encut 750
+npar 1
+lcharg False
+lwave False
+ediff 1E-3
+prec Accurate
+mast_kpoints 1x1x1 M
+mast_xc PBE
+exec_mast //opt/mpiexec/bin/mpiexec //share/apps/bin/vasp5.2_CNEB > vasp.out
+
+
+## GA parameters
+structure Defect
+optimizer_type GA
+filename FeAu
+atomlist [('Fe',0,55.485,-4.1224),('Au',1,196.966,-7)]
+algorithm_type lambda+mu
+natoms 1
+nindiv 10
+r_ab 1.6
+size 2.6
+indiv_defect_write false
+cxpb 0.55
+mutpb 0.40
+cx_scheme cxtpa
+fitness_scheme totalenfit
+selection_scheme fuss
+natural_selection_scheme best
+convergence_scheme max_gen
+predator mutation_dups
+demin 0.1
+mutant_add false
+mutation_options ['lattice_alteration_rdrd','lattice_alteration','rotation_geo','rotation','random_replacement']
+forcing concentration
+calc_method MAST_VASP
+pair_style None
+pot_file /home/usitguest/USIT/dropbox_app/potentialFile.txt
+lammps_keep_files false
+ase_min false
+lammps_min None
+lammps_min_style cg
+genealogy true
+output_format formationenergy
+allenergyfile true
+best_inds_list true
+latticeconcentration true
+debug ['None']
+sf 1.75
+supercell (1,1,1)
+solidfile /home/usitguest/USIT/dropbox_app/solidFile.txt
+solidcell (5.75,5.75,5.75)
+evalsolid false
+finddefects true
+alloy false
+random_loc_start false
+trackvacs false
+trackswaps false
+random_vac_start false
+maxgen 3
+
+end
+
+$end
+
+$recipe
+perfect_opt1 (GAvasp)
+$end
+$personal_recipe
+perfect_opt1 (GAvasp)
+$end
