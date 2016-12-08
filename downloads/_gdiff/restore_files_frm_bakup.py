@@ -7,7 +7,7 @@ from shutil import copyfile
 print "*****Starting GDiff Restoring files frm backup script...******\n"
 
 # Read the gdiff_tags file
-filename = open("/tmp/gdiff/runs/gdiff_tags", 'r')
+filename = open(sys.argv[1], 'r')
 
 # Files that contain main functions
 # Dictionary: {filename: line_number for main()}

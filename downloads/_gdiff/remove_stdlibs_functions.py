@@ -16,8 +16,10 @@ for line in functions_filename:
 #print "All std funstions list ", std_funs
 functions_filename.close()
 
-input_filename = open("/tmp/gdiff/runs/all_cflow","r")
-output_filename = open("/tmp/gdiff/runs/gdiff_cflow","w")
+#input_filename = open("/tmp/gdiff/runs/all_cflow","r")
+#output_filename = open("/tmp/gdiff/runs/gdiff_cflow_v1","w")
+input_filename = open(sys.argv[1],"r")
+output_filename = open(sys.argv[2],"w")
 
 removed_counter = 0
 for line in input_filename:
