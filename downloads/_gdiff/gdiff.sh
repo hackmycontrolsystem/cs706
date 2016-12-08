@@ -36,7 +36,7 @@ echo "*************** Run cflow on all *.c files ***********"
 echo "Running cflow..."
 cd ${PATH_V1}
 
-cflow server/*.c modules/aaa/*.c modules/arch/*.c modules/cache/*.c support/*.c os/beos/beosd.c os/bs2000/*.c os/netware/*.c os/os2/*.c os/tpf/*.c os/unix/*.c os/win32/*.c  -o /tmp/gdiff/runs/all_cflow
+cflow server/*.c server/mpm/event/*.c server/mpm/worker/*.c server/mpm/netware/*.c server/mpm/prefork/*.c server/mpm/winnt/*.c server/mpm/mpmt_os2/*.c  modules/aaa/*.c modules/arch/*.c modules/cache/*.c support/*.c os/beos/beosd.c os/bs2000/*.c os/netware/*.c os/os2/*.c os/tpf/*.c os/unix/*.c os/win32/*.c  -o /tmp/gdiff/runs/all_cflow
 
 cd $SAVE_CWD
 
@@ -48,4 +48,35 @@ echo "Removed standard library functions from all_flow and result stored in gdif
 echo "**************Restoring backups...*********"
 python restore_files_frm_bakup.py /tmp/gdiff/runs/gdiff_tags_v1 
 
+echo " *********** Run for ver2 ********** "
+
+echo "************** Generate ctags ************"
+ctags -RV -x --c-types=f ${PATH_V2}/* > /tmp/gdiff/runs/gdiff_tags_v2
+echo "ctags generated as file /tmp/gdiff/runs/gdiff_tags_v2"
+
+
+echo "************** Processing ctags...***********"
+python parse_ctags.py /tmp/gdiff/runs/gdiff_tags_v2
+
+
+echo "************ finding all *.c files in project ***********"
+find ${PATH_V2}/* -type f -name "*.c" > /tmp/gdiff/runs/find_output_v2
+echo "all files are listed in /tmp/gdiff/runs/find_output_v2 file\n"
+
+SAVE_CWD=$PWD
+echo "*************** Run cflow on all *.c files ***********"
+echo "Running cflow..."
+cd ${PATH_V2}
+
+cflow server/*.c server/mpm/event/*.c server/mpm/worker/*.c server/mpm/netware/*.c server/mpm/prefork/*.c server/mpm/winnt/*.c server/mpm/mpmt_os2/*.c  modules/aaa/*.c modules/arch/*.c modules/cache/*.c support/*.c os/beos/beosd.c os/bs2000/*.c os/netware/*.c os/os2/*.c os/tpf/*.c os/unix/*.c os/win32/*.c  -o /tmp/gdiff/runs/all_cflow2
+
+cd $SAVE_CWD
+
+echo "cflow output at  /tmp/gdiff/runs/all_cflow2 file"
+python remove_stdlibs_functions.py /tmp/gdiff/runs/all_cflow2 /tmp/gdiff/runs/gdiff_cflow_v2
+
+echo "Removed standard library functions from all_flow and result stored in gdiff_cflow2\n"
+
+echo "**************Restoring backups...*********"
+python restore_files_frm_bakup.py /tmp/gdiff/runs/gdiff_tags_v2
 

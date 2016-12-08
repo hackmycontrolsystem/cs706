@@ -21,15 +21,14 @@ echo "************** Generate ctags ************"
 ctags -RV -x --c-types=f ${PATH_V1}/* > /tmp/gdiff/runs/gdiff_tags_v1
 echo "ctags generated as file /tmp/gdiff/gdiff_tags_v1"
 
+
 echo "***************Processing ctags...***********"
 python parse_ctags.py /tmp/gdiff/runs/gdiff_tags_v1
 
 
-#echo "*************** finding all *.c files in project ***********"
-
-#find ./ -type f -name "*.c" > find_output
-#echo "all files are listed in find_output file\n"
-
+echo "************ finding all *.c files in project ***********"
+find ${PATH_V1}/* -type f -name "*.c" > /tmp/gdiff/runs/find_output
+echo "all files are listed in find_output file\n"
 
 #echo "*************** Run cflow on all *.c files ***********"
 #echo "Running cflow...\n"
