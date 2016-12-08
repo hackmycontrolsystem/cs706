@@ -48,7 +48,15 @@ echo "Removed standard library functions from all_flow and result stored in gdif
 echo "**************Restoring backups...*********"
 python restore_files_frm_bakup.py /tmp/gdiff/runs/gdiff_tags_v1 
 
+
+
+
+
 echo " *********** Run for ver2 ********** "
+if [[ $2 == *"NULL"* ]]; then
+echo "Version 2 not present. Exit.."
+exit 0
+fi
 
 echo "************** Generate ctags ************"
 ctags -RV -x --c-types=f ${PATH_V2}/* > /tmp/gdiff/runs/gdiff_tags_v2
