@@ -1,5 +1,5 @@
-sysfs_add_file() <int sysfs_add_file (struct kernfs_node parent, const struct attribute *attr, bool is_bin) at file.c:309>:
-    sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+sysfs_add_file() <int sysfs_add_file (struct kernfs_node parent, const struct attribute *attr, bool is_bin) at file.c:315>:
+    sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:246>:
         WARN()
         kobject_name()
         IS_ERR()
@@ -9,7 +9,7 @@ sysfs_add_file() <int sysfs_add_file (struct kernfs_node parent, const struct at
             kernfs_path()
             WARN()
             kfree()
-sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:246>:
     WARN()
     kobject_name()
     IS_ERR()
@@ -19,11 +19,11 @@ sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent,
         kernfs_path()
         WARN()
         kfree()
-sysfs_add_file_to_group() <int sysfs_add_file_to_group (struct kobject kobj, const struct attribute *attr, const char *group) at file.c:351>:
+sysfs_add_file_to_group() <int sysfs_add_file_to_group (struct kobject kobj, const struct attribute *attr, const char *group) at file.c:357>:
     kernfs_find_and_get()
     kernfs_get()
-    sysfs_add_file() <int sysfs_add_file (struct kernfs_node parent, const struct attribute *attr, bool is_bin) at file.c:309>:
-        sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+    sysfs_add_file() <int sysfs_add_file (struct kernfs_node parent, const struct attribute *attr, bool is_bin) at file.c:315>:
+        sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:246>:
             WARN()
             kobject_name()
             IS_ERR()
@@ -52,14 +52,14 @@ sysfs_add_link_to_group() <int sysfs_add_link_to_group (struct kobject kobj, con
                 WARN()
                 kfree()
     kernfs_put()
-sysfs_chmod_file() <int sysfs_chmod_file (struct kobject kobj, const struct attribute *attr, umode_t mode) at file.c:381>:
+sysfs_chmod_file() <int sysfs_chmod_file (struct kobject kobj, const struct attribute *attr, umode_t mode) at file.c:387>:
     kernfs_find_and_get()
     kernfs_setattr()
     kernfs_put()
-sysfs_create_bin_file() <int sysfs_create_bin_file (struct kobject kobj, const struct bin_attribute *attr) at file.c:480>:
+sysfs_create_bin_file() <int sysfs_create_bin_file (struct kobject kobj, const struct bin_attribute *attr) at file.c:486>:
     BUG_ON()
-    sysfs_add_file() <int sysfs_add_file (struct kernfs_node parent, const struct attribute *attr, bool is_bin) at file.c:309>:
-        sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+    sysfs_add_file() <int sysfs_add_file (struct kernfs_node parent, const struct attribute *attr, bool is_bin) at file.c:315>:
+        sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:246>:
             WARN()
             kobject_name()
             IS_ERR()
@@ -80,9 +80,9 @@ sysfs_create_dir_ns() <int sysfs_create_dir_ns (struct kobject kobj, const void 
         kernfs_path()
         WARN()
         kfree()
-sysfs_create_file_ns() <int sysfs_create_file_ns (struct kobject kobj, const struct attribute *attr, const void *ns) at file.c:321>:
+sysfs_create_file_ns() <int sysfs_create_file_ns (struct kobject kobj, const struct attribute *attr, const void *ns) at file.c:327>:
     BUG_ON()
-    sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+    sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:246>:
         WARN()
         kobject_name()
         IS_ERR()
@@ -92,7 +92,7 @@ sysfs_create_file_ns() <int sysfs_create_file_ns (struct kobject kobj, const str
             kernfs_path()
             WARN()
             kfree()
-sysfs_create_files() <int sysfs_create_files (struct kobject kobj, const struct attribute **ptr) at file.c:331>:
+sysfs_create_files() <int sysfs_create_files (struct kobject kobj, const struct attribute **ptr) at file.c:337>:
     sysfs_create_file()
     sysfs_remove_file()
 sysfs_create_group() <int sysfs_create_group (struct kobject kobj, const struct attribute_group *grp) at group.c:153>:
@@ -112,7 +112,7 @@ sysfs_create_group() <int sysfs_create_group (struct kobject kobj, const struct 
         create_files() <int create_files (struct kernfs_node parent, struct kobject kobj, const struct attribute_group *grp, int update) at group.c:35>:
             kernfs_remove_by_name()
             WARN()
-            sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+            sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:246>:
                 WARN()
                 kobject_name()
                 IS_ERR()
@@ -145,7 +145,7 @@ sysfs_create_groups() <int sysfs_create_groups (struct kobject kobj, const struc
             create_files() <int create_files (struct kernfs_node parent, struct kobject kobj, const struct attribute_group *grp, int update) at group.c:35>:
                 kernfs_remove_by_name()
                 WARN()
-                sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+                sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:246>:
                     WARN()
                     kobject_name()
                     IS_ERR()
@@ -230,7 +230,7 @@ sysfs_delete_link() <void sysfs_delete_link (struct kobject kobj, struct kobject
     kernfs_ns_enabled()
     spin_unlock()
     kernfs_remove_by_name_ns()
-sysfs_init() <int __init sysfs_init (void) at mount.c:65>:
+sysfs_init() <int __init sysfs_init (void) at mount.c:64>:
     kernfs_create_root()
     IS_ERR()
     PTR_ERR()
@@ -238,8 +238,8 @@ sysfs_init() <int __init sysfs_init (void) at mount.c:65>:
     kernfs_destroy_root()
 sysfs_merge_group() <int sysfs_merge_group (struct kobject kobj, const struct attribute_group *grp) at group.c:282>:
     kernfs_find_and_get()
-    sysfs_add_file() <int sysfs_add_file (struct kernfs_node parent, const struct attribute *attr, bool is_bin) at file.c:309>:
-        sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+    sysfs_add_file() <int sysfs_add_file (struct kernfs_node parent, const struct attribute *attr, bool is_bin) at file.c:315>:
+        sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:246>:
             WARN()
             kobject_name()
             IS_ERR()
@@ -253,12 +253,12 @@ sysfs_merge_group() <int sysfs_merge_group (struct kobject kobj, const struct at
     kernfs_put()
 sysfs_move_dir_ns() <int sysfs_move_dir_ns (struct kobject kobj, struct kobject new_parent_kobj, const void *new_ns) at dir.c:113>:
     kernfs_rename_ns()
-sysfs_notify() <void sysfs_notify (struct kobject kobj, const char *dir, const char *attr) at file.c:167>:
+sysfs_notify() <void sysfs_notify (struct kobject kobj, const char *dir, const char *attr) at file.c:173>:
     kernfs_find_and_get()
     kernfs_get()
     kernfs_put()
     kernfs_notify()
-sysfs_remove_bin_file() <void sysfs_remove_bin_file (struct kobject kobj, const struct bin_attribute *attr) at file.c:494>:
+sysfs_remove_bin_file() <void sysfs_remove_bin_file (struct kobject kobj, const struct bin_attribute *attr) at file.c:500>:
     kernfs_remove_by_name()
 sysfs_remove_dir() <void sysfs_remove_dir (struct kobject kobj) at dir.c:75>:
     spin_lock()
@@ -266,19 +266,19 @@ sysfs_remove_dir() <void sysfs_remove_dir (struct kobject kobj) at dir.c:75>:
     WARN_ON_ONCE()
     kernfs_type()
     kernfs_remove()
-sysfs_remove_file_from_group() <void sysfs_remove_file_from_group (struct kobject kobj, const struct attribute *attr, const char *group) at file.c:456>:
+sysfs_remove_file_from_group() <void sysfs_remove_file_from_group (struct kobject kobj, const struct attribute *attr, const char *group) at file.c:462>:
     kernfs_find_and_get()
     kernfs_get()
     kernfs_remove_by_name()
     kernfs_put()
-sysfs_remove_file_ns() <void sysfs_remove_file_ns (struct kobject kobj, const struct attribute *attr, const void *ns) at file.c:410>:
+sysfs_remove_file_ns() <void sysfs_remove_file_ns (struct kobject kobj, const struct attribute *attr, const void *ns) at file.c:416>:
     kernfs_remove_by_name_ns()
-sysfs_remove_file_self() <bool sysfs_remove_file_self (struct kobject kobj, const struct attribute *attr) at file.c:426>:
+sysfs_remove_file_self() <bool sysfs_remove_file_self (struct kobject kobj, const struct attribute *attr) at file.c:432>:
     kernfs_find_and_get()
     WARN_ON_ONCE()
     kernfs_remove_self()
     kernfs_put()
-sysfs_remove_files() <void sysfs_remove_files (struct kobject kobj, const struct attribute **ptr) at file.c:442>:
+sysfs_remove_files() <void sysfs_remove_files (struct kobject kobj, const struct attribute **ptr) at file.c:448>:
     sysfs_remove_file()
 sysfs_remove_group() <void sysfs_remove_group (struct kobject kobj, const struct attribute_group *grp) at group.c:226>:
     kernfs_find_and_get()
@@ -337,7 +337,7 @@ sysfs_update_group() <int sysfs_update_group (struct kobject kobj, const struct 
         create_files() <int create_files (struct kernfs_node parent, struct kobject kobj, const struct attribute_group *grp, int update) at group.c:35>:
             kernfs_remove_by_name()
             WARN()
-            sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+            sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:246>:
                 WARN()
                 kobject_name()
                 IS_ERR()
