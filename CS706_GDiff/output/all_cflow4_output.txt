@@ -1,3 +1,73 @@
+00~~AP_CORE_DECLARE() < at server/util_mutex.c:500>:~~1~~0~~0
+01~~APLOGNO()~~1~~0~~0
+01~~APR_ARRAY_IDX()~~1~~0~~0
+01~~APR_STATUS_IS_ENOENT()~~1~~0~~0
+01~~APR_STATUS_IS_ENOTDIR()~~1~~0~~0
+01~~ap_assert()~~1~~0~~0
+01~~ap_build_config()~~1~~0~~0
+01~~ap_cfg_closefile()~~1~~0~~0
+01~~ap_create_per_dir_config()~~1~~0~~0
+01~~ap_find_command()~~1~~0~~0
+01~~ap_get_core_module_config()~~1~~0~~0
+01~~ap_get_module_config()~~1~~0~~0
+01~~ap_getword_conf()~~1~~0~~0
+01~~ap_hook_pre_config()~~1~~0~~0
+01~~ap_http_scheme()~~1~~0~~0
+01~~ap_is_HTTP_VALID_RESPONSE()~~1~~0~~0
+01~~ap_log_error()~~1~~0~~0
+01~~ap_log_rerror()~~1~~0~~0
+01~~ap_make_full_path()~~1~~0~~0
+01~~ap_parse_vhost_addrs() <const char *ap_parse_vhost_addrs (apr_pool_t *p, const char *hostname, server_rec *s) at server/vhost.c:224>:~~1~~0~~0
+02~~ap_getword_conf()~~1~~0~~0
+02~~err() <void err (const char *s) at support/ab.c:371>:~~1~~0~~0
+02~~get_addresses() <const char *get_addresses (apr_pool_t *p, const char *w_, server_addr_rec ***paddr, apr_port_t default_port) at server/vhost.c:146>:~~1~~0~~0
+03~~APLOGNO()~~1~~0~~0
+03~~ap_log_error()~~1~~0~~0
+03~~apr_parse_addr_port()~~1~~0~~0
+03~~apr_pcalloc()~~1~~0~~0
+03~~apr_pstrmemdup()~~1~~0~~0
+03~~apr_sockaddr_info_get()~~1~~0~~0
+01~~ap_pcfg_openfile()~~1~~0~~0
+01~~ap_run_handler()~~1~~0~~0
+01~~ap_run_insert_filter()~~1~~0~~0
+01~~ap_run_pre_connection()~~1~~0~~0
+01~~ap_run_process_connection()~~1~~0~~0
+01~~ap_server_root_relative()~~1~~0~~0
+01~~ap_set_module_config()~~1~~0~~0
+01~~ap_strchr_c()~~1~~0~~0
+01~~ap_update_vhost_given_ip()~~1~~0~~0
+01~~ap_walk_config()~~1~~0~~0
+01~~apr_array_make()~~1~~0~~0
+01~~apr_array_push()~~1~~0~~0
+01~~apr_file_printf()~~1~~0~~0
+01~~apr_generate_random_bytes()~~1~~0~~0
+01~~apr_hash_first()~~1~~0~~0
+01~~apr_hash_get()~~1~~0~~0
+01~~apr_hash_next()~~1~~0~~0
+01~~apr_hash_this()~~1~~0~~0
+01~~apr_palloc()~~1~~0~~0
+01~~apr_pcalloc()~~1~~0~~0
+01~~apr_pmemdup()~~1~~0~~0
+01~~apr_pstrdup()~~1~~0~~0
+01~~apr_random_add_entropy()~~1~~0~~0
+01~~apr_random_insecure_bytes()~~1~~0~~0
+01~~apr_random_insecure_ready()~~1~~0~~0
+01~~apr_random_standard_new()~~1~~0~~0
+01~~apr_table_get()~~1~~0~~0
+01~~apr_table_setn()~~1~~0~~0
+01~~apr_uri_parse()~~1~~0~~0
+01~~apr_uri_parse_hostinfo()~~1~~0~~0
+01~~conf_vector_length_pre_config() <int conf_vector_length_pre_config (apr_pool_t *pconf, apr_pool_t *plog, apr_pool_t *ptemp) at server/config.c:2306>:~~1~~0~~0
+02~~apr_pool_cleanup_register()~~1~~0~~0
+02~~reset_conf_vector_length() <apr_status_t reset_conf_vector_length (void *dummy) at server/config.c:2299>:~~1~~0~~0
+01~~create_empty_config() <ap_conf_vector_t *create_empty_config (apr_pool_t *p) at server/config.c:256>:~~1~~0~~0
+02~~apr_pcalloc()~~1~~0~~0
+01~~invoke_filter_init() <int invoke_filter_init (request_rec *r, ap_filter_t *filters) at server/config.c:357>:~~1~~0~~0
+02~~filter_init_func()~~1~~0~~0
+01~~mxcfg_lookup() <mutex_cfg_t *mxcfg_lookup (apr_pool_t *p, const char *type) at server/util_mutex.c:318>:~~1~~0~~0
+02~~apr_hash_get()~~1~~0~~0
+02~~apr_pmemdup()~~1~~0~~0
+02~~mutex_needs_file() <int mutex_needs_file (apr_lockmech_e mech) at server/util_mutex.c:278>:~~1~~0~~0
 00~~main() <int main_htpasswd (int argc, const char *const argv[]) at support/htpasswd.c:439>:~~1~~0~~0
 01~~accessible() <int accessible (apr_pool_t *pool, char *fname, int mode) at support/htpasswd.c:293>:~~1~~0~~0
 02~~apr_file_close()~~1~~0~~0

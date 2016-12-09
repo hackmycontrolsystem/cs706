@@ -1,3 +1,47 @@
+AP_CORE_DECLARE() < at server/protocol.c:485>:
+    apr_palloc()
+    create_empty_config() <ap_conf_vector_t *create_empty_config (apr_pool_t *p) at server/config.c:207>:
+        apr_pcalloc()
+    ap_run_insert_filter()
+    ap_invoke_filter_init() <int ap_invoke_filter_init (ap_filter_t *filters) at server/config.c:309>:
+        filter_init_func()
+    ap_default_type()
+    ap_strchr_c()
+    apr_pmemdup()
+    ap_run_handler()
+    ap_log_rerror()
+    ap_find_command()
+    ap_get_module_config()
+    ap_set_module_config()
+    apr_pstrdup()
+    ap_make_full_path()
+    ap_getword_conf()
+    ap_pcfg_openfile()
+    ap_create_per_dir_config()
+    ap_build_config()
+    ap_walk_config()
+    ap_cfg_closefile()
+    APR_STATUS_IS_ENOENT()
+    APR_STATUS_IS_ENOTDIR()
+    apr_table_setn()
+    apr_pcalloc()
+    apr_array_make()
+    ap_parse_vhost_addrs() <const char *ap_parse_vhost_addrs (apr_pool_t *p, const char *hostname, server_rec *s) at server/vhost.c:225>:
+        err() <void err (char *s) at support/ab.c:350>:
+        get_addresses() <const char *get_addresses (apr_pool_t *p, const char *w_, server_addr_rec ***paddr, apr_port_t default_port) at server/vhost.c:139>:
+            apr_pstrdup()
+            apr_parse_addr_port()
+            apr_sockaddr_info_get()
+            ap_log_error()
+            apr_pcalloc()
+        ap_getword_conf()
+    ap_update_vhost_given_ip()
+    ap_run_pre_connection()
+    ap_run_process_connection()
+    apr_array_push()
+    apr_uri_parse_hostinfo()
+    apr_uri_parse()
+    ap_http_scheme()
 main() <int main_htpasswd (int argc, const char *const argv[]) at support/htpasswd.c:390>:
     apr_app_initialize()
     terminate() <void terminate (void) at support/htpasswd.c:267>:

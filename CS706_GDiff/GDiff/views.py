@@ -30,10 +30,13 @@ def StructOpt():
         bugLink = ""
         try:
             bugLink = "\"" + app.config["BUG_LINK"] + "\""
-            graphData = parseData(app.config["CFLOW_VERSION1"], app.config["CFLOW_VERSION2"])
+            file2 = app.config["CFLOW_VERSION2"]
+            graphData = parseData(app.config["CFLOW_VERSION1"], file2)
             with open(currentWorkingDir + '/output/graphData.txt', 'w') as the_file:
                 the_file.write(graphData)
-            return render_template("gdiff.html", graphData=graphData, bugLink=bugLink, foo=1);
+            collapeModified = 1
+            if(file2 == None): collapeModified = 0
+            return render_template("gdiff.html", graphData=graphData, bugLink=bugLink, collapeModified=collapeModified, foo=1);
         except Exception as e:
             logging.exception('Error: %s', e)
         return render_template("gdiff.html");
@@ -282,7 +285,7 @@ def generateOutputFile(fileName, version):
         if(leading_spaces == 0 and ln.find("main()")!=-1):
             flag = 1
         elif(leading_spaces == 0):
-            flag = 0
+            flag = 1
         if(line.strip().find("recursive:")!=-1):
             recursiveFlag = 1
         if(flag == 1): 
@@ -356,14 +359,18 @@ def associateBugData(file):
     
 def parseData(fileName1, fileName2):
     actualFileName1 = fileName1[(fileName1.rindex("/")+1):]
-    actualFileName2 = fileName2[(fileName2.rindex("/")+1):]
     generateOutputFile(fileName1, 1)
-    generateOutputFile(fileName2, 2)
+    file1 = currentWorkingDir + '/output/' + actualFileName1 + '_output.txt'
+    
+    if(fileName2 == None):
+        file2 = None
+    else:
+        actualFileName2 = fileName2[(fileName2.rindex("/")+1):]
+        generateOutputFile(fileName2, 2)
+        file2 = currentWorkingDir + '/output/' + actualFileName2 + '_output.txt'
     
     prevIdx = -1
 
-    file1 = currentWorkingDir + '/output/' + actualFileName1 + '_output.txt'
-    file2 = currentWorkingDir + '/output/' + actualFileName2 + '_output.txt'
     outFile = currentWorkingDir + '/output/output.txt'
     sortFile(file1)
     if(file2 != None):
