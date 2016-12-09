@@ -7,11 +7,11 @@
 01~~apr_file_copy()~~0~~0~~0
 01~~apr_psprintf()~~0~~0~~0
 01~~apr_temp_dir_get()~~0~~0~~0
-01~~check_args() <void check_args (apr_pool_t *pool, int argc, const char *const argv[], int *alg, int *mask, char **user, char **pwfilename, char **password) at support/htpasswd.c:275>:~~0~~0~~0
+01~~check_args() <void check_args (apr_pool_t *pool, int argc, const char *const argv[], int *alg, int *mask, char **user, char **pwfilename, char **password) at support/htpasswd.c:275>:~~0~~0~~0~~55914##55915##55916##55917##55918##55919
 02~~apr_file_printf()~~0~~0~~0
 02~~apr_pstrdup()~~0~~0~~0
-02~~usage() <void usage (void) at support/htpasswd.c:206>:~~0~~0~~0
-03~~apr_file_printf()~~0~~0~~0
+02~~usage() <void usage (void) at support/htpasswd.c:206>:~~0~~0~~0~~55914##55915##55916##55917##55918##55919
+03~~apr_file_printf()~~0~~0~~0~~55914##55915##55916##55917##55918##55919
 01~~exists() <int exists (char *fname, apr_pool_t *pool) at support/htpasswd.c:258>:~~0~~0~~0
 02~~apr_stat()~~0~~0~~0
 01~~mkrecord() <int mkrecord (char *user, char *record, apr_size_t rlen, char *passwd, int alg) at support/htpasswd.c:128>:~~0~~1~~0

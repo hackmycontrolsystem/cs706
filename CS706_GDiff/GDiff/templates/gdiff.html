@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="/static/css/jquery.edittable.min.css">
 	<link rel="stylesheet" href="/static/css/graph.css">	
  </head>
-  <body style="padding-top: 70px;">
+  <body style="padding-top: 70px;" onload="expandChanged()">
   <div class="navbar navbar-default navbar-fixed-top" id="nav">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -56,6 +56,7 @@
     <script type="text/javascript" src="/static/js/Blob.js"></script>
     <script type="text/javascript" src="/static/js/FileSaver.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <script>
     $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     
@@ -217,6 +218,7 @@
 
     	{% autoescape false %}
     	var flare = {{ graphData }};
+    	var bugLink = {{ bugLink }}
     	{% endautoescape %}
     	
     	root = flare;
@@ -324,6 +326,7 @@
     		    	  var color = 'black'
     		    	  if(linkCount == -1) color = 'red';
     		    	  else if(linkCount == 1) color = 'green';
+    		    	  if(d.target.bugs!="" && d.target.bugs.split("##").length > 4) color = 'orange'
     		    	  return color; });
 
     		  // Transition links to their new position.
@@ -359,6 +362,34 @@
     		  update(d);
     		}
 
+    		function showTip(d){
+    			tip.html(function(a) {
+    				//var url = "https://bz.apache.org/bugzilla/show_bug.cgi?id="
+    				var htmlString = "<strong>Bugs</strong><br><br><span style='color:#03a9f4'><ul>";
+    				var bugs = d.bugs.split("##");
+    				for(var i=0; i<bugs.length; i++){
+    					htmlString += '<li><a style="color:#03a9f4" href="' + bugLink + bugs[i] + '">' + bugs[i] + '</a></li>';
+    				}
+    				htmlString += "</ul></span>";
+        		    return htmlString;
+      		  })
+      		  tip.show()
+    		}
+    		
+    		function hideTip(d){
+      		  tip.hide()
+    		}
+    		
+    		var tip = d3.tip()
+    		  .attr('class', 'd3-tip')
+    		  .offset([-10, 0])
+    		  
+    		svg.call(tip);
+    		
+    		d3.select("body").on("click",function(){
+    		    tip.hide();
+    		});
+    		
     		function mouseover(d) {
     			var showText = d.name;
     			if(d.filename!="")
@@ -372,8 +403,10 @@
     		    d3.select(this).select("circle").transition()
     		      .duration(750)
     		      .attr("r", 12);
+    		    if(d.bugs!="")
+    		    	showTip(d)
     		}
-
+    		
     		// Toggle children on click.
     		function mouseout(d) {
     		    d3.select(this).select("text.hover").remove();
