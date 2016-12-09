@@ -6,9 +6,7 @@ import glob
 def parseBugCallTrace():
     app.config.from_pyfile('config_file.cfg');
     folderPath = app.config["BUG_DIRECTORY"]
-    print folderPath
     allFiles = glob.glob(folderPath+"*.txt")
-    print glob.glob(folderPath+"*.txt")
     contents = ""
     for file in allFiles:
         val = getCallHierarchy(file)
@@ -20,7 +18,6 @@ def parseBugCallTrace():
         the_file.write(contents)
         
 def getCallHierarchy(file):
-    print file
     f = open(file,"r")
     lines = f.readlines()
     i=0

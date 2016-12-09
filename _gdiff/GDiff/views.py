@@ -6,7 +6,7 @@ import re
 
 
 app = Flask(__name__)
-currentWorkingDir = '/Users/mehreenali/Documents/workspace/CS706_GDiff' #os.getcwd()
+currentWorkingDir = os.getcwd()
 
 def resource_path(relative):
     if hasattr(sys, "_MEIPASS"):
@@ -208,7 +208,6 @@ def sortFile(file):
         the_file.write(contents)
     
 def generatedDiffGraphData(file1, file2):
-    #resultFile = '/Users/mehreenali/Documents/workspace/CS706_GDiff/output/output.txt'
     resultFile = currentWorkingDir + '/output/output.txt'
     f = open(file1,"r")
     lines1 = f.readlines()
