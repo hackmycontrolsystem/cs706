@@ -6,7 +6,8 @@ import re
 
 
 app = Flask(__name__)
-currentWorkingDir = '/Users/mehreenali/Documents/workspace/CS706_GDiff' #os.getcwd()
+currentWorkingDir = os.getcwd()
+#currentWorkingDir = '/Users/mehreenali/Documents/workspace/CS706_GDiff' #os.getcwd()
 
 def resource_path(relative):
     if hasattr(sys, "_MEIPASS"):
