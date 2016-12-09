@@ -1,0 +1,63 @@
+
+
+General
+=================================
+UUID: 079ec19d-b1e8-4283-abe3-894214b5d0d1
+OS: Fedora release 16 (Verne)
+Default run level: Unknown
+Language: en_US.UTF-8
+Platform: x86_64
+BogoMIPS: 3332.58
+CPU Vendor: GenuineIntel
+CPU Model: Intel(R) Atom(TM) CPU N450   @ 1.66GHz
+CPU Stepping: 10
+CPU Family: 6
+CPU Model Num: 28
+Number of CPUs: 2
+CPU Speed: 1667
+System Memory: 1995
+System Swap: 3071
+Vendor: ASUSTeK Computer INC.
+System: 1005P x.x
+Form factor: Notebook
+Kernel: 3.1.4-1.fc16.x86_64
+SELinux Enabled: 1
+SELinux Policy: targeted
+SELinux Enforce: Enforcing
+MythTV Remote: Unknown
+MythTV Role: Unknown
+MythTV Theme: Unknown
+MythTV Plugin: 
+MythTV Tuner: -1
+
+
+Devices
+=================================
+(32902:10172:4163:33709) pci, None, PCI/ISA, NM10 Family LPC Controller
+(5772:43:6715:4233) pci, ath9k, NETWORK, AR9285 Wireless Network Adapter (PCI-Express)
+(32902:40977:4163:33708) pci, i915, VIDEO, N10 Family Integrated Graphics Controller
+(32902:40978:4163:33708) pci, None, VIDEO, N10 Family Integrated Graphics Controller
+(32902:10192:4163:33709) pci, pcieport, PCI/PCI, N10/ICH 7 Family PCI Express Port 1
+(32902:10194:4163:33709) pci, pcieport, PCI/PCI, N10/ICH 7 Family PCI Express Port 2
+(6505:4194:4163:33674) pci, atl1c, ETHERNET, AR8132 Fast Ethernet
+(32902:10200:4163:33742) pci, snd_hda_intel, MULTIMEDIA, N10/ICH 7 Family High Definition Audio Controller
+(32902:10177:4163:33709) pci, ahci, STORAGE, N10/ICH7 Family SATA AHCI Controller
+(32902:10202:4163:33709) pci, i801_smbus, SERIAL, N10/ICH 7 Family SMBus Controller
+(32902:9288:4163:33709) pci, None, PCI/PCI, 82801 Mobile PCI Bridge
+(32902:10198:4163:33709) pci, pcieport, PCI/PCI, N10/ICH 7 Family PCI Express Port 4
+(32902:10185:4163:33709) pci, uhci_hcd, USB, N10/ICH 7 Family USB UHCI Controller #2
+(32902:10184:4163:33709) pci, uhci_hcd, USB, N10/ICH 7 Family USB UHCI Controller #1
+(32902:40976:4163:33708) pci, agpgart-intel, HOST/PCI, N10 Family DMI Bridge
+(32902:10186:4163:33709) pci, uhci_hcd, USB, N10/ICH 7 Family USB UHCI Controller #3
+(32902:10187:4163:33709) pci, uhci_hcd, USB, N10/ICH 7 Family USB UHCI Controller #4
+(32902:10188:4163:33709) pci, ehci_hcd, USB, N10/ICH 7 Family USB2 EHCI Controller
+
+
+Filesystem Information
+=================================
+device mtpt type bsize frsize blocks bfree bavail file ffree favail
+-------------------------------------------------------------------
+/dev/mapper/vg_on-lv_root / ext4 4096 4096 4128490 1834770 1792841 1048576 830836 830836
+/dev/sda2 /boot ext4 1024 1024 495844 413044 387444 128016 127741 127741
+/dev/mapper/vg_on-lv_data WITHHELD ext4 4096 4096 55057353 6586974 6027625 13983744 13819901 13819901
+

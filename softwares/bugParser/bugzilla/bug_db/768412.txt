@@ -1,0 +1,64 @@
+
+
+Général
+=================================
+UUID: 184a04ea-b58a-4e16-8a4f-fb72e2d3248d
+SE: Fedora release 16 (Verne)
+Niveau d'exécution par défaut: Unknown
+Langue: fr_FR.utf8
+Plateforme: i686
+BogoMIPS: 4522.21
+Fabricant du processeurs: GenuineIntel
+Modèle de processeur: Intel(R) Core(TM)2 Duo CPU     P9300  @ 2.26GHz
+Stepping du processeur: 10
+Famille de processeur: 6
+Modèle du processeur: 23
+Nombre de processeurs: 2
+Vitesse du processeur: 2267
+Mémoire du système: 1944
+Swap du système: 3903
+Fabricant: Hewlett-Packard
+Système: HP ProBook 5310m F.09
+Type d'ordinateur: Notebook
+Noyau: 3.1.0-7.fc16.i686
+SELinux activé: 1
+Stratégie SELinux: targeted
+SELinux strict: Enforcing
+MythTV Remote: Unknown
+MythTV Role: Unknown
+MythTV Theme: Unknown
+MythTV Plugin: 
+MythTV Tuner: -1
+
+
+Périphériques
+=================================
+(32902:10550:4156:13876) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #3
+(32902:16951:32902:4881) pci, iwlagn, NETWORK, WiFi Link 5100 AGN
+(32902:10818:4156:13876) pci, i915, VIDEO, Mobile 4 Series Chipset Integrated Graphics Controller
+(32902:10819:4156:13876) pci, None, VIDEO, Mobile 4 Series Chipset Integrated Graphics Controller
+(32902:10560:0:0) pci, pcieport, PCI/PCI, 82801I (ICH9 Family) PCI Express Port 1
+(32902:10562:0:0) pci, pcieport, PCI/PCI, 82801I (ICH9 Family) PCI Express Port 2
+(32902:10519:4156:13876) pci, None, PCI/ISA, ICH9M-E LPC Interface Controller
+(32902:10558:4156:13876) pci, snd_hda_intel, MULTIMEDIA, 82801I (ICH9 Family) HD Audio Controller
+(32902:10537:4156:13876) pci, ahci, STORAGE, ICH9M/M-E SATA AHCI Controller
+(32902:10549:4156:13876) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #2
+(32902:9288:0:0) pci, None, PCI/PCI, 82801 Mobile PCI Bridge
+(32902:10548:4156:13876) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #1
+(32902:10551:4156:13876) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #4
+(32902:10552:4156:13876) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #5
+(32902:10816:4156:13876) pci, agpgart-intel, HOST/PCI, Mobile 4 Series Chipset Memory Controller Hub
+(32902:10570:0:0) pci, pcieport, PCI/PCI, 82801I (ICH9 Family) PCI Express Port 6
+(32902:10553:4156:13876) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #6
+(32902:10554:4156:13876) pci, ehci_hcd, USB, 82801I (ICH9 Family) USB2 EHCI Controller #1
+(32902:10556:4156:13876) pci, ehci_hcd, USB, 82801I (ICH9 Family) USB2 EHCI Controller #2
+
+
+Informations sur le système de fichiers
+=================================
+device mtpt type bsize frsize blocks bfree bavail file ffree favail
+-------------------------------------------------------------------
+/dev/mapper/vg_stephlaptop-lv_root / ext4 4096 4096 8498624 2167389 2081072 2162688 1923555 1923555
+/dev/sda2 /boot ext4 1024 1024 495844 417242 391642 128016 127785 127785
+/dev/sdb1 WITHHELD vfat 32768 32768 245984 98488 98488 0 0 0
+

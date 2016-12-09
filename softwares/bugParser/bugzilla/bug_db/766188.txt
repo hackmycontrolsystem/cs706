@@ -1,0 +1,73 @@
+
+
+General
+=================================
+UUID: 78b3088d-a17c-4eca-af8a-8e3b3ee9da70
+OS: Fedora release 16 (Verne)
+Default run level: Unknown
+Language: en_US.UTF-8
+Platform: x86_64
+BogoMIPS: 4786.82
+CPU Vendor: GenuineIntel
+CPU Model: Intel(R) Core(TM)2 Duo CPU     P8600  @ 2.40GHz
+CPU Stepping: 10
+CPU Family: 6
+CPU Model Num: 23
+Number of CPUs: 2
+CPU Speed: 2401
+System Memory: 3951
+System Swap: 3999
+Vendor: Dell Inc.
+System: Studio XPS 1640 A083
+Form factor: Portable
+Kernel: 3.1.4-1.fc16.x86_64
+SELinux Enabled: 1
+SELinux Policy: targeted
+SELinux Enforce: Permissive
+MythTV Remote: Unknown
+MythTV Role: Unknown
+MythTV Theme: Unknown
+MythTV Plugin: 
+MythTV Tuner: -1
+
+
+Devices
+=================================
+(5348:5784:4136:626) pci, tg3, ETHERNET, NetLink BCM5784M Gigabit Ethernet PCIe
+(32902:10816:4136:626) pci, None, HOST/PCI, Mobile 4 Series Chipset Memory Controller Hub
+(32902:10817:4136:626) pci, pcieport, PCI/PCI, Mobile 4 Series Chipset PCI Express Graphics Port
+(32902:16946:32902:4897) pci, iwlagn, NETWORK, WiFi Link 5100 AGN
+(32902:10544:4136:626) pci, i801_smbus, SERIAL, 82801I (ICH9 Family) SMBus Controller
+(32902:10537:4136:626) pci, ahci, STORAGE, ICH9M/M-E SATA AHCI Controller
+(32902:10521:4136:626) pci, None, PCI/ISA, ICH9M LPC Interface Controller
+(32902:9288:0:0) pci, None, PCI/PCI, 82801 Mobile PCI Bridge
+(32902:10549:4136:626) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #2
+(32902:10548:4136:626) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #1
+(32902:10553:4136:626) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #6
+(32902:10550:4136:626) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #3
+(32902:10554:4136:626) pci, ehci_hcd, USB, 82801I (ICH9 Family) USB2 EHCI Controller #1
+(32902:10556:4136:626) pci, ehci_hcd, USB, 82801I (ICH9 Family) USB2 EHCI Controller #2
+(4480:2130:4136:626) pci, r852, BASE, xD-Picture Card Controller
+(32902:10566:0:0) pci, pcieport, PCI/PCI, 82801I (ICH9 Family) PCI Express Port 4
+(32902:10560:0:0) pci, pcieport, PCI/PCI, 82801I (ICH9 Family) PCI Express Port 1
+(32902:10562:0:0) pci, pcieport, PCI/PCI, 82801I (ICH9 Family) PCI Express Port 2
+(4480:2098:4136:626) pci, firewire_ohci, FIREWIRE, R5C832 IEEE 1394 Controller
+(4480:2082:4136:626) pci, sdhci-pci, BASE, R5C822 SD/SDIO/MMC/MS/MSPro Host Adapter
+(4480:1426:4136:626) pci, r592, BASE, R5C592 Memory Stick Bus Host Adapter
+(32902:10558:4136:626) pci, snd_hda_intel, MULTIMEDIA, 82801I (ICH9 Family) HD Audio Controller
+(32902:10551:4136:626) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #4
+(32902:10552:4136:626) pci, uhci_hcd, USB, 82801I (ICH9 Family) USB UHCI Controller #5
+(4098:43552:4136:626) pci, snd_hda_intel, MULTIMEDIA, RV635 Audio device [Radeon HD 3600 Series]
+(4098:38291:4136:626) pci, radeon, VIDEO, Radeon Mobility HD 3670
+(32902:10570:0:0) pci, pcieport, PCI/PCI, 82801I (ICH9 Family) PCI Express Port 6
+
+
+Filesystem Information
+=================================
+device mtpt type bsize frsize blocks bfree bavail file ffree favail
+-------------------------------------------------------------------
+/dev/mapper/vg_reddog-LV_Root / ext4 4096 4096 5039583 1982104 1726104 1281120 885196 885196
+/dev/sda1 /boot ext4 1024 1024 495844 413051 387451 128016 127789 127789
+/dev/mapper/vg_reddog-LV_Protected WITHHELD ext4 4096 4096 48061847 10572931 8131511 12214272 12199039 12199039
+/dev/mapper/luks-54982b00-f735-46c5-a32f-44f4ebeb0263 /home ext4 4096 4096 22677541 10605341 9453367 5767168 5268629 5268629
+
