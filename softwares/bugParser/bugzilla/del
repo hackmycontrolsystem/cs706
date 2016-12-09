@@ -1,0 +1,4 @@
+Reading XML fle and get list of all bugs inodes_bug_data.xml
+Total bugs:  117
+An error occurred while crawling bug: https://bz.apache.org/bugzilla/show_bug.cgi?id=711661
+Bug 711661 does not exist!

@@ -1,0 +1,2065 @@
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.12.6-300.fc20.x86_64 (mockbuild@bkernel02) (gcc version 4.8.2 20131212 (Red Hat 4.8.2-7) (GCC) ) #1 SMP Mon Dec 23 16:44:31 UTC 2013
+[    0.000000] Command line: BOOT_IMAGE=/vmlinuz-3.12.6-300.fc20.x86_64 root=UUID=6c3f7e06-070b-4dda-8b0d-cd2005d78930 ro vconsole.font=latarcyrheb-sun16 rhgb quiet LANG=en_US.UTF-8
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009f3ff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009f400-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000d2000-0x00000000000d3fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000dc000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000b5aa0fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000b5aa1000-0x00000000b5aa6fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000b5aa7000-0x00000000b5bcffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000b5bd0000-0x00000000b5c0efff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000b5c0f000-0x00000000b5d08fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000b5d09000-0x00000000b5f0efff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000b5f0f000-0x00000000b5f18fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000b5f19000-0x00000000b5f1efff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000b5f1f000-0x00000000b5f63fff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000b5f64000-0x00000000b5f9efff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x00000000b5f9f000-0x00000000b5fdcfff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000b5fdd000-0x00000000b5ffefff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000b5fff000-0x00000000b5ffffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000013fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.5 present.
+[    0.000000] DMI: TOSHIBA SATELLITE T130/SATELLITE T130, BIOS V2.70    07/08/2010
+[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] No AGP bridge found
+[    0.000000] e820: last_pfn = 0x140000 max_arch_pfn = 0x400000000
+[    0.000000] MTRR default type: uncachable
+[    0.000000] MTRR fixed ranges enabled:
+[    0.000000]   00000-9FFFF write-back
+[    0.000000]   A0000-BFFFF uncachable
+[    0.000000]   C0000-D3FFF write-protect
+[    0.000000]   D4000-DFFFF uncachable
+[    0.000000]   E0000-FFFFF write-protect
+[    0.000000] MTRR variable ranges enabled:
+[    0.000000]   0 base 000000000 mask F80000000 write-back
+[    0.000000]   1 base 080000000 mask FC0000000 write-back
+[    0.000000]   2 base 100000000 mask FC0000000 write-back
+[    0.000000]   3 base 0B8000000 mask FF8000000 uncachable
+[    0.000000]   4 base 0B7E00000 mask FFFE00000 uncachable
+[    0.000000]   5 disabled
+[    0.000000]   6 disabled
+[    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+[    0.000000] e820: update [mem 0xb7e00000-0xffffffff] usable ==> reserved
+[    0.000000] e820: last_pfn = 0xb6000 max_arch_pfn = 0x400000000
+[    0.000000] found SMP MP-table at [mem 0x000f6aa0-0x000f6aaf] mapped at [ffff8800000f6aa0]
+[    0.000000] Base memory trampoline at [ffff880000099000] 99000 size 24576
+[    0.000000] init_memory_mapping: [mem 0x00000000-0x000fffff]
+[    0.000000]  [mem 0x00000000-0x000fffff] page 4k
+[    0.000000] BRK [0x02017000, 0x02017fff] PGTABLE
+[    0.000000] BRK [0x02018000, 0x02018fff] PGTABLE
+[    0.000000] BRK [0x02019000, 0x02019fff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x13fe00000-0x13fffffff]
+[    0.000000]  [mem 0x13fe00000-0x13fffffff] page 2M
+[    0.000000] BRK [0x0201a000, 0x0201afff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x13c000000-0x13fdfffff]
+[    0.000000]  [mem 0x13c000000-0x13fdfffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x100000000-0x13bffffff]
+[    0.000000]  [mem 0x100000000-0x13bffffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x00100000-0xb5aa0fff]
+[    0.000000]  [mem 0x00100000-0x001fffff] page 4k
+[    0.000000]  [mem 0x00200000-0xb59fffff] page 2M
+[    0.000000]  [mem 0xb5a00000-0xb5aa0fff] page 4k
+[    0.000000] init_memory_mapping: [mem 0xb5aa7000-0xb5bcffff]
+[    0.000000]  [mem 0xb5aa7000-0xb5bcffff] page 4k
+[    0.000000] init_memory_mapping: [mem 0xb5c0f000-0xb5d08fff]
+[    0.000000]  [mem 0xb5c0f000-0xb5d08fff] page 4k
+[    0.000000] BRK [0x0201b000, 0x0201bfff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0xb5f0f000-0xb5f18fff]
+[    0.000000]  [mem 0xb5f0f000-0xb5f18fff] page 4k
+[    0.000000] BRK [0x0201c000, 0x0201cfff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0xb5f1f000-0xb5f63fff]
+[    0.000000]  [mem 0xb5f1f000-0xb5f63fff] page 4k
+[    0.000000] init_memory_mapping: [mem 0xb5f9f000-0xb5fdcfff]
+[    0.000000]  [mem 0xb5f9f000-0xb5fdcfff] page 4k
+[    0.000000] init_memory_mapping: [mem 0xb5fff000-0xb5ffffff]
+[    0.000000]  [mem 0xb5fff000-0xb5ffffff] page 4k
+[    0.000000] RAMDISK: [mem 0x36c62000-0x37628fff]
+[    0.000000] ACPI: RSDP 00000000000f69e0 00024 (v02 TOSQCI)
+[    0.000000] ACPI: XSDT 00000000b5ff10c2 00074 (v01 TOSQCI TOSQCI00 06040000  LTP 00000000)
+[    0.000000] ACPI: FACP 00000000b5fe1000 000F4 (v03 T0SQCI TOSQCI00 06040000 ALAN 00000001)
+[    0.000000] ACPI: DSDT 00000000b5fe2000 0D92A (v02 TOSQCI CANTIGA  06040000 INTL 20061109)
+[    0.000000] ACPI: FACS 00000000b5f9efc0 00040
+[    0.000000] ACPI: HPET 00000000b5ffed86 00038 (v01 TOSQCI TOSQCI00 06040000 LOHR 0000005A)
+[    0.000000] ACPI: MCFG 00000000b5ffedbe 0003C (v01 TOSQCI TOSQCI00 06040000 LOHR 0000005A)
+[    0.000000] ACPI: APIC 00000000b5ffedfa 00068 (v01 PTLTD  ? APIC   06040000  LTP 00000000)
+[    0.000000] ACPI: BOOT 00000000b5ffee62 00028 (v01 PTLTD  $SBFTBL$ 06040000  LTP 00000001)
+[    0.000000] ACPI: SLIC 00000000b5ffee8a 00176 (v01 TOSQCI TOSQCI00 06040000  LTP 00000000)
+[    0.000000] ACPI: SSDT 00000000b5ff115e 00196 (v01 SataRe SataAhci 00001000 INTL 20061109)
+[    0.000000] ACPI: SSDT 00000000b5fe0000 00655 (v01  PmRef    CpuPm 00003000 INTL 20061109)
+[    0.000000] ACPI: SSDT 00000000b5fdf000 00259 (v01  PmRef  Cpu0Tst 00003000 INTL 20061109)
+[    0.000000] ACPI: SSDT 00000000b5fde000 0020F (v01  PmRef    ApTst 00003000 INTL 20061109)
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000013fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x00000000-0x13fffffff]
+[    0.000000]   NODE_DATA [mem 0x13ffe9000-0x13fffcfff]
+[    0.000000]  [ffffea0000000000-ffffea0004ffffff] PMD -> [ffff88013b800000-ffff88013f5fffff] on node 0
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x00001000-0x00ffffff]
+[    0.000000]   DMA32    [mem 0x01000000-0xffffffff]
+[    0.000000]   Normal   [mem 0x100000000-0x13fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00001000-0x0009efff]
+[    0.000000]   node   0: [mem 0x00100000-0xb5aa0fff]
+[    0.000000]   node   0: [mem 0xb5aa7000-0xb5bcffff]
+[    0.000000]   node   0: [mem 0xb5c0f000-0xb5d08fff]
+[    0.000000]   node   0: [mem 0xb5f0f000-0xb5f18fff]
+[    0.000000]   node   0: [mem 0xb5f1f000-0xb5f63fff]
+[    0.000000]   node   0: [mem 0xb5f9f000-0xb5fdcfff]
+[    0.000000]   node   0: [mem 0xb5fff000-0xb5ffffff]
+[    0.000000]   node   0: [mem 0x100000000-0x13fffffff]
+[    0.000000] On node 0 totalpages: 1006832
+[    0.000000]   DMA zone: 64 pages used for memmap
+[    0.000000]   DMA zone: 21 pages reserved
+[    0.000000]   DMA zone: 3998 pages, LIFO batch:0
+[    0.000000]   DMA32 zone: 11574 pages used for memmap
+[    0.000000]   DMA32 zone: 740690 pages, LIFO batch:31
+[    0.000000]   Normal zone: 4096 pages used for memmap
+[    0.000000]   Normal zone: 262144 pages, LIFO batch:31
+[    0.000000] ACPI: PM-Timer IO Port: 0x408
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x01] lapic_id[0x01] enabled)
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.000000] ACPI: IOAPIC (id[0x02] address[0xfec00000] gsi_base[0])
+[    0.000000] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 high edge)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.000000] ACPI: IRQ0 used by override.
+[    0.000000] ACPI: IRQ2 used by override.
+[    0.000000] ACPI: IRQ9 used by override.
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.000000] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+[    0.000000] nr_irqs_gsi: 40
+[    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000d1fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000d2000-0x000d3fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000d4000-0x000dbfff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000dc000-0x000fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xb5aa1000-0xb5aa6fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xb5bd0000-0xb5c0efff]
+[    0.000000] PM: Registered nosave memory: [mem 0xb5d09000-0xb5f0efff]
+[    0.000000] PM: Registered nosave memory: [mem 0xb5f19000-0xb5f1efff]
+[    0.000000] PM: Registered nosave memory: [mem 0xb5f64000-0xb5f9efff]
+[    0.000000] PM: Registered nosave memory: [mem 0xb5fdd000-0xb5ffefff]
+[    0.000000] PM: Registered nosave memory: [mem 0xb6000000-0xb7ffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xb8000000-0xbfffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xc0000000-0xffffffff]
+[    0.000000] e820: [mem 0xc0000000-0xffffffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on bare hardware
+[    0.000000] setup_percpu: NR_CPUS:1024 nr_cpumask_bits:1024 nr_cpu_ids:2 nr_node_ids:1
+[    0.000000] PERCPU: Embedded 29 pages/cpu @ffff88013fc00000 s86784 r8192 d23808 u1048576
+[    0.000000] pcpu-alloc: s86784 r8192 d23808 u1048576 alloc=1*2097152
+[    0.000000] pcpu-alloc: [0] 0 1 
+[    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 991077
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: BOOT_IMAGE=/vmlinuz-3.12.6-300.fc20.x86_64 root=UUID=6c3f7e06-070b-4dda-8b0d-cd2005d78930 ro vconsole.font=latarcyrheb-sun16 rhgb quiet LANG=en_US.UTF-8
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] xsave: enabled xstate_bv 0x3, cntxt size 0x240
+[    0.000000] Checking aperture...
+[    0.000000] No AGP bridge found
+[    0.000000] Memory: 3870784K/4027328K available (6616K kernel code, 1040K rwdata, 2932K rodata, 1444K init, 1664K bss, 156544K reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=1024 to nr_cpu_ids=2.
+[    0.000000] NR_IRQS:65792 nr_irqs:512 16
+[    0.000000] Console: colour VGA+ 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] allocated 16252928 bytes of page_cgroup
+[    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+[    0.000000] hpet clockevent registered
+[    0.000000] tsc: Fast TSC calibration using PIT
+[    0.000000] tsc: Detected 1296.751 MHz processor
+[    0.001005] Calibrating delay loop (skipped), value calculated using timer frequency.. 2593.50 BogoMIPS (lpj=1296751)
+[    0.001011] pid_max: default: 32768 minimum: 301
+[    0.001069] Security Framework initialized
+[    0.001082] SELinux:  Initializing.
+[    0.001097] SELinux:  Starting in permissive mode
+[    0.002062] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.004693] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.005863] Mount-cache hash table entries: 256
+[    0.006279] Initializing cgroup subsys memory
+[    0.006307] Initializing cgroup subsys devices
+[    0.006310] Initializing cgroup subsys freezer
+[    0.006314] Initializing cgroup subsys net_cls
+[    0.006317] Initializing cgroup subsys blkio
+[    0.006320] Initializing cgroup subsys perf_event
+[    0.006325] Initializing cgroup subsys hugetlb
+[    0.006367] CPU: Physical Processor ID: 0
+[    0.006369] CPU: Processor Core ID: 0
+[    0.006372] mce: CPU supports 6 MCE banks
+[    0.006385] CPU0: Thermal monitoring enabled (TM2)
+[    0.006396] Last level iTLB entries: 4KB 128, 2MB 4, 4MB 4
+Last level dTLB entries: 4KB 256, 2MB 0, 4MB 32
+tlb_flushall_shift: -1
+[    0.006547] Freeing SMP alternatives memory: 24K (ffffffff81e6f000 - ffffffff81e75000)
+[    0.009259] ACPI: Core revision 20130725
+[    0.019970] ACPI: All ACPI Tables successfully acquired
+[    0.020021] ftrace: allocating 25431 entries in 100 pages
+[    0.032609] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.042718] smpboot: CPU0: Genuine Intel(R) CPU           U4100  @ 1.30GHz (fam: 06, model: 17, stepping: 0a)
+[    0.043000] Performance Events: PEBS fmt0+, 4-deep LBR, Core2 events, Intel PMU driver.
+[    0.043000] ... version:                2
+[    0.043000] ... bit width:              40
+[    0.043000] ... generic registers:      2
+[    0.043000] ... value mask:             000000ffffffffff
+[    0.043000] ... max period:             000000007fffffff
+[    0.043000] ... fixed-purpose events:   3
+[    0.043000] ... event mask:             0000000700000003
+[    0.045081] smpboot: Booting Node   0, Processors  #   1 OK
+[    0.057058] Brought up 2 CPUs
+[    0.057064] smpboot: Total of 2 processors activated (5187.00 BogoMIPS)
+[    0.057178] NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+[    0.058196] devtmpfs: initialized
+[    0.059037] PM: Registering ACPI NVS region [mem 0xb5f64000-0xb5f9efff] (241664 bytes)
+[    0.060891] atomic64 test passed for x86-64 platform with CX8 and with SSE
+[    0.060894] pinctrl core: initialized pinctrl subsystem
+[    0.060975] RTC time: 11:12:49, date: 01/12/14
+[    0.061059] NET: Registered protocol family 16
+[    0.061210] cpuidle: using governor menu
+[    0.061288] ACPI FADT declares the system doesn't support PCIe ASPM, so disable it
+[    0.061291] ACPI: bus type PCI registered
+[    0.061294] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.061399] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+[    0.061404] PCI: not using MMCONFIG
+[    0.061407] PCI: Using configuration type 1 for base access
+[    0.063106] bio: create slab <bio-0> at 0
+[    0.063106] ACPI: Added _OSI(Module Device)
+[    0.063106] ACPI: Added _OSI(Processor Device)
+[    0.063106] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.063106] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.066005] ACPI: EC: Look up EC in DSDT
+[    0.072906] [Firmware Bug]: ACPI: BIOS _OSI(Linux) query ignored
+[    0.074951] ACPI: SSDT 00000000b5f1aca0 001E1 (v01  PmRef  Cpu0Ist 00003000 INTL 20061109)
+[    0.075602] ACPI: Dynamic OEM Table Load:
+[    0.075607] ACPI: SSDT           (null) 001E1 (v01  PmRef  Cpu0Ist 00003000 INTL 20061109)
+[    0.075789] ACPI: SSDT 00000000b5f19620 005B3 (v01  PmRef  Cpu0Cst 00003001 INTL 20061109)
+[    0.076413] ACPI: Dynamic OEM Table Load:
+[    0.076418] ACPI: SSDT           (null) 005B3 (v01  PmRef  Cpu0Cst 00003001 INTL 20061109)
+[    0.082383] ACPI: SSDT 00000000b5f1aa20 001CF (v01  PmRef    ApIst 00003000 INTL 20061109)
+[    0.083055] ACPI: Dynamic OEM Table Load:
+[    0.083059] ACPI: SSDT           (null) 001CF (v01  PmRef    ApIst 00003000 INTL 20061109)
+[    0.086117] ACPI: SSDT 00000000b5f1af20 0008D (v01  PmRef    ApCst 00003000 INTL 20061109)
+[    0.086758] ACPI: Dynamic OEM Table Load:
+[    0.086762] ACPI: SSDT           (null) 0008D (v01  PmRef    ApCst 00003000 INTL 20061109)
+[    0.102123] ACPI: Interpreter enabled
+[    0.102133] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20130725/hwxface-571)
+[    0.102142] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20130725/hwxface-571)
+[    0.102168] ACPI: (supports S0 S3 S4 S5)
+[    0.102171] ACPI: Using IOAPIC for interrupt routing
+[    0.102205] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+[    0.103071] PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in ACPI motherboard resources
+[    0.159205] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.159423] ACPI: No dock devices found.
+[    0.168331] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.168342] acpi PNP0A08:00: ACPI _OSC support notification failed, disabling PCIe ASPM
+[    0.168346] acpi PNP0A08:00: Unable to request _OSC control (_OSC support mask: 0x08)
+[    0.169588] ACPI: \_SB_.PCI0.PDRC: can't evaluate _ADR (0x5)
+[    0.169613] PCI host bridge to bus 0000:00
+[    0.169618] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.169622] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+[    0.169626] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff]
+[    0.169630] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+[    0.169634] pci_bus 0000:00: root bus resource [mem 0x000d4000-0x000d7fff]
+[    0.169638] pci_bus 0000:00: root bus resource [mem 0x000d8000-0x000dbfff]
+[    0.169642] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xdfffffff]
+[    0.169646] pci_bus 0000:00: root bus resource [mem 0xf0000000-0xfebfffff]
+[    0.169661] pci 0000:00:00.0: [8086:2a40] type 00 class 0x060000
+[    0.169694] DMAR: Forcing write-buffer flush capability
+[    0.169697] DMAR: Disabling IOMMU for graphics on this chipset
+[    0.169828] pci 0000:00:02.0: [8086:2a42] type 00 class 0x030000
+[    0.169850] pci 0000:00:02.0: reg 0x10: [mem 0xf0000000-0xf03fffff 64bit]
+[    0.169863] pci 0000:00:02.0: reg 0x18: [mem 0xd0000000-0xdfffffff 64bit pref]
+[    0.169872] pci 0000:00:02.0: reg 0x20: [io  0x1800-0x1807]
+[    0.170026] pci 0000:00:02.1: [8086:2a43] type 00 class 0x038000
+[    0.170044] pci 0000:00:02.1: reg 0x10: [mem 0xf0400000-0xf04fffff 64bit]
+[    0.170256] pci 0000:00:1a.0: [8086:2937] type 00 class 0x0c0300
+[    0.170326] pci 0000:00:1a.0: reg 0x20: [io  0x1820-0x183f]
+[    0.170483] pci 0000:00:1a.0: System wakeup disabled by ACPI
+[    0.170546] pci 0000:00:1a.1: [8086:2938] type 00 class 0x0c0300
+[    0.170616] pci 0000:00:1a.1: reg 0x20: [io  0x1840-0x185f]
+[    0.170774] pci 0000:00:1a.1: System wakeup disabled by ACPI
+[    0.170836] pci 0000:00:1a.2: [8086:2939] type 00 class 0x0c0300
+[    0.170907] pci 0000:00:1a.2: reg 0x20: [io  0x1860-0x187f]
+[    0.171066] pci 0000:00:1a.2: System wakeup disabled by ACPI
+[    0.171142] pci 0000:00:1a.7: [8086:293c] type 00 class 0x0c0320
+[    0.171175] pci 0000:00:1a.7: reg 0x10: [mem 0xf0904800-0xf0904bff]
+[    0.171311] pci 0000:00:1a.7: PME# supported from D0 D3hot D3cold
+[    0.171416] pci 0000:00:1a.7: System wakeup disabled by ACPI
+[    0.171486] pci 0000:00:1b.0: [8086:293e] type 00 class 0x040300
+[    0.171514] pci 0000:00:1b.0: reg 0x10: [mem 0xf0700000-0xf0703fff 64bit]
+[    0.171634] pci 0000:00:1b.0: PME# supported from D0 D3hot D3cold
+[    0.171718] pci 0000:00:1b.0: System wakeup disabled by ACPI
+[    0.171781] pci 0000:00:1c.0: [8086:2940] type 01 class 0x060400
+[    0.171897] pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+[    0.172051] pci 0000:00:1c.4: [8086:2948] type 01 class 0x060400
+[    0.172167] pci 0000:00:1c.4: PME# supported from D0 D3hot D3cold
+[    0.172253] pci 0000:00:1c.4: System wakeup disabled by ACPI
+[    0.172315] pci 0000:00:1c.5: [8086:294a] type 01 class 0x060400
+[    0.172430] pci 0000:00:1c.5: PME# supported from D0 D3hot D3cold
+[    0.172574] pci 0000:00:1d.0: [8086:2934] type 00 class 0x0c0300
+[    0.172645] pci 0000:00:1d.0: reg 0x20: [io  0x1880-0x189f]
+[    0.172798] pci 0000:00:1d.0: System wakeup disabled by ACPI
+[    0.172859] pci 0000:00:1d.1: [8086:2935] type 00 class 0x0c0300
+[    0.172929] pci 0000:00:1d.1: reg 0x20: [io  0x18a0-0x18bf]
+[    0.173087] pci 0000:00:1d.1: System wakeup disabled by ACPI
+[    0.173149] pci 0000:00:1d.2: [8086:2936] type 00 class 0x0c0300
+[    0.173219] pci 0000:00:1d.2: reg 0x20: [io  0x18c0-0x18df]
+[    0.173375] pci 0000:00:1d.2: System wakeup disabled by ACPI
+[    0.173451] pci 0000:00:1d.7: [8086:293a] type 00 class 0x0c0320
+[    0.173484] pci 0000:00:1d.7: reg 0x10: [mem 0xf0904c00-0xf0904fff]
+[    0.173620] pci 0000:00:1d.7: PME# supported from D0 D3hot D3cold
+[    0.173720] pci 0000:00:1d.7: System wakeup disabled by ACPI
+[    0.173783] pci 0000:00:1e.0: [8086:2448] type 01 class 0x060401
+[    0.173989] pci 0000:00:1f.0: [8086:2917] type 00 class 0x060100
+[    0.174283] pci 0000:00:1f.2: [8086:2929] type 00 class 0x010601
+[    0.174319] pci 0000:00:1f.2: reg 0x10: [io  0x1818-0x181f]
+[    0.174334] pci 0000:00:1f.2: reg 0x14: [io  0x180c-0x180f]
+[    0.174349] pci 0000:00:1f.2: reg 0x18: [io  0x1810-0x1817]
+[    0.174364] pci 0000:00:1f.2: reg 0x1c: [io  0x1808-0x180b]
+[    0.174379] pci 0000:00:1f.2: reg 0x20: [io  0x18e0-0x18ff]
+[    0.174395] pci 0000:00:1f.2: reg 0x24: [mem 0xf0904000-0xf09047ff]
+[    0.174482] pci 0000:00:1f.2: PME# supported from D3hot
+[    0.174613] pci 0000:00:1f.3: [8086:2930] type 00 class 0x0c0500
+[    0.174641] pci 0000:00:1f.3: reg 0x10: [mem 0x00000000-0x000000ff 64bit]
+[    0.174679] pci 0000:00:1f.3: reg 0x20: [io  0x1c00-0x1c1f]
+[    0.174925] pci 0000:00:1c.0: PCI bridge to [bus 02]
+[    0.174933] pci 0000:00:1c.0:   bridge window [io  0x0000-0x0fff]
+[    0.174941] pci 0000:00:1c.0:   bridge window [mem 0x00000000-0x000fffff]
+[    0.174951] pci 0000:00:1c.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.175098] pci 0000:07:00.0: [1969:1062] type 00 class 0x020000
+[    0.175131] pci 0000:07:00.0: reg 0x10: [mem 0x00000000-0x0003ffff 64bit]
+[    0.175147] pci 0000:07:00.0: reg 0x18: [io  0x0000-0x007f]
+[    0.175289] pci 0000:07:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    0.175337] pci 0000:07:00.0: System wakeup disabled by ACPI
+[    0.177028] pci 0000:00:1c.4: PCI bridge to [bus 07]
+[    0.177036] pci 0000:00:1c.4:   bridge window [io  0x0000-0x0fff]
+[    0.177043] pci 0000:00:1c.4:   bridge window [mem 0x00000000-0x000fffff]
+[    0.177053] pci 0000:00:1c.4:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.177936] pci 0000:08:00.0: [10ec:8172] type 00 class 0x028000
+[    0.178509] pci 0000:08:00.0: reg 0x10: [io  0x0000-0x00ff]
+[    0.178801] pci 0000:08:00.0: reg 0x14: [mem 0x00000000-0x00003fff]
+[    0.182753] pci 0000:08:00.0: supports D1 D2
+[    0.182757] pci 0000:08:00.0: PME# supported from D0 D1 D2 D3hot
+[    0.184530] pci 0000:00:1c.5: PCI bridge to [bus 08]
+[    0.184538] pci 0000:00:1c.5:   bridge window [io  0x0000-0x0fff]
+[    0.184545] pci 0000:00:1c.5:   bridge window [mem 0x00000000-0x000fffff]
+[    0.184555] pci 0000:00:1c.5:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    0.184693] pci 0000:00:1e.0: PCI bridge to [bus 0a] (subtractive decode)
+[    0.184711] pci 0000:00:1e.0:   bridge window [io  0x0000-0x0cf7] (subtractive decode)
+[    0.184715] pci 0000:00:1e.0:   bridge window [io  0x0d00-0xffff] (subtractive decode)
+[    0.184719] pci 0000:00:1e.0:   bridge window [mem 0x000a0000-0x000bffff] (subtractive decode)
+[    0.184722] pci 0000:00:1e.0:   bridge window [mem 0x000d4000-0x000d7fff] (subtractive decode)
+[    0.184726] pci 0000:00:1e.0:   bridge window [mem 0x000d8000-0x000dbfff] (subtractive decode)
+[    0.184730] pci 0000:00:1e.0:   bridge window [mem 0xc0000000-0xdfffffff] (subtractive decode)
+[    0.184734] pci 0000:00:1e.0:   bridge window [mem 0xf0000000-0xfebfffff] (subtractive decode)
+[    0.185525] ACPI: PCI Interrupt Link [LNKA] (IRQs 1 3 4 5 6 7 10 12 14 15) *11
+[    0.185625] ACPI: PCI Interrupt Link [LNKB] (IRQs 1 3 4 *5 6 7 11 12 14 15)
+[    0.185721] ACPI: PCI Interrupt Link [LNKC] (IRQs 1 3 4 5 *6 7 10 12 14 15)
+[    0.185816] ACPI: PCI Interrupt Link [LNKD] (IRQs 1 3 4 5 6 7 11 12 14 15) *10
+[    0.185912] ACPI: PCI Interrupt Link [LNKE] (IRQs 1 3 4 5 6 7 10 12 14 15) *0, disabled.
+[    0.186015] ACPI: PCI Interrupt Link [LNKF] (IRQs 1 3 4 5 6 7 *11 12 14 15)
+[    0.186110] ACPI: PCI Interrupt Link [LNKG] (IRQs 1 3 4 5 6 7 *10 12 14 15)
+[    0.186205] ACPI: PCI Interrupt Link [LNKH] (IRQs 1 3 4 5 6 *7 11 12 14 15)
+[    0.186730] ACPI: Enabled 5 GPEs in block 00 to 3F
+[    0.186744] ACPI: \_SB_.PCI0: notify handler is installed
+[    0.186820] Found 1 acpi root devices
+[    0.187277] ACPI: EC: GPE = 0x18, I/O: command/status = 0x66, data = 0x62
+[    0.187395] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+[    0.187395] vgaarb: loaded
+[    0.187395] vgaarb: bridge control possible 0000:00:02.0
+[    0.187395] SCSI subsystem initialized
+[    0.187395] libata version 3.00 loaded.
+[    0.187395] ACPI: bus type USB registered
+[    0.187395] usbcore: registered new interface driver usbfs
+[    0.187395] usbcore: registered new interface driver hub
+[    0.187395] usbcore: registered new device driver usb
+[    0.187395] PCI: Using ACPI for IRQ routing
+[    0.199744] PCI: pci_cache_line_size set to 64 bytes
+[    0.200011] e820: reserve RAM buffer [mem 0x0009f400-0x0009ffff]
+[    0.200014] e820: reserve RAM buffer [mem 0xb5aa1000-0xb7ffffff]
+[    0.200018] e820: reserve RAM buffer [mem 0xb5bd0000-0xb7ffffff]
+[    0.200022] e820: reserve RAM buffer [mem 0xb5d09000-0xb7ffffff]
+[    0.200026] e820: reserve RAM buffer [mem 0xb5f19000-0xb7ffffff]
+[    0.200029] e820: reserve RAM buffer [mem 0xb5f64000-0xb7ffffff]
+[    0.200032] e820: reserve RAM buffer [mem 0xb5fdd000-0xb7ffffff]
+[    0.200035] e820: reserve RAM buffer [mem 0xb6000000-0xb7ffffff]
+[    0.200188] NetLabel: Initializing
+[    0.200191] NetLabel:  domain hash size = 128
+[    0.200193] NetLabel:  protocols = UNLABELED CIPSOv4
+[    0.200216] NetLabel:  unlabeled traffic allowed by default
+[    0.200281] HPET: 4 timers in total, 0 timers will be used for per-cpu timer
+[    0.200289] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0
+[    0.200297] hpet0: 4 comparators, 64-bit 14.318180 MHz counter
+[    0.202029] Switched to clocksource hpet
+[    0.214398] pnp: PnP ACPI init
+[    0.214430] ACPI: bus type PNP registered
+[    0.214580] pnp 00:00: [dma 4]
+[    0.214623] pnp 00:00: Plug and Play ACPI device, IDs PNP0200 (active)
+[    0.214837] system 00:01: [mem 0xfed00000-0xfed003ff] has been reserved
+[    0.214844] system 00:01: Plug and Play ACPI device, IDs PNP0103 PNP0c01 (active)
+[    0.214908] pnp 00:02: Plug and Play ACPI device, IDs PNP0c04 (active)
+[    0.214969] pnp 00:03: disabling [io  0x002e-0x002f] because it overlaps 0000:07:00.0 BAR 2 [io  0x0000-0x007f]
+[    0.214975] pnp 00:03: disabling [io  0x004e-0x004f] because it overlaps 0000:07:00.0 BAR 2 [io  0x0000-0x007f]
+[    0.214979] pnp 00:03: disabling [io  0x0061] because it overlaps 0000:07:00.0 BAR 2 [io  0x0000-0x007f]
+[    0.214984] pnp 00:03: disabling [io  0x0063] because it overlaps 0000:07:00.0 BAR 2 [io  0x0000-0x007f]
+[    0.214988] pnp 00:03: disabling [io  0x0065] because it overlaps 0000:07:00.0 BAR 2 [io  0x0000-0x007f]
+[    0.214993] pnp 00:03: disabling [io  0x0067] because it overlaps 0000:07:00.0 BAR 2 [io  0x0000-0x007f]
+[    0.214998] pnp 00:03: disabling [io  0x0068] because it overlaps 0000:07:00.0 BAR 2 [io  0x0000-0x007f]
+[    0.215015] pnp 00:03: disabling [io  0x006c] because it overlaps 0000:07:00.0 BAR 2 [io  0x0000-0x007f]
+[    0.215020] pnp 00:03: disabling [io  0x0070] because it overlaps 0000:07:00.0 BAR 2 [io  0x0000-0x007f]
+[    0.215027] pnp 00:03: disabling [io  0x002e-0x002f disabled] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215032] pnp 00:03: disabling [io  0x004e-0x004f disabled] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215037] pnp 00:03: disabling [io  0x0061 disabled] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215041] pnp 00:03: disabling [io  0x0063 disabled] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215046] pnp 00:03: disabling [io  0x0065 disabled] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215051] pnp 00:03: disabling [io  0x0067 disabled] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215056] pnp 00:03: disabling [io  0x0068 disabled] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215060] pnp 00:03: disabling [io  0x006c disabled] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215065] pnp 00:03: disabling [io  0x0070 disabled] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215070] pnp 00:03: disabling [io  0x0080] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215074] pnp 00:03: disabling [io  0x0092] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215079] pnp 00:03: disabling [io  0x00b2-0x00b3] because it overlaps 0000:08:00.0 BAR 0 [io  0x0000-0x00ff]
+[    0.215122] system 00:03: [io  0x03e0-0x03e1] has been reserved
+[    0.215127] system 00:03: [io  0x0400-0x047f] could not be reserved
+[    0.215131] system 00:03: [io  0x0680-0x069f] has been reserved
+[    0.215135] system 00:03: [io  0x0480-0x048f] has been reserved
+[    0.215140] system 00:03: [io  0xffff] has been reserved
+[    0.215144] system 00:03: [io  0xffff] has been reserved
+[    0.215149] system 00:03: [io  0x1180-0x11ff] has been reserved
+[    0.215153] system 00:03: [io  0x164e-0x164f] has been reserved
+[    0.215157] system 00:03: [io  0xfe00] has been reserved
+[    0.215163] system 00:03: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.215214] pnp 00:04: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.215273] pnp 00:05: Plug and Play ACPI device, IDs PNP0303 (active)
+[    0.215350] pnp 00:06: Plug and Play ACPI device, IDs SYN1032 SYN1000 SYN0002 PNP0f13 (active)
+[    0.215487] pnp 00:07: disabling [mem 0x000000ff-0x000003fe] because it overlaps 0000:00:1f.3 BAR 0 [mem 0x00000000-0x000000ff 64bit]
+[    0.215493] pnp 00:07: disabling [mem 0x000000ff-0x000003fe disabled] because it overlaps 0000:07:00.0 BAR 0 [mem 0x00000000-0x0003ffff 64bit]
+[    0.215499] pnp 00:07: disabling [mem 0x000000ff-0x000003fe disabled] because it overlaps 0000:08:00.0 BAR 1 [mem 0x00000000-0x00003fff]
+[    0.215548] system 00:07: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.215731] system 00:08: [mem 0xfed1c000-0xfed1ffff] has been reserved
+[    0.215736] system 00:08: [mem 0xfed10000-0xfed13fff] has been reserved
+[    0.215740] system 00:08: [mem 0xfed18000-0xfed18fff] has been reserved
+[    0.215745] system 00:08: [mem 0xfed19000-0xfed19fff] has been reserved
+[    0.215749] system 00:08: [mem 0xe0000000-0xefffffff] has been reserved
+[    0.215753] system 00:08: [mem 0xfed20000-0xfed3ffff] has been reserved
+[    0.215758] system 00:08: [mem 0xfed45000-0xfed8ffff] has been reserved
+[    0.215762] system 00:08: [mem 0xff808000-0xff8080ff] has been reserved
+[    0.215768] system 00:08: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.216101] pnp: PnP ACPI: found 9 devices
+[    0.216104] ACPI: bus type PNP unregistered
+[    0.224392] pci 0000:00:1c.0: bridge window [io  0x1000-0x0fff] to [bus 02] add_size 1000
+[    0.224399] pci 0000:00:1c.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 02] add_size 200000
+[    0.224405] pci 0000:00:1c.0: bridge window [mem 0x00100000-0x000fffff] to [bus 02] add_size 200000
+[    0.224425] pci 0000:00:1c.4: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 07] add_size 200000
+[    0.224430] pci 0000:00:1c.4: bridge window [mem 0x00100000-0x001fffff] to [bus 07] add_size 200000
+[    0.224450] pci 0000:00:1c.5: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 08] add_size 200000
+[    0.224455] pci 0000:00:1c.5: bridge window [mem 0x00100000-0x001fffff] to [bus 08] add_size 200000
+[    0.224478] pci 0000:00:1c.0: res[14]=[mem 0x00100000-0x000fffff] get_res_add_size add_size 200000
+[    0.224483] pci 0000:00:1c.0: res[15]=[mem 0x00100000-0x000fffff 64bit pref] get_res_add_size add_size 200000
+[    0.224487] pci 0000:00:1c.4: res[14]=[mem 0x00100000-0x001fffff] get_res_add_size add_size 200000
+[    0.224491] pci 0000:00:1c.4: res[15]=[mem 0x00100000-0x000fffff 64bit pref] get_res_add_size add_size 200000
+[    0.224496] pci 0000:00:1c.5: res[14]=[mem 0x00100000-0x001fffff] get_res_add_size add_size 200000
+[    0.224500] pci 0000:00:1c.5: res[15]=[mem 0x00100000-0x000fffff 64bit pref] get_res_add_size add_size 200000
+[    0.224504] pci 0000:00:1c.0: res[13]=[io  0x1000-0x0fff] get_res_add_size add_size 1000
+[    0.224513] pci 0000:00:1c.0: BAR 14: assigned [mem 0xc0000000-0xc01fffff]
+[    0.224519] pci 0000:00:1c.0: BAR 15: assigned [mem 0xc0200000-0xc03fffff 64bit pref]
+[    0.224524] pci 0000:00:1c.4: BAR 14: assigned [mem 0xc0400000-0xc06fffff]
+[    0.224530] pci 0000:00:1c.4: BAR 15: assigned [mem 0xc0700000-0xc08fffff 64bit pref]
+[    0.224535] pci 0000:00:1c.5: BAR 14: assigned [mem 0xc0900000-0xc0bfffff]
+[    0.224540] pci 0000:00:1c.5: BAR 15: assigned [mem 0xc0c00000-0xc0dfffff 64bit pref]
+[    0.224546] pci 0000:00:1c.0: BAR 13: assigned [io  0x2000-0x2fff]
+[    0.224551] pci 0000:00:1c.4: BAR 13: assigned [io  0x3000-0x3fff]
+[    0.224557] pci 0000:00:1c.5: BAR 13: assigned [io  0x4000-0x4fff]
+[    0.224562] pci 0000:00:1f.3: BAR 0: assigned [mem 0xc0e00000-0xc0e000ff 64bit]
+[    0.224580] pci 0000:00:1c.0: PCI bridge to [bus 02]
+[    0.224586] pci 0000:00:1c.0:   bridge window [io  0x2000-0x2fff]
+[    0.224594] pci 0000:00:1c.0:   bridge window [mem 0xc0000000-0xc01fffff]
+[    0.224602] pci 0000:00:1c.0:   bridge window [mem 0xc0200000-0xc03fffff 64bit pref]
+[    0.224613] pci 0000:07:00.0: BAR 0: assigned [mem 0xc0400000-0xc043ffff 64bit]
+[    0.224633] pci 0000:07:00.0: BAR 2: assigned [io  0x3000-0x307f]
+[    0.224642] pci 0000:00:1c.4: PCI bridge to [bus 07]
+[    0.224647] pci 0000:00:1c.4:   bridge window [io  0x3000-0x3fff]
+[    0.224655] pci 0000:00:1c.4:   bridge window [mem 0xc0400000-0xc06fffff]
+[    0.224662] pci 0000:00:1c.4:   bridge window [mem 0xc0700000-0xc08fffff 64bit pref]
+[    0.224674] pci 0000:08:00.0: BAR 1: assigned [mem 0xc0900000-0xc0903fff]
+[    0.224785] pci 0000:08:00.0: BAR 0: assigned [io  0x4000-0x40ff]
+[    0.225013] pci 0000:00:1c.5: PCI bridge to [bus 08]
+[    0.225019] pci 0000:00:1c.5:   bridge window [io  0x4000-0x4fff]
+[    0.225027] pci 0000:00:1c.5:   bridge window [mem 0xc0900000-0xc0bfffff]
+[    0.225034] pci 0000:00:1c.5:   bridge window [mem 0xc0c00000-0xc0dfffff 64bit pref]
+[    0.225045] pci 0000:00:1e.0: PCI bridge to [bus 0a]
+[    0.225064] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+[    0.225068] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+[    0.225072] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+[    0.225076] pci_bus 0000:00: resource 7 [mem 0x000d4000-0x000d7fff]
+[    0.225080] pci_bus 0000:00: resource 8 [mem 0x000d8000-0x000dbfff]
+[    0.225084] pci_bus 0000:00: resource 9 [mem 0xc0000000-0xdfffffff]
+[    0.225087] pci_bus 0000:00: resource 10 [mem 0xf0000000-0xfebfffff]
+[    0.225092] pci_bus 0000:02: resource 0 [io  0x2000-0x2fff]
+[    0.225096] pci_bus 0000:02: resource 1 [mem 0xc0000000-0xc01fffff]
+[    0.225100] pci_bus 0000:02: resource 2 [mem 0xc0200000-0xc03fffff 64bit pref]
+[    0.225104] pci_bus 0000:07: resource 0 [io  0x3000-0x3fff]
+[    0.225108] pci_bus 0000:07: resource 1 [mem 0xc0400000-0xc06fffff]
+[    0.225112] pci_bus 0000:07: resource 2 [mem 0xc0700000-0xc08fffff 64bit pref]
+[    0.225116] pci_bus 0000:08: resource 0 [io  0x4000-0x4fff]
+[    0.225120] pci_bus 0000:08: resource 1 [mem 0xc0900000-0xc0bfffff]
+[    0.225124] pci_bus 0000:08: resource 2 [mem 0xc0c00000-0xc0dfffff 64bit pref]
+[    0.225128] pci_bus 0000:0a: resource 4 [io  0x0000-0x0cf7]
+[    0.225132] pci_bus 0000:0a: resource 5 [io  0x0d00-0xffff]
+[    0.225135] pci_bus 0000:0a: resource 6 [mem 0x000a0000-0x000bffff]
+[    0.225139] pci_bus 0000:0a: resource 7 [mem 0x000d4000-0x000d7fff]
+[    0.225143] pci_bus 0000:0a: resource 8 [mem 0x000d8000-0x000dbfff]
+[    0.225147] pci_bus 0000:0a: resource 9 [mem 0xc0000000-0xdfffffff]
+[    0.225151] pci_bus 0000:0a: resource 10 [mem 0xf0000000-0xfebfffff]
+[    0.225221] NET: Registered protocol family 2
+[    0.225564] TCP established hash table entries: 32768 (order: 7, 524288 bytes)
+[    0.225904] TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    0.226150] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.226205] TCP: reno registered
+[    0.226225] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    0.226268] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    0.226397] NET: Registered protocol family 1
+[    0.226420] pci 0000:00:02.0: Boot video device
+[    0.228319] PCI: CLS 64 bytes, default 64
+[    0.228395] Unpacking initramfs...
+[    0.542968] Freeing initrd memory: 10012K (ffff880036c62000 - ffff880037629000)
+[    0.542978] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    0.542982] software IO TLB [mem 0xb1aa1000-0xb5aa1000] (64MB) mapped at [ffff8800b1aa1000-ffff8800b5aa0fff]
+[    0.543096] Simple Boot Flag at 0x36 set to 0x1
+[    0.544037] Initialise system trusted keyring
+[    0.544119] audit: initializing netlink socket (disabled)
+[    0.544139] type=2000 audit(1389525168.543:1): initialized
+[    0.587650] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    0.590044] zbud: loaded
+[    0.590304] VFS: Disk quotas dquot_6.5.2
+[    0.590386] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.591132] msgmni has been set to 7579
+[    0.591236] Key type big_key registered
+[    0.591240] SELinux:  Registering netfilter hooks
+[    0.592429] alg: No test for stdrng (krng)
+[    0.592442] NET: Registered protocol family 38
+[    0.592447] Key type asymmetric registered
+[    0.592450] Asymmetric key parser 'x509' registered
+[    0.592510] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    0.592559] io scheduler noop registered
+[    0.592562] io scheduler deadline registered
+[    0.592614] io scheduler cfq registered (default)
+[    0.592777] pcieport 0000:00:1c.0: enabling device (0000 -> 0003)
+[    0.592963] pcieport 0000:00:1c.0: irq 40 for MSI/MSI-X
+[    0.593086] pcieport 0000:00:1c.4: enabling device (0000 -> 0003)
+[    0.593220] pcieport 0000:00:1c.4: irq 41 for MSI/MSI-X
+[    0.593320] pcieport 0000:00:1c.5: enabling device (0000 -> 0003)
+[    0.593453] pcieport 0000:00:1c.5: irq 42 for MSI/MSI-X
+[    0.593585] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    0.593611] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    0.593673] intel_idle: does not run on family 6 model 23
+[    0.595196] ACPI: AC Adapter [ACAD] (on-line)
+[    0.595340] input: Power Button as /devices/LNXSYSTM:00/device:00/PNP0C0C:00/input/input0
+[    0.595347] ACPI: Power Button [PWRB]
+[    0.595415] input: Lid Switch as /devices/LNXSYSTM:00/device:00/PNP0C0D:00/input/input1
+[    0.595471] ACPI: Lid Switch [LID]
+[    0.595597] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input2
+[    0.595602] ACPI: Power Button [PWRF]
+[    0.595706] ACPI: Requesting acpi_cpufreq
+[    0.598059] Monitor-Mwait will be used to enter C-1 state
+[    0.598069] Monitor-Mwait will be used to enter C-2 state
+[    0.598076] Monitor-Mwait will be used to enter C-3 state
+[    0.598081] tsc: Marking TSC unstable due to TSC halts in idle
+[    0.598095] ACPI: acpi_idle registered with cpuidle
+[    0.600885] thermal LNXTHERM:00: registered as thermal_zone0
+[    0.600890] ACPI: Thermal Zone [THRM] (28 C)
+[    0.600940] GHES: HEST is not enabled!
+[    0.600967] ACPI: Battery Slot [BAT1] (battery absent)
+[    0.601064] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.602051] Non-volatile memory driver v1.3
+[    0.602055] Linux agpgart interface v0.103
+[    0.602185] agpgart-intel 0000:00:00.0: Intel GM45 Chipset
+[    0.602361] agpgart-intel 0000:00:00.0: detected gtt size: 2097152K total, 262144K mappable
+[    0.603825] agpgart-intel 0000:00:00.0: detected 131072K stolen memory
+[    0.604043] agpgart-intel 0000:00:00.0: AGP aperture is 256M @ 0xd0000000
+[    0.604257] ahci 0000:00:1f.2: version 3.0
+[    0.604471] ahci 0000:00:1f.2: irq 43 for MSI/MSI-X
+[    0.604548] ahci 0000:00:1f.2: AHCI 0001.0200 32 slots 4 ports 3 Gbps 0x1 impl SATA mode
+[    0.604554] ahci 0000:00:1f.2: flags: 64bit ncq sntf pm led clo pio slum part ccc ems 
+[    0.604562] ahci 0000:00:1f.2: setting latency timer to 64
+[    0.605226] scsi0 : ahci
+[    0.605376] scsi1 : ahci
+[    0.605489] scsi2 : ahci
+[    0.605614] scsi3 : ahci
+[    0.605681] ata1: SATA max UDMA/133 abar m2048@0xf0904000 port 0xf0904100 irq 43
+[    0.605685] ata2: DUMMY
+[    0.605687] ata3: DUMMY
+[    0.605689] ata4: DUMMY
+[    0.605889] libphy: Fixed MDIO Bus: probed
+[    0.605984] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.605990] ehci-pci: EHCI PCI platform driver
+[    0.606165] ehci-pci 0000:00:1a.7: setting latency timer to 64
+[    0.606185] ehci-pci 0000:00:1a.7: EHCI Host Controller
+[    0.606260] ehci-pci 0000:00:1a.7: new USB bus registered, assigned bus number 1
+[    0.606281] ehci-pci 0000:00:1a.7: debug port 1
+[    0.610200] ehci-pci 0000:00:1a.7: cache line size of 64 is not supported
+[    0.610228] ehci-pci 0000:00:1a.7: irq 19, io mem 0xf0904800
+[    0.616219] ehci-pci 0000:00:1a.7: USB 2.0 started, EHCI 1.00
+[    0.616293] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.616298] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.616302] usb usb1: Product: EHCI Host Controller
+[    0.616306] usb usb1: Manufacturer: Linux 3.12.6-300.fc20.x86_64 ehci_hcd
+[    0.616310] usb usb1: SerialNumber: 0000:00:1a.7
+[    0.616523] hub 1-0:1.0: USB hub found
+[    0.616535] hub 1-0:1.0: 6 ports detected
+[    0.616939] ehci-pci 0000:00:1d.7: setting latency timer to 64
+[    0.616953] ehci-pci 0000:00:1d.7: EHCI Host Controller
+[    0.617072] ehci-pci 0000:00:1d.7: new USB bus registered, assigned bus number 2
+[    0.617091] ehci-pci 0000:00:1d.7: debug port 1
+[    0.621011] ehci-pci 0000:00:1d.7: cache line size of 64 is not supported
+[    0.621033] ehci-pci 0000:00:1d.7: irq 23, io mem 0xf0904c00
+[    0.627216] ehci-pci 0000:00:1d.7: USB 2.0 started, EHCI 1.00
+[    0.627300] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[    0.627305] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.627309] usb usb2: Product: EHCI Host Controller
+[    0.627313] usb usb2: Manufacturer: Linux 3.12.6-300.fc20.x86_64 ehci_hcd
+[    0.627316] usb usb2: SerialNumber: 0000:00:1d.7
+[    0.627508] hub 2-0:1.0: USB hub found
+[    0.627524] hub 2-0:1.0: 6 ports detected
+[    0.627792] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.627796] ohci-pci: OHCI PCI platform driver
+[    0.627812] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.627950] uhci_hcd 0000:00:1a.0: setting latency timer to 64
+[    0.627955] uhci_hcd 0000:00:1a.0: UHCI Host Controller
+[    0.628061] uhci_hcd 0000:00:1a.0: new USB bus registered, assigned bus number 3
+[    0.628108] uhci_hcd 0000:00:1a.0: irq 16, io base 0x00001820
+[    0.628190] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.628195] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.628199] usb usb3: Product: UHCI Host Controller
+[    0.628203] usb usb3: Manufacturer: Linux 3.12.6-300.fc20.x86_64 uhci_hcd
+[    0.628206] usb usb3: SerialNumber: 0000:00:1a.0
+[    0.628378] hub 3-0:1.0: USB hub found
+[    0.628390] hub 3-0:1.0: 2 ports detected
+[    0.628636] uhci_hcd 0000:00:1a.1: setting latency timer to 64
+[    0.628642] uhci_hcd 0000:00:1a.1: UHCI Host Controller
+[    0.628735] uhci_hcd 0000:00:1a.1: new USB bus registered, assigned bus number 4
+[    0.628781] uhci_hcd 0000:00:1a.1: irq 21, io base 0x00001840
+[    0.628851] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.628856] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.628860] usb usb4: Product: UHCI Host Controller
+[    0.628863] usb usb4: Manufacturer: Linux 3.12.6-300.fc20.x86_64 uhci_hcd
+[    0.628867] usb usb4: SerialNumber: 0000:00:1a.1
+[    0.629046] hub 4-0:1.0: USB hub found
+[    0.629058] hub 4-0:1.0: 2 ports detected
+[    0.629302] uhci_hcd 0000:00:1a.2: setting latency timer to 64
+[    0.629308] uhci_hcd 0000:00:1a.2: UHCI Host Controller
+[    0.629402] uhci_hcd 0000:00:1a.2: new USB bus registered, assigned bus number 5
+[    0.629436] uhci_hcd 0000:00:1a.2: irq 19, io base 0x00001860
+[    0.629508] usb usb5: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.629512] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.629516] usb usb5: Product: UHCI Host Controller
+[    0.629520] usb usb5: Manufacturer: Linux 3.12.6-300.fc20.x86_64 uhci_hcd
+[    0.629524] usb usb5: SerialNumber: 0000:00:1a.2
+[    0.629687] hub 5-0:1.0: USB hub found
+[    0.629699] hub 5-0:1.0: 2 ports detected
+[    0.629942] uhci_hcd 0000:00:1d.0: setting latency timer to 64
+[    0.629948] uhci_hcd 0000:00:1d.0: UHCI Host Controller
+[    0.630053] uhci_hcd 0000:00:1d.0: new USB bus registered, assigned bus number 6
+[    0.630087] uhci_hcd 0000:00:1d.0: irq 23, io base 0x00001880
+[    0.630160] usb usb6: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.630164] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.630168] usb usb6: Product: UHCI Host Controller
+[    0.630172] usb usb6: Manufacturer: Linux 3.12.6-300.fc20.x86_64 uhci_hcd
+[    0.630176] usb usb6: SerialNumber: 0000:00:1d.0
+[    0.630346] hub 6-0:1.0: USB hub found
+[    0.630358] hub 6-0:1.0: 2 ports detected
+[    0.630605] uhci_hcd 0000:00:1d.1: setting latency timer to 64
+[    0.630611] uhci_hcd 0000:00:1d.1: UHCI Host Controller
+[    0.630699] uhci_hcd 0000:00:1d.1: new USB bus registered, assigned bus number 7
+[    0.630733] uhci_hcd 0000:00:1d.1: irq 19, io base 0x000018a0
+[    0.630805] usb usb7: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.630810] usb usb7: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.630813] usb usb7: Product: UHCI Host Controller
+[    0.630817] usb usb7: Manufacturer: Linux 3.12.6-300.fc20.x86_64 uhci_hcd
+[    0.630821] usb usb7: SerialNumber: 0000:00:1d.1
+[    0.630995] hub 7-0:1.0: USB hub found
+[    0.631024] hub 7-0:1.0: 2 ports detected
+[    0.631287] uhci_hcd 0000:00:1d.2: setting latency timer to 64
+[    0.631293] uhci_hcd 0000:00:1d.2: UHCI Host Controller
+[    0.631377] uhci_hcd 0000:00:1d.2: new USB bus registered, assigned bus number 8
+[    0.631424] uhci_hcd 0000:00:1d.2: irq 18, io base 0x000018c0
+[    0.631499] usb usb8: New USB device found, idVendor=1d6b, idProduct=0001
+[    0.631503] usb usb8: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.631507] usb usb8: Product: UHCI Host Controller
+[    0.631511] usb usb8: Manufacturer: Linux 3.12.6-300.fc20.x86_64 uhci_hcd
+[    0.631515] usb usb8: SerialNumber: 0000:00:1d.2
+[    0.631681] hub 8-0:1.0: USB hub found
+[    0.631692] hub 8-0:1.0: 2 ports detected
+[    0.631912] usbcore: registered new interface driver usbserial
+[    0.631926] usbcore: registered new interface driver usbserial_generic
+[    0.631937] usbserial: USB Serial support registered for generic
+[    0.632002] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f13:PS2M] at 0x60,0x64 irq 1,12
+[    0.645807] i8042: Detected active multiplexing controller, rev 1.1
+[    0.646965] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.646975] serio: i8042 AUX0 port at 0x60,0x64 irq 12
+[    0.647040] serio: i8042 AUX1 port at 0x60,0x64 irq 12
+[    0.647073] serio: i8042 AUX2 port at 0x60,0x64 irq 12
+[    0.647109] serio: i8042 AUX3 port at 0x60,0x64 irq 12
+[    0.647263] mousedev: PS/2 mouse device common for all mice
+[    0.647635] rtc_cmos 00:04: RTC can wake from S4
+[    0.647842] rtc_cmos 00:04: rtc core: registered rtc_cmos as rtc0
+[    0.647882] rtc_cmos 00:04: alarms up to one month, y3k, 242 bytes nvram, hpet irqs
+[    0.647996] device-mapper: uevent: version 1.0.3
+[    0.648139] device-mapper: ioctl: 4.26.0-ioctl (2013-08-15) initialised: dm-devel@redhat.com
+[    0.648512] hidraw: raw HID events driver (C) Jiri Kosina
+[    0.648665] usbcore: registered new interface driver usbhid
+[    0.648668] usbhid: USB HID core driver
+[    0.648746] drop_monitor: Initializing network drop monitor service
+[    0.648871] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    0.648942] TCP: cubic registered
+[    0.648945] Initializing XFRM netlink socket
+[    0.649139] NET: Registered protocol family 10
+[    0.649465] mip6: Mobile IPv6
+[    0.649469] NET: Registered protocol family 17
+[    0.649890] Loading compiled-in X.509 certificates
+[    0.651949] Loaded X.509 cert 'Fedora kernel signing key: a48e22480e056a1db02ebabf1a9d9167dd32a888'
+[    0.651969] registered taskstats version 1
+[    0.653832]   Magic number: 14:203:226
+[    0.653852]  port3: hash matches
+[    0.653857]  port3: hash matches
+[    0.653980] rtc_cmos 00:04: setting system clock to 2014-01-12 11:12:49 UTC (1389525169)
+[    0.654079] PM: Hibernation image not present or could not be loaded.
+[    0.680360] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
+[    0.910067] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    0.910629] ata1.00: unexpected _GTF length (8)
+[    0.967868] ata1.00: ATA-8: TOSHIBA MK3263GSX, FG020M, max UDMA/100
+[    0.967872] ata1.00: 625142448 sectors, multi 16: LBA48 NCQ (depth 31/32), AA
+[    0.969300] ata1.00: unexpected _GTF length (8)
+[    0.969545] ata1.00: configured for UDMA/100
+[    0.969767] scsi 0:0:0:0: Direct-Access     ATA      TOSHIBA MK3263GS FG02 PQ: 0 ANSI: 5
+[    0.969989] sd 0:0:0:0: [sda] 625142448 512-byte logical blocks: (320 GB/298 GiB)
+[    0.969992] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    0.970074] sd 0:0:0:0: [sda] Write Protect is off
+[    0.970079] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    0.970119] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.084894]  sda: sda1 sda2 sda3 sda4 < sda5 sda6 sda7 sda8 >
+[    1.085765] sd 0:0:0:0: [sda] Attached SCSI disk
+[    1.087820] Freeing unused kernel memory: 1444K (ffffffff81d06000 - ffffffff81e6f000)
+[    1.087825] Write protecting the kernel read-only data: 12288k
+[    1.095683] Freeing unused kernel memory: 1564K (ffff880001679000 - ffff880001800000)
+[    1.100858] Freeing unused kernel memory: 1164K (ffff880001add000 - ffff880001c00000)
+[    1.107370] systemd[1]: systemd 208 running in system mode. (+PAM +LIBWRAP +AUDIT +SELINUX +IMA +SYSVINIT +LIBCRYPTSETUP +GCRYPT +ACL +XZ)
+[    1.107654] systemd[1]: Running in initial RAM disk.
+[    1.107751] systemd[1]: Set hostname to <localhost.localdomain>.
+[    1.117555] systemd[1]: Expecting device dev-disk-by\x2duuid-6c3f7e06\x2d070b\x2d4dda\x2d8b0d\x2dcd2005d78930.device...
+[    1.117582] systemd[1]: Starting -.slice.
+[    1.117856] systemd[1]: Created slice -.slice.
+[    1.117880] systemd[1]: Starting System Slice.
+[    1.118026] systemd[1]: Created slice System Slice.
+[    1.118045] systemd[1]: Starting Slices.
+[    1.118065] systemd[1]: Reached target Slices.
+[    1.118082] systemd[1]: Starting Timers.
+[    1.118101] systemd[1]: Reached target Timers.
+[    1.118126] systemd[1]: Starting udev Kernel Socket.
+[    1.118182] systemd[1]: Listening on udev Kernel Socket.
+[    1.118205] systemd[1]: Starting udev Control Socket.
+[    1.118263] systemd[1]: Listening on udev Control Socket.
+[    1.118282] systemd[1]: Starting Journal Socket.
+[    1.118362] systemd[1]: Listening on Journal Socket.
+[    1.118679] systemd[1]: Starting dracut cmdline hook...
+[    1.119414] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+[    1.120279] systemd[1]: Started Load Kernel Modules.
+[    1.120309] systemd[1]: Starting Sockets.
+[    1.120332] systemd[1]: Reached target Sockets.
+[    1.120371] systemd[1]: Starting Setup Virtual Console...
+[    1.121032] systemd[1]: Starting Journal Service...
+[    1.121774] systemd[1]: Started Journal Service.
+[    1.135951] systemd-journald[64]: Vacuuming done, freed 0 bytes
+[    1.181112] usb 2-4: new high-speed USB device number 3 using ehci-pci
+[    1.285782] systemd-udevd[124]: starting version 208
+[    1.330721] usb 2-4: New USB device found, idVendor=04f2, idProduct=b19a
+[    1.330728] usb 2-4: New USB device strings: Mfr=2, Product=1, SerialNumber=0
+[    1.330732] usb 2-4: Product: Chicony USB 2.0 Camera
+[    1.330736] usb 2-4: Manufacturer: Chicony Electronics Co., Ltd.
+[    1.383693] [drm] Initialized drm 1.1.0 20060810
+[    1.449215] [drm] Memory usable by graphics device = 2048M
+[    1.449228] i915 0000:00:02.0: setting latency timer to 64
+[    1.529970] i915 0000:00:02.0: irq 44 for MSI/MSI-X
+[    1.529986] [drm] Supports vblank timestamp caching Rev 1 (10.10.2010).
+[    1.529988] [drm] Driver supports precise vblank timestamp query.
+[    1.530097] vgaarb: device changed decodes: PCI:0000:00:02.0,olddecodes=io+mem,decodes=io+mem:owns=io+mem
+[    1.550064] usb 7-1: new full-speed USB device number 2 using uhci_hcd
+[    1.590635] fbcon: inteldrmfb (fb0) is primary device
+[    1.712812] usb 7-1: New USB device found, idVendor=0930, idProduct=020f
+[    1.712815] usb 7-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    1.712818] usb 7-1: Product: Askey for Toshiba
+[    1.712821] usb 7-1: Manufacturer: Broadcom Corp
+[    1.712824] usb 7-1: SerialNumber: 0026B62F98B8
+[    1.732989] psmouse serio4: synaptics: Touchpad model: 1, fw: 7.2, id: 0x1c0b1, caps: 0xd04773/0xa40000/0xa0000, board id: 3655, fw id: 590211
+[    1.765793] input: SynPS/2 Synaptics TouchPad as /devices/platform/i8042/serio4/input/input11
+[    2.341308] Console: switching to colour frame buffer device 170x48
+[    2.346456] i915 0000:00:02.0: fb0: inteldrmfb frame buffer device
+[    2.346458] i915 0000:00:02.0: registered panic notifier
+[    2.365825] acpi device:03: registered as cooling_device2
+[    2.366148] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    2.366222] input: Video Bus as /devices/LNXSYSTM:00/device:00/PNP0A08:00/LNXVIDEO:00/input/input12
+[    2.366371] [drm] Initialized i915 1.6.0 20080730 for 0000:00:02.0 on minor 0
+[    2.557629] PM: Starting manual resume from disk
+[    2.557639] PM: Hibernation image partition 8:8 present
+[    2.557642] PM: Looking for hibernation image.
+[    2.581572] PM: Image not found (code -22)
+[    2.581576] PM: Hibernation image not present or could not be loaded.
+[    2.807575] EXT4-fs (sda6): mounted filesystem with ordered data mode. Opts: (null)
+[    3.103442] systemd-journald[64]: Received SIGTERM
+[    4.162440] type=1404 audit(1389525173.007:2): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+[    4.488640] SELinux: 2048 avtab hash slots, 101316 rules.
+[    4.518890] SELinux: 2048 avtab hash slots, 101316 rules.
+[    4.555295] SELinux:  8 users, 83 roles, 4634 types, 265 bools, 1 sens, 1024 cats
+[    4.555303] SELinux:  83 classes, 101316 rules
+[    4.566099] SELinux:  Completing initialization.
+[    4.566105] SELinux:  Setting up existing superblocks.
+[    4.566120] SELinux: initialized (dev sysfs, type sysfs), uses genfs_contexts
+[    4.566128] SELinux: initialized (dev rootfs, type rootfs), uses genfs_contexts
+[    4.566149] SELinux: initialized (dev bdev, type bdev), uses genfs_contexts
+[    4.566159] SELinux: initialized (dev proc, type proc), uses genfs_contexts
+[    4.566185] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[    4.566233] SELinux: initialized (dev devtmpfs, type devtmpfs), uses transition SIDs
+[    4.567991] SELinux: initialized (dev debugfs, type debugfs), uses genfs_contexts
+[    4.571112] SELinux: initialized (dev sockfs, type sockfs), uses task SIDs
+[    4.571119] SELinux: initialized (dev pipefs, type pipefs), uses task SIDs
+[    4.571129] SELinux: initialized (dev anon_inodefs, type anon_inodefs), uses genfs_contexts
+[    4.571135] SELinux: initialized (dev aio, type aio), not configured for labeling
+[    4.571141] SELinux: initialized (dev devpts, type devpts), uses transition SIDs
+[    4.571177] SELinux: initialized (dev hugetlbfs, type hugetlbfs), uses transition SIDs
+[    4.571191] SELinux: initialized (dev mqueue, type mqueue), uses transition SIDs
+[    4.571204] SELinux: initialized (dev selinuxfs, type selinuxfs), uses genfs_contexts
+[    4.571240] SELinux: initialized (dev sysfs, type sysfs), uses genfs_contexts
+[    4.572279] SELinux: initialized (dev securityfs, type securityfs), uses genfs_contexts
+[    4.572284] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[    4.572295] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[    4.572480] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[    4.572548] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    4.572569] SELinux: initialized (dev pstore, type pstore), uses genfs_contexts
+[    4.572574] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    4.572591] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    4.572604] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    4.572628] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    4.572638] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    4.572647] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    4.572656] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    4.572680] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    4.572690] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[    4.572709] SELinux: initialized (dev sda6, type ext4), uses xattr
+[    4.591487] type=1403 audit(1389525173.436:3): policy loaded auid=4294967295 ses=4294967295
+[    4.634539] systemd[1]: Successfully loaded SELinux policy in 500.433ms.
+[    4.778281] systemd[1]: RTC configured in localtime, applying delta of 60 minutes to system time.
+[    4.873428] systemd[1]: Relabelled /dev and /run in 39.148ms.
+[    6.026204] [Firmware Bug]: battery: (dis)charge rate invalid.
+[    7.257789] systemd-readahead[247]: Bumped block_nr parameter of 8:0 to 20480. This is a temporary hack and should be removed one day.
+[    7.415661] SELinux: initialized (dev hugetlbfs, type hugetlbfs), uses transition SIDs
+[    7.583308] SELinux: initialized (dev autofs, type autofs), uses genfs_contexts
+[    7.810077] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[    7.886757] SELinux: initialized (dev configfs, type configfs), uses genfs_contexts
+[    8.225544] systemd-journald[272]: Vacuuming done, freed 0 bytes
+[    8.606172] RPC: Registered named UNIX socket transport module.
+[    8.606177] RPC: Registered udp transport module.
+[    8.606180] RPC: Registered tcp transport module.
+[    8.606182] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    8.606616] SELinux: initialized (dev rpc_pipefs, type rpc_pipefs), uses genfs_contexts
+[    8.976960] EXT4-fs (sda6): re-mounted. Opts: (null)
+[    9.264686] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+[    9.266143] SELinux: initialized (dev nfsd, type nfsd), uses genfs_contexts
+[    9.648388] systemd-udevd[305]: starting version 208
+[   10.877747] wmi: Mapper loaded
+[   10.881943] toshiba_bluetooth: Detected Toshiba ACPI Bluetooth device - installing RFKill handler
+[   10.892946] toshiba_bluetooth: Re-enabling Toshiba Bluetooth
+[   10.904271] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[   10.915537] toshiba_acpi: Toshiba Laptop ACPI Extras version 0.19
+[   10.924846] atl1c 0000:07:00.0: enabling device (0000 -> 0002)
+[   10.926172] input: Toshiba input device as /devices/virtual/input/input13
+[   10.943571] atl1c 0000:07:00.0: version 1.0.1.1-NAPI
+[   10.953057] ACPI Warning: 0x0000000000001c00-0x0000000000001c1f SystemIO conflicts with Region \_SB_.PCI0.SBUS.SMBI 1 (20130725/utaddress-251)
+[   10.953068] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+[   10.961582] ACPI Warning: 0x0000000000000428-0x000000000000042f SystemIO conflicts with Region \PMIO 1 (20130725/utaddress-251)
+[   10.961594] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+[   10.961600] ACPI Warning: 0x00000000000011b0-0x00000000000011bf SystemIO conflicts with Region \GPIO 1 (20130725/utaddress-251)
+[   10.961607] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+[   10.961610] ACPI Warning: 0x0000000000001180-0x00000000000011af SystemIO conflicts with Region \GPIO 1 (20130725/utaddress-251)
+[   10.961616] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+[   10.961619] lpc_ich: Resource conflict(s) found affecting gpio_ich
+[   11.101064] cfg80211: Calling CRDA to update world regulatory domain
+[   11.150726] snd_hda_intel 0000:00:1b.0: irq 45 for MSI/MSI-X
+[   11.169922] hda_codec: CX20582 (Pebble): BIOS auto-probing.
+[   11.170444] ALSA sound/pci/hda/hda_auto_parser.c:393 autoconfig: line_outs=1 (0x1f/0x0/0x0/0x0/0x0) type:speaker
+[   11.170449] ALSA sound/pci/hda/hda_auto_parser.c:397    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[   11.170453] ALSA sound/pci/hda/hda_auto_parser.c:401    hp_outs=1 (0x19/0x0/0x0/0x0/0x0)
+[   11.170456] ALSA sound/pci/hda/hda_auto_parser.c:402    mono: mono_out=0x0
+[   11.170459] ALSA sound/pci/hda/hda_auto_parser.c:406    inputs:
+[   11.170463] ALSA sound/pci/hda/hda_auto_parser.c:410      Internal Mic=0x1e
+[   11.170467] ALSA sound/pci/hda/hda_auto_parser.c:410      Mic=0x1a
+[   11.171458] ALSA sound/pci/hda/patch_conexant.c:3500 hda_codec: Enable sync_write for stable communication
+[   11.186086] input: HDA Intel HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input16
+[   11.186264] input: HDA Intel Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input15
+[   11.186378] input: HDA Intel Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input14
+[   11.188142] media: Linux media interface: v0.10
+[   11.193403] iTCO_vendor_support: vendor-support=0
+[   11.196044] iTCO_wdt: Intel TCO WatchDog Timer Driver v1.10
+[   11.196097] iTCO_wdt: Found a ICH9M-E TCO device (Version=2, TCOBASE=0x0460)
+[   11.196434] iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[   11.204162] microcode: CPU0 sig=0x1067a, pf=0x80, revision=0xa07
+[   11.382462] Bluetooth: Core ver 2.16
+[   11.382498] NET: Registered protocol family 31
+[   11.382501] Bluetooth: HCI device and connection manager initialized
+[   11.382576] Bluetooth: HCI socket layer initialized
+[   11.382582] Bluetooth: L2CAP socket layer initialized
+[   11.382592] Bluetooth: SCO socket layer initialized
+[   11.409206] rtl8192se 0000:08:00.0: enabling device (0000 -> 0003)
+[   11.412969] usbcore: registered new interface driver btusb
+[   11.442514] cfg80211: World regulatory domain updated:
+[   11.442520] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   11.442524] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   11.442528] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   11.442531] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[   11.442534] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   11.442538] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   11.456023] rtl8192se: FW Power Save off (module option)
+[   11.456144] rtl8192se: Driver for Realtek RTL8192SE/RTL8191SE
+Loading firmware rtlwifi/rtl8192sefw.bin
+[   11.512809] Linux video capture interface: v2.00
+[   11.537114] uvcvideo: Found UVC 1.00 device Chicony USB 2.0 Camera (04f2:b19a)
+[   11.545059] input: Chicony USB 2.0 Camera as /devices/pci0000:00/0000:00:1d.7/usb2/2-4/2-4:1.0/input/input17
+[   11.545218] usbcore: registered new interface driver uvcvideo
+[   11.545221] USB Video Class driver (1.1.1)
+[   11.561333] microcode: CPU0 sig=0x1067a, pf=0x80, revision=0xa07
+[   11.562326] microcode: CPU0 updated to revision 0xa0b, date = 2010-09-28
+[   11.571263] microcode: CPU1 sig=0x1067a, pf=0x80, revision=0xa07
+[   11.571384] microcode: CPU1 sig=0x1067a, pf=0x80, revision=0xa07
+[   11.572166] microcode: CPU1 updated to revision 0xa0b, date = 2010-09-28
+[   11.581607] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[   11.687378] systemd-udevd[323]: renamed network interface eth0 to p4p1
+[   11.791956] ieee80211 phy0: Selected rate control algorithm 'rtl_rc'
+[   11.862171] systemd-udevd[312]: renamed network interface wlan0 to wlp8s0
+[   13.989329] Adding 4264956k swap on /dev/sda8.  Priority:-1 extents:1 across:4264956k FS
+[   16.000309] EXT4-fs (sda3): mounted filesystem with ordered data mode. Opts: (null)
+[   16.192301] SELinux: initialized (dev sda3, type ext4), uses xattr
+[   16.712107] EXT4-fs (sda5): mounted filesystem with ordered data mode. Opts: (null)
+[   16.712120] SELinux: initialized (dev sda5, type ext4), uses xattr
+[   17.323959] EXT4-fs (sda7): mounted filesystem with ordered data mode. Opts: (null)
+[   17.323972] SELinux: initialized (dev sda7, type ext4), uses xattr
+[   17.365664] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[   17.878674] type=1305 audit(1389521586.723:4): audit_pid=400 old=0 auid=4294967295 ses=4294967295
+ subj=system_u:system_r:auditd_t:s0 res=1
+[   31.305345] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   31.305352] Bluetooth: BNEP filters: protocol multicast
+[   31.305368] Bluetooth: BNEP socket layer initialized
+[   31.477833] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[   31.505505] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   31.568742] Ebtables v2.0 registered
+[   31.592203] Bridge firewalling registered
+[   34.151062] atl1c 0000:07:00.0: irq 46 for MSI/MSI-X
+[   34.164731] IPv6: ADDRCONF(NETDEV_UP): p4p1: link is not ready
+[   34.333525] IPv6: ADDRCONF(NETDEV_UP): wlp8s0: link is not ready
+[   37.106713] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[   37.109203] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[   37.111798] wlp8s0: authenticated
+[   37.675364] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[   37.675372] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[   37.675376] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[   37.676059] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[   37.685602] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=7)
+[   37.689221] wlp8s0: associated
+[   37.689236] IPv6: ADDRCONF(NETDEV_CHANGE): wlp8s0: link becomes ready
+[   42.395993] tun: Universal TUN/TAP device driver, 1.6
+[   42.396000] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   42.417302] device virbr0-nic entered promiscuous mode
+[   43.992736] [drm] HPD interrupt storm detected on connector DP-2: switching from hotplug detection to polling
+[   49.551524] virbr0: port 1(virbr0-nic) entered listening state
+[   49.551555] virbr0: port 1(virbr0-nic) entered listening state
+[   49.551702] IPv6: ADDRCONF(NETDEV_UP): virbr0: link is not ready
+[   49.769380] virbr0: port 1(virbr0-nic) entered disabled state
+[   64.786224] fuse init (API version 7.22)
+[   64.831074] SELinux: initialized (dev fusectl, type fusectl), uses genfs_contexts
+[   64.841261] SELinux: initialized (dev fuse, type fuse), uses genfs_contexts
+[   78.753399] Bluetooth: RFCOMM TTY layer initialized
+[   78.753427] Bluetooth: RFCOMM socket layer initialized
+[   78.753430] Bluetooth: RFCOMM ver 1.11
+[   92.347750] TCP: lp registered
+[  104.288122] SELinux: initialized (dev proc, type proc), uses genfs_contexts
+[  346.010141] perf samples too long (2508 > 2500), lowering kernel.perf_event_max_sample_rate to 50000
+[ 1234.603964] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 1320.193466] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 1322.392628] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 1328.043173] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 1330.484881] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 1332.263372] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 1340.706301] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 1342.361871] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 1353.151235] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 1392.035962] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 1395.803545] systemd-journald[272]: Received request to flush runtime journal from PID 1
+[ 4564.821857] wlp8s0: deauthenticating from 4c:17:eb:2d:bd:f1 by local choice (reason=3)
+[ 4564.843380] cfg80211: Calling CRDA to update world regulatory domain
+[ 4565.017912] cfg80211: World regulatory domain updated:
+[ 4565.017919] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[ 4565.017924] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 4565.017927] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 4565.017931] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[ 4565.017934] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 4565.017937] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 4569.706481] PM: Syncing filesystems ... done.
+[ 4570.565237] PM: Preparing system for mem sleep
+[ 4570.588086] Freezing user space processes ... (elapsed 0.002 seconds) done.
+[ 4570.590171] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[ 4570.591283] PM: Entering mem sleep
+[ 4570.591341] Suspending console(s) (use no_console_suspend to debug)
+[ 4570.592919] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 4570.782760] sd 0:0:0:0: [sda] Stopping disk
+[ 4571.395077] PM: suspend of devices complete after 803.357 msecs
+[ 4571.395353] PM: late suspend of devices complete after 0.271 msecs
+[ 4571.419232] ehci-pci 0000:00:1d.7: System wakeup enabled by ACPI
+[ 4571.430102] uhci_hcd 0000:00:1d.2: System wakeup enabled by ACPI
+[ 4571.430166] uhci_hcd 0000:00:1d.1: System wakeup enabled by ACPI
+[ 4571.430229] uhci_hcd 0000:00:1d.0: System wakeup enabled by ACPI
+[ 4571.430457] ehci-pci 0000:00:1a.7: System wakeup enabled by ACPI
+[ 4571.441101] uhci_hcd 0000:00:1a.2: System wakeup enabled by ACPI
+[ 4571.441166] uhci_hcd 0000:00:1a.1: System wakeup enabled by ACPI
+[ 4571.441229] uhci_hcd 0000:00:1a.0: System wakeup enabled by ACPI
+[ 4571.441300] PM: noirq suspend of devices complete after 45.942 msecs
+[ 4571.441757] ACPI: Preparing to enter system sleep state S3
+[ 4571.448133] PM: Saving platform NVS memory
+[ 4571.448606] Disabling non-boot CPUs ...
+[ 4571.448974] Broke affinity for irq 17
+[ 4571.450056] smpboot: CPU 1 is now offline
+[ 4571.450460] ACPI: Low-level resume complete
+[ 4571.450460] PM: Restoring platform NVS memory
+[ 4571.450460] microcode: CPU0 sig=0x1067a, pf=0x80, revision=0xa0b
+[ 4571.450460] Enabling non-boot CPUs ...
+[ 4571.450460] smpboot: Booting Node 0 Processor 1 APIC 0x1
+[ 4571.462451] microcode: CPU1 sig=0x1067a, pf=0x80, revision=0xa07
+[ 4571.463446] microcode: CPU1 updated to revision 0xa0b, date = 2010-09-28
+[ 4571.472409] CPU1 is up
+[ 4571.474817] ACPI: Waking up from system sleep state S3
+[ 4571.510175] uhci_hcd 0000:00:1a.0: System wakeup disabled by ACPI
+[ 4571.510241] uhci_hcd 0000:00:1a.1: System wakeup disabled by ACPI
+[ 4571.510307] uhci_hcd 0000:00:1a.2: System wakeup disabled by ACPI
+[ 4571.521114] ehci-pci 0000:00:1a.7: System wakeup disabled by ACPI
+[ 4571.532416] uhci_hcd 0000:00:1d.0: System wakeup disabled by ACPI
+[ 4571.532484] uhci_hcd 0000:00:1d.1: System wakeup disabled by ACPI
+[ 4571.532551] uhci_hcd 0000:00:1d.2: System wakeup disabled by ACPI
+[ 4571.543103] ehci-pci 0000:00:1d.7: System wakeup disabled by ACPI
+[ 4571.578652] PM: noirq resume of devices complete after 79.507 msecs
+[ 4571.578863] PM: early resume of devices complete after 0.169 msecs
+[ 4571.578903] i915 0000:00:02.0: setting latency timer to 64
+[ 4571.579301] uhci_hcd 0000:00:1a.0: setting latency timer to 64
+[ 4571.579332] usb usb3: root hub lost power or was reset
+[ 4571.579482] uhci_hcd 0000:00:1a.1: setting latency timer to 64
+[ 4571.579511] usb usb4: root hub lost power or was reset
+[ 4571.579659] uhci_hcd 0000:00:1a.2: setting latency timer to 64
+[ 4571.579689] usb usb5: root hub lost power or was reset
+[ 4571.579838] ehci-pci 0000:00:1a.7: setting latency timer to 64
+[ 4571.580045] snd_hda_intel 0000:00:1b.0: irq 45 for MSI/MSI-X
+[ 4571.580267] uhci_hcd 0000:00:1d.0: setting latency timer to 64
+[ 4571.580297] usb usb6: root hub lost power or was reset
+[ 4571.580444] uhci_hcd 0000:00:1d.1: setting latency timer to 64
+[ 4571.580474] usb usb7: root hub lost power or was reset
+[ 4571.580623] uhci_hcd 0000:00:1d.2: setting latency timer to 64
+[ 4571.580653] usb usb8: root hub lost power or was reset
+[ 4571.580801] ehci-pci 0000:00:1d.7: setting latency timer to 64
+[ 4571.580836] ahci 0000:00:1f.2: setting latency timer to 64
+[ 4571.896093] usb 2-4: reset high-speed USB device number 3 using ehci-pci
+[ 4571.936564] toshiba_bluetooth: Re-enabling Toshiba Bluetooth
+[ 4572.112103] usb 7-1: reset full-speed USB device number 2 using uhci_hcd
+[ 4572.251737] btusb 7-1:1.0: no reset_resume for driver btusb?
+[ 4572.251740] btusb 7-1:1.1: no reset_resume for driver btusb?
+[ 4572.498072] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[ 4572.498859] ata1.00: unexpected _GTF length (8)
+[ 4572.499860] ata1.00: unexpected _GTF length (8)
+[ 4572.500039] ata1.00: configured for UDMA/100
+[ 4572.500104] sd 0:0:0:0: [sda] Starting disk
+[ 4572.596564] PM: resume of devices complete after 1017.696 msecs
+[ 4572.625572] pci_bus 0000:02: Allocating resources
+[ 4572.625596] pci_bus 0000:07: Allocating resources
+[ 4572.625621] pci_bus 0000:08: Allocating resources
+[ 4572.625755] i915 0000:00:02.0: BAR 6: [??? 0x00000000 flags 0x2] has bogus alignment
+[ 4572.625769] pci 0000:00:1e.0: PCI bridge to [bus 0a]
+[ 4572.625798] agpgart-intel 0000:00:00.0: no hotplug settings from platform
+[ 4572.625802] agpgart-intel 0000:00:00.0: using default PCI settings
+[ 4572.625812] i915 0000:00:02.0: no hotplug settings from platform
+[ 4572.625815] i915 0000:00:02.0: using default PCI settings
+[ 4572.625825] pci 0000:00:02.1: no hotplug settings from platform
+[ 4572.625828] pci 0000:00:02.1: using default PCI settings
+[ 4572.625837] uhci_hcd 0000:00:1a.0: no hotplug settings from platform
+[ 4572.625841] uhci_hcd 0000:00:1a.0: using default PCI settings
+[ 4572.625853] uhci_hcd 0000:00:1a.1: no hotplug settings from platform
+[ 4572.625857] uhci_hcd 0000:00:1a.1: using default PCI settings
+[ 4572.625870] uhci_hcd 0000:00:1a.2: no hotplug settings from platform
+[ 4572.625873] uhci_hcd 0000:00:1a.2: using default PCI settings
+[ 4572.625886] ehci-pci 0000:00:1a.7: no hotplug settings from platform
+[ 4572.625890] ehci-pci 0000:00:1a.7: using default PCI settings
+[ 4572.625905] snd_hda_intel 0000:00:1b.0: no hotplug settings from platform
+[ 4572.625911] pcieport 0000:00:1c.0: no hotplug settings from platform
+[ 4572.625917] pcieport 0000:00:1c.4: no hotplug settings from platform
+[ 4572.625931] atl1c 0000:07:00.0: no hotplug settings from platform
+[ 4572.625937] pcieport 0000:00:1c.5: no hotplug settings from platform
+[ 4572.626016] rtl8192se 0000:08:00.0: no hotplug settings from platform
+[ 4572.626023] uhci_hcd 0000:00:1d.0: no hotplug settings from platform
+[ 4572.626027] uhci_hcd 0000:00:1d.0: using default PCI settings
+[ 4572.626047] PM: Finishing wakeup.
+[ 4572.626051] uhci_hcd 0000:00:1d.1: no hotplug settings from platform
+[ 4572.626054] uhci_hcd 0000:00:1d.1: using default PCI settings
+[ 4572.626066] uhci_hcd 0000:00:1d.2: no hotplug settings from platform
+[ 4572.626070] uhci_hcd 0000:00:1d.2: using default PCI settings
+[ 4572.626082] ehci-pci 0000:00:1d.7: no hotplug settings from platform
+[ 4572.626086] ehci-pci 0000:00:1d.7: using default PCI settings
+[ 4572.626099] pci 0000:00:1e.0: no hotplug settings from platform
+[ 4572.626103] pci 0000:00:1e.0: using default PCI settings
+[ 4572.626121] lpc_ich 0000:00:1f.0: no hotplug settings from platform
+[ 4572.626125] lpc_ich 0000:00:1f.0: using default PCI settings
+[ 4572.626139] ahci 0000:00:1f.2: no hotplug settings from platform
+[ 4572.626142] ahci 0000:00:1f.2: using default PCI settings
+[ 4572.626156] pci 0000:00:1f.3: no hotplug settings from platform
+[ 4572.626159] pci 0000:00:1f.3: using default PCI settings
+[ 4572.626057] Restarting tasks ... done.
+[ 4572.634670] video LNXVIDEO:00: Restoring backlight state
+[ 4573.590267] atl1c 0000:07:00.0: irq 46 for MSI/MSI-X
+[ 4573.602032] IPv6: ADDRCONF(NETDEV_UP): p4p1: link is not ready
+[ 4573.764550] IPv6: ADDRCONF(NETDEV_UP): wlp8s0: link is not ready
+[ 4575.886957] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[ 4575.898002] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[ 4575.901364] wlp8s0: authenticated
+[ 4575.901625] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[ 4575.901632] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[ 4575.901636] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[ 4575.902451] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[ 4575.905161] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=7)
+[ 4575.909420] wlp8s0: associated
+[ 4575.909468] IPv6: ADDRCONF(NETDEV_CHANGE): wlp8s0: link becomes ready
+[ 4580.200879] ACPI: Error installing CMOS-RTC region handler
+[ 4580.201208] i915 0000:00:02.0: BAR 6: [??? 0x00000000 flags 0x2] has bogus alignment
+[ 4580.201225] pci 0000:00:1e.0: PCI bridge to [bus 0a]
+[ 4580.201255] agpgart-intel 0000:00:00.0: no hotplug settings from platform
+[ 4580.201260] agpgart-intel 0000:00:00.0: using default PCI settings
+[ 4580.201270] i915 0000:00:02.0: no hotplug settings from platform
+[ 4580.201274] i915 0000:00:02.0: using default PCI settings
+[ 4580.201283] pci 0000:00:02.1: no hotplug settings from platform
+[ 4580.201287] pci 0000:00:02.1: using default PCI settings
+[ 4580.201297] uhci_hcd 0000:00:1a.0: no hotplug settings from platform
+[ 4580.201300] uhci_hcd 0000:00:1a.0: using default PCI settings
+[ 4580.201313] uhci_hcd 0000:00:1a.1: no hotplug settings from platform
+[ 4580.201317] uhci_hcd 0000:00:1a.1: using default PCI settings
+[ 4580.201330] uhci_hcd 0000:00:1a.2: no hotplug settings from platform
+[ 4580.201333] uhci_hcd 0000:00:1a.2: using default PCI settings
+[ 4580.201346] ehci-pci 0000:00:1a.7: no hotplug settings from platform
+[ 4580.201350] ehci-pci 0000:00:1a.7: using default PCI settings
+[ 4580.201363] snd_hda_intel 0000:00:1b.0: no hotplug settings from platform
+[ 4580.201370] pcieport 0000:00:1c.0: no hotplug settings from platform
+[ 4580.201376] pcieport 0000:00:1c.4: no hotplug settings from platform
+[ 4580.201391] atl1c 0000:07:00.0: no hotplug settings from platform
+[ 4580.201397] pcieport 0000:00:1c.5: no hotplug settings from platform
+[ 4580.201461] rtl8192se 0000:08:00.0: no hotplug settings from platform
+[ 4580.201467] uhci_hcd 0000:00:1d.0: no hotplug settings from platform
+[ 4580.201471] uhci_hcd 0000:00:1d.0: using default PCI settings
+[ 4580.201484] uhci_hcd 0000:00:1d.1: no hotplug settings from platform
+[ 4580.201488] uhci_hcd 0000:00:1d.1: using default PCI settings
+[ 4580.201500] uhci_hcd 0000:00:1d.2: no hotplug settings from platform
+[ 4580.201504] uhci_hcd 0000:00:1d.2: using default PCI settings
+[ 4580.201516] ehci-pci 0000:00:1d.7: no hotplug settings from platform
+[ 4580.201520] ehci-pci 0000:00:1d.7: using default PCI settings
+[ 4580.201532] pci 0000:00:1e.0: no hotplug settings from platform
+[ 4580.201536] pci 0000:00:1e.0: using default PCI settings
+[ 4580.201554] lpc_ich 0000:00:1f.0: no hotplug settings from platform
+[ 4580.201558] lpc_ich 0000:00:1f.0: using default PCI settings
+[ 4580.201572] ahci 0000:00:1f.2: no hotplug settings from platform
+[ 4580.201576] ahci 0000:00:1f.2: using default PCI settings
+[ 4580.201589] pci 0000:00:1f.3: no hotplug settings from platform
+[ 4580.201593] pci 0000:00:1f.3: using default PCI settings
+[ 9935.833909] wlp8s0: deauthenticating from 4c:17:eb:2d:bd:f1 by local choice (reason=3)
+[ 9935.854788] cfg80211: Calling CRDA to update world regulatory domain
+[ 9936.824062] cfg80211: World regulatory domain updated:
+[ 9936.824069] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[ 9936.824073] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 9936.824077] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 9936.824080] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[ 9936.824084] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 9936.824087] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 9940.301409] PM: Syncing filesystems ... done.
+[ 9942.151551] PM: Preparing system for mem sleep
+[ 9942.283128] Freezing user space processes ... (elapsed 0.001 seconds) done.
+[ 9942.285075] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[ 9942.286284] PM: Entering mem sleep
+[ 9942.286343] Suspending console(s) (use no_console_suspend to debug)
+[ 9942.291303] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 9942.444197] sd 0:0:0:0: [sda] Stopping disk
+[ 9943.069261] PM: suspend of devices complete after 782.532 msecs
+[ 9943.069538] PM: late suspend of devices complete after 0.272 msecs
+[ 9943.093231] ehci-pci 0000:00:1d.7: System wakeup enabled by ACPI
+[ 9943.104104] uhci_hcd 0000:00:1d.2: System wakeup enabled by ACPI
+[ 9943.104168] uhci_hcd 0000:00:1d.1: System wakeup enabled by ACPI
+[ 9943.104230] uhci_hcd 0000:00:1d.0: System wakeup enabled by ACPI
+[ 9943.104459] ehci-pci 0000:00:1a.7: System wakeup enabled by ACPI
+[ 9943.115099] uhci_hcd 0000:00:1a.2: System wakeup enabled by ACPI
+[ 9943.115162] uhci_hcd 0000:00:1a.1: System wakeup enabled by ACPI
+[ 9943.115224] uhci_hcd 0000:00:1a.0: System wakeup enabled by ACPI
+[ 9943.115294] PM: noirq suspend of devices complete after 45.752 msecs
+[ 9943.115753] ACPI: Preparing to enter system sleep state S3
+[ 9943.122134] PM: Saving platform NVS memory
+[ 9943.122606] Disabling non-boot CPUs ...
+[ 9943.122971] Broke affinity for irq 17
+[ 9943.124062] smpboot: CPU 1 is now offline
+[ 9943.124457] ACPI: Low-level resume complete
+[ 9943.124457] PM: Restoring platform NVS memory
+[ 9943.124457] microcode: CPU0 sig=0x1067a, pf=0x80, revision=0xa0b
+[ 9943.124457] Enabling non-boot CPUs ...
+[ 9943.124457] smpboot: Booting Node 0 Processor 1 APIC 0x1
+[ 9943.136510] microcode: CPU1 sig=0x1067a, pf=0x80, revision=0xa07
+[ 9943.137505] microcode: CPU1 updated to revision 0xa0b, date = 2010-09-28
+[ 9943.146432] CPU1 is up
+[ 9943.148808] ACPI: Waking up from system sleep state S3
+[ 9943.184177] uhci_hcd 0000:00:1a.0: System wakeup disabled by ACPI
+[ 9943.184246] uhci_hcd 0000:00:1a.1: System wakeup disabled by ACPI
+[ 9943.184312] uhci_hcd 0000:00:1a.2: System wakeup disabled by ACPI
+[ 9943.195108] ehci-pci 0000:00:1a.7: System wakeup disabled by ACPI
+[ 9943.206414] uhci_hcd 0000:00:1d.0: System wakeup disabled by ACPI
+[ 9943.206481] uhci_hcd 0000:00:1d.1: System wakeup disabled by ACPI
+[ 9943.206546] uhci_hcd 0000:00:1d.2: System wakeup disabled by ACPI
+[ 9943.217102] ehci-pci 0000:00:1d.7: System wakeup disabled by ACPI
+[ 9943.252447] PM: noirq resume of devices complete after 79.297 msecs
+[ 9943.252657] PM: early resume of devices complete after 0.168 msecs
+[ 9943.252697] i915 0000:00:02.0: setting latency timer to 64
+[ 9943.253189] uhci_hcd 0000:00:1a.0: setting latency timer to 64
+[ 9943.253221] usb usb3: root hub lost power or was reset
+[ 9943.253348] uhci_hcd 0000:00:1a.1: setting latency timer to 64
+[ 9943.253378] usb usb4: root hub lost power or was reset
+[ 9943.253502] uhci_hcd 0000:00:1a.2: setting latency timer to 64
+[ 9943.253531] usb usb5: root hub lost power or was reset
+[ 9943.253657] ehci-pci 0000:00:1a.7: setting latency timer to 64
+[ 9943.253827] snd_hda_intel 0000:00:1b.0: irq 45 for MSI/MSI-X
+[ 9943.254048] uhci_hcd 0000:00:1d.0: setting latency timer to 64
+[ 9943.254078] usb usb6: root hub lost power or was reset
+[ 9943.254204] uhci_hcd 0000:00:1d.1: setting latency timer to 64
+[ 9943.254233] usb usb7: root hub lost power or was reset
+[ 9943.254356] uhci_hcd 0000:00:1d.2: setting latency timer to 64
+[ 9943.254386] usb usb8: root hub lost power or was reset
+[ 9943.254511] ehci-pci 0000:00:1d.7: setting latency timer to 64
+[ 9943.254546] ahci 0000:00:1f.2: setting latency timer to 64
+[ 9943.570182] usb 7-1: reset full-speed USB device number 2 using uhci_hcd
+[ 9943.656588] toshiba_bluetooth: Re-enabling Toshiba Bluetooth
+[ 9943.709896] btusb 7-1:1.0: no reset_resume for driver btusb?
+[ 9943.709899] btusb 7-1:1.1: no reset_resume for driver btusb?
+[ 9943.795173] usb 2-4: reset high-speed USB device number 3 using ehci-pci
+[ 9944.171163] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[ 9944.171895] ata1.00: unexpected _GTF length (8)
+[ 9944.172968] ata1.00: unexpected _GTF length (8)
+[ 9944.173158] ata1.00: configured for UDMA/100
+[ 9944.173225] sd 0:0:0:0: [sda] Starting disk
+[ 9944.216365] PM: resume of devices complete after 963.702 msecs
+[ 9944.217368] PM: Finishing wakeup.
+[ 9944.218320] pci_bus 0000:02: Allocating resources
+[ 9944.218346] pci_bus 0000:07: Allocating resources
+[ 9944.218374] pci_bus 0000:08: Allocating resources
+[ 9944.218500] i915 0000:00:02.0: BAR 6: [??? 0x00000000 flags 0x2] has bogus alignment
+[ 9944.218515] pci 0000:00:1e.0: PCI bridge to [bus 0a]
+[ 9944.218545] agpgart-intel 0000:00:00.0: no hotplug settings from platform
+[ 9944.218549] agpgart-intel 0000:00:00.0: using default PCI settings
+[ 9944.218559] i915 0000:00:02.0: no hotplug settings from platform
+[ 9944.218563] i915 0000:00:02.0: using default PCI settings
+[ 9944.218573] pci 0000:00:02.1: no hotplug settings from platform
+[ 9944.218576] pci 0000:00:02.1: using default PCI settings
+[ 9944.218586] uhci_hcd 0000:00:1a.0: no hotplug settings from platform
+[ 9944.218590] uhci_hcd 0000:00:1a.0: using default PCI settings
+[ 9944.218602] uhci_hcd 0000:00:1a.1: no hotplug settings from platform
+[ 9944.218606] uhci_hcd 0000:00:1a.1: using default PCI settings
+[ 9944.218619] uhci_hcd 0000:00:1a.2: no hotplug settings from platform
+[ 9944.218622] uhci_hcd 0000:00:1a.2: using default PCI settings
+[ 9944.218636] ehci-pci 0000:00:1a.7: no hotplug settings from platform
+[ 9944.218640] ehci-pci 0000:00:1a.7: using default PCI settings
+[ 9944.218653] snd_hda_intel 0000:00:1b.0: no hotplug settings from platform
+[ 9944.218660] pcieport 0000:00:1c.0: no hotplug settings from platform
+[ 9944.218666] pcieport 0000:00:1c.4: no hotplug settings from platform
+[ 9944.218682] atl1c 0000:07:00.0: no hotplug settings from platform
+[ 9944.218688] pcieport 0000:00:1c.5: no hotplug settings from platform
+[ 9944.218765] rtl8192se 0000:08:00.0: no hotplug settings from platform
+[ 9944.218772] uhci_hcd 0000:00:1d.0: no hotplug settings from platform
+[ 9944.218776] uhci_hcd 0000:00:1d.0: using default PCI settings
+[ 9944.218789] uhci_hcd 0000:00:1d.1: no hotplug settings from platform
+[ 9944.218792] uhci_hcd 0000:00:1d.1: using default PCI settings
+[ 9944.218805] uhci_hcd 0000:00:1d.2: no hotplug settings from platform
+[ 9944.218809] uhci_hcd 0000:00:1d.2: using default PCI settings
+[ 9944.218821] ehci-pci 0000:00:1d.7: no hotplug settings from platform
+[ 9944.218825] ehci-pci 0000:00:1d.7: using default PCI settings
+[ 9944.218837] pci 0000:00:1e.0: no hotplug settings from platform
+[ 9944.218841] pci 0000:00:1e.0: using default PCI settings
+[ 9944.218859] lpc_ich 0000:00:1f.0: no hotplug settings from platform
+[ 9944.218863] lpc_ich 0000:00:1f.0: using default PCI settings
+[ 9944.218878] ahci 0000:00:1f.2: no hotplug settings from platform
+[ 9944.218882] ahci 0000:00:1f.2: using default PCI settings
+[ 9944.218894] pci 0000:00:1f.3: no hotplug settings from platform
+[ 9944.218898] pci 0000:00:1f.3: using default PCI settings
+[ 9944.217371] Restarting tasks ... done.
+[ 9944.225762] video LNXVIDEO:00: Restoring backlight state
+[ 9945.694761] atl1c 0000:07:00.0: irq 46 for MSI/MSI-X
+[ 9945.706879] IPv6: ADDRCONF(NETDEV_UP): p4p1: link is not ready
+[ 9945.888858] IPv6: ADDRCONF(NETDEV_UP): wlp8s0: link is not ready
+[ 9948.449416] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[ 9948.459872] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[ 9948.462374] wlp8s0: authenticated
+[ 9948.462588] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[ 9948.462595] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[ 9948.462598] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[ 9948.464057] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[ 9948.467240] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=8)
+[ 9948.471572] wlp8s0: associated
+[ 9948.471591] IPv6: ADDRCONF(NETDEV_CHANGE): wlp8s0: link becomes ready
+[ 9950.636372] [drm] HPD interrupt storm detected on connector DP-2: switching from hotplug detection to polling
+[ 9952.028161] ACPI: Error installing CMOS-RTC region handler
+[ 9952.028394] i915 0000:00:02.0: BAR 6: [??? 0x00000000 flags 0x2] has bogus alignment
+[ 9952.028412] pci 0000:00:1e.0: PCI bridge to [bus 0a]
+[ 9952.028442] agpgart-intel 0000:00:00.0: no hotplug settings from platform
+[ 9952.028446] agpgart-intel 0000:00:00.0: using default PCI settings
+[ 9952.028456] i915 0000:00:02.0: no hotplug settings from platform
+[ 9952.028459] i915 0000:00:02.0: using default PCI settings
+[ 9952.028470] pci 0000:00:02.1: no hotplug settings from platform
+[ 9952.028473] pci 0000:00:02.1: using default PCI settings
+[ 9952.028482] uhci_hcd 0000:00:1a.0: no hotplug settings from platform
+[ 9952.028485] uhci_hcd 0000:00:1a.0: using default PCI settings
+[ 9952.028498] uhci_hcd 0000:00:1a.1: no hotplug settings from platform
+[ 9952.028501] uhci_hcd 0000:00:1a.1: using default PCI settings
+[ 9952.028514] uhci_hcd 0000:00:1a.2: no hotplug settings from platform
+[ 9952.028517] uhci_hcd 0000:00:1a.2: using default PCI settings
+[ 9952.028530] ehci-pci 0000:00:1a.7: no hotplug settings from platform
+[ 9952.028533] ehci-pci 0000:00:1a.7: using default PCI settings
+[ 9952.028546] snd_hda_intel 0000:00:1b.0: no hotplug settings from platform
+[ 9952.028553] pcieport 0000:00:1c.0: no hotplug settings from platform
+[ 9952.028558] pcieport 0000:00:1c.4: no hotplug settings from platform
+[ 9952.028573] atl1c 0000:07:00.0: no hotplug settings from platform
+[ 9952.028579] pcieport 0000:00:1c.5: no hotplug settings from platform
+[ 9952.028615] rtl8192se 0000:08:00.0: no hotplug settings from platform
+[ 9952.028621] uhci_hcd 0000:00:1d.0: no hotplug settings from platform
+[ 9952.028625] uhci_hcd 0000:00:1d.0: using default PCI settings
+[ 9952.028637] uhci_hcd 0000:00:1d.1: no hotplug settings from platform
+[ 9952.028640] uhci_hcd 0000:00:1d.1: using default PCI settings
+[ 9952.028653] uhci_hcd 0000:00:1d.2: no hotplug settings from platform
+[ 9952.028656] uhci_hcd 0000:00:1d.2: using default PCI settings
+[ 9952.028721] ehci-pci 0000:00:1d.7: no hotplug settings from platform
+[ 9952.028724] ehci-pci 0000:00:1d.7: using default PCI settings
+[ 9952.028738] pci 0000:00:1e.0: no hotplug settings from platform
+[ 9952.028742] pci 0000:00:1e.0: using default PCI settings
+[ 9952.028864] lpc_ich 0000:00:1f.0: no hotplug settings from platform
+[ 9952.028868] lpc_ich 0000:00:1f.0: using default PCI settings
+[ 9952.028882] ahci 0000:00:1f.2: no hotplug settings from platform
+[ 9952.028885] ahci 0000:00:1f.2: using default PCI settings
+[ 9952.028899] pci 0000:00:1f.3: no hotplug settings from platform
+[ 9952.028902] pci 0000:00:1f.3: using default PCI settings
+[13033.222062] wlp8s0: deauthenticating from 4c:17:eb:2d:bd:f1 by local choice (reason=3)
+[13033.245390] cfg80211: Calling CRDA to update world regulatory domain
+[13033.457770] cfg80211: World regulatory domain updated:
+[13033.457778] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[13033.457782] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[13033.457786] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[13033.457789] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[13033.457793] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[13033.457796] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[13038.056460] PM: Syncing filesystems ... done.
+[13039.105266] PM: Preparing system for mem sleep
+[13039.150600] Freezing user space processes ... (elapsed 0.031 seconds) done.
+[13039.181904] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[13039.183266] PM: Entering mem sleep
+[13039.183329] Suspending console(s) (use no_console_suspend to debug)
+[13039.186019] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[13039.373545] sd 0:0:0:0: [sda] Stopping disk
+[13039.988236] PM: suspend of devices complete after 804.516 msecs
+[13039.988511] PM: late suspend of devices complete after 0.271 msecs
+[13040.012229] ehci-pci 0000:00:1d.7: System wakeup enabled by ACPI
+[13040.023102] uhci_hcd 0000:00:1d.2: System wakeup enabled by ACPI
+[13040.023166] uhci_hcd 0000:00:1d.1: System wakeup enabled by ACPI
+[13040.023228] uhci_hcd 0000:00:1d.0: System wakeup enabled by ACPI
+[13040.023457] ehci-pci 0000:00:1a.7: System wakeup enabled by ACPI
+[13040.034100] uhci_hcd 0000:00:1a.2: System wakeup enabled by ACPI
+[13040.034164] uhci_hcd 0000:00:1a.1: System wakeup enabled by ACPI
+[13040.034227] uhci_hcd 0000:00:1a.0: System wakeup enabled by ACPI
+[13040.034296] PM: noirq suspend of devices complete after 45.780 msecs
+[13040.034755] ACPI: Preparing to enter system sleep state S3
+[13040.041133] PM: Saving platform NVS memory
+[13040.041610] Disabling non-boot CPUs ...
+[13040.041972] Broke affinity for irq 17
+[13040.043053] smpboot: CPU 1 is now offline
+[13040.043477] ACPI: Low-level resume complete
+[13040.043477] PM: Restoring platform NVS memory
+[13040.043477] microcode: CPU0 sig=0x1067a, pf=0x80, revision=0xa0b
+[13040.043477] Enabling non-boot CPUs ...
+[13040.043477] smpboot: Booting Node 0 Processor 1 APIC 0x1
+[13040.055509] microcode: CPU1 sig=0x1067a, pf=0x80, revision=0xa07
+[13040.056503] microcode: CPU1 updated to revision 0xa0b, date = 2010-09-28
+[13040.065435] CPU1 is up
+[13040.067815] ACPI: Waking up from system sleep state S3
+[13040.114173] uhci_hcd 0000:00:1a.0: System wakeup disabled by ACPI
+[13040.114242] uhci_hcd 0000:00:1a.1: System wakeup disabled by ACPI
+[13040.114308] uhci_hcd 0000:00:1a.2: System wakeup disabled by ACPI
+[13040.125108] ehci-pci 0000:00:1a.7: System wakeup disabled by ACPI
+[13040.136413] uhci_hcd 0000:00:1d.0: System wakeup disabled by ACPI
+[13040.136479] uhci_hcd 0000:00:1d.1: System wakeup disabled by ACPI
+[13040.136545] uhci_hcd 0000:00:1d.2: System wakeup disabled by ACPI
+[13040.147103] ehci-pci 0000:00:1d.7: System wakeup disabled by ACPI
+[13040.182631] PM: noirq resume of devices complete after 79.479 msecs
+[13040.182839] PM: early resume of devices complete after 0.167 msecs
+[13040.182882] i915 0000:00:02.0: setting latency timer to 64
+[13040.183104] uhci_hcd 0000:00:1a.0: setting latency timer to 64
+[13040.183137] usb usb3: root hub lost power or was reset
+[13040.183271] uhci_hcd 0000:00:1a.1: setting latency timer to 64
+[13040.183300] usb usb4: root hub lost power or was reset
+[13040.183430] uhci_hcd 0000:00:1a.2: setting latency timer to 64
+[13040.183459] usb usb5: root hub lost power or was reset
+[13040.183591] ehci-pci 0000:00:1a.7: setting latency timer to 64
+[13040.183770] snd_hda_intel 0000:00:1b.0: irq 45 for MSI/MSI-X
+[13040.184082] uhci_hcd 0000:00:1d.0: setting latency timer to 64
+[13040.184123] usb usb6: root hub lost power or was reset
+[13040.184254] uhci_hcd 0000:00:1d.1: setting latency timer to 64
+[13040.184285] usb usb7: root hub lost power or was reset
+[13040.184415] uhci_hcd 0000:00:1d.2: setting latency timer to 64
+[13040.184443] usb usb8: root hub lost power or was reset
+[13040.184574] ehci-pci 0000:00:1d.7: setting latency timer to 64
+[13040.184609] ahci 0000:00:1f.2: setting latency timer to 64
+[13040.500093] usb 2-4: reset high-speed USB device number 3 using ehci-pci
+[13040.596553] toshiba_bluetooth: Re-enabling Toshiba Bluetooth
+[13040.716103] usb 7-1: reset full-speed USB device number 2 using uhci_hcd
+[13040.858055] btusb 7-1:1.0: no reset_resume for driver btusb?
+[13040.858058] btusb 7-1:1.1: no reset_resume for driver btusb?
+[13041.103075] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[13041.103809] ata1.00: unexpected _GTF length (8)
+[13041.104819] ata1.00: unexpected _GTF length (8)
+[13041.105061] ata1.00: configured for UDMA/100
+[13041.105128] sd 0:0:0:0: [sda] Starting disk
+[13041.224402] PM: resume of devices complete after 1041.557 msecs
+[13041.291064] PM: Finishing wakeup.
+[13041.295407] pci_bus 0000:02: Allocating resources
+[13041.295433] pci_bus 0000:07: Allocating resources
+[13041.295461] pci_bus 0000:08: Allocating resources
+[13041.295589] i915 0000:00:02.0: BAR 6: [??? 0x00000000 flags 0x2] has bogus alignment
+[13041.295604] pci 0000:00:1e.0: PCI bridge to [bus 0a]
+[13041.295636] agpgart-intel 0000:00:00.0: no hotplug settings from platform
+[13041.295641] agpgart-intel 0000:00:00.0: using default PCI settings
+[13041.295650] i915 0000:00:02.0: no hotplug settings from platform
+[13041.295654] i915 0000:00:02.0: using default PCI settings
+[13041.295664] pci 0000:00:02.1: no hotplug settings from platform
+[13041.295667] pci 0000:00:02.1: using default PCI settings
+[13041.295680] uhci_hcd 0000:00:1a.0: no hotplug settings from platform
+[13041.295683] uhci_hcd 0000:00:1a.0: using default PCI settings
+[13041.295696] uhci_hcd 0000:00:1a.1: no hotplug settings from platform
+[13041.295699] uhci_hcd 0000:00:1a.1: using default PCI settings
+[13041.295712] uhci_hcd 0000:00:1a.2: no hotplug settings from platform
+[13041.295716] uhci_hcd 0000:00:1a.2: using default PCI settings
+[13041.295730] ehci-pci 0000:00:1a.7: no hotplug settings from platform
+[13041.295733] ehci-pci 0000:00:1a.7: using default PCI settings
+[13041.295747] snd_hda_intel 0000:00:1b.0: no hotplug settings from platform
+[13041.295754] pcieport 0000:00:1c.0: no hotplug settings from platform
+[13041.295760] pcieport 0000:00:1c.4: no hotplug settings from platform
+[13041.295775] atl1c 0000:07:00.0: no hotplug settings from platform
+[13041.295781] pcieport 0000:00:1c.5: no hotplug settings from platform
+[13041.295842] rtl8192se 0000:08:00.0: no hotplug settings from platform
+[13041.295849] uhci_hcd 0000:00:1d.0: no hotplug settings from platform
+[13041.295852] uhci_hcd 0000:00:1d.0: using default PCI settings
+[13041.295866] uhci_hcd 0000:00:1d.1: no hotplug settings from platform
+[13041.295869] uhci_hcd 0000:00:1d.1: using default PCI settings
+[13041.295882] uhci_hcd 0000:00:1d.2: no hotplug settings from platform
+[13041.295886] uhci_hcd 0000:00:1d.2: using default PCI settings
+[13041.295900] ehci-pci 0000:00:1d.7: no hotplug settings from platform
+[13041.295903] ehci-pci 0000:00:1d.7: using default PCI settings
+[13041.295917] pci 0000:00:1e.0: no hotplug settings from platform
+[13041.295920] pci 0000:00:1e.0: using default PCI settings
+[13041.295940] lpc_ich 0000:00:1f.0: no hotplug settings from platform
+[13041.295943] lpc_ich 0000:00:1f.0: using default PCI settings
+[13041.295959] ahci 0000:00:1f.2: no hotplug settings from platform
+[13041.295963] ahci 0000:00:1f.2: using default PCI settings
+[13041.295976] pci 0000:00:1f.3: no hotplug settings from platform
+[13041.295979] pci 0000:00:1f.3: using default PCI settings
+[13041.291067] Restarting tasks ... done.
+[13041.306760] video LNXVIDEO:00: Restoring backlight state
+[13041.755957] atl1c 0000:07:00.0: irq 46 for MSI/MSI-X
+[13041.769281] IPv6: ADDRCONF(NETDEV_UP): p4p1: link is not ready
+[13041.931115] IPv6: ADDRCONF(NETDEV_UP): wlp8s0: link is not ready
+[13044.099119] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[13044.110106] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[13044.118740] wlp8s0: authenticated
+[13044.119035] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[13044.119042] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[13044.119046] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[13044.120068] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[13044.221080] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 2/3)
+[13044.225020] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=8)
+[13044.228336] wlp8s0: associated
+[13044.228377] IPv6: ADDRCONF(NETDEV_CHANGE): wlp8s0: link becomes ready
+[13048.457275] ACPI: Error installing CMOS-RTC region handler
+[13048.457556] i915 0000:00:02.0: BAR 6: [??? 0x00000000 flags 0x2] has bogus alignment
+[13048.457571] pci 0000:00:1e.0: PCI bridge to [bus 0a]
+[13048.457599] agpgart-intel 0000:00:00.0: no hotplug settings from platform
+[13048.457603] agpgart-intel 0000:00:00.0: using default PCI settings
+[13048.457613] i915 0000:00:02.0: no hotplug settings from platform
+[13048.457616] i915 0000:00:02.0: using default PCI settings
+[13048.457626] pci 0000:00:02.1: no hotplug settings from platform
+[13048.457629] pci 0000:00:02.1: using default PCI settings
+[13048.457639] uhci_hcd 0000:00:1a.0: no hotplug settings from platform
+[13048.457643] uhci_hcd 0000:00:1a.0: using default PCI settings
+[13048.457656] uhci_hcd 0000:00:1a.1: no hotplug settings from platform
+[13048.457659] uhci_hcd 0000:00:1a.1: using default PCI settings
+[13048.457672] uhci_hcd 0000:00:1a.2: no hotplug settings from platform
+[13048.457675] uhci_hcd 0000:00:1a.2: using default PCI settings
+[13048.457688] ehci-pci 0000:00:1a.7: no hotplug settings from platform
+[13048.457692] ehci-pci 0000:00:1a.7: using default PCI settings
+[13048.457705] snd_hda_intel 0000:00:1b.0: no hotplug settings from platform
+[13048.457712] pcieport 0000:00:1c.0: no hotplug settings from platform
+[13048.457718] pcieport 0000:00:1c.4: no hotplug settings from platform
+[13048.457733] atl1c 0000:07:00.0: no hotplug settings from platform
+[13048.457739] pcieport 0000:00:1c.5: no hotplug settings from platform
+[13048.457803] rtl8192se 0000:08:00.0: no hotplug settings from platform
+[13048.457809] uhci_hcd 0000:00:1d.0: no hotplug settings from platform
+[13048.457813] uhci_hcd 0000:00:1d.0: using default PCI settings
+[13048.457825] uhci_hcd 0000:00:1d.1: no hotplug settings from platform
+[13048.457829] uhci_hcd 0000:00:1d.1: using default PCI settings
+[13048.457842] uhci_hcd 0000:00:1d.2: no hotplug settings from platform
+[13048.457845] uhci_hcd 0000:00:1d.2: using default PCI settings
+[13048.457858] ehci-pci 0000:00:1d.7: no hotplug settings from platform
+[13048.457861] ehci-pci 0000:00:1d.7: using default PCI settings
+[13048.457874] pci 0000:00:1e.0: no hotplug settings from platform
+[13048.457877] pci 0000:00:1e.0: using default PCI settings
+[13048.457896] lpc_ich 0000:00:1f.0: no hotplug settings from platform
+[13048.457899] lpc_ich 0000:00:1f.0: using default PCI settings
+[13048.457914] ahci 0000:00:1f.2: no hotplug settings from platform
+[13048.457918] ahci 0000:00:1f.2: using default PCI settings
+[13048.457930] pci 0000:00:1f.3: no hotplug settings from platform
+[13048.457934] pci 0000:00:1f.3: using default PCI settings
+[13219.732869] wlp8s0: deauthenticating from 4c:17:eb:2d:bd:f1 by local choice (reason=3)
+[13219.756433] cfg80211: Calling CRDA to update world regulatory domain
+[13219.774769] cfg80211: World regulatory domain updated:
+[13219.774776] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[13219.774781] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[13219.774784] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[13219.774788] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[13219.774791] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[13219.774795] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[13224.519733] PM: Syncing filesystems ... done.
+[13225.367871] PM: Preparing system for mem sleep
+[13225.368446] Freezing user space processes ... (elapsed 0.003 seconds) done.
+[13225.372165] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[13225.373287] PM: Entering mem sleep
+[13225.373349] Suspending console(s) (use no_console_suspend to debug)
+[13225.374890] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[13225.535094] sd 0:0:0:0: [sda] Stopping disk
+[13226.147103] PM: suspend of devices complete after 773.362 msecs
+[13226.147370] PM: late suspend of devices complete after 0.262 msecs
+[13226.171233] ehci-pci 0000:00:1d.7: System wakeup enabled by ACPI
+[13226.182104] uhci_hcd 0000:00:1d.2: System wakeup enabled by ACPI
+[13226.182169] uhci_hcd 0000:00:1d.1: System wakeup enabled by ACPI
+[13226.182232] uhci_hcd 0000:00:1d.0: System wakeup enabled by ACPI
+[13226.182459] ehci-pci 0000:00:1a.7: System wakeup enabled by ACPI
+[13226.193098] uhci_hcd 0000:00:1a.2: System wakeup enabled by ACPI
+[13226.193162] uhci_hcd 0000:00:1a.1: System wakeup enabled by ACPI
+[13226.193224] uhci_hcd 0000:00:1a.0: System wakeup enabled by ACPI
+[13226.193294] PM: noirq suspend of devices complete after 45.919 msecs
+[13226.193751] ACPI: Preparing to enter system sleep state S3
+[13226.213133] PM: Saving platform NVS memory
+[13226.213603] Disabling non-boot CPUs ...
+[13226.213965] Broke affinity for irq 17
+[13226.215055] smpboot: CPU 1 is now offline
+[13226.215450] ACPI: Low-level resume complete
+[13226.215450] PM: Restoring platform NVS memory
+[13226.215450] microcode: CPU0 sig=0x1067a, pf=0x80, revision=0xa0b
+[13226.215450] Enabling non-boot CPUs ...
+[13226.215450] smpboot: Booting Node 0 Processor 1 APIC 0x1
+[13226.227520] microcode: CPU1 sig=0x1067a, pf=0x80, revision=0xa07
+[13226.228514] microcode: CPU1 updated to revision 0xa0b, date = 2010-09-28
+[13226.237434] CPU1 is up
+[13226.239805] ACPI: Waking up from system sleep state S3
+[13226.286164] uhci_hcd 0000:00:1a.0: System wakeup disabled by ACPI
+[13226.286232] uhci_hcd 0000:00:1a.1: System wakeup disabled by ACPI
+[13226.286298] uhci_hcd 0000:00:1a.2: System wakeup disabled by ACPI
+[13226.297106] ehci-pci 0000:00:1a.7: System wakeup disabled by ACPI
+[13226.308410] uhci_hcd 0000:00:1d.0: System wakeup disabled by ACPI
+[13226.308476] uhci_hcd 0000:00:1d.1: System wakeup disabled by ACPI
+[13226.308541] uhci_hcd 0000:00:1d.2: System wakeup disabled by ACPI
+[13226.319102] ehci-pci 0000:00:1d.7: System wakeup disabled by ACPI
+[13226.354467] PM: noirq resume of devices complete after 79.302 msecs
+[13226.354675] PM: early resume of devices complete after 0.167 msecs
+[13226.354716] i915 0000:00:02.0: setting latency timer to 64
+[13226.355222] uhci_hcd 0000:00:1a.0: setting latency timer to 64
+[13226.355254] usb usb3: root hub lost power or was reset
+[13226.355381] uhci_hcd 0000:00:1a.1: setting latency timer to 64
+[13226.355410] usb usb4: root hub lost power or was reset
+[13226.355534] uhci_hcd 0000:00:1a.2: setting latency timer to 64
+[13226.355563] usb usb5: root hub lost power or was reset
+[13226.355687] ehci-pci 0000:00:1a.7: setting latency timer to 64
+[13226.355860] snd_hda_intel 0000:00:1b.0: irq 45 for MSI/MSI-X
+[13226.356075] uhci_hcd 0000:00:1d.0: setting latency timer to 64
+[13226.356105] usb usb6: root hub lost power or was reset
+[13226.356229] uhci_hcd 0000:00:1d.1: setting latency timer to 64
+[13226.356258] usb usb7: root hub lost power or was reset
+[13226.356382] uhci_hcd 0000:00:1d.2: setting latency timer to 64
+[13226.356410] usb usb8: root hub lost power or was reset
+[13226.356535] ehci-pci 0000:00:1d.7: setting latency timer to 64
+[13226.356570] ahci 0000:00:1f.2: setting latency timer to 64
+[13226.672267] usb 2-4: reset high-speed USB device number 3 using ehci-pci
+[13226.712572] toshiba_bluetooth: Re-enabling Toshiba Bluetooth
+[13226.889268] usb 7-1: reset full-speed USB device number 2 using uhci_hcd
+[13227.028655] btusb 7-1:1.0: no reset_resume for driver btusb?
+[13227.028658] btusb 7-1:1.1: no reset_resume for driver btusb?
+[13227.324252] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[13227.325061] ata1.00: unexpected _GTF length (8)
+[13227.326092] ata1.00: unexpected _GTF length (8)
+[13227.326259] ata1.00: configured for UDMA/100
+[13227.326326] sd 0:0:0:0: [sda] Starting disk
+[13227.367748] PM: resume of devices complete after 1013.067 msecs
+[13227.368846] PM: Finishing wakeup.
+[13227.373213] pci_bus 0000:02: Allocating resources
+[13227.373241] pci_bus 0000:07: Allocating resources
+[13227.373267] pci_bus 0000:08: Allocating resources
+[13227.373394] i915 0000:00:02.0: BAR 6: [??? 0x00000000 flags 0x2] has bogus alignment
+[13227.373410] pci 0000:00:1e.0: PCI bridge to [bus 0a]
+[13227.373441] agpgart-intel 0000:00:00.0: no hotplug settings from platform
+[13227.373445] agpgart-intel 0000:00:00.0: using default PCI settings
+[13227.373456] i915 0000:00:02.0: no hotplug settings from platform
+[13227.373460] i915 0000:00:02.0: using default PCI settings
+[13227.373469] pci 0000:00:02.1: no hotplug settings from platform
+[13227.373472] pci 0000:00:02.1: using default PCI settings
+[13227.373482] uhci_hcd 0000:00:1a.0: no hotplug settings from platform
+[13227.373485] uhci_hcd 0000:00:1a.0: using default PCI settings
+[13227.373497] uhci_hcd 0000:00:1a.1: no hotplug settings from platform
+[13227.373501] uhci_hcd 0000:00:1a.1: using default PCI settings
+[13227.373516] uhci_hcd 0000:00:1a.2: no hotplug settings from platform
+[13227.373519] uhci_hcd 0000:00:1a.2: using default PCI settings
+[13227.373532] ehci-pci 0000:00:1a.7: no hotplug settings from platform
+[13227.373536] ehci-pci 0000:00:1a.7: using default PCI settings
+[13227.373549] snd_hda_intel 0000:00:1b.0: no hotplug settings from platform
+[13227.373555] pcieport 0000:00:1c.0: no hotplug settings from platform
+[13227.373561] pcieport 0000:00:1c.4: no hotplug settings from platform
+[13227.373574] atl1c 0000:07:00.0: no hotplug settings from platform
+[13227.373581] pcieport 0000:00:1c.5: no hotplug settings from platform
+[13227.373641] rtl8192se 0000:08:00.0: no hotplug settings from platform
+[13227.373647] uhci_hcd 0000:00:1d.0: no hotplug settings from platform
+[13227.373650] uhci_hcd 0000:00:1d.0: using default PCI settings
+[13227.373663] uhci_hcd 0000:00:1d.1: no hotplug settings from platform
+[13227.373666] uhci_hcd 0000:00:1d.1: using default PCI settings
+[13227.373681] uhci_hcd 0000:00:1d.2: no hotplug settings from platform
+[13227.373684] uhci_hcd 0000:00:1d.2: using default PCI settings
+[13227.373697] ehci-pci 0000:00:1d.7: no hotplug settings from platform
+[13227.373700] ehci-pci 0000:00:1d.7: using default PCI settings
+[13227.373712] pci 0000:00:1e.0: no hotplug settings from platform
+[13227.373715] pci 0000:00:1e.0: using default PCI settings
+[13227.373733] lpc_ich 0000:00:1f.0: no hotplug settings from platform
+[13227.373737] lpc_ich 0000:00:1f.0: using default PCI settings
+[13227.373751] ahci 0000:00:1f.2: no hotplug settings from platform
+[13227.373755] ahci 0000:00:1f.2: using default PCI settings
+[13227.373767] pci 0000:00:1f.3: no hotplug settings from platform
+[13227.373770] pci 0000:00:1f.3: using default PCI settings
+[13227.368849] Restarting tasks ... done.
+[13227.387178] video LNXVIDEO:00: Restoring backlight state
+[13227.630575] atl1c 0000:07:00.0: irq 46 for MSI/MSI-X
+[13227.643878] IPv6: ADDRCONF(NETDEV_UP): p4p1: link is not ready
+[13227.806097] IPv6: ADDRCONF(NETDEV_UP): wlp8s0: link is not ready
+[13229.970169] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[13229.980748] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[13229.983106] wlp8s0: authenticated
+[13229.985490] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[13229.985498] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[13229.985502] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[13229.986036] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[13229.988837] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=4)
+[13229.992296] wlp8s0: associated
+[13229.992318] IPv6: ADDRCONF(NETDEV_CHANGE): wlp8s0: link becomes ready
+[13235.133240] ACPI: Error installing CMOS-RTC region handler
+[13235.133476] i915 0000:00:02.0: BAR 6: [??? 0x00000000 flags 0x2] has bogus alignment
+[13235.133494] pci 0000:00:1e.0: PCI bridge to [bus 0a]
+[13235.133524] agpgart-intel 0000:00:00.0: no hotplug settings from platform
+[13235.133528] agpgart-intel 0000:00:00.0: using default PCI settings
+[13235.133538] i915 0000:00:02.0: no hotplug settings from platform
+[13235.133541] i915 0000:00:02.0: using default PCI settings
+[13235.133550] pci 0000:00:02.1: no hotplug settings from platform
+[13235.133554] pci 0000:00:02.1: using default PCI settings
+[13235.133563] uhci_hcd 0000:00:1a.0: no hotplug settings from platform
+[13235.133567] uhci_hcd 0000:00:1a.0: using default PCI settings
+[13235.133579] uhci_hcd 0000:00:1a.1: no hotplug settings from platform
+[13235.133582] uhci_hcd 0000:00:1a.1: using default PCI settings
+[13235.133595] uhci_hcd 0000:00:1a.2: no hotplug settings from platform
+[13235.133598] uhci_hcd 0000:00:1a.2: using default PCI settings
+[13235.133611] ehci-pci 0000:00:1a.7: no hotplug settings from platform
+[13235.133614] ehci-pci 0000:00:1a.7: using default PCI settings
+[13235.133628] snd_hda_intel 0000:00:1b.0: no hotplug settings from platform
+[13235.133634] pcieport 0000:00:1c.0: no hotplug settings from platform
+[13235.133640] pcieport 0000:00:1c.4: no hotplug settings from platform
+[13235.133655] atl1c 0000:07:00.0: no hotplug settings from platform
+[13235.133661] pcieport 0000:00:1c.5: no hotplug settings from platform
+[13235.133721] rtl8192se 0000:08:00.0: no hotplug settings from platform
+[13235.133728] uhci_hcd 0000:00:1d.0: no hotplug settings from platform
+[13235.133731] uhci_hcd 0000:00:1d.0: using default PCI settings
+[13235.133744] uhci_hcd 0000:00:1d.1: no hotplug settings from platform
+[13235.133747] uhci_hcd 0000:00:1d.1: using default PCI settings
+[13235.133760] uhci_hcd 0000:00:1d.2: no hotplug settings from platform
+[13235.133763] uhci_hcd 0000:00:1d.2: using default PCI settings
+[13235.133775] ehci-pci 0000:00:1d.7: no hotplug settings from platform
+[13235.133779] ehci-pci 0000:00:1d.7: using default PCI settings
+[13235.133791] pci 0000:00:1e.0: no hotplug settings from platform
+[13235.133795] pci 0000:00:1e.0: using default PCI settings
+[13235.133814] lpc_ich 0000:00:1f.0: no hotplug settings from platform
+[13235.133817] lpc_ich 0000:00:1f.0: using default PCI settings
+[13235.133832] ahci 0000:00:1f.2: no hotplug settings from platform
+[13235.133835] ahci 0000:00:1f.2: using default PCI settings
+[13235.133848] pci 0000:00:1f.3: no hotplug settings from platform
+[13235.133851] pci 0000:00:1f.3: using default PCI settings
+[13246.736188] [drm] HPD interrupt storm detected on connector DP-2: switching from hotplug detection to polling
+[13264.696670] perf samples too long (5021 > 5000), lowering kernel.perf_event_max_sample_rate to 25000
+[13329.519094] nf_conntrack: automatic helper assignment is deprecated and it will be removed soon. Use the iptables CT target to attach helpers instead.
+[14453.504415] wlp8s0: Connection to AP 4c:17:eb:2d:bd:f1 lost
+[14453.533263] cfg80211: Calling CRDA to update world regulatory domain
+[14453.541619] cfg80211: World regulatory domain updated:
+[14453.541625] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[14453.541630] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14453.541633] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14453.541637] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[14453.541640] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14453.541644] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14460.753152] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[14460.763492] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[14460.765950] wlp8s0: authenticated
+[14460.766173] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[14460.766179] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[14460.766183] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[14460.767056] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[14460.770309] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=4)
+[14460.774347] wlp8s0: associated
+[14808.508408] wlp8s0: Connection to AP 4c:17:eb:2d:bd:f1 lost
+[14808.539329] cfg80211: Calling CRDA to update world regulatory domain
+[14808.550789] cfg80211: World regulatory domain updated:
+[14808.550797] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[14808.550802] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14808.550806] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14808.550809] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[14808.550813] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14808.550817] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14809.705532] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[14809.707522] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[14809.710086] wlp8s0: authenticated
+[14809.710466] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[14809.710472] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[14809.710476] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[14809.711983] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[14809.715105] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=4)
+[14809.719732] wlp8s0: associated
+[14936.892536] wlp8s0: Connection to AP 4c:17:eb:2d:bd:f1 lost
+[14936.921198] cfg80211: Calling CRDA to update world regulatory domain
+[14936.926342] cfg80211: World regulatory domain updated:
+[14936.926348] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[14936.926353] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14936.926356] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14936.926360] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[14936.926363] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14936.926367] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14938.079319] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[14938.089468] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[14938.092098] wlp8s0: authenticated
+[14938.092528] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[14938.092535] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[14938.092539] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[14938.093121] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[14938.095862] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=4)
+[14938.099651] wlp8s0: associated
+[14947.040281] wlp8s0: Connection to AP 4c:17:eb:2d:bd:f1 lost
+[14947.069858] cfg80211: Calling CRDA to update world regulatory domain
+[14947.077805] cfg80211: World regulatory domain updated:
+[14947.077812] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[14947.077816] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14947.077819] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14947.077823] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[14947.077826] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14947.077830] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14948.227436] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[14948.237916] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[14948.240754] wlp8s0: authenticated
+[14948.240951] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[14948.240957] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[14948.240961] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[14948.241094] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[14948.244256] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=4)
+[14948.247704] wlp8s0: associated
+[14957.192364] wlp8s0: Connection to AP 4c:17:eb:2d:bd:f1 lost
+[14957.222247] cfg80211: Calling CRDA to update world regulatory domain
+[14957.227476] cfg80211: World regulatory domain updated:
+[14957.227483] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[14957.227488] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14957.227492] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14957.227495] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[14957.227499] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14957.227503] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14958.380452] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[14958.390938] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[14958.492210] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 2/3)
+[14958.593231] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 3/3)
+[14958.694047] wlp8s0: authentication with 4c:17:eb:2d:bd:f1 timed out
+[14960.113337] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[14960.123810] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[14960.126488] wlp8s0: authenticated
+[14960.126728] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[14960.126734] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[14960.126738] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[14960.128105] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[14960.131427] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=4)
+[14960.135191] wlp8s0: associated
+[14969.412306] wlp8s0: Connection to AP 4c:17:eb:2d:bd:f1 lost
+[14969.443537] cfg80211: Calling CRDA to update world regulatory domain
+[14969.448390] cfg80211: World regulatory domain updated:
+[14969.448396] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[14969.448401] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14969.448405] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14969.448409] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[14969.448412] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14969.448416] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[14970.598964] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[14970.609941] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[14970.712058] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 2/3)
+[14970.813049] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 3/3)
+[14970.914234] wlp8s0: authentication with 4c:17:eb:2d:bd:f1 timed out
+[14972.333232] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[14972.343930] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[14972.346177] wlp8s0: authenticated
+[14972.346398] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[14972.346404] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[14972.346408] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[14972.347284] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[14972.350443] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=4)
+[14972.354346] wlp8s0: associated
+[33380.540623] wlp8s0: Connection to AP 4c:17:eb:2d:bd:f1 lost
+[33385.624777] cfg80211: Calling CRDA to update world regulatory domain
+[33386.047895] cfg80211: World regulatory domain updated:
+[33386.047902] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[33386.047906] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33386.047910] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33386.047913] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[33386.047917] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33386.047920] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33386.812349] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[33386.822905] wlp8s0: direct probe to 4c:17:eb:2d:bd:f1 (try 1/3)
+[33387.023209] wlp8s0: direct probe to 4c:17:eb:2d:bd:f1 (try 2/3)
+[33387.224234] wlp8s0: direct probe to 4c:17:eb:2d:bd:f1 (try 3/3)
+[33387.425241] wlp8s0: authentication with 4c:17:eb:2d:bd:f1 timed out
+[33388.991954] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[33389.003320] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[33389.030315] wlp8s0: authenticated
+[33389.030568] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[33389.030574] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[33389.030578] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[33389.031067] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[33389.132062] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 2/3)
+[33389.137099] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=3)
+[33389.140555] wlp8s0: associated
+[33516.332328] wlp8s0: Connection to AP 4c:17:eb:2d:bd:f1 lost
+[33528.703336] wlp8s0: Connection to AP 00:00:00:00:00:00 lost
+[33528.703970] cfg80211: Calling CRDA to update world regulatory domain
+[33528.710810] cfg80211: World regulatory domain updated:
+[33528.710817] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[33528.710822] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33528.710826] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33528.710830] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[33528.710833] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33528.710837] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33535.928315] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[33535.939174] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[33535.941982] wlp8s0: authenticated
+[33535.942216] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[33535.942223] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[33535.942227] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[33535.943054] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[33535.945728] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=3)
+[33535.949527] wlp8s0: associated
+[33563.064283] wlp8s0: Connection to AP 4c:17:eb:2d:bd:f1 lost
+[33569.957442] cfg80211: Calling CRDA to update world regulatory domain
+[33570.024700] cfg80211: World regulatory domain updated:
+[33570.024706] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[33570.024711] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33570.024714] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33570.024718] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[33570.024721] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33570.024724] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[33571.116441] wlp8s0: authenticate with 4c:17:eb:2d:bd:f1
+[33571.126809] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 1/3)
+[33571.228215] wlp8s0: send auth to 4c:17:eb:2d:bd:f1 (try 2/3)
+[33571.230917] wlp8s0: authenticated
+[33571.231196] rtl8192se 0000:08:00.0 wlp8s0: disabling HT/VHT due to WEP/TKIP use
+[33571.231202] rtl8192se 0000:08:00.0 wlp8s0: disabling HT as WMM/QoS is not supported by the AP
+[33571.231207] rtl8192se 0000:08:00.0 wlp8s0: disabling VHT as WMM/QoS is not supported by the AP
+[33571.232235] wlp8s0: associate with 4c:17:eb:2d:bd:f1 (try 1/3)
+[33571.237453] wlp8s0: RX AssocResp from 4c:17:eb:2d:bd:f1 (capab=0x411 status=0 aid=3)
+[33571.241342] wlp8s0: associated
+[33869.390226] SELinux: initialized (dev proc, type proc), uses genfs_contexts
+[47067.349339] SELinux: initialized (dev proc, type proc), uses genfs_contexts
+[47310.121618] wlp8s0: deauthenticating from 4c:17:eb:2d:bd:f1 by local choice (reason=3)
+[47310.143745] cfg80211: Calling CRDA to update world regulatory domain
+[47310.259922] cfg80211: World regulatory domain updated:
+[47310.259929] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[47310.259933] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[47310.259937] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[47310.259940] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[47310.259944] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[47310.259947] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[47314.778875] PM: Syncing filesystems ... done.
+[47315.863031] PM: Preparing system for mem sleep
+[47316.015610] Freezing user space processes ... (elapsed 0.003 seconds) done.
+[47316.019452] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[47316.020649] PM: Entering mem sleep
+[47316.020710] Suspending console(s) (use no_console_suspend to debug)
+[47316.022123] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[47316.265838] sd 0:0:0:0: [sda] Stopping disk
+[47316.879106] PM: suspend of devices complete after 857.994 msecs
+[47316.879380] PM: late suspend of devices complete after 0.270 msecs
+[47316.903232] ehci-pci 0000:00:1d.7: System wakeup enabled by ACPI
+[47316.914104] uhci_hcd 0000:00:1d.2: System wakeup enabled by ACPI
+[47316.914168] uhci_hcd 0000:00:1d.1: System wakeup enabled by ACPI
+[47316.914231] uhci_hcd 0000:00:1d.0: System wakeup enabled by ACPI
+[47316.914457] ehci-pci 0000:00:1a.7: System wakeup enabled by ACPI
+[47316.925098] uhci_hcd 0000:00:1a.2: System wakeup enabled by ACPI
+[47316.925162] uhci_hcd 0000:00:1a.1: System wakeup enabled by ACPI
+[47316.925224] uhci_hcd 0000:00:1a.0: System wakeup enabled by ACPI
+[47316.925293] PM: noirq suspend of devices complete after 45.909 msecs
+[47316.925752] ACPI: Preparing to enter system sleep state S3
+[47316.933133] PM: Saving platform NVS memory
+[47316.933608] Disabling non-boot CPUs ...
+[47316.933972] Broke affinity for irq 17
+[47316.934010] Broke affinity for irq 43
+[47316.935065] smpboot: CPU 1 is now offline
+[47316.935502] ACPI: Low-level resume complete
+[47316.935502] PM: Restoring platform NVS memory
+[47316.935502] microcode: CPU0 sig=0x1067a, pf=0x80, revision=0xa0b
+[47316.935502] Enabling non-boot CPUs ...
+[47316.935502] smpboot: Booting Node 0 Processor 1 APIC 0x1
+[47316.947538] microcode: CPU1 sig=0x1067a, pf=0x80, revision=0xa07
+[47316.948532] microcode: CPU1 updated to revision 0xa0b, date = 2010-09-28
+[47316.957484] CPU1 is up
+[47316.959853] ACPI: Waking up from system sleep state S3
+[47316.996172] uhci_hcd 0000:00:1a.0: System wakeup disabled by ACPI
+[47316.996240] uhci_hcd 0000:00:1a.1: System wakeup disabled by ACPI
+[47316.996307] uhci_hcd 0000:00:1a.2: System wakeup disabled by ACPI
+[47317.007109] ehci-pci 0000:00:1a.7: System wakeup disabled by ACPI
+[47317.018412] uhci_hcd 0000:00:1d.0: System wakeup disabled by ACPI
+[47317.018479] uhci_hcd 0000:00:1d.1: System wakeup disabled by ACPI
+[47317.018545] uhci_hcd 0000:00:1d.2: System wakeup disabled by ACPI
+[47317.029103] ehci-pci 0000:00:1d.7: System wakeup disabled by ACPI
+[47317.064535] PM: noirq resume of devices complete after 79.381 msecs
+[47317.064745] PM: early resume of devices complete after 0.168 msecs
+[47317.064786] i915 0000:00:02.0: setting latency timer to 64
+[47317.065257] uhci_hcd 0000:00:1a.0: setting latency timer to 64
+[47317.065288] usb usb3: root hub lost power or was reset
+[47317.065422] uhci_hcd 0000:00:1a.1: setting latency timer to 64
+[47317.065451] usb usb4: root hub lost power or was reset
+[47317.065581] uhci_hcd 0000:00:1a.2: setting latency timer to 64
+[47317.065610] usb usb5: root hub lost power or was reset
+[47317.065741] ehci-pci 0000:00:1a.7: setting latency timer to 64
+[47317.065917] snd_hda_intel 0000:00:1b.0: irq 45 for MSI/MSI-X
+[47317.066137] uhci_hcd 0000:00:1d.0: setting latency timer to 64
+[47317.066167] usb usb6: root hub lost power or was reset
+[47317.066298] uhci_hcd 0000:00:1d.1: setting latency timer to 64
+[47317.066328] usb usb7: root hub lost power or was reset
+[47317.066457] uhci_hcd 0000:00:1d.2: setting latency timer to 64
+[47317.066487] usb usb8: root hub lost power or was reset
+[47317.066618] ehci-pci 0000:00:1d.7: setting latency timer to 64
+[47317.066654] ahci 0000:00:1f.2: setting latency timer to 64
+[47317.069098] ------------[ cut here ]------------
+[47317.069107] WARNING: CPU: 1 PID: 2418 at kernel/trace/ring_buffer.c:2571 rb_reserve_next_event+0x3d1/0x490()
+[47317.069111] Delta way too big! 18446730314753150351 ts=18446744063144664026 write stamp = 13748391513675
+If you just came from a suspend/resume,
+please switch to the trace global clock:
+  echo global > /sys/kernel/debug/tracing/trace_clock
+[47317.069171] Modules linked in: tcp_lp rfcomm fuse xt_CHECKSUM tun nf_conntrack_netbios_ns nf_conntrack_broadcast ipt_MASQUERADE ip6t_REJECT xt_conntrack ebtable_nat ebtable_broute bridge stp llc ebtable_filter ebtables ip6table_nat nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_ipv6 ip6table_mangle ip6table_security ip6table_raw ip6table_filter ip6_tables iptable_nat nf_conntrack_ipv4 nf_defrag_ipv4 nf_nat_ipv4 nf_nat nf_conntrack iptable_mangle iptable_security iptable_raw bnep arc4 coretemp uvcvideo videobuf2_vmalloc videobuf2_memops videobuf2_core videodev rtl8192se rtl_pci rtlwifi btusb bluetooth mac80211 joydev microcode iTCO_wdt iTCO_vendor_support media snd_hda_codec_hdmi snd_hda_codec_conexant snd_hda_intel snd_hda_codec snd_hwdep snd_seq snd_seq_device snd_pcm cfg80211 serio_raw lpc_ich i2c_i801
+[47317.069193]  mfd_core snd_page_alloc snd_timer snd atl1c toshiba_acpi soundcore sparse_keymap shpchp rfkill toshiba_bluetooth wmi acpi_cpufreq nfsd auth_rpcgss nfs_acl lockd sunrpc i915 i2c_algo_bit drm_kms_helper drm i2c_core video
+[47317.069197] CPU: 1 PID: 2418 Comm: kworker/u4:21 Not tainted 3.12.6-300.fc20.x86_64 #1
+[47317.069199] Hardware name: TOSHIBA SATELLITE T130/SATELLITE T130, BIOS V2.70    07/08/2010
+[47317.069205] Workqueue: events_unbound async_run_entry_fn
+[47317.069211]  0000000000000009 ffff88000ed01b30 ffffffff816630c1 ffff88000ed01b78
+[47317.069214]  ffff88000ed01b68 ffffffff810691dd ffff880139ee4000 0000000000000014
+[47317.069218]  0800000000000000 ffff880139ee4080 0000000000000000 ffff88000ed01bc8
+[47317.069219] Call Trace:
+[47317.069227]  [<ffffffff816630c1>] dump_stack+0x45/0x56
+[47317.069232]  [<ffffffff810691dd>] warn_slowpath_common+0x7d/0xa0
+[47317.069236]  [<ffffffff8106924c>] warn_slowpath_fmt+0x4c/0x50
+[47317.069241]  [<ffffffff8101a223>] ? native_sched_clock+0x13/0x80
+[47317.069245]  [<ffffffff81111bd1>] rb_reserve_next_event+0x3d1/0x490
+[47317.069253]  [<ffffffff81111d21>] ring_buffer_lock_reserve+0x91/0xf0
+[47317.069256]  [<ffffffff81115f7e>] trace_buffer_lock_reserve+0x1e/0x60
+[47317.069261]  [<ffffffff81115fe6>] trace_event_buffer_lock_reserve+0x26/0x30
+[47317.069296]  [<ffffffffa00a99f7>] ftrace_raw_event_i915_gem_object+0x67/0xb0 [i915]
+[47317.069323]  [<ffffffffa009b9ee>] i915_gem_clflush_object+0x8e/0xa0 [i915]
+[47317.069351]  [<ffffffffa00a660e>] i915_gem_restore_gtt_mappings+0x7e/0xd0 [i915]
+[47317.069374]  [<ffffffffa0086604>] i915_resume+0xa4/0xb0 [i915]
+[47317.069398]  [<ffffffffa0086626>] i915_pm_resume+0x16/0x20 [i915]
+[47317.069404]  [<ffffffff8133be04>] pci_pm_resume+0x64/0xb0
+[47317.069407]  [<ffffffff8133bda0>] ? pci_pm_thaw+0xa0/0xa0
+[47317.069412]  [<ffffffff81407e39>] dpm_run_callback+0x49/0xa0
+[47317.069415]  [<ffffffff81407f96>] device_resume+0xc6/0x1f0
+[47317.069418]  [<ffffffff814080dd>] async_resume+0x1d/0x50
+[47317.069421]  [<ffffffff810920d9>] async_run_entry_fn+0x39/0x120
+[47317.069427]  [<ffffffff810835f6>] process_one_work+0x176/0x430
+[47317.069430]  [<ffffffff8108422b>] worker_thread+0x11b/0x3a0
+[47317.069433]  [<ffffffff81084110>] ? rescuer_thread+0x350/0x350
+[47317.069437]  [<ffffffff8108b0d0>] kthread+0xc0/0xd0
+[47317.069441]  [<ffffffff8108b010>] ? insert_kthread_work+0x40/0x40
+[47317.069446]  [<ffffffff8167207c>] ret_from_fork+0x7c/0xb0
+[47317.069449]  [<ffffffff8108b010>] ? insert_kthread_work+0x40/0x40
+[47317.069451] ---[ end trace d74ec7c82de1b04a ]---
+[47317.382160] usb 2-4: reset high-speed USB device number 3 using ehci-pci
+[47317.421585] toshiba_bluetooth: Re-enabling Toshiba Bluetooth
+[47317.598183] usb 7-1: reset full-speed USB device number 2 using uhci_hcd
+[47317.737553] btusb 7-1:1.0: no reset_resume for driver btusb?
+[47317.737556] btusb 7-1:1.1: no reset_resume for driver btusb?
+[47318.039157] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[47318.039890] ata1.00: unexpected _GTF length (8)
+[47318.040879] ata1.00: unexpected _GTF length (8)
+[47318.041060] ata1.00: configured for UDMA/100
+[47318.041126] sd 0:0:0:0: [sda] Starting disk
+[47318.076926] PM: resume of devices complete after 1012.175 msecs
+[47318.078338] pci_bus 0000:02: Allocating resources
+[47318.078361] pci_bus 0000:07: Allocating resources
+[47318.078387] pci_bus 0000:08: Allocating resources
+[47318.078519] i915 0000:00:02.0: BAR 6: [??? 0x00000000 flags 0x2] has bogus alignment
+[47318.078532] pci 0000:00:1e.0: PCI bridge to [bus 0a]
+[47318.078562] agpgart-intel 0000:00:00.0: no hotplug settings from platform
+[47318.078566] agpgart-intel 0000:00:00.0: using default PCI settings
+[47318.078575] i915 0000:00:02.0: no hotplug settings from platform
+[47318.078579] i915 0000:00:02.0: using default PCI settings
+[47318.078588] pci 0000:00:02.1: no hotplug settings from platform
+[47318.078592] pci 0000:00:02.1: using default PCI settings
+[47318.078601] uhci_hcd 0000:00:1a.0: no hotplug settings from platform
+[47318.078605] uhci_hcd 0000:00:1a.0: using default PCI settings
+[47318.078617] uhci_hcd 0000:00:1a.1: no hotplug settings from platform
+[47318.078621] uhci_hcd 0000:00:1a.1: using default PCI settings
+[47318.078633] uhci_hcd 0000:00:1a.2: no hotplug settings from platform
+[47318.078637] uhci_hcd 0000:00:1a.2: using default PCI settings
+[47318.078649] ehci-pci 0000:00:1a.7: no hotplug settings from platform
+[47318.078652] ehci-pci 0000:00:1a.7: using default PCI settings
+[47318.078665] snd_hda_intel 0000:00:1b.0: no hotplug settings from platform
+[47318.078672] pcieport 0000:00:1c.0: no hotplug settings from platform
+[47318.078678] pcieport 0000:00:1c.4: no hotplug settings from platform
+[47318.078691] atl1c 0000:07:00.0: no hotplug settings from platform
+[47318.078698] pcieport 0000:00:1c.5: no hotplug settings from platform
+[47318.078760] rtl8192se 0000:08:00.0: no hotplug settings from platform
+[47318.078766] uhci_hcd 0000:00:1d.0: no hotplug settings from platform
+[47318.078770] uhci_hcd 0000:00:1d.0: using default PCI settings
+[47318.078782] uhci_hcd 0000:00:1d.1: no hotplug settings from platform
+[47318.078786] uhci_hcd 0000:00:1d.1: using default PCI settings
+[47318.078798] uhci_hcd 0000:00:1d.2: no hotplug settings from platform
+[47318.078802] uhci_hcd 0000:00:1d.2: using default PCI settings
+[47318.078814] ehci-pci 0000:00:1d.7: no hotplug settings from platform
+[47318.078818] ehci-pci 0000:00:1d.7: using default PCI settings
+[47318.078830] pci 0000:00:1e.0: no hotplug settings from platform
+[47318.078833] pci 0000:00:1e.0: using default PCI settings
+[47318.078850] lpc_ich 0000:00:1f.0: no hotplug settings from platform
+[47318.078854] lpc_ich 0000:00:1f.0: using default PCI settings
+[47318.078869] ahci 0000:00:1f.2: no hotplug settings from platform
+[47318.078872] ahci 0000:00:1f.2: using default PCI settings
+[47318.078885] pci 0000:00:1f.3: no hotplug settings from platform
+[47318.078888] pci 0000:00:1f.3: using default PCI settings
+[47318.078924] PM: Finishing wakeup.
+[47318.078927] Restarting tasks ... done.
+[47318.093449] video LNXVIDEO:00: Restoring backlight state
+[47318.828245] atl1c 0000:07:00.0: irq 46 for MSI/MSI-X
+[47318.840062] IPv6: ADDRCONF(NETDEV_UP): p4p1: link is not ready
+[47319.317327] IPv6: ADDRCONF(NETDEV_UP): wlp8s0: link is not ready

@@ -1,0 +1,975 @@
+Initializing cgroup subsys cpuset
+Initializing cgroup subsys cpu
+Linux version 2.6.25-0.218.rc8.git7.fc9.i686 (mockbuild@) (gcc version 4.3.0 20080404 (Red Hat 4.3.0-6) (GCC) ) #1 SMP Wed Apr 9 20:35:56 EDT 2008
+BIOS-provided physical RAM map:
+ BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)
+ BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+ BIOS-e820: 0000000000100000 - 000000003ff77000 (usable)
+ BIOS-e820: 000000003ff77000 - 000000003ff79000 (ACPI NVS)
+ BIOS-e820: 000000003ff79000 - 0000000040000000 (reserved)
+ BIOS-e820: 00000000fec00000 - 00000000fec10000 (reserved)
+ BIOS-e820: 00000000fee00000 - 00000000fee10000 (reserved)
+ BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)
+127MB HIGHMEM available.
+896MB LOWMEM available.
+Scan SMP from c0000000 for 1024 bytes.
+Scan SMP from c009fc00 for 1024 bytes.
+Scan SMP from c00f0000 for 65536 bytes.
+found SMP MP-table at [c00fe710] 000fe710
+Using x86 segment limits to approximate NX protection
+Entering add_active_range(0, 0, 262007) 0 entries of 256 used
+Zone PFN ranges:
+  DMA             0 ->     4096
+  Normal       4096 ->   229376
+  HighMem    229376 ->   262007
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0:        0 ->   262007
+On node 0 totalpages: 262007
+  DMA zone: 32 pages used for memmap
+  DMA zone: 0 pages reserved
+  DMA zone: 4064 pages, LIFO batch:0
+  Normal zone: 1760 pages used for memmap
+  Normal zone: 223520 pages, LIFO batch:31
+  HighMem zone: 254 pages used for memmap
+  HighMem zone: 32377 pages, LIFO batch:7
+  Movable zone: 0 pages used for memmap
+DMI 2.3 present.
+Using APIC driver default
+ACPI: RSDP 000FD560, 0014 (r0 DELL  )
+ACPI: RSDT 000FD574, 0034 (r1 DELL    WS 340         8 ASL        61)
+ACPI: FACP 000FD5A8, 0074 (r1 DELL    WS 340         8 ASL        61)
+ACPI: DSDT FFFE3C22, 23AD (r1   DELL    dt_ex     1000 MSFT  100000D)
+ACPI: FACS 3FF77000, 0040
+ACPI: SSDT FFFE61C6, 0096 (r1   DELL    st_ex     1000 MSFT  100000D)
+ACPI: APIC 000FD61C, 005C (r1 DELL    WS 340         8 ASL        61)
+ACPI: BOOT 000FD678, 0028 (r1 DELL    WS 340         8 ASL        61)
+ACPI: PM-Timer IO Port: 0x808
+ACPI: Local APIC address 0xfee00000
+ACPI: LAPIC (acpi_id[0x01] lapic_id[0x00] enabled)
+Processor #0 15:2 APIC version 20
+ACPI: LAPIC (acpi_id[0x02] lapic_id[0x01] disabled)
+ACPI: IOAPIC (id[0x01] address[0xfec00000] gsi_base[0])
+IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+ACPI: IRQ0 used by override.
+ACPI: IRQ2 used by override.
+ACPI: IRQ9 used by override.
+Enabling APIC mode:  Flat.  Using 1 I/O APICs
+Using ACPI (MADT) for SMP configuration information
+Allocating PCI resources starting at 50000000 (gap: 40000000:bec00000)
+PM: Registered nosave memory: 00000000000a0000 - 00000000000f0000
+PM: Registered nosave memory: 00000000000f0000 - 0000000000100000
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 259961
+Kernel command line: ro root=UUID=8301cc68-612d-41d0-9e05-112d8fd6bc9d quiet vga=792
+mapped APIC to ffffb000 (fee00000)
+mapped IOAPIC to ffffa000 (fec00000)
+Enabling fast FPU save and restore... done.
+Enabling unmasked SIMD FPU exception support... done.
+Initializing CPU#0
+CPU 0 irqstacks, hard=c07b8000 soft=c0798000
+PID hash table entries: 4096 (order: 12, 16384 bytes)
+Detected 1993.994 MHz processor.
+Console: colour dummy device 80x25
+console [tty0] enabled
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 1030732k/1048028k available (2234k kernel code, 16592k reserved, 1119k data, 284k init, 130524k highmem)
+virtual kernel memory layout:
+    fixmap  : 0xffc53000 - 0xfffff000   (3760 kB)
+    pkmap   : 0xff400000 - 0xff800000   (4096 kB)
+    vmalloc : 0xf8800000 - 0xff3fe000   ( 107 MB)
+    lowmem  : 0xc0000000 - 0xf8000000   ( 896 MB)
+      .init : 0xc074e000 - 0xc0795000   ( 284 kB)
+      .data : 0xc062e899 - 0xc0746800   (1119 kB)
+      .text : 0xc0400000 - 0xc062e899   (2234 kB)
+Checking if this processor honours the WP bit even in supervisor mode...Ok.
+CPA: page pool initialized 1 of 1 pages preallocated
+SLUB: Genslabs=12, HWalign=128, Order=0-1, MinObjects=4, CPUs=1, Nodes=1
+Calibrating delay using timer specific routine.. 3991.18 BogoMIPS (lpj=1995594)
+Security Framework initialized
+SELinux:  Initializing.
+SELinux:  Starting in permissive mode
+selinux_register_security:  Registering secondary module capability
+Capability LSM initialized as secondary
+Mount-cache hash table entries: 512
+Initializing cgroup subsys ns
+Initializing cgroup subsys cpuacct
+CPU: Trace cache: 12K uops, L1 D cache: 8K
+CPU: L2 cache: 512K
+CPU: Hyper-Threading is disabled
+Intel machine check architecture supported.
+Intel machine check reporting enabled on CPU#0.
+CPU0: Intel P4/Xeon Extended MCE MSRs (12) available
+CPU0: Thermal monitoring enabled
+Compat vDSO mapped to ffffe000.
+Checking 'hlt' instruction... OK.
+SMP alternatives: switching to UP code
+Freeing SMP alternatives: 20k freed
+ACPI: Core revision 20070126
+CPU0: Intel(R) Pentium(R) 4 CPU 2.00GHz stepping 04
+Total of 1 processors activated (3991.18 BogoMIPS).
+ENABLING IO-APIC IRQs
+..TIMER: vector=0x31 apic1=0 pin1=2 apic2=-1 pin2=-1
+Brought up 1 CPUs
+sizeof(vma)=84 bytes
+sizeof(page)=32 bytes
+sizeof(inode)=340 bytes
+sizeof(dentry)=132 bytes
+sizeof(ext3inode)=492 bytes
+sizeof(buffer_head)=56 bytes
+sizeof(skbuff)=176 bytes
+sizeof(task_struct)=3712 bytes
+CPU0 attaching sched-domain:
+ domain 0: span 00000001
+  groups: 00000001
+net_namespace: 548 bytes
+Booting paravirtualized kernel on bare hardware
+Time: 10:11:41  Date: 04/13/08
+NET: Registered protocol family 16
+No dock devices found.
+ACPI: bus type pci registered
+PCI: PCI BIOS revision 2.10 entry at 0xfbe5e, last bus=2
+PCI: Using configuration type 1
+Setting up standard PCI resources
+ACPI: EC: Look up EC in DSDT
+ACPI: Interpreter enabled
+ACPI: (supports S0 S1 S4 S5)
+ACPI: Using IOAPIC for interrupt routing
+ACPI: PCI Root Bridge [PCI0] (0000:00)
+pci 0000:00:1f.0: quirk: region 0800-087f claimed by ICH4 ACPI/GPIO/TCO
+pci 0000:00:1f.0: quirk: region 0880-08bf claimed by ICH4 GPIO
+PCI: Transparent bridge - 0000:00:1e.0
+ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PCI1._PRT]
+ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 *7 9 10 11 12 15)
+ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 7 9 *10 11 12 15)
+ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 7 9 10 *11 12 15)
+ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 6 7 9 10 *11 12 15)
+ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 6 7 9 10 11 12 15) *0, disabled.
+ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 6 7 9 10 11 12 15) *0, disabled.
+ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 5 6 7 9 10 11 12 15) *0, disabled.
+ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 7 *9 10 11 12 15)
+Linux Plug and Play Support v0.97 (c) Adam Belay
+pnp: PnP ACPI init
+ACPI: bus type pnp registered
+pnp: PnP ACPI: found 10 devices
+ACPI: ACPI bus type pnp unregistered
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+PCI: Using ACPI for IRQ routing
+PCI: If a device doesn't work, try "pci=routeirq".  If it helps, post a report
+NetLabel: Initializing
+NetLabel:  domain hash size = 128
+NetLabel:  protocols = UNLABELED CIPSOv4
+NetLabel:  unlabeled traffic allowed by default
+ACPI: RTC can wake from S4
+system 00:00: iomem range 0x0-0x9ffff could not be reserved
+system 00:00: iomem range 0x100000-0xffffff could not be reserved
+system 00:00: iomem range 0x1000000-0x3ff76fff could not be reserved
+system 00:00: iomem range 0xf0000-0xfffff could not be reserved
+system 00:00: iomem range 0xfec00000-0xfec0ffff could not be reserved
+system 00:00: iomem range 0xfee00000-0xfee0ffff could not be reserved
+system 00:00: iomem range 0xffb00000-0xffbfffff could not be reserved
+system 00:00: iomem range 0xffc00000-0xffffffff could not be reserved
+system 00:09: ioport range 0x800-0x85f has been reserved
+system 00:09: ioport range 0xc00-0xc7f has been reserved
+system 00:09: ioport range 0x860-0x8ff could not be reserved
+PCI: Bridge: 0000:00:01.0
+  IO window: disabled.
+  MEM window: 0xfc000000-0xfdffffff
+  PREFETCH window: 0x00000000f0000000-0x00000000f7ffffff
+PCI: Bridge: 0000:00:1e.0
+  IO window: e000-efff
+  MEM window: 0xfe100000-0xfe2fffff
+  PREFETCH window: 0x0000000050000000-0x00000000500fffff
+PCI: Setting latency timer of device 0000:00:1e.0 to 64
+NET: Registered protocol family 2
+IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
+TCP established hash table entries: 131072 (order: 8, 1048576 bytes)
+TCP bind hash table entries: 65536 (order: 7, 524288 bytes)
+TCP: Hash tables configured (established 131072 bind 65536)
+TCP reno registered
+checking if image is initramfs... it is
+Freeing initrd memory: 3081k freed
+Simple Boot Flag at 0x7a set to 0x1
+apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)
+apm: overridden by ACPI.
+audit: initializing netlink socket (disabled)
+type=2000 audit(1208081500.735:1): initialized
+highmem bounce pool size: 64 pages
+Total HugeTLB memory allocated, 0
+VFS: Disk quotas dquot_6.5.1
+Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+SELinux:  Registering netfilter hooks
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+io scheduler noop registered
+io scheduler anticipatory registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+pci 0000:01:00.0: Boot video device
+pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+vesafb: framebuffer at 0xf0000000, mapped to 0xf8880000, using 6144k, total 131072k
+vesafb: mode is 1024x768x32, linelength=4096, pages=1
+vesafb: protected mode interface info at c000:e4c0
+vesafb: pmi: set display start = c00ce4f6, set palette = c00ce560
+vesafb: pmi: ports = 3b4 3b5 3ba 3c0 3c1 3c4 3c5 3c6 3c7 3c8 3c9 3cc 3ce 3cf 3d0 3d1 3d2 3d3 3d4 3d5 3da 
+vesafb: scrolling: redraw
+vesafb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+Console: switching to colour frame buffer device 128x48
+Switched to high resolution mode on CPU 0
+fb0: VESA VGA frame buffer device
+ACPI: ACPI0007:00 is registered as cooling_device0
+isapnp: Scanning for PnP cards...
+isapnp: No Plug & Play device found
+Non-volatile memory driver v1.2
+Linux agpgart interface v0.103
+agpgart: Detected an Intel i850 Chipset.
+agpgart: AGP aperture is 256M @ 0xe0000000
+Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
+serial8250: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+serial8250: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+00:07: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+00:08: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+brd: module loaded
+input: Macintosh mouse button emulation as /devices/virtual/input/input0
+PNP: No PS/2 controller found. Probing ports directly.
+serio: i8042 KBD port at 0x60,0x64 irq 1
+serio: i8042 AUX port at 0x60,0x64 irq 12
+mice: PS/2 mouse device common for all mice
+rtc_cmos 00:05: rtc core: registered rtc_cmos as rtc0
+rtc0: alarms up to one day
+cpuidle: using governor ladder
+cpuidle: using governor menu
+usbcore: registered new interface driver hiddev
+usbcore: registered new interface driver usbhid
+drivers/hid/usbhid/hid-core.c: v2.6:USB HID core driver
+TCP cubic registered
+Initializing XFRM netlink socket
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+Using IPI No-Shortcut mode
+registered taskstats version 1
+  Magic number: 4:638:173
+Freeing unused kernel memory: 284k freed
+Write protecting the kernel read-only data: 908k
+ACPI: PCI Interrupt 0000:02:07.2[C] -> GSI 18 (level, low) -> IRQ 18
+ehci_hcd 0000:02:07.2: EHCI Host Controller
+ehci_hcd 0000:02:07.2: new USB bus registered, assigned bus number 1
+ehci_hcd 0000:02:07.2: irq 18, io mem 0xfe1fdc00
+ehci_hcd 0000:02:07.2: USB 2.0 started, EHCI 1.00, driver 10 Dec 2004
+usb usb1: configuration #1 chosen from 1 choice
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 5 ports detected
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 2.6.25-0.218.rc8.git7.fc9.i686 ehci_hcd
+usb usb1: SerialNumber: 0000:02:07.2
+ohci_hcd: 2006 August 04 USB 1.1 'Open' Host Controller (OHCI) Driver
+ACPI: PCI Interrupt 0000:02:07.0[A] -> GSI 16 (level, low) -> IRQ 16
+ohci_hcd 0000:02:07.0: OHCI Host Controller
+ohci_hcd 0000:02:07.0: new USB bus registered, assigned bus number 2
+ohci_hcd 0000:02:07.0: irq 16, io mem 0xfe1ff000
+usb usb2: configuration #1 chosen from 1 choice
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 3 ports detected
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: OHCI Host Controller
+usb usb2: Manufacturer: Linux 2.6.25-0.218.rc8.git7.fc9.i686 ohci_hcd
+usb usb2: SerialNumber: 0000:02:07.0
+ACPI: PCI Interrupt 0000:02:07.1[B] -> GSI 17 (level, low) -> IRQ 17
+ohci_hcd 0000:02:07.1: OHCI Host Controller
+ohci_hcd 0000:02:07.1: new USB bus registered, assigned bus number 3
+ohci_hcd 0000:02:07.1: irq 17, io mem 0xfe1fe000
+usb usb3: configuration #1 chosen from 1 choice
+hub 3-0:1.0: USB hub found
+hub 3-0:1.0: 2 ports detected
+usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb3: Product: OHCI Host Controller
+usb usb3: Manufacturer: Linux 2.6.25-0.218.rc8.git7.fc9.i686 ohci_hcd
+usb usb3: SerialNumber: 0000:02:07.1
+USB Universal Host Controller Interface driver v3.0
+ACPI: PCI Interrupt 0000:00:1f.2[D] -> GSI 19 (level, low) -> IRQ 19
+PCI: Setting latency timer of device 0000:00:1f.2 to 64
+uhci_hcd 0000:00:1f.2: UHCI Host Controller
+uhci_hcd 0000:00:1f.2: new USB bus registered, assigned bus number 4
+uhci_hcd 0000:00:1f.2: irq 19, io base 0x0000ff80
+usb usb4: configuration #1 chosen from 1 choice
+hub 4-0:1.0: USB hub found
+hub 4-0:1.0: 2 ports detected
+usb 1-3: new high speed USB device using ehci_hcd and address 3
+usb usb4: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb4: Product: UHCI Host Controller
+usb usb4: Manufacturer: Linux 2.6.25-0.218.rc8.git7.fc9.i686 uhci_hcd
+usb usb4: SerialNumber: 0000:00:1f.2
+ACPI: PCI Interrupt 0000:00:1f.4[C] -> GSI 23 (level, low) -> IRQ 23
+PCI: Setting latency timer of device 0000:00:1f.4 to 64
+uhci_hcd 0000:00:1f.4: UHCI Host Controller
+uhci_hcd 0000:00:1f.4: new USB bus registered, assigned bus number 5
+uhci_hcd 0000:00:1f.4: irq 23, io base 0x0000ff60
+usb usb5: configuration #1 chosen from 1 choice
+hub 5-0:1.0: USB hub found
+hub 5-0:1.0: 2 ports detected
+usb 1-3: configuration #1 chosen from 1 choice
+usb 1-3: New USB device found, idVendor=4971, idProduct=ce14
+usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+usb 1-3: Product: FP-UFE2 FW:1.1516
+usb 1-3: Manufacturer: Vimtron
+usb 1-3: SerialNumber: 0714100001
+usb usb5: New USB device found, idVendor=1d6b, idProduct=0001
+usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb5: Product: UHCI Host Controller
+usb usb5: Manufacturer: Linux 2.6.25-0.218.rc8.git7.fc9.i686 uhci_hcd
+usb usb5: SerialNumber: 0000:00:1f.4
+device-mapper: uevent: version 1.0.3
+device-mapper: ioctl: 4.13.0-ioctl (2007-10-18) initialised: dm-devel@redhat.com
+padlock: VIA PadLock not detected.
+padlock: VIA PadLock Hash Engine not detected.
+SCSI subsystem initialized
+Driver 'sd' needs updating - please use bus_type methods
+usb 2-1: new full speed USB device using ohci_hcd and address 2
+libata version 3.00 loaded.
+ata_piix 0000:00:1f.1: version 2.12
+PCI: Setting latency timer of device 0000:00:1f.1 to 64
+scsi0 : ata_piix
+scsi1 : ata_piix
+ata1: PATA max UDMA/100 cmd 0x1f0 ctl 0x3f6 bmdma 0xffa0 irq 14
+ata2: PATA max UDMA/100 cmd 0x170 ctl 0x376 bmdma 0xffa8 irq 15
+usb 2-1: configuration #1 chosen from 1 choice
+input: Logitech USB Receiver as /devices/pci0000:00/0000:00:1e.0/0000:02:07.0/usb2/2-1/2-1:1.0/input/input1
+ata1.00: ATA-5: ST340016A, 3.75, max UDMA/100
+ata1.00: 78165360 sectors, multi 8: LBA 
+ata1.01: ATA-5: ST340016A, 3.75, max UDMA/100
+ata1.01: 78165360 sectors, multi 8: LBA 
+input,hidraw0: USB HID v1.11 Mouse [Logitech USB Receiver] on usb-0000:02:07.0-1
+ata1.00: configured for UDMA/100
+ata1.01: configured for UDMA/100
+input: Logitech USB Receiver as /devices/pci0000:00/0000:00:1e.0/0000:02:07.0/usb2/2-1/2-1:1.1/input/input2
+input,hiddev96,hidraw1: USB HID v1.11 Device [Logitech USB Receiver] on usb-0000:02:07.0-1
+usb 2-1: New USB device found, idVendor=046d, idProduct=c51a
+usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 2-1: Product: USB Receiver
+usb 2-1: Manufacturer: Logitech
+usb 4-1: new low speed USB device using uhci_hcd and address 2
+usb 4-1: configuration #1 chosen from 1 choice
+input: Microsoft Natural® Ergonomic Keyboard 4000 as /devices/pci0000:00/0000:00:1f.2/usb4/4-1/4-1:1.0/input/input3
+input,hidraw2: USB HID v1.11 Keyboard [Microsoft Natural® Ergonomic Keyboard 4000] on usb-0000:00:1f.2-1
+input: Microsoft Natural® Ergonomic Keyboard 4000 as /devices/pci0000:00/0000:00:1f.2/usb4/4-1/4-1:1.1/input/input4
+input,hidraw3: USB HID v1.11 Device [Microsoft Natural® Ergonomic Keyboard 4000] on usb-0000:00:1f.2-1
+usb 4-1: New USB device found, idVendor=045e, idProduct=00db
+usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+usb 4-1: Product: Natural® Ergonomic Keyboard 4000
+usb 4-1: Manufacturer: Microsoft
+ata2.00: ATAPI: TSSTcorpCD/DVDW SH-S182D, SB03, max UDMA/33
+ata2.01: ATAPI: LITE-ON LTR-24102M, 4DS3, max UDMA/33
+usb 4-2: new low speed USB device using uhci_hcd and address 3
+ata2.00: configured for UDMA/33
+usb 4-2: configuration #1 chosen from 1 choice
+input: Microsoft Microsoft 5-Button Mouse with IntelliEye(TM) as /devices/pci0000:00/0000:00:1f.2/usb4/4-2/4-2:1.0/input/input5
+input,hidraw4: USB HID v1.10 Mouse [Microsoft Microsoft 5-Button Mouse with IntelliEye(TM)] on usb-0000:00:1f.2-2
+usb 4-2: New USB device found, idVendor=045e, idProduct=0039
+usb 4-2: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+usb 4-2: Product: Microsoft 5-Button Mouse with IntelliEye(TM)
+usb 4-2: Manufacturer: Microsoft
+ata2.01: configured for UDMA/33
+scsi 0:0:0:0: Direct-Access     ATA      ST340016A        3.75 PQ: 0 ANSI: 5
+sd 0:0:0:0: [sda] 78165360 512-byte hardware sectors (40021 MB)
+sd 0:0:0:0: [sda] Write Protect is off
+sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+sd 0:0:0:0: [sda] 78165360 512-byte hardware sectors (40021 MB)
+sd 0:0:0:0: [sda] Write Protect is off
+sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+ sda: sda1
+sd 0:0:0:0: [sda] Attached SCSI disk
+scsi 0:0:1:0: Direct-Access     ATA      ST340016A        3.75 PQ: 0 ANSI: 5
+sd 0:0:1:0: [sdb] 78165360 512-byte hardware sectors (40021 MB)
+sd 0:0:1:0: [sdb] Write Protect is off
+sd 0:0:1:0: [sdb] Mode Sense: 00 3a 00 00
+sd 0:0:1:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+sd 0:0:1:0: [sdb] 78165360 512-byte hardware sectors (40021 MB)
+sd 0:0:1:0: [sdb] Write Protect is off
+sd 0:0:1:0: [sdb] Mode Sense: 00 3a 00 00
+sd 0:0:1:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+ sdb: sdb1 sdb2 sdb3 sdb4
+sd 0:0:1:0: [sdb] Attached SCSI disk
+scsi 1:0:0:0: CD-ROM            TSSTcorp CD/DVDW SH-S182D SB03 PQ: 0 ANSI: 5
+scsi 1:0:1:0: CD-ROM            LITE-ON  LTR-24102M       4DS3 PQ: 0 ANSI: 5
+usb 5-1: new low speed USB device using uhci_hcd and address 2
+usb 5-1: configuration #1 chosen from 1 choice
+hiddev97hidraw5: USB HID v1.10 Device [APC Back-UPS ES 500 FW:824.B1.D USB FW:B1] on usb-0000:00:1f.4-1
+usb 5-1: New USB device found, idVendor=051d, idProduct=0002
+usb 5-1: New USB device strings: Mfr=3, Product=1, SerialNumber=2
+usb 5-1: Product: Back-UPS ES 500 FW:824.B1.D USB FW:B1
+usb 5-1: Manufacturer: APC
+usb 5-1: SerialNumber: 3B0623X48737  
+usb 5-2: new full speed USB device using uhci_hcd and address 3
+usb 5-2: not running at top speed; connect to a high speed hub
+usb 5-2: configuration #1 chosen from 1 choice
+hub 5-2:1.0: USB hub found
+hub 5-2:1.0: 4 ports detected
+usb 5-2: New USB device found, idVendor=04b4, idProduct=6560
+usb 5-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+kjournald2 starting.  Commit interval 5 seconds
+EXT4-fs: mounted filesystem with ordered data mode.
+EXT4-fs: file extents enabled
+EXT4-fs: mballoc enabled
+type=1404 audit(1208081513.578:2): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+SELinux:8192 avtab hash slots allocated. Num of rules:171128
+SELinux:8192 avtab hash slots allocated. Num of rules:171128
+security:  8 users, 12 roles, 2293 types, 115 bools, 1 sens, 1024 cats
+security:  72 classes, 171128 rules
+SELinux:  Completing initialization.
+SELinux:  Setting up existing superblocks.
+SELinux: initialized (dev dm-0, type ext4dev), uses xattr
+SELinux: initialized (dev usbfs, type usbfs), uses genfs_contexts
+SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+SELinux: initialized (dev selinuxfs, type selinuxfs), uses genfs_contexts
+SELinux: initialized (dev mqueue, type mqueue), uses transition SIDs
+SELinux: initialized (dev hugetlbfs, type hugetlbfs), uses genfs_contexts
+SELinux: initialized (dev devpts, type devpts), uses transition SIDs
+SELinux: initialized (dev inotifyfs, type inotifyfs), uses genfs_contexts
+SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+SELinux: initialized (dev futexfs, type futexfs), uses genfs_contexts
+SELinux: initialized (dev anon_inodefs, type anon_inodefs), uses genfs_contexts
+SELinux: initialized (dev pipefs, type pipefs), uses task SIDs
+SELinux: initialized (dev debugfs, type debugfs), uses genfs_contexts
+SELinux: initialized (dev sockfs, type sockfs), uses task SIDs
+SELinux: initialized (dev proc, type proc), uses genfs_contexts
+SELinux: initialized (dev bdev, type bdev), uses genfs_contexts
+SELinux: initialized (dev rootfs, type rootfs), uses genfs_contexts
+SELinux: initialized (dev sysfs, type sysfs), uses genfs_contexts
+SELinux: policy loaded with handle_unknown=allow
+type=1403 audit(1208081515.464:3): policy loaded auid=4294967295 ses=4294967295
+Driver 'sr' needs updating - please use bus_type methods
+sr0: scsi3-mmc drive: 48x/48x writer dvd-ram cd/rw xa/form2 cdda tray
+Uniform CD-ROM driver Revision: 3.20
+sr 1:0:0:0: Attached scsi CD-ROM sr0
+sd 0:0:0:0: Attached scsi generic sg0 type 0
+sd 0:0:1:0: Attached scsi generic sg1 type 0
+sr 1:0:0:0: Attached scsi generic sg2 type 5
+sr 1:0:1:0: Attached scsi generic sg3 type 5
+sr1: scsi3-mmc drive: 75x/40x writer cd/rw xa/form2 cdda tray
+sr 1:0:1:0: Attached scsi CD-ROM sr1
+Intel 82802 RNG detected
+ACPI: PCI Interrupt 0000:00:1f.3[B] -> GSI 17 (level, low) -> IRQ 17
+iTCO_vendor_support: vendor-support=0
+iTCO_wdt: Intel TCO WatchDog Timer Driver v1.02 (26-Jul-2007)
+iTCO_wdt: failed to reset NO_REBOOT flag, reboot disabled by hardware
+iTCO_wdt: No card detected
+input: Power Button (FF) as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input6
+ACPI: Power Button (FF) [PWRF]
+input: Power Button (CM) as /devices/LNXSYSTM:00/device:00/PNP0C0C:00/input/input7
+ACPI: Power Button (CM) [VBTN]
+gameport: EMU10K1 is pci0000:02:09.1/gameport0, io 0xecd8, speed 978kHz
+Linux Tulip driver version 1.1.15 (Feb 27, 2007)
+ACPI: PCI Interrupt 0000:02:0a.0[A] -> GSI 19 (level, low) -> IRQ 19
+tulip0:  MII transceiver #1 config 1000 status 786d advertising 05e1.
+eth0: ADMtek Comet rev 17 at MMIO 0xfe1fd800, 00:04:5a:7d:9f:01, IRQ 19.
+ACPI: PCI Interrupt 0000:02:09.2[B] -> GSI 19 (level, low) -> IRQ 19
+firewire_ohci: Added fw-ohci device 0000:02:09.2, OHCI version 1.10
+ACPI: PCI Interrupt 0000:02:0c.0[A] -> GSI 18 (level, low) -> IRQ 18
+3c59x: Donald Becker and others.
+0000:02:0c.0: 3Com PCI 3c905C Tornado at f8f66c00.
+Initializing USB Mass Storage driver...
+scsi2 : SCSI emulation for USB Mass Storage devices
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+usb-storage: device found at 3
+usb-storage: waiting for device to settle before scanning
+firewire_core: created device fw0: GUID 00023c0021066c2c, S400
+firewire_core: created device fw1: GUID 0000000e00000db8, S400
+firewire_core: phy config: card 0, new root=ffc1, gap_count=5
+ACPI: PCI Interrupt 0000:02:08.0[A] -> GSI 17 (level, low) -> IRQ 17
+phy0: Selected rate control algorithm 'pid'
+input: PC Speaker as /devices/platform/pcspkr/input/input8
+FDC 0 is a post-1991 82077
+dcdbas dcdbas: Dell Systems Management Base Driver (version 5.6.0-3.2)
+Registered led device: rt2500pci-phy0:radio
+ACPI: PCI Interrupt 0000:00:1f.5[B] -> GSI 17 (level, low) -> IRQ 17
+PCI: Setting latency timer of device 0000:00:1f.5 to 64
+ALSA sound/pci/ac97/ac97_codec.c:2868: ac97 quirk for Dell (1028:010d)
+intel8x0_measure_ac97_clock: measured 92243 usecs
+intel8x0: measured clock 43 rejected
+intel8x0: clocking to 48000
+ACPI: PCI Interrupt 0000:02:09.0[A] -> GSI 18 (level, low) -> IRQ 18
+ALSA sound/pci/emu10k1/emu10k1_main.c:1747: vendor=0x1102, device=0x4, subsystem_vendor_id=0x511102, subsystem_id=0x51
+ALSA sound/pci/emu10k1/emu10k1_main.c:1772: Sound card name=Audigy 1 [SB0090]
+scsi3 : SBP-2 IEEE-1394
+usb-storage: device scan complete
+scsi 2:0:0:0: Direct-Access     External AL25744_12345678      PQ: 0 ANSI: 2
+sd 2:0:0:0: [sdc] 976773169 512-byte hardware sectors (500108 MB)
+sd 2:0:0:0: [sdc] Write Protect is off
+sd 2:0:0:0: [sdc] Mode Sense: 1a 0c 00 00
+sd 2:0:0:0: [sdc] Assuming drive cache: write through
+sd 2:0:0:0: [sdc] 976773169 512-byte hardware sectors (500108 MB)
+sd 2:0:0:0: [sdc] Write Protect is off
+sd 2:0:0:0: [sdc] Mode Sense: 1a 0c 00 00
+sd 2:0:0:0: [sdc] Assuming drive cache: write through
+ sdc: sdc1
+sd 2:0:0:0: [sdc] Attached SCSI disk
+sd 2:0:0:0: Attached scsi generic sg4 type 0
+firewire_sbp2: fw1.0: logged in to LUN 0000 (0 retries)
+scsi 3:0:0:0: Direct-Access-RBC Maxtor 6 L120P0                PQ: 0 ANSI: 4
+sd 3:0:0:0: [sdd] 240121728 512-byte hardware sectors (122942 MB)
+sd 3:0:0:0: [sdd] Write Protect is off
+sd 3:0:0:0: [sdd] Mode Sense: 11 00 00 00
+sd 3:0:0:0: [sdd] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+sd 3:0:0:0: [sdd] 240121728 512-byte hardware sectors (122942 MB)
+sd 3:0:0:0: [sdd] Write Protect is off
+sd 3:0:0:0: [sdd] Mode Sense: 11 00 00 00
+sd 3:0:0:0: [sdd] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+ sdd: sdd1 sdd2 sdd3
+sd 3:0:0:0: [sdd] Attached SCSI disk
+sd 3:0:0:0: Attached scsi generic sg5 type 14
+device-mapper: multipath: version 1.0.5 loaded
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+Buffer I/O error on device sdc, logical block 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+Buffer I/O error on device sdc, logical block 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+Buffer I/O error on device sdc, logical block 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+Buffer I/O error on device sdc, logical block 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+Buffer I/O error on device sdc, logical block 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+Buffer I/O error on device sdc, logical block 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+Buffer I/O error on device sdc, logical block 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+Buffer I/O error on device sdc, logical block 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+Buffer I/O error on device sdc, logical block 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+Buffer I/O error on device sdc, logical block 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+sd 2:0:0:0: [sdc] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE,SUGGEST_OK
+sd 2:0:0:0: [sdc] Sense Key : Aborted Command [current] 
+sd 2:0:0:0: [sdc] Add. Sense: No additional sense information
+end_request: I/O error, dev sdc, sector 976773168
+EXT4 FS on dm-0, internal journal
+kjournald2 starting.  Commit interval 5 seconds
+EXT4 FS on dm-1, internal journal
+EXT4-fs: mounted filesystem with ordered data mode.
+EXT4-fs: file extents enabled
+EXT4-fs: mballoc enabled
+SELinux: initialized (dev dm-1, type ext4dev), uses xattr
+kjournald starting.  Commit interval 5 seconds
+EXT3 FS on sdb1, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+SELinux: initialized (dev sdb1, type ext3), uses xattr
+SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+kjournald starting.  Commit interval 5 seconds
+EXT3-fs warning: maximal mount count reached, running e2fsck is recommended
+EXT3 FS on sdd1, internal journal
+EXT3-fs: mounted filesystem with ordered data mode.
+SELinux: initialized (dev sdd1, type ext3), uses xattr
+SELinux: initialized (dev sdd3, type vfat), uses genfs_contexts
+fuse init (API version 7.9)
+SELinux: initialized (dev sdd2, type fuseblk), uses genfs_contexts
+Adding 2096472k swap on /dev/sdb3.  Priority:-1 extents:1 across:2096472k
+SELinux: initialized (dev binfmt_misc, type binfmt_misc), uses genfs_contexts
+IA-32 Microcode Update Driver: v1.14a <tigran@aivazian.fsnet.co.uk>
+NET: Registered protocol family 10
+lo: Disabled Privacy Extensions
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+eth1:  setting full-duplex.
+eth1:  setting full-duplex.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+SELinux: initialized (dev rpc_pipefs, type rpc_pipefs), uses genfs_contexts
+i2c-adapter i2c-0: found SMSC47M192 or compatible, version 2, stepping A0
+eth1: no IPv6 routers present
+SELinux: initialized (dev autofs, type autofs), uses genfs_contexts
+SELinux: initialized (dev autofs, type autofs), uses genfs_contexts
+SELinux: initialized (dev autofs, type autofs), uses genfs_contexts
+NET: Registered protocol family 5
+SELinux: initialized (dev sda1, type fuseblk), uses genfs_contexts
+usb 1-3: USB disconnect, address 3
+usb 5-2: USB disconnect, address 3
+usb 5-2: new full speed USB device using uhci_hcd and address 4
+usb 5-2: not running at top speed; connect to a high speed hub
+usb 5-2: configuration #1 chosen from 1 choice
+hub 5-2:1.0: USB hub found
+hub 5-2:1.0: 4 ports detected
+usb 5-2: New USB device found, idVendor=04b4, idProduct=6560
+usb 5-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+firewire_sbp2: fw1.0: sbp2_scsi_abort
+firewire_sbp2: fw1.0: sbp2_scsi_abort
+sd 3:0:0:0: Device offlined - not ready after error recovery
+sd 3:0:0:0: [sdd] Result: hostbyte=DID_BUS_BUSY driverbyte=DRIVER_OK,SUGGEST_OK
+end_request: I/O error, dev sdd, sector 48237179
+printk: 2 messages suppressed.
+Buffer I/O error on device sdd2, logical block 3145732
+Buffer I/O error on device sdd2, logical block 3145733
+Buffer I/O error on device sdd2, logical block 3145734
+Buffer I/O error on device sdd2, logical block 3145735
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145735
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145735
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648031669:648033109. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648048949:648050389. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648158599:648163767. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648179351:648182302. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648196631:648198142. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648213911:648215422. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648265029:648265299. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648265029:648265299. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648299589:648300883. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648316869:648319603. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648334149:648336883. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648351429:648354484. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648351429:648354484. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648403269:648407764. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/45443 shrinks window 648420549:648423604. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/36122 shrinks window 1084766737:1084767848. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/36122 shrinks window 1084778395:1084782248. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/36122 shrinks window 1084795675:1084800642. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/36122 shrinks window 1084795675:1084800642. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/36122 shrinks window 1084812955:1084816482. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/36122 shrinks window 1084812955:1084816482. Repaired.
+TCP: Treason uncloaked! Peer 91.5.214.194:13801/36122 shrinks window 1084830235:1084833436. Repaired.
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145735
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145735
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+printk: 1 messages suppressed.
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145735
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145735
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145735
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145735
+usb 5-2: USB disconnect, address 4
+usb 5-2: new full speed USB device using uhci_hcd and address 5
+usb 5-2: not running at top speed; connect to a high speed hub
+usb 5-2: configuration #1 chosen from 1 choice
+hub 5-2:1.0: USB hub found
+hub 5-2:1.0: 4 ports detected
+usb 5-2: New USB device found, idVendor=04b4, idProduct=6560
+usb 5-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145735
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145732
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145733
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145734
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd2, logical block 3145735
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77214) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77215) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77216) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77217) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77218) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77219) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77220) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77221) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77222) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77223) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77224) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77225) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77226) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77227) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77228) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77229) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77230) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77231) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77232) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77233) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77234) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77235) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77236) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77237) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77238) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77239) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77240) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77241) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77242) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77243) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77244) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77245) failed
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77214) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77215) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77216) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77217) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77218) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77219) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77220) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77221) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77222) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77223) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77224) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77225) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77226) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77227) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77228) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77229) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77230) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77231) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77232) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77233) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77234) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77235) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77236) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77237) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77238) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77239) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77240) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77241) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77242) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77243) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77244) failed
+sd 3:0:0:0: rejecting I/O to offline device
+FAT: Directory bread(block 77245) failed
+sd 3:0:0:0: rejecting I/O to offline device
+EXT3-fs error (device sdd1): ext3_find_entry: reading directory #2 offset 0
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd1, logical block 0
+lost page write due to I/O error on sdd1
+sd 3:0:0:0: rejecting I/O to offline device
+EXT3-fs error (device sdd1): ext3_find_entry: reading directory #2 offset 0
+------------[ cut here ]------------
+WARNING: at fs/buffer.c:1183 mark_buffer_dirty+0x23/0x6a() (Not tainted)
+Modules linked in: appletalk autofs4 smsc47m192 hwmon_vid hwmon sunrpc ipt_REJECT nf_conntrack_ipv4 iptable_filter ip_tables ip6t_REJECT xt_tcpudp xt_limit nf_conntrack_ipv6 xt_state nf_conntrack ip6table_filter ip6_tables x_tables ipv6 fuse vfat fat ext3 jbd dm_multipath firewire_sbp2 snd_emu10k1_synth snd_emux_synth snd_seq_virmidi snd_seq_midi_emul snd_emu10k1 snd_rawmidi snd_seq_dummy arc4 dcdbas ecb snd_intel8x0 snd_ac97_codec ac97_bus snd_seq_oss snd_seq_midi_event snd_seq snd_pcm_oss snd_mixer_oss floppy pcspkr snd_pcm serio_raw rt2500pci rt2x00pci rt2x00lib snd_seq_device rfkill snd_timer usb_storage snd_page_alloc input_polldev snd_util_mem mac80211 snd_hwdep snd 3c59x firewire_ohci tulip cfg80211 firewire_core mii soundcore crc_itu_t emu10k1_gp eeprom_93cx6 gameport button iTCO_wdt iTCO_vendor_support i2c_i801 joydev i2c_core intel_rng sg sr_mod cdrom ata_generic pata_acpi ata_piix libata sd_mod scsi_mod sha256_generic cbc aes_i586 aes_generic dm_crypt crypto_blkcipher dm_snapshot dm_zero dm_mirror dm_mod ext4dev jbd2 mbcache crc16 uhci_hcd ohci_hcd ehci_hcd [last unloaded: microcode]
+Pid: 3986, comm: gvfsd-trash Not tainted 2.6.25-0.218.rc8.git7.fc9.i686 #1
+ [<c04271c9>] warn_on_slowpath+0x47/0x73
+ [<c054a3ad>] ? vt_console_print+0x33/0x286
+ [<c041feac>] ? default_wake_function+0xb/0xd
+ [<c041c1ca>] ? __wake_up_common+0x35/0x5b
+ [<c054a37a>] ? vt_console_print+0x0/0x286
+ [<c0427255>] ? __call_console_drivers+0x56/0x63
+ [<c04272b9>] ? _call_console_drivers+0x57/0x5b
+ [<c0427698>] ? release_console_sem+0x1a0/0x1a8
+ [<c049eb4d>] mark_buffer_dirty+0x23/0x6a
+ [<f91e1c36>] ext3_commit_super+0x40/0x53 [ext3]
+ [<f91e3076>] ext3_handle_error+0x71/0x95 [ext3]
+ [<f91e3129>] ext3_error+0x39/0x43 [ext3]
+ [<f91dffdc>] ext3_find_entry+0x3a1/0x52b [ext3]
+ [<c04cfde2>] ? inode_has_perm+0x5b/0x65
+ [<f91e088d>] ext3_lookup+0x25/0xa2 [ext3]
+ [<c04889b9>] do_lookup+0xa1/0x140
+ [<c048a6d0>] __link_path_walk+0x89c/0xcfc
+ [<c04f2a9a>] ? rb_insert_color+0x56/0xc0
+ [<c04958b8>] ? mntput_no_expire+0x16/0x69
+ [<c048ab7c>] path_walk+0x4c/0x9b
+ [<c048aecf>] do_path_lookup+0x187/0x1d0
+ [<c048b711>] __user_walk_fd+0x2f/0x43
+ [<c048535c>] vfs_lstat_fd+0x16/0x3d
+ [<c043808b>] ? autoremove_wake_function+0x0/0x33
+ [<c04d2cc7>] ? selinux_file_permission+0x100/0x106
+ [<c04853ee>] vfs_lstat+0x11/0x13
+ [<c0485404>] sys_lstat64+0x14/0x28
+ [<c0457ee4>] ? audit_syscall_entry+0xf9/0x123
+ [<c040b365>] ? do_syscall_trace+0x126/0x16d
+ [<c0405cf6>] syscall_call+0x7/0xb
+ =======================
+---[ end trace c85abf95dc3347d0 ]---
+sd 3:0:0:0: rejecting I/O to offline device
+Buffer I/O error on device sdd1, logical block 0
+lost page write due to I/O error on sdd1
