@@ -1,1042 +1,359 @@
-dbg_activate_sw_breakpoints() <int dbg_activate_sw_breakpoints (void) at debug_core.c:249>:
-    kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-        probe_kernel_read()
-        probe_kernel_write()
-    pr_info()
-    kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-        flush_cache_range()
-        flush_icache_range()
-dbg_deactivate_sw_breakpoints() <int dbg_deactivate_sw_breakpoints (void) at debug_core.c:314>:
-    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-        probe_kernel_write()
-    pr_info()
-    kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-        flush_cache_range()
-        flush_icache_range()
-dbg_io_get_char() <int dbg_io_get_char (void) at debug_core.c:1047>:
-dbg_late_init() <void __init dbg_late_init (void) at debug_core.c:863>:
-    kgdb_arch_late() <void __weak kgdb_arch_late (void) at debug_core.c:859>
-    kdb_init()
-dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-        probe_kernel_write()
-    pr_err()
-dbg_remove_sw_break() <int dbg_remove_sw_break (unsigned long addr) at debug_core.c:336>:
-dbg_set_sw_break() <int dbg_set_sw_break (unsigned long addr) at debug_core.c:273>:
-    kgdb_validate_break_address() <int __weak kgdb_validate_break_address (unsigned long addr) at debug_core.c:187>:
-        kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-            probe_kernel_read()
-            probe_kernel_write()
-        kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-            probe_kernel_write()
-        pr_err()
-gdb_regs_to_pt_regs() <void gdb_regs_to_pt_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:353>:
-    dbg_set_reg()
-gdb_serial_stub() <int gdb_serial_stub (struct kgdb_state *ks) at gdbstub.c:943>:
-    shadow_pid() <inline int shadow_pid (int realpid) at gdbstub.c:464>:
-        raw_smp_processor_id()
-    hex_byte_pack()
-    int_to_threadref() <void int_to_threadref (unsigned char *id, int value) at gdbstub.c:427>:
-        put_unaligned_be32()
-    pack_threadid() <char *pack_threadid (char *pkt, unsigned char *id) at gdbstub.c:407>:
-        hex_byte_pack()
-    put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-        hex_asc_hi()
-        hex_asc_lo()
-        gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-            unlikely()
-    get_packet() <void get_packet (char *buffer) at gdbstub.c:90>:
-        gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-            unlikely()
-        hex_to_bin()
-    gdb_cmd_status() <void gdb_cmd_status (struct kgdb_state *ks) at gdbstub.c:479>:
-        dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-            kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                probe_kernel_write()
-            pr_err()
-        hex_byte_pack()
-    gdb_cmd_getregs() <void gdb_cmd_getregs (struct kgdb_state *ks) at gdbstub.c:537>:
-        gdb_get_regs_helper() <void gdb_get_regs_helper (struct kgdb_state *ks) at gdbstub.c:493>:
-            for_each_online_cpu()
-            pt_regs_to_gdb_regs() <void pt_regs_to_gdb_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:341>:
-                dbg_get_reg()
-            sleeping_thread_to_gdb_regs()
-        kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-            probe_kernel_read()
-            hex_byte_pack()
-    gdb_cmd_setregs() <void gdb_cmd_setregs (struct kgdb_state *ks) at gdbstub.c:544>:
-        kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-            hex_to_bin()
-            probe_kernel_write()
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-        gdb_regs_to_pt_regs() <void gdb_regs_to_pt_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:353>:
-            dbg_set_reg()
-    gdb_cmd_memread() <void gdb_cmd_memread (struct kgdb_state *ks) at gdbstub.c:557>:
-        kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-            hex_to_bin()
-        kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-            probe_kernel_read()
-            hex_byte_pack()
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-    gdb_cmd_memwrite() <void gdb_cmd_memwrite (struct kgdb_state *ks) at gdbstub.c:575>:
-        write_mem_msg() <int write_mem_msg (int binary) at gdbstub.c:367>:
-            kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                hex_to_bin()
-            kgdb_ebin2mem() <int kgdb_ebin2mem (char *buf, char *mem, int count) at gdbstub.c:325>:
-                probe_kernel_write()
-            kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                hex_to_bin()
-                probe_kernel_write()
-            flush_icache_range()
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-    gdb_cmd_reg_get() <void gdb_cmd_reg_get (struct kgdb_state *ks) at gdbstub.c:598>:
-        kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-            hex_to_bin()
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-        gdb_get_regs_helper() <void gdb_get_regs_helper (struct kgdb_state *ks) at gdbstub.c:493>:
-            for_each_online_cpu()
-            pt_regs_to_gdb_regs() <void pt_regs_to_gdb_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:341>:
-                dbg_get_reg()
-            sleeping_thread_to_gdb_regs()
-        gdb_hex_reg_helper() <char *gdb_hex_reg_helper (int regnum, char *out) at gdbstub.c:586>:
-            kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                probe_kernel_read()
-                hex_byte_pack()
-    gdb_cmd_reg_set() <void gdb_cmd_reg_set (struct kgdb_state *ks) at gdbstub.c:613>:
-        kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-            hex_to_bin()
-        dbg_get_reg()
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-        hex_to_bin()
-        kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-            hex_to_bin()
-            probe_kernel_write()
-        dbg_set_reg()
-    gdb_cmd_binwrite() <void gdb_cmd_binwrite (struct kgdb_state *ks) at gdbstub.c:640>:
-        write_mem_msg() <int write_mem_msg (int binary) at gdbstub.c:367>:
-            kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                hex_to_bin()
-            kgdb_ebin2mem() <int kgdb_ebin2mem (char *buf, char *mem, int count) at gdbstub.c:325>:
-                probe_kernel_write()
-            kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                hex_to_bin()
-                probe_kernel_write()
-            flush_icache_range()
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-    gdb_cmd_detachkill() <void gdb_cmd_detachkill (struct kgdb_state *ks) at gdbstub.c:651>:
-        dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-            kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                probe_kernel_write()
-            pr_err()
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-        put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-            hex_asc_hi()
-            hex_asc_lo()
-            gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                unlikely()
-    gdb_cmd_reboot() <int gdb_cmd_reboot (struct kgdb_state *ks) at gdbstub.c:676>:
-        printk()
-        put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-            hex_asc_hi()
-            hex_asc_lo()
-            gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                unlikely()
-        machine_emergency_restart()
-    gdb_cmd_query() <void gdb_cmd_query (struct kgdb_state *ks) at gdbstub.c:697>:
-        for_each_online_cpu()
-        int_to_threadref() <void int_to_threadref (unsigned char *id, int value) at gdbstub.c:427>:
-            put_unaligned_be32()
-        pack_threadid() <char *pack_threadid (char *pkt, unsigned char *id) at gdbstub.c:407>:
-            hex_byte_pack()
-        do_each_thread()
-        while_each_thread()
-        shadow_pid() <inline int shadow_pid (int realpid) at gdbstub.c:464>:
-            raw_smp_processor_id()
-        kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-            hex_to_bin()
-        getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-            atomic_read()
-            idle_task()
-            printk()
-            dump_stack()
-            find_task_by_pid_ns()
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-        kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-            probe_kernel_read()
-            hex_byte_pack()
-        kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-            hex_to_bin()
-            probe_kernel_write()
-        kdb_common_init_state()
-        kdb_parse()
-        kdb_common_deinit_state()
-    gdb_cmd_task() <void gdb_cmd_task (struct kgdb_state *ks) at gdbstub.c:798>:
-        kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-            hex_to_bin()
-        getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-            atomic_read()
-            idle_task()
-            printk()
-            dump_stack()
-            find_task_by_pid_ns()
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-    gdb_cmd_thread() <void gdb_cmd_thread (struct kgdb_state *ks) at gdbstub.c:835>:
-        kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-            hex_to_bin()
-        getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-            atomic_read()
-            idle_task()
-            printk()
-            dump_stack()
-            find_task_by_pid_ns()
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-    gdb_cmd_break() <void gdb_cmd_break (struct kgdb_state *ks) at gdbstub.c:849>:
-        error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-        kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-            hex_to_bin()
-        dbg_set_sw_break() <int dbg_set_sw_break (unsigned long addr) at debug_core.c:273>:
-            kgdb_validate_break_address() <int __weak kgdb_validate_break_address (unsigned long addr) at debug_core.c:187>:
-                kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-                    probe_kernel_read()
-                    probe_kernel_write()
-                kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                    probe_kernel_write()
-                pr_err()
-        dbg_remove_sw_break() <int dbg_remove_sw_break (unsigned long addr) at debug_core.c:336>:
-    gdb_cmd_exception_pass() <int gdb_cmd_exception_pass (struct kgdb_state *ks) at gdbstub.c:911>:
-        dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-            kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                probe_kernel_write()
-            pr_err()
-        gdbstub_msg_write() <void gdbstub_msg_write (const char *s, int len) at gdbstub.c:197>:
-            hex_byte_pack()
-            put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                hex_asc_hi()
-                hex_asc_lo()
-                gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                    unlikely()
-    error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-    dbg_activate_sw_breakpoints() <int dbg_activate_sw_breakpoints (void) at debug_core.c:249>:
-        kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-            probe_kernel_read()
-            probe_kernel_write()
-        pr_info()
-        kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-            flush_cache_range()
-            flush_icache_range()
-    kgdb_arch_handle_exception()
-gdbstub_exit() <void gdbstub_exit (int status) at gdbstub.c:1113>:
-    hex_asc_hi()
-    hex_asc_lo()
-gdbstub_msg_write() <void gdbstub_msg_write (const char *s, int len) at gdbstub.c:197>:
-    hex_byte_pack()
-    put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-        hex_asc_hi()
-        hex_asc_lo()
-        gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-            unlikely()
-gdbstub_state() <int gdbstub_state (struct kgdb_state *ks, char *cmd) at gdbstub.c:1081>:
-    kgdb_arch_handle_exception()
-    put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-        hex_asc_hi()
-        hex_asc_lo()
-        gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-            unlikely()
-kgdb_arch_pc() <unsigned long __weak kgdb_arch_pc (int exception, struct pt_regs *regs) at debug_core.c:207>:
-    instruction_pointer()
-kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-    probe_kernel_write()
-kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-    probe_kernel_read()
-    probe_kernel_write()
-kgdb_breakpoint() <noinline void kgdb_breakpoint (void) at debug_core.c:1067>:
-    atomic_inc()
-    wmb()
-    arch_kgdb_breakpoint()
-    atomic_dec()
-kgdb_handle_exception() <int kgdb_handle_exception (int evector, int signo, int ecode, struct pt_regs *regs) at debug_core.c:691>:
-    raw_smp_processor_id()
-    kgdb_reenter_check() <int kgdb_reenter_check (struct kgdb_state *ks) at debug_core.c:414>:
-        atomic_read()
-        raw_smp_processor_id()
-        kgdb_arch_pc() <unsigned long __weak kgdb_arch_pc (int exception, struct pt_regs *regs) at debug_core.c:207>:
-            instruction_pointer()
-        dbg_deactivate_sw_breakpoints() <int dbg_deactivate_sw_breakpoints (void) at debug_core.c:314>:
-            kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                probe_kernel_write()
-            pr_info()
-            kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-                flush_cache_range()
-                flush_icache_range()
-        dbg_remove_sw_break() <int dbg_remove_sw_break (unsigned long addr) at debug_core.c:336>:
-        kgdb_skipexception() <int __weak kgdb_skipexception (int exception, struct pt_regs *regs) at debug_core.c:217>
-        dbg_activate_sw_breakpoints() <int dbg_activate_sw_breakpoints (void) at debug_core.c:249>:
-            kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-                probe_kernel_read()
-                probe_kernel_write()
-            pr_info()
-            kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-                flush_cache_range()
-                flush_icache_range()
-        pr_crit()
-        WARN_ON_ONCE()
-        dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-            kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                probe_kernel_write()
-            pr_err()
-        dump_stack()
-        panic()
-    kgdb_cpu_enter() <int kgdb_cpu_enter (struct kgdb_state *ks, struct pt_regs *regs, int exception_state) at debug_core.c:467>:
-        num_online_cpus()
-        atomic_inc()
-        local_irq_save()
-        hardirq_count()
-        smp_mb()
-        raw_spin_trylock()
-        atomic_xchg()
-        raw_spin_is_locked()
-        tracing_on()
-        smp_mb__before_atomic()
-        atomic_dec()
-        dbg_touch_watchdogs() <void dbg_touch_watchdogs (void) at debug_core.c:460>:
-            touch_softlockup_watchdog_sync()
-            clocksource_touch_watchdog()
-            rcu_cpu_stall_reset()
-        local_irq_restore()
-        cpu_relax()
-        atomic_read()
-        atomic_set()
-        raw_spin_unlock()
-        kgdb_io_ready() <int kgdb_io_ready (int print_wait) at debug_core.c:395>:
-            atomic_read()
-            pr_crit()
-        kgdb_skipexception() <int __weak kgdb_skipexception (int exception, struct pt_regs *regs) at debug_core.c:217>
-        raw_spin_lock()
-        kgdb_roundup_cpus()
-        pr_crit()
-        dbg_deactivate_sw_breakpoints() <int dbg_deactivate_sw_breakpoints (void) at debug_core.c:314>:
-            kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                probe_kernel_write()
-            pr_info()
-            kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-                flush_cache_range()
-                flush_icache_range()
-        tracing_is_on()
-        tracing_off()
-        kdb_stub()
-        gdb_serial_stub() <int gdb_serial_stub (struct kgdb_state *ks) at gdbstub.c:943>:
-            shadow_pid() <inline int shadow_pid (int realpid) at gdbstub.c:464>:
-                raw_smp_processor_id()
-            hex_byte_pack()
-            int_to_threadref() <void int_to_threadref (unsigned char *id, int value) at gdbstub.c:427>:
-                put_unaligned_be32()
-            pack_threadid() <char *pack_threadid (char *pkt, unsigned char *id) at gdbstub.c:407>:
-                hex_byte_pack()
-            put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                hex_asc_hi()
-                hex_asc_lo()
-                gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                    unlikely()
-            get_packet() <void get_packet (char *buffer) at gdbstub.c:90>:
-                gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                    unlikely()
-                hex_to_bin()
-            gdb_cmd_status() <void gdb_cmd_status (struct kgdb_state *ks) at gdbstub.c:479>:
-                dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-                    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                        probe_kernel_write()
-                    pr_err()
-                hex_byte_pack()
-            gdb_cmd_getregs() <void gdb_cmd_getregs (struct kgdb_state *ks) at gdbstub.c:537>:
-                gdb_get_regs_helper() <void gdb_get_regs_helper (struct kgdb_state *ks) at gdbstub.c:493>:
-                    for_each_online_cpu()
-                    pt_regs_to_gdb_regs() <void pt_regs_to_gdb_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:341>:
-                        dbg_get_reg()
-                    sleeping_thread_to_gdb_regs()
-                kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                    probe_kernel_read()
-                    hex_byte_pack()
-            gdb_cmd_setregs() <void gdb_cmd_setregs (struct kgdb_state *ks) at gdbstub.c:544>:
-                kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                    hex_to_bin()
-                    probe_kernel_write()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                gdb_regs_to_pt_regs() <void gdb_regs_to_pt_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:353>:
-                    dbg_set_reg()
-            gdb_cmd_memread() <void gdb_cmd_memread (struct kgdb_state *ks) at gdbstub.c:557>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                    probe_kernel_read()
-                    hex_byte_pack()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_memwrite() <void gdb_cmd_memwrite (struct kgdb_state *ks) at gdbstub.c:575>:
-                write_mem_msg() <int write_mem_msg (int binary) at gdbstub.c:367>:
-                    kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                        hex_to_bin()
-                    kgdb_ebin2mem() <int kgdb_ebin2mem (char *buf, char *mem, int count) at gdbstub.c:325>:
-                        probe_kernel_write()
-                    kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                        hex_to_bin()
-                        probe_kernel_write()
-                    flush_icache_range()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_reg_get() <void gdb_cmd_reg_get (struct kgdb_state *ks) at gdbstub.c:598>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                gdb_get_regs_helper() <void gdb_get_regs_helper (struct kgdb_state *ks) at gdbstub.c:493>:
-                    for_each_online_cpu()
-                    pt_regs_to_gdb_regs() <void pt_regs_to_gdb_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:341>:
-                        dbg_get_reg()
-                    sleeping_thread_to_gdb_regs()
-                gdb_hex_reg_helper() <char *gdb_hex_reg_helper (int regnum, char *out) at gdbstub.c:586>:
-                    kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                        probe_kernel_read()
-                        hex_byte_pack()
-            gdb_cmd_reg_set() <void gdb_cmd_reg_set (struct kgdb_state *ks) at gdbstub.c:613>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                dbg_get_reg()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                hex_to_bin()
-                kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                    hex_to_bin()
-                    probe_kernel_write()
-                dbg_set_reg()
-            gdb_cmd_binwrite() <void gdb_cmd_binwrite (struct kgdb_state *ks) at gdbstub.c:640>:
-                write_mem_msg() <int write_mem_msg (int binary) at gdbstub.c:367>:
-                    kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                        hex_to_bin()
-                    kgdb_ebin2mem() <int kgdb_ebin2mem (char *buf, char *mem, int count) at gdbstub.c:325>:
-                        probe_kernel_write()
-                    kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                        hex_to_bin()
-                        probe_kernel_write()
-                    flush_icache_range()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_detachkill() <void gdb_cmd_detachkill (struct kgdb_state *ks) at gdbstub.c:651>:
-                dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-                    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                        probe_kernel_write()
-                    pr_err()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                    hex_asc_hi()
-                    hex_asc_lo()
-                    gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                        unlikely()
-            gdb_cmd_reboot() <int gdb_cmd_reboot (struct kgdb_state *ks) at gdbstub.c:676>:
-                printk()
-                put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                    hex_asc_hi()
-                    hex_asc_lo()
-                    gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                        unlikely()
-                machine_emergency_restart()
-            gdb_cmd_query() <void gdb_cmd_query (struct kgdb_state *ks) at gdbstub.c:697>:
-                for_each_online_cpu()
-                int_to_threadref() <void int_to_threadref (unsigned char *id, int value) at gdbstub.c:427>:
-                    put_unaligned_be32()
-                pack_threadid() <char *pack_threadid (char *pkt, unsigned char *id) at gdbstub.c:407>:
-                    hex_byte_pack()
-                do_each_thread()
-                while_each_thread()
-                shadow_pid() <inline int shadow_pid (int realpid) at gdbstub.c:464>:
-                    raw_smp_processor_id()
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-                    atomic_read()
-                    idle_task()
-                    printk()
-                    dump_stack()
-                    find_task_by_pid_ns()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                    probe_kernel_read()
-                    hex_byte_pack()
-                kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                    hex_to_bin()
-                    probe_kernel_write()
-                kdb_common_init_state()
-                kdb_parse()
-                kdb_common_deinit_state()
-            gdb_cmd_task() <void gdb_cmd_task (struct kgdb_state *ks) at gdbstub.c:798>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-                    atomic_read()
-                    idle_task()
-                    printk()
-                    dump_stack()
-                    find_task_by_pid_ns()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_thread() <void gdb_cmd_thread (struct kgdb_state *ks) at gdbstub.c:835>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-                    atomic_read()
-                    idle_task()
-                    printk()
-                    dump_stack()
-                    find_task_by_pid_ns()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_break() <void gdb_cmd_break (struct kgdb_state *ks) at gdbstub.c:849>:
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                dbg_set_sw_break() <int dbg_set_sw_break (unsigned long addr) at debug_core.c:273>:
-                    kgdb_validate_break_address() <int __weak kgdb_validate_break_address (unsigned long addr) at debug_core.c:187>:
-                        kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-                            probe_kernel_read()
-                            probe_kernel_write()
-                        kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                            probe_kernel_write()
-                        pr_err()
-                dbg_remove_sw_break() <int dbg_remove_sw_break (unsigned long addr) at debug_core.c:336>:
-            gdb_cmd_exception_pass() <int gdb_cmd_exception_pass (struct kgdb_state *ks) at gdbstub.c:911>:
-                dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-                    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                        probe_kernel_write()
-                    pr_err()
-                gdbstub_msg_write() <void gdbstub_msg_write (const char *s, int len) at gdbstub.c:197>:
-                    hex_byte_pack()
-                    put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                        hex_asc_hi()
-                        hex_asc_lo()
-                        gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                            unlikely()
-            error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            dbg_activate_sw_breakpoints() <int dbg_activate_sw_breakpoints (void) at debug_core.c:249>:
-                kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-                    probe_kernel_read()
-                    probe_kernel_write()
-                pr_info()
-                kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-                    flush_cache_range()
-                    flush_icache_range()
-            kgdb_arch_handle_exception()
-kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-    hex_to_bin()
-kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-    hex_to_bin()
-    probe_kernel_write()
-kgdb_isremovedbreak() <int kgdb_isremovedbreak (unsigned long addr) at debug_core.c:350>:
-kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-    probe_kernel_read()
-    hex_byte_pack()
-kgdb_nmicallback() <int kgdb_nmicallback (int cpu, void *regs) at debug_core.c:743>:
-    raw_spin_is_locked()
-    kgdb_cpu_enter() <int kgdb_cpu_enter (struct kgdb_state *ks, struct pt_regs *regs, int exception_state) at debug_core.c:467>:
-        num_online_cpus()
-        atomic_inc()
-        local_irq_save()
-        hardirq_count()
-        smp_mb()
-        raw_spin_trylock()
-        atomic_xchg()
-        raw_spin_is_locked()
-        tracing_on()
-        smp_mb__before_atomic()
-        atomic_dec()
-        dbg_touch_watchdogs() <void dbg_touch_watchdogs (void) at debug_core.c:460>:
-            touch_softlockup_watchdog_sync()
-            clocksource_touch_watchdog()
-            rcu_cpu_stall_reset()
-        local_irq_restore()
-        cpu_relax()
-        atomic_read()
-        atomic_set()
-        raw_spin_unlock()
-        kgdb_io_ready() <int kgdb_io_ready (int print_wait) at debug_core.c:395>:
-            atomic_read()
-            pr_crit()
-        kgdb_skipexception() <int __weak kgdb_skipexception (int exception, struct pt_regs *regs) at debug_core.c:217>
-        raw_spin_lock()
-        kgdb_roundup_cpus()
-        pr_crit()
-        dbg_deactivate_sw_breakpoints() <int dbg_deactivate_sw_breakpoints (void) at debug_core.c:314>:
-            kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                probe_kernel_write()
-            pr_info()
-            kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-                flush_cache_range()
-                flush_icache_range()
-        tracing_is_on()
-        tracing_off()
-        kdb_stub()
-        gdb_serial_stub() <int gdb_serial_stub (struct kgdb_state *ks) at gdbstub.c:943>:
-            shadow_pid() <inline int shadow_pid (int realpid) at gdbstub.c:464>:
-                raw_smp_processor_id()
-            hex_byte_pack()
-            int_to_threadref() <void int_to_threadref (unsigned char *id, int value) at gdbstub.c:427>:
-                put_unaligned_be32()
-            pack_threadid() <char *pack_threadid (char *pkt, unsigned char *id) at gdbstub.c:407>:
-                hex_byte_pack()
-            put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                hex_asc_hi()
-                hex_asc_lo()
-                gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                    unlikely()
-            get_packet() <void get_packet (char *buffer) at gdbstub.c:90>:
-                gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                    unlikely()
-                hex_to_bin()
-            gdb_cmd_status() <void gdb_cmd_status (struct kgdb_state *ks) at gdbstub.c:479>:
-                dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-                    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                        probe_kernel_write()
-                    pr_err()
-                hex_byte_pack()
-            gdb_cmd_getregs() <void gdb_cmd_getregs (struct kgdb_state *ks) at gdbstub.c:537>:
-                gdb_get_regs_helper() <void gdb_get_regs_helper (struct kgdb_state *ks) at gdbstub.c:493>:
-                    for_each_online_cpu()
-                    pt_regs_to_gdb_regs() <void pt_regs_to_gdb_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:341>:
-                        dbg_get_reg()
-                    sleeping_thread_to_gdb_regs()
-                kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                    probe_kernel_read()
-                    hex_byte_pack()
-            gdb_cmd_setregs() <void gdb_cmd_setregs (struct kgdb_state *ks) at gdbstub.c:544>:
-                kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                    hex_to_bin()
-                    probe_kernel_write()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                gdb_regs_to_pt_regs() <void gdb_regs_to_pt_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:353>:
-                    dbg_set_reg()
-            gdb_cmd_memread() <void gdb_cmd_memread (struct kgdb_state *ks) at gdbstub.c:557>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                    probe_kernel_read()
-                    hex_byte_pack()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_memwrite() <void gdb_cmd_memwrite (struct kgdb_state *ks) at gdbstub.c:575>:
-                write_mem_msg() <int write_mem_msg (int binary) at gdbstub.c:367>:
-                    kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                        hex_to_bin()
-                    kgdb_ebin2mem() <int kgdb_ebin2mem (char *buf, char *mem, int count) at gdbstub.c:325>:
-                        probe_kernel_write()
-                    kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                        hex_to_bin()
-                        probe_kernel_write()
-                    flush_icache_range()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_reg_get() <void gdb_cmd_reg_get (struct kgdb_state *ks) at gdbstub.c:598>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                gdb_get_regs_helper() <void gdb_get_regs_helper (struct kgdb_state *ks) at gdbstub.c:493>:
-                    for_each_online_cpu()
-                    pt_regs_to_gdb_regs() <void pt_regs_to_gdb_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:341>:
-                        dbg_get_reg()
-                    sleeping_thread_to_gdb_regs()
-                gdb_hex_reg_helper() <char *gdb_hex_reg_helper (int regnum, char *out) at gdbstub.c:586>:
-                    kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                        probe_kernel_read()
-                        hex_byte_pack()
-            gdb_cmd_reg_set() <void gdb_cmd_reg_set (struct kgdb_state *ks) at gdbstub.c:613>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                dbg_get_reg()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                hex_to_bin()
-                kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                    hex_to_bin()
-                    probe_kernel_write()
-                dbg_set_reg()
-            gdb_cmd_binwrite() <void gdb_cmd_binwrite (struct kgdb_state *ks) at gdbstub.c:640>:
-                write_mem_msg() <int write_mem_msg (int binary) at gdbstub.c:367>:
-                    kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                        hex_to_bin()
-                    kgdb_ebin2mem() <int kgdb_ebin2mem (char *buf, char *mem, int count) at gdbstub.c:325>:
-                        probe_kernel_write()
-                    kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                        hex_to_bin()
-                        probe_kernel_write()
-                    flush_icache_range()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_detachkill() <void gdb_cmd_detachkill (struct kgdb_state *ks) at gdbstub.c:651>:
-                dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-                    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                        probe_kernel_write()
-                    pr_err()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                    hex_asc_hi()
-                    hex_asc_lo()
-                    gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                        unlikely()
-            gdb_cmd_reboot() <int gdb_cmd_reboot (struct kgdb_state *ks) at gdbstub.c:676>:
-                printk()
-                put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                    hex_asc_hi()
-                    hex_asc_lo()
-                    gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                        unlikely()
-                machine_emergency_restart()
-            gdb_cmd_query() <void gdb_cmd_query (struct kgdb_state *ks) at gdbstub.c:697>:
-                for_each_online_cpu()
-                int_to_threadref() <void int_to_threadref (unsigned char *id, int value) at gdbstub.c:427>:
-                    put_unaligned_be32()
-                pack_threadid() <char *pack_threadid (char *pkt, unsigned char *id) at gdbstub.c:407>:
-                    hex_byte_pack()
-                do_each_thread()
-                while_each_thread()
-                shadow_pid() <inline int shadow_pid (int realpid) at gdbstub.c:464>:
-                    raw_smp_processor_id()
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-                    atomic_read()
-                    idle_task()
-                    printk()
-                    dump_stack()
-                    find_task_by_pid_ns()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                    probe_kernel_read()
-                    hex_byte_pack()
-                kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                    hex_to_bin()
-                    probe_kernel_write()
-                kdb_common_init_state()
-                kdb_parse()
-                kdb_common_deinit_state()
-            gdb_cmd_task() <void gdb_cmd_task (struct kgdb_state *ks) at gdbstub.c:798>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-                    atomic_read()
-                    idle_task()
-                    printk()
-                    dump_stack()
-                    find_task_by_pid_ns()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_thread() <void gdb_cmd_thread (struct kgdb_state *ks) at gdbstub.c:835>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-                    atomic_read()
-                    idle_task()
-                    printk()
-                    dump_stack()
-                    find_task_by_pid_ns()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_break() <void gdb_cmd_break (struct kgdb_state *ks) at gdbstub.c:849>:
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                dbg_set_sw_break() <int dbg_set_sw_break (unsigned long addr) at debug_core.c:273>:
-                    kgdb_validate_break_address() <int __weak kgdb_validate_break_address (unsigned long addr) at debug_core.c:187>:
-                        kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-                            probe_kernel_read()
-                            probe_kernel_write()
-                        kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                            probe_kernel_write()
-                        pr_err()
-                dbg_remove_sw_break() <int dbg_remove_sw_break (unsigned long addr) at debug_core.c:336>:
-            gdb_cmd_exception_pass() <int gdb_cmd_exception_pass (struct kgdb_state *ks) at gdbstub.c:911>:
-                dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-                    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                        probe_kernel_write()
-                    pr_err()
-                gdbstub_msg_write() <void gdbstub_msg_write (const char *s, int len) at gdbstub.c:197>:
-                    hex_byte_pack()
-                    put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                        hex_asc_hi()
-                        hex_asc_lo()
-                        gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                            unlikely()
-            error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            dbg_activate_sw_breakpoints() <int dbg_activate_sw_breakpoints (void) at debug_core.c:249>:
-                kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-                    probe_kernel_read()
-                    probe_kernel_write()
-                pr_info()
-                kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-                    flush_cache_range()
-                    flush_icache_range()
-            kgdb_arch_handle_exception()
-kgdb_nmicallin() <int kgdb_nmicallin (int cpu, int trapnr, void *regs, int err_code, atomic_t *send_ready) at debug_core.c:762>:
-    kgdb_io_ready() <int kgdb_io_ready (int print_wait) at debug_core.c:395>:
-        atomic_read()
-        pr_crit()
-    kgdb_cpu_enter() <int kgdb_cpu_enter (struct kgdb_state *ks, struct pt_regs *regs, int exception_state) at debug_core.c:467>:
-        num_online_cpus()
-        atomic_inc()
-        local_irq_save()
-        hardirq_count()
-        smp_mb()
-        raw_spin_trylock()
-        atomic_xchg()
-        raw_spin_is_locked()
-        tracing_on()
-        smp_mb__before_atomic()
-        atomic_dec()
-        dbg_touch_watchdogs() <void dbg_touch_watchdogs (void) at debug_core.c:460>:
-            touch_softlockup_watchdog_sync()
-            clocksource_touch_watchdog()
-            rcu_cpu_stall_reset()
-        local_irq_restore()
-        cpu_relax()
-        atomic_read()
-        atomic_set()
-        raw_spin_unlock()
-        kgdb_io_ready() <int kgdb_io_ready (int print_wait) at debug_core.c:395>:
-            atomic_read()
-            pr_crit()
-        kgdb_skipexception() <int __weak kgdb_skipexception (int exception, struct pt_regs *regs) at debug_core.c:217>
-        raw_spin_lock()
-        kgdb_roundup_cpus()
-        pr_crit()
-        dbg_deactivate_sw_breakpoints() <int dbg_deactivate_sw_breakpoints (void) at debug_core.c:314>:
-            kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                probe_kernel_write()
-            pr_info()
-            kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-                flush_cache_range()
-                flush_icache_range()
-        tracing_is_on()
-        tracing_off()
-        kdb_stub()
-        gdb_serial_stub() <int gdb_serial_stub (struct kgdb_state *ks) at gdbstub.c:943>:
-            shadow_pid() <inline int shadow_pid (int realpid) at gdbstub.c:464>:
-                raw_smp_processor_id()
-            hex_byte_pack()
-            int_to_threadref() <void int_to_threadref (unsigned char *id, int value) at gdbstub.c:427>:
-                put_unaligned_be32()
-            pack_threadid() <char *pack_threadid (char *pkt, unsigned char *id) at gdbstub.c:407>:
-                hex_byte_pack()
-            put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                hex_asc_hi()
-                hex_asc_lo()
-                gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                    unlikely()
-            get_packet() <void get_packet (char *buffer) at gdbstub.c:90>:
-                gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                    unlikely()
-                hex_to_bin()
-            gdb_cmd_status() <void gdb_cmd_status (struct kgdb_state *ks) at gdbstub.c:479>:
-                dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-                    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                        probe_kernel_write()
-                    pr_err()
-                hex_byte_pack()
-            gdb_cmd_getregs() <void gdb_cmd_getregs (struct kgdb_state *ks) at gdbstub.c:537>:
-                gdb_get_regs_helper() <void gdb_get_regs_helper (struct kgdb_state *ks) at gdbstub.c:493>:
-                    for_each_online_cpu()
-                    pt_regs_to_gdb_regs() <void pt_regs_to_gdb_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:341>:
-                        dbg_get_reg()
-                    sleeping_thread_to_gdb_regs()
-                kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                    probe_kernel_read()
-                    hex_byte_pack()
-            gdb_cmd_setregs() <void gdb_cmd_setregs (struct kgdb_state *ks) at gdbstub.c:544>:
-                kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                    hex_to_bin()
-                    probe_kernel_write()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                gdb_regs_to_pt_regs() <void gdb_regs_to_pt_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:353>:
-                    dbg_set_reg()
-            gdb_cmd_memread() <void gdb_cmd_memread (struct kgdb_state *ks) at gdbstub.c:557>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                    probe_kernel_read()
-                    hex_byte_pack()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_memwrite() <void gdb_cmd_memwrite (struct kgdb_state *ks) at gdbstub.c:575>:
-                write_mem_msg() <int write_mem_msg (int binary) at gdbstub.c:367>:
-                    kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                        hex_to_bin()
-                    kgdb_ebin2mem() <int kgdb_ebin2mem (char *buf, char *mem, int count) at gdbstub.c:325>:
-                        probe_kernel_write()
-                    kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                        hex_to_bin()
-                        probe_kernel_write()
-                    flush_icache_range()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_reg_get() <void gdb_cmd_reg_get (struct kgdb_state *ks) at gdbstub.c:598>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                gdb_get_regs_helper() <void gdb_get_regs_helper (struct kgdb_state *ks) at gdbstub.c:493>:
-                    for_each_online_cpu()
-                    pt_regs_to_gdb_regs() <void pt_regs_to_gdb_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:341>:
-                        dbg_get_reg()
-                    sleeping_thread_to_gdb_regs()
-                gdb_hex_reg_helper() <char *gdb_hex_reg_helper (int regnum, char *out) at gdbstub.c:586>:
-                    kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                        probe_kernel_read()
-                        hex_byte_pack()
-            gdb_cmd_reg_set() <void gdb_cmd_reg_set (struct kgdb_state *ks) at gdbstub.c:613>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                dbg_get_reg()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                hex_to_bin()
-                kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                    hex_to_bin()
-                    probe_kernel_write()
-                dbg_set_reg()
-            gdb_cmd_binwrite() <void gdb_cmd_binwrite (struct kgdb_state *ks) at gdbstub.c:640>:
-                write_mem_msg() <int write_mem_msg (int binary) at gdbstub.c:367>:
-                    kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                        hex_to_bin()
-                    kgdb_ebin2mem() <int kgdb_ebin2mem (char *buf, char *mem, int count) at gdbstub.c:325>:
-                        probe_kernel_write()
-                    kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                        hex_to_bin()
-                        probe_kernel_write()
-                    flush_icache_range()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_detachkill() <void gdb_cmd_detachkill (struct kgdb_state *ks) at gdbstub.c:651>:
-                dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-                    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                        probe_kernel_write()
-                    pr_err()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                    hex_asc_hi()
-                    hex_asc_lo()
-                    gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                        unlikely()
-            gdb_cmd_reboot() <int gdb_cmd_reboot (struct kgdb_state *ks) at gdbstub.c:676>:
-                printk()
-                put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                    hex_asc_hi()
-                    hex_asc_lo()
-                    gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                        unlikely()
-                machine_emergency_restart()
-            gdb_cmd_query() <void gdb_cmd_query (struct kgdb_state *ks) at gdbstub.c:697>:
-                for_each_online_cpu()
-                int_to_threadref() <void int_to_threadref (unsigned char *id, int value) at gdbstub.c:427>:
-                    put_unaligned_be32()
-                pack_threadid() <char *pack_threadid (char *pkt, unsigned char *id) at gdbstub.c:407>:
-                    hex_byte_pack()
-                do_each_thread()
-                while_each_thread()
-                shadow_pid() <inline int shadow_pid (int realpid) at gdbstub.c:464>:
-                    raw_smp_processor_id()
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-                    atomic_read()
-                    idle_task()
-                    printk()
-                    dump_stack()
-                    find_task_by_pid_ns()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                kgdb_mem2hex() <char *kgdb_mem2hex (char *mem, char *buf, int count) at gdbstub.c:238>:
-                    probe_kernel_read()
-                    hex_byte_pack()
-                kgdb_hex2mem() <int kgdb_hex2mem (char *buf, char *mem, int count) at gdbstub.c:267>:
-                    hex_to_bin()
-                    probe_kernel_write()
-                kdb_common_init_state()
-                kdb_parse()
-                kdb_common_deinit_state()
-            gdb_cmd_task() <void gdb_cmd_task (struct kgdb_state *ks) at gdbstub.c:798>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-                    atomic_read()
-                    idle_task()
-                    printk()
-                    dump_stack()
-                    find_task_by_pid_ns()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_thread() <void gdb_cmd_thread (struct kgdb_state *ks) at gdbstub.c:835>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                getthread() <struct task_struct *getthread (struct pt_regs *regs, int tid) at gdbstub.c:432>:
-                    atomic_read()
-                    idle_task()
-                    printk()
-                    dump_stack()
-                    find_task_by_pid_ns()
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            gdb_cmd_break() <void gdb_cmd_break (struct kgdb_state *ks) at gdbstub.c:849>:
-                error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-                kgdb_hex2long() <int kgdb_hex2long (char **ptr, unsigned long *long_val) at gdbstub.c:292>:
-                    hex_to_bin()
-                dbg_set_sw_break() <int dbg_set_sw_break (unsigned long addr) at debug_core.c:273>:
-                    kgdb_validate_break_address() <int __weak kgdb_validate_break_address (unsigned long addr) at debug_core.c:187>:
-                        kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-                            probe_kernel_read()
-                            probe_kernel_write()
-                        kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                            probe_kernel_write()
-                        pr_err()
-                dbg_remove_sw_break() <int dbg_remove_sw_break (unsigned long addr) at debug_core.c:336>:
-            gdb_cmd_exception_pass() <int gdb_cmd_exception_pass (struct kgdb_state *ks) at gdbstub.c:911>:
-                dbg_remove_all_break() <int dbg_remove_all_break (void) at debug_core.c:362>:
-                    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-                        probe_kernel_write()
-                    pr_err()
-                gdbstub_msg_write() <void gdbstub_msg_write (const char *s, int len) at gdbstub.c:197>:
-                    hex_byte_pack()
-                    put_packet() <void put_packet (char *buffer) at gdbstub.c:144>:
-                        hex_asc_hi()
-                        hex_asc_lo()
-                        gdbstub_read_wait() <int gdbstub_read_wait (void) at gdbstub.c:81>:
-                            unlikely()
-            error_packet() <void error_packet (char *pkt, int error) at gdbstub.c:390>:
-            dbg_activate_sw_breakpoints() <int dbg_activate_sw_breakpoints (void) at debug_core.c:249>:
-                kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-                    probe_kernel_read()
-                    probe_kernel_write()
-                pr_info()
-                kgdb_flush_swbreak_addr() <void kgdb_flush_swbreak_addr (unsigned long addr) at debug_core.c:226>:
-                    flush_cache_range()
-                    flush_icache_range()
-            kgdb_arch_handle_exception()
-kgdb_register_io_module() <int kgdb_register_io_module (struct kgdb_io *new_dbg_io_ops) at debug_core.c:982>:
-    spin_lock()
-    spin_unlock()
-    pr_err()
-    pr_info()
-    kgdb_register_callbacks() <void kgdb_register_callbacks (void) at debug_core.c:898>:
-        kgdb_arch_init() <int __weak kgdb_arch_init (void) at debug_core.c:212>
-        kgdb_arch_late() <void __weak kgdb_arch_late (void) at debug_core.c:859>
-        register_module_notifier()
-        register_reboot_notifier()
-        atomic_notifier_chain_register()
-        register_sysrq_key()
-        register_console()
-    kgdb_initial_breakpoint() <void kgdb_initial_breakpoint (void) at debug_core.c:968>:
-        pr_crit()
-        kgdb_breakpoint() <noinline void kgdb_breakpoint (void) at debug_core.c:1067>:
-            atomic_inc()
-            wmb()
-            arch_kgdb_breakpoint()
-            atomic_dec()
-kgdb_schedule_breakpoint() <void kgdb_schedule_breakpoint (void) at debug_core.c:957>:
-    atomic_read()
-    atomic_inc()
-    tasklet_schedule()
-kgdb_unregister_io_module() <void kgdb_unregister_io_module (struct kgdb_io *old_dbg_io_ops) at debug_core.c:1025>:
+sysfs_add_file() <int sysfs_add_file (struct kernfs_node *parent, const struct attribute *attr, bool is_bin) at file.c:309>:
+    sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node *parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+        WARN()
+        kobject_name()
+        IS_ERR()
+        PTR_ERR()
+        sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+            kzalloc()
+            kernfs_path()
+            WARN()
+            kfree()
+sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node *parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+    WARN()
+    kobject_name()
+    IS_ERR()
+    PTR_ERR()
+    sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+        kzalloc()
+        kernfs_path()
+        WARN()
+        kfree()
+sysfs_add_file_to_group() <int sysfs_add_file_to_group (struct kobject *kobj, const struct attribute *attr, const char *group) at file.c:351>:
+    kernfs_find_and_get()
+    kernfs_get()
+    sysfs_add_file() <int sysfs_add_file (struct kernfs_node *parent, const struct attribute *attr, bool is_bin) at file.c:309>:
+        sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node *parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+            WARN()
+            kobject_name()
+            IS_ERR()
+            PTR_ERR()
+            sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+                kzalloc()
+                kernfs_path()
+                WARN()
+                kfree()
+    kernfs_put()
+sysfs_add_link_to_group() <int sysfs_add_link_to_group (struct kobject *kobj, const char *group_name, struct kobject *target, const char *link_name) at group.c:333>:
+    kernfs_find_and_get()
+    sysfs_create_link_sd() <int sysfs_create_link_sd (struct kernfs_node *kn, struct kobject *target, const char *name) at symlink.c:61>:
+        sysfs_do_create_link_sd() <int sysfs_do_create_link_sd (struct kernfs_node *parent, struct kobject *target_kobj, const char *name, int warn) at symlink.c:21>:
+            BUG_ON()
+            spin_lock()
+            kernfs_get()
+            spin_unlock()
+            kernfs_create_link()
+            kernfs_put()
+            IS_ERR()
+            PTR_ERR()
+            sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+                kzalloc()
+                kernfs_path()
+                WARN()
+                kfree()
+    kernfs_put()
+sysfs_chmod_file() <int sysfs_chmod_file (struct kobject *kobj, const struct attribute *attr, umode_t mode) at file.c:381>:
+    kernfs_find_and_get()
+    kernfs_setattr()
+    kernfs_put()
+sysfs_create_bin_file() <int sysfs_create_bin_file (struct kobject *kobj, const struct bin_attribute *attr) at file.c:480>:
     BUG_ON()
-    kgdb_unregister_callbacks() <void kgdb_unregister_callbacks (void) at debug_core.c:919>:
-        unregister_reboot_notifier()
-        unregister_module_notifier()
-        atomic_notifier_chain_unregister()
-        kgdb_arch_exit()
-        unregister_sysrq_key()
-        unregister_console()
+    sysfs_add_file() <int sysfs_add_file (struct kernfs_node *parent, const struct attribute *attr, bool is_bin) at file.c:309>:
+        sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node *parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+            WARN()
+            kobject_name()
+            IS_ERR()
+            PTR_ERR()
+            sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+                kzalloc()
+                kernfs_path()
+                WARN()
+                kfree()
+sysfs_create_dir_ns() <int sysfs_create_dir_ns (struct kobject *kobj, const void *ns) at dir.c:41>:
+    BUG_ON()
+    kernfs_create_dir_ns()
+    kobject_name()
+    IS_ERR()
+    PTR_ERR()
+    sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+        kzalloc()
+        kernfs_path()
+        WARN()
+        kfree()
+sysfs_create_file_ns() <int sysfs_create_file_ns (struct kobject *kobj, const struct attribute *attr, const void *ns) at file.c:321>:
+    BUG_ON()
+    sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node *parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+        WARN()
+        kobject_name()
+        IS_ERR()
+        PTR_ERR()
+        sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+            kzalloc()
+            kernfs_path()
+            WARN()
+            kfree()
+sysfs_create_files() <int sysfs_create_files (struct kobject *kobj, const struct attribute **ptr) at file.c:331>:
+    sysfs_create_file()
+    sysfs_remove_file()
+sysfs_create_group() <int sysfs_create_group (struct kobject *kobj, const struct attribute_group *grp) at group.c:153>:
+    internal_create_group() <int internal_create_group (struct kobject *kobj, int update, const struct attribute_group *grp) at group.c:107>:
+        BUG_ON()
+        unlikely()
+        WARN()
+        kernfs_create_dir()
+        IS_ERR()
+        PTR_ERR()
+        sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+            kzalloc()
+            kernfs_path()
+            WARN()
+            kfree()
+        kernfs_get()
+        create_files() <int create_files (struct kernfs_node *parent, struct kobject *kobj, const struct attribute_group *grp, int update) at group.c:35>:
+            kernfs_remove_by_name()
+            WARN()
+            sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node *parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+                WARN()
+                kobject_name()
+                IS_ERR()
+                PTR_ERR()
+                sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+                    kzalloc()
+                    kernfs_path()
+                    WARN()
+                    kfree()
+            unlikely()
+            remove_files() <void remove_files (struct kernfs_node *parent, const struct attribute_group *grp) at group.c:21>:
+                kernfs_remove_by_name()
+        kernfs_remove()
+        kernfs_put()
+sysfs_create_groups() <int sysfs_create_groups (struct kobject *kobj, const struct attribute_group **groups) at group.c:173>:
+    sysfs_create_group() <int sysfs_create_group (struct kobject *kobj, const struct attribute_group *grp) at group.c:153>:
+        internal_create_group() <int internal_create_group (struct kobject *kobj, int update, const struct attribute_group *grp) at group.c:107>:
+            BUG_ON()
+            unlikely()
+            WARN()
+            kernfs_create_dir()
+            IS_ERR()
+            PTR_ERR()
+            sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+                kzalloc()
+                kernfs_path()
+                WARN()
+                kfree()
+            kernfs_get()
+            create_files() <int create_files (struct kernfs_node *parent, struct kobject *kobj, const struct attribute_group *grp, int update) at group.c:35>:
+                kernfs_remove_by_name()
+                WARN()
+                sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node *parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+                    WARN()
+                    kobject_name()
+                    IS_ERR()
+                    PTR_ERR()
+                    sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+                        kzalloc()
+                        kernfs_path()
+                        WARN()
+                        kfree()
+                unlikely()
+                remove_files() <void remove_files (struct kernfs_node *parent, const struct attribute_group *grp) at group.c:21>:
+                    kernfs_remove_by_name()
+            kernfs_remove()
+            kernfs_put()
+    sysfs_remove_group() <void sysfs_remove_group (struct kobject *kobj, const struct attribute_group *grp) at group.c:226>:
+        kernfs_find_and_get()
+        WARN()
+        kobject_name()
+        kernfs_get()
+        remove_files() <void remove_files (struct kernfs_node *parent, const struct attribute_group *grp) at group.c:21>:
+            kernfs_remove_by_name()
+        kernfs_remove()
+        kernfs_put()
+sysfs_create_link() <int sysfs_create_link (struct kobject *kobj, struct kobject *target, const char *name) at symlink.c:89>:
+    sysfs_do_create_link() <int sysfs_do_create_link (struct kobject *kobj, struct kobject *target, const char *name, int warn) at symlink.c:67>:
+        sysfs_do_create_link_sd() <int sysfs_do_create_link_sd (struct kernfs_node *parent, struct kobject *target_kobj, const char *name, int warn) at symlink.c:21>:
+            BUG_ON()
+            spin_lock()
+            kernfs_get()
+            spin_unlock()
+            kernfs_create_link()
+            kernfs_put()
+            IS_ERR()
+            PTR_ERR()
+            sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+                kzalloc()
+                kernfs_path()
+                WARN()
+                kfree()
+sysfs_create_link_nowarn() <int sysfs_create_link_nowarn (struct kobject *kobj, struct kobject *target, const char *name) at symlink.c:105>:
+    sysfs_do_create_link() <int sysfs_do_create_link (struct kobject *kobj, struct kobject *target, const char *name, int warn) at symlink.c:67>:
+        sysfs_do_create_link_sd() <int sysfs_do_create_link_sd (struct kernfs_node *parent, struct kobject *target_kobj, const char *name, int warn) at symlink.c:21>:
+            BUG_ON()
+            spin_lock()
+            kernfs_get()
+            spin_unlock()
+            kernfs_create_link()
+            kernfs_put()
+            IS_ERR()
+            PTR_ERR()
+            sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+                kzalloc()
+                kernfs_path()
+                WARN()
+                kfree()
+sysfs_create_link_sd() <int sysfs_create_link_sd (struct kernfs_node *kn, struct kobject *target, const char *name) at symlink.c:61>:
+    sysfs_do_create_link_sd() <int sysfs_do_create_link_sd (struct kernfs_node *parent, struct kobject *target_kobj, const char *name, int warn) at symlink.c:21>:
+        BUG_ON()
+        spin_lock()
+        kernfs_get()
+        spin_unlock()
+        kernfs_create_link()
+        kernfs_put()
+        IS_ERR()
+        PTR_ERR()
+        sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+            kzalloc()
+            kernfs_path()
+            WARN()
+            kfree()
+sysfs_create_mount_point() <int sysfs_create_mount_point (struct kobject *parent_kobj, const char *name) at dir.c:130>:
+    kernfs_create_empty_dir()
+    IS_ERR()
+    PTR_ERR()
+    sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+        kzalloc()
+        kernfs_path()
+        WARN()
+        kfree()
+sysfs_delete_link() <void sysfs_delete_link (struct kobject *kobj, struct kobject *targ, const char *name) at symlink.c:120>:
     spin_lock()
-    WARN_ON_ONCE()
+    kernfs_ns_enabled()
     spin_unlock()
-    pr_info()
-kgdb_validate_break_address() <int __weak kgdb_validate_break_address (unsigned long addr) at debug_core.c:187>:
-    kgdb_arch_set_breakpoint() <int __weak kgdb_arch_set_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:168>:
-        probe_kernel_read()
-        probe_kernel_write()
-    kgdb_arch_remove_breakpoint() <int __weak kgdb_arch_remove_breakpoint (struct kgdb_bkpt *bpt) at debug_core.c:181>:
-        probe_kernel_write()
-    pr_err()
-pt_regs_to_gdb_regs() <void pt_regs_to_gdb_regs (unsigned long *gdb_regs, struct pt_regs *regs) at gdbstub.c:341>:
-    dbg_get_reg()
+    kernfs_remove_by_name_ns()
+sysfs_init() <int __init sysfs_init (void) at mount.c:65>:
+    kernfs_create_root()
+    IS_ERR()
+    PTR_ERR()
+    register_filesystem()
+    kernfs_destroy_root()
+sysfs_merge_group() <int sysfs_merge_group (struct kobject *kobj, const struct attribute_group *grp) at group.c:282>:
+    kernfs_find_and_get()
+    sysfs_add_file() <int sysfs_add_file (struct kernfs_node *parent, const struct attribute *attr, bool is_bin) at file.c:309>:
+        sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node *parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+            WARN()
+            kobject_name()
+            IS_ERR()
+            PTR_ERR()
+            sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+                kzalloc()
+                kernfs_path()
+                WARN()
+                kfree()
+    kernfs_remove_by_name()
+    kernfs_put()
+sysfs_move_dir_ns() <int sysfs_move_dir_ns (struct kobject *kobj, struct kobject *new_parent_kobj, const void *new_ns) at dir.c:113>:
+    kernfs_rename_ns()
+sysfs_notify() <void sysfs_notify (struct kobject *kobj, const char *dir, const char *attr) at file.c:167>:
+    kernfs_find_and_get()
+    kernfs_get()
+    kernfs_put()
+    kernfs_notify()
+sysfs_remove_bin_file() <void sysfs_remove_bin_file (struct kobject *kobj, const struct bin_attribute *attr) at file.c:494>:
+    kernfs_remove_by_name()
+sysfs_remove_dir() <void sysfs_remove_dir (struct kobject *kobj) at dir.c:75>:
+    spin_lock()
+    spin_unlock()
+    WARN_ON_ONCE()
+    kernfs_type()
+    kernfs_remove()
+sysfs_remove_file_from_group() <void sysfs_remove_file_from_group (struct kobject *kobj, const struct attribute *attr, const char *group) at file.c:456>:
+    kernfs_find_and_get()
+    kernfs_get()
+    kernfs_remove_by_name()
+    kernfs_put()
+sysfs_remove_file_ns() <void sysfs_remove_file_ns (struct kobject *kobj, const struct attribute *attr, const void *ns) at file.c:410>:
+    kernfs_remove_by_name_ns()
+sysfs_remove_file_self() <bool sysfs_remove_file_self (struct kobject *kobj, const struct attribute *attr) at file.c:426>:
+    kernfs_find_and_get()
+    WARN_ON_ONCE()
+    kernfs_remove_self()
+    kernfs_put()
+sysfs_remove_files() <void sysfs_remove_files (struct kobject *kobj, const struct attribute **ptr) at file.c:442>:
+    sysfs_remove_file()
+sysfs_remove_group() <void sysfs_remove_group (struct kobject *kobj, const struct attribute_group *grp) at group.c:226>:
+    kernfs_find_and_get()
+    WARN()
+    kobject_name()
+    kernfs_get()
+    remove_files() <void remove_files (struct kernfs_node *parent, const struct attribute_group *grp) at group.c:21>:
+        kernfs_remove_by_name()
+    kernfs_remove()
+    kernfs_put()
+sysfs_remove_groups() <void sysfs_remove_groups (struct kobject *kobj, const struct attribute_group **groups) at group.c:261>:
+    sysfs_remove_group() <void sysfs_remove_group (struct kobject *kobj, const struct attribute_group *grp) at group.c:226>:
+        kernfs_find_and_get()
+        WARN()
+        kobject_name()
+        kernfs_get()
+        remove_files() <void remove_files (struct kernfs_node *parent, const struct attribute_group *grp) at group.c:21>:
+            kernfs_remove_by_name()
+        kernfs_remove()
+        kernfs_put()
+sysfs_remove_link() <void sysfs_remove_link (struct kobject *kobj, const char *name) at symlink.c:142>:
+    kernfs_remove_by_name()
+sysfs_remove_link_from_group() <void sysfs_remove_link_from_group (struct kobject *kobj, const char *group_name, const char *link_name) at group.c:356>:
+    kernfs_find_and_get()
+    kernfs_remove_by_name()
+    kernfs_put()
+sysfs_remove_mount_point() <void sysfs_remove_mount_point (struct kobject *parent_kobj, const char *name) at dir.c:151>:
+    kernfs_remove_by_name_ns()
+sysfs_rename_dir_ns() <int sysfs_rename_dir_ns (struct kobject *kobj, const char *new_name, const void *new_ns) at dir.c:101>:
+    kernfs_get_parent()
+    kernfs_rename_ns()
+    kernfs_put()
+sysfs_rename_link_ns() <int sysfs_rename_link_ns (struct kobject *kobj, struct kobject *targ, const char *old, const char *new, const void *new_ns) at symlink.c:165>:
+    kernfs_find_and_get_ns()
+    kernfs_type()
+    kernfs_rename_ns()
+    kernfs_put()
+sysfs_unmerge_group() <void sysfs_unmerge_group (struct kobject *kobj, const struct attribute_group *grp) at group.c:311>:
+    kernfs_find_and_get()
+    kernfs_remove_by_name()
+    kernfs_put()
+sysfs_update_group() <int sysfs_update_group (struct kobject *kobj, const struct attribute_group *grp) at group.c:211>:
+    internal_create_group() <int internal_create_group (struct kobject *kobj, int update, const struct attribute_group *grp) at group.c:107>:
+        BUG_ON()
+        unlikely()
+        WARN()
+        kernfs_create_dir()
+        IS_ERR()
+        PTR_ERR()
+        sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+            kzalloc()
+            kernfs_path()
+            WARN()
+            kfree()
+        kernfs_get()
+        create_files() <int create_files (struct kernfs_node *parent, struct kobject *kobj, const struct attribute_group *grp, int update) at group.c:35>:
+            kernfs_remove_by_name()
+            WARN()
+            sysfs_add_file_mode_ns() <int sysfs_add_file_mode_ns (struct kernfs_node *parent, const struct attribute *attr, bool is_bin, umode_t mode, const void *ns) at file.c:240>:
+                WARN()
+                kobject_name()
+                IS_ERR()
+                PTR_ERR()
+                sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+                    kzalloc()
+                    kernfs_path()
+                    WARN()
+                    kfree()
+            unlikely()
+            remove_files() <void remove_files (struct kernfs_node *parent, const struct attribute_group *grp) at group.c:21>:
+                kernfs_remove_by_name()
+        kernfs_remove()
+        kernfs_put()
+sysfs_warn_dup() <void sysfs_warn_dup (struct kernfs_node *parent, const char *name) at dir.c:22>:
+    kzalloc()
+    kernfs_path()
+    WARN()
+    kfree()
