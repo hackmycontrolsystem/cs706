@@ -14,7 +14,7 @@ Run the gdiff tool as:
 bash gdiff.sh <path to software ver1> <path to software ver2>
 ```
 
-Where path to software version 1 is absolute path to your folder containing the version of the software that you need to analyse. Similarly, path to software version 2 is absolute path for different version of the same software. If there is no another version or you just want to analyse 1st version only then you should specify 'NULL' (withour quotes) as second argument. If you specify the second version, it should be later version of the same software.
+Where path to software version 1 is absolute path to your folder containing the version of the software that you need to analyse. Similarly, path to software version 2 is absolute path for different version of the same software. If there is no other version or you just want to analyse the 1st version only, then you should specify NULL as the second argument. If you specify the second version, it should be a later version of the same software.
 Example command line usage when both software versions need to be compared:
 ```
 bash gdiff.sh /tmp/gdiff/test_v1/ /tmp/gdiff/test_v2/
@@ -29,7 +29,7 @@ Usage: Source Code
 ```
 git clone git@github.com:rgodha/cs706.git
 ```
-Go the 'gdiff' folder, run the gdiff shell script as specified the examples explained above in command line usage. Tool creates files in /tmp/gdiff/runs folder. Please make sure that tool has access to /tmp/ folder and has required privileges to create files and folder in /tmp directory.
+Go to the 'gdiff' folder, run the gdiff shell script as specified the examples explained above in command line usage. The tool creates files in /tmp/gdiff/runs folder. Please make sure that the tool has access to /tmp/ folder and has required privileges to create files and folder in /tmp directory.
 
 Requirements
 -------------
