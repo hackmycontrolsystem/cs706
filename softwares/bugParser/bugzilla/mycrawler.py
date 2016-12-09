@@ -24,8 +24,8 @@ def get_attachments(bug, data):
   for attempt in attempts:
     patch_id = attempt.find('a')['href']
     #loc = http.get("https://bugzilla.mozilla.org/" + patch_id).count('\n')
-    #attachment_data = urllib2.urlopen("https://bugzilla.redhat.com/" + patch_id).read()
-    attachment_data = urllib2.urlopen("https://bz.apache.org/bugzilla/" + patch_id).read()
+    attachment_data = urllib2.urlopen("https://bugzilla.redhat.com/" + patch_id).read()
+    #attachment_data = urllib2.urlopen("https://bz.apache.org/bugzilla/" + patch_id).read()
     #print "Got attahment", str(attachment_data)
     #print "Got attahment in plain text."
 
@@ -53,10 +53,17 @@ def download(bug):
   if "not a valid bug number" in data:
     raise BugNotFound("Bug %s does not exist!" % get_id(bug))
 
+  if "You must enter a valid bug number" in data:
+    raise BugNotFound("Bug %s does not exist!" % get_id(bug))
+  
   soup = BeautifulSoup(data,'html.parser')
   #print soup.prettify()
   status = soup.find('span', attrs={'id':'static_bug_status'})
-  status = status.text
+  try:
+    status = status.text
+  except:
+    print data
+    sys.exit()
   status = status.replace('\n','')
   print "Status of Bug",get_id(bug),":",  status
 

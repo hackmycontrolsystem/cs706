@@ -66,7 +66,7 @@
     
     $("#expand_changed").click(function(){
     	collapseAll();
-    	expandChanged();
+        expandChanged();
     });
     
 	$("#collapse_all").click(function(){
@@ -165,8 +165,10 @@
     	}
 
     	function expandChanged(){
-    		expand(root, false); 
-    	    update(root);
+    		if(collapeModified == 1){
+	    		expand(root, false); 
+	    	    update(root);
+    		}
     	}
     	
     	function collapseAll(){
@@ -195,8 +197,8 @@
     	}
 
     	var margin = {top: 20, right: 120, bottom: 20, left: 120},
-    	    width = 1500 - margin.right - margin.left,
-    	    height = 750 - margin.top - margin.bottom;
+    	    width = 3500 - margin.right - margin.left,
+    	    height = 3500 - margin.top - margin.bottom;
     	    
     	var i = 0,
     	    duration = 750,
@@ -219,6 +221,7 @@
     	{% autoescape false %}
     	var flare = {{ graphData }};
     	var bugLink = {{ bugLink }}
+    	var collapeModified = {{ collapeModified }}
     	{% endautoescape %}
     	
     	root = flare;

@@ -1,3 +1,47 @@
+00~~AP_CORE_DECLARE() < at server/protocol.c:485>:~~-1~~0~~0
+01~~APR_STATUS_IS_ENOENT()~~-1~~0~~0
+01~~APR_STATUS_IS_ENOTDIR()~~-1~~0~~0
+01~~ap_build_config()~~-1~~0~~0
+01~~ap_cfg_closefile()~~-1~~0~~0
+01~~ap_create_per_dir_config()~~-1~~0~~0
+01~~ap_default_type()~~-1~~0~~0
+01~~ap_find_command()~~-1~~0~~0
+01~~ap_get_module_config()~~-1~~0~~0
+01~~ap_getword_conf()~~-1~~0~~0
+01~~ap_http_scheme()~~-1~~0~~0
+01~~ap_invoke_filter_init() <int ap_invoke_filter_init (ap_filter_t *filters) at server/config.c:309>:~~-1~~0~~0
+02~~filter_init_func()~~-1~~0~~0
+01~~ap_log_rerror()~~-1~~0~~0
+01~~ap_make_full_path()~~-1~~0~~0
+01~~ap_parse_vhost_addrs() <const char *ap_parse_vhost_addrs (apr_pool_t *p, const char *hostname, server_rec *s) at server/vhost.c:225>:~~-1~~0~~0
+02~~ap_getword_conf()~~-1~~0~~0
+02~~err() <void err (char *s) at support/ab.c:350>:~~-1~~0~~0
+02~~get_addresses() <const char *get_addresses (apr_pool_t *p, const char *w_, server_addr_rec ***paddr, apr_port_t default_port) at server/vhost.c:139>:~~-1~~0~~0
+03~~ap_log_error()~~-1~~0~~0
+03~~apr_parse_addr_port()~~-1~~0~~0
+03~~apr_pcalloc()~~-1~~0~~0
+03~~apr_pstrdup()~~-1~~0~~0
+03~~apr_sockaddr_info_get()~~-1~~0~~0
+01~~ap_pcfg_openfile()~~-1~~0~~0
+01~~ap_run_handler()~~-1~~0~~0
+01~~ap_run_insert_filter()~~-1~~0~~0
+01~~ap_run_pre_connection()~~-1~~0~~0
+01~~ap_run_process_connection()~~-1~~0~~0
+01~~ap_set_module_config()~~-1~~0~~0
+01~~ap_strchr_c()~~-1~~0~~0
+01~~ap_update_vhost_given_ip()~~-1~~0~~0
+01~~ap_walk_config()~~-1~~0~~0
+01~~apr_array_make()~~-1~~0~~0
+01~~apr_array_push()~~-1~~0~~0
+01~~apr_palloc()~~-1~~0~~0
+01~~apr_pcalloc()~~-1~~0~~0
+01~~apr_pmemdup()~~-1~~0~~0
+01~~apr_pstrdup()~~-1~~0~~0
+01~~apr_table_setn()~~-1~~0~~0
+01~~apr_uri_parse()~~-1~~0~~0
+01~~apr_uri_parse_hostinfo()~~-1~~0~~0
+01~~create_empty_config() <ap_conf_vector_t *create_empty_config (apr_pool_t *p) at server/config.c:207>:~~-1~~0~~0
+02~~apr_pcalloc()~~-1~~0~~0
 00~~main() <int main_htpasswd (int argc, const char *const argv[]) at support/htpasswd.c:390>:~~-1~~0~~0
 01~~accessible() <int accessible (apr_pool_t *pool, char *fname, int mode) at support/htpasswd.c:244>:~~-1~~0~~0
 02~~apr_file_close()~~-1~~0~~0

@@ -1,35 +1,1154 @@
-00~~main() <int main_htpasswd (int argc, const char *const argv[]) at support/htpasswd.c:390>:~~0~~1~~0
-01~~accessible() <int accessible (apr_pool_t *pool, char *fname, int mode) at support/htpasswd.c:244>:~~0~~0~~0
-02~~apr_file_close()~~0~~0~~0
-02~~apr_file_open()~~0~~0~~0
-01~~apr_app_initialize()~~0~~0~~0
-01~~apr_file_close()~~0~~0~~0
-01~~apr_file_copy()~~0~~0~~0
-01~~apr_psprintf()~~0~~0~~0
-01~~apr_temp_dir_get()~~0~~0~~0
-01~~check_args() <void check_args (apr_pool_t *pool, int argc, const char *const argv[], int *alg, int *mask, char **user, char **pwfilename, char **password) at support/htpasswd.c:275>:~~0~~0~~0~~55914##55915##55916##55917##55918##55919
-02~~apr_file_printf()~~0~~0~~0
-02~~apr_pstrdup()~~0~~0~~0
-02~~usage() <void usage (void) at support/htpasswd.c:206>:~~0~~0~~0~~55914##55915##55916##55917##55918##55919
-03~~apr_file_printf()~~0~~0~~0~~55914##55915##55916##55917##55918##55919
-01~~exists() <int exists (char *fname, apr_pool_t *pool) at support/htpasswd.c:258>:~~0~~0~~0
-02~~apr_stat()~~0~~0~~0
-01~~mkrecord() <int mkrecord (char *user, char *record, apr_size_t rlen, char *passwd, int alg) at support/htpasswd.c:128>:~~0~~1~~0
-02~~apr_file_printf()~~1~~0~~0
-02~~apr_md5_encode()~~0~~0~~0
-02~~apr_password_get()~~0~~0~~0
-02~~generate_salt() <void generate_salt (char *s, size_t size) at support/htpasswd.c:126>:~~1~~0~~0
-02~~seed_rand() <apr_status_t seed_rand (void) at support/htpasswd.c:137>:~~1~~1~~0
-03~~apr_file_printf()~~1~~0~~0
-03~~apr_generate_random_bytes()~~1~~0~~0
-02~~time() <apr_time_t time at modules/aaa/mod_auth_digest.c:170>~~-1~~0~~0
-02~~to64() <void to64 (char *s, unsigned long v, int n) at support/htpasswd.c:107>:~~0~~0~~0
-01~~putline() <void putline (apr_file_t *f, const char *l) at support/htpasswd.c:118>:~~0~~1~~0
-02~~apr_file_close()~~1~~0~~0
-02~~apr_file_printf()~~1~~0~~0
-02~~apr_file_puts()~~0~~0~~0
-02~~apr_strerror()~~1~~0~~0
-01~~terminate() <void terminate (void) at support/htpasswd.c:267>:~~0~~0~~0
-02~~apr_terminate()~~0~~0~~0
-02~~pressanykey()~~0~~0~~0
-02~~terminate() <void terminate (void) at support/htpasswd.c:267> (recursive: see 97)~~0~~0~~1
+00~~SYSCALL_DEFINE2() <SYSCALL_DEFINE2 (bdflush, int, func, long, data) at buffer.c:3261>:~~0~~0~~0
+01~~capable()~~0~~0~~0
+01~~do_exit()~~0~~0~~0
+01~~printk()~~0~~0~~0
+00~~bh_submit_read() <int bh_submit_read (struct buffer_head bh) at buffer.c:3385>:~~0~~1~~0
+01~~BUG_ON()~~0~~0~~0
+01~~buffer_locked()~~0~~0~~0
+01~~buffer_uptodate()~~0~~0~~0
+01~~end_buffer_read_sync() <void end_buffer_read_sync (struct buffer_head bh, int uptodate) at buffer.c:166>:~~0~~0~~0
+02~~put_bh()~~0~~0~~0
+01~~get_bh()~~0~~0~~0
+01~~submit_bh() <int submit_bh (int rw, struct buffer_head bh) at buffer.c:3046>:~~0~~1~~0
+02~~submit_bh_wbc() <int submit_bh_wbc (int rw, struct buffer_head bh, unsigned long bio_flags, struct writeback_control wbc) at buffer.c:2990>:~~0~~1~~0
+03~~BUG_ON()~~0~~0~~0
+03~~bh_offset()~~0~~0~~0
+03~~bio_add_page()~~0~~0~~0
+03~~bio_alloc()~~0~~0~~0
+03~~bio_set_op_attrs()~~1~~0~~0
+03~~buffer_delay()~~0~~0~~0
+03~~buffer_locked()~~0~~0~~0
+03~~buffer_mapped()~~0~~0~~0
+03~~buffer_meta()~~0~~0~~0
+03~~buffer_prio()~~0~~0~~0
+03~~buffer_unwritten()~~0~~0~~0
+03~~clear_buffer_write_io_error()~~0~~0~~0
+03~~end_bio_bh_io_sync() <void end_bio_bh_io_sync (struct bio bio) at buffer.c:2931>:~~0~~0~~0
+04~~bio_flagged()~~0~~0~~0
+04~~bio_put()~~0~~0~~0
+04~~set_bit()~~0~~0~~0
+04~~unlikely()~~0~~0~~0
+03~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+04~~i_size_read()~~0~~0~~0
+04~~likely()~~0~~0~~0
+04~~unlikely()~~0~~0~~0
+04~~zero_user()~~0~~0~~0
+03~~submit_bio()~~0~~0~~0
+03~~test_set_buffer_req()~~0~~0~~0
+03~~wbc_account_io()~~0~~0~~0
+03~~wbc_init_bio()~~0~~0~~0
+01~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+02~~clear_bit_unlock()~~0~~0~~0
+02~~smp_mb__after_atomic()~~0~~0~~0
+02~~wake_up_bit()~~0~~0~~0
+01~~wait_on_buffer()~~0~~0~~0
+00~~bh_uptodate_or_lock() <int bh_uptodate_or_lock (struct buffer_head bh) at buffer.c:3367>:~~0~~0~~0
+01~~buffer_uptodate()~~0~~0~~0
+01~~lock_buffer()~~0~~0~~0
+01~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+02~~clear_bit_unlock()~~0~~0~~0
+02~~smp_mb__after_atomic()~~0~~0~~0
+02~~wake_up_bit()~~0~~0~~0
+00~~block_commit_write() <int block_commit_write (struct page page, unsigned from, unsigned to) at buffer.c:2390>:~~0~~0~~0
+00~~block_invalidatepage() <void block_invalidatepage (struct page page, unsigned int offset, unsigned int length) at buffer.c:1524>:~~0~~0~~0
+01~~BUG_ON()~~0~~0~~0
+01~~PageLocked()~~0~~0~~0
+01~~discard_buffer() <void discard_buffer (struct buffer_head bh) at buffer.c:1490>:~~0~~0~~0
+02~~clear_buffer_dirty()~~0~~0~~0
+02~~cmpxchg()~~0~~0~~0
+02~~lock_buffer()~~0~~0~~0
+02~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+03~~clear_bit_unlock()~~0~~0~~0
+03~~smp_mb__after_atomic()~~0~~0~~0
+03~~wake_up_bit()~~0~~0~~0
+01~~page_buffers()~~0~~0~~0
+01~~page_has_buffers()~~0~~0~~0
+01~~try_to_release_page()~~0~~0~~0
+00~~block_is_partially_uptodate() <int block_is_partially_uptodate (struct page page, unsigned long from, unsigned long count) at buffer.c:2128>:~~0~~0~~0
+01~~buffer_uptodate()~~0~~0~~0
+01~~min_t()~~0~~0~~0
+01~~page_buffers()~~0~~0~~0
+01~~page_has_buffers()~~0~~0~~0
+00~~block_page_mkwrite() <int block_page_mkwrite (struct vm_area_struct vma, struct vm_fault vmf, get_block_t get_block) at buffer.c:2416>:~~0~~0~~0
+01~~block_commit_write() <int block_commit_write (struct page page, unsigned from, unsigned to) at buffer.c:2390>:~~0~~0~~0
+01~~file_inode()~~0~~0~~0
+01~~i_size_read()~~0~~0~~0
+01~~lock_page()~~0~~0~~0
+01~~page_offset()~~0~~0~~0
+01~~set_page_dirty()~~0~~0~~0
+01~~unlikely()~~0~~0~~0
+01~~unlock_page()~~0~~0~~0
+01~~wait_for_stable_page()~~0~~0~~0
+00~~block_read_full_page() <int block_read_full_page (struct page page, get_block_t *get_block) at buffer.c:2173>:~~0~~1~~0
+01~~PageError()~~0~~0~~0
+01~~SetPageError()~~0~~0~~0
+01~~SetPageMappedToDisk()~~0~~0~~0
+01~~SetPageUptodate()~~0~~0~~0
+01~~WARN_ON()~~0~~0~~0
+01~~block_size_bits() <inline int block_size_bits (unsigned int blocksize) at buffer.c:1649>:~~0~~0~~0
+02~~ilog2()~~0~~0~~0
+01~~buffer_mapped()~~0~~0~~0
+01~~buffer_uptodate()~~0~~0~~0
+01~~create_page_buffers() <struct buffer_head create_page_buffers (struct page page, struct inode inode, unsigned int b_state) at buffer.c:1654>~~0~~0~~0
+01~~end_buffer_async_read() <void end_buffer_async_read (struct buffer_head bh, int uptodate) at buffer.c:278>:~~0~~0~~0
+02~~BUG_ON()~~0~~0~~0
+02~~PageError()~~0~~0~~0
+02~~SetPageError()~~0~~0~~0
+02~~SetPageUptodate()~~0~~0~~0
+02~~bit_spin_lock()~~0~~0~~0
+02~~bit_spin_unlock()~~0~~0~~0
+02~~buffer_async_read()~~0~~0~~0
+02~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+03~~printk_ratelimited()~~0~~0~~0
+03~~test_bit()~~0~~0~~0
+02~~buffer_locked()~~0~~0~~0
+02~~buffer_uptodate()~~0~~0~~0
+02~~clear_buffer_async_read()~~0~~0~~0
+02~~clear_buffer_uptodate()~~0~~0~~0
+02~~local_irq_restore()~~0~~0~~0
+02~~local_irq_save()~~0~~0~~0
+02~~page_buffers()~~0~~0~~0
+02~~set_buffer_uptodate()~~0~~0~~0
+02~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+03~~clear_bit_unlock()~~0~~0~~0
+03~~smp_mb__after_atomic()~~0~~0~~0
+03~~wake_up_bit()~~0~~0~~0
+02~~unlock_page()~~0~~0~~0
+01~~i_size_read()~~0~~0~~0
+01~~lock_buffer()~~0~~0~~0
+01~~mark_buffer_async_read() <void mark_buffer_async_read (struct buffer_head bh) at buffer.c:406>:~~0~~0~~0
+02~~end_buffer_async_read() <void end_buffer_async_read (struct buffer_head bh, int uptodate) at buffer.c:278>:~~0~~0~~0
+03~~BUG_ON()~~0~~0~~0
+03~~PageError()~~0~~0~~0
+03~~SetPageError()~~0~~0~~0
+03~~SetPageUptodate()~~0~~0~~0
+03~~bit_spin_lock()~~0~~0~~0
+03~~bit_spin_unlock()~~0~~0~~0
+03~~buffer_async_read()~~0~~0~~0
+03~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+04~~printk_ratelimited()~~0~~0~~0
+04~~test_bit()~~0~~0~~0
+03~~buffer_locked()~~0~~0~~0
+03~~buffer_uptodate()~~0~~0~~0
+03~~clear_buffer_async_read()~~0~~0~~0
+03~~clear_buffer_uptodate()~~0~~0~~0
+03~~local_irq_restore()~~0~~0~~0
+03~~local_irq_save()~~0~~0~~0
+03~~page_buffers()~~0~~0~~0
+03~~set_buffer_uptodate()~~0~~0~~0
+03~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+04~~clear_bit_unlock()~~0~~0~~0
+04~~smp_mb__after_atomic()~~0~~0~~0
+04~~wake_up_bit()~~0~~0~~0
+03~~unlock_page()~~0~~0~~0
+02~~set_buffer_async_read()~~0~~0~~0
+01~~set_buffer_uptodate()~~0~~0~~0
+01~~submit_bh() <int submit_bh (int rw, struct buffer_head bh) at buffer.c:3046>:~~0~~1~~0
+02~~submit_bh_wbc() <int submit_bh_wbc (int rw, struct buffer_head bh, unsigned long bio_flags, struct writeback_control wbc) at buffer.c:2990>:~~0~~1~~0
+03~~BUG_ON()~~0~~0~~0
+03~~bh_offset()~~0~~0~~0
+03~~bio_add_page()~~0~~0~~0
+03~~bio_alloc()~~0~~0~~0
+03~~bio_set_op_attrs()~~1~~0~~0
+03~~buffer_delay()~~0~~0~~0
+03~~buffer_locked()~~0~~0~~0
+03~~buffer_mapped()~~0~~0~~0
+03~~buffer_meta()~~0~~0~~0
+03~~buffer_prio()~~0~~0~~0
+03~~buffer_unwritten()~~0~~0~~0
+03~~clear_buffer_write_io_error()~~0~~0~~0
+03~~end_bio_bh_io_sync() <void end_bio_bh_io_sync (struct bio bio) at buffer.c:2931>:~~0~~0~~0
+04~~bio_flagged()~~0~~0~~0
+04~~bio_put()~~0~~0~~0
+04~~set_bit()~~0~~0~~0
+04~~unlikely()~~0~~0~~0
+03~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+04~~i_size_read()~~0~~0~~0
+04~~likely()~~0~~0~~0
+04~~unlikely()~~0~~0~~0
+04~~zero_user()~~0~~0~~0
+03~~submit_bio()~~0~~0~~0
+03~~test_set_buffer_req()~~0~~0~~0
+03~~wbc_account_io()~~0~~0~~0
+03~~wbc_init_bio()~~0~~0~~0
+01~~unlock_page()~~0~~0~~0
+01~~zero_user()~~0~~0~~0
+00~~block_truncate_page() <int block_truncate_page (struct address_space mapping, loff_t from, get_block_t *get_block) at buffer.c:2800>:~~0~~1~~0
+01~~PageUptodate()~~0~~0~~0
+01~~WARN_ON()~~0~~0~~0
+01~~buffer_delay()~~0~~0~~0
+01~~buffer_mapped()~~0~~0~~0
+01~~buffer_unwritten()~~0~~0~~0
+01~~buffer_uptodate()~~0~~0~~0
+01~~create_empty_buffers() <void create_empty_buffers (struct page page, unsigned long blocksize, unsigned long b_state) at buffer.c:1579>:~~0~~0~~0
+02~~PageDirty()~~0~~0~~0
+02~~PageUptodate()~~0~~0~~0
+02~~alloc_page_buffers() <struct buffer_head alloc_page_buffers (struct page page, unsigned long size, int retry) at buffer.c:865>~~0~~0~~0
+02~~attach_page_buffers()~~0~~0~~0
+02~~set_buffer_dirty()~~0~~0~~0
+02~~set_buffer_uptodate()~~0~~0~~0
+02~~spin_lock()~~0~~0~~0
+02~~spin_unlock()~~0~~0~~0
+01~~grab_cache_page()~~0~~0~~0
+01~~ll_rw_block() <void ll_rw_block (int rw, int nr, struct buffer_head bhs[]) at buffer.c:3077>:~~0~~1~~0
+02~~buffer_uptodate()~~0~~0~~0
+02~~end_buffer_read_sync() <void end_buffer_read_sync (struct buffer_head bh, int uptodate) at buffer.c:166>:~~0~~0~~0
+03~~put_bh()~~0~~0~~0
+02~~end_buffer_write_sync() <void end_buffer_write_sync (struct buffer_head bh, int uptodate) at buffer.c:173>:~~0~~0~~0
+03~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+04~~printk_ratelimited()~~0~~0~~0
+04~~test_bit()~~0~~0~~0
+03~~clear_buffer_uptodate()~~0~~0~~0
+03~~put_bh()~~0~~0~~0
+03~~set_buffer_uptodate()~~0~~0~~0
+03~~set_buffer_write_io_error()~~0~~0~~0
+03~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+04~~clear_bit_unlock()~~0~~0~~0
+04~~smp_mb__after_atomic()~~0~~0~~0
+04~~wake_up_bit()~~0~~0~~0
+02~~get_bh()~~0~~0~~0
+02~~submit_bh() <int submit_bh (int rw, struct buffer_head bh) at buffer.c:3046>:~~0~~1~~0
+03~~submit_bh_wbc() <int submit_bh_wbc (int rw, struct buffer_head bh, unsigned long bio_flags, struct writeback_control wbc) at buffer.c:2990>:~~0~~1~~0
+04~~BUG_ON()~~0~~0~~0
+04~~bh_offset()~~0~~0~~0
+04~~bio_add_page()~~0~~0~~0
+04~~bio_alloc()~~0~~0~~0
+04~~bio_set_op_attrs()~~1~~0~~0
+04~~buffer_delay()~~0~~0~~0
+04~~buffer_locked()~~0~~0~~0
+04~~buffer_mapped()~~0~~0~~0
+04~~buffer_meta()~~0~~0~~0
+04~~buffer_prio()~~0~~0~~0
+04~~buffer_unwritten()~~0~~0~~0
+04~~clear_buffer_write_io_error()~~0~~0~~0
+04~~end_bio_bh_io_sync() <void end_bio_bh_io_sync (struct bio bio) at buffer.c:2931>:~~0~~0~~0
+05~~bio_flagged()~~0~~0~~0
+05~~bio_put()~~0~~0~~0
+05~~set_bit()~~0~~0~~0
+05~~unlikely()~~0~~0~~0
+04~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+05~~i_size_read()~~0~~0~~0
+05~~likely()~~0~~0~~0
+05~~unlikely()~~0~~0~~0
+05~~zero_user()~~0~~0~~0
+04~~submit_bio()~~0~~0~~0
+04~~test_set_buffer_req()~~0~~0~~0
+04~~wbc_account_io()~~0~~0~~0
+04~~wbc_init_bio()~~0~~0~~0
+02~~test_clear_buffer_dirty()~~0~~0~~0
+02~~trylock_buffer()~~0~~0~~0
+02~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+03~~clear_bit_unlock()~~0~~0~~0
+03~~smp_mb__after_atomic()~~0~~0~~0
+03~~wake_up_bit()~~0~~0~~0
+01~~mark_buffer_dirty() <void mark_buffer_dirty (struct buffer_head bh) at buffer.c:1149>:~~0~~1~~0
+02~~TestSetPageDirty()~~0~~0~~0
+02~~WARN_ON_ONCE()~~0~~0~~0
+02~~buffer_dirty()~~0~~0~~0
+02~~buffer_uptodate()~~0~~0~~0
+02~~lock_page_memcg()~~1~~0~~0
+02~~mem_cgroup_begin_page_stat()~~-1~~0~~0
+02~~mem_cgroup_end_page_stat()~~-1~~0~~0
+02~~page_mapping()~~0~~0~~0
+02~~smp_mb()~~0~~0~~0
+02~~test_set_buffer_dirty()~~0~~0~~0
+02~~trace_block_dirty_buffer()~~0~~0~~0
+02~~unlock_page_memcg()~~1~~0~~0
+01~~page_buffers()~~0~~0~~0
+01~~page_cache_release()~~-1~~0~~0
+01~~page_has_buffers()~~0~~0~~0
+01~~put_page()~~1~~0~~0
+01~~set_buffer_uptodate()~~0~~0~~0
+01~~unlock_page()~~0~~0~~0
+01~~wait_on_buffer()~~0~~0~~0
+01~~zero_user()~~0~~0~~0
+00~~block_write_begin() <int block_write_begin (struct address_space mapping, loff_t pos, unsigned len, unsigned flags, struct page pagep, get_block_t *get_block) at buffer.c:2022>:~~0~~1~~0
+01~~grab_cache_page_write_begin()~~0~~0~~0
+01~~page_cache_release()~~-1~~0~~0
+01~~put_page()~~1~~0~~0
+01~~unlikely()~~0~~0~~0
+01~~unlock_page()~~0~~0~~0
+00~~block_write_end() <int block_write_end (struct file file, struct address_space mapping, loff_t pos, unsigned len, unsigned copied, struct page page, void *fsdata) at buffer.c:2045>:~~0~~1~~0
+01~~PageUptodate()~~0~~0~~0
+01~~flush_dcache_page()~~0~~0~~0
+01~~page_zero_new_buffers() <void page_zero_new_buffers (struct page page, unsigned from, unsigned to) at buffer.c:1859>:~~0~~1~~0
+02~~BUG_ON()~~0~~0~~0
+02~~PageLocked()~~0~~0~~0
+02~~PageUptodate()~~0~~0~~0
+02~~buffer_new()~~0~~0~~0
+02~~clear_buffer_new()~~0~~0~~0
+02~~mark_buffer_dirty() <void mark_buffer_dirty (struct buffer_head bh) at buffer.c:1149>:~~0~~1~~0
+03~~TestSetPageDirty()~~0~~0~~0
+03~~WARN_ON_ONCE()~~0~~0~~0
+03~~buffer_dirty()~~0~~0~~0
+03~~buffer_uptodate()~~0~~0~~0
+03~~lock_page_memcg()~~1~~0~~0
+03~~mem_cgroup_begin_page_stat()~~-1~~0~~0
+03~~mem_cgroup_end_page_stat()~~-1~~0~~0
+03~~page_mapping()~~0~~0~~0
+03~~smp_mb()~~0~~0~~0
+03~~test_set_buffer_dirty()~~0~~0~~0
+03~~trace_block_dirty_buffer()~~0~~0~~0
+03~~unlock_page_memcg()~~1~~0~~0
+02~~max()~~0~~0~~0
+02~~min()~~0~~0~~0
+02~~page_buffers()~~0~~0~~0
+02~~page_has_buffers()~~0~~0~~0
+02~~set_buffer_uptodate()~~0~~0~~0
+02~~zero_user()~~0~~0~~0
+01~~unlikely()~~0~~0~~0
+00~~block_write_full_page() <int block_write_full_page (struct page page, get_block_t *get_block, struct writeback_control wbc) at buffer.c:2879>:~~0~~0~~0
+01~~do_invalidatepage()~~0~~0~~0
+01~~end_buffer_async_write() <void end_buffer_async_write (struct buffer_head bh, int uptodate) at buffer.c:339>:~~0~~0~~0
+02~~BUG_ON()~~0~~0~~0
+02~~SetPageError()~~0~~0~~0
+02~~bit_spin_lock()~~0~~0~~0
+02~~bit_spin_unlock()~~0~~0~~0
+02~~buffer_async_write()~~0~~0~~0
+02~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+03~~printk_ratelimited()~~0~~0~~0
+03~~test_bit()~~0~~0~~0
+02~~buffer_locked()~~0~~0~~0
+02~~clear_buffer_async_write()~~0~~0~~0
+02~~clear_buffer_uptodate()~~0~~0~~0
+02~~end_page_writeback()~~0~~0~~0
+02~~local_irq_restore()~~0~~0~~0
+02~~local_irq_save()~~0~~0~~0
+02~~page_buffers()~~0~~0~~0
+02~~set_bit()~~0~~0~~0
+02~~set_buffer_uptodate()~~0~~0~~0
+02~~set_buffer_write_io_error()~~0~~0~~0
+02~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+03~~clear_bit_unlock()~~0~~0~~0
+03~~smp_mb__after_atomic()~~0~~0~~0
+03~~wake_up_bit()~~0~~0~~0
+01~~i_size_read()~~0~~0~~0
+01~~unlock_page()~~0~~0~~0
+01~~zero_user_segment()~~0~~0~~0
+00~~buffer_check_dirty_writeback() <void buffer_check_dirty_writeback (struct page page, bool *dirty, bool *writeback) at buffer.c:87>:~~0~~0~~0
+01~~BUG_ON()~~0~~0~~0
+01~~PageLocked()~~0~~0~~0
+01~~PageWriteback()~~0~~0~~0
+01~~buffer_dirty()~~0~~0~~0
+01~~buffer_locked()~~0~~0~~0
+01~~page_buffers()~~0~~0~~0
+01~~page_has_buffers()~~0~~0~~0
+00~~buffer_init() <void __init buffer_init (void) at buffer.c:3404>:~~0~~0~~0
+01~~buffer_cpu_notify() <int buffer_cpu_notify (struct notifier_block self, unsigned long action, void *hcpu) at buffer.c:3352>:~~0~~0~~0
+02~~buffer_exit_cpu() <void buffer_exit_cpu (int cpu) at buffer.c:3339>:~~0~~0~~0
+03~~brelse()~~0~~0~~0
+03~~per_cpu()~~0~~0~~0
+03~~this_cpu_add()~~0~~0~~0
+01~~hotcpu_notifier()~~0~~0~~0
+01~~kmem_cache_create()~~0~~0~~0
+01~~nr_free_buffer_pages()~~0~~0~~0
+00~~cont_write_begin() <int cont_write_begin (struct file file, struct address_space mapping, loff_t pos, unsigned len, unsigned flags, struct page pagep, void **fsdata, get_block_t *get_block, loff_t *bytes) at buffer.c:2366>:~~0~~1~~0
+01~~block_write_begin() <int block_write_begin (struct address_space mapping, loff_t pos, unsigned len, unsigned flags, struct page pagep, get_block_t *get_block) at buffer.c:2022>:~~0~~1~~0
+02~~grab_cache_page_write_begin()~~0~~0~~0
+02~~page_cache_release()~~-1~~0~~0
+02~~put_page()~~1~~0~~0
+02~~unlikely()~~0~~0~~0
+02~~unlock_page()~~0~~0~~0
+01~~cont_expand_zero() <int cont_expand_zero (struct file file, struct address_space mapping, loff_t pos, loff_t *bytes) at buffer.c:2288>:~~0~~0~~0
+02~~BUG_ON()~~0~~0~~0
+02~~balance_dirty_pages_ratelimited()~~0~~0~~0
+02~~fatal_signal_pending()~~0~~0~~0
+02~~pagecache_write_begin()~~0~~0~~0
+02~~pagecache_write_end()~~0~~0~~0
+02~~unlikely()~~0~~0~~0
+02~~zero_user()~~0~~0~~0
+00~~create_empty_buffers() <void create_empty_buffers (struct page page, unsigned long blocksize, unsigned long b_state) at buffer.c:1579>:~~0~~0~~0
+01~~PageDirty()~~0~~0~~0
+01~~PageUptodate()~~0~~0~~0
+01~~alloc_page_buffers() <struct buffer_head alloc_page_buffers (struct page page, unsigned long size, int retry) at buffer.c:865>~~0~~0~~0
+01~~attach_page_buffers()~~0~~0~~0
+01~~set_buffer_dirty()~~0~~0~~0
+01~~set_buffer_uptodate()~~0~~0~~0
+01~~spin_lock()~~0~~0~~0
+01~~spin_unlock()~~0~~0~~0
+00~~emergency_thaw_all() <void emergency_thaw_all (void) at buffer.c:545>:~~0~~0~~0
+01~~INIT_WORK()~~0~~0~~0
+01~~do_thaw_all() <void do_thaw_all (struct work_struct work) at buffer.c:533>:~~0~~0~~0
+02~~do_thaw_one() <void do_thaw_one (struct super_block sb, void *unused) at buffer.c:527>:~~0~~0~~0
+03~~printk()~~0~~0~~0
+03~~thaw_bdev()~~0~~0~~0
+02~~iterate_supers()~~0~~0~~0
+02~~kfree()~~0~~0~~0
+02~~printk()~~0~~0~~0
+01~~kmalloc()~~0~~0~~0
+01~~schedule_work()~~0~~0~~0
+00~~end_buffer_async_write() <void end_buffer_async_write (struct buffer_head bh, int uptodate) at buffer.c:339>:~~0~~0~~0
+01~~BUG_ON()~~0~~0~~0
+01~~SetPageError()~~0~~0~~0
+01~~bit_spin_lock()~~0~~0~~0
+01~~bit_spin_unlock()~~0~~0~~0
+01~~buffer_async_write()~~0~~0~~0
+01~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+02~~printk_ratelimited()~~0~~0~~0
+02~~test_bit()~~0~~0~~0
+01~~buffer_locked()~~0~~0~~0
+01~~clear_buffer_async_write()~~0~~0~~0
+01~~clear_buffer_uptodate()~~0~~0~~0
+01~~end_page_writeback()~~0~~0~~0
+01~~local_irq_restore()~~0~~0~~0
+01~~local_irq_save()~~0~~0~~0
+01~~page_buffers()~~0~~0~~0
+01~~set_bit()~~0~~0~~0
+01~~set_buffer_uptodate()~~0~~0~~0
+01~~set_buffer_write_io_error()~~0~~0~~0
+01~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+02~~clear_bit_unlock()~~0~~0~~0
+02~~smp_mb__after_atomic()~~0~~0~~0
+02~~wake_up_bit()~~0~~0~~0
+00~~end_buffer_read_sync() <void end_buffer_read_sync (struct buffer_head bh, int uptodate) at buffer.c:166>:~~0~~0~~0
+01~~put_bh()~~0~~0~~0
+00~~end_buffer_write_sync() <void end_buffer_write_sync (struct buffer_head bh, int uptodate) at buffer.c:173>:~~0~~0~~0
+01~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+02~~printk_ratelimited()~~0~~0~~0
+02~~test_bit()~~0~~0~~0
+01~~clear_buffer_uptodate()~~0~~0~~0
+01~~put_bh()~~0~~0~~0
+01~~set_buffer_uptodate()~~0~~0~~0
+01~~set_buffer_write_io_error()~~0~~0~~0
+01~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+02~~clear_bit_unlock()~~0~~0~~0
+02~~smp_mb__after_atomic()~~0~~0~~0
+02~~wake_up_bit()~~0~~0~~0
+00~~free_buffer_head() <void free_buffer_head (struct buffer_head bh) at buffer.c:3328>:~~0~~0~~0
+01~~BUG_ON()~~0~~0~~0
+01~~kmem_cache_free()~~0~~0~~0
+01~~list_empty()~~0~~0~~0
+01~~preempt_disable()~~0~~0~~0
+01~~preempt_enable()~~0~~0~~0
+01~~recalc_bh_state() <void recalc_bh_state (void) at buffer.c:3301>:~~0~~0~~0
+02~~for_each_online_cpu()~~0~~0~~0
+02~~per_cpu()~~0~~0~~0
+00~~generic_cont_expand_simple() <int generic_cont_expand_simple (struct inode inode, loff_t size) at buffer.c:2263>:~~0~~0~~0
+01~~BUG_ON()~~0~~0~~0
+01~~inode_newsize_ok()~~0~~0~~0
+01~~pagecache_write_begin()~~0~~0~~0
+01~~pagecache_write_end()~~0~~0~~0
+00~~generic_write_end() <int generic_write_end (struct file file, struct address_space mapping, loff_t pos, unsigned len, unsigned copied, struct page page, void *fsdata) at buffer.c:2081>:~~0~~1~~0
+01~~block_write_end() <int block_write_end (struct file file, struct address_space mapping, loff_t pos, unsigned len, unsigned copied, struct page page, void *fsdata) at buffer.c:2045>:~~0~~1~~0
+02~~PageUptodate()~~0~~0~~0
+02~~flush_dcache_page()~~0~~0~~0
+02~~page_zero_new_buffers() <void page_zero_new_buffers (struct page page, unsigned from, unsigned to) at buffer.c:1859>:~~0~~1~~0
+03~~BUG_ON()~~0~~0~~0
+03~~PageLocked()~~0~~0~~0
+03~~PageUptodate()~~0~~0~~0
+03~~buffer_new()~~0~~0~~0
+03~~clear_buffer_new()~~0~~0~~0
+03~~mark_buffer_dirty() <void mark_buffer_dirty (struct buffer_head bh) at buffer.c:1149>:~~0~~1~~0
+04~~TestSetPageDirty()~~0~~0~~0
+04~~WARN_ON_ONCE()~~0~~0~~0
+04~~buffer_dirty()~~0~~0~~0
+04~~buffer_uptodate()~~0~~0~~0
+04~~lock_page_memcg()~~1~~0~~0
+04~~mem_cgroup_begin_page_stat()~~-1~~0~~0
+04~~mem_cgroup_end_page_stat()~~-1~~0~~0
+04~~page_mapping()~~0~~0~~0
+04~~smp_mb()~~0~~0~~0
+04~~test_set_buffer_dirty()~~0~~0~~0
+04~~trace_block_dirty_buffer()~~0~~0~~0
+04~~unlock_page_memcg()~~1~~0~~0
+03~~max()~~0~~0~~0
+03~~min()~~0~~0~~0
+03~~page_buffers()~~0~~0~~0
+03~~page_has_buffers()~~0~~0~~0
+03~~set_buffer_uptodate()~~0~~0~~0
+03~~zero_user()~~0~~0~~0
+02~~unlikely()~~0~~0~~0
+01~~i_size_write()~~0~~0~~0
+01~~mark_inode_dirty()~~0~~0~~0
+01~~page_cache_release()~~-1~~0~~0
+01~~pagecache_isize_extended()~~0~~0~~0
+01~~put_page()~~1~~0~~0
+01~~unlock_page()~~0~~0~~0
+00~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+01~~i_size_read()~~0~~0~~0
+01~~likely()~~0~~0~~0
+01~~unlikely()~~0~~0~~0
+01~~zero_user()~~0~~0~~0
+00~~inode_has_buffers() <int inode_has_buffers (struct inode inode) at buffer.c:487>:~~0~~0~~0
+01~~list_empty()~~0~~0~~0
+00~~invalidate_bh_lrus() <void invalidate_bh_lrus (void) at buffer.c:1460>:~~0~~0~~0
+01~~has_bh_in_lru() <bool has_bh_in_lru (int cpu, void *dummy) at buffer.c:1447>:~~0~~0~~0
+02~~per_cpu_ptr()~~0~~0~~0
+01~~invalidate_bh_lru() <void invalidate_bh_lru (void *arg) at buffer.c:1435>:~~0~~0~~0
+02~~brelse()~~0~~0~~0
+02~~get_cpu_var()~~0~~0~~0
+02~~put_cpu_var()~~0~~0~~0
+01~~on_each_cpu_cond()~~0~~0~~0
+00~~invalidate_inode_buffers() <void invalidate_inode_buffers (struct inode inode) at buffer.c:812>:~~0~~0~~0
+01~~BH_ENTRY()~~0~~0~~0
+01~~inode_has_buffers() <int inode_has_buffers (struct inode inode) at buffer.c:487>:~~0~~0~~0
+02~~list_empty()~~0~~0~~0
+01~~list_empty()~~0~~0~~0
+01~~spin_lock()~~0~~0~~0
+01~~spin_unlock()~~0~~0~~0
+00~~ll_rw_block() <void ll_rw_block (int rw, int nr, struct buffer_head bhs[]) at buffer.c:3077>:~~0~~1~~0
+01~~buffer_uptodate()~~0~~0~~0
+01~~end_buffer_read_sync() <void end_buffer_read_sync (struct buffer_head bh, int uptodate) at buffer.c:166>:~~0~~0~~0
+02~~put_bh()~~0~~0~~0
+01~~end_buffer_write_sync() <void end_buffer_write_sync (struct buffer_head bh, int uptodate) at buffer.c:173>:~~0~~0~~0
+02~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+03~~printk_ratelimited()~~0~~0~~0
+03~~test_bit()~~0~~0~~0
+02~~clear_buffer_uptodate()~~0~~0~~0
+02~~put_bh()~~0~~0~~0
+02~~set_buffer_uptodate()~~0~~0~~0
+02~~set_buffer_write_io_error()~~0~~0~~0
+02~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+03~~clear_bit_unlock()~~0~~0~~0
+03~~smp_mb__after_atomic()~~0~~0~~0
+03~~wake_up_bit()~~0~~0~~0
+01~~get_bh()~~0~~0~~0
+01~~submit_bh() <int submit_bh (int rw, struct buffer_head bh) at buffer.c:3046>:~~0~~1~~0
+02~~submit_bh_wbc() <int submit_bh_wbc (int rw, struct buffer_head bh, unsigned long bio_flags, struct writeback_control wbc) at buffer.c:2990>:~~0~~1~~0
+03~~BUG_ON()~~0~~0~~0
+03~~bh_offset()~~0~~0~~0
+03~~bio_add_page()~~0~~0~~0
+03~~bio_alloc()~~0~~0~~0
+03~~bio_set_op_attrs()~~1~~0~~0
+03~~buffer_delay()~~0~~0~~0
+03~~buffer_locked()~~0~~0~~0
+03~~buffer_mapped()~~0~~0~~0
+03~~buffer_meta()~~0~~0~~0
+03~~buffer_prio()~~0~~0~~0
+03~~buffer_unwritten()~~0~~0~~0
+03~~clear_buffer_write_io_error()~~0~~0~~0
+03~~end_bio_bh_io_sync() <void end_bio_bh_io_sync (struct bio bio) at buffer.c:2931>:~~0~~0~~0
+04~~bio_flagged()~~0~~0~~0
+04~~bio_put()~~0~~0~~0
+04~~set_bit()~~0~~0~~0
+04~~unlikely()~~0~~0~~0
+03~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+04~~i_size_read()~~0~~0~~0
+04~~likely()~~0~~0~~0
+04~~unlikely()~~0~~0~~0
+04~~zero_user()~~0~~0~~0
+03~~submit_bio()~~0~~0~~0
+03~~test_set_buffer_req()~~0~~0~~0
+03~~wbc_account_io()~~0~~0~~0
+03~~wbc_init_bio()~~0~~0~~0
+01~~test_clear_buffer_dirty()~~0~~0~~0
+01~~trylock_buffer()~~0~~0~~0
+01~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+02~~clear_bit_unlock()~~0~~0~~0
+02~~smp_mb__after_atomic()~~0~~0~~0
+02~~wake_up_bit()~~0~~0~~0
+00~~mark_buffer_async_write() <void mark_buffer_async_write (struct buffer_head bh) at buffer.c:419>:~~0~~0~~0
+01~~end_buffer_async_write() <void end_buffer_async_write (struct buffer_head bh, int uptodate) at buffer.c:339>:~~0~~0~~0
+02~~BUG_ON()~~0~~0~~0
+02~~SetPageError()~~0~~0~~0
+02~~bit_spin_lock()~~0~~0~~0
+02~~bit_spin_unlock()~~0~~0~~0
+02~~buffer_async_write()~~0~~0~~0
+02~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+03~~printk_ratelimited()~~0~~0~~0
+03~~test_bit()~~0~~0~~0
+02~~buffer_locked()~~0~~0~~0
+02~~clear_buffer_async_write()~~0~~0~~0
+02~~clear_buffer_uptodate()~~0~~0~~0
+02~~end_page_writeback()~~0~~0~~0
+02~~local_irq_restore()~~0~~0~~0
+02~~local_irq_save()~~0~~0~~0
+02~~page_buffers()~~0~~0~~0
+02~~set_bit()~~0~~0~~0
+02~~set_buffer_uptodate()~~0~~0~~0
+02~~set_buffer_write_io_error()~~0~~0~~0
+02~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+03~~clear_bit_unlock()~~0~~0~~0
+03~~smp_mb__after_atomic()~~0~~0~~0
+03~~wake_up_bit()~~0~~0~~0
+01~~mark_buffer_async_write_endio() <void mark_buffer_async_write_endio (struct buffer_head bh, bh_end_io_t *handler) at buffer.c:412>:~~0~~0~~0
+02~~set_buffer_async_write()~~0~~0~~0
+00~~mark_buffer_dirty() <void mark_buffer_dirty (struct buffer_head bh) at buffer.c:1149>:~~0~~1~~0
+01~~TestSetPageDirty()~~0~~0~~0
+01~~WARN_ON_ONCE()~~0~~0~~0
+01~~buffer_dirty()~~0~~0~~0
+01~~buffer_uptodate()~~0~~0~~0
+01~~lock_page_memcg()~~1~~0~~0
+01~~mem_cgroup_begin_page_stat()~~-1~~0~~0
+01~~mem_cgroup_end_page_stat()~~-1~~0~~0
+01~~page_mapping()~~0~~0~~0
+01~~smp_mb()~~0~~0~~0
+01~~test_set_buffer_dirty()~~0~~0~~0
+01~~trace_block_dirty_buffer()~~0~~0~~0
+01~~unlock_page_memcg()~~1~~0~~0
+00~~mark_buffer_dirty_inode() <void mark_buffer_dirty_inode (struct buffer_head bh, struct inode inode) at buffer.c:596>:~~0~~1~~0
+01~~BUG_ON()~~0~~0~~0
+01~~list_move_tail()~~0~~0~~0
+01~~mark_buffer_dirty() <void mark_buffer_dirty (struct buffer_head bh) at buffer.c:1149>:~~0~~1~~0
+02~~TestSetPageDirty()~~0~~0~~0
+02~~WARN_ON_ONCE()~~0~~0~~0
+02~~buffer_dirty()~~0~~0~~0
+02~~buffer_uptodate()~~0~~0~~0
+02~~lock_page_memcg()~~1~~0~~0
+02~~mem_cgroup_begin_page_stat()~~-1~~0~~0
+02~~mem_cgroup_end_page_stat()~~-1~~0~~0
+02~~page_mapping()~~0~~0~~0
+02~~smp_mb()~~0~~0~~0
+02~~test_set_buffer_dirty()~~0~~0~~0
+02~~trace_block_dirty_buffer()~~0~~0~~0
+02~~unlock_page_memcg()~~1~~0~~0
+01~~spin_lock()~~0~~0~~0
+01~~spin_unlock()~~0~~0~~0
+00~~nobh_truncate_page() <int nobh_truncate_page (struct address_space mapping, loff_t from, get_block_t *get_block) at buffer.c:2722>:~~0~~1~~0
+01~~PageUptodate()~~0~~0~~0
+01~~block_truncate_page() <int block_truncate_page (struct address_space mapping, loff_t from, get_block_t *get_block) at buffer.c:2800>:~~0~~1~~0
+02~~PageUptodate()~~0~~0~~0
+02~~WARN_ON()~~0~~0~~0
+02~~buffer_delay()~~0~~0~~0
+02~~buffer_mapped()~~0~~0~~0
+02~~buffer_unwritten()~~0~~0~~0
+02~~buffer_uptodate()~~0~~0~~0
+02~~create_empty_buffers() <void create_empty_buffers (struct page page, unsigned long blocksize, unsigned long b_state) at buffer.c:1579>:~~0~~0~~0
+03~~PageDirty()~~0~~0~~0
+03~~PageUptodate()~~0~~0~~0
+03~~alloc_page_buffers() <struct buffer_head alloc_page_buffers (struct page page, unsigned long size, int retry) at buffer.c:865>~~0~~0~~0
+03~~attach_page_buffers()~~0~~0~~0
+03~~set_buffer_dirty()~~0~~0~~0
+03~~set_buffer_uptodate()~~0~~0~~0
+03~~spin_lock()~~0~~0~~0
+03~~spin_unlock()~~0~~0~~0
+02~~grab_cache_page()~~0~~0~~0
+02~~ll_rw_block() <void ll_rw_block (int rw, int nr, struct buffer_head bhs[]) at buffer.c:3077>:~~0~~1~~0
+03~~buffer_uptodate()~~0~~0~~0
+03~~end_buffer_read_sync() <void end_buffer_read_sync (struct buffer_head bh, int uptodate) at buffer.c:166>:~~0~~0~~0
+04~~put_bh()~~0~~0~~0
+03~~end_buffer_write_sync() <void end_buffer_write_sync (struct buffer_head bh, int uptodate) at buffer.c:173>:~~0~~0~~0
+04~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+05~~printk_ratelimited()~~0~~0~~0
+05~~test_bit()~~0~~0~~0
+04~~clear_buffer_uptodate()~~0~~0~~0
+04~~put_bh()~~0~~0~~0
+04~~set_buffer_uptodate()~~0~~0~~0
+04~~set_buffer_write_io_error()~~0~~0~~0
+04~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+05~~clear_bit_unlock()~~0~~0~~0
+05~~smp_mb__after_atomic()~~0~~0~~0
+05~~wake_up_bit()~~0~~0~~0
+03~~get_bh()~~0~~0~~0
+03~~submit_bh() <int submit_bh (int rw, struct buffer_head bh) at buffer.c:3046>:~~0~~1~~0
+04~~submit_bh_wbc() <int submit_bh_wbc (int rw, struct buffer_head bh, unsigned long bio_flags, struct writeback_control wbc) at buffer.c:2990>:~~0~~1~~0
+05~~BUG_ON()~~0~~0~~0
+05~~bh_offset()~~0~~0~~0
+05~~bio_add_page()~~0~~0~~0
+05~~bio_alloc()~~0~~0~~0
+05~~bio_set_op_attrs()~~1~~0~~0
+05~~buffer_delay()~~0~~0~~0
+05~~buffer_locked()~~0~~0~~0
+05~~buffer_mapped()~~0~~0~~0
+05~~buffer_meta()~~0~~0~~0
+05~~buffer_prio()~~0~~0~~0
+05~~buffer_unwritten()~~0~~0~~0
+05~~clear_buffer_write_io_error()~~0~~0~~0
+05~~end_bio_bh_io_sync() <void end_bio_bh_io_sync (struct bio bio) at buffer.c:2931>:~~0~~0~~0
+06~~bio_flagged()~~0~~0~~0
+06~~bio_put()~~0~~0~~0
+06~~set_bit()~~0~~0~~0
+06~~unlikely()~~0~~0~~0
+05~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+06~~i_size_read()~~0~~0~~0
+06~~likely()~~0~~0~~0
+06~~unlikely()~~0~~0~~0
+06~~zero_user()~~0~~0~~0
+05~~submit_bio()~~0~~0~~0
+05~~test_set_buffer_req()~~0~~0~~0
+05~~wbc_account_io()~~0~~0~~0
+05~~wbc_init_bio()~~0~~0~~0
+03~~test_clear_buffer_dirty()~~0~~0~~0
+03~~trylock_buffer()~~0~~0~~0
+03~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+04~~clear_bit_unlock()~~0~~0~~0
+04~~smp_mb__after_atomic()~~0~~0~~0
+04~~wake_up_bit()~~0~~0~~0
+02~~mark_buffer_dirty() <void mark_buffer_dirty (struct buffer_head bh) at buffer.c:1149>:~~0~~1~~0
+03~~TestSetPageDirty()~~0~~0~~0
+03~~WARN_ON_ONCE()~~0~~0~~0
+03~~buffer_dirty()~~0~~0~~0
+03~~buffer_uptodate()~~0~~0~~0
+03~~lock_page_memcg()~~1~~0~~0
+03~~mem_cgroup_begin_page_stat()~~-1~~0~~0
+03~~mem_cgroup_end_page_stat()~~-1~~0~~0
+03~~page_mapping()~~0~~0~~0
+03~~smp_mb()~~0~~0~~0
+03~~test_set_buffer_dirty()~~0~~0~~0
+03~~trace_block_dirty_buffer()~~0~~0~~0
+03~~unlock_page_memcg()~~1~~0~~0
+02~~page_buffers()~~0~~0~~0
+02~~page_cache_release()~~-1~~0~~0
+02~~page_has_buffers()~~0~~0~~0
+02~~put_page()~~1~~0~~0
+02~~set_buffer_uptodate()~~0~~0~~0
+02~~unlock_page()~~0~~0~~0
+02~~wait_on_buffer()~~0~~0~~0
+02~~zero_user()~~0~~0~~0
+01~~buffer_mapped()~~0~~0~~0
+01~~grab_cache_page()~~0~~0~~0
+01~~lock_page()~~0~~0~~0
+01~~page_cache_release()~~-1~~0~~0
+01~~page_has_buffers()~~0~~0~~0
+01~~put_page()~~1~~0~~0
+01~~readpage()~~0~~0~~0
+01~~set_page_dirty()~~0~~0~~0
+01~~unlock_page()~~0~~0~~0
+01~~zero_user()~~0~~0~~0
+00~~nobh_write_begin() <int nobh_write_begin (struct address_space mapping, loff_t pos, unsigned len, unsigned flags, struct page pagep, void **fsdata, get_block_t *get_block) at buffer.c:2494>:~~0~~1~~0
+01~~BUG_ON()~~0~~0~~0
+01~~PageMappedToDisk()~~0~~0~~0
+01~~PageUptodate()~~0~~0~~0
+01~~SetPageMappedToDisk()~~0~~0~~0
+01~~alloc_page_buffers() <struct buffer_head alloc_page_buffers (struct page page, unsigned long size, int retry) at buffer.c:865>~~0~~0~~0
+01~~attach_nobh_buffers() <void attach_nobh_buffers (struct page page, struct buffer_head head) at buffer.c:2470>:~~0~~0~~0
+02~~BUG_ON()~~0~~0~~0
+02~~PageDirty()~~0~~0~~0
+02~~PageLocked()~~0~~0~~0
+02~~attach_page_buffers()~~0~~0~~0
+02~~set_buffer_dirty()~~0~~0~~0
+02~~spin_lock()~~0~~0~~0
+02~~spin_unlock()~~0~~0~~0
+01~~buffer_mapped()~~0~~0~~0
+01~~buffer_new()~~0~~0~~0
+01~~buffer_uptodate()~~0~~0~~0
+01~~end_buffer_read_nobh() <void end_buffer_read_nobh (struct buffer_head bh, int uptodate) at buffer.c:2460>:~~0~~0~~0
+01~~grab_cache_page_write_begin()~~0~~0~~0
+01~~lock_buffer()~~0~~0~~0
+01~~page_cache_release()~~-1~~0~~0
+01~~page_has_buffers()~~0~~0~~0
+01~~page_zero_new_buffers() <void page_zero_new_buffers (struct page page, unsigned from, unsigned to) at buffer.c:1859>:~~0~~1~~0
+02~~BUG_ON()~~0~~0~~0
+02~~PageLocked()~~0~~0~~0
+02~~PageUptodate()~~0~~0~~0
+02~~buffer_new()~~0~~0~~0
+02~~clear_buffer_new()~~0~~0~~0
+02~~mark_buffer_dirty() <void mark_buffer_dirty (struct buffer_head bh) at buffer.c:1149>:~~0~~1~~0
+03~~TestSetPageDirty()~~0~~0~~0
+03~~WARN_ON_ONCE()~~0~~0~~0
+03~~buffer_dirty()~~0~~0~~0
+03~~buffer_uptodate()~~0~~0~~0
+03~~lock_page_memcg()~~1~~0~~0
+03~~mem_cgroup_begin_page_stat()~~-1~~0~~0
+03~~mem_cgroup_end_page_stat()~~-1~~0~~0
+03~~page_mapping()~~0~~0~~0
+03~~smp_mb()~~0~~0~~0
+03~~test_set_buffer_dirty()~~0~~0~~0
+03~~trace_block_dirty_buffer()~~0~~0~~0
+03~~unlock_page_memcg()~~1~~0~~0
+02~~max()~~0~~0~~0
+02~~min()~~0~~0~~0
+02~~page_buffers()~~0~~0~~0
+02~~page_has_buffers()~~0~~0~~0
+02~~set_buffer_uptodate()~~0~~0~~0
+02~~zero_user()~~0~~0~~0
+01~~put_page()~~1~~0~~0
+01~~set_buffer_uptodate()~~0~~0~~0
+01~~submit_bh() <int submit_bh (int rw, struct buffer_head bh) at buffer.c:3046>:~~0~~1~~0
+02~~submit_bh_wbc() <int submit_bh_wbc (int rw, struct buffer_head bh, unsigned long bio_flags, struct writeback_control wbc) at buffer.c:2990>:~~0~~1~~0
+03~~BUG_ON()~~0~~0~~0
+03~~bh_offset()~~0~~0~~0
+03~~bio_add_page()~~0~~0~~0
+03~~bio_alloc()~~0~~0~~0
+03~~bio_set_op_attrs()~~1~~0~~0
+03~~buffer_delay()~~0~~0~~0
+03~~buffer_locked()~~0~~0~~0
+03~~buffer_mapped()~~0~~0~~0
+03~~buffer_meta()~~0~~0~~0
+03~~buffer_prio()~~0~~0~~0
+03~~buffer_unwritten()~~0~~0~~0
+03~~clear_buffer_write_io_error()~~0~~0~~0
+03~~end_bio_bh_io_sync() <void end_bio_bh_io_sync (struct bio bio) at buffer.c:2931>:~~0~~0~~0
+04~~bio_flagged()~~0~~0~~0
+04~~bio_put()~~0~~0~~0
+04~~set_bit()~~0~~0~~0
+04~~unlikely()~~0~~0~~0
+03~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+04~~i_size_read()~~0~~0~~0
+04~~likely()~~0~~0~~0
+04~~unlikely()~~0~~0~~0
+04~~zero_user()~~0~~0~~0
+03~~submit_bio()~~0~~0~~0
+03~~test_set_buffer_req()~~0~~0~~0
+03~~wbc_account_io()~~0~~0~~0
+03~~wbc_init_bio()~~0~~0~~0
+01~~unlikely()~~0~~0~~0
+01~~unlock_page()~~0~~0~~0
+01~~unmap_underlying_metadata() <void unmap_underlying_metadata (struct block_device bdev, sector_t block) at buffer.c:1625>:~~0~~0~~0
+02~~clear_buffer_dirty()~~0~~0~~0
+02~~clear_buffer_req()~~0~~0~~0
+02~~might_sleep()~~0~~0~~0
+02~~wait_on_buffer()~~0~~0~~0
+01~~wait_on_buffer()~~0~~0~~0
+01~~zero_user_segments()~~0~~0~~0
+00~~nobh_write_end() <int nobh_write_end (struct file file, struct address_space mapping, loff_t pos, unsigned len, unsigned copied, struct page page, void *fsdata) at buffer.c:2635>:~~0~~1~~0
+01~~BUG_ON()~~0~~0~~0
+01~~SetPageUptodate()~~0~~0~~0
+01~~attach_nobh_buffers() <void attach_nobh_buffers (struct page page, struct buffer_head head) at buffer.c:2470>:~~0~~0~~0
+02~~BUG_ON()~~0~~0~~0
+02~~PageDirty()~~0~~0~~0
+02~~PageLocked()~~0~~0~~0
+02~~attach_page_buffers()~~0~~0~~0
+02~~set_buffer_dirty()~~0~~0~~0
+02~~spin_lock()~~0~~0~~0
+02~~spin_unlock()~~0~~0~~0
+01~~free_buffer_head() <void free_buffer_head (struct buffer_head bh) at buffer.c:3328>:~~0~~0~~0
+02~~BUG_ON()~~0~~0~~0
+02~~kmem_cache_free()~~0~~0~~0
+02~~list_empty()~~0~~0~~0
+02~~preempt_disable()~~0~~0~~0
+02~~preempt_enable()~~0~~0~~0
+02~~recalc_bh_state() <void recalc_bh_state (void) at buffer.c:3301>:~~0~~0~~0
+03~~for_each_online_cpu()~~0~~0~~0
+03~~per_cpu()~~0~~0~~0
+01~~generic_write_end() <int generic_write_end (struct file file, struct address_space mapping, loff_t pos, unsigned len, unsigned copied, struct page page, void *fsdata) at buffer.c:2081>:~~0~~1~~0
+02~~block_write_end() <int block_write_end (struct file file, struct address_space mapping, loff_t pos, unsigned len, unsigned copied, struct page page, void *fsdata) at buffer.c:2045>:~~0~~1~~0
+03~~PageUptodate()~~0~~0~~0
+03~~flush_dcache_page()~~0~~0~~0
+03~~page_zero_new_buffers() <void page_zero_new_buffers (struct page page, unsigned from, unsigned to) at buffer.c:1859>:~~0~~1~~0
+04~~BUG_ON()~~0~~0~~0
+04~~PageLocked()~~0~~0~~0
+04~~PageUptodate()~~0~~0~~0
+04~~buffer_new()~~0~~0~~0
+04~~clear_buffer_new()~~0~~0~~0
+04~~mark_buffer_dirty() <void mark_buffer_dirty (struct buffer_head bh) at buffer.c:1149>:~~0~~1~~0
+05~~TestSetPageDirty()~~0~~0~~0
+05~~WARN_ON_ONCE()~~0~~0~~0
+05~~buffer_dirty()~~0~~0~~0
+05~~buffer_uptodate()~~0~~0~~0
+05~~lock_page_memcg()~~1~~0~~0
+05~~mem_cgroup_begin_page_stat()~~-1~~0~~0
+05~~mem_cgroup_end_page_stat()~~-1~~0~~0
+05~~page_mapping()~~0~~0~~0
+05~~smp_mb()~~0~~0~~0
+05~~test_set_buffer_dirty()~~0~~0~~0
+05~~trace_block_dirty_buffer()~~0~~0~~0
+05~~unlock_page_memcg()~~1~~0~~0
+04~~max()~~0~~0~~0
+04~~min()~~0~~0~~0
+04~~page_buffers()~~0~~0~~0
+04~~page_has_buffers()~~0~~0~~0
+04~~set_buffer_uptodate()~~0~~0~~0
+04~~zero_user()~~0~~0~~0
+03~~unlikely()~~0~~0~~0
+02~~i_size_write()~~0~~0~~0
+02~~mark_inode_dirty()~~0~~0~~0
+02~~page_cache_release()~~-1~~0~~0
+02~~pagecache_isize_extended()~~0~~0~~0
+02~~put_page()~~1~~0~~0
+02~~unlock_page()~~0~~0~~0
+01~~i_size_write()~~0~~0~~0
+01~~mark_inode_dirty()~~0~~0~~0
+01~~page_cache_release()~~-1~~0~~0
+01~~page_has_buffers()~~0~~0~~0
+01~~put_page()~~1~~0~~0
+01~~set_page_dirty()~~0~~0~~0
+01~~unlikely()~~0~~0~~0
+01~~unlock_page()~~0~~0~~0
+00~~nobh_writepage() <int nobh_writepage (struct page page, get_block_t *get_block, struct writeback_control wbc) at buffer.c:2675>:~~0~~0~~0
+01~~end_buffer_async_write() <void end_buffer_async_write (struct buffer_head bh, int uptodate) at buffer.c:339>:~~0~~0~~0
+02~~BUG_ON()~~0~~0~~0
+02~~SetPageError()~~0~~0~~0
+02~~bit_spin_lock()~~0~~0~~0
+02~~bit_spin_unlock()~~0~~0~~0
+02~~buffer_async_write()~~0~~0~~0
+02~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+03~~printk_ratelimited()~~0~~0~~0
+03~~test_bit()~~0~~0~~0
+02~~buffer_locked()~~0~~0~~0
+02~~clear_buffer_async_write()~~0~~0~~0
+02~~clear_buffer_uptodate()~~0~~0~~0
+02~~end_page_writeback()~~0~~0~~0
+02~~local_irq_restore()~~0~~0~~0
+02~~local_irq_save()~~0~~0~~0
+02~~page_buffers()~~0~~0~~0
+02~~set_bit()~~0~~0~~0
+02~~set_buffer_uptodate()~~0~~0~~0
+02~~set_buffer_write_io_error()~~0~~0~~0
+02~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+03~~clear_bit_unlock()~~0~~0~~0
+03~~smp_mb__after_atomic()~~0~~0~~0
+03~~wake_up_bit()~~0~~0~~0
+01~~i_size_read()~~0~~0~~0
+01~~mpage_writepage()~~0~~0~~0
+01~~unlock_page()~~0~~0~~0
+01~~zero_user_segment()~~0~~0~~0
+00~~page_zero_new_buffers() <void page_zero_new_buffers (struct page page, unsigned from, unsigned to) at buffer.c:1859>:~~0~~1~~0
+01~~BUG_ON()~~0~~0~~0
+01~~PageLocked()~~0~~0~~0
+01~~PageUptodate()~~0~~0~~0
+01~~buffer_new()~~0~~0~~0
+01~~clear_buffer_new()~~0~~0~~0
+01~~mark_buffer_dirty() <void mark_buffer_dirty (struct buffer_head bh) at buffer.c:1149>:~~0~~1~~0
+02~~TestSetPageDirty()~~0~~0~~0
+02~~WARN_ON_ONCE()~~0~~0~~0
+02~~buffer_dirty()~~0~~0~~0
+02~~buffer_uptodate()~~0~~0~~0
+02~~lock_page_memcg()~~1~~0~~0
+02~~mem_cgroup_begin_page_stat()~~-1~~0~~0
+02~~mem_cgroup_end_page_stat()~~-1~~0~~0
+02~~page_mapping()~~0~~0~~0
+02~~smp_mb()~~0~~0~~0
+02~~test_set_buffer_dirty()~~0~~0~~0
+02~~trace_block_dirty_buffer()~~0~~0~~0
+02~~unlock_page_memcg()~~1~~0~~0
+01~~max()~~0~~0~~0
+01~~min()~~0~~0~~0
+01~~page_buffers()~~0~~0~~0
+01~~page_has_buffers()~~0~~0~~0
+01~~set_buffer_uptodate()~~0~~0~~0
+01~~zero_user()~~0~~0~~0
+00~~remove_inode_buffers() <int remove_inode_buffers (struct inode inode) at buffer.c:833>:~~0~~0~~0
+01~~BH_ENTRY()~~0~~0~~0
+01~~buffer_dirty()~~0~~0~~0
+01~~inode_has_buffers() <int inode_has_buffers (struct inode inode) at buffer.c:487>:~~0~~0~~0
+02~~list_empty()~~0~~0~~0
+01~~list_empty()~~0~~0~~0
+01~~spin_lock()~~0~~0~~0
+01~~spin_unlock()~~0~~0~~0
+00~~set_bh_page() <void set_bh_page (struct buffer_head bh, struct page page, unsigned long offset) at buffer.c:1466>:~~0~~0~~0
+01~~BUG_ON()~~0~~0~~0
+01~~PageHighMem()~~0~~0~~0
+01~~page_address()~~0~~0~~0
+00~~submit_bh() <int submit_bh (int rw, struct buffer_head bh) at buffer.c:3046>:~~0~~1~~0
+01~~submit_bh_wbc() <int submit_bh_wbc (int rw, struct buffer_head bh, unsigned long bio_flags, struct writeback_control wbc) at buffer.c:2990>:~~0~~1~~0
+02~~BUG_ON()~~0~~0~~0
+02~~bh_offset()~~0~~0~~0
+02~~bio_add_page()~~0~~0~~0
+02~~bio_alloc()~~0~~0~~0
+02~~bio_set_op_attrs()~~1~~0~~0
+02~~buffer_delay()~~0~~0~~0
+02~~buffer_locked()~~0~~0~~0
+02~~buffer_mapped()~~0~~0~~0
+02~~buffer_meta()~~0~~0~~0
+02~~buffer_prio()~~0~~0~~0
+02~~buffer_unwritten()~~0~~0~~0
+02~~clear_buffer_write_io_error()~~0~~0~~0
+02~~end_bio_bh_io_sync() <void end_bio_bh_io_sync (struct bio bio) at buffer.c:2931>:~~0~~0~~0
+03~~bio_flagged()~~0~~0~~0
+03~~bio_put()~~0~~0~~0
+03~~set_bit()~~0~~0~~0
+03~~unlikely()~~0~~0~~0
+02~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+03~~i_size_read()~~0~~0~~0
+03~~likely()~~0~~0~~0
+03~~unlikely()~~0~~0~~0
+03~~zero_user()~~0~~0~~0
+02~~submit_bio()~~0~~0~~0
+02~~test_set_buffer_req()~~0~~0~~0
+02~~wbc_account_io()~~0~~0~~0
+02~~wbc_init_bio()~~0~~0~~0
+00~~sync_dirty_buffer() <int sync_dirty_buffer (struct buffer_head bh) at buffer.c:3144>:~~0~~0~~0
+00~~sync_mapping_buffers() <int sync_mapping_buffers (struct address_space mapping) at buffer.c:567>:~~0~~1~~0
+01~~fsync_buffers_list() <int fsync_buffers_list (spinlock_t *lock, struct list_head list) at buffer.c:724>:~~0~~1~~0
+02~~BH_ENTRY()~~0~~0~~0
+02~~INIT_LIST_HEAD()~~0~~0~~0
+02~~blk_finish_plug()~~0~~0~~0
+02~~blk_start_plug()~~0~~0~~0
+02~~brelse()~~0~~0~~0
+02~~buffer_dirty()~~0~~0~~0
+02~~buffer_locked()~~0~~0~~0
+02~~buffer_uptodate()~~0~~0~~0
+02~~get_bh()~~0~~0~~0
+02~~list_add()~~0~~0~~0
+02~~list_empty()~~0~~0~~0
+02~~osync_buffers_list() <int osync_buffers_list (spinlock_t *lock, struct list_head list) at buffer.c:502>:~~0~~0~~0
+03~~BH_ENTRY()~~0~~0~~0
+03~~brelse()~~0~~0~~0
+03~~buffer_locked()~~0~~0~~0
+03~~buffer_uptodate()~~0~~0~~0
+03~~get_bh()~~0~~0~~0
+03~~list_for_each_prev()~~0~~0~~0
+03~~spin_lock()~~0~~0~~0
+03~~spin_unlock()~~0~~0~~0
+03~~wait_on_buffer()~~0~~0~~0
+02~~smp_mb()~~0~~0~~0
+02~~spin_lock()~~0~~0~~0
+02~~spin_unlock()~~0~~0~~0
+02~~wait_on_buffer()~~0~~0~~0
+02~~write_dirty_buffer() <void write_dirty_buffer (struct buffer_head bh, int rw) at buffer.c:3106>:~~0~~1~~0
+03~~end_buffer_write_sync() <void end_buffer_write_sync (struct buffer_head bh, int uptodate) at buffer.c:173>:~~0~~0~~0
+04~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+05~~printk_ratelimited()~~0~~0~~0
+05~~test_bit()~~0~~0~~0
+04~~clear_buffer_uptodate()~~0~~0~~0
+04~~put_bh()~~0~~0~~0
+04~~set_buffer_uptodate()~~0~~0~~0
+04~~set_buffer_write_io_error()~~0~~0~~0
+04~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+05~~clear_bit_unlock()~~0~~0~~0
+05~~smp_mb__after_atomic()~~0~~0~~0
+05~~wake_up_bit()~~0~~0~~0
+03~~get_bh()~~0~~0~~0
+03~~lock_buffer()~~0~~0~~0
+03~~submit_bh() <int submit_bh (int rw, struct buffer_head bh) at buffer.c:3046>:~~0~~1~~0
+04~~submit_bh_wbc() <int submit_bh_wbc (int rw, struct buffer_head bh, unsigned long bio_flags, struct writeback_control wbc) at buffer.c:2990>:~~0~~1~~0
+05~~BUG_ON()~~0~~0~~0
+05~~bh_offset()~~0~~0~~0
+05~~bio_add_page()~~0~~0~~0
+05~~bio_alloc()~~0~~0~~0
+05~~bio_set_op_attrs()~~1~~0~~0
+05~~buffer_delay()~~0~~0~~0
+05~~buffer_locked()~~0~~0~~0
+05~~buffer_mapped()~~0~~0~~0
+05~~buffer_meta()~~0~~0~~0
+05~~buffer_prio()~~0~~0~~0
+05~~buffer_unwritten()~~0~~0~~0
+05~~clear_buffer_write_io_error()~~0~~0~~0
+05~~end_bio_bh_io_sync() <void end_bio_bh_io_sync (struct bio bio) at buffer.c:2931>:~~0~~0~~0
+06~~bio_flagged()~~0~~0~~0
+06~~bio_put()~~0~~0~~0
+06~~set_bit()~~0~~0~~0
+06~~unlikely()~~0~~0~~0
+05~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+06~~i_size_read()~~0~~0~~0
+06~~likely()~~0~~0~~0
+06~~unlikely()~~0~~0~~0
+06~~zero_user()~~0~~0~~0
+05~~submit_bio()~~0~~0~~0
+05~~test_set_buffer_req()~~0~~0~~0
+05~~wbc_account_io()~~0~~0~~0
+05~~wbc_init_bio()~~0~~0~~0
+03~~test_clear_buffer_dirty()~~0~~0~~0
+03~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+04~~clear_bit_unlock()~~0~~0~~0
+04~~smp_mb__after_atomic()~~0~~0~~0
+04~~wake_up_bit()~~0~~0~~0
+01~~list_empty()~~0~~0~~0
+00~~touch_buffer() <inline void touch_buffer (struct buffer_head bh) at buffer.c:61>:~~0~~0~~0
+01~~mark_page_accessed()~~0~~0~~0
+01~~trace_block_touch_buffer()~~0~~0~~0
+00~~try_to_free_buffers() <int try_to_free_buffers (struct page page) at buffer.c:3205>:~~0~~0~~0
+01~~BUG_ON()~~0~~0~~0
+01~~PageLocked()~~0~~0~~0
+01~~PageWriteback()~~0~~0~~0
+01~~cancel_dirty_page()~~0~~0~~0
+01~~drop_buffers() <int drop_buffers (struct page page, struct buffer_head buffers_to_free) at buffer.c:3177>:~~0~~0~~0
+02~~buffer_busy() <inline int buffer_busy (struct buffer_head bh) at buffer.c:3170>:~~0~~0~~0
+03~~atomic_read()~~0~~0~~0
+02~~buffer_write_io_error()~~0~~0~~0
+02~~page_buffers()~~0~~0~~0
+02~~set_bit()~~0~~0~~0
+01~~free_buffer_head() <void free_buffer_head (struct buffer_head bh) at buffer.c:3328>:~~0~~0~~0
+02~~BUG_ON()~~0~~0~~0
+02~~kmem_cache_free()~~0~~0~~0
+02~~list_empty()~~0~~0~~0
+02~~preempt_disable()~~0~~0~~0
+02~~preempt_enable()~~0~~0~~0
+02~~recalc_bh_state() <void recalc_bh_state (void) at buffer.c:3301>:~~0~~0~~0
+03~~for_each_online_cpu()~~0~~0~~0
+03~~per_cpu()~~0~~0~~0
+01~~spin_lock()~~0~~0~~0
+01~~spin_unlock()~~0~~0~~0
+00~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+01~~clear_bit_unlock()~~0~~0~~0
+01~~smp_mb__after_atomic()~~0~~0~~0
+01~~wake_up_bit()~~0~~0~~0
+00~~unmap_underlying_metadata() <void unmap_underlying_metadata (struct block_device bdev, sector_t block) at buffer.c:1625>:~~0~~0~~0
+01~~clear_buffer_dirty()~~0~~0~~0
+01~~clear_buffer_req()~~0~~0~~0
+01~~might_sleep()~~0~~0~~0
+01~~wait_on_buffer()~~0~~0~~0
+00~~write_boundary_block() <void write_boundary_block (struct block_device bdev, sector_t bblock, unsigned blocksize) at buffer.c:585>:~~0~~1~~0
+01~~buffer_dirty()~~0~~0~~0
+01~~ll_rw_block() <void ll_rw_block (int rw, int nr, struct buffer_head bhs[]) at buffer.c:3077>:~~0~~1~~0
+02~~buffer_uptodate()~~0~~0~~0
+02~~end_buffer_read_sync() <void end_buffer_read_sync (struct buffer_head bh, int uptodate) at buffer.c:166>:~~0~~0~~0
+03~~put_bh()~~0~~0~~0
+02~~end_buffer_write_sync() <void end_buffer_write_sync (struct buffer_head bh, int uptodate) at buffer.c:173>:~~0~~0~~0
+03~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+04~~printk_ratelimited()~~0~~0~~0
+04~~test_bit()~~0~~0~~0
+03~~clear_buffer_uptodate()~~0~~0~~0
+03~~put_bh()~~0~~0~~0
+03~~set_buffer_uptodate()~~0~~0~~0
+03~~set_buffer_write_io_error()~~0~~0~~0
+03~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+04~~clear_bit_unlock()~~0~~0~~0
+04~~smp_mb__after_atomic()~~0~~0~~0
+04~~wake_up_bit()~~0~~0~~0
+02~~get_bh()~~0~~0~~0
+02~~submit_bh() <int submit_bh (int rw, struct buffer_head bh) at buffer.c:3046>:~~0~~1~~0
+03~~submit_bh_wbc() <int submit_bh_wbc (int rw, struct buffer_head bh, unsigned long bio_flags, struct writeback_control wbc) at buffer.c:2990>:~~0~~1~~0
+04~~BUG_ON()~~0~~0~~0
+04~~bh_offset()~~0~~0~~0
+04~~bio_add_page()~~0~~0~~0
+04~~bio_alloc()~~0~~0~~0
+04~~bio_set_op_attrs()~~1~~0~~0
+04~~buffer_delay()~~0~~0~~0
+04~~buffer_locked()~~0~~0~~0
+04~~buffer_mapped()~~0~~0~~0
+04~~buffer_meta()~~0~~0~~0
+04~~buffer_prio()~~0~~0~~0
+04~~buffer_unwritten()~~0~~0~~0
+04~~clear_buffer_write_io_error()~~0~~0~~0
+04~~end_bio_bh_io_sync() <void end_bio_bh_io_sync (struct bio bio) at buffer.c:2931>:~~0~~0~~0
+05~~bio_flagged()~~0~~0~~0
+05~~bio_put()~~0~~0~~0
+05~~set_bit()~~0~~0~~0
+05~~unlikely()~~0~~0~~0
+04~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+05~~i_size_read()~~0~~0~~0
+05~~likely()~~0~~0~~0
+05~~unlikely()~~0~~0~~0
+05~~zero_user()~~0~~0~~0
+04~~submit_bio()~~0~~0~~0
+04~~test_set_buffer_req()~~0~~0~~0
+04~~wbc_account_io()~~0~~0~~0
+04~~wbc_init_bio()~~0~~0~~0
+02~~test_clear_buffer_dirty()~~0~~0~~0
+02~~trylock_buffer()~~0~~0~~0
+02~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+03~~clear_bit_unlock()~~0~~0~~0
+03~~smp_mb__after_atomic()~~0~~0~~0
+03~~wake_up_bit()~~0~~0~~0
+01~~put_bh()~~0~~0~~0
+00~~write_dirty_buffer() <void write_dirty_buffer (struct buffer_head bh, int rw) at buffer.c:3106>:~~0~~1~~0
+01~~end_buffer_write_sync() <void end_buffer_write_sync (struct buffer_head bh, int uptodate) at buffer.c:173>:~~0~~0~~0
+02~~buffer_io_error() <void buffer_io_error (struct buffer_head bh, char *msg) at buffer.c:135>:~~0~~0~~0
+03~~printk_ratelimited()~~0~~0~~0
+03~~test_bit()~~0~~0~~0
+02~~clear_buffer_uptodate()~~0~~0~~0
+02~~put_bh()~~0~~0~~0
+02~~set_buffer_uptodate()~~0~~0~~0
+02~~set_buffer_write_io_error()~~0~~0~~0
+02~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+03~~clear_bit_unlock()~~0~~0~~0
+03~~smp_mb__after_atomic()~~0~~0~~0
+03~~wake_up_bit()~~0~~0~~0
+01~~get_bh()~~0~~0~~0
+01~~lock_buffer()~~0~~0~~0
+01~~submit_bh() <int submit_bh (int rw, struct buffer_head bh) at buffer.c:3046>:~~0~~1~~0
+02~~submit_bh_wbc() <int submit_bh_wbc (int rw, struct buffer_head bh, unsigned long bio_flags, struct writeback_control wbc) at buffer.c:2990>:~~0~~1~~0
+03~~BUG_ON()~~0~~0~~0
+03~~bh_offset()~~0~~0~~0
+03~~bio_add_page()~~0~~0~~0
+03~~bio_alloc()~~0~~0~~0
+03~~bio_set_op_attrs()~~1~~0~~0
+03~~buffer_delay()~~0~~0~~0
+03~~buffer_locked()~~0~~0~~0
+03~~buffer_mapped()~~0~~0~~0
+03~~buffer_meta()~~0~~0~~0
+03~~buffer_prio()~~0~~0~~0
+03~~buffer_unwritten()~~0~~0~~0
+03~~clear_buffer_write_io_error()~~0~~0~~0
+03~~end_bio_bh_io_sync() <void end_bio_bh_io_sync (struct bio bio) at buffer.c:2931>:~~0~~0~~0
+04~~bio_flagged()~~0~~0~~0
+04~~bio_put()~~0~~0~~0
+04~~set_bit()~~0~~0~~0
+04~~unlikely()~~0~~0~~0
+03~~guard_bio_eod() <void guard_bio_eod (int rw, struct bio bio) at buffer.c:2954>:~~0~~0~~0
+04~~i_size_read()~~0~~0~~0
+04~~likely()~~0~~0~~0
+04~~unlikely()~~0~~0~~0
+04~~zero_user()~~0~~0~~0
+03~~submit_bio()~~0~~0~~0
+03~~test_set_buffer_req()~~0~~0~~0
+03~~wbc_account_io()~~0~~0~~0
+03~~wbc_init_bio()~~0~~0~~0
+00~~~~0~~0~~0
+01~~test_clear_buffer_dirty()~~0~~0~~0
+01~~unlock_buffer() <void unlock_buffer (struct buffer_head bh) at buffer.c:74>:~~0~~0~~0
+02~~clear_bit_unlock()~~0~~0~~0
+02~~smp_mb__after_atomic()~~0~~0~~0
+02~~wake_up_bit()~~0~~0~~0

@@ -16,8 +16,8 @@ def fix_url(url):
   """Prefix a schema-less URL with http://."""
   if '://' not in url:
     #url = 'https://bugzilla.mozilla.org/show_bug.cgi?id=' + url
-    #url = 'https://bugzilla.redhat.com/show_bug.cgi?id=' + url
-    url = 'https://bz.apache.org/bugzilla/show_bug.cgi?id=' + url
+    url = 'https://bugzilla.redhat.com/show_bug.cgi?id=' + url
+    #url = 'https://bz.apache.org/bugzilla/show_bug.cgi?id=' + url
   return url.replace("\n", "")
 
 
