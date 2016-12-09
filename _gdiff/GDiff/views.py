@@ -6,8 +6,7 @@ import re
 
 
 app = Flask(__name__)
-currentWorkingDir = os.getcwd()
-#currentWorkingDir = '/Users/mehreenali/Documents/workspace/CS706_GDiff' #os.getcwd()
+currentWorkingDir = '/Users/mehreenali/Documents/workspace/CS706_GDiff' #os.getcwd()
 
 def resource_path(relative):
     if hasattr(sys, "_MEIPASS"):
@@ -329,7 +328,16 @@ def associateBugData(file):
                 i+=1
                 if(j > len(functions)): break
                 if(len(bugIndices) == pathLength):
-                    break
+                    for inx in bugIndices:
+                        outData = outLines[inx].split("~~")
+                        if(len(outData) > 5):
+                            outLines[inx] = outLines[inx][:-1] + "##" + bugId + "\n"
+                        else: outLines[inx] = outLines[inx][:-1] + "~~" + bugId + "\n"
+                    #break
+                    outLines = outLines
+                    bugIndices = []
+                    #prevIdx = -1
+                    j=0
                 currIdx = int(outLines[i].split("~~")[0])
                 while(currIdx > prevIdx and i<len(outLines)-1):
                     if(outLines[i].find(functions[j]+"()")!=-1):

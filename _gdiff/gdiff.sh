@@ -38,7 +38,7 @@ cd ${PATH_V1}
 
 #cflow server/*.c server/mpm/event/*.c server/mpm/worker/*.c server/mpm/netware/*.c server/mpm/prefork/*.c server/mpm/winnt/*.c server/mpm/mpmt_os2/*.c  modules/aaa/*.c modules/arch/*.c modules/cache/*.c support/*.c os/beos/beosd.c os/bs2000/*.c os/netware/*.c os/os2/*.c os/tpf/*.c os/unix/*.c os/win32/*.c  -o /tmp/gdiff/runs/all_cflow
 
-cflow *.c -o /tmp/gdiff/runs/all_cflow
+cflow bufferv1.c -o /tmp/gdiff/runs/all_cflow
 #cflow inode.c namei.c locks.c read_write.c -o /tmp/gdiff/runs/all_cflow
 #cflow inode.c  -o /tmp/gdiff/runs/all_cflow
 echo " " >> /tmp/gdiff/runs/all_cflow
@@ -83,7 +83,7 @@ cd ${PATH_V2}
 
 #cflow server/*.c server/mpm/event/*.c server/mpm/worker/*.c server/mpm/netware/*.c server/mpm/prefork/*.c server/mpm/winnt/*.c server/mpm/mpmt_os2/*.c  modules/aaa/*.c modules/arch/*.c modules/cache/*.c support/*.c os/beos/beosd.c os/bs2000/*.c os/netware/*.c os/os2/*.c os/tpf/*.c os/unix/*.c os/win32/*.c  -o /tmp/gdiff/runs/all_cflow2
 
-cflow *.c -o /tmp/gdiff/runs/all_cflow2
+cflow bufferv2.c -o /tmp/gdiff/runs/all_cflow2
 #cflow inode.c namei.c locks.c read_write.c -o /tmp/gdiff/runs/all_cflow2
 #cflow inode.c  -o /tmp/gdiff/runs/all_cflow2
 echo " " >> /tmp/gdiff/runs/all_cflow2
@@ -97,4 +97,4 @@ echo "Removed standard library functions from all_flow and result stored in gdif
 
 echo "**************Restoring backups...*********"
 python restore_files_frm_bakup.py /tmp/gdiff/runs/gdiff_tags_v2
-
+python runserver.py
