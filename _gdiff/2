@@ -23,9 +23,6 @@ mkdir -p /tmp/gdiff/runs
 if [[ $# -eq 2 ]]; then
 echo "Run gdiff as version diff and generate call graph"
 
-##########################################################################################
-# 			     Run gdiff as Version Diff
-##########################################################################################
 
 echo "************** Generate ctags ************"
 ctags -RV -x --c-types=f ${PATH_V1}/* > /tmp/gdiff/runs/gdiff_tags_v1
@@ -127,100 +124,20 @@ fi
 
 # End for $# = 2
 fi
+exit 0
 
-##########################################################################################
-# 			     Gdiff as Bug Analyzer
-##########################################################################################
+
 
 if [[ $# -eq 3 ]]; then
 BUG_XML_FILE="$3"
 echo "Path to XML Bug file: ${BUG_XML_FILE}"
 
-echo "************** Generate ctags ************"
-ctags -RV -x --c-types=f ${PATH_V1}/* > /tmp/gdiff/runs/gdiff_tags_v1
-
-### Download all the bugs and get call traces
 python BugParser/mybugzilla.py -x ${BUG_XML_FILE}
 
-echo "Paring results in BugParser/result.txt"
-
-## Get all .c files in which we need to run cflow
-GC_FILES_V1=$(python BugParser/parse_abrt.py BugParser/result.txt /tmp/gdiff/runs/gdiff_tags_v1)
-
-SAVE_CWD=$PWD
-echo "*************** Run cflow on all *.c files ***********"
-echo "Running cflow..."
-
-# Change the current pwd to specified software root folder and run cflow
-cd ${PATH_V1}
-echo $GC_FILES_V1
-cflow $GC_FILES_V1 -o /tmp/gdiff/runs/all_cflow
-
-# Added an extra line for D3 requirement for call graph UI.
-echo " " >> /tmp/gdiff/runs/all_cflow
-
-# Back to old path
-cd $SAVE_CWD
-echo "cflow output at  /tmp/gdiff/runs/all_cflow file\n"
-
-# Remove all std library functions from the cflow output and write result in gdiff_cflow_v1.
-python remove_stdlibs_functions.py /tmp/gdiff/runs/all_cflow /tmp/gdiff/runs/gdiff_cflow_v1
-
-echo "Removed standard library functions from all_flow and result stored in gdiff_cflow\n"
-
-
-printf "\n\n"
-if [[ $2 != *"NULL"* ]]; then
-echo "Version 2 present... Run tool..."
-
-
-echo " *********** Run for ver2 ********** "
-echo " *********** ************ ********** "
-echo " *********** ************ ********** "
-printf "\n\n"
-
-
-echo "************** Generate ctags ************"
-ctags -RV -x --c-types=f ${PATH_V2}/* > /tmp/gdiff/runs/gdiff_tags_v2
-
-## Get all .c files in which we need to run cflow
-GC_FILES_V2=$(python BugParser/parse_abrt.py BugParser/result.txt /tmp/gdiff/runs/gdiff_tags_v2)
-
-SAVE_CWD=$PWD
-echo "*************** Run cflow on all *.c files ***********"
-echo "Running cflow..."
-
-# Change the current pwd to specified software root folder and run cflow
-cd ${PATH_V2}
-echo $GC_FILES_V2
-cflow $GC_FILES_V2 -o /tmp/gdiff/runs/all_cflow2
-
-# Added an extra line for D3 requirement for call graph UI.
-echo " " >> /tmp/gdiff/runs/all_cflow2
-
-# Back to old path
-cd $SAVE_CWD
-echo "cflow output at  /tmp/gdiff/runs/all_cflow2 file\n"
-
-# Remove all std library functions from the cflow output and write result in gdiff_cflow_v1.
-python remove_stdlibs_functions.py /tmp/gdiff/runs/all_cflow2 /tmp/gdiff/runs/gdiff_cflow_v2
-
-echo "Removed standard library functions from all_flow and result stored in gdiff_cflow\n"
-
-# End for NULL Check for software version 2.
-fi
-
-# End for $# = 2
 fi
 
 
-exit 0
 
-
-
-##########################################################################################
-# 			     Common Part: Generate Call Graph
-##########################################################################################
 # Generate the Static Call Graph based on cflow output
 python runserver.py
 

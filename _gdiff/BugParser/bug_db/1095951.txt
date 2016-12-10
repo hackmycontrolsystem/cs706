@@ -1,0 +1,1955 @@
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.14.2-200.fc20.x86_64 (mockbuild@bkernel01.phx2.fedoraproject.org) (gcc version 4.8.2 20131212 (Red Hat 4.8.2-7) (GCC) ) #1 SMP Mon Apr 28 14:40:57 UTC 2014
+[    0.000000] Command line: BOOT_IMAGE=/vmlinuz-3.14.2-200.fc20.x86_64 root=/dev/mapper/luks-ba089b3e-ab16-4ac8-b870-461a071d702c ro rd.lvm.lv=fedora/swap rd.md=0 rd.dm=0 rd.luks.uuid=luks-db647265-460f-4aed-83ab-7f3683e6978f vconsole.keymap=us rd.luks.uuid=luks-ba089b3e-ab16-4ac8-b870-461a071d702c vconsole.font=latarcyrheb-sun16 rd.lvm.lv=fedora/root rhgb quiet LANG=en_GB.UTF-8
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009f7ff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009f800-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000dc000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000bf67ffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000bf680000-0x00000000bf68ffff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x00000000bf690000-0x00000000bfffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000e0000000-0x00000000efffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec0ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed14000-0x00000000fed19fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed1c000-0x00000000fed8ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000013fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.4 present.
+[    0.000000] DMI: FUJITSU SIEMENS ESPRIMO Mobile U9200/S11D, BIOS 1.11 - 067 - 1566 04/22/2008
+[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] e820: last_pfn = 0x140000 max_arch_pfn = 0x400000000
+[    0.000000] MTRR default type: uncachable
+[    0.000000] MTRR fixed ranges enabled:
+[    0.000000]   00000-9FFFF write-back
+[    0.000000]   A0000-BFFFF uncachable
+[    0.000000]   C0000-FFFFF write-protect
+[    0.000000] MTRR variable ranges enabled:
+[    0.000000]   0 base 0C0000000 mask FC0000000 uncachable
+[    0.000000]   1 base 000000000 mask F00000000 write-back
+[    0.000000]   2 base 100000000 mask FC0000000 write-back
+[    0.000000]   3 base 0BF700000 mask FFFF00000 uncachable
+[    0.000000]   4 base 0BF800000 mask FFF800000 uncachable
+[    0.000000]   5 disabled
+[    0.000000]   6 disabled
+[    0.000000]   7 disabled
+[    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+[    0.000000] e820: update [mem 0xbf700000-0xffffffff] usable ==> reserved
+[    0.000000] e820: last_pfn = 0xbf680 max_arch_pfn = 0x400000000
+[    0.000000] found SMP MP-table at [mem 0x000f77a0-0x000f77af] mapped at [ffff8800000f77a0]
+[    0.000000] Base memory trampoline at [ffff880000099000] 99000 size 24576
+[    0.000000] init_memory_mapping: [mem 0x00000000-0x000fffff]
+[    0.000000]  [mem 0x00000000-0x000fffff] page 4k
+[    0.000000] BRK [0x0201b000, 0x0201bfff] PGTABLE
+[    0.000000] BRK [0x0201c000, 0x0201cfff] PGTABLE
+[    0.000000] BRK [0x0201d000, 0x0201dfff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x13fe00000-0x13fffffff]
+[    0.000000]  [mem 0x13fe00000-0x13fffffff] page 2M
+[    0.000000] BRK [0x0201e000, 0x0201efff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x13c000000-0x13fdfffff]
+[    0.000000]  [mem 0x13c000000-0x13fdfffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x100000000-0x13bffffff]
+[    0.000000]  [mem 0x100000000-0x13bffffff] page 2M
+[    0.000000] init_memory_mapping: [mem 0x00100000-0xbf67ffff]
+[    0.000000]  [mem 0x00100000-0x001fffff] page 4k
+[    0.000000]  [mem 0x00200000-0xbf5fffff] page 2M
+[    0.000000]  [mem 0xbf600000-0xbf67ffff] page 4k
+[    0.000000] RAMDISK: [mem 0x35d98000-0x36ec3fff]
+[    0.000000] ACPI: RSDP 00000000000f7710 000024 (v02 PTLTD )
+[    0.000000] ACPI: XSDT 00000000bf686fbb 00008C (v01 FSC    PC       06040000  LTP 00000000)
+[    0.000000] ACPI: FACP 00000000bf68ed0c 0000F4 (v03 INTEL  CRESTLNE 06040000 ALAN 00000001)
+[    0.000000] ACPI: DSDT 00000000bf688502 006796 (v02 IEC___ S11_____ 06040000 INTL 20050624)
+[    0.000000] ACPI: FACS 00000000bf68ffc0 000040
+[    0.000000] ACPI: APIC 00000000bf68ee00 000068 (v01 INTEL  CRESTLNE 06040000 LOHR 0000005A)
+[    0.000000] ACPI: HPET 00000000bf68ee68 000038 (v01 INTEL  CRESTLNE 06040000 LOHR 0000005A)
+[    0.000000] ACPI: MCFG 00000000bf68eea0 00003C (v01 INTEL  CRESTLNE 06040000 LOHR 0000005A)
+[    0.000000] ACPI: SLIT 00000000bf68eedc 00003C (v01 INTEL  CRESTLNE 06040000 LOHR 0000005A)
+[    0.000000] ACPI: TCPA 00000000bf68ef18 000032 (v01 Intel   CRESTLN 06040000      00005A52)
+[    0.000000] ACPI: TMOR 00000000bf68ef4a 000026 (v01 PTLTD           06040000 PTL  00000003)
+[    0.000000] ACPI: APIC 00000000bf68ef70 000068 (v01 PTLTD  ? APIC   06040000  LTP 00000000)
+[    0.000000] ACPI: BOOT 00000000bf68efd8 000028 (v01 PTLTD  $SBFTBL$ 06040000  LTP 00000001)
+[    0.000000] ACPI: SSDT 00000000bf688225 0002DD (v01 SataRe SataAhci 00001000 INTL 20050624)
+[    0.000000] ACPI: SSDT 00000000bf6875d3 00025F (v01  PmRef  Cpu0Tst 00003000 INTL 20050624)
+[    0.000000] ACPI: SSDT 00000000bf68752d 0000A6 (v01  PmRef  Cpu1Tst 00003000 INTL 20050624)
+[    0.000000] ACPI: SSDT 00000000bf687047 0004E6 (v01  PmRef    CpuPm 00003000 INTL 20050624)
+[    0.000000] ACPI: BIOS bug: multiple APIC/MADT found, using 0
+[    0.000000] ACPI: If "acpi_apic_instance=2" works better, notify linux-acpi@vger.kernel.org
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000013fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x00000000-0x13fffffff]
+[    0.000000]   NODE_DATA [mem 0x13ffe9000-0x13fffcfff]
+[    0.000000]  [ffffea0000000000-ffffea0004ffffff] PMD -> [ffff88013b600000-ffff88013f5fffff] on node 0
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x00001000-0x00ffffff]
+[    0.000000]   DMA32    [mem 0x01000000-0xffffffff]
+[    0.000000]   Normal   [mem 0x100000000-0x13fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00001000-0x0009efff]
+[    0.000000]   node   0: [mem 0x00100000-0xbf67ffff]
+[    0.000000]   node   0: [mem 0x100000000-0x13fffffff]
+[    0.000000] On node 0 totalpages: 1046046
+[    0.000000]   DMA zone: 64 pages used for memmap
+[    0.000000]   DMA zone: 21 pages reserved
+[    0.000000]   DMA zone: 3998 pages, LIFO batch:0
+[    0.000000]   DMA32 zone: 12186 pages used for memmap
+[    0.000000]   DMA32 zone: 779904 pages, LIFO batch:31
+[    0.000000]   Normal zone: 4096 pages used for memmap
+[    0.000000]   Normal zone: 262144 pages, LIFO batch:31
+[    0.000000] ACPI: PM-Timer IO Port: 0x1008
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x01] lapic_id[0x01] enabled)
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.000000] ACPI: IOAPIC (id[0x01] address[0xfec00000] gsi_base[0])
+[    0.000000] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.000000] ACPI: IRQ0 used by override.
+[    0.000000] ACPI: IRQ2 used by override.
+[    0.000000] ACPI: IRQ9 used by override.
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.000000] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+[    0.000000] nr_irqs_gsi: 40
+[    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000dbfff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000dc000-0x000fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xbf680000-0xbf68ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xbf690000-0xbfffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xc0000000-0xdfffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xe0000000-0xefffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xf0000000-0xfebfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfec00000-0xfec0ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfec10000-0xfed13fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed14000-0xfed19fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed1a000-0xfed1bfff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed1c000-0xfed8ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfed90000-0xfedfffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfee01000-0xfeffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xff000000-0xffffffff]
+[    0.000000] e820: [mem 0xc0000000-0xdfffffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on bare hardware
+[    0.000000] setup_percpu: NR_CPUS:1024 nr_cpumask_bits:2 nr_cpu_ids:2 nr_node_ids:1
+[    0.000000] PERCPU: Embedded 29 pages/cpu @ffff88013fc00000 s86848 r8192 d23744 u1048576
+[    0.000000] pcpu-alloc: s86848 r8192 d23744 u1048576 alloc=1*2097152
+[    0.000000] pcpu-alloc: [0] 0 1 
+[    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 1029679
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: BOOT_IMAGE=/vmlinuz-3.14.2-200.fc20.x86_64 root=/dev/mapper/luks-ba089b3e-ab16-4ac8-b870-461a071d702c ro rd.lvm.lv=fedora/swap rd.md=0 rd.dm=0 rd.luks.uuid=luks-db647265-460f-4aed-83ab-7f3683e6978f vconsole.keymap=us rd.luks.uuid=luks-ba089b3e-ab16-4ac8-b870-461a071d702c vconsole.font=latarcyrheb-sun16 rd.lvm.lv=fedora/root rhgb quiet LANG=en_GB.UTF-8
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Memory: 4017832K/4184184K available (7181K kernel code, 1079K rwdata, 3040K rodata, 1444K init, 1644K bss, 166352K reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=1024 to nr_cpu_ids=2.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+[    0.000000] NR_IRQS:65792 nr_irqs:512 16
+[    0.000000] Console: colour VGA+ 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] allocated 16777216 bytes of page_cgroup
+[    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+[    0.000000] HPET config register value = 0xFFFFFFFF. Disabling HPET
+[    0.000000] tsc: Fast TSC calibration using PIT
+[    0.000000] tsc: Detected 2493.960 MHz processor
+[    0.002015] Calibrating delay loop (skipped), value calculated using timer frequency.. 4987.92 BogoMIPS (lpj=2493960)
+[    0.002018] pid_max: default: 32768 minimum: 301
+[    0.002033] ACPI: Core revision 20131218
+[    0.003362] ACPI Warning: Unsupported module-level executable opcode 0x70 at table offset 0x678F (20131218/psloop-225)
+[    0.005516] ACPI: All ACPI Tables successfully acquired
+[    0.006033] Security Framework initialized
+[    0.006048] SELinux:  Initializing.
+[    0.006058] SELinux:  Starting in permissive mode
+[    0.006473] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.009412] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.010634] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.010646] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.010976] Initializing cgroup subsys memory
+[    0.010986] Initializing cgroup subsys devices
+[    0.010989] Initializing cgroup subsys freezer
+[    0.010990] Initializing cgroup subsys net_cls
+[    0.011004] Initializing cgroup subsys blkio
+[    0.011006] Initializing cgroup subsys perf_event
+[    0.011008] Initializing cgroup subsys hugetlb
+[    0.011041] CPU: Physical Processor ID: 0
+[    0.011043] CPU: Processor Core ID: 0
+[    0.011045] mce: CPU supports 6 MCE banks
+[    0.011053] CPU0: Thermal monitoring handled by SMI
+[    0.011062] Last level iTLB entries: 4KB 128, 2MB 4, 4MB 4
+Last level dTLB entries: 4KB 256, 2MB 0, 4MB 32, 1GB 0
+tlb_flushall_shift: -1
+[    0.011148] Freeing SMP alternatives memory: 24K (ffffffff81e78000 - ffffffff81e7e000)
+[    0.012638] ftrace: allocating 26308 entries in 103 pages
+[    0.020210] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.030222] smpboot: CPU0: Intel(R) Core(TM)2 Duo CPU     T9300  @ 2.50GHz (fam: 06, model: 17, stepping: 06)
+[    0.031000] Performance Events: PEBS fmt0+, 4-deep LBR, Core2 events, Intel PMU driver.
+[    0.031000] ... version:                2
+[    0.031000] ... bit width:              40
+[    0.031000] ... generic registers:      2
+[    0.031000] ... value mask:             000000ffffffffff
+[    0.031000] ... max period:             000000007fffffff
+[    0.031000] ... fixed-purpose events:   3
+[    0.031000] ... event mask:             0000000700000003
+[    0.031736] x86: Booting SMP configuration:
+[    0.031738] .... node  #0, CPUs:      #1
+[    0.003000] CPU1: Thermal monitoring handled by SMI
+[    0.043048] x86: Booted up 1 node, 2 CPUs
+[    0.043053] smpboot: Total of 2 processors activated (9975.84 BogoMIPS)
+[    0.044079] NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+[    0.045079] devtmpfs: initialized
+[    0.049052] PM: Registering ACPI NVS region [mem 0xbf680000-0xbf68ffff] (65536 bytes)
+[    0.050147] atomic64 test passed for x86-64 platform with CX8 and with SSE
+[    0.050148] pinctrl core: initialized pinctrl subsystem
+[    0.050197] RTC time: 14:39:45, date: 05/06/14
+[    0.050239] NET: Registered protocol family 16
+[    0.050371] cpuidle: using governor menu
+[    0.050442] ACPI: bus type PCI registered
+[    0.050444] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.050518] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+[    0.050521] PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in E820
+[    0.066205] PCI: Using configuration type 1 for base access
+[    0.068067] bio: create slab <bio-0> at 0
+[    0.068067] ACPI: Added _OSI(Module Device)
+[    0.068067] ACPI: Added _OSI(Processor Device)
+[    0.068067] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.068067] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.071532] [Firmware Bug]: ACPI: BIOS _OSI(Linux) query ignored
+[    0.071994] ACPI: SSDT 00000000bf687ea1 0002BC (v01  PmRef  Cpu0Ist 00003000 INTL 20050624)
+[    0.072210] ACPI: Dynamic OEM Table Load:
+[    0.072213] ACPI: SSDT           (null) 0002BC (v01  PmRef  Cpu0Ist 00003000 INTL 20050624)
+[    0.072304] ACPI: SSDT 00000000bf687832 0005EA (v01  PmRef  Cpu0Cst 00003001 INTL 20050624)
+[    0.072504] ACPI: Dynamic OEM Table Load:
+[    0.072507] ACPI: SSDT           (null) 0005EA (v01  PmRef  Cpu0Cst 00003001 INTL 20050624)
+[    0.072676] ACPI: SSDT 00000000bf68815d 0000C8 (v01  PmRef  Cpu1Ist 00003000 INTL 20050624)
+[    0.072885] ACPI: Dynamic OEM Table Load:
+[    0.072888] ACPI: SSDT           (null) 0000C8 (v01  PmRef  Cpu1Ist 00003000 INTL 20050624)
+[    0.072947] ACPI: SSDT 00000000bf687e1c 000085 (v01  PmRef  Cpu1Cst 00003000 INTL 20050624)
+[    0.073150] ACPI: Dynamic OEM Table Load:
+[    0.073152] ACPI: SSDT           (null) 000085 (v01  PmRef  Cpu1Cst 00003000 INTL 20050624)
+[    0.074027] ACPI : EC: GPE storm detected(23 GPEs), transactions will use polling mode
+[    0.074115] ACPI: Interpreter enabled
+[    0.074121] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20131218/hwxface-580)
+[    0.074125] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20131218/hwxface-580)
+[    0.074158] ACPI: (supports S0 S3 S4 S5)
+[    0.074160] ACPI: Using IOAPIC for interrupt routing
+[    0.074205] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.575185] ACPI: ACPI Dock Station Driver: 1 docks/bays found
+[    2.109362] ACPI: Power Resource [FN00] (on)
+[    2.620256] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    2.620262] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    2.620267] acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+[    2.620879] PCI host bridge to bus 0000:00
+[    2.620882] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    2.620885] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+[    2.620887] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff]
+[    2.620889] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+[    2.620891] pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000d3fff]
+[    2.620893] pci_bus 0000:00: root bus resource [mem 0x000d4000-0x000d7fff]
+[    2.620895] pci_bus 0000:00: root bus resource [mem 0x000d8000-0x000dbfff]
+[    2.620897] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff]
+[    2.620906] pci 0000:00:00.0: [8086:2a00] type 00 class 0x060000
+[    2.621008] pci 0000:00:02.0: [8086:2a02] type 00 class 0x030000
+[    2.621021] pci 0000:00:02.0: reg 0x10: [mem 0xfc000000-0xfc0fffff 64bit]
+[    2.621029] pci 0000:00:02.0: reg 0x18: [mem 0xd0000000-0xdfffffff 64bit pref]
+[    2.621034] pci 0000:00:02.0: reg 0x20: [io  0x1c00-0x1c07]
+[    2.621124] pci 0000:00:02.1: [8086:2a03] type 00 class 0x038000
+[    2.621134] pci 0000:00:02.1: reg 0x10: [mem 0xfc100000-0xfc1fffff 64bit]
+[    2.621257] pci 0000:00:1a.0: [8086:2834] type 00 class 0x0c0300
+[    2.621308] pci 0000:00:1a.0: reg 0x20: [io  0x1840-0x185f]
+[    2.621382] pci 0000:00:1a.0: System wakeup disabled by ACPI
+[    2.621426] pci 0000:00:1a.1: [8086:2835] type 00 class 0x0c0300
+[    2.621477] pci 0000:00:1a.1: reg 0x20: [io  0x1860-0x187f]
+[    2.621550] pci 0000:00:1a.1: System wakeup disabled by ACPI
+[    2.621607] pci 0000:00:1a.7: [8086:283a] type 00 class 0x0c0320
+[    2.621630] pci 0000:00:1a.7: reg 0x10: [mem 0xfc406000-0xfc4063ff]
+[    2.621733] pci 0000:00:1a.7: PME# supported from D0 D3hot D3cold
+[    2.621780] pci 0000:00:1a.7: System wakeup disabled by ACPI
+[    2.621833] pci 0000:00:1b.0: [8086:284b] type 00 class 0x040300
+[    2.621851] pci 0000:00:1b.0: reg 0x10: [mem 0xfc400000-0xfc403fff 64bit]
+[    2.621935] pci 0000:00:1b.0: PME# supported from D0 D3hot D3cold
+[    2.621980] pci 0000:00:1b.0: System wakeup disabled by ACPI
+[    2.622030] pci 0000:00:1c.0: [8086:283f] type 01 class 0x060400
+[    2.622121] pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+[    2.622212] pci 0000:00:1c.1: [8086:2841] type 01 class 0x060400
+[    2.622309] pci 0000:00:1c.1: PME# supported from D0 D3hot D3cold
+[    2.622397] pci 0000:00:1c.2: [8086:2843] type 01 class 0x060400
+[    2.622487] pci 0000:00:1c.2: PME# supported from D0 D3hot D3cold
+[    2.622580] pci 0000:00:1d.0: [8086:2830] type 00 class 0x0c0300
+[    2.622630] pci 0000:00:1d.0: reg 0x20: [io  0x1880-0x189f]
+[    2.622703] pci 0000:00:1d.0: System wakeup disabled by ACPI
+[    2.622748] pci 0000:00:1d.1: [8086:2831] type 00 class 0x0c0300
+[    2.622799] pci 0000:00:1d.1: reg 0x20: [io  0x18a0-0x18bf]
+[    2.622874] pci 0000:00:1d.1: System wakeup disabled by ACPI
+[    2.622918] pci 0000:00:1d.2: [8086:2832] type 00 class 0x0c0300
+[    2.622968] pci 0000:00:1d.2: reg 0x20: [io  0x18c0-0x18df]
+[    2.623044] pci 0000:00:1d.2: System wakeup disabled by ACPI
+[    2.623103] pci 0000:00:1d.7: [8086:2836] type 00 class 0x0c0320
+[    2.623126] pci 0000:00:1d.7: reg 0x10: [mem 0xfc406400-0xfc4067ff]
+[    2.623228] pci 0000:00:1d.7: PME# supported from D0 D3hot D3cold
+[    2.623271] pci 0000:00:1d.7: System wakeup disabled by ACPI
+[    2.623317] pci 0000:00:1e.0: [8086:2448] type 01 class 0x060401
+[    2.623452] pci 0000:00:1f.0: [8086:2815] type 00 class 0x060100
+[    2.623549] pci 0000:00:1f.0: Force enabled HPET at 0xfed00000
+[    2.623557] pci 0000:00:1f.0: address space collision: [io  0x1000-0x107f] conflicts with ACPI CPU throttle [??? 0x00001010-0x00001015 flags 0x80000000]
+[    2.623562] pci 0000:00:1f.0: quirk: [io  0x1180-0x11bf] claimed by ICH6 GPIO
+[    2.623566] pci 0000:00:1f.0: ICH7 LPC Generic IO decode 1 PIO at 0400 (mask 000f)
+[    2.623570] pci 0000:00:1f.0: ICH7 LPC Generic IO decode 2 PIO at 0300 (mask 000f)
+[    2.623678] pci 0000:00:1f.1: [8086:2850] type 00 class 0x01018a
+[    2.623694] pci 0000:00:1f.1: reg 0x10: [io  0x0000-0x0007]
+[    2.623705] pci 0000:00:1f.1: reg 0x14: [io  0x0000-0x0003]
+[    2.623716] pci 0000:00:1f.1: reg 0x18: [io  0x0000-0x0007]
+[    2.623727] pci 0000:00:1f.1: reg 0x1c: [io  0x0000-0x0003]
+[    2.623738] pci 0000:00:1f.1: reg 0x20: [io  0x1830-0x183f]
+[    2.623840] pci 0000:00:1f.2: [8086:2829] type 00 class 0x010601
+[    2.623862] pci 0000:00:1f.2: reg 0x10: [io  0x1c18-0x1c1f]
+[    2.623872] pci 0000:00:1f.2: reg 0x14: [io  0x1c0c-0x1c0f]
+[    2.623882] pci 0000:00:1f.2: reg 0x18: [io  0x1c10-0x1c17]
+[    2.623892] pci 0000:00:1f.2: reg 0x1c: [io  0x1c08-0x1c0b]
+[    2.623901] pci 0000:00:1f.2: reg 0x20: [io  0x1c20-0x1c3f]
+[    2.623911] pci 0000:00:1f.2: reg 0x24: [mem 0xfc405000-0xfc4057ff]
+[    2.623965] pci 0000:00:1f.2: PME# supported from D3hot
+[    2.624048] pci 0000:00:1f.3: [8086:283e] type 00 class 0x0c0500
+[    2.624063] pci 0000:00:1f.3: reg 0x10: [mem 0x00000000-0x000000ff]
+[    2.624098] pci 0000:00:1f.3: reg 0x20: [io  0x18e0-0x18ff]
+[    2.624262] pci 0000:00:1c.0: PCI bridge to [bus 02-03]
+[    2.624267] pci 0000:00:1c.0:   bridge window [io  0x2000-0x2fff]
+[    2.624272] pci 0000:00:1c.0:   bridge window [mem 0xf6000000-0xf7ffffff]
+[    2.624279] pci 0000:00:1c.0:   bridge window [mem 0xf0000000-0xf1ffffff 64bit pref]
+[    2.624386] pci 0000:04:00.0: [11ab:4363] type 00 class 0x020000
+[    2.624413] pci 0000:04:00.0: reg 0x10: [mem 0xf8000000-0xf8003fff 64bit]
+[    2.624427] pci 0000:04:00.0: reg 0x18: [io  0x3000-0x30ff]
+[    2.624478] pci 0000:04:00.0: reg 0x30: [mem 0x00000000-0x0001ffff pref]
+[    2.624563] pci 0000:04:00.0: supports D1 D2
+[    2.624565] pci 0000:04:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    2.624589] pci 0000:04:00.0: System wakeup disabled by ACPI
+[    2.627017] pci 0000:00:1c.1: PCI bridge to [bus 04-05]
+[    2.627022] pci 0000:00:1c.1:   bridge window [io  0x3000-0x3fff]
+[    2.627027] pci 0000:00:1c.1:   bridge window [mem 0xf8000000-0xf9ffffff]
+[    2.627034] pci 0000:00:1c.1:   bridge window [mem 0xf2000000-0xf3ffffff 64bit pref]
+[    2.627150] pci 0000:06:00.0: [8086:4232] type 00 class 0x028000
+[    2.627183] pci 0000:06:00.0: reg 0x10: [mem 0xfa000000-0xfa001fff 64bit]
+[    2.627350] pci 0000:06:00.0: PME# supported from D0 D3hot D3cold
+[    2.627389] pci 0000:06:00.0: System wakeup disabled by ACPI
+[    2.630021] pci 0000:00:1c.2: PCI bridge to [bus 06-07]
+[    2.630025] pci 0000:00:1c.2:   bridge window [io  0x4000-0x4fff]
+[    2.630030] pci 0000:00:1c.2:   bridge window [mem 0xfa000000-0xfbffffff]
+[    2.630036] pci 0000:00:1c.2:   bridge window [mem 0xf4000000-0xf5ffffff 64bit pref]
+[    2.630157] pci 0000:00:1e.0: PCI bridge to [bus 08] (subtractive decode)
+[    2.630169] pci 0000:00:1e.0:   bridge window [io  0x0000-0x0cf7] (subtractive decode)
+[    2.630171] pci 0000:00:1e.0:   bridge window [io  0x0d00-0xffff] (subtractive decode)
+[    2.630175] pci 0000:00:1e.0:   bridge window [mem 0x000a0000-0x000bffff] (subtractive decode)
+[    2.630177] pci 0000:00:1e.0:   bridge window [mem 0x000d0000-0x000d3fff] (subtractive decode)
+[    2.630179] pci 0000:00:1e.0:   bridge window [mem 0x000d4000-0x000d7fff] (subtractive decode)
+[    2.630181] pci 0000:00:1e.0:   bridge window [mem 0x000d8000-0x000dbfff] (subtractive decode)
+[    2.630183] pci 0000:00:1e.0:   bridge window [mem 0xc0000000-0xfebfffff] (subtractive decode)
+[    2.630286] ACPI: PCI Interrupt Link [LNKA] (IRQs 1 3 4 5 6 7 10 12 14 15) *11
+[    2.630338] ACPI: PCI Interrupt Link [LNKB] (IRQs 1 3 4 5 6 7 11 12 14 15) *10
+[    2.630387] ACPI: PCI Interrupt Link [LNKC] (IRQs 1 3 4 5 6 *7 10 12 14 15)
+[    2.630435] ACPI: PCI Interrupt Link [LNKD] (IRQs 1 3 4 5 6 7 *11 12 14 15)
+[    2.630484] ACPI: PCI Interrupt Link [LNKE] (IRQs 1 3 4 5 6 7 10 12 14 15) *0, disabled.
+[    2.630533] ACPI: PCI Interrupt Link [LNKF] (IRQs 1 3 4 5 6 7 11 12 14 15) *10
+[    2.630582] ACPI: PCI Interrupt Link [LNKG] (IRQs 1 3 4 5 6 7 10 12 14 15) *0, disabled.
+[    2.630631] ACPI: PCI Interrupt Link [LNKH] (IRQs 1 3 4 5 6 7 11 12 14 15) *10
+[    2.630883] ACPI: Enabled 2 GPEs in block 00 to 1F
+[    2.630916] ACPI : EC: GPE = 0x18, I/O: command/status = 0x66, data = 0x62
+[    2.631013] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+[    2.631013] vgaarb: loaded
+[    2.631013] vgaarb: bridge control possible 0000:00:02.0
+[    2.631087] SCSI subsystem initialized
+[    2.632005] libata version 3.00 loaded.
+[    2.632035] ACPI: bus type USB registered
+[    2.632055] usbcore: registered new interface driver usbfs
+[    2.632070] usbcore: registered new interface driver hub
+[    2.632075] usbcore: registered new device driver usb
+[    2.632075] PCI: Using ACPI for IRQ routing
+[    2.640753] PCI: pci_cache_line_size set to 64 bytes
+[    2.640817] e820: reserve RAM buffer [mem 0x0009f800-0x0009ffff]
+[    2.640819] e820: reserve RAM buffer [mem 0xbf680000-0xbfffffff]
+[    2.640923] NetLabel: Initializing
+[    2.640925] NetLabel:  domain hash size = 128
+[    2.640926] NetLabel:  protocols = UNLABELED CIPSOv4
+[    2.640942] NetLabel:  unlabeled traffic allowed by default
+[    2.641096] hpet clockevent registered
+[    2.641099] HPET: 3 timers in total, 0 timers will be used for per-cpu timer
+[    2.641104] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    2.641107] hpet0: 3 comparators, 64-bit 14.318180 MHz counter
+[    2.643015] Switched to clocksource hpet
+[    2.651968] pnp: PnP ACPI init
+[    2.651990] ACPI: bus type PNP registered
+[    3.162217] system 00:00: [mem 0xfed1c000-0xfed1ffff] has been reserved
+[    3.162220] system 00:00: [mem 0xfed14000-0xfed17fff] has been reserved
+[    3.162222] system 00:00: [mem 0xfed18000-0xfed18fff] has been reserved
+[    3.162224] system 00:00: [mem 0xfed19000-0xfed19fff] has been reserved
+[    3.162227] system 00:00: [mem 0xe0000000-0xefffffff] has been reserved
+[    3.162229] system 00:00: [mem 0xfed20000-0xfed3ffff] has been reserved
+[    3.162231] system 00:00: [mem 0xfed40000-0xfed44fff] has been reserved
+[    3.162233] system 00:00: [mem 0xfed45000-0xfed8ffff] has been reserved
+[    3.162237] system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    3.162431] pnp 00:01: [dma 4]
+[    3.162473] pnp 00:01: Plug and Play ACPI device, IDs PNP0200 (active)
+[    3.162508] pnp 00:02: Plug and Play ACPI device, IDs INT0800 (active)
+[    3.162609] system 00:03: [mem 0xfed00000-0xfed003ff] has been reserved
+[    3.162612] system 00:03: Plug and Play ACPI device, IDs PNP0103 PNP0c01 (active)
+[    3.162662] pnp 00:04: Plug and Play ACPI device, IDs PNP0c04 (active)
+[    3.162730] system 00:05: [io  0x0200-0x020f] has been reserved
+[    3.162733] system 00:05: [io  0x0400-0x040f] has been reserved
+[    3.162735] system 00:05: [io  0x0680-0x069f] has been reserved
+[    3.162738] system 00:05: [io  0x0800-0x080f] has been reserved
+[    3.162744] system 00:05: [io  0x1000-0x107f] could not be reserved
+[    3.162746] system 00:05: [io  0x1180-0x11bf] has been reserved
+[    3.162748] system 00:05: [io  0x1640-0x164f] has been reserved
+[    3.162750] system 00:05: [io  0xfe00] has been reserved
+[    3.162753] system 00:05: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    3.162811] system 00:06: [io  0x06a0-0x06af] has been reserved
+[    3.162814] system 00:06: [io  0x06b0-0x06ff] has been reserved
+[    3.162817] system 00:06: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    3.162859] pnp 00:07: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    3.163136] pnp 00:08: Plug and Play ACPI device, IDs PNP0501 (active)
+[    3.163491] pnp 00:09: Plug and Play ACPI device, IDs PNP0400 (active)
+[    3.163534] pnp 00:0a: Plug and Play ACPI device, IDs PNP0303 (active)
+[    3.163573] pnp 00:0b: Plug and Play ACPI device, IDs PNP0f13 (active)
+[    3.163592] pnp: PnP ACPI: found 12 devices
+[    3.163593] ACPI: bus type PNP unregistered
+[    3.170729] pci 0000:00:1f.0: BAR 13: [io  0x1000-0x107f] has bogus alignment
+[    3.170739] pci 0000:00:1f.3: BAR 0: assigned [mem 0xc0000000-0xc00000ff]
+[    3.170744] pci 0000:00:1c.0: PCI bridge to [bus 02-03]
+[    3.170748] pci 0000:00:1c.0:   bridge window [io  0x2000-0x2fff]
+[    3.170753] pci 0000:00:1c.0:   bridge window [mem 0xf6000000-0xf7ffffff]
+[    3.170758] pci 0000:00:1c.0:   bridge window [mem 0xf0000000-0xf1ffffff 64bit pref]
+[    3.170766] pci 0000:04:00.0: BAR 6: assigned [mem 0xf2000000-0xf201ffff pref]
+[    3.170768] pci 0000:00:1c.1: PCI bridge to [bus 04-05]
+[    3.170771] pci 0000:00:1c.1:   bridge window [io  0x3000-0x3fff]
+[    3.170776] pci 0000:00:1c.1:   bridge window [mem 0xf8000000-0xf9ffffff]
+[    3.170781] pci 0000:00:1c.1:   bridge window [mem 0xf2000000-0xf3ffffff 64bit pref]
+[    3.170787] pci 0000:00:1c.2: PCI bridge to [bus 06-07]
+[    3.170790] pci 0000:00:1c.2:   bridge window [io  0x4000-0x4fff]
+[    3.170796] pci 0000:00:1c.2:   bridge window [mem 0xfa000000-0xfbffffff]
+[    3.170800] pci 0000:00:1c.2:   bridge window [mem 0xf4000000-0xf5ffffff 64bit pref]
+[    3.170807] pci 0000:00:1e.0: PCI bridge to [bus 08]
+[    3.170820] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+[    3.170822] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+[    3.170824] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+[    3.170826] pci_bus 0000:00: resource 7 [mem 0x000d0000-0x000d3fff]
+[    3.170828] pci_bus 0000:00: resource 8 [mem 0x000d4000-0x000d7fff]
+[    3.170830] pci_bus 0000:00: resource 9 [mem 0x000d8000-0x000dbfff]
+[    3.170832] pci_bus 0000:00: resource 10 [mem 0xc0000000-0xfebfffff]
+[    3.170834] pci_bus 0000:02: resource 0 [io  0x2000-0x2fff]
+[    3.170836] pci_bus 0000:02: resource 1 [mem 0xf6000000-0xf7ffffff]
+[    3.170838] pci_bus 0000:02: resource 2 [mem 0xf0000000-0xf1ffffff 64bit pref]
+[    3.170841] pci_bus 0000:04: resource 0 [io  0x3000-0x3fff]
+[    3.170843] pci_bus 0000:04: resource 1 [mem 0xf8000000-0xf9ffffff]
+[    3.170845] pci_bus 0000:04: resource 2 [mem 0xf2000000-0xf3ffffff 64bit pref]
+[    3.170847] pci_bus 0000:06: resource 0 [io  0x4000-0x4fff]
+[    3.170849] pci_bus 0000:06: resource 1 [mem 0xfa000000-0xfbffffff]
+[    3.170851] pci_bus 0000:06: resource 2 [mem 0xf4000000-0xf5ffffff 64bit pref]
+[    3.170853] pci_bus 0000:08: resource 4 [io  0x0000-0x0cf7]
+[    3.170855] pci_bus 0000:08: resource 5 [io  0x0d00-0xffff]
+[    3.170857] pci_bus 0000:08: resource 6 [mem 0x000a0000-0x000bffff]
+[    3.170859] pci_bus 0000:08: resource 7 [mem 0x000d0000-0x000d3fff]
+[    3.170861] pci_bus 0000:08: resource 8 [mem 0x000d4000-0x000d7fff]
+[    3.170863] pci_bus 0000:08: resource 9 [mem 0x000d8000-0x000dbfff]
+[    3.170865] pci_bus 0000:08: resource 10 [mem 0xc0000000-0xfebfffff]
+[    3.170903] NET: Registered protocol family 2
+[    3.171091] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    3.171271] TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    3.171551] TCP: Hash tables configured (established 32768 bind 32768)
+[    3.171618] TCP: reno registered
+[    3.171624] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    3.171668] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    3.171766] NET: Registered protocol family 1
+[    3.171780] pci 0000:00:02.0: Boot video device
+[    3.173093] PCI: CLS 64 bytes, default 64
+[    3.173146] Unpacking initramfs...
+[    3.485308] Freeing initrd memory: 17584K (ffff880035d98000 - ffff880036ec4000)
+[    3.485318] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    3.485321] software IO TLB [mem 0xbb680000-0xbf680000] (64MB) mapped at [ffff8800bb680000-ffff8800bf67ffff]
+[    3.485425] Simple Boot Flag at 0x36 set to 0x1
+[    3.486218] futex hash table entries: 512 (order: 3, 32768 bytes)
+[    3.486246] Initialise system trusted keyring
+[    3.486302] audit: initializing netlink subsys (disabled)
+[    3.486336] audit: type=2000 audit(1399387188.485:1): initialized
+[    3.511762] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    3.513519] zbud: loaded
+[    3.513662] VFS: Disk quotas dquot_6.5.2
+[    3.513720] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    3.514200] msgmni has been set to 7881
+[    3.514270] Key type big_key registered
+[    3.514272] SELinux:  Registering netfilter hooks
+[    3.515026] alg: No test for stdrng (krng)
+[    3.515033] NET: Registered protocol family 38
+[    3.515036] Key type asymmetric registered
+[    3.515038] Asymmetric key parser 'x509' registered
+[    3.515079] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    3.515109] io scheduler noop registered
+[    3.515110] io scheduler deadline registered
+[    3.515149] io scheduler cfq registered (default)
+[    3.515253] pcieport 0000:00:1c.0: enabling device (0000 -> 0003)
+[    3.515424] pcieport 0000:00:1c.0: irq 40 for MSI/MSI-X
+[    3.515610] pcieport 0000:00:1c.1: irq 41 for MSI/MSI-X
+[    3.515687] pcieport 0000:00:1c.2: enabling device (0000 -> 0003)
+[    3.515792] pcieport 0000:00:1c.2: irq 42 for MSI/MSI-X
+[    3.515896] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    3.515915] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    3.515959] intel_idle: does not run on family 6 model 23
+[    3.526042] ACPI: AC Adapter [ADP1] (off-line)
+[    3.526129] input: Lid Switch as /devices/LNXSYSTM:00/device:00/PNP0C0D:00/input/input0
+[    3.534051] ACPI: Lid Switch [LID0]
+[    3.534099] input: Sleep Button as /devices/LNXSYSTM:00/device:00/PNP0C0E:00/input/input1
+[    3.534103] ACPI: Sleep Button [SLPB]
+[    3.534146] input: Power Button as /devices/LNXSYSTM:00/device:00/PNP0C0C:00/input/input2
+[    3.534148] ACPI: Power Button [PWRB]
+[    3.534232] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input3
+[    3.534235] ACPI: Power Button [PWRF]
+[    3.534296] ACPI: Fan [FAN0] (on)
+[    3.538083] Monitor-Mwait will be used to enter C-1 state
+[    3.538097] Monitor-Mwait will be used to enter C-2 state
+[    3.538106] tsc: Marking TSC unstable due to TSC halts in idle
+[    3.538114] ACPI: acpi_idle registered with cpuidle
+[    3.538686] thermal LNXTHERM:00: registered as thermal_zone0
+[    3.538689] ACPI: Thermal Zone [TZ00] (27 C)
+[    3.538831] ACPI: Invalid active1 threshold
+[    3.538942] thermal LNXTHERM:01: registered as thermal_zone1
+[    3.538944] ACPI: Thermal Zone [TZ01] (0 C)
+[    3.538973] GHES: HEST is not enabled!
+[    3.539043] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    3.559602] 00:08: ttyS0 at I/O 0x3f8 (irq = 3, base_baud = 115200) is a 16550A
+[    3.562164] Non-volatile memory driver v1.3
+[    3.562166] Linux agpgart interface v0.103
+[    3.562228] agpgart-intel 0000:00:00.0: Intel 965GM Chipset
+[    3.562284] agpgart-intel 0000:00:00.0: detected gtt size: 524288K total, 262144K mappable
+[    3.563958] agpgart-intel 0000:00:00.0: detected 8192K stolen memory
+[    3.564166] agpgart-intel 0000:00:00.0: AGP aperture is 256M @ 0xd0000000
+[    3.564306] ahci 0000:00:1f.2: version 3.0
+[    3.564469] ahci 0000:00:1f.2: irq 43 for MSI/MSI-X
+[    3.564517] ahci 0000:00:1f.2: AHCI 0001.0100 32 slots 3 ports 3 Gbps 0x7 impl SATA mode
+[    3.564520] ahci 0000:00:1f.2: flags: 64bit ncq sntf led clo pio slum part 
+[    3.565039] scsi0 : ahci
+[    3.565173] scsi1 : ahci
+[    3.565281] scsi2 : ahci
+[    3.565334] ata1: SATA max UDMA/133 abar m2048@0xfc405000 port 0xfc405100 irq 43
+[    3.565337] ata2: SATA max UDMA/133 abar m2048@0xfc405000 port 0xfc405180 irq 43
+[    3.565340] ata3: SATA max UDMA/133 abar m2048@0xfc405000 port 0xfc405200 irq 43
+[    3.565371] ata_piix 0000:00:1f.1: version 2.13
+[    3.566095] scsi3 : ata_piix
+[    3.566190] scsi4 : ata_piix
+[    3.566236] ata4: PATA max UDMA/100 cmd 0x1f0 ctl 0x3f6 bmdma 0x1830 irq 14
+[    3.566238] ata5: PATA max UDMA/100 cmd 0x170 ctl 0x376 bmdma 0x1838 irq 15
+[    3.566419] libphy: Fixed MDIO Bus: probed
+[    3.566466] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.566469] ehci-pci: EHCI PCI platform driver
+[    3.566594] ehci-pci 0000:00:1a.7: EHCI Host Controller
+[    3.566644] ehci-pci 0000:00:1a.7: new USB bus registered, assigned bus number 1
+[    3.566660] ehci-pci 0000:00:1a.7: debug port 1
+[    3.570580] ehci-pci 0000:00:1a.7: cache line size of 64 is not supported
+[    3.570597] ehci-pci 0000:00:1a.7: irq 18, io mem 0xfc406000
+[    3.576017] ehci-pci 0000:00:1a.7: USB 2.0 started, EHCI 1.00
+[    3.576086] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    3.576088] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.576090] usb usb1: Product: EHCI Host Controller
+[    3.576092] usb usb1: Manufacturer: Linux 3.14.2-200.fc20.x86_64 ehci_hcd
+[    3.576094] usb usb1: SerialNumber: 0000:00:1a.7
+[    3.576251] hub 1-0:1.0: USB hub found
+[    3.576258] hub 1-0:1.0: 4 ports detected
+[    3.576525] ehci-pci 0000:00:1d.7: EHCI Host Controller
+[    3.576602] ehci-pci 0000:00:1d.7: new USB bus registered, assigned bus number 2
+[    3.576617] ehci-pci 0000:00:1d.7: debug port 1
+[    3.580530] ehci-pci 0000:00:1d.7: cache line size of 64 is not supported
+[    3.580543] ehci-pci 0000:00:1d.7: irq 23, io mem 0xfc406400
+[    3.586015] ehci-pci 0000:00:1d.7: USB 2.0 started, EHCI 1.00
+[    3.586048] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[    3.586050] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.586052] usb usb2: Product: EHCI Host Controller
+[    3.586054] usb usb2: Manufacturer: Linux 3.14.2-200.fc20.x86_64 ehci_hcd
+[    3.586056] usb usb2: SerialNumber: 0000:00:1d.7
+[    3.586175] hub 2-0:1.0: USB hub found
+[    3.586181] hub 2-0:1.0: 6 ports detected
+[    3.586399] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    3.586404] ohci-pci: OHCI PCI platform driver
+[    3.586415] uhci_hcd: USB Universal Host Controller Interface driver
+[    3.586524] uhci_hcd 0000:00:1a.0: UHCI Host Controller
+[    3.586576] uhci_hcd 0000:00:1a.0: new USB bus registered, assigned bus number 3
+[    3.586583] uhci_hcd 0000:00:1a.0: detected 2 ports
+[    3.586612] uhci_hcd 0000:00:1a.0: irq 16, io base 0x00001840
+[    3.586661] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+[    3.586663] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.586665] usb usb3: Product: UHCI Host Controller
+[    3.586667] usb usb3: Manufacturer: Linux 3.14.2-200.fc20.x86_64 uhci_hcd
+[    3.586669] usb usb3: SerialNumber: 0000:00:1a.0
+[    3.586791] hub 3-0:1.0: USB hub found
+[    3.586798] hub 3-0:1.0: 2 ports detected
+[    3.586990] uhci_hcd 0000:00:1a.1: UHCI Host Controller
+[    3.587065] uhci_hcd 0000:00:1a.1: new USB bus registered, assigned bus number 4
+[    3.587072] uhci_hcd 0000:00:1a.1: detected 2 ports
+[    3.587102] uhci_hcd 0000:00:1a.1: irq 21, io base 0x00001860
+[    3.587145] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001
+[    3.587148] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.587150] usb usb4: Product: UHCI Host Controller
+[    3.587152] usb usb4: Manufacturer: Linux 3.14.2-200.fc20.x86_64 uhci_hcd
+[    3.587154] usb usb4: SerialNumber: 0000:00:1a.1
+[    3.587276] hub 4-0:1.0: USB hub found
+[    3.587283] hub 4-0:1.0: 2 ports detected
+[    3.587476] uhci_hcd 0000:00:1d.0: UHCI Host Controller
+[    3.587543] uhci_hcd 0000:00:1d.0: new USB bus registered, assigned bus number 5
+[    3.587550] uhci_hcd 0000:00:1d.0: detected 2 ports
+[    3.587569] uhci_hcd 0000:00:1d.0: irq 23, io base 0x00001880
+[    3.587616] usb usb5: New USB device found, idVendor=1d6b, idProduct=0001
+[    3.587618] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.587620] usb usb5: Product: UHCI Host Controller
+[    3.587622] usb usb5: Manufacturer: Linux 3.14.2-200.fc20.x86_64 uhci_hcd
+[    3.587624] usb usb5: SerialNumber: 0000:00:1d.0
+[    3.587745] hub 5-0:1.0: USB hub found
+[    3.587752] hub 5-0:1.0: 2 ports detected
+[    3.587932] uhci_hcd 0000:00:1d.1: UHCI Host Controller
+[    3.587993] uhci_hcd 0000:00:1d.1: new USB bus registered, assigned bus number 6
+[    3.588000] uhci_hcd 0000:00:1d.1: detected 2 ports
+[    3.588041] uhci_hcd 0000:00:1d.1: irq 19, io base 0x000018a0
+[    3.588084] usb usb6: New USB device found, idVendor=1d6b, idProduct=0001
+[    3.588086] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.588088] usb usb6: Product: UHCI Host Controller
+[    3.588090] usb usb6: Manufacturer: Linux 3.14.2-200.fc20.x86_64 uhci_hcd
+[    3.588092] usb usb6: SerialNumber: 0000:00:1d.1
+[    3.588222] hub 6-0:1.0: USB hub found
+[    3.588229] hub 6-0:1.0: 2 ports detected
+[    3.588423] uhci_hcd 0000:00:1d.2: UHCI Host Controller
+[    3.588489] uhci_hcd 0000:00:1d.2: new USB bus registered, assigned bus number 7
+[    3.588499] uhci_hcd 0000:00:1d.2: detected 2 ports
+[    3.588518] uhci_hcd 0000:00:1d.2: irq 18, io base 0x000018c0
+[    3.588561] usb usb7: New USB device found, idVendor=1d6b, idProduct=0001
+[    3.588563] usb usb7: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.588565] usb usb7: Product: UHCI Host Controller
+[    3.588567] usb usb7: Manufacturer: Linux 3.14.2-200.fc20.x86_64 uhci_hcd
+[    3.588569] usb usb7: SerialNumber: 0000:00:1d.2
+[    3.588690] hub 7-0:1.0: USB hub found
+[    3.588696] hub 7-0:1.0: 2 ports detected
+[    3.588834] usbcore: registered new interface driver usbserial
+[    3.588843] usbcore: registered new interface driver usbserial_generic
+[    3.588850] usbserial: USB Serial support registered for generic
+[    3.588886] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f13:PS2M] at 0x60,0x64 irq 1,12
+[    3.641545] i8042: Detected active multiplexing controller, rev 1.1
+[    3.646656] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    3.646661] serio: i8042 AUX0 port at 0x60,0x64 irq 12
+[    3.646688] serio: i8042 AUX1 port at 0x60,0x64 irq 12
+[    3.646713] serio: i8042 AUX2 port at 0x60,0x64 irq 12
+[    3.646737] serio: i8042 AUX3 port at 0x60,0x64 irq 12
+[    3.646856] mousedev: PS/2 mouse device common for all mice
+[    3.647179] rtc_cmos 00:07: RTC can wake from S4
+[    3.647324] rtc_cmos 00:07: rtc core: registered rtc_cmos as rtc0
+[    3.647351] rtc_cmos 00:07: alarms up to one month, y3k, 242 bytes nvram, hpet irqs
+[    3.647440] device-mapper: uevent: version 1.0.3
+[    3.647518] device-mapper: ioctl: 4.27.0-ioctl (2013-10-30) initialised: dm-devel@redhat.com
+[    3.647804] hidraw: raw HID events driver (C) Jiri Kosina
+[    3.647912] usbcore: registered new interface driver usbhid
+[    3.647914] usbhid: USB HID core driver
+[    3.647978] drop_monitor: Initializing network drop monitor service
+[    3.648087] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    3.648157] TCP: cubic registered
+[    3.648159] Initializing XFRM netlink socket
+[    3.648296] NET: Registered protocol family 10
+[    3.648501] mip6: Mobile IPv6
+[    3.648504] NET: Registered protocol family 17
+[    3.648847] Loading compiled-in X.509 certificates
+[    3.649867] Loaded X.509 cert 'Fedora kernel signing key: 701acb030b0c4f4fe51ed7e7b683133daf301281'
+[    3.649879] registered taskstats version 1
+[    3.650329]   Magic number: 14:61:687
+[    3.650436] rtc_cmos 00:07: setting system clock to 2014-05-06 14:39:48 UTC (1399387188)
+[    3.650493] PM: Hibernation image not present or could not be loaded.
+[    3.713062] ACPI: Battery Slot [BAT0] (battery present)
+[    3.722030] ACPI: Battery Slot [BAT1] (battery absent)
+[    3.731346] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input4
+[    3.747330] ata4.00: ATAPI: HL-DT-ST DVDRAM GSA-T20N, WW01, max UDMA/33
+[    3.753220] ata4.00: configured for UDMA/33
+[    3.870026] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    3.870043] ata2: SATA link down (SStatus 0 SControl 300)
+[    3.870063] ata3: SATA link down (SStatus 0 SControl 300)
+[    3.870762] ata1.00: unexpected _GTF length (8)
+[    3.871113] ata1.00: ATA-8: Hitachi HTS543216L9A300, FB2OC40C, max UDMA/133
+[    3.871116] ata1.00: 312581808 sectors, multi 16: LBA48 NCQ (depth 31/32), AA
+[    3.872052] ata1.00: unexpected _GTF length (8)
+[    3.872417] ata1.00: configured for UDMA/133
+[    3.872544] scsi 0:0:0:0: Direct-Access     ATA      Hitachi HTS54321 FB2O PQ: 0 ANSI: 5
+[    3.872692] sd 0:0:0:0: [sda] 312581808 512-byte logical blocks: (160 GB/149 GiB)
+[    3.872705] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    3.872732] sd 0:0:0:0: [sda] Write Protect is off
+[    3.872735] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    3.872752] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    3.876279] scsi 3:0:0:0: CD-ROM            HL-DT-ST DVDRAM GSA-T20N  WW01 PQ: 0 ANSI: 5
+[    3.878042] usb 1-2: new high-speed USB device number 2 using ehci-pci
+[    3.890120]  sda: sda1 sda2
+[    3.890397] sd 0:0:0:0: [sda] Attached SCSI disk
+[    3.891442] sr0: scsi3-mmc drive: 24x/24x writer dvd-ram cd/rw xa/form2 cdda tray
+[    3.891444] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    3.891570] sr 3:0:0:0: Attached scsi CD-ROM sr0
+[    3.891687] sr 3:0:0:0: Attached scsi generic sg1 type 5
+[    3.893079] Freeing unused kernel memory: 1444K (ffffffff81d0f000 - ffffffff81e78000)
+[    3.893081] Write protecting the kernel read-only data: 12288k
+[    3.895767] Freeing unused kernel memory: 1000K (ffff880001706000 - ffff880001800000)
+[    3.898340] Freeing unused kernel memory: 1056K (ffff880001af8000 - ffff880001c00000)
+[    3.901606] systemd[1]: systemd 208 running in system mode. (+PAM +LIBWRAP +AUDIT +SELINUX +IMA +SYSVINIT +LIBCRYPTSETUP +GCRYPT +ACL +XZ)
+[    3.901739] systemd[1]: Running in initial RAM disk.
+[    3.901806] systemd[1]: Set hostname to <anubis>.
+[    3.902403] random: systemd urandom read with 19 bits of entropy available
+[    3.931633] systemd[1]: Starting Timers.
+[    3.931648] systemd[1]: Reached target Timers.
+[    3.931660] systemd[1]: Expecting device dev-disk-by\x2duuid-db647265\x2d460f\x2d4aed\x2d83ab\x2d7f3683e6978f.device...
+[    3.931671] systemd[1]: Expecting device dev-mapper-luks\x2ddb647265\x2d460f\x2d4aed\x2d83ab\x2d7f3683e6978f.device...
+[    3.931682] systemd[1]: Expecting device dev-disk-by\x2duuid-ba089b3e\x2dab16\x2d4ac8\x2db870\x2d461a071d702c.device...
+[    3.931691] systemd[1]: Starting -.slice.
+[    3.931842] systemd[1]: Created slice -.slice.
+[    3.931852] systemd[1]: Starting System Slice.
+[    3.931913] systemd[1]: Created slice System Slice.
+[    3.931923] systemd[1]: Starting Slices.
+[    3.931933] systemd[1]: Reached target Slices.
+[    3.931942] systemd[1]: Expecting device dev-mapper-luks\x2dba089b3e\x2dab16\x2d4ac8\x2db870\x2d461a071d702c.device...
+[    3.931958] systemd[1]: Starting Journal Socket.
+[    3.932038] systemd[1]: Listening on Journal Socket.
+[    3.932155] systemd[1]: Starting dracut cmdline hook...
+[    3.932452] systemd[1]: Starting Setup Virtual Console...
+[    3.932758] systemd[1]: Starting Journal Service...
+[    3.933615] systemd[1]: Started Journal Service.
+[    3.999516] usb 1-2: New USB device found, idVendor=05e3, idProduct=0715
+[    3.999520] usb 1-2: New USB device strings: Mfr=3, Product=4, SerialNumber=2
+[    3.999523] usb 1-2: Product: USB Storage
+[    3.999525] usb 1-2: Manufacturer: Generic 
+[    3.999526] usb 1-2: SerialNumber: 000000009412
+[    4.118735] systemd-udevd[255]: starting version 208
+[    4.125342] usb-storage 1-2:1.0: USB Mass Storage device detected
+[    4.138844] scsi5 : usb-storage 1-2:1.0
+[    4.138948] usbcore: registered new interface driver usb-storage
+[    4.161174] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    4.161391] acpi device:06: registered as cooling_device3
+[    4.161459] input: Video Bus as /devices/LNXSYSTM:00/device:00/PNP0A03:00/LNXVIDEO:00/input/input13
+[    4.178988] sky2: driver version 1.30
+[    4.179192] sky2 0000:04:00.0: Yukon-2 EC Ultra chip revision 3
+[    4.179250] sky2 0000:04:00.0: irq 44 for MSI/MSI-X
+[    4.179593] sky2 0000:04:00.0 eth0: addr 00:1e:33:00:96:a6
+[    4.181286] [drm] Initialized drm 1.1.0 20060810
+[    4.200715] [drm] Memory usable by graphics device = 512M
+[    4.219871] i915 0000:00:02.0: irq 45 for MSI/MSI-X
+[    4.219880] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    4.219881] [drm] Driver supports precise vblank timestamp query.
+[    4.219950] vgaarb: device changed decodes: PCI:0000:00:02.0,olddecodes=io+mem,decodes=io+mem:owns=io+mem
+[    4.236139] systemd-udevd[265]: renamed network interface eth0 to p3p1
+[    4.331460] [drm] initialized overlay support
+[    4.478674] fbcon: inteldrmfb (fb0) is primary device
+[    4.588813] psmouse serio4: synaptics: Touchpad model: 1, fw: 6.2, id: 0x81a0b1, caps: 0xa04753/0x200000/0x0, board id: 3655, fw id: 189075
+[    4.624145] input: SynPS/2 Synaptics TouchPad as /devices/platform/i8042/serio4/input/input12
+[    5.141679] scsi 5:0:0:0: Direct-Access     Generic  STORAGE DEVICE   9412 PQ: 0 ANSI: 0
+[    5.141969] sd 5:0:0:0: Attached scsi generic sg2 type 0
+[    5.143273] sd 5:0:0:0: [sdb] Attached SCSI removable disk
+[    5.207874] Console: switching to colour frame buffer device 160x50
+[    5.210238] i915 0000:00:02.0: fb0: inteldrmfb frame buffer device
+[    5.210239] i915 0000:00:02.0: registered panic notifier
+[    5.210254] [drm] Initialized i915 1.6.0 20080730 for 0000:00:02.0 on minor 0
+[    5.286218] bio: create slab <bio-1> at 1
+[    5.338426] random: nonblocking pool is initialized
+[   27.750767] atkbd serio0: Unknown key pressed (translated set 2, code 0x83 on isa0060/serio0).
+[   27.750772] atkbd serio0: Use 'setkeycodes e003 <keycode>' to make it known.
+[   27.978059] usb 1-3: new high-speed USB device number 3 using ehci-pci
+[   28.216414] usb 1-3: New USB device found, idVendor=05c8, idProduct=0103
+[   28.216417] usb 1-3: New USB device strings: Mfr=2, Product=1, SerialNumber=3
+[   28.216420] usb 1-3: Product: FO13FF-65-1 PC-CAM
+[   28.216422] usb 1-3: Manufacturer: Foxlink
+[   28.216424] usb 1-3: SerialNumber: 1.09
+[   34.649962] bio: create slab <bio-0> at 0
+[   35.111972] PM: Starting manual resume from disk
+[   35.111978] PM: Hibernation image partition 253:2 present
+[   35.111979] PM: Looking for hibernation image.
+[   35.207624] PM: Image not found (code -22)
+[   35.207627] PM: Hibernation image not present or could not be loaded.
+[   35.270041] EXT4-fs (dm-3): mounted filesystem with ordered data mode. Opts: (null)
+[   35.593085] systemd-journald[93]: Received SIGTERM
+[   36.483027] usb 4-2: new full-speed USB device number 2 using uhci_hcd
+[   36.644230] audit: type=1404 audit(1399387221.493:2): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+[   36.664043] usb 4-2: New USB device found, idVendor=0a12, idProduct=0001
+[   36.664046] usb 4-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   36.785197] SELinux: 2048 avtab hash slots, 99776 rules.
+[   36.801578] SELinux: 2048 avtab hash slots, 99776 rules.
+[   36.824221] SELinux:  8 users, 86 roles, 4800 types, 281 bools, 1 sens, 1024 cats
+[   36.824226] SELinux:  83 classes, 99776 rules
+[   36.829736] SELinux:  Completing initialization.
+[   36.829739] SELinux:  Setting up existing superblocks.
+[   36.829747] SELinux: initialized (dev rootfs, type rootfs), uses genfs_contexts
+[   36.829764] SELinux: initialized (dev bdev, type bdev), uses genfs_contexts
+[   36.829768] SELinux: initialized (dev proc, type proc), uses genfs_contexts
+[   36.829810] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[   36.829836] SELinux: initialized (dev devtmpfs, type devtmpfs), uses transition SIDs
+[   36.830718] SELinux: initialized (dev debugfs, type debugfs), uses genfs_contexts
+[   36.833440] SELinux: initialized (dev sockfs, type sockfs), uses task SIDs
+[   36.833444] SELinux: initialized (dev pipefs, type pipefs), uses task SIDs
+[   36.833449] SELinux: initialized (dev anon_inodefs, type anon_inodefs), uses genfs_contexts
+[   36.833452] SELinux: initialized (dev aio, type aio), not configured for labeling
+[   36.833455] SELinux: initialized (dev devpts, type devpts), uses transition SIDs
+[   36.833474] SELinux: initialized (dev hugetlbfs, type hugetlbfs), uses transition SIDs
+[   36.833487] SELinux: initialized (dev mqueue, type mqueue), uses transition SIDs
+[   36.833494] SELinux: initialized (dev selinuxfs, type selinuxfs), uses genfs_contexts
+[   36.833519] SELinux: initialized (dev sysfs, type sysfs), uses genfs_contexts
+[   36.834473] SELinux: initialized (dev securityfs, type securityfs), uses genfs_contexts
+[   36.834476] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[   36.834481] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[   36.834586] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[   36.834621] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[   36.834634] SELinux: initialized (dev pstore, type pstore), uses genfs_contexts
+[   36.834636] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[   36.834646] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[   36.834655] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[   36.834670] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[   36.834676] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[   36.834681] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[   36.834686] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[   36.834702] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[   36.834707] SELinux: initialized (dev cgroup, type cgroup), uses genfs_contexts
+[   36.834714] SELinux: initialized (dev configfs, type configfs), uses genfs_contexts
+[   36.834726] SELinux: initialized (dev dm-3, type ext4), uses xattr
+[   36.850991] audit: type=1403 audit(1399387221.699:3): policy loaded auid=4294967295 ses=4294967295
+[   36.866777] systemd[1]: Successfully loaded SELinux policy in 258.227ms.
+[   37.099492] systemd[1]: Relabelled /dev and /run in 17.758ms.
+[   39.743293] SELinux: initialized (dev autofs, type autofs), uses genfs_contexts
+[   40.425029] systemd[1]: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 949 (systemd-binfmt)
+[   40.939435] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+[   40.940102] SELinux: initialized (dev hugetlbfs, type hugetlbfs), uses transition SIDs
+[   41.079537] SELinux: initialized (dev binfmt_misc, type binfmt_misc), uses genfs_contexts
+[   41.865846] systemd-udevd[974]: starting version 208
+[   41.995219] EXT4-fs (dm-3): re-mounted. Opts: (null)
+[   43.008125] parport_pc 00:09: reported by Plug and Play ACPI
+[   43.008177] parport0: PC-style at 0x378, irq 5 [PCSPP,TRISTATE]
+[   43.077381] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[   43.096282] ACPI Warning: SystemIO range 0x0000000000001028-0x000000000000102f conflicts with OpRegion 0x0000000000001000-0x000000000000107f (\PMIO) (20131218/utaddress-258)
+[   43.096290] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+[   43.096293] ACPI Warning: SystemIO range 0x00000000000011b0-0x00000000000011bf conflicts with OpRegion 0x0000000000001180-0x00000000000011bb (\GPIO) (20131218/utaddress-258)
+[   43.096297] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+[   43.096298] ACPI Warning: SystemIO range 0x0000000000001180-0x00000000000011af conflicts with OpRegion 0x0000000000001180-0x00000000000011bb (\GPIO) (20131218/utaddress-258)
+[   43.096301] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+[   43.096303] lpc_ich: Resource conflict(s) found affecting gpio_ich
+[   43.103085] ACPI Warning: SystemIO range 0x00000000000018e0-0x00000000000018ff conflicts with OpRegion 0x00000000000018e0-0x00000000000018ef (\_SB_.PCI0.SBUS.SMBI) (20131218/utaddress-258)
+[   43.103092] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+[   43.489969] cfg80211: Calling CRDA to update world regulatory domain
+[   43.531503] Intel(R) Wireless WiFi driver for Linux, in-tree:d
+[   43.531505] Copyright(c) 2003- 2014 Intel Corporation
+[   43.531569] iwlwifi 0000:06:00.0: enabling device (0104 -> 0106)
+[   43.531653] iwlwifi 0000:06:00.0: can't disable ASPM; OS doesn't have ASPM control
+[   43.531709] iwlwifi 0000:06:00.0: irq 46 for MSI/MSI-X
+[   43.627267] microcode: CPU0 sig=0x10676, pf=0x80, revision=0x607
+[   43.827362] iwlwifi 0000:06:00.0: loaded firmware version 8.83.5.1 build 33692 op_mode iwldvm
+[   44.113615] ppdev: user-space parallel port driver
+[   44.119073] iTCO_vendor_support: vendor-support=0
+[   44.120652] iTCO_wdt: Intel TCO WatchDog Timer Driver v1.10
+[   44.120691] iTCO_wdt: Found a ICH8M TCO device (Version=2, TCOBASE=0x1060)
+[   44.120874] iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[   44.261459] microcode: CPU0 sig=0x10676, pf=0x80, revision=0x607
+[   44.262423] microcode: CPU0 updated to revision 0x60f, date = 2010-09-29
+[   44.267086] microcode: CPU1 sig=0x10676, pf=0x80, revision=0x607
+[   44.267166] microcode: CPU1 sig=0x10676, pf=0x80, revision=0x607
+[   44.268008] microcode: CPU1 updated to revision 0x60f, date = 2010-09-29
+[   44.272934] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[   44.306185] Bluetooth: Core ver 2.18
+[   44.306208] NET: Registered protocol family 31
+[   44.306210] Bluetooth: HCI device and connection manager initialized
+[   44.306257] Bluetooth: HCI socket layer initialized
+[   44.306260] Bluetooth: L2CAP socket layer initialized
+[   44.306275] Bluetooth: SCO socket layer initialized
+[   44.550888] cfg80211: World regulatory domain updated:
+[   44.550892] cfg80211:  DFS Master region: unset
+[   44.550894] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   44.550896] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[   44.550898] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[   44.550899] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm)
+[   44.550901] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[   44.550903] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[   44.550904] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[   44.844520] snd_hda_intel 0000:00:1b.0: enabling device (0104 -> 0106)
+[   44.844693] snd_hda_intel 0000:00:1b.0: irq 47 for MSI/MSI-X
+[   44.859153] hda_codec: ALC262: SKU not ready 0x598301f0
+[   44.859434] ALSA sound/pci/hda/hda_auto_parser.c:393 autoconfig: line_outs=1 (0x1b/0x0/0x0/0x0/0x0) type:line
+[   44.859437] ALSA sound/pci/hda/hda_auto_parser.c:397    speaker_outs=1 (0x14/0x0/0x0/0x0/0x0)
+[   44.859439] ALSA sound/pci/hda/hda_auto_parser.c:401    hp_outs=1 (0x15/0x0/0x0/0x0/0x0)
+[   44.859440] ALSA sound/pci/hda/hda_auto_parser.c:402    mono: mono_out=0x0
+[   44.859442] ALSA sound/pci/hda/hda_auto_parser.c:406    inputs:
+[   44.859444] ALSA sound/pci/hda/hda_auto_parser.c:410      Internal Mic=0x19
+[   44.859446] ALSA sound/pci/hda/hda_auto_parser.c:410      Rear Mic=0x1a
+[   44.859448] ALSA sound/pci/hda/hda_auto_parser.c:410      Mic=0x18
+[   44.859450] ALSA sound/pci/hda/patch_realtek.c:504 realtek: No valid SSID, checking pincfg 0x598301f0 for NID 0x1d
+[   44.859451] ALSA sound/pci/hda/patch_realtek.c:578 realtek: Enable default setup for auto mode as fallback
+[   44.869133] input: HDA Intel Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input17
+[   44.869988] input: HDA Intel Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input16
+[   44.870737] input: HDA Intel Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input15
+[   44.871431] input: HDA Intel Rear Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input14
+[   44.944263] usbcore: registered new interface driver btusb
+[   44.984955] iwlwifi 0000:06:00.0: CONFIG_IWLWIFI_DEBUG enabled
+[   44.984959] iwlwifi 0000:06:00.0: CONFIG_IWLWIFI_DEBUGFS enabled
+[   44.984962] iwlwifi 0000:06:00.0: CONFIG_IWLWIFI_DEVICE_TRACING disabled
+[   44.984964] iwlwifi 0000:06:00.0: Detected Intel(R) WiFi Link 5100 AGN, REV=0x54
+[   44.985026] iwlwifi 0000:06:00.0: L1 Enabled; Disabling L0S
+[   45.015511] ieee80211 phy0: Selected rate control algorithm 'iwl-agn-rs'
+[   45.024081] systemd-udevd[991]: renamed network interface wlan0 to wlp6s0
+[   45.148447] cfg80211: Calling CRDA for country: CZ
+[   45.150321] cfg80211: Regulatory domain changed to country: CZ
+[   45.150324] cfg80211:  DFS Master region: unset
+[   45.150325] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   45.150327] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[   45.150329] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[   45.150331] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[   45.150333] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[   45.150334] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[   45.191045] media: Linux media interface: v0.10
+[   45.208014] Linux video capture interface: v2.00
+[   45.504112] uvcvideo: Found UVC 1.00 device FO13FF-65-1 PC-CAM (05c8:0103)
+[   45.507804] input: FO13FF-65-1 PC-CAM as /devices/pci0000:00/0000:00:1a.7/usb1/1-3/1-3:1.0/input/input18
+[   45.507914] usbcore: registered new interface driver uvcvideo
+[   45.507916] USB Video Class driver (1.1.1)
+[   47.471302] Adding 4077564k swap on /dev/mapper/luks-db647265-460f-4aed-83ab-7f3683e6978f.  Priority:-1 extents:1 across:4077564k FS
+[   49.464882] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[   49.622373] SELinux: initialized (dev sda1, type ext4), uses xattr
+[   52.615486] EXT4-fs (dm-5): mounted filesystem with ordered data mode. Opts: (null)
+[   52.615499] SELinux: initialized (dev dm-5, type ext4), uses xattr
+[   52.634291] systemd-journald[946]: Received request to flush runtime journal from PID 1
+[   53.197415] audit: type=1305 audit(1399387238.046:4): audit_pid=1153 old=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:auditd_t:s0 res=1
+[   57.089018] systemd[1]: Unit rngd.service entered failed state.
+[   57.270037] systemd[1]: Received SIGRTMIN+21 from PID 279 (plymouthd).
+[   57.724734] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[   57.739753] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   57.771594] Ebtables v2.0 registered
+[   57.785806] Bridge firewalling registered
+[   77.520089] systemd-logind[1213]: Watching system buttons on /dev/input/event3 (Power Button)
+[   85.596802] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   85.596806] Bluetooth: BNEP filters: protocol multicast
+[   85.596818] Bluetooth: BNEP socket layer initialized
+[   90.222815] sky2 0000:04:00.0 p3p1: enabling interface
+[   90.222893] IPv6: ADDRCONF(NETDEV_UP): p3p1: link is not ready
+[   90.224877] iwlwifi 0000:06:00.0: L1 Enabled; Disabling L0S
+[   90.233036] iwlwifi 0000:06:00.0: Radio type=0x1-0x2-0x0
+[   90.326999] iwlwifi 0000:06:00.0: L1 Enabled; Disabling L0S
+[   90.329964] iwlwifi 0000:06:00.0: Radio type=0x1-0x2-0x0
+[   90.353141] IPv6: ADDRCONF(NETDEV_UP): wlp6s0: link is not ready
+[   91.640437] SELinux: initialized (dev mqueue, type mqueue), uses transition SIDs
+[   91.640510] SELinux: initialized (dev proc, type proc), uses genfs_contexts
+[   91.661914] SELinux: initialized (dev mqueue, type mqueue), uses transition SIDs
+[   91.666228] SELinux: initialized (dev proc, type proc), uses genfs_contexts
+[   91.780952] tun: Universal TUN/TAP device driver, 1.6
+[   91.780956] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   91.799654] device virbr0-nic entered promiscuous mode
+[   95.928249] virbr0: port 1(virbr0-nic) entered listening state
+[   95.928263] virbr0: port 1(virbr0-nic) entered listening state
+[   95.928507] IPv6: ADDRCONF(NETDEV_UP): virbr0: link is not ready
+[   96.218636] virbr0: port 1(virbr0-nic) entered disabled state
+[  108.475207] wlp6s0: authenticate with 00:1d:70:f3:dc:be
+[  108.478697] wlp6s0: send auth to 00:1d:70:f3:dc:be (try 1/3)
+[  108.540861] wlp6s0: authenticated
+[  108.541035] wlp6s0: associate with 00:1d:70:f3:dc:be (try 1/3)
+[  108.544548] wlp6s0: RX AssocResp from 00:1d:70:f3:dc:be (capab=0x11 status=0 aid=1)
+[  108.547227] wlp6s0: associated
+[  108.547264] IPv6: ADDRCONF(NETDEV_CHANGE): wlp6s0: link becomes ready
+[  108.547340] cfg80211: Calling CRDA for country: CZ
+[  108.556311] cfg80211: Regulatory domain changed to country: CZ
+[  108.556315] cfg80211:  DFS Master region: unset
+[  108.556316] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  108.556318] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  108.556320] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[  108.556321] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  108.556323] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[  108.556325] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[  133.865150] wlp6s0: deauthenticated from 00:1d:70:f3:dc:be (Reason: 2)
+[  133.871550] cfg80211: Calling CRDA to update world regulatory domain
+[  133.878584] cfg80211: World regulatory domain updated:
+[  133.878588] cfg80211:  DFS Master region: unset
+[  133.878589] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  133.878591] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  133.878593] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  133.878595] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm)
+[  133.878596] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  133.878598] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  133.878599] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[  133.878613] cfg80211: Calling CRDA for country: CZ
+[  133.882722] cfg80211: Regulatory domain changed to country: CZ
+[  133.882725] cfg80211:  DFS Master region: unset
+[  133.882727] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  133.882729] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  133.882731] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[  133.882733] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  133.882734] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[  133.882736] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[  134.230078] wlp6s0: authenticate with 00:1d:70:f3:dc:b1
+[  134.232414] wlp6s0: send auth to 00:1d:70:f3:dc:b1 (try 1/3)
+[  134.233938] wlp6s0: authenticated
+[  134.235343] wlp6s0: associate with 00:1d:70:f3:dc:b1 (try 1/3)
+[  134.239807] wlp6s0: RX AssocResp from 00:1d:70:f3:dc:b1 (capab=0x31 status=0 aid=98)
+[  134.241049] wlp6s0: associated
+[  134.241101] cfg80211: Calling CRDA for country: CZ
+[  134.243603] cfg80211: Regulatory domain changed to country: CZ
+[  134.243606] cfg80211:  DFS Master region: unset
+[  134.243608] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  134.243610] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  134.243612] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[  134.243614] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  134.243616] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[  134.243617] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[  233.167568] sky2 0000:04:00.0 p3p1: disabling interface
+[  236.185961] wlp6s0: deauthenticating from 00:1d:70:f3:dc:b1 by local choice (reason=3)
+[  236.195548] cfg80211: Calling CRDA to update world regulatory domain
+[  236.206947] cfg80211: World regulatory domain updated:
+[  236.206951] cfg80211:  DFS Master region: unset
+[  236.206953] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  236.206955] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  236.206957] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  236.206959] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm)
+[  236.206961] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  236.206962] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  236.206964] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[  236.206977] cfg80211: Calling CRDA for country: CZ
+[  236.210816] cfg80211: Regulatory domain changed to country: CZ
+[  236.210819] cfg80211:  DFS Master region: unset
+[  236.210820] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  236.210822] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  236.210824] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[  236.210825] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  236.210827] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[  236.210828] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[  236.398385] PM: Syncing filesystems ... done.
+[  237.635985] PM: Preparing system for mem sleep
+[  237.636804] Freezing user space processes ... (elapsed 0.031 seconds) done.
+[  237.668165] Freezing remaining freezable tasks ... (elapsed 0.000 seconds) done.
+[  237.669043] PM: Entering mem sleep
+[  237.669061] Suspending console(s) (use no_console_suspend to debug)
+[  237.670072] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[  237.713549] parport_pc 00:09: disabled
+[  237.713667] serial 00:08: disabled
+[  237.830091] sd 0:0:0:0: [sda] Stopping disk
+[  238.367048] PM: suspend of devices complete after 697.721 msecs
+[  238.367165] PM: late suspend of devices complete after 0.114 msecs
+[  238.529239] ehci-pci 0000:00:1d.7: System wakeup enabled by ACPI
+[  238.540131] uhci_hcd 0000:00:1d.2: System wakeup enabled by ACPI
+[  238.540212] uhci_hcd 0000:00:1d.1: System wakeup enabled by ACPI
+[  238.540291] uhci_hcd 0000:00:1d.0: System wakeup enabled by ACPI
+[  238.540574] ehci-pci 0000:00:1a.7: System wakeup enabled by ACPI
+[  238.551131] uhci_hcd 0000:00:1a.1: System wakeup enabled by ACPI
+[  238.551212] uhci_hcd 0000:00:1a.0: System wakeup enabled by ACPI
+[  238.551338] PM: noirq suspend of devices complete after 184.168 msecs
+[  238.553417] ACPI: Preparing to enter system sleep state S3
+[  238.553680] PM: Saving platform NVS memory
+[  238.553808] Disabling non-boot CPUs ...
+[  238.554416] Broke affinity for irq 46
+[  238.555206] kvm: disabling virtualization on CPU1
+[  238.555484] smpboot: CPU 1 is now offline
+[  238.556039] ACPI: Low-level resume complete
+[  238.556039] PM: Restoring platform NVS memory
+[  238.556039] Force enabled HPET at resume
+[  238.556039] CPU0: Thermal monitoring handled by SMI
+[  238.556039] microcode: CPU0 sig=0x10676, pf=0x80, revision=0x60f
+[  238.556039] Enabling non-boot CPUs ...
+[  238.556039] x86: Booting SMP configuration:
+[  238.556039] smpboot: Booting Node 0 Processor 1 APIC 0x1
+[  238.555206] CPU1: Thermal monitoring handled by SMI
+[  238.555206] kvm: enabling virtualization on CPU1
+[  238.568048] microcode: CPU1 sig=0x10676, pf=0x80, revision=0x607
+[  238.569045] microcode: CPU1 updated to revision 0x60f, date = 2010-09-29
+[  238.573596] CPU1 is up
+[  238.576555] ACPI: Waking up from system sleep state S3
+[  238.587106] uhci_hcd 0000:00:1a.0: System wakeup disabled by ACPI
+[  238.587147] uhci_hcd 0000:00:1a.1: System wakeup disabled by ACPI
+[  238.598096] ehci-pci 0000:00:1a.7: System wakeup disabled by ACPI
+[  238.609544] uhci_hcd 0000:00:1d.0: System wakeup disabled by ACPI
+[  238.609629] uhci_hcd 0000:00:1d.1: System wakeup disabled by ACPI
+[  238.609712] uhci_hcd 0000:00:1d.2: System wakeup disabled by ACPI
+[  238.620104] ehci-pci 0000:00:1d.7: System wakeup disabled by ACPI
+[  238.793474] PM: noirq resume of devices complete after 216.619 msecs
+[  238.793818] PM: early resume of devices complete after 0.290 msecs
+[  238.795382] usb usb3: root hub lost power or was reset
+[  238.795699] usb usb4: root hub lost power or was reset
+[  238.796349] snd_hda_intel 0000:00:1b.0: irq 47 for MSI/MSI-X
+[  238.796756] usb usb5: root hub lost power or was reset
+[  238.797084] usb usb6: root hub lost power or was reset
+[  238.797391] usb usb7: root hub lost power or was reset
+[  238.923323] serial 00:08: activated
+[  238.924796] parport_pc 00:09: activated
+[  238.961898] ata4.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
+[  238.961903] ata4.00: ACPI cmd ef/03:42:00:00:00:a0 (SET FEATURES) filtered out
+[  239.000357] ata4.00: configured for UDMA/33
+[  239.103092] ata2: SATA link down (SStatus 0 SControl 300)
+[  239.103129] ata3: SATA link down (SStatus 0 SControl 300)
+[  239.126143] usb 1-2: reset high-speed USB device number 2 using ehci-pci
+[  239.344130] usb 1-3: reset high-speed USB device number 3 using ehci-pci
+[  239.664151] usb 4-2: reset full-speed USB device number 2 using uhci_hcd
+[  240.072112] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[  240.073275] ata1.00: unexpected _GTF length (8)
+[  240.084205] ata1.00: unexpected _GTF length (8)
+[  240.084732] ata1.00: configured for UDMA/133
+[  240.090262] sd 0:0:0:0: [sda] Starting disk
+[  240.115387] PM: resume of devices complete after 1321.563 msecs
+[  240.116732] PM: Finishing wakeup.
+[  240.116737] Restarting tasks ... 
+[  240.116830] sky2 0000:04:00.0: no hotplug settings from platform
+[  240.116886] iwlwifi 0000:06:00.0: no hotplug settings from platform
+[  240.116935] sky2 0000:04:00.0: no hotplug settings from platform
+[  240.121114] done.
+[  240.176213] video LNXVIDEO:00: Restoring backlight state
+[  240.316748] sky2 0000:04:00.0 p3p1: enabling interface
+[  240.323730] IPv6: ADDRCONF(NETDEV_UP): p3p1: link is not ready
+[  240.324897] iwlwifi 0000:06:00.0: L1 Enabled; Disabling L0S
+[  240.327915] iwlwifi 0000:06:00.0: Radio type=0x1-0x2-0x0
+[  240.356278] IPv6: ADDRCONF(NETDEV_UP): wlp6s0: link is not ready
+[  245.199424] wlp6s0: authenticate with 00:1d:70:f3:dc:b1
+[  245.201434] wlp6s0: send auth to 00:1d:70:f3:dc:b1 (try 1/3)
+[  245.203003] wlp6s0: authenticated
+[  245.204015] wlp6s0: associate with 00:1d:70:f3:dc:b1 (try 1/3)
+[  245.207408] wlp6s0: RX AssocResp from 00:1d:70:f3:dc:b1 (capab=0x31 status=0 aid=96)
+[  245.210917] wlp6s0: associated
+[  245.210944] IPv6: ADDRCONF(NETDEV_CHANGE): wlp6s0: link becomes ready
+[  245.210996] cfg80211: Calling CRDA for country: CZ
+[  245.216648] cfg80211: Regulatory domain changed to country: CZ
+[  245.216652] cfg80211:  DFS Master region: unset
+[  245.216654] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  245.216657] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  245.216659] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[  245.216661] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  245.216663] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[  245.216665] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[  270.255423] wlp6s0: deauthenticated from 00:1d:70:f3:dc:b1 (Reason: 2)
+[  270.267216] cfg80211: Calling CRDA to update world regulatory domain
+[  270.278637] cfg80211: World regulatory domain updated:
+[  270.278642] cfg80211:  DFS Master region: unset
+[  270.278644] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  270.278648] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  270.278650] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  270.278653] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm)
+[  270.278656] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  270.278658] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  270.278661] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[  270.278680] cfg80211: Calling CRDA for country: CZ
+[  270.284154] cfg80211: Regulatory domain changed to country: CZ
+[  270.284158] cfg80211:  DFS Master region: unset
+[  270.284159] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  270.284162] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  270.284164] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[  270.284166] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  270.284168] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[  270.284170] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[  270.575895] wlp6s0: authenticate with 00:1d:70:f3:dc:be
+[  270.578744] wlp6s0: send auth to 00:1d:70:f3:dc:be (try 1/3)
+[  270.737648] wlp6s0: authenticated
+[  270.738201] wlp6s0: associate with 00:1d:70:f3:dc:be (try 1/3)
+[  270.741764] wlp6s0: RX AssocResp from 00:1d:70:f3:dc:be (capab=0x11 status=0 aid=1)
+[  270.745041] wlp6s0: associated
+[  270.745124] cfg80211: Calling CRDA for country: CZ
+[  270.750671] cfg80211: Regulatory domain changed to country: CZ
+[  270.750677] cfg80211:  DFS Master region: unset
+[  270.750680] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  270.750684] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  270.750688] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[  270.750692] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  270.750695] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[  270.750699] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[  393.182872] perf samples too long (2502 > 2500), lowering kernel.perf_event_max_sample_rate to 50000
+[  421.112947] sky2 0000:04:00.0 p3p1: disabling interface
+[  424.139192] wlp6s0: deauthenticating from 00:1d:70:f3:dc:be by local choice (reason=3)
+[  424.146908] cfg80211: Calling CRDA to update world regulatory domain
+[  424.159668] cfg80211: World regulatory domain updated:
+[  424.159672] cfg80211:  DFS Master region: unset
+[  424.159673] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  424.159675] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  424.159677] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  424.159678] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm)
+[  424.159680] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  424.159681] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  424.159683] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[  424.159698] cfg80211: Calling CRDA for country: CZ
+[  424.164125] cfg80211: Regulatory domain changed to country: CZ
+[  424.164128] cfg80211:  DFS Master region: unset
+[  424.164129] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  424.164131] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  424.164133] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[  424.164135] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  424.164137] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[  424.164138] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[  424.242035] PM: Syncing filesystems ... done.
+[  425.665701] PM: Preparing system for mem sleep
+[  425.666247] Freezing user space processes ... (elapsed 0.001 seconds) done.
+[  425.667750] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[  425.668892] PM: Entering mem sleep
+[  425.668908] Suspending console(s) (use no_console_suspend to debug)
+[  425.670053] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[  425.710695] parport_pc 00:09: disabled
+[  425.710819] serial 00:08: disabled
+[  425.845203] sd 0:0:0:0: [sda] Stopping disk
+[  426.376124] PM: suspend of devices complete after 706.950 msecs
+[  426.376230] PM: late suspend of devices complete after 0.103 msecs
+[  426.538176] ehci-pci 0000:00:1d.7: System wakeup enabled by ACPI
+[  426.549125] uhci_hcd 0000:00:1d.2: System wakeup enabled by ACPI
+[  426.549207] uhci_hcd 0000:00:1d.1: System wakeup enabled by ACPI
+[  426.549286] uhci_hcd 0000:00:1d.0: System wakeup enabled by ACPI
+[  426.549571] ehci-pci 0000:00:1a.7: System wakeup enabled by ACPI
+[  426.560130] uhci_hcd 0000:00:1a.1: System wakeup enabled by ACPI
+[  426.560211] uhci_hcd 0000:00:1a.0: System wakeup enabled by ACPI
+[  426.560337] PM: noirq suspend of devices complete after 184.102 msecs
+[  426.562402] ACPI: Preparing to enter system sleep state S3
+[  426.562646] PM: Saving platform NVS memory
+[  426.562775] Disabling non-boot CPUs ...
+[  426.564014] kvm: disabling virtualization on CPU1
+[  426.564447] smpboot: CPU 1 is now offline
+[  426.566484] ACPI: Low-level resume complete
+[  426.566484] PM: Restoring platform NVS memory
+[  426.566484] Force enabled HPET at resume
+[  426.566484] CPU0: Thermal monitoring handled by SMI
+[  426.566484] microcode: CPU0 sig=0x10676, pf=0x80, revision=0x60f
+[  426.566484] Enabling non-boot CPUs ...
+[  426.566484] x86: Booting SMP configuration:
+[  426.566484] smpboot: Booting Node 0 Processor 1 APIC 0x1
+[  426.564014] CPU1: Thermal monitoring handled by SMI
+[  426.564014] kvm: enabling virtualization on CPU1
+[  426.578375] microcode: CPU1 sig=0x10676, pf=0x80, revision=0x607
+[  426.579372] microcode: CPU1 updated to revision 0x60f, date = 2010-09-29
+[  426.583928] CPU1 is up
+[  426.586891] ACPI: Waking up from system sleep state S3
+[  426.598107] uhci_hcd 0000:00:1a.0: System wakeup disabled by ACPI
+[  426.598149] uhci_hcd 0000:00:1a.1: System wakeup disabled by ACPI
+[  426.609095] ehci-pci 0000:00:1a.7: System wakeup disabled by ACPI
+[  426.620552] uhci_hcd 0000:00:1d.0: System wakeup disabled by ACPI
+[  426.620637] uhci_hcd 0000:00:1d.1: System wakeup disabled by ACPI
+[  426.620721] uhci_hcd 0000:00:1d.2: System wakeup disabled by ACPI
+[  426.631102] ehci-pci 0000:00:1d.7: System wakeup disabled by ACPI
+[  426.804468] PM: noirq resume of devices complete after 217.240 msecs
+[  426.804811] PM: early resume of devices complete after 0.290 msecs
+[  426.809520] usb usb3: root hub lost power or was reset
+[  426.809842] usb usb4: root hub lost power or was reset
+[  426.810502] snd_hda_intel 0000:00:1b.0: irq 47 for MSI/MSI-X
+[  426.810940] usb usb5: root hub lost power or was reset
+[  426.811275] usb usb6: root hub lost power or was reset
+[  426.811587] usb usb7: root hub lost power or was reset
+[  426.925604] serial 00:08: activated
+[  426.926293] parport_pc 00:09: activated
+[  426.995475] ata4.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
+[  426.995480] ata4.00: ACPI cmd ef/03:42:00:00:00:a0 (SET FEATURES) filtered out
+[  427.017351] ata4.00: configured for UDMA/33
+[  427.117092] ata3: SATA link down (SStatus 0 SControl 300)
+[  427.117123] ata2: SATA link down (SStatus 0 SControl 300)
+[  427.140144] usb 1-2: reset high-speed USB device number 2 using ehci-pci
+[  427.358133] usb 1-3: reset high-speed USB device number 3 using ehci-pci
+[  427.678142] usb 4-2: reset full-speed USB device number 2 using uhci_hcd
+[  428.086110] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[  428.087271] ata1.00: unexpected _GTF length (8)
+[  428.102317] ata1.00: unexpected _GTF length (8)
+[  428.102842] ata1.00: configured for UDMA/133
+[  428.105893] sd 0:0:0:0: [sda] Starting disk
+[  428.122393] PM: resume of devices complete after 1317.575 msecs
+[  428.123737] PM: Finishing wakeup.
+[  428.123741] Restarting tasks ... 
+[  428.123834] sky2 0000:04:00.0: no hotplug settings from platform
+[  428.123891] iwlwifi 0000:06:00.0: no hotplug settings from platform
+[  428.123938] sky2 0000:04:00.0: no hotplug settings from platform
+[  428.132598] done.
+[  428.194281] video LNXVIDEO:00: Restoring backlight state
+[  428.209753] sky2 0000:04:00.0 p3p1: enabling interface
+[  428.209865] IPv6: ADDRCONF(NETDEV_UP): p3p1: link is not ready
+[  428.210608] iwlwifi 0000:06:00.0: L1 Enabled; Disabling L0S
+[  428.213558] iwlwifi 0000:06:00.0: Radio type=0x1-0x2-0x0
+[  428.236263] IPv6: ADDRCONF(NETDEV_UP): wlp6s0: link is not ready
+[  429.915801] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  429.916824] IPv6: ADDRCONF(NETDEV_CHANGE): p3p1: link becomes ready
+[  430.881118] iwlwifi 0000:06:00.0: RF_KILL bit toggled to disable radio.
+[  430.884087] iwlwifi 0000:06:00.0: Request scan called when driver not ready.
+[  430.886874] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  430.953105] usb 4-2: USB disconnect, device number 2
+[  827.118639] iwlwifi 0000:06:00.0: RF_KILL bit toggled to enable radio.
+[  827.123954] iwlwifi 0000:06:00.0: L1 Enabled; Disabling L0S
+[  827.126902] iwlwifi 0000:06:00.0: Radio type=0x1-0x2-0x0
+[  827.150523] IPv6: ADDRCONF(NETDEV_UP): wlp6s0: link is not ready
+[  827.923153] usb 4-2: new full-speed USB device number 3 using uhci_hcd
+[  828.102162] usb 4-2: New USB device found, idVendor=0a12, idProduct=0001
+[  828.102172] usb 4-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[  829.611444] sky2 0000:04:00.0 p3p1: Link is down
+[  831.447280] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  832.289583] wlp6s0: authenticate with d4:ca:6d:dd:af:15
+[  832.289595] wlp6s0: capabilities/regulatory prevented using AP HT/VHT configuration, downgraded
+[  832.292082] wlp6s0: send auth to d4:ca:6d:dd:af:15 (try 1/3)
+[  832.293918] wlp6s0: authenticated
+[  832.297522] wlp6s0: associate with d4:ca:6d:dd:af:15 (try 1/3)
+[  832.310413] wlp6s0: RX AssocResp from d4:ca:6d:dd:af:15 (capab=0x431 status=0 aid=1)
+[  832.323184] wlp6s0: associated
+[  832.323221] IPv6: ADDRCONF(NETDEV_CHANGE): wlp6s0: link becomes ready
+[  833.392227] sky2 0000:04:00.0 p3p1: Link is down
+[  910.076774] iwlwifi 0000:06:00.0: RF_KILL bit toggled to disable radio.
+[  910.076903] wlp6s0: deauthenticating from d4:ca:6d:dd:af:15 by local choice (reason=3)
+[  910.076962] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.076969] wlp6s0: HW problem - can not stop rx aggregation for d4:ca:6d:dd:af:15 tid 0
+[  910.079241] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.079250] wlp6s0: failed to remove key (0, d4:ca:6d:dd:af:15) from hardware (-5)
+[  910.079481] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.079497] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.079508] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.079521] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.079533] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.079551] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.079590] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.079609] wlp6s0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-5)
+[  910.079704] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.079711] wlp6s0: failed to remove key (2, ff:ff:ff:ff:ff:ff) from hardware (-5)
+[  910.079837] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[  910.084495] cfg80211: Calling CRDA to update world regulatory domain
+[  910.094246] cfg80211: World regulatory domain updated:
+[  910.094251] cfg80211:  DFS Master region: unset
+[  910.094252] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  910.094254] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  910.094256] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  910.094258] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm)
+[  910.094260] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  910.094261] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  910.094263] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[  910.094322] cfg80211: Calling CRDA for country: CZ
+[  910.104785] cfg80211: Regulatory domain changed to country: CZ
+[  910.104789] cfg80211:  DFS Master region: unset
+[  910.104790] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[  910.104793] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[  910.104795] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[  910.104796] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[  910.104798] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[  910.104800] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[  910.203267] usb 4-2: USB disconnect, device number 3
+[  913.647052] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  913.974473] sky2 0000:04:00.0 p3p1: Link is down
+[  915.593100] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  915.924779] sky2 0000:04:00.0 p3p1: Link is down
+[  917.815423] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  918.137310] sky2 0000:04:00.0 p3p1: Link is down
+[  919.842472] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  920.171511] sky2 0000:04:00.0 p3p1: Link is down
+[  921.782335] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  922.111380] sky2 0000:04:00.0 p3p1: Link is down
+[  924.074764] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  924.395985] sky2 0000:04:00.0 p3p1: Link is down
+[  926.060520] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  926.388269] sky2 0000:04:00.0 p3p1: Link is down
+[  928.008275] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  928.338639] sky2 0000:04:00.0 p3p1: Link is down
+[  930.003167] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[  930.330935] sky2 0000:04:00.0 p3p1: Link is down
+[  932.484359] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1063.865191] sky2 0000:04:00.0 p3p1: Link is down
+[ 1065.517164] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1065.843553] sky2 0000:04:00.0 p3p1: Link is down
+[ 1067.510750] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1067.846357] sky2 0000:04:00.0 p3p1: Link is down
+[ 1069.524033] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1069.859609] sky2 0000:04:00.0 p3p1: Link is down
+[ 1071.537297] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1071.872854] sky2 0000:04:00.0 p3p1: Link is down
+[ 1073.697338] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1074.032952] sky2 0000:04:00.0 p3p1: Link is down
+[ 1075.649669] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1075.982006] sky2 0000:04:00.0 p3p1: Link is down
+[ 1077.660967] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1077.995258] sky2 0000:04:00.0 p3p1: Link is down
+[ 1079.903928] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1080.228749] sky2 0000:04:00.0 p3p1: Link is down
+[ 1081.836889] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1082.168621] sky2 0000:04:00.0 p3p1: Link is down
+[ 1083.785314] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1084.118917] sky2 0000:04:00.0 p3p1: Link is down
+[ 1085.797917] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1086.132228] sky2 0000:04:00.0 p3p1: Link is down
+[ 1087.884581] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1088.218870] sky2 0000:04:00.0 p3p1: Link is down
+[ 1089.952907] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1090.283236] sky2 0000:04:00.0 p3p1: Link is down
+[ 1092.064127] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1092.380394] sky2 0000:04:00.0 p3p1: Link is down
+[ 1094.018758] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1094.351723] sky2 0000:04:00.0 p3p1: Link is down
+[ 1096.087076] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1096.417397] sky2 0000:04:00.0 p3p1: Link is down
+[ 1098.118689] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1098.451688] sky2 0000:04:00.0 p3p1: Link is down
+[ 1100.050355] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1100.370584] sky2 0000:04:00.0 p3p1: Link is down
+[ 1101.987922] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1102.320880] sky2 0000:04:00.0 p3p1: Link is down
+[ 1104.035277] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1157.652802] sky2 0000:04:00.0 p3p1: Link is down
+[ 1160.841865] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 1168.553880] sky2 0000:04:00.0 p3p1: Link is down
+[ 1179.976402] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 2074.173110] sky2 0000:04:00.0 p3p1: Link is down
+[ 2075.596728] iwlwifi 0000:06:00.0: RF_KILL bit toggled to enable radio.
+[ 2075.604901] iwlwifi 0000:06:00.0: L1 Enabled; Disabling L0S
+[ 2075.607862] iwlwifi 0000:06:00.0: Radio type=0x1-0x2-0x0
+[ 2075.632734] IPv6: ADDRCONF(NETDEV_UP): wlp6s0: link is not ready
+[ 2076.199102] usb 4-2: new full-speed USB device number 4 using uhci_hcd
+[ 2076.376132] usb 4-2: New USB device found, idVendor=0a12, idProduct=0001
+[ 2076.376144] usb 4-2: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[ 2083.722132] wlp6s0: authenticate with 00:0e:8e:13:d7:30
+[ 2083.724890] wlp6s0: send auth to 00:0e:8e:13:d7:30 (try 1/3)
+[ 2084.701089] wlp6s0: send auth to 00:0e:8e:13:d7:30 (try 2/3)
+[ 2085.703073] wlp6s0: send auth to 00:0e:8e:13:d7:30 (try 3/3)
+[ 2086.705088] wlp6s0: authentication with 00:0e:8e:13:d7:30 timed out
+[ 2086.854720] wlp6s0: authenticate with d4:ca:6d:dd:af:15
+[ 2086.854740] wlp6s0: capabilities/regulatory prevented using AP HT/VHT configuration, downgraded
+[ 2086.857765] wlp6s0: send auth to d4:ca:6d:dd:af:15 (try 1/3)
+[ 2086.860042] wlp6s0: authenticated
+[ 2086.861040] wlp6s0: associate with d4:ca:6d:dd:af:15 (try 1/3)
+[ 2086.866994] wlp6s0: RX AssocResp from d4:ca:6d:dd:af:15 (capab=0x431 status=0 aid=1)
+[ 2086.871959] wlp6s0: associated
+[ 2086.871997] IPv6: ADDRCONF(NETDEV_CHANGE): wlp6s0: link becomes ready
+[ 2246.666056] perf samples too long (5007 > 5000), lowering kernel.perf_event_max_sample_rate to 25000
+[ 2451.017062] wlp6s0: deauthenticated from d4:ca:6d:dd:af:15 (Reason: 3)
+[ 2451.027239] cfg80211: Calling CRDA to update world regulatory domain
+[ 2451.033837] cfg80211: World regulatory domain updated:
+[ 2451.033841] cfg80211:  DFS Master region: unset
+[ 2451.033843] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[ 2451.033845] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 2451.033848] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 2451.033850] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm)
+[ 2451.033852] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[ 2451.033854] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[ 2451.033856] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[ 2451.034038] cfg80211: Calling CRDA for country: CZ
+[ 2451.037740] cfg80211: Regulatory domain changed to country: CZ
+[ 2451.037744] cfg80211:  DFS Master region: unset
+[ 2451.037745] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[ 2451.037748] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 2451.037750] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[ 2451.037752] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[ 2451.037754] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[ 2451.037756] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[ 2453.711755] wlp6s0: authenticate with d4:ca:6d:dd:af:15
+[ 2453.711778] wlp6s0: capabilities/regulatory prevented using AP HT/VHT configuration, downgraded
+[ 2453.714517] wlp6s0: send auth to d4:ca:6d:dd:af:15 (try 1/3)
+[ 2453.717047] wlp6s0: authenticated
+[ 2453.719095] wlp6s0: associate with d4:ca:6d:dd:af:15 (try 1/3)
+[ 2453.726812] wlp6s0: RX AssocResp from d4:ca:6d:dd:af:15 (capab=0x431 status=0 aid=1)
+[ 2453.732835] wlp6s0: associated
+[ 2585.476663] sky2 0000:04:00.0 p3p1: disabling interface
+[ 2588.497356] wlp6s0: deauthenticating from d4:ca:6d:dd:af:15 by local choice (reason=3)
+[ 2588.504502] cfg80211: Calling CRDA to update world regulatory domain
+[ 2588.511202] cfg80211: World regulatory domain updated:
+[ 2588.511206] cfg80211:  DFS Master region: unset
+[ 2588.511209] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[ 2588.511212] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 2588.511215] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 2588.511217] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm)
+[ 2588.511220] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[ 2588.511223] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[ 2588.511225] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[ 2588.511250] cfg80211: Calling CRDA for country: CZ
+[ 2588.516333] cfg80211: Regulatory domain changed to country: CZ
+[ 2588.516336] cfg80211:  DFS Master region: unset
+[ 2588.516338] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[ 2588.516340] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 2588.516342] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[ 2588.516343] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[ 2588.516345] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[ 2588.516347] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[ 2588.581953] PM: Syncing filesystems ... done.
+[ 2588.995342] PM: Preparing system for mem sleep
+[ 2588.996158] Freezing user space processes ... (elapsed 0.001 seconds) done.
+[ 2588.997638] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[ 2588.998774] PM: Entering mem sleep
+[ 2588.998796] Suspending console(s) (use no_console_suspend to debug)
+[ 2588.999814] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 2589.040235] parport_pc 00:09: disabled
+[ 2589.040362] serial 00:08: disabled
+[ 2589.067796] sd 0:0:0:0: [sda] Stopping disk
+[ 2589.604120] PM: suspend of devices complete after 605.040 msecs
+[ 2589.604227] PM: late suspend of devices complete after 0.105 msecs
+[ 2589.766248] ehci-pci 0000:00:1d.7: System wakeup enabled by ACPI
+[ 2589.777137] uhci_hcd 0000:00:1d.2: System wakeup enabled by ACPI
+[ 2589.777218] uhci_hcd 0000:00:1d.1: System wakeup enabled by ACPI
+[ 2589.777297] uhci_hcd 0000:00:1d.0: System wakeup enabled by ACPI
+[ 2589.777583] ehci-pci 0000:00:1a.7: System wakeup enabled by ACPI
+[ 2589.788129] uhci_hcd 0000:00:1a.1: System wakeup enabled by ACPI
+[ 2589.788211] uhci_hcd 0000:00:1a.0: System wakeup enabled by ACPI
+[ 2589.788337] PM: noirq suspend of devices complete after 184.104 msecs
+[ 2589.790413] ACPI: Preparing to enter system sleep state S3
+[ 2589.790683] PM: Saving platform NVS memory
+[ 2589.790825] Disabling non-boot CPUs ...
+[ 2589.793010] kvm: disabling virtualization on CPU1
+[ 2589.793401] smpboot: CPU 1 is now offline
+[ 2589.794020] ACPI: Low-level resume complete
+[ 2589.794020] PM: Restoring platform NVS memory
+[ 2589.794020] Force enabled HPET at resume
+[ 2589.794020] CPU0: Thermal monitoring handled by SMI
+[ 2589.794020] microcode: CPU0 sig=0x10676, pf=0x80, revision=0x60f
+[ 2589.794020] Enabling non-boot CPUs ...
+[ 2589.794020] x86: Booting SMP configuration:
+[ 2589.794020] smpboot: Booting Node 0 Processor 1 APIC 0x1
+[ 2589.793010] CPU1: Thermal monitoring handled by SMI
+[ 2589.793010] kvm: enabling virtualization on CPU1
+[ 2589.805915] microcode: CPU1 sig=0x10676, pf=0x80, revision=0x607
+[ 2589.806912] microcode: CPU1 updated to revision 0x60f, date = 2010-09-29
+[ 2589.811455] CPU1 is up
+[ 2589.814413] ACPI: Waking up from system sleep state S3
+[ 2589.825106] uhci_hcd 0000:00:1a.0: System wakeup disabled by ACPI
+[ 2589.825148] uhci_hcd 0000:00:1a.1: System wakeup disabled by ACPI
+[ 2589.836094] ehci-pci 0000:00:1a.7: System wakeup disabled by ACPI
+[ 2589.847551] uhci_hcd 0000:00:1d.0: System wakeup disabled by ACPI
+[ 2589.847636] uhci_hcd 0000:00:1d.1: System wakeup disabled by ACPI
+[ 2589.847719] uhci_hcd 0000:00:1d.2: System wakeup disabled by ACPI
+[ 2589.858102] ehci-pci 0000:00:1d.7: System wakeup disabled by ACPI
+[ 2590.031470] PM: noirq resume of devices complete after 216.768 msecs
+[ 2590.031813] PM: early resume of devices complete after 0.290 msecs
+[ 2590.036506] usb usb3: root hub lost power or was reset
+[ 2590.036821] usb usb4: root hub lost power or was reset
+[ 2590.037468] snd_hda_intel 0000:00:1b.0: irq 47 for MSI/MSI-X
+[ 2590.037900] usb usb5: root hub lost power or was reset
+[ 2590.038231] usb usb6: root hub lost power or was reset
+[ 2590.038535] usb usb7: root hub lost power or was reset
+[ 2590.156342] serial 00:08: activated
+[ 2590.157811] parport_pc 00:09: activated
+[ 2590.222441] ata4.00: ACPI cmd ef/03:0c:00:00:00:a0 (SET FEATURES) filtered out
+[ 2590.222446] ata4.00: ACPI cmd ef/03:42:00:00:00:a0 (SET FEATURES) filtered out
+[ 2590.244332] ata4.00: configured for UDMA/33
+[ 2590.344090] ata3: SATA link down (SStatus 0 SControl 300)
+[ 2590.344120] ata2: SATA link down (SStatus 0 SControl 300)
+[ 2590.367136] usb 4-2: reset full-speed USB device number 4 using uhci_hcd
+[ 2590.608123] usb 1-2: reset high-speed USB device number 2 using ehci-pci
+[ 2590.826122] usb 1-3: reset high-speed USB device number 3 using ehci-pci
+[ 2591.313107] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[ 2591.314285] ata1.00: unexpected _GTF length (8)
+[ 2591.321682] ata1.00: unexpected _GTF length (8)
+[ 2591.322217] ata1.00: configured for UDMA/133
+[ 2591.327156] sd 0:0:0:0: [sda] Starting disk
+[ 2591.352866] PM: resume of devices complete after 1321.045 msecs
+[ 2591.353574] PM: Finishing wakeup.
+[ 2591.353575] Restarting tasks ... 
+[ 2591.353630] sky2 0000:04:00.0: no hotplug settings from platform
+[ 2591.353655] iwlwifi 0000:06:00.0: no hotplug settings from platform
+[ 2591.353674] sky2 0000:04:00.0: no hotplug settings from platform
+[ 2591.362016] done.
+[ 2591.837488] video LNXVIDEO:00: Restoring backlight state
+[ 2591.865767] sky2 0000:04:00.0 p3p1: enabling interface
+[ 2591.866144] IPv6: ADDRCONF(NETDEV_UP): p3p1: link is not ready
+[ 2591.866974] iwlwifi 0000:06:00.0: L1 Enabled; Disabling L0S
+[ 2591.870001] iwlwifi 0000:06:00.0: Radio type=0x1-0x2-0x0
+[ 2591.893153] IPv6: ADDRCONF(NETDEV_UP): wlp6s0: link is not ready
+[ 2592.012031] usb 5-1: new low-speed USB device number 2 using uhci_hcd
+[ 2592.178129] usb 5-1: New USB device found, idVendor=0a81, idProduct=0205
+[ 2592.178141] usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 2592.178149] usb 5-1: Product: PS2 to USB Converter
+[ 2592.178155] usb 5-1: Manufacturer: CHESEN
+[ 2592.207595] input: CHESEN PS2 to USB Converter as /devices/pci0000:00/0000:00:1d.0/usb5/5-1/5-1:1.0/0003:0A81:0205.0001/input/input37
+[ 2592.208175] hid-generic 0003:0A81:0205.0001: input,hidraw0: USB HID v1.10 Keyboard [CHESEN PS2 to USB Converter] on usb-0000:00:1d.0-1/input0
+[ 2592.237000] input: CHESEN PS2 to USB Converter as /devices/pci0000:00/0000:00:1d.0/usb5/5-1/5-1:1.1/0003:0A81:0205.0002/input/input38
+[ 2592.237732] hid-generic 0003:0A81:0205.0002: input,hidraw1: USB HID v1.10 Mouse [CHESEN PS2 to USB Converter] on usb-0000:00:1d.0-1/input1
+[ 2592.342089] usb 5-2: new low-speed USB device number 3 using uhci_hcd
+[ 2592.500120] usb 5-2: New USB device found, idVendor=09da, idProduct=000e
+[ 2592.500131] usb 5-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[ 2592.500138] usb 5-2: Product: PS/2+USB Mouse
+[ 2592.500145] usb 5-2: Manufacturer: A4Tech
+[ 2592.528337] input: A4Tech PS/2+USB Mouse as /devices/pci0000:00/0000:00:1d.0/usb5/5-2/5-2:1.0/0003:09DA:000E.0003/input/input39
+[ 2592.528952] hid-generic 0003:09DA:000E.0003: input,hidraw2: USB HID v1.10 Mouse [A4Tech PS/2+USB Mouse] on usb-0000:00:1d.0-2/input0
+[ 2594.398771] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[ 2594.398771] IPv6: ADDRCONF(NETDEV_CHANGE): p3p1: link becomes ready
+[ 2596.959745] wlp6s0: authenticate with 00:0e:8e:13:d7:30
+[ 2596.964103] wlp6s0: send auth to 00:0e:8e:13:d7:30 (try 1/3)
+[ 2596.990326] wlp6s0: authenticated
+[ 2596.991103] wlp6s0: associate with 00:0e:8e:13:d7:30 (try 1/3)
+[ 2597.001314] wlp6s0: RX AssocResp from 00:0e:8e:13:d7:30 (capab=0x431 status=0 aid=1)
+[ 2597.004413] wlp6s0: associated
+[ 2597.004469] IPv6: ADDRCONF(NETDEV_CHANGE): wlp6s0: link becomes ready
+[ 2626.277435] sky2 0000:04:00.0 p3p1: Link is down
+[ 2631.932183] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[ 2637.994605] sky2 0000:04:00.0 p3p1: Link is down
+[ 2640.552470] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[ 2643.478692] sky2 0000:04:00.0 p3p1: Link is down
+[ 2645.883559] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[ 2648.662985] sky2 0000:04:00.0 p3p1: Link is down
+[ 2651.128820] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[ 2652.132014] sky2 0000:04:00.0 p3p1: Link is down
+[ 2654.902959] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[ 2656.059755] sky2 0000:04:00.0 p3p1: Link is down
+[ 2657.877302] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 2672.483577] sky2 0000:04:00.0 p3p1: Link is down
+[ 2680.669440] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[ 2712.164334] iwlwifi 0000:06:00.0: RF_KILL bit toggled to disable radio.
+[ 2712.164459] wlp6s0: deauthenticating from 00:0e:8e:13:d7:30 by local choice (reason=3)
+[ 2712.166591] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[ 2712.166601] wlp6s0: failed to remove key (0, 00:0e:8e:13:d7:30) from hardware (-5)
+[ 2712.166822] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[ 2712.166834] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[ 2712.166845] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[ 2712.166859] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[ 2712.166878] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[ 2712.167959] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[ 2712.167967] wlp6s0: failed to remove key (1, ff:ff:ff:ff:ff:ff) from hardware (-5)
+[ 2712.168219] iwlwifi 0000:06:00.0: Not sending command - RF KILL
+[ 2712.169163] cfg80211: Calling CRDA to update world regulatory domain
+[ 2712.180533] cfg80211: World regulatory domain updated:
+[ 2712.180536] cfg80211:  DFS Master region: unset
+[ 2712.180538] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[ 2712.180540] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 2712.180542] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 2712.180543] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm)
+[ 2712.180545] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[ 2712.180546] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[ 2712.180548] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[ 2712.180562] cfg80211: Calling CRDA for country: CZ
+[ 2712.183693] cfg80211: Regulatory domain changed to country: CZ
+[ 2712.183695] cfg80211:  DFS Master region: unset
+[ 2712.183696] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[ 2712.183698] cfg80211:   (2400000 KHz - 2483500 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 2712.183700] cfg80211:   (5150000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2301 mBm)
+[ 2712.183702] cfg80211:   (5250000 KHz - 5350000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[ 2712.183703] cfg80211:   (5470000 KHz - 5725000 KHz @ 80000 KHz), (N/A, 2698 mBm)
+[ 2712.183705] cfg80211:   (57240000 KHz - 65880000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[ 2712.203147] usb 4-2: USB disconnect, device number 4
+[ 2739.615925] sky2 0000:04:00.0 p3p1: Link is down
+[ 2746.603335] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[ 7538.670595] sky2 0000:04:00.0 p3p1: Link is down
+[ 7540.277471] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 7630.358786] sky2 0000:04:00.0 p3p1: Link is down
+[ 7635.069076] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[ 7760.733066] sky2 0000:04:00.0 p3p1: Link is down
+[ 7763.094280] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 8985.693319] sky2 0000:04:00.0 p3p1: Link is down
+[ 8990.553554] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[ 9099.928999] sky2 0000:04:00.0 p3p1: Link is down
+[ 9106.644102] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9536.233634] sky2 0000:04:00.0 p3p1: Link is down
+[ 9539.546775] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9539.862763] sky2 0000:04:00.0 p3p1: Link is down
+[ 9541.607238] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9541.917927] sky2 0000:04:00.0 p3p1: Link is down
+[ 9543.560219] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9543.889257] sky2 0000:04:00.0 p3p1: Link is down
+[ 9545.555104] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9545.892062] sky2 0000:04:00.0 p3p1: Link is down
+[ 9547.709617] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9548.040328] sky2 0000:04:00.0 p3p1: Link is down
+[ 9549.757297] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9550.085048] sky2 0000:04:00.0 p3p1: Link is down
+[ 9551.829526] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9552.161180] sky2 0000:04:00.0 p3p1: Link is down
+[ 9553.996775] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9554.331721] sky2 0000:04:00.0 p3p1: Link is down
+[ 9556.048747] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9556.376447] sky2 0000:04:00.0 p3p1: Link is down
+[ 9557.993199] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[ 9558.326818] sky2 0000:04:00.0 p3p1: Link is down
+[ 9560.608716] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10013.566428] sky2 0000:04:00.0 p3p1: Link is down
+[10015.437173] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10015.765583] sky2 0000:04:00.0 p3p1: Link is down
+[10017.506154] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10017.840467] sky2 0000:04:00.0 p3p1: Link is down
+[10019.446031] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10019.780328] sky2 0000:04:00.0 p3p1: Link is down
+[10021.459279] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10021.793576] sky2 0000:04:00.0 p3p1: Link is down
+[10023.527610] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10023.859261] sky2 0000:04:00.0 p3p1: Link is down
+[10025.467470] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10025.799114] sky2 0000:04:00.0 p3p1: Link is down
+[10027.415865] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10027.749487] sky2 0000:04:00.0 p3p1: Link is down
+[10029.428478] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10029.762735] sky2 0000:04:00.0 p3p1: Link is down
+[10031.562000] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10031.879603] sky2 0000:04:00.0 p3p1: Link is down
+[10033.538897] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10033.871905] sky2 0000:04:00.0 p3p1: Link is down
+[10035.533791] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10035.864184] sky2 0000:04:00.0 p3p1: Link is down
+[10037.481527] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10037.814489] sky2 0000:04:00.0 p3p1: Link is down
+[10039.476460] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10039.806782] sky2 0000:04:00.0 p3p1: Link is down
+[10041.624376] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10041.935415] sky2 0000:04:00.0 p3p1: Link is down
+[10043.696958] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10044.032573] sky2 0000:04:00.0 p3p1: Link is down
+[10045.702383] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10046.035316] sky2 0000:04:00.0 p3p1: Link is down
+[10047.697276] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10048.026352] sky2 0000:04:00.0 p3p1: Link is down
+[10049.718424] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10050.050110] sky2 0000:04:00.0 p3p1: Link is down
+[10051.830986] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10052.157717] sky2 0000:04:00.0 p3p1: Link is down
+[10053.894385] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10054.223402] sky2 0000:04:00.0 p3p1: Link is down
+[10055.834252] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10056.163262] sky2 0000:04:00.0 p3p1: Link is down
+[10057.944150] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10058.260419] sky2 0000:04:00.0 p3p1: Link is down
+[10059.879134] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10060.210793] sky2 0000:04:00.0 p3p1: Link is down
+[10061.965790] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10062.296185] sky2 0000:04:00.0 p3p1: Link is down
+[10064.022348] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10064.351357] sky2 0000:04:00.0 p3p1: Link is down
+[10066.132209] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10066.459023] sky2 0000:04:00.0 p3p1: Link is down
+[10068.099928] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10068.430285] sky2 0000:04:00.0 p3p1: Link is down
+[10070.168288] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10070.496038] sky2 0000:04:00.0 p3p1: Link is down
+[10072.126504] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10072.456858] sky2 0000:04:00.0 p3p1: Link is down
+[10074.310798] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10074.637860] sky2 0000:04:00.0 p3p1: Link is down
+[10076.729076] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10077.058793] sky2 0000:04:00.0 p3p1: Link is down
+[10078.657474] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10078.988147] sky2 0000:04:00.0 p3p1: Link is down
+[10080.586876] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10080.917561] sky2 0000:04:00.0 p3p1: Link is down
+[10082.607350] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10082.930813] sky2 0000:04:00.0 p3p1: Link is down
+[10084.529522] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10084.860223] sky2 0000:04:00.0 p3p1: Link is down
+[10086.549973] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10086.873476] sky2 0000:04:00.0 p3p1: Link is down
+[10088.472146] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10088.802823] sky2 0000:04:00.0 p3p1: Link is down
+[10090.401550] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10090.732228] sky2 0000:04:00.0 p3p1: Link is down
+[10092.330907] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10092.660323] sky2 0000:04:00.0 p3p1: Link is down
+[10094.277020] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10094.600184] sky2 0000:04:00.0 p3p1: Link is down
+[10096.285688] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10096.613427] sky2 0000:04:00.0 p3p1: Link is down
+[10098.298966] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10098.626678] sky2 0000:04:00.0 p3p1: Link is down
+[10100.517359] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10100.849666] sky2 0000:04:00.0 p3p1: Link is down
+[10102.721975] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10103.051677] sky2 0000:04:00.0 p3p1: Link is down
+[10104.821099] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10105.159287] sky2 0000:04:00.0 p3p1: Link is down
+[10107.953053] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10917.725394] sky2 0000:04:00.0 p3p1: Link is down
+[10921.209257] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10921.529445] sky2 0000:04:00.0 p3p1: Link is down
+[10923.511210] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10923.836326] sky2 0000:04:00.0 p3p1: Link is down
+[10925.726972] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10926.048795] sky2 0000:04:00.0 p3p1: Link is down
+[10927.681906] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10928.020135] sky2 0000:04:00.0 p3p1: Link is down
+[10929.695190] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10930.033381] sky2 0000:04:00.0 p3p1: Link is down
+[10931.708443] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10932.045381] sky2 0000:04:00.0 p3p1: Link is down
+[10933.795126] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10934.132022] sky2 0000:04:00.0 p3p1: Link is down
+[10935.818849] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10936.155789] sky2 0000:04:00.0 p3p1: Link is down
+[10937.832145] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10938.169046] sky2 0000:04:00.0 p3p1: Link is down
+[10939.973850] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[10940.268924] sky2 0000:04:00.0 p3p1: Link is down
+[10942.031978] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12113.338126] sky2 0000:04:00.0 p3p1: Link is down
+[12116.663800] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12116.984024] sky2 0000:04:00.0 p3p1: Link is down
+[12118.764889] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12119.091631] sky2 0000:04:00.0 p3p1: Link is down
+[12120.872525] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12121.187460] sky2 0000:04:00.0 p3p1: Link is down
+[12123.023091] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12123.337059] sky2 0000:04:00.0 p3p1: Link is down
+[12125.172654] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12125.507602] sky2 0000:04:00.0 p3p1: Link is down
+[12127.325158] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12127.646674] sky2 0000:04:00.0 p3p1: Link is down
+[12129.445947] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12129.764794] sky2 0000:04:00.0 p3p1: Link is down
+[12131.637122] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12131.966816] sky2 0000:04:00.0 p3p1: Link is down
+[12134.523000] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12236.681281] sky2 0000:04:00.0 p3p1: Link is down
+[12238.369709] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12238.690907] sky2 0000:04:00.0 p3p1: Link is down
+[12240.350228] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12240.683206] sky2 0000:04:00.0 p3p1: Link is down
+[12242.591879] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12242.916700] sky2 0000:04:00.0 p3p1: Link is down
+[12244.515348] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12244.835534] sky2 0000:04:00.0 p3p1: Link is down
+[12246.616429] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12246.932693] sky2 0000:04:00.0 p3p1: Link is down
+[12248.713576] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12249.029843] sky2 0000:04:00.0 p3p1: Link is down
+[12250.810745] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12251.125676] sky2 0000:04:00.0 p3p1: Link is down
+[12252.948850] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12253.285778] sky2 0000:04:00.0 p3p1: Link is down
+[12254.928050] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12255.257113] sky2 0000:04:00.0 p3p1: Link is down
+[12257.675348] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[12559.948961] sky2 0000:04:00.0 p3p1: Link is down
+[12562.801589] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[12659.620873] sky2 0000:04:00.0 p3p1: Link is down
+[12662.193131] sky2 0000:04:00.0 p3p1: Link is up at 100 Mbps, full duplex, flow control rx
+[13079.489329] sky2 0000:04:00.0 p3p1: Link is down
+[13138.428468] sky2 0000:04:00.0 p3p1: Link is up at 1000 Mbps, full duplex, flow control both
+[46500.879824] sd 5:0:0:0: [sdb] 1999872 512-byte logical blocks: (1.02 GB/976 MiB)
+[46500.882419] sd 5:0:0:0: [sdb] No Caching mode page found
+[46500.882422] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[46500.886173] sd 5:0:0:0: [sdb] No Caching mode page found
+[46500.886176] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[46500.888302]  sdb: unknown partition table
+[46516.899196] sd 5:0:0:0: [sdb] No Caching mode page found
+[46516.899201] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[46516.900565]  sdb: sdb1
+[47351.786453] sdb: detected capacity change from 1023934464 to 0
+[47591.124956] sd 5:0:0:0: [sdb] 1999872 512-byte logical blocks: (1.02 GB/976 MiB)
+[47591.128076] sd 5:0:0:0: [sdb] No Caching mode page found
+[47591.128080] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[47591.131232] sd 5:0:0:0: [sdb] No Caching mode page found
+[47591.131235] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[47591.132242]  sdb: sdb1
+[47591.654119] EXT4-fs (sdb1): mounting ext2 file system using the ext4 subsystem
+[47591.692478] EXT4-fs (sdb1): mounted filesystem without journal. Opts: (null)
+[47591.692498] SELinux: initialized (dev sdb1, type ext2), uses xattr
+[47694.689310] sd 5:0:0:0: [sdb] Device not ready
+[47694.689314] sd 5:0:0:0: [sdb]  
+[47694.689316] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[47694.689318] sd 5:0:0:0: [sdb]  
+[47694.689319] Sense Key : Not Ready [current] 
+[47694.689322] sd 5:0:0:0: [sdb]  
+[47694.689325] Add. Sense: Medium not present
+[47694.689327] sd 5:0:0:0: [sdb] CDB: 
+[47694.689329] Write(10): 2a 00 00 00 08 08 00 00 08 00
+[47694.689335] end_request: I/O error, dev sdb, sector 2056
+[47694.689339] Buffer I/O error on device sdb1, logical block 1
+[47694.689341] lost page write due to I/O error on sdb1
+[47694.693541] sd 5:0:0:0: [sdb] Device not ready
+[47694.693544] sd 5:0:0:0: [sdb]  
+[47694.693546] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[47694.693547] sd 5:0:0:0: [sdb]  
+[47694.693549] Sense Key : Not Ready [current] 
+[47694.693551] sd 5:0:0:0: [sdb]  
+[47694.693554] Add. Sense: Medium not present
+[47694.693556] sd 5:0:0:0: [sdb] CDB: 
+[47694.693558] Write(10): 2a 00 00 10 08 00 00 00 88 00
+[47694.693564] end_request: I/O error, dev sdb, sector 1050624
+[47694.693568] Buffer I/O error on device sdb1, logical block 131072
+[47694.693570] lost page write due to I/O error on sdb1
+[47694.693574] Buffer I/O error on device sdb1, logical block 131073
+[47694.693576] lost page write due to I/O error on sdb1
+[47694.693578] Buffer I/O error on device sdb1, logical block 131074
+[47694.693580] lost page write due to I/O error on sdb1
+[47694.693582] Buffer I/O error on device sdb1, logical block 131075
+[47694.693583] lost page write due to I/O error on sdb1
+[47694.693586] Buffer I/O error on device sdb1, logical block 131076
+[47694.693588] lost page write due to I/O error on sdb1
+[47694.693590] Buffer I/O error on device sdb1, logical block 131077
+[47694.693592] lost page write due to I/O error on sdb1
+[47694.693594] Buffer I/O error on device sdb1, logical block 131078
+[47694.693595] lost page write due to I/O error on sdb1
+[47694.693598] Buffer I/O error on device sdb1, logical block 131079
+[47694.693599] lost page write due to I/O error on sdb1
+[47694.695537] sd 5:0:0:0: [sdb] Device not ready
+[47694.695540] sd 5:0:0:0: [sdb]  
+[47694.695542] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[47694.695544] sd 5:0:0:0: [sdb]  
+[47694.695545] Sense Key : Not Ready [current] 
+[47694.695547] sd 5:0:0:0: [sdb]  
+[47694.695550] Add. Sense: Medium not present
+[47694.695552] sd 5:0:0:0: [sdb] CDB: 
+[47694.695553] Read(10): 28 00 00 04 09 f0 00 00 08 00
+[47694.695559] end_request: I/O error, dev sdb, sector 264688
+[47694.695580] EXT4-fs error (device sdb1): ext4_wait_block_bitmap:471: comm mc: Cannot read block bitmap - block_group = 1, block_bitmap = 32830
+[47694.696782] sd 5:0:0:0: [sdb] Device not ready
+[47694.696785] sd 5:0:0:0: [sdb]  
+[47694.696786] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[47694.696788] sd 5:0:0:0: [sdb]  
+[47694.696789] Sense Key : Not Ready [current] 
+[47694.696792] sd 5:0:0:0: [sdb]  
+[47694.696794] Add. Sense: Medium not present
+[47694.696796] sd 5:0:0:0: [sdb] CDB: 
+[47694.696797] Write(10): 2a 00 00 00 08 00 00 00 08 00
+[47694.696803] end_request: I/O error, dev sdb, sector 2048
+[47694.698655] sd 5:0:0:0: [sdb] Device not ready
+[47694.698658] sd 5:0:0:0: [sdb]  
+[47694.698659] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[47694.698661] sd 5:0:0:0: [sdb]  
+[47694.698662] Sense Key : Not Ready [current] 
+[47694.698664] sd 5:0:0:0: [sdb]  
+[47694.698666] Add. Sense: Medium not present
+[47694.698668] sd 5:0:0:0: [sdb] CDB: 
+[47694.698669] Read(10): 28 00 00 08 08 00 00 00 08 00
+[47694.698675] end_request: I/O error, dev sdb, sector 526336
+[47694.698685] EXT4-fs error (device sdb1): ext4_wait_block_bitmap:471: comm mc: Cannot read block bitmap - block_group = 2, block_bitmap = 65536
+[47694.698688] EXT4-fs (sdb1): previous I/O error to superblock detected
+[47694.700531] sd 5:0:0:0: [sdb] Device not ready
+[47694.700534] sd 5:0:0:0: [sdb]  
+[47694.700535] Result: hostbyte=DID_OK driverbyte=DRIVER_SENSE
+[47694.700537] sd 5:0:0:0: [sdb]  
+[47694.700538] Sense Key : Not Ready [current] 
+[47694.700541] sd 5:0:0:0: [sdb]  
+[47694.700542] Add. Sense: Medium not present
+[47694.700545] sd 5:0:0:0: [sdb] CDB: 
+[47694.700546] Write(10): 2a 00 00 00 08 00 00 00 08 00
+[47694.700551] end_request: I/O error, dev sdb, sector 2048
+[47694.700740] EXT4-fs error (device sdb1): ext4_wait_block_bitmap:471: comm mc: Cannot read block bitmap - block_group = 3, block_bitmap = 98366
+[47694.700743] EXT4-fs (sdb1): previous I/O error to superblock detected
+[47694.700770] EXT4-fs error (device sdb1): ext4_wait_block_bitmap:471: comm mc: Cannot read block bitmap - block_group = 4, block_bitmap = 131072
+[47694.700772] EXT4-fs (sdb1): previous I/O error to superblock detected
+[47694.700812] EXT4-fs error (device sdb1): ext4_wait_block_bitmap:471: comm mc: Cannot read block bitmap - block_group = 4, block_bitmap = 131072
+[47694.700814] EXT4-fs (sdb1): previous I/O error to superblock detected
+[47694.700825] EXT4-fs error (device sdb1): ext4_discard_preallocations:3961: comm mc: Error reading block bitmap for 4
+[47694.700827] EXT4-fs (sdb1): previous I/O error to superblock detected
+[47694.975951] EXT4-fs warning (device sdb1): ext4_end_bio:317: I/O error writing to inode 31460 (offset 0 size 0 starting block 133603)
+[47694.975962] Buffer I/O error on device sdb1, logical block 133331
+[47694.975971] Buffer I/O error on device sdb1, logical block 133332
+[47694.975977] Buffer I/O error on device sdb1, logical block 133333
+[47694.975982] Buffer I/O error on device sdb1, logical block 133334
+[47694.975988] Buffer I/O error on device sdb1, logical block 133335
+[47694.975994] Buffer I/O error on device sdb1, logical block 133336
+[47694.975999] Buffer I/O error on device sdb1, logical block 133337
+[47694.976005] Buffer I/O error on device sdb1, logical block 133338
+[47694.976010] Buffer I/O error on device sdb1, logical block 133339
+[47694.976016] Buffer I/O error on device sdb1, logical block 133340
+[47694.976038] EXT4-fs warning (device sdb1): ext4_end_bio:317: I/O error writing to inode 31460 (offset 0 size 0 starting block 878)
+[47694.976038] EXT4-fs warning (device sdb1): ext4_end_bio:317: I/O error writing to inode 31460 (offset 0 size 0 starting block 896)
+[47694.976038] EXT4-fs warning (device sdb1): ext4_end_bio:317: I/O error writing to inode 31460 (offset 0 size 0 starting block 958)
+[47694.976038] EXT4-fs warning (device sdb1): ext4_end_bio:317: I/O error writing to inode 31460 (offset 0 size 0 starting block 988)
+[47694.976038] EXT4-fs warning (device sdb1): ext4_end_bio:317: I/O error writing to inode 31460 (offset 0 size 0 starting block 992)
+[47694.976038] EXT4-fs warning (device sdb1): ext4_end_bio:317: I/O error writing to inode 31460 (offset 0 size 0 starting block 1054)
+[47694.976038] EXT4-fs warning (device sdb1): ext4_end_bio:317: I/O error writing to inode 31460 (offset 0 size 0 starting block 1084)
+[47694.976038] EXT4-fs warning (device sdb1): ext4_end_bio:317: I/O error writing to inode 31460 (offset 0 size 0 starting block 1114)
+[47694.976038] EXT4-fs warning (device sdb1): ext4_end_bio:317: I/O error writing to inode 31460 (offset 0 size 0 starting block 1144)
+[47701.776259] EXT4-fs error (device sdb1): ext4_free_branches:1117: inode #31466: block 131569: comm mc: Read failure
+[47701.776265] EXT4-fs (sdb1): previous I/O error to superblock detected
+[47702.627044] EXT4-fs error (device sdb1): ext4_wait_block_bitmap:471: comm mc: Cannot read block bitmap - block_group = 4, block_bitmap = 131072
+[47702.627056] EXT4-fs (sdb1): previous I/O error to superblock detected
+[47704.548662] EXT4-fs error (device sdb1): ext4_wait_block_bitmap:471: comm mc: Cannot read block bitmap - block_group = 4, block_bitmap = 131072
+[47704.548674] EXT4-fs (sdb1): previous I/O error to superblock detected
+[47705.019806] EXT4-fs error (device sdb1): ext4_wait_block_bitmap:471: comm mc: Cannot read block bitmap - block_group = 4, block_bitmap = 131072
+[47705.019817] EXT4-fs (sdb1): previous I/O error to superblock detected
+[47705.242465] EXT4-fs error (device sdb1): ext4_wait_block_bitmap:471: comm mc: Cannot read block bitmap - block_group = 4, block_bitmap = 131072
+[47705.242476] EXT4-fs (sdb1): previous I/O error to superblock detected
+[47827.945891] sd 5:0:0:0: [sdb] 1999872 512-byte logical blocks: (1.02 GB/976 MiB)
+[47827.948512] sd 5:0:0:0: [sdb] No Caching mode page found
+[47827.948517] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[47868.267599] ------------[ cut here ]------------
+[47868.267609] WARNING: CPU: 1 PID: 15227 at fs/buffer.c:1166 mark_buffer_dirty+0xb5/0xd0()
+[47868.267611] Modules linked in: ccm ipt_MASQUERADE xt_CHECKSUM tun bnep ip6t_rpfilter ip6t_REJECT xt_conntrack ebtable_nat ebtable_broute bridge stp llc ebtable_filter ebtables ip6table_nat nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_ipv6 ip6table_mangle ip6table_security ip6table_raw ip6table_filter ip6_tables iptable_nat nf_conntrack_ipv4 nf_defrag_ipv4 nf_nat_ipv4 nf_nat nf_conntrack iptable_mangle iptable_security iptable_raw uvcvideo videobuf2_vmalloc videobuf2_memops videobuf2_core videodev media coretemp arc4 iwldvm btusb snd_hda_codec_realtek snd_hda_codec_generic snd_hda_intel snd_hda_codec mac80211 kvm_intel kvm bluetooth snd_hwdep snd_seq snd_seq_device snd_pcm iTCO_wdt iTCO_vendor_support snd_timer ppdev 6lowpan_iphc snd soundcore microcode iwlwifi cfg80211 rfkill serio_raw i2c_i801 lpc_ich
+[47868.267657]  mfd_core shpchp parport_pc parport acpi_cpufreq binfmt_misc dm_crypt i915 ata_generic i2c_algo_bit pata_acpi drm_kms_helper drm sky2 i2c_core video usb_storage
+[47868.267669] CPU: 1 PID: 15227 Comm: mc Not tainted 3.14.2-200.fc20.x86_64 #1
+[47868.267671] Hardware name: FUJITSU SIEMENS ESPRIMO Mobile U9200/S11D, BIOS 1.11 - 067 - 1566 04/22/2008
+[47868.267673]  0000000000000000 00000000b9532524 ffff88009d3d3ce8 ffffffff816eec92
+[47868.267676]  0000000000000000 ffff88009d3d3d20 ffffffff8108a1bd ffff8801038f6ea0
+[47868.267678]  ffff8801038f6ea0 0000000000000001 ffffffff8182c820 00000000000003ac
+[47868.267681] Call Trace:
+[47868.267687]  [<ffffffff816eec92>] dump_stack+0x45/0x56
+[47868.267691]  [<ffffffff8108a1bd>] warn_slowpath_common+0x7d/0xa0
+[47868.267694]  [<ffffffff8108a2ea>] warn_slowpath_null+0x1a/0x20
+[47868.267696]  [<ffffffff8121bc85>] mark_buffer_dirty+0xb5/0xd0
+[47868.267700]  [<ffffffff812a6238>] __ext4_handle_dirty_metadata+0x188/0x1c0
+[47868.267703]  [<ffffffff812a5a12>] ? ext4_journal_check_start+0x12/0x90
+[47868.267706]  [<ffffffff812a5b95>] ? __ext4_journal_start_sb+0xd5/0xe0
+[47868.267708]  [<ffffffff812a5e05>] ? __ext4_journal_get_write_access+0x25/0x80
+[47868.267712]  [<ffffffff812712a8>] __ext4_new_inode+0xba8/0x1490
+[47868.267715]  [<ffffffff81280d10>] ext4_mkdir+0x190/0x3e0
+[47868.267718]  [<ffffffff811f9f97>] vfs_mkdir+0xb7/0x160
+[47868.267721]  [<ffffffff811facde>] SyS_mkdir+0x6e/0xe0
+[47868.267724]  [<ffffffff816ff029>] system_call_fastpath+0x16/0x1b
+[47868.267726] ---[ end trace dbad1f9a21444b89 ]---
+[47868.267731] EXT4-fs error (device sdb1): __ext4_new_inode:983: comm mc: failed to insert inode 31241: doubly allocated?
+[47868.267734] EXT4-fs (sdb1): previous I/O error to superblock detected

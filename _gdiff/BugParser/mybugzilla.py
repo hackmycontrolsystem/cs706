@@ -1,15 +1,71 @@
 import sys, os
 import mycrawler
 import argparse
-from reporting import report
 import time
 import xml.etree.ElementTree as ET
+from os.path import isfile, join
+import glob
 
 ARGS = argparse.ArgumentParser(description="Bugzilla web crawler")
 
 ARGS.add_argument('-b', nargs=1, help='A bug id')
 ARGS.add_argument('-f', nargs=1, help='Uses a file with a list of bugs id')
 ARGS.add_argument('-x', nargs=1, help='XML file, downloaded from bugzilla')
+
+def parseBugCallTrace():
+    #app.config.from_pyfile('config_file.cfg');
+    #folderPath = app.config["BUG_DIRECTORY"]
+    folderPath = 'BugParser/bug_db/'
+    allFiles = glob.glob(folderPath+"*.txt")
+    contents = ""
+    for file in allFiles:
+        val = getCallHierarchy(file)
+        if(val != ""):
+            contents += val + "\n"
+    
+    #outFile = app.config["BUG_PARSING_OUTPUT"]
+    outFile = 'BugParser/result.txt'
+    with open(outFile, 'w') as the_file:
+        the_file.write(contents)
+        
+def getCallHierarchy(file):
+    f = open(file,"r")
+    lines = f.readlines()
+    i=0
+    found = 0
+    funcList = []
+    while(i<len(lines)):
+        while(lines[i].find("Call Trace:") == -1 and found == 0 and i < len(lines)-1):
+            i += 1
+        if(i == len(lines)-2):
+            i+=1
+        if(i>=len(lines)):
+            break
+        if(lines[i].find("Call Trace:")!=-1):
+            found = 1
+            funcList = []
+            i+=1
+        while(found == 1 and i<len(lines) and lines[i].find("---[ end trace")==-1):
+            funcName = lines[i][lines[i].find(">] ")+3:]
+            funcName = funcName[:funcName.find("+")]
+            funcList.append(funcName)
+            i+=1
+        if(i<len(lines) and lines[i].find("---[ end trace")!=-1):
+            found = 0
+            i = len(lines) + 1
+        if(i == len(lines)-2 or i == len(lines)-1):
+            i+=1
+        if(i>len(lines) + 1):
+            break
+    
+    if(len(funcList) == 0):
+        return ""
+    funcNames = ""
+    for funcName in funcList:
+        funcNames += funcName + "#"
+    
+    funcName = file[(file.rindex("/")+1):file.find(".txt")] + ": " + funcNames[:-1]
+    return funcName
 
 
 def fix_url(url):
@@ -75,7 +131,7 @@ def main():
     return 
 
   ## Create a folder to save bug details
-  filename = "bug_db/tmp.txt"
+  filename = "BugParser/bug_db/tmp.txt"
   if not os.path.exists(os.path.dirname(filename)):
     try:
       os.makedirs(os.path.dirname(filename))
@@ -95,7 +151,12 @@ def main():
     total_time = round(time.time() - start_time, 2)
     print "It took %s seconds to download %s bug reports!" % (total_time, len(bugs))
 
-    #report(output)
+    # Now parse these files and generate result.txt. 
+    # Desp: result.txt is of form: 
+    # bug_id: fn1#fn2#fn3...
+    parseBugCallTrace()
+    print "Parsed all the downloaded and saved results in result.txt"
+
   except KeyboardInterrupt:
     print "Interupted!"
   except mycrawler.BugNotFound, e:

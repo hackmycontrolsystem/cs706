@@ -29,7 +29,7 @@ def get_attachments(bug, data):
     #print "Got attahment", str(attachment_data)
     #print "Got attahment in plain text."
 
-    bug_filename = "bug_db/" + str(get_id(bug)) + ".txt"
+    bug_filename = "BugParser/bug_db/" + str(get_id(bug)) + ".txt"
     bug_attachment = open(bug_filename, 'w')
 
     bug_attachment.write(str(attachment_data))
@@ -46,7 +46,6 @@ def get_attachments(bug, data):
 
 
 def download(bug):
-  #data = http.get(bug)
   data = urllib2.urlopen(bug).read()
 
   #if "not a valid bug number nor an alias to a bug" in data:

@@ -1,0 +1,48 @@
+[1877529.369005] EXT4-fs (nbd0): mounted filesystem with ordered data mode. Opts: (null)
+[1878707.011998] block nbd0: NBD_DISCONNECT
+[1878707.013193] block nbd0: Receive control failed (result -32)
+[1878709.371873] block nbd0: Attempted send on closed socket
+[1878709.371877] blk_update_request: I/O error, dev nbd0, sector 0
+[1878709.379118] ------------[ cut here ]------------
+[1878709.379133] kernel BUG at fs/buffer.c:2996!
+[1878709.379143] invalid opcode: 0000 [#1] SMP 
+[1878709.379154] Modules linked in: nbd nls_utf8 isofs ipt_MASQUERADE nf_nat_masquerade_ipv4 xt_CHECKSUM nf_conntrack_netbios_ns nf_conntrack_broadcast ip6t_rpfilter ip6t_REJECT nf_reject_ipv6 xt_conntrack ebtable_broute ebtable_nat ip6table_raw ip6table_nat nf_conntrack_ipv6 nf_defrag_ipv6 nf_nat_ipv6 ip6table_mangle ip6table_security iptable_raw iptable_nat nf_conntrack_ipv4 nf_defrag_ipv4 nf_nat_ipv4 nf_nat nf_conntrack iptable_mangle iptable_security ebtable_filter ebtables ip6table_filter ip6_tables tcp_diag udp_diag inet_diag unix_diag nfsv3 rpcsec_gss_krb5 nfsv4 dns_resolver nfs fscache loop xfs libcrc32c btrfs xor raid6_pq vhost_net vhost macvtap macvlan cmac rfcomm fuse tun ip_set nfnetlink bridge stp llc bnep arc4 iTCO_wdt iwlmvm iTCO_vendor_support mac80211 intel_rapl snd_hda_codec_hdmi snd_hda_codec_realtek
+[1878709.379349]  x86_pkg_temp_thermal coretemp snd_hda_codec_generic kvm_intel uvcvideo videobuf2_vmalloc snd_hda_intel videobuf2_memops videobuf2_v4l2 snd_hda_codec videobuf2_core iwlwifi kvm btusb videodev irqbypass btrtl btbcm ghash_clmulni_intel btintel joydev bluetooth media i2c_i801 snd_hda_core cfg80211 snd_hwdep snd_seq snd_seq_device snd_pcm lpc_ich mei_me mei snd_timer thinkpad_acpi snd soundcore rfkill ie31200_edac shpchp edac_core tpm_tis tpm nfsd auth_rpcgss nfs_acl lockd grace sunrpc dm_crypt hid_cherry hid_a4tech uas usb_storage nouveau i915 mxm_wmi ttm i2c_algo_bit drm_kms_helper crct10dif_pclmul crc32_pclmul crc32c_intel e1000e drm serio_raw sdhci_pci sdhci mmc_core ptp pps_core wmi fjes video [last unloaded: ip6_tables]
+[1878709.379529] CPU: 4 PID: 26805 Comm: umount Not tainted 4.5.7-300.fc24.x86_64 #1
+[1878709.379544] Hardware name: LENOVO 20EGS0R60D/20EGS0R60D, BIOS GNET71WW (2.19 ) 02/05/2015
+[1878709.379561] task: ffff880125dbdb80 ti: ffff8801ab0b4000 task.ti: ffff8801ab0b4000
+[1878709.379576] RIP: 0010:[<ffffffff8127aa02>]  [<ffffffff8127aa02>] submit_bh_wbc+0x152/0x160
+[1878709.379596] RSP: 0018:ffff8801ab0b7cc8  EFLAGS: 00010246
+[1878709.379608] RAX: 0000000004000005 RBX: ffff8803262e0340 RCX: 0000000000000000
+[1878709.379622] RDX: 0000000000000000 RSI: ffff8803262e0340 RDI: 0000000000003411
+[1878709.379637] RBP: ffff8801ab0b7cf0 R08: ffff8801ab0b7d90 R09: 0000000000000000
+[1878709.379651] R10: 0000000000000000 R11: 0000000000000001 R12: ffff8803a4fec000
+[1878709.379667] R13: ffff8803262e0340 R14: 0000000000003411 R15: ffff880275ff8000
+[1878709.379682] FS:  00007fac4f656840(0000) GS:ffff88047e300000(0000) knlGS:0000000000000000
+[1878709.379698] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[1878709.379710] CR2: 000055c3bc2b2110 CR3: 000000018118c000 CR4: 00000000001426e0
+[1878709.379724] Stack:
+[1878709.379730]  ffff8803a4fec000 ffff8803a4fec000 ffff8803262e0340 0000000000003411
+[1878709.379748]  ffff880275ff8000 ffff8801ab0b7d00 ffffffff8127aa42 ffff8801ab0b7d38
+[1878709.379765]  ffffffff8132e006 ffff8803a4fec000 0000000000003411 ffff880275ff8000
+[1878709.379783] Call Trace:
+[1878709.379791]  [<ffffffff8127aa42>] submit_bh+0x12/0x20
+[1878709.379803]  [<ffffffff8132e006>] jbd2_write_superblock+0xa6/0x1c0
+[1878709.379817]  [<ffffffff8132e1d2>] jbd2_mark_journal_empty+0x62/0x90
+[1878709.379830]  [<ffffffff8132e44e>] jbd2_journal_destroy+0x24e/0x280
+[1878709.379846]  [<ffffffff810e88b0>] ? prepare_to_wait_event+0xf0/0xf0
+[1878709.379860]  [<ffffffff812f6b54>] ext4_put_super+0x64/0x340
+[1878709.379873]  [<ffffffff81244a4f>] generic_shutdown_super+0x6f/0xf0
+[1878709.379887]  [<ffffffff81244db7>] kill_block_super+0x27/0x70
+[1878709.379899]  [<ffffffff81245113>] deactivate_locked_super+0x43/0x70
+[1878709.379913]  [<ffffffff8124519a>] deactivate_super+0x5a/0x60
+[1878709.379926]  [<ffffffff81262a2f>] cleanup_mnt+0x3f/0x90
+[1878709.379937]  [<ffffffff81262ac2>] __cleanup_mnt+0x12/0x20
+[1878709.379950]  [<ffffffff810c2e24>] task_work_run+0x84/0xa0
+[1878709.379963]  [<ffffffff81003242>] exit_to_usermode_loop+0xc2/0xd0
+[1878709.379976]  [<ffffffff81003d51>] syscall_return_slowpath+0xa1/0xb0
+[1878709.379992]  [<ffffffff817cf1c8>] int_ret_from_sys_call+0x25/0x8f
+[1878709.380004] Code: 44 89 ef e8 81 94 12 00 5b 31 c0 41 5c 41 5d 41 5e 41 5f 5d c3 40 f6 c7 01 0f 84 1c ff ff ff f0 80 63 01 f7 e9 12 ff ff ff 0f 0b <0f> 0b 0f 0b 0f 0b 0f 0b 0f 0b 0f 1f 40 00 0f 1f 44 00 00 55 31 
+[1878709.380083] RIP  [<ffffffff8127aa02>] submit_bh_wbc+0x152/0x160
+[1878709.380097]  RSP <ffff8801ab0b7cc8>
+[1878709.385371] ---[ end trace 1169106e33366acf ]---
