@@ -37,4 +37,6 @@ Requirements
 * python 2.7 or 2.10
 * BeautifulSoup
 * urllib2
+* ctags
+* cflow
 
