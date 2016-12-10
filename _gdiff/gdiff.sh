@@ -28,7 +28,7 @@ python parse_ctags.py /tmp/gdiff/runs/gdiff_tags_v1
 
 
 echo "************ finding all *.c files in project ***********"
-find ${PATH_V1}/* -type f -name "*.c" > /tmp/gdiff/runs/find_output_v1
+C_FILES=$(find ${PATH_V1}/* -type f -name "*.c") # > /tmp/gdiff/runs/find_output_v1
 echo "all files are listed in /tmp/gdiff/runs/find_output file\n"
 
 SAVE_CWD=$PWD
@@ -37,8 +37,9 @@ echo "Running cflow..."
 cd ${PATH_V1}
 
 #cflow server/*.c server/mpm/event/*.c server/mpm/worker/*.c server/mpm/netware/*.c server/mpm/prefork/*.c server/mpm/winnt/*.c server/mpm/mpmt_os2/*.c  modules/aaa/*.c modules/arch/*.c modules/cache/*.c support/*.c os/beos/beosd.c os/bs2000/*.c os/netware/*.c os/os2/*.c os/tpf/*.c os/unix/*.c os/win32/*.c  -o /tmp/gdiff/runs/all_cflow
+echo $C_FILES
 
-cflow bufferv1.c -o /tmp/gdiff/runs/all_cflow
+cflow $C_FILES -o /tmp/gdiff/runs/all_cflow
 #cflow inode.c namei.c locks.c read_write.c -o /tmp/gdiff/runs/all_cflow
 #cflow inode.c  -o /tmp/gdiff/runs/all_cflow
 echo " " >> /tmp/gdiff/runs/all_cflow
@@ -53,7 +54,7 @@ echo "Removed standard library functions from all_flow and result stored in gdif
 echo "**************Restoring backups...*********"
 python restore_files_frm_bakup.py /tmp/gdiff/runs/gdiff_tags_v1 
 
-
+exit 0
 
 
 
