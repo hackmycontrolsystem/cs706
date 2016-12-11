@@ -4,7 +4,6 @@ import os
 import sys
 import re
 
-
 app = Flask(__name__)
 currentWorkingDir = os.getcwd()
 
@@ -26,31 +25,110 @@ else:
 def StructOpt():
     app.config.from_pyfile('config_file.cfg');
     if request.method == 'GET':
+        areBugsAssociated = 0
+        bugFile = app.config["BUGDATA_FILE"]
+        f = open(bugFile,"r")
+        lines = f.readlines()
+        if(len(lines) > 0): areBugsAssociated = 1
         graphData = ""
         bugLink = ""
         try:
             bugLink = "\"" + app.config["BUG_LINK"] + "\""
             file2 = app.config["CFLOW_VERSION2"]
             graphData = parseData(app.config["CFLOW_VERSION1"], file2)
-	    with open(currentWorkingDir + '/output/graphData.txt', 'w') as the_file:
+            with open(currentWorkingDir + '/output/graphData.txt', 'w') as the_file:
                 the_file.write(graphData)
             collapeModified = 1
             if(file2 == None): collapeModified = 0
-            return render_template("gdiff.html", graphData=graphData, bugLink=bugLink, collapeModified=collapeModified, foo=1);
+            return render_template("gdiff.html", graphData=graphData, bugLink=bugLink, collapeModified=collapeModified, areBugsAssociated=areBugsAssociated, foo=1);
         except Exception as e:
             logging.exception('Error: %s', e)
         return render_template("gdiff.html");
     elif request.method == 'POST':
+        areBugsAssociated = 0
+        bugFile = app.config["BUGDATA_FILE"]
+        f = open(bugFile,"r")
+        lines = f.readlines()
+        if(len(lines) > 0): areBugsAssociated = 1
         graphData = ""
-        bugLink = app.config["BUG_LINK"]
-        graphData = parseData(app.config["CFLOW_VERSION1"], app.config["CFLOW_VERSION2"])
-        return render_template('gdiff.html', graphData=graphData, bugLink=bugLink, foo=1);
-
+        bugLink = ""
+        try:
+            bugLink = "\"" + app.config["BUG_LINK"] + "\""
+            file2 = app.config["CFLOW_VERSION2"]
+            graphData = parseData(app.config["CFLOW_VERSION1"], file2)
+            with open(currentWorkingDir + '/output/graphData.txt', 'w') as the_file:
+                the_file.write(graphData)
+            collapeModified = 1
+            if(file2 == None): collapeModified = 0
+            return render_template("gdiff.html", graphData=graphData, bugLink=bugLink, collapeModified=collapeModified, areBugsAssociated=areBugsAssociated, foo=1);
+        except Exception as e:
+            logging.exception('Error: %s', e)
+        return render_template("gdiff.html");
+         
 def getDiffData(file1, file2):
     if(file2 == None):
         return file1
     else:
         return generatedDiffGraphData(file1, file2)
+
+def getChildBugCounts(file):
+    f = open(file,"r")
+    lines = f.readlines()
+    maxDepth = -1
+    
+    linesLen = (len(lines))
+    
+    for i in range(0, linesLen):
+        currIdx = int(lines[i].split("~~")[0])
+        if(currIdx > maxDepth):
+            maxDepth = int(currIdx)
+    
+    for j in range(maxDepth, -1, -1):
+        i=0
+        contents = []
+        parentIdx = -1
+        childFlag = 0
+        while(i < (linesLen)):
+            currIdx = int(lines[i].split("~~")[0])
+            if(currIdx!=j):
+                while(currIdx!=j and i < linesLen-1):
+                    contents.append(lines[i])
+                    i+=1
+                    currIdx = int(lines[i].split("~~")[0])
+            
+            if(currIdx==j):
+                while(currIdx==j and i < linesLen-1):
+                    parentIdx = len(contents)
+                    childFlag = 0
+                    contents.append(lines[i])
+                    i+=1
+                    currIdx = int(lines[i].split("~~")[0])
+            
+            if(currIdx > j):
+                while(currIdx>j and i < linesLen-1):
+                    lineCnt = len(lines[i].split("~~"))-6
+                    if(lineCnt!=0 and childFlag == 0): childFlag = 1
+                    contents.append(lines[i])
+                    i+=1
+                    currIdx = int(lines[i].split("~~")[0])
+            
+            if(childFlag!=0 and parentIdx!=-1):
+                parentData = contents[parentIdx].split("~~")
+                if(len(parentData) > 6):
+                    contents[parentIdx] = parentData[0] + "~~" + parentData[1] + "~~" + parentData[2] + "~~" + parentData[3] + "~~" + parentData[4] + "~~" + str(childFlag) + "~~" + parentData[6] #+ "\n"
+                else:
+                    contents[parentIdx] = parentData[0] + "~~" + parentData[1] + "~~" + parentData[2] + "~~" + parentData[3] + "~~" + parentData[4] + "~~" + str(childFlag) + "\n"
+            parentIdx = -1
+            childFlag = 0
+            if(i == linesLen-1): 
+                contents.append(lines[i])
+                i+=1
+            
+        lines = contents
+    
+    with open(file, 'w') as the_file:
+        for item in contents:
+            the_file.write(item)
 
 def getChildChangeCounts(file):
     f = open(file,"r")
@@ -95,7 +173,7 @@ def getChildChangeCounts(file):
             
             if(childFlag!=0 and parentIdx!=-1):
                 parentData = contents[parentIdx].split("~~")
-                contents[parentIdx] = parentData[0] + "~~" + parentData[1] + "~~" + parentData[2] + "~~" + str(childFlag) + "~~" + parentData[4] #+ "\n"
+                contents[parentIdx] = parentData[0] + "~~" + parentData[1] + "~~" + parentData[2] + "~~" + str(childFlag) + "~~" + parentData[4] + "~~" + parentData[5] #+ "\n"
             
             parentIdx = -1
             childFlag = 0
@@ -228,7 +306,8 @@ def generatedDiffGraphData(file1, file2):
             childFlag = 0
             if(int(data1[3]) != 0 or int(data2[3]) !=0):
                 childFlag = 1
-            contents += data1[0] + "~~" + data1[1] + "~~" + sumVal + "~~" + str(childFlag) +  "~~" + data1[4] 
+            #if(data1[5].endswith("\n")): data1[5] = data1[5][:-1]
+            contents += data1[0] + "~~" + data1[1] + "~~" + sumVal + "~~" + str(childFlag) +  "~~" + data1[4] +  "~~" + str(data1[5]) 
             i += 1
             j += 1
         elif(int(data1[0]) == int(data2[0])):
@@ -241,25 +320,25 @@ def generatedDiffGraphData(file1, file2):
                 funcName1 = data1[1][0:data1[1].find("(")]
                 funcName2 = data2[1][0:data2[1].find("(")]
             if(funcName1 > funcName2):
-                contents += data2[0] + "~~" + data2[1] + "~~" + str(data2[2]) + "~~" + str(data2[3]) + "~~" + str(data2[4])
+                contents += data2[0] + "~~" + data2[1] + "~~" + str(data2[2]) + "~~" + str(data2[3]) + "~~" + str(data2[4]) + "~~" + str(data2[5])
                 j += 1
             else:
-                contents += data1[0] + "~~" + data1[1] + "~~" + str(data1[2])+ "~~" + str(data1[3]) + "~~" + str(data1[4])
+                contents += data1[0] + "~~" + data1[1] + "~~" + str(data1[2])+ "~~" + str(data1[3]) + "~~" + str(data1[4]) + "~~" + str(data1[5])
                 i += 1
         elif(int(data1[0]) < int(data2[0])):
-            contents += data2[0] + "~~" + data2[1] + "~~" + str(data2[2])+ "~~" + str(data2[3]) + "~~" + str(data2[4])
+            contents += data2[0] + "~~" + data2[1] + "~~" + str(data2[2])+ "~~" + str(data2[3]) + "~~" + str(data2[4]) + "~~" + str(data2[5])
             j += 1
         else:
-            contents += data1[0] + "~~" + data1[1] + "~~" + str(data1[2])+ "~~" + str(data1[3]) + "~~" + str(data1[4])
+            contents += data1[0] + "~~" + data1[1] + "~~" + str(data1[2])+ "~~" + str(data1[3]) + "~~" + str(data1[4]) + "~~" + str(data1[5])
             i += 1
     while(i<len(lines1)):
         data1 = lines1[i].split("~~")
-        contents += data1[0] + "~~" + data1[1] + "~~" + str(data1[2])+ "~~" + str(data1[3]) + "~~" + str(data1[4])
+        contents += data1[0] + "~~" + data1[1] + "~~" + str(data1[2])+ "~~" + str(data1[3]) + "~~" + str(data1[4]) + "~~" + str(data1[5])
         i += 1
     
     while(j<len(lines2)):
         data2 = lines2[j].split("~~")
-        contents += data2[0] + "~~" + data2[1] + "~~" + str(data2[2]) + "~~" + str(data2[3]) + "~~" + str(data2[4])
+        contents += data2[0] + "~~" + data2[1] + "~~" + str(data2[2]) + "~~" + str(data2[3]) + "~~" + str(data2[4]) + "~~" + str(data2[5])
         j += 1
         
     with open(resultFile, 'w') as the_file:
@@ -270,6 +349,7 @@ def generateOutputFile(fileName, version):
     actualFileName = fileName[(fileName.rindex("/")+1):]
     childrenChangedFlag = 0
     recursiveFlag = 0
+    childrenBugFlag = 0
     linkCount = 0
     if(version == 1):
         linkCount = -1
@@ -293,7 +373,7 @@ def generateOutputFile(fileName, version):
                 idxStr = "0" + str(leading_spaces)
             else:
                 idxStr = str(leading_spaces)
-            content += idxStr + "~~" + line.strip() + "~~" + str(linkCount) + "~~" + str(childrenChangedFlag) + "~~" + str(recursiveFlag) + "\n"
+            content += idxStr + "~~" + line.strip() + "~~" + str(linkCount) + "~~" + str(childrenChangedFlag) + "~~" + str(recursiveFlag) + "~~" + str(childrenBugFlag) +"\n"
             
     with open(currentWorkingDir + '/output/' + actualFileName + '_output.txt', 'w') as the_file:
         the_file.write(content)
@@ -331,9 +411,10 @@ def associateBugData(file):
                 if(len(bugIndices) == pathLength):
                     for inx in bugIndices:
                         outData = outLines[inx].split("~~")
-                        if(len(outData) > 5):
+                        if(len(outData) > 6):
                             outLines[inx] = outLines[inx][:-1] + "##" + bugId + "\n"
-                        else: outLines[inx] = outLines[inx][:-1] + "~~" + bugId + "\n"
+                        else: 
+                            outLines[inx] = outLines[inx][:-1] + "~~" + bugId + "\n"
                     #break
                     outLines = outLines
                     bugIndices = []
@@ -353,9 +434,10 @@ def associateBugData(file):
                 if(len(bugIndices) == pathLength):
                     for inx in bugIndices:
                         outData = outLines[inx].split("~~")
-                        if(len(outData) > 5):
+                        if(len(outData) > 6):
                             outLines[inx] = outLines[inx][:-1] + "##" + bugId + "\n"
-                        else: outLines[inx] = outLines[inx][:-1] + "~~" + bugId + "\n"
+                        else: 
+                            outLines[inx] = outLines[inx][:-1] + "~~" + bugId + "\n"
                 outLines = outLines
                 bugIndices = []
                 prevIdx = -1
@@ -371,7 +453,7 @@ def parseData(fileName1, fileName2):
     actualFileName1 = fileName1[(fileName1.rindex("/")+1):]
     generateOutputFile(fileName1, 1)
     file1 = currentWorkingDir + '/output/' + actualFileName1 + '_output.txt'
-    print fileName1, fileName2     
+    
     if(fileName2 == None):
         file2 = None
     else:
@@ -394,13 +476,11 @@ def parseData(fileName1, fileName2):
             for line in lines1:
                 the_file.write(line)
 
-    print "before bud association"
     associateBugData(outFile)
-    print "after bug association"
-    
+    getChildBugCounts(outFile)
     outData = open(outFile)
-           
-    finalContent = "{\"idx\": \"-1\", \"name\": \"root\", \"filename\": \"\", \"linkCount\": 0, \"childrenChangedFlag\": 0, \"recursive\": 0, \"bugs\": \"\", \"children\":["
+    #childrenBugFlag
+    finalContent = "{\"idx\": \"-1\", \"name\": \"root\", \"filename\": \"\", \"linkCount\": 0, \"childrenChangedFlag\": 1, \"recursive\": 0, \"bugs\": \"\", \"childrenBugFlag\": 1, \"children\":["
     for line in outData:
         data = line.split("~~")
         idx = int(data[0])
@@ -410,18 +490,19 @@ def parseData(fileName1, fileName2):
             linkCount = 0
         childrenChangedFlag = int(data[3])
         recursive = int(data[4])
-        if(len(data)>5):
-            bugs = "\"" + data[5][:-1] + "\""
+        childrenBugFlag = int(data[5])
+        if(len(data)>6):
+            bugs = "\"" + data[6][:-1] + "\""
         else:
             bugs = "\"\""
         if(idx > prevIdx):
-            finalContent += "\n" + printTabs(idx) + "{\"idx\": \"" +  str(idx) + "\",\"name\": \"" +  name + "\",\"filename\": \"" + str(getFilename(data[1])) + "\",\"linkCount\": " + str(linkCount) + ",\"childrenChangedFlag\": " + str(childrenChangedFlag) + ",\"recursive\": " + str(recursive) + ",\"bugs\": " + bugs +",\"children\": [" 
+            finalContent += "\n" + printTabs(idx) + "{\"idx\": \"" +  str(idx) + "\",\"name\": \"" +  name + "\",\"filename\": \"" + str(getFilename(data[1])) + "\",\"linkCount\": " + str(linkCount) + ",\"childrenChangedFlag\": " + str(childrenChangedFlag) + ",\"recursive\": " + str(recursive) + ",\"bugs\": " + bugs + ",\"childrenBugFlag\": " + str(childrenBugFlag) + ",\"children\": [" 
         elif idx < prevIdx:
             finalContent += "]}\n" + printTabs(prevIdx) + addClosingBraces(prevIdx-idx)#"]"
             finalContent += ","
-            finalContent += "\n" + printTabs(idx) + "{\"idx\": \"" +  str(idx) + "\",\"name\": \"" +  name + "\",\"filename\": \"" + str(getFilename(data[1])) + "\",\"linkCount\": " + str(linkCount) + ",\"childrenChangedFlag\": " + str(childrenChangedFlag) + ",\"recursive\": " + str(recursive) + ",\"bugs\": " + bugs + ",\"children\": [" 
+            finalContent += "\n" + printTabs(idx) + "{\"idx\": \"" +  str(idx) + "\",\"name\": \"" +  name + "\",\"filename\": \"" + str(getFilename(data[1])) + "\",\"linkCount\": " + str(linkCount) + ",\"childrenChangedFlag\": " + str(childrenChangedFlag) + ",\"recursive\": " + str(recursive) + ",\"bugs\": " + bugs + ",\"childrenBugFlag\": " + str(childrenBugFlag) + ",\"children\": [" 
         else:
-            finalContent += "]},\n" + printTabs(idx) + "{\"idx\": \"" +  str(idx) + "\",\"name\": \"" +  name + "\",\"filename\": \"" + str(getFilename(data[1])) + "\",\"linkCount\": " + str(linkCount) + ",\"childrenChangedFlag\": " + str(childrenChangedFlag) + ",\"recursive\": " + str(recursive) + ",\"bugs\": " + bugs + ",\"children\": [" 
+            finalContent += "]},\n" + printTabs(idx) + "{\"idx\": \"" +  str(idx) + "\",\"name\": \"" +  name + "\",\"filename\": \"" + str(getFilename(data[1])) + "\",\"linkCount\": " + str(linkCount) + ",\"childrenChangedFlag\": " + str(childrenChangedFlag) + ",\"recursive\": " + str(recursive) + ",\"bugs\": " + bugs + ",\"childrenBugFlag\": " + str(childrenBugFlag) + ",\"children\": [" 
         prevIdx = idx 
     
     finalContent += printClosures(prevIdx)
