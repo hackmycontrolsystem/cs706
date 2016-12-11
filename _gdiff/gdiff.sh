@@ -213,11 +213,12 @@ echo "Removed standard library functions from all_flow and result stored in gdif
 # End for NULL Check for software version 2.
 fi
 
+# Copy Result.txt to /tmp/gdiff/runs folder for graph UI
+cp BugParser/result.txt /tmp/gdiff/runs/result.txt
+
 # End for $# = 2
 fi
 
-# Copy Result.txt to /tmp/gdiff/runs folder for graph UI
-cp BugParser/result.txt /tmp/gdiff/runs/result.txt
 
 #exit 0
 
