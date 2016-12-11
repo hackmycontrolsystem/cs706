@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="/static/css/jquery.edittable.min.css">
 	<link rel="stylesheet" href="/static/css/graph.css">	
  </head>
-  <body style="padding-top: 70px;" onload="expandChanged()">
+  <body style="padding-top: 70px;" onload="expandRequiredNodes()">
   <div class="navbar navbar-default navbar-fixed-top" id="nav">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -35,6 +35,7 @@
 				<legend>Call Graph</legend>
 				<a id="expand_all" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus-sign"></span>Expand All</a>  
 				<a id="expand_changed" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus-sign"></span>Expand Only Modified Paths</a>  
+    			<a id="expand_bugs" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus-sign"></span>Expand Only Paths With Bugs</a>  
     			<a id='collapse_all' class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove-sign"></span>Collapse All</a>
     			<!--  <a id='collapse_changed' class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove-sign"></span>Collapse Non-modified Paths</a>-->
 			</form>
@@ -67,6 +68,11 @@
     $("#expand_changed").click(function(){
     	collapseAll();
         expandChanged();
+    });
+    
+    $("#expand_bugs").click(function(){
+    	collapseAll();
+    	expandBugsPath();
     });
     
 	$("#collapse_all").click(function(){
@@ -148,11 +154,19 @@
     	    }
     	    if(children){
     	    	for(var i=0; i<children.length; i++){
-    	    		if(expandAll == false && children[i].childrenChangedFlag != 0)
-    	    			expand(children[i], expandAll)
-    	    		if(expandAll == false && children[i].childrenChangedFlag == 0)
-    	    			collapse(children[i], expandAll)
-    	    		else if(expandAll == true)
+    	    		if(expandAll == 0){
+    	    			if(children[i].childrenChangedFlag != 0)
+        	    			expand(children[i], expandAll)
+        	    		if(children[i].childrenChangedFlag == 0)
+        	    			collapse(children[i], expandAll)
+    	    		}
+    	    		else if(expandAll == 2){
+    	    			if(children[i].childrenBugFlag != 0)
+        	    			expand(children[i], expandAll)
+        	    		if(children[i].childrenBugFlag == 0)
+        	    			collapse(children[i], expandAll)
+    	    		}
+    	    		else if(expandAll == 1)
     	    			expand(children[i], expandAll)
     	    	}
     	    	//children.forEach(expand);
@@ -160,13 +174,41 @@
     	}
 
     	function expandAll(){
-    	    expand(root, true); 
+    	    expand(root, 1); 
     	    update(root);
     	}
 
+    	function expandRequiredNodes(){
+    		document.getElementById('expand_bugs').style.visibility="hidden";
+			document.getElementById('expand_bugs').style.display="none";
+			
+			document.getElementById('expand_changed').style.visibility="hidden";
+			document.getElementById('expand_changed').style.display="none";
+			
+    		if(bugsAssociated == 1)
+    			expandBugsPath()
+    		else if(collapeModified == 1)
+    			expandChanged()
+    		if(bugsAssociated == 1){
+    			document.getElementById('expand_bugs').style.visibility="";
+    			document.getElementById('expand_bugs').style.display="";
+    		}
+    		if(collapeModified == 1){
+    			document.getElementById('expand_changed').style.visibility="";
+    			document.getElementById('expand_changed').style.display="";
+    		}
+    	}
+    	
     	function expandChanged(){
     		if(collapeModified == 1){
-	    		expand(root, false); 
+	    		expand(root, 0); 
+	    	    update(root);
+    		}
+    	}
+    	
+    	function expandBugsPath(){
+    		if(bugsAssociated == 1){
+	    		expand(root, 2); 
 	    	    update(root);
     		}
     	}
@@ -176,9 +218,9 @@
 	    	    //root.children.forEach(collapse);
 	    	    childrenArray = root.children
     			for(var i=0; i<childrenArray.length; i++){
-    	    		collapse(childrenArray[i], true)
+    	    		collapse(childrenArray[i], 1)
     	    	}
-	    	    collapse(root, true);
+	    	    collapse(root, 1);
 	    	    update(root);
     		}
     	}
@@ -188,10 +230,23 @@
     			childrenArray = root.children
     			for(var i=0; i<childrenArray.length; i++){
     	    		if(childrenArray[i].childrenChangedFlag == 0)
-    	    			collapse(childrenArray[i], false)
+    	    			collapse(childrenArray[i], 0)
     	    	}
 	    	    //root.children.forEach(collapse);
-	    	    collapse(root, false);
+	    	    collapse(root, 0);
+	    	    update(root);
+    		}
+    	}
+    	
+    	function collapseNonBugs(){
+    		if(typeof root.children != 'undefined'){
+    			childrenArray = root.children
+    			for(var i=0; i<childrenArray.length; i++){
+    	    		if(childrenArray[i].childrenBugFlag == 0)
+    	    			collapse(childrenArray[i], 2)
+    	    	}
+	    	    //root.children.forEach(collapse);
+	    	    collapse(root, 2);
 	    	    update(root);
     		}
     	}
@@ -222,6 +277,7 @@
     	var flare = {{ graphData }};
     	var bugLink = {{ bugLink }}
     	var collapeModified = {{ collapeModified }}
+    	var bugsAssociated = {{ areBugsAssociated }}
     	{% endautoescape %}
     	
     	root = flare;
@@ -424,9 +480,11 @@
     		    //d._children.forEach(collapse);
     		    children = d._children
     		    for(var i=0; i<children.length; i++){
-    	    		if(collapseAll == false && children[i].childrenChangedFlag == 0)
+    	    		if(collapseAll == 0 && children[i].childrenChangedFlag == 0)
     	    			collapse(children[i], collapseAll)
-    	    		else if(collapseAll == true)
+    	    		else if(collapseAll == 2 && children[i].childrenBugFlag == 0)
+    	    			collapse(children[i], collapseAll)
+    	    		else if(collapseAll == 1)
     	    			collapse(children[i], collapseAll)
     	    	}
     		    d.children = null;
