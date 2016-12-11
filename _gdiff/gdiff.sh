@@ -123,7 +123,7 @@ echo "**************Restoring backups...*********"
 python restore_files_frm_bakup.py /tmp/gdiff/runs/gdiff_tags_v2
 
 # Generate dummy result.txt in /tmp/gdiff/runs , as there are no bugs.
-echo "" > /tmp/gdiff/runs/result.txt
+touch /tmp/gdiff/runs/result.txt
 
 # End for NULL Check for software version 2.
 fi
@@ -213,11 +213,11 @@ echo "Removed standard library functions from all_flow and result stored in gdif
 # End for NULL Check for software version 2.
 fi
 
-# End for $# = 2
-fi
-
 # Copy Result.txt to /tmp/gdiff/runs folder for graph UI
 cp BugParser/result.txt /tmp/gdiff/runs/result.txt
+
+# End for $# = 2
+fi
 
 #exit 0
 
