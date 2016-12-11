@@ -314,6 +314,8 @@ def associateBugData(file):
         bugId = data[0]
         if(data[1].endswith("\n")): data[1] = data[1][:-1]
         functions = data[1].split("#")
+        functions = functions[:2]
+        functions.reverse()
         i=0
         j=0
         pathLength = len(functions)
@@ -339,7 +341,7 @@ def associateBugData(file):
                     j=0
                 currIdx = int(outLines[i].split("~~")[0])
                 while(currIdx > prevIdx and i<len(outLines)-1):
-                    if(outLines[i].find(functions[j]+"()")!=-1):
+                    if(j < pathLength and outLines[i].find(functions[j]+"()")!=-1):
                         bugIndices.append(i)
                         j+=1
                         prevIdx = int(outLines[i].split("~~")[0])
