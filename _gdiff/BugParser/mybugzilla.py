@@ -48,7 +48,11 @@ def getCallHierarchy(file):
         while(found == 1 and i<len(lines) and lines[i].find("---[ end trace")==-1):
             funcName = lines[i][lines[i].find(">] ")+3:]
             funcName = funcName[:funcName.find("+")]
-            funcList.append(funcName)
+            funcName = funcName.replace("? __", "")
+	    funcName = funcName.replace("? ", "")
+	    if(funcName.startswith("__")): funcName = funcName.replace("__", "")
+            print funcName
+	    funcList.append(funcName)
             i+=1
         if(i<len(lines) and lines[i].find("---[ end trace")!=-1):
             found = 0

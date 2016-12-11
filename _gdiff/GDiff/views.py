@@ -32,7 +32,7 @@ def StructOpt():
             bugLink = "\"" + app.config["BUG_LINK"] + "\""
             file2 = app.config["CFLOW_VERSION2"]
             graphData = parseData(app.config["CFLOW_VERSION1"], file2)
-            with open(currentWorkingDir + '/output/graphData.txt', 'w') as the_file:
+	    with open(currentWorkingDir + '/output/graphData.txt', 'w') as the_file:
                 the_file.write(graphData)
             collapeModified = 1
             if(file2 == None): collapeModified = 0
@@ -369,7 +369,7 @@ def parseData(fileName1, fileName2):
     actualFileName1 = fileName1[(fileName1.rindex("/")+1):]
     generateOutputFile(fileName1, 1)
     file1 = currentWorkingDir + '/output/' + actualFileName1 + '_output.txt'
-    
+    print fileName1, fileName2     
     if(fileName2 == None):
         file2 = None
     else:
@@ -392,7 +392,10 @@ def parseData(fileName1, fileName2):
             for line in lines1:
                 the_file.write(line)
 
+    print "before bud association"
     associateBugData(outFile)
+    print "after bug association"
+    
     outData = open(outFile)
            
     finalContent = "{\"idx\": \"-1\", \"name\": \"root\", \"filename\": \"\", \"linkCount\": 0, \"childrenChangedFlag\": 0, \"recursive\": 0, \"bugs\": \"\", \"children\":["
