@@ -129,11 +129,11 @@ echo "Removed standard library functions from all_flow and result stored in gdif
 echo "**************Restoring backups...*********"
 python restore_files_frm_bakup.py /tmp/gdiff/runs/gdiff_tags_v2
 
-# Generate dummy result.txt in /tmp/gdiff/runs , as there are no bugs.
-touch /tmp/gdiff/runs/result.txt
-
 # End for NULL Check for software version 2.
 fi
+
+# Generate dummy result.txt in /tmp/gdiff/runs , as there are no bugs.
+touch /tmp/gdiff/runs/result.txt
 
 # End for $# = 2
 fi
