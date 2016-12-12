@@ -31,7 +31,7 @@ functions_list = {}
 
 for bug in bugdict:
 	trace = bugdict[bug]
-	trace = trace.split('#')[:2]
+	trace = trace.split('#')[1:3]
 	for fn in trace:
 		if fn not in functions_list:
 			functions_list[fn] = ""
