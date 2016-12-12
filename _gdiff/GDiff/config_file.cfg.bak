@@ -1,4 +1,7 @@
+#CFLOW_VERSION1="/Users/mehreenali/Documents/workspace/CS706_GDiff/input/all_cflow5"
+CFLOW_VERSION2="/tmp/gdiff/runs/gdiff_cflow_v2"
+#BUGDATA_FILE="/Users/mehreenali/Documents/workspace/CS706_GDiff/input/result.txt"
 CFLOW_VERSION1="/tmp/gdiff/runs/gdiff_cflow_v1"
 CFLOW_VERSION2="/tmp/gdiff/runs/gdiff_cflow_v2"
 BUGDATA_FILE="/tmp/gdiff/runs/result.txt"
-BUG_LINK="https://bz.apache.org/bugzilla/show_bug.cgi?id="
+BUG_LINK="https://bugzilla.redhat.com/show_bug.cgi?id="

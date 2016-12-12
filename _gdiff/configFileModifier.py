@@ -10,7 +10,7 @@ flag = str(sys.argv[1])
 if flag == 'remove':
 	for line in fopen:
 		if "CFLOW_VERSION2=" in line:
-			fwrite.write('CFLOW_VERSION2="None"' + '\n')
+			fwrite.write('CFLOW_VERSION2=None' + '\n')
 		else:
 			fwrite.write(line)
 
