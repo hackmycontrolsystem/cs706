@@ -1,0 +1,69 @@
+
+
+Geral
+=================================
+UUID: d230120a-2610-48e8-9dfd-46de8463450b
+SO: Fedora release 16 (Verne)
+Nível de execução por omissão: Unknown
+Língua: pt_PT.utf8
+Plataforma: x86_64
+BogoMIPS: 5319.85
+Fabricante do CPU: GenuineIntel
+Modelo do CPU: Intel(R) Core(TM) i5 CPU       M 480  @ 2.67GHz
+Versão do CPU: 5
+Família do CPU: 6
+Número do modelo do CPU: 37
+Número de CPUs: 4
+Velocidade do CPU: 2667
+Memória do sistema: 3756
+Swap do sistema: 5807
+Fabricante: Hewlett-Packard
+Sistema: HP Pavilion dv6 Notebook PC 0589120000242B10010020100
+Dimensões: Notebook
+Kernel: 3.1.2-1.fc16.x86_64
+SELinux activo: 0
+Política do SELinux: targeted
+SELinux Obrigatório: Unknown
+MythTV Remote: Unknown
+MythTV Role: Unknown
+MythTV Theme: Unknown
+MythTV Plugin: 
+MythTV Tuner: -1
+
+
+Dispositivos
+=================================
+(32902:68:4156:5692) pci, agpgart-intel, HOST/PCI, Core Processor DRAM Controller
+(32902:69:4156:5692) pci, pcieport, PCI/PCI, Core Processor PCI Express x16 Root Port
+(32902:15152:4156:5692) pci, i801_smbus, SERIAL, 5 Series/3400 Series Chipset SMBus Controller
+(32902:15145:4156:5692) pci, ahci, STORAGE, 5 Series/3400 Series Chipset 4 port SATA AHCI Controller
+(32902:15113:4156:5692) pci, None, PCI/ISA, Mobile 5 Series Chipset LPC Interface Controller
+(32902:15154:4156:5692) pci, intel ips, NONE, 5 Series/3400 Series Chipset Thermal Subsystem
+(5772:43:4156:12352) pci, ath9k, NETWORK, AR9285 Wireless Network Adapter (PCI-Express)
+(32902:15164:4156:5692) pci, ehci_hcd, USB, 5 Series/3400 Series Chipset USB2 Enhanced Host Controller
+(32902:9288:4156:5692) pci, None, PCI/PCI, 82801 Mobile PCI Bridge
+(32902:15204:4156:5692) pci, None, SIMPLE, 5 Series/3400 Series Chipset HECI Controller
+(32902:11521:4156:5692) pci, None, HOST/PCI, Core Processor QuickPath Architecture System Address Decoder
+(32902:11362:4156:5692) pci, None, HOST/PCI, Core Processor QuickPath Architecture Generic Non-core Registers
+(4332:33128:4156:5692) pci, r8169, ETHERNET, RTL8111/8168B PCI Express Gigabit Ethernet controller
+(32902:70:4156:5692) pci, i915, VIDEO, Core Processor Integrated Graphics Controller
+(32902:15170:4156:5692) pci, pcieport, PCI/PCI, 5 Series/3400 Series Chipset PCI Express Root Port 1
+(32902:15172:4156:5692) pci, pcieport, PCI/PCI, 5 Series/3400 Series Chipset PCI Express Root Port 2
+(32902:15190:4156:5692) pci, snd_hda_intel, MULTIMEDIA, 5 Series/3400 Series Chipset High Definition Audio
+(32902:15156:4156:5692) pci, ehci_hcd, USB, 5 Series/3400 Series Chipset USB2 Enhanced Host Controller
+(4098:43616:4156:5692) pci, snd_hda_intel, MULTIMEDIA, Redwood HDMI Audio [Radeon HD 5600 Series]
+(4098:26817:4156:5692) pci, radeon, VIDEO, Madison [AMD Radeon HD 5000M Series]
+(32902:11537:4156:5692) pci, None, HOST/PCI, Core Processor QPI Physical 0
+(32902:11536:4156:5692) pci, None, HOST/PCI, Core Processor QPI Link 0
+(32902:11539:4156:5692) pci, None, HOST/PCI, Core Processor Reserved
+(32902:11538:4156:5692) pci, None, HOST/PCI, Core Processor Reserved
+
+
+Informação do sistema de ficheiros
+=================================
+device mtpt type bsize frsize blocks bfree bavail file ffree favail
+-------------------------------------------------------------------
+/dev/sda8 / ext4 4096 4096 12901535 11272108 11141086 3276800 3102481 3102481
+/dev/sda7 /boot ext4 1024 1024 495844 414251 388651 128016 127783 127783
+/dev/sda10 /home ext4 4096 4096 13037098 10328820 9666574 3311280 3282939 3282939
+

@@ -1,0 +1,4 @@
+CFLOW_VERSION1="/tmp/gdiff/runs/gdiff_cflow_v1"
+CFLOW_VERSION2="/tmp/gdiff/runs/gdiff_cflow_v2"
+BUGDATA_FILE="/tmp/gdiff/runs/result.txt"
+BUG_LINK="https://bz.apache.org/bugzilla/show_bug.cgi?id="

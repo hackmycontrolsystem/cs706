@@ -27,4 +27,3 @@
 967256: jbd2_journal_try_to_free_buffers#ext4_move_extents#ext4_get_block_write#
 968261: mark_buffer_dirty#udf_bitmap_free_blocks
 995279: mark_buffer_dirty
-

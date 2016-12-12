@@ -19,6 +19,9 @@ echo "Path to version 2: ${PATH_V2}"
 rm -rf /tmp/gdiff/runs/*
 mkdir -p /tmp/gdiff/runs
 
+if [[ $2 == *"NULL"* ]]; then
+python configFileModifier.py remove 
+fi
 
 if [[ $# -eq 2 ]]; then
 echo "Run gdiff as version diff and generate call graph"
@@ -57,7 +60,8 @@ cflow $C_FILES -o /tmp/gdiff/runs/all_cflow
 #cflow inode.c  -o /tmp/gdiff/runs/all_cflow
 
 # Added an extra line for D3 requirement for call graph UI.
-echo " " >> /tmp/gdiff/runs/all_cflow
+#echo " " >> /tmp/gdiff/runs/all_cflow
+grep -q -F " " /tmp/gdiff/runs/all_cflow || echo " " >> /tmp/gdiff/runs/all_cflow
 
 # Back to old path
 cd $SAVE_CWD
@@ -84,6 +88,8 @@ echo " *********** ************ ********** "
 echo " *********** ************ ********** "
 printf "\n\n"
 
+# Edit config_file.cfg for D3
+python configFileModifier.py add
 
 echo "************** Generate ctags ************"
 ctags -RV -x --c-types=f ${PATH_V2}/* > /tmp/gdiff/runs/gdiff_tags_v2
@@ -109,7 +115,8 @@ cflow $C_FILES_V2 -o /tmp/gdiff/runs/all_cflow2
 #cflow server/*.c server/mpm/event/*.c server/mpm/worker/*.c server/mpm/netware/*.c server/mpm/prefork/*.c server/mpm/winnt/*.c server/mpm/mpmt_os2/*.c  modules/aaa/*.c modules/arch/*.c modules/cache/*.c support/*.c os/beos/beosd.c os/bs2000/*.c os/netware/*.c os/os2/*.c os/tpf/*.c os/unix/*.c os/win32/*.c  -o /tmp/gdiff/runs/all_cflow2
 #cflow inode.c  -o /tmp/gdiff/runs/all_cflow2
 
-echo " " >> /tmp/gdiff/runs/all_cflow2
+#echo " " >> /tmp/gdiff/runs/all_cflow2
+grep -q -F " " /tmp/gdiff/runs/all_cflow2 || echo " " >> /tmp/gdiff/runs/all_cflow2
 
 # Back tp old path
 cd $SAVE_CWD
@@ -160,7 +167,8 @@ echo $GC_FILES_V1
 cflow $GC_FILES_V1 -o /tmp/gdiff/runs/all_cflow
 
 # Added an extra line for D3 requirement for call graph UI.
-echo " " >> /tmp/gdiff/runs/all_cflow
+#echo " " >> /tmp/gdiff/runs/all_cflow
+grep -q -F " " /tmp/gdiff/runs/all_cflow || echo " " >> /tmp/gdiff/runs/all_cflow
 
 # Back to old path
 cd $SAVE_CWD
@@ -183,6 +191,9 @@ echo " *********** ************ ********** "
 printf "\n\n"
 
 
+# Edit config_file.cfg for D3
+python configFileModifier.py add
+
 echo "************** Generate ctags ************"
 ctags -RV -x --c-types=f ${PATH_V2}/* > /tmp/gdiff/runs/gdiff_tags_v2
 
@@ -199,7 +210,8 @@ echo $GC_FILES_V2
 cflow $GC_FILES_V2 -o /tmp/gdiff/runs/all_cflow2
 
 # Added an extra line for D3 requirement for call graph UI.
-echo " " >> /tmp/gdiff/runs/all_cflow2
+#echo " " >> /tmp/gdiff/runs/all_cflow2
+grep -q -F " " /tmp/gdiff/runs/all_cflow2 || echo " " >> /tmp/gdiff/runs/all_cflow2
 
 # Back to old path
 cd $SAVE_CWD

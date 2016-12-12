@@ -1,0 +1,33 @@
+[833264.779696] WARNING: at fs/buffer.c:1151 mark_buffer_dirty+0x30/0x88()
+[833264.779698] Hardware name: System Product Name
+[833264.779699] Modules linked in: sunrpc cpufreq_ondemand acpi_cpufreq freq_table mperf nf_conntrack_netbios_ns ip6t_REJECT nf_conntrack_ipv6 ip6table_filter ip6_tables ipv6 fuse ext2 uinput joydev snd_hda_codec_atihdmi snd_hda_codec_realtek snd_hda_intel fglrx(P) snd_hda_codec snd_hwdep snd_seq snd_seq_device snd_pcm microcode i2c_i801 i2c_core snd_timer serio_raw snd i7core_edac iTCO_wdt r8169 iTCO_vendor_support soundcore asus_atk0110 edac_core snd_page_alloc mii pata_acpi firewire_ohci ata_generic firewire_core pata_jmicron crc_itu_t [last unloaded: scsi_wait_scan]
+[833264.779726] Pid: 2602, comm: ktorrent Tainted: P            2.6.35.14-96.fc14.x86_64 #1
+[833264.779728] Call Trace:
+[833264.779733]  [<ffffffff8104dcd1>] warn_slowpath_common+0x85/0x9d
+[833264.779735]  [<ffffffff8104dd03>] warn_slowpath_null+0x1a/0x1c
+[833264.779738]  [<ffffffff81139365>] mark_buffer_dirty+0x30/0x88
+[833264.779741]  [<ffffffff8117e3f7>] ext3_commit_super.clone.22+0x59/0x6a
+[833264.779743]  [<ffffffff8117f28e>] ext3_handle_error+0x95/0xbc
+[833264.779745]  [<ffffffff8117f330>] ext3_error+0x7b/0x86
+[833264.779748]  [<ffffffff81138ec7>] ? ll_rw_block+0xb8/0x100
+[833264.779751]  [<ffffffff8117b1da>] ext3_find_entry+0x222/0x3c8
+[833264.779754]  [<ffffffff811df185>] ? avc_has_perm+0x5c/0x6e
+[833264.779758]  [<ffffffff8103c185>] ? need_resched+0x23/0x2d
+[833264.779761]  [<ffffffff81106895>] ? __raw_local_irq_save+0x1d/0x23
+[833264.779763]  [<ffffffff8117b54e>] ext3_lookup+0x3b/0xdc
+[833264.779767]  [<ffffffff81120368>] do_lookup+0xf5/0x18b
+[833264.779770]  [<ffffffff811e4393>] ? selinux_inode_permission+0x42/0x47
+[833264.779773]  [<ffffffff81121624>] link_path_walk+0x33b/0x4a0
+[833264.779775]  [<ffffffff81106895>] ? __raw_local_irq_save+0x1d/0x23
+[833264.779778]  [<ffffffff8112187e>] path_walk+0x4f/0x9f
+[833264.779780]  [<ffffffff81120de5>] ? path_init+0x8d/0x159
+[833264.779783]  [<ffffffff811219a7>] do_path_lookup+0x2f/0x7b
+[833264.779785]  [<ffffffff81122715>] user_path_at+0x54/0x91
+[833264.779788]  [<ffffffff811e24b9>] ? selinux_cred_prepare+0x1f/0x36
+[833264.779791]  [<ffffffff810e5e9a>] ? kmemdup+0x20/0x35
+[833264.779793]  [<ffffffff811e24b9>] ? selinux_cred_prepare+0x1f/0x36
+[833264.779796]  [<ffffffff8106ba87>] ? override_creds+0x28/0x3d
+[833264.779800]  [<ffffffff811169e3>] sys_faccessat+0xa0/0x16a
+[833264.779802]  [<ffffffff81116ac5>] sys_access+0x18/0x1a
+[833264.779805]  [<ffffffff81009cb2>] system_call_fastpath+0x16/0x1b
+

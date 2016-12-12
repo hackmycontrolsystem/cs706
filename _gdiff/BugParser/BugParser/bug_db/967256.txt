@@ -1,0 +1,1737 @@
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Linux version 3.8.6-203.fc18.i686 (mockbuild@bkernel02) (gcc version 4.7.2 20121109 (Red Hat 4.7.2-8) (GCC) ) #1 SMP Tue Apr 9 19:54:22 UTC 2013
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000e0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007fffffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000008cc40000-0x000000008fd6ffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000008fd70000-0x000000008fdbefff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000008fdbf000-0x000000008fe57fff] usable
+[    0.000000] BIOS-e820: [mem 0x000000008fe58000-0x000000008febefff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x000000008febf000-0x000000008feecfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000008feed000-0x000000008fefefff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x000000008feff000-0x000000008fefffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000e0000000-0x00000000e3ffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fff00000-0x00000000ffffffff] reserved
+[    0.000000] Notice: NX (Execute Disable) protection cannot be enabled: non-PAE kernel!
+[    0.000000] SMBIOS 2.4 present.
+[    0.000000] DMI: Hewlett-Packard HP Pavilion dv5 Notebook PC/30F2, BIOS F.38 11/11/2009
+[    0.000000] e820: update [mem 0x00000000-0x0000ffff] usable ==> reserved
+[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] e820: last_pfn = 0x8ff00 max_arch_pfn = 0x100000
+[    0.000000] MTRR default type: uncachable
+[    0.000000] MTRR fixed ranges enabled:
+[    0.000000]   00000-9FFFF write-back
+[    0.000000]   A0000-FFFFF uncachable
+[    0.000000] MTRR variable ranges enabled:
+[    0.000000]   0 base 00FFF00000 mask FFFFF00000 write-protect
+[    0.000000]   1 base 0000000000 mask FF80000000 write-back
+[    0.000000]   2 base 0080000000 mask FFF0000000 write-back
+[    0.000000]   3 disabled
+[    0.000000]   4 disabled
+[    0.000000]   5 disabled
+[    0.000000]   6 disabled
+[    0.000000]   7 disabled
+[    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+[    0.000000] initial memory mapped: [mem 0x00000000-0x00ffffff]
+[    0.000000] Base memory trampoline at [c009b000] 9b000 size 16384
+[    0.000000] init_memory_mapping: [mem 0x00000000-0x373fdfff]
+[    0.000000]  [mem 0x00000000-0x003fffff] page 4k
+[    0.000000]  [mem 0x00400000-0x36ffffff] page 2M
+[    0.000000]  [mem 0x37000000-0x373fdfff] page 4k
+[    0.000000] kernel direct mapping tables up to 0x373fdfff @ [mem 0x00ff9000-0x00ffffff]
+[    0.000000] RAMDISK: [mem 0x3459e000-0x362c6fff]
+[    0.000000] ACPI: RSDP 000fe020 00024 (v02 HP    )
+[    0.000000] ACPI: XSDT 8fefe120 0005C (v01 HPQOEM SLIC-MPC 00000003      01000013)
+[    0.000000] ACPI: FACP 8fefd000 000F4 (v04 HP     30F2     00000003 MSFT 01000013)
+[    0.000000] ACPI: DSDT 8fef0000 09BB0 (v01 HP     30F2     F0000000 MSFT 01000013)
+[    0.000000] ACPI: FACS 8fe61000 00040
+[    0.000000] ACPI: HPET 8fefc000 00038 (v01 HP     30F2     00000001 MSFT 01000013)
+[    0.000000] ACPI: APIC 8fefb000 00084 (v02 HP     30F2     00000001 MSFT 01000013)
+[    0.000000] ACPI: MCFG 8fefa000 0003C (v01 HP     30F2     00000001 MSFT 01000013)
+[    0.000000] ACPI: BOOT 8feef000 00028 (v01 HP     30F2     00000001 MSFT 01000013)
+[    0.000000] ACPI: SLIC 8feee000 00176 (v01 HPQOEM SLIC-MPC 06040000  LTP 00000001)
+[    0.000000] ACPI: SSDT 8feed000 002B4 (v01 AMD    PowerNow 00000001 AMD  00000001)
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] 1419MB HIGHMEM available.
+[    0.000000] 883MB LOWMEM available.
+[    0.000000]   mapped low ram: 0 - 373fe000
+[    0.000000]   low ram: 0 - 373fe000
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x00010000-0x00ffffff]
+[    0.000000]   Normal   [mem 0x01000000-0x373fdfff]
+[    0.000000]   HighMem  [mem 0x373fe000-0x8fefffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00010000-0x0009efff]
+[    0.000000]   node   0: [mem 0x00100000-0x7fffffff]
+[    0.000000]   node   0: [mem 0x8cc40000-0x8fd6ffff]
+[    0.000000]   node   0: [mem 0x8fdbf000-0x8fe57fff]
+[    0.000000]   node   0: [mem 0x8febf000-0x8feecfff]
+[    0.000000]   node   0: [mem 0x8feff000-0x8fefffff]
+[    0.000000] On node 0 totalpages: 536967
+[    0.000000] free_area_init_node: node 0, pgdat c0c23640, node_mem_map f339e200
+[    0.000000]   DMA zone: 32 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 3951 pages, LIFO batch:0
+[    0.000000]   Normal zone: 1736 pages used for memmap
+[    0.000000]   Normal zone: 220470 pages, LIFO batch:31
+[    0.000000]   HighMem zone: 2839 pages used for memmap
+[    0.000000]   HighMem zone: 307939 pages, LIFO batch:31
+[    0.000000] Using APIC driver default
+[    0.000000] ACPI: PM-Timer IO Port: 0x408
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x01] lapic_id[0x01] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x02] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x03] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[    0.000000] ACPI: IOAPIC (id[0x04] address[0xfec00000] gsi_base[0])
+[    0.000000] IOAPIC[0]: apic_id 4, version 33, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.000000] ACPI: IRQ0 used by override.
+[    0.000000] ACPI: IRQ2 used by override.
+[    0.000000] ACPI: IRQ9 used by override.
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x1002a201 base: 0xfed00000
+[    0.000000] smpboot: Allowing 4 CPUs, 2 hotplug CPUs
+[    0.000000] nr_irqs_gsi: 40
+[    0.000000] PM: Registered nosave memory: 000000000009f000 - 00000000000a0000
+[    0.000000] PM: Registered nosave memory: 00000000000a0000 - 00000000000e0000
+[    0.000000] PM: Registered nosave memory: 00000000000e0000 - 0000000000100000
+[    0.000000] e820: [mem 0x8ff00000-0xdfffffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on bare hardware
+[    0.000000] setup_percpu: NR_CPUS:32 nr_cpumask_bits:32 nr_cpu_ids:4 nr_node_ids:1
+[    0.000000] PERCPU: Embedded 13 pages/cpu @f73bd000 s32384 r0 d20864 u53248
+[    0.000000] pcpu-alloc: s32384 r0 d20864 u53248 alloc=13*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 532360
+[    0.000000] Kernel command line: BOOT_IMAGE=/vmlinuz-3.8.6-203.fc18.i686 root=/dev/mapper/vg_caleuche-LogVolRaiz ro rd.md=0 rd.dm=0 rd.lvm.lv=vg_caleuche/LogVolSwap rd.luks=0 rd.lvm.lv=vg_caleuche/LogVolRaiz rhgb quiet LANG=es_ES.utf8
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] __ex_table already sorted, skipping sort
+[    0.000000] Initializing CPU#0
+[    0.000000] allocated 4716416 bytes of page_cgroup
+[    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+[    0.000000] Initializing HighMem for node 0 (000373fe:0008ff00)
+[    0.000000] Memory: 2083812k/2358272k available (5652k kernel code, 64056k reserved, 2761k data, 644k init, 1243112k highmem)
+[    0.000000] virtual kernel memory layout:
+    fixmap  : 0xffa95000 - 0xfffff000   (5544 kB)
+    pkmap   : 0xff400000 - 0xff800000   (4096 kB)
+    vmalloc : 0xf7bfe000 - 0xff3fe000   ( 120 MB)
+    lowmem  : 0xc0000000 - 0xf73fe000   ( 883 MB)
+      .init : 0xc0c38000 - 0xc0cd9000   ( 644 kB)
+      .data : 0xc0985045 - 0xc0c37500   (2761 kB)
+      .text : 0xc0400000 - 0xc0985045   (5652 kB)
+[    0.000000] Checking if this processor honours the WP bit even in supervisor mode...Ok.
+[    0.000000] SLUB: Genslabs=15, HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=32 to nr_cpu_ids=4.
+[    0.000000] NR_IRQS:2304 nr_irqs:712 16
+[    0.000000] CPU 0 irqstacks, hard=f6808000 soft=f680a000
+[    0.000000] spurious 8259A interrupt: IRQ7.
+[    0.000000] Console: colour dummy device 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] hpet clockevent registered
+[    0.000000] tsc: Fast TSC calibration using PIT
+[    0.001000] tsc: Detected 1999.288 MHz processor
+[    0.000006] Calibrating delay loop (skipped), value calculated using timer frequency.. 3998.57 BogoMIPS (lpj=1999288)
+[    0.000014] pid_max: default: 32768 minimum: 301
+[    0.000160] Security Framework initialized
+[    0.000172] SELinux:  Initializing.
+[    0.000194] SELinux:  Starting in permissive mode
+[    0.000326] Mount-cache hash table entries: 512
+[    0.000845] Initializing cgroup subsys cpuacct
+[    0.000851] Initializing cgroup subsys memory
+[    0.000871] Initializing cgroup subsys devices
+[    0.000875] Initializing cgroup subsys freezer
+[    0.000880] Initializing cgroup subsys net_cls
+[    0.000885] Initializing cgroup subsys blkio
+[    0.000890] Initializing cgroup subsys perf_event
+[    0.000958] CPU: Physical Processor ID: 0
+[    0.000962] CPU: Processor Core ID: 0
+[    0.000968] mce: CPU supports 5 MCE banks
+[    0.001002] Last level iTLB entries: 4KB 512, 2MB 8, 4MB 4
+Last level dTLB entries: 4KB 512, 2MB 8, 4MB 4
+tlb_flushall_shift: 4
+[    0.001211] Freeing SMP alternatives: 24k freed
+[    0.003606] ACPI: Core revision 20121018
+[    0.030210] ftrace: allocating 23518 entries in 46 pages
+[    0.056419] Enabling APIC mode:  Flat.  Using 1 I/O APICs
+[    0.056907] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.066911] smpboot: CPU0: AMD Athlon(tm) X2 Dual-Core QL-62 (fam: 11, model: 03, stepping: 01)
+[    0.168242] Performance Events: AMD PMU driver.
+[    0.168251] ... version:                0
+[    0.168255] ... bit width:              48
+[    0.168257] ... generic registers:      4
+[    0.168261] ... value mask:             0000ffffffffffff
+[    0.168264] ... max period:             00007fffffffffff
+[    0.168267] ... fixed-purpose events:   0
+[    0.168270] ... event mask:             000000000000000f
+[    0.171839] NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+[    0.172065] CPU 1 irqstacks, hard=f68ce000 soft=f68d8000
+[    0.084421] Initializing CPU#1
+[    0.172069] smpboot: Booting Node   0, Processors  #1
+[    0.185236] TSC synchronization [CPU#0 -> CPU#1]:
+[    0.185242] Measured 195457008 cycles TSC warp between CPUs, turning off TSC clock.
+[    0.002000] tsc: Marking TSC unstable due to check_tsc_sync_source failed
+[    0.062026] Brought up 2 CPUs
+[    0.062031] smpboot: Total of 2 processors activated (7997.15 BogoMIPS)
+[    0.063073] devtmpfs: initialized
+[    0.063527] PM: Registering ACPI NVS region [mem 0x8fe58000-0x8febefff] (421888 bytes)
+[    0.065289] atomic64 test passed for i586+ platform with CX8 and with SSE
+[    0.065355] RTC time: 17:13:56, date: 04/15/13
+[    0.065421] NET: Registered protocol family 16
+[    0.065635] TOM: 00000000a0000000 aka 2560M
+[    0.065640] Fam 10h mmconf [mem 0xe0000000-0xe0ffffff]
+[    0.065881] ACPI: bus type pci registered
+[    0.066013] PCI: MMCONFIG for domain 0000 [bus 00-3f] at [mem 0xe0000000-0xe3ffffff] (base 0xe0000000)
+[    0.066018] PCI: MMCONFIG at [mem 0xe0000000-0xe3ffffff] reserved in E820
+[    0.066020] PCI: Using MMCONFIG for extended config space
+[    0.066022] PCI: Using configuration type 1 for base access
+[    0.066182] mtrr: your CPUs had inconsistent variable MTRR settings
+[    0.066183] mtrr: probably your BIOS does not setup all CPUs.
+[    0.066185] mtrr: corrected configuration.
+[    0.067668] bio: create slab <bio-0> at 0
+[    0.068102] ACPI: Added _OSI(Module Device)
+[    0.068108] ACPI: Added _OSI(Processor Device)
+[    0.068112] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.068117] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.070501] ACPI: EC: Look up EC in DSDT
+[    0.072984] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.078707] [Firmware Bug]: ACPI: BIOS _OSI(Linux) query ignored
+[    0.086061] ACPI: Interpreter enabled
+[    0.086072] ACPI: (supports S0 S3 S4 S5)
+[    0.086099] ACPI: Using IOAPIC for interrupt routing
+[    0.094888] ACPI: EC: GPE = 0x3, I/O: command/status = 0x66, data = 0x62
+[    0.095043] ACPI: No dock devices found.
+[    0.095050] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.095567] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.095570] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+[    0.095917] \_SB_.PCI0:_OSC request failed
+[    0.095919] _OSC request data:1 8 1f 
+[    0.095957] \_SB_.PCI0:_OSC request failed
+[    0.095958] _OSC request data:1 1f 1f 
+[    0.095964] pci_root PNP0A08:00: ACPI _OSC support notification failed, disabling PCIe ASPM
+[    0.095967] pci_root PNP0A08:00: Unable to request _OSC control (_OSC support mask: 0x08)
+[    0.096934] pci_root PNP0A08:00: ignoring host bridge window [mem 0x000cc000-0x000cffff] (conflicts with Video ROM [mem 0x000c0000-0x000cebff])
+[    0.096940] pci_root PNP0A08:00: [Firmware Info]: MMCONFIG for domain 0000 [bus 00-3f] only partially covers this bridge
+[    0.096978] PCI host bridge to bus 0000:00
+[    0.096982] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.096985] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+[    0.096988] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff]
+[    0.096991] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+[    0.096994] pci_bus 0000:00: root bus resource [mem 0x000c0000-0x000c3fff]
+[    0.097003] pci_bus 0000:00: root bus resource [mem 0x000c4000-0x000c7fff]
+[    0.097006] pci_bus 0000:00: root bus resource [mem 0x000c8000-0x000cbfff]
+[    0.097008] pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000d3fff]
+[    0.097011] pci_bus 0000:00: root bus resource [mem 0x000d4000-0x000d7fff]
+[    0.097014] pci_bus 0000:00: root bus resource [mem 0x000d8000-0x000dbfff]
+[    0.097017] pci_bus 0000:00: root bus resource [mem 0x000dc000-0x000dffff]
+[    0.097020] pci_bus 0000:00: root bus resource [mem 0x000e0000-0x000e3fff]
+[    0.097022] pci_bus 0000:00: root bus resource [mem 0x000e4000-0x000e7fff]
+[    0.097025] pci_bus 0000:00: root bus resource [mem 0x000e8000-0x000ebfff]
+[    0.097028] pci_bus 0000:00: root bus resource [mem 0x000ec000-0x000effff]
+[    0.097031] pci_bus 0000:00: root bus resource [mem 0xa0000000-0xdfffffff]
+[    0.097034] pci_bus 0000:00: root bus resource [mem 0xe4000000-0xffffffff]
+[    0.097054] pci 0000:00:00.0: [1022:9600] type 00 class 0x060000
+[    0.097144] pci 0000:00:01.0: [1022:9602] type 01 class 0x060400
+[    0.097241] pci 0000:00:04.0: [1022:9604] type 01 class 0x060400
+[    0.097299] pci 0000:00:04.0: PME# supported from D0 D3hot D3cold
+[    0.097323] pci 0000:00:05.0: [1022:9605] type 01 class 0x060400
+[    0.097380] pci 0000:00:05.0: PME# supported from D0 D3hot D3cold
+[    0.097402] pci 0000:00:06.0: [1022:9606] type 01 class 0x060400
+[    0.097459] pci 0000:00:06.0: PME# supported from D0 D3hot D3cold
+[    0.097502] pci 0000:00:11.0: [1002:4391] type 00 class 0x010601
+[    0.097527] pci 0000:00:11.0: reg 10: [io  0x6038-0x603f]
+[    0.097540] pci 0000:00:11.0: reg 14: [io  0x604c-0x604f]
+[    0.097553] pci 0000:00:11.0: reg 18: [io  0x6030-0x6037]
+[    0.097566] pci 0000:00:11.0: reg 1c: [io  0x6048-0x604b]
+[    0.097579] pci 0000:00:11.0: reg 20: [io  0x6010-0x601f]
+[    0.097592] pci 0000:00:11.0: reg 24: [mem 0xb2408000-0xb24083ff]
+[    0.097666] pci 0000:00:12.0: [1002:4397] type 00 class 0x0c0310
+[    0.097683] pci 0000:00:12.0: reg 10: [mem 0xb2407000-0xb2407fff]
+[    0.097767] pci 0000:00:12.1: [1002:4398] type 00 class 0x0c0310
+[    0.097785] pci 0000:00:12.1: reg 10: [mem 0xb2406000-0xb2406fff]
+[    0.097875] pci 0000:00:12.2: [1002:4396] type 00 class 0x0c0320
+[    0.098017] pci 0000:00:12.2: reg 10: [mem 0xb2408500-0xb24085ff]
+[    0.098084] pci 0000:00:12.2: supports D1 D2
+[    0.098092] pci 0000:00:12.2: PME# supported from D0 D1 D2 D3hot
+[    0.098133] pci 0000:00:13.0: [1002:4397] type 00 class 0x0c0310
+[    0.098154] pci 0000:00:13.0: reg 10: [mem 0xb2405000-0xb2405fff]
+[    0.098239] pci 0000:00:13.1: [1002:4398] type 00 class 0x0c0310
+[    0.098256] pci 0000:00:13.1: reg 10: [mem 0xb2404000-0xb2404fff]
+[    0.098347] pci 0000:00:13.2: [1002:4396] type 00 class 0x0c0320
+[    0.099018] pci 0000:00:13.2: reg 10: [mem 0xb2408400-0xb24084ff]
+[    0.099077] pci 0000:00:13.2: supports D1 D2
+[    0.099085] pci 0000:00:13.2: PME# supported from D0 D1 D2 D3hot
+[    0.099130] pci 0000:00:14.0: [1002:4385] type 00 class 0x0c0500
+[    0.099261] pci 0000:00:14.1: [1002:439c] type 00 class 0x01018a
+[    0.099283] pci 0000:00:14.1: reg 10: [io  0x0000-0x0007]
+[    0.099296] pci 0000:00:14.1: reg 14: [io  0x0000-0x0003]
+[    0.101009] pci 0000:00:14.1: reg 18: [io  0x0000-0x0007]
+[    0.101022] pci 0000:00:14.1: reg 1c: [io  0x0000-0x0003]
+[    0.101034] pci 0000:00:14.1: reg 20: [io  0x6000-0x600f]
+[    0.101111] pci 0000:00:14.2: [1002:4383] type 00 class 0x040300
+[    0.101139] pci 0000:00:14.2: reg 10: [mem 0xb2400000-0xb2403fff 64bit]
+[    0.101223] pci 0000:00:14.2: PME# supported from D0 D3hot D3cold
+[    0.101253] pci 0000:00:14.3: [1002:439d] type 00 class 0x060100
+[    0.101351] pci 0000:00:14.4: [1002:4384] type 01 class 0x060401
+[    0.101413] pci 0000:00:18.0: [1022:1300] type 00 class 0x060000
+[    0.101453] pci 0000:00:18.1: [1022:1301] type 00 class 0x060000
+[    0.101482] pci 0000:00:18.2: [1022:1302] type 00 class 0x060000
+[    0.101513] pci 0000:00:18.3: [1022:1303] type 00 class 0x060000
+[    0.101550] pci 0000:00:18.4: [1022:1304] type 00 class 0x060000
+[    0.101660] pci 0000:01:05.0: [1002:9612] type 00 class 0x030000
+[    0.101674] pci 0000:01:05.0: reg 10: [mem 0xa0000000-0xafffffff pref]
+[    0.101681] pci 0000:01:05.0: reg 14: [io  0x5000-0x50ff]
+[    0.101689] pci 0000:01:05.0: reg 18: [mem 0xb2300000-0xb230ffff]
+[    0.101706] pci 0000:01:05.0: reg 24: [mem 0xb2200000-0xb22fffff]
+[    0.101736] pci 0000:01:05.0: supports D1 D2
+[    0.101752] pci 0000:01:05.1: [1002:960f] type 00 class 0x040300
+[    0.101766] pci 0000:01:05.1: reg 10: [mem 0xb2310000-0xb2313fff]
+[    0.101818] pci 0000:01:05.1: supports D1 D2
+[    0.101900] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    0.101906] pci 0000:00:01.0:   bridge window [io  0x5000-0x5fff]
+[    0.101911] pci 0000:00:01.0:   bridge window [mem 0xb2200000-0xb23fffff]
+[    0.101917] pci 0000:00:01.0:   bridge window [mem 0xa0000000-0xafffffff 64bit pref]
+[    0.101956] pci 0000:00:04.0: PCI bridge to [bus 02-07]
+[    0.101961] pci 0000:00:04.0:   bridge window [io  0x3000-0x4fff]
+[    0.101966] pci 0000:00:04.0:   bridge window [mem 0xb1200000-0xb21fffff]
+[    0.101971] pci 0000:00:04.0:   bridge window [mem 0xb0000000-0xb0ffffff 64bit pref]
+[    0.102033] pci 0000:08:00.0: [168c:001c] type 00 class 0x020000
+[    0.102056] pci 0000:08:00.0: reg 10: [mem 0xb1100000-0xb110ffff 64bit]
+[    0.104022] pci 0000:00:05.0: PCI bridge to [bus 08]
+[    0.104030] pci 0000:00:05.0:   bridge window [mem 0xb1100000-0xb11fffff]
+[    0.104088] pci 0000:09:00.0: [10ec:8136] type 00 class 0x020000
+[    0.104105] pci 0000:09:00.0: reg 10: [io  0x2000-0x20ff]
+[    0.104132] pci 0000:09:00.0: reg 18: [mem 0xb1010000-0xb1010fff 64bit pref]
+[    0.104150] pci 0000:09:00.0: reg 20: [mem 0xb1000000-0xb100ffff 64bit pref]
+[    0.104163] pci 0000:09:00.0: reg 30: [mem 0xffff0000-0xffffffff pref]
+[    0.104223] pci 0000:09:00.0: supports D1 D2
+[    0.104226] pci 0000:09:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    0.106023] pci 0000:00:06.0: PCI bridge to [bus 09]
+[    0.106029] pci 0000:00:06.0:   bridge window [io  0x2000-0x2fff]
+[    0.106036] pci 0000:00:06.0:   bridge window [mem 0xb1000000-0xb10fffff 64bit pref]
+[    0.106116] pci 0000:00:14.4: PCI bridge to [bus 80-8f] (subtractive decode)
+[    0.106122] pci 0000:00:14.4:   bridge window [io  0x1000-0x1fff]
+[    0.106131] pci 0000:00:14.4:   bridge window [io  0x0000-0x0cf7] (subtractive decode)
+[    0.106134] pci 0000:00:14.4:   bridge window [io  0x0d00-0xffff] (subtractive decode)
+[    0.106137] pci 0000:00:14.4:   bridge window [mem 0x000a0000-0x000bffff] (subtractive decode)
+[    0.106140] pci 0000:00:14.4:   bridge window [mem 0x000c0000-0x000c3fff] (subtractive decode)
+[    0.106143] pci 0000:00:14.4:   bridge window [mem 0x000c4000-0x000c7fff] (subtractive decode)
+[    0.106146] pci 0000:00:14.4:   bridge window [mem 0x000c8000-0x000cbfff] (subtractive decode)
+[    0.106150] pci 0000:00:14.4:   bridge window [mem 0x000d0000-0x000d3fff] (subtractive decode)
+[    0.106152] pci 0000:00:14.4:   bridge window [mem 0x000d4000-0x000d7fff] (subtractive decode)
+[    0.106155] pci 0000:00:14.4:   bridge window [mem 0x000d8000-0x000dbfff] (subtractive decode)
+[    0.106158] pci 0000:00:14.4:   bridge window [mem 0x000dc000-0x000dffff] (subtractive decode)
+[    0.106161] pci 0000:00:14.4:   bridge window [mem 0x000e0000-0x000e3fff] (subtractive decode)
+[    0.106164] pci 0000:00:14.4:   bridge window [mem 0x000e4000-0x000e7fff] (subtractive decode)
+[    0.106167] pci 0000:00:14.4:   bridge window [mem 0x000e8000-0x000ebfff] (subtractive decode)
+[    0.106170] pci 0000:00:14.4:   bridge window [mem 0x000ec000-0x000effff] (subtractive decode)
+[    0.106173] pci 0000:00:14.4:   bridge window [mem 0xa0000000-0xdfffffff] (subtractive decode)
+[    0.106176] pci 0000:00:14.4:   bridge window [mem 0xe4000000-0xffffffff] (subtractive decode)
+[    0.106232] pci_bus 0000:00: on NUMA node 0
+[    0.106257] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.AGP_._PRT]
+[    0.106346] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PB4_._PRT]
+[    0.106401] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PB5_._PRT]
+[    0.106446] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PB6_._PRT]
+[    0.106535] ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.P2P_._PRT]
+[    0.106619] ACPI _OSC control for PCIe not granted, disabling ASPM
+[    0.108120] ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 7 10 11 12 14 15) *0, disabled.
+[    0.108171] ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 7 10 11 12 14 15) *0, disabled.
+[    0.108218] ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 7 10 11 12 14 15) *0, disabled.
+[    0.108264] ACPI: PCI Interrupt Link [LNKD] (IRQs 3 4 5 7 10 11 12 14 15) *0, disabled.
+[    0.108311] ACPI: PCI Interrupt Link [LNKE] (IRQs 3 4 5 7 10 11 12 14 15) *0, disabled.
+[    0.108357] ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 7 10 11 12 14 15) *0, disabled.
+[    0.108403] ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 5 7 10 11 12 14 15) *0, disabled.
+[    0.108449] ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 7 10 11 12 14 15) *0, disabled.
+[    0.108518] vgaarb: device added: PCI:0000:01:05.0,decodes=io+mem,owns=io+mem,locks=none
+[    0.108518] vgaarb: loaded
+[    0.108518] vgaarb: bridge control possible 0000:01:05.0
+[    0.108518] SCSI subsystem initialized
+[    0.108518] ACPI: bus type scsi registered
+[    0.109031] libata version 3.00 loaded.
+[    0.109117] ACPI: bus type usb registered
+[    0.109173] usbcore: registered new interface driver usbfs
+[    0.109198] usbcore: registered new interface driver hub
+[    0.109214] usbcore: registered new device driver usb
+[    0.109214] PCI: Using ACPI for IRQ routing
+[    0.112197] PCI: pci_cache_line_size set to 64 bytes
+[    0.112347] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[    0.112353] e820: reserve RAM buffer [mem 0x8fd70000-0x8fffffff]
+[    0.112358] e820: reserve RAM buffer [mem 0x8fe58000-0x8fffffff]
+[    0.112362] e820: reserve RAM buffer [mem 0x8feed000-0x8fffffff]
+[    0.112367] e820: reserve RAM buffer [mem 0x8ff00000-0x8fffffff]
+[    0.112616] NetLabel: Initializing
+[    0.112620] NetLabel:  domain hash size = 128
+[    0.112623] NetLabel:  protocols = UNLABELED CIPSOv4
+[    0.112648] NetLabel:  unlabeled traffic allowed by default
+[    0.112843] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0
+[    0.112854] hpet0: 4 comparators, 32-bit 14.318180 MHz counter
+[    0.114023] Switching to clocksource hpet
+[    0.129280] pnp: PnP ACPI init
+[    0.129318] ACPI: bus type pnp registered
+[    0.129636] system 00:00: [mem 0xfec00000-0xfec00fff] could not be reserved
+[    0.129644] system 00:00: [mem 0xfee00000-0xfee00fff] has been reserved
+[    0.129654] system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.130077] pnp 00:01: Plug and Play ACPI device, IDs PNP0103 (active)
+[    0.130174] pnp 00:02: [dma 4]
+[    0.130239] pnp 00:02: Plug and Play ACPI device, IDs PNP0200 (active)
+[    0.130314] pnp 00:03: Plug and Play ACPI device, IDs PNP0c04 (active)
+[    0.130456] pnp 00:04: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.130529] pnp 00:05: Plug and Play ACPI device, IDs PNP0800 (active)
+[    0.130620] pnp 00:06: Plug and Play ACPI device, IDs PNP0303 (active)
+[    0.130713] pnp 00:07: Plug and Play ACPI device, IDs SYN0150 SYN0100 SYN0002 PNP0f13 (active)
+[    0.130854] system 00:08: [io  0x0400-0x04cf] has been reserved
+[    0.130861] system 00:08: [io  0x04d0-0x04d1] has been reserved
+[    0.130867] system 00:08: [io  0x04d6] has been reserved
+[    0.130874] system 00:08: [io  0x0680-0x06ff] has been reserved
+[    0.130880] system 00:08: [io  0x077a] has been reserved
+[    0.130886] system 00:08: [io  0x0c00-0x0c01] has been reserved
+[    0.130892] system 00:08: [io  0x0c14] has been reserved
+[    0.130899] system 00:08: [io  0x0c50-0x0c52] has been reserved
+[    0.130905] system 00:08: [io  0x0c6c] has been reserved
+[    0.130911] system 00:08: [io  0x0c6f] has been reserved
+[    0.130918] system 00:08: [io  0x0cd0-0x0cdb] has been reserved
+[    0.130925] system 00:08: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.131095] system 00:09: [mem 0x000e0000-0x000fffff] could not be reserved
+[    0.131102] system 00:09: [mem 0xfff00000-0xffffffff] has been reserved
+[    0.131110] system 00:09: Plug and Play ACPI device, IDs PNP0c01 (active)
+[    0.131230] pnp 00:0a: Plug and Play ACPI device, IDs ENE0100 (active)
+[    0.131370] pnp 00:0b: Plug and Play ACPI device, IDs HPQ0004 (active)
+[    0.132083] pnp: PnP ACPI: found 12 devices
+[    0.132086] ACPI: ACPI bus type pnp unregistered
+[    0.171043] pci 0000:09:00.0: no compatible bridge window for [mem 0xffff0000-0xffffffff pref]
+[    0.171121] pci 0000:00:06.0: BAR 14: assigned [mem 0xb2500000-0xb25fffff]
+[    0.171125] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    0.171130] pci 0000:00:01.0:   bridge window [io  0x5000-0x5fff]
+[    0.171135] pci 0000:00:01.0:   bridge window [mem 0xb2200000-0xb23fffff]
+[    0.171140] pci 0000:00:01.0:   bridge window [mem 0xa0000000-0xafffffff 64bit pref]
+[    0.171145] pci 0000:00:04.0: PCI bridge to [bus 02-07]
+[    0.171149] pci 0000:00:04.0:   bridge window [io  0x3000-0x4fff]
+[    0.171154] pci 0000:00:04.0:   bridge window [mem 0xb1200000-0xb21fffff]
+[    0.171159] pci 0000:00:04.0:   bridge window [mem 0xb0000000-0xb0ffffff 64bit pref]
+[    0.171164] pci 0000:00:05.0: PCI bridge to [bus 08]
+[    0.171170] pci 0000:00:05.0:   bridge window [mem 0xb1100000-0xb11fffff]
+[    0.171178] pci 0000:09:00.0: BAR 6: assigned [mem 0xb1020000-0xb102ffff pref]
+[    0.171181] pci 0000:00:06.0: PCI bridge to [bus 09]
+[    0.171185] pci 0000:00:06.0:   bridge window [io  0x2000-0x2fff]
+[    0.171190] pci 0000:00:06.0:   bridge window [mem 0xb2500000-0xb25fffff]
+[    0.171194] pci 0000:00:06.0:   bridge window [mem 0xb1000000-0xb10fffff 64bit pref]
+[    0.171200] pci 0000:00:14.4: PCI bridge to [bus 80-8f]
+[    0.171238] pci 0000:00:14.4:   bridge window [io  0x1000-0x1fff]
+[    0.171261] pci 0000:00:01.0: setting latency timer to 64
+[    0.171300] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+[    0.171303] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+[    0.171307] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+[    0.171310] pci_bus 0000:00: resource 7 [mem 0x000c0000-0x000c3fff]
+[    0.171313] pci_bus 0000:00: resource 8 [mem 0x000c4000-0x000c7fff]
+[    0.171316] pci_bus 0000:00: resource 9 [mem 0x000c8000-0x000cbfff]
+[    0.171319] pci_bus 0000:00: resource 10 [mem 0x000d0000-0x000d3fff]
+[    0.171322] pci_bus 0000:00: resource 11 [mem 0x000d4000-0x000d7fff]
+[    0.171325] pci_bus 0000:00: resource 12 [mem 0x000d8000-0x000dbfff]
+[    0.171328] pci_bus 0000:00: resource 13 [mem 0x000dc000-0x000dffff]
+[    0.171331] pci_bus 0000:00: resource 14 [mem 0x000e0000-0x000e3fff]
+[    0.171334] pci_bus 0000:00: resource 15 [mem 0x000e4000-0x000e7fff]
+[    0.171337] pci_bus 0000:00: resource 16 [mem 0x000e8000-0x000ebfff]
+[    0.171340] pci_bus 0000:00: resource 17 [mem 0x000ec000-0x000effff]
+[    0.171343] pci_bus 0000:00: resource 18 [mem 0xa0000000-0xdfffffff]
+[    0.171346] pci_bus 0000:00: resource 19 [mem 0xe4000000-0xffffffff]
+[    0.171349] pci_bus 0000:01: resource 0 [io  0x5000-0x5fff]
+[    0.171352] pci_bus 0000:01: resource 1 [mem 0xb2200000-0xb23fffff]
+[    0.171355] pci_bus 0000:01: resource 2 [mem 0xa0000000-0xafffffff 64bit pref]
+[    0.171358] pci_bus 0000:02: resource 0 [io  0x3000-0x4fff]
+[    0.171361] pci_bus 0000:02: resource 1 [mem 0xb1200000-0xb21fffff]
+[    0.171365] pci_bus 0000:02: resource 2 [mem 0xb0000000-0xb0ffffff 64bit pref]
+[    0.171368] pci_bus 0000:08: resource 1 [mem 0xb1100000-0xb11fffff]
+[    0.171371] pci_bus 0000:09: resource 0 [io  0x2000-0x2fff]
+[    0.171374] pci_bus 0000:09: resource 1 [mem 0xb2500000-0xb25fffff]
+[    0.171377] pci_bus 0000:09: resource 2 [mem 0xb1000000-0xb10fffff 64bit pref]
+[    0.171381] pci_bus 0000:80: resource 0 [io  0x1000-0x1fff]
+[    0.171384] pci_bus 0000:80: resource 4 [io  0x0000-0x0cf7]
+[    0.171387] pci_bus 0000:80: resource 5 [io  0x0d00-0xffff]
+[    0.171390] pci_bus 0000:80: resource 6 [mem 0x000a0000-0x000bffff]
+[    0.171393] pci_bus 0000:80: resource 7 [mem 0x000c0000-0x000c3fff]
+[    0.171396] pci_bus 0000:80: resource 8 [mem 0x000c4000-0x000c7fff]
+[    0.171399] pci_bus 0000:80: resource 9 [mem 0x000c8000-0x000cbfff]
+[    0.171402] pci_bus 0000:80: resource 10 [mem 0x000d0000-0x000d3fff]
+[    0.171405] pci_bus 0000:80: resource 11 [mem 0x000d4000-0x000d7fff]
+[    0.171408] pci_bus 0000:80: resource 12 [mem 0x000d8000-0x000dbfff]
+[    0.171411] pci_bus 0000:80: resource 13 [mem 0x000dc000-0x000dffff]
+[    0.171414] pci_bus 0000:80: resource 14 [mem 0x000e0000-0x000e3fff]
+[    0.171417] pci_bus 0000:80: resource 15 [mem 0x000e4000-0x000e7fff]
+[    0.171420] pci_bus 0000:80: resource 16 [mem 0x000e8000-0x000ebfff]
+[    0.171423] pci_bus 0000:80: resource 17 [mem 0x000ec000-0x000effff]
+[    0.171426] pci_bus 0000:80: resource 18 [mem 0xa0000000-0xdfffffff]
+[    0.171429] pci_bus 0000:80: resource 19 [mem 0xe4000000-0xffffffff]
+[    0.171482] NET: Registered protocol family 2
+[    0.171661] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.171706] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.171749] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.171792] TCP: reno registered
+[    0.171796] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.171808] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.171890] NET: Registered protocol family 1
+[    0.171902] pci 0000:00:01.0: MSI quirk detected; subordinate MSI disabled
+[    1.058126] pci 0000:01:05.0: Boot video device
+[    1.058141] PCI: CLS 64 bytes, default 64
+[    1.058217] Unpacking initramfs...
+[    2.667767] Freeing initrd memory: 29860k freed
+[    2.699403] Simple Boot Flag at 0x44 set to 0x1
+[    2.700132] apm: BIOS not found.
+[    2.700739] Initialise module verification
+[    2.700795] audit: initializing netlink socket (disabled)
+[    2.700817] type=2000 audit(1366046038.699:1): initialized
+[    2.725589] bounce pool size: 64 pages
+[    2.725616] HugeTLB registered 4 MB page size, pre-allocated 0 pages
+[    2.727654] VFS: Disk quotas dquot_6.5.2
+[    2.727776] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    2.729069] msgmni has been set to 1700
+[    2.729217] SELinux:  Registering netfilter hooks
+[    2.730523] alg: No test for stdrng (krng)
+[    2.730541] NET: Registered protocol family 38
+[    2.730548] Key type asymmetric registered
+[    2.730553] Asymmetric key parser 'x509' registered
+[    2.730642] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    2.730741] io scheduler noop registered
+[    2.730744] io scheduler deadline registered
+[    2.730761] io scheduler cfq registered (default)
+[    2.730983] pcieport 0000:00:04.0: irq 40 for MSI/MSI-X
+[    2.731133] pcieport 0000:00:05.0: irq 41 for MSI/MSI-X
+[    2.731220] pcieport 0000:00:06.0: irq 42 for MSI/MSI-X
+[    2.731312] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    2.731336] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    2.731338] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    2.731547] acpiphp: Slot [1] registered
+[    2.731702] vesafb: mode is 1024x768x32, linelength=4096, pages=0
+[    2.731704] vesafb: scrolling: redraw
+[    2.731707] vesafb: Truecolor: size=0:8:8:8, shift=0:16:8:0
+[    2.732101] vesafb: framebuffer at 0xa0000000, mapped to 0xf7c80000, using 3072k, total 3072k
+[    2.732260] Console: switching to colour frame buffer device 128x48
+[    2.942874] fb0: VESA VGA frame buffer device
+[    2.944398] ACPI: AC Adapter [ACAD] (on-line)
+[    2.944536] input: Power Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
+[    2.944542] ACPI: Power Button [PWRB]
+[    2.944601] input: Sleep Button as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00/input/input1
+[    2.944604] ACPI: Sleep Button [SLPB]
+[    2.944682] input: Lid Switch as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input2
+[    2.945090] ACPI: Lid Switch [LID]
+[    2.945213] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input3
+[    2.945222] ACPI: Power Button [PWRF]
+[    2.951850] [Firmware Bug]: Invalid critical threshold (0)
+[    2.952639] thermal LNXTHERM:00: registered as thermal_zone0
+[    2.952641] ACPI: Thermal Zone [THRM] (49 C)
+[    2.952679] GHES: HEST is not enabled!
+[    2.952817] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    2.953142] ACPI: Battery Slot [BAT0] (battery absent)
+[    2.953989] Non-volatile memory driver v1.3
+[    2.953992] Linux agpgart interface v0.103
+[    2.955586] loop: module loaded
+[    2.955670] ahci 0000:00:11.0: version 3.0
+[    2.955885] ahci 0000:00:11.0: AHCI 0001.0100 32 slots 3 ports 3 Gbps 0x7 impl SATA mode
+[    2.955890] ahci 0000:00:11.0: flags: 64bit ncq sntf ilck led clo pmp pio ccc 
+[    2.956820] scsi0 : ahci
+[    2.957084] scsi1 : ahci
+[    2.957242] scsi2 : ahci
+[    2.957383] ata1: SATA max UDMA/133 abar m1024@0xb2408000 port 0xb2408100 irq 22
+[    2.957390] ata2: SATA max UDMA/133 abar m1024@0xb2408000 port 0xb2408180 irq 22
+[    2.957397] ata3: SATA max UDMA/133 abar m1024@0xb2408000 port 0xb2408200 irq 22
+[    2.957687] libphy: Fixed MDIO Bus: probed
+[    2.957881] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.957885] ehci-pci: EHCI PCI platform driver
+[    2.957985] ehci-pci 0000:00:12.2: setting latency timer to 64
+[    2.957992] ehci-pci 0000:00:12.2: EHCI Host Controller
+[    2.958103] ehci-pci 0000:00:12.2: new USB bus registered, assigned bus number 1
+[    2.958123] QUIRK: Enable AMD PLL fix
+[    2.958129] ehci-pci 0000:00:12.2: applying AMD SB700/SB800/Hudson-2/3 EHCI dummy qh workaround
+[    2.958136] ehci-pci 0000:00:12.2: applying AMD SB600/SB700 USB freeze workaround
+[    2.958200] ehci-pci 0000:00:12.2: debug port 1
+[    2.958282] ehci-pci 0000:00:12.2: irq 17, io mem 0xb2408500
+[    2.964062] ehci-pci 0000:00:12.2: USB 2.0 started, EHCI 1.00
+[    2.964106] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    2.964112] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.964118] usb usb1: Product: EHCI Host Controller
+[    2.964124] usb usb1: Manufacturer: Linux 3.8.6-203.fc18.i686 ehci_hcd
+[    2.964129] usb usb1: SerialNumber: 0000:00:12.2
+[    2.964416] hub 1-0:1.0: USB hub found
+[    2.964427] hub 1-0:1.0: 6 ports detected
+[    2.964942] ehci-pci 0000:00:13.2: setting latency timer to 64
+[    2.964949] ehci-pci 0000:00:13.2: EHCI Host Controller
+[    2.965100] ehci-pci 0000:00:13.2: new USB bus registered, assigned bus number 2
+[    2.965109] ehci-pci 0000:00:13.2: applying AMD SB700/SB800/Hudson-2/3 EHCI dummy qh workaround
+[    2.965117] ehci-pci 0000:00:13.2: applying AMD SB600/SB700 USB freeze workaround
+[    2.965175] ehci-pci 0000:00:13.2: debug port 1
+[    2.965244] ehci-pci 0000:00:13.2: irq 19, io mem 0xb2408400
+[    2.971062] ehci-pci 0000:00:13.2: USB 2.0 started, EHCI 1.00
+[    2.971091] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[    2.971097] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.971102] usb usb2: Product: EHCI Host Controller
+[    2.971108] usb usb2: Manufacturer: Linux 3.8.6-203.fc18.i686 ehci_hcd
+[    2.971113] usb usb2: SerialNumber: 0000:00:13.2
+[    2.971328] hub 2-0:1.0: USB hub found
+[    2.971337] hub 2-0:1.0: 6 ports detected
+[    2.971828] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.971901] ohci_hcd 0000:00:12.0: setting latency timer to 64
+[    2.971908] ohci_hcd 0000:00:12.0: OHCI Host Controller
+[    2.972068] ohci_hcd 0000:00:12.0: new USB bus registered, assigned bus number 3
+[    2.972110] ohci_hcd 0000:00:12.0: irq 16, io mem 0xb2407000
+[    3.027111] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+[    3.027117] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.027123] usb usb3: Product: OHCI Host Controller
+[    3.027128] usb usb3: Manufacturer: Linux 3.8.6-203.fc18.i686 ohci_hcd
+[    3.027133] usb usb3: SerialNumber: 0000:00:12.0
+[    3.027380] hub 3-0:1.0: USB hub found
+[    3.027426] hub 3-0:1.0: 3 ports detected
+[    3.027605] ohci_hcd 0000:00:12.1: setting latency timer to 64
+[    3.027612] ohci_hcd 0000:00:12.1: OHCI Host Controller
+[    3.027750] ohci_hcd 0000:00:12.1: new USB bus registered, assigned bus number 4
+[    3.027815] ohci_hcd 0000:00:12.1: irq 16, io mem 0xb2406000
+[    3.082104] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001
+[    3.082110] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.082115] usb usb4: Product: OHCI Host Controller
+[    3.082120] usb usb4: Manufacturer: Linux 3.8.6-203.fc18.i686 ohci_hcd
+[    3.082126] usb usb4: SerialNumber: 0000:00:12.1
+[    3.082376] hub 4-0:1.0: USB hub found
+[    3.082423] hub 4-0:1.0: 3 ports detected
+[    3.082643] ohci_hcd 0000:00:13.0: setting latency timer to 64
+[    3.082650] ohci_hcd 0000:00:13.0: OHCI Host Controller
+[    3.082788] ohci_hcd 0000:00:13.0: new USB bus registered, assigned bus number 5
+[    3.082867] ohci_hcd 0000:00:13.0: irq 18, io mem 0xb2405000
+[    3.137109] usb usb5: New USB device found, idVendor=1d6b, idProduct=0001
+[    3.137115] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.137120] usb usb5: Product: OHCI Host Controller
+[    3.137126] usb usb5: Manufacturer: Linux 3.8.6-203.fc18.i686 ohci_hcd
+[    3.137131] usb usb5: SerialNumber: 0000:00:13.0
+[    3.137373] hub 5-0:1.0: USB hub found
+[    3.137418] hub 5-0:1.0: 3 ports detected
+[    3.137637] ohci_hcd 0000:00:13.1: setting latency timer to 64
+[    3.137644] ohci_hcd 0000:00:13.1: OHCI Host Controller
+[    3.137783] ohci_hcd 0000:00:13.1: new USB bus registered, assigned bus number 6
+[    3.137847] ohci_hcd 0000:00:13.1: irq 18, io mem 0xb2404000
+[    3.192110] usb usb6: New USB device found, idVendor=1d6b, idProduct=0001
+[    3.192116] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.192122] usb usb6: Product: OHCI Host Controller
+[    3.192127] usb usb6: Manufacturer: Linux 3.8.6-203.fc18.i686 ohci_hcd
+[    3.192132] usb usb6: SerialNumber: 0000:00:13.1
+[    3.192369] hub 6-0:1.0: USB hub found
+[    3.192414] hub 6-0:1.0: 3 ports detected
+[    3.192589] uhci_hcd: USB Universal Host Controller Interface driver
+[    3.192741] usbcore: registered new interface driver usbserial
+[    3.192763] usbcore: registered new interface driver usbserial_generic
+[    3.192782] usbserial: USB Serial support registered for generic
+[    3.192923] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f13:PS2M] at 0x60,0x64 irq 1,12
+[    3.218694] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    3.218707] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    3.218945] mousedev: PS/2 mouse device common for all mice
+[    3.220393] rtc_cmos 00:04: RTC can wake from S4
+[    3.220602] rtc_cmos 00:04: rtc core: registered rtc_cmos as rtc0
+[    3.220634] rtc0: alarms up to one day, 114 bytes nvram, hpet irqs
+[    3.220792] device-mapper: uevent: version 1.0.3
+[    3.220942] device-mapper: ioctl: 4.23.1-ioctl (2012-12-18) initialised: dm-devel@redhat.com
+[    3.220963] cpuidle: using governor ladder
+[    3.220965] cpuidle: using governor menu
+[    3.221188] EFI Variables Facility v0.08 2004-May-17
+[    3.221348] usbcore: registered new interface driver usbhid
+[    3.221350] usbhid: USB HID core driver
+[    3.221386] drop_monitor: Initializing network drop monitor service
+[    3.221498] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    3.221569] TCP: cubic registered
+[    3.221572] Initializing XFRM netlink socket
+[    3.221704] NET: Registered protocol family 10
+[    3.221924] mip6: Mobile IPv6
+[    3.221927] NET: Registered protocol family 17
+[    3.222221] Using IPI No-Shortcut mode
+[    3.222406] PM: Hibernation image not present or could not be loaded.
+[    3.222409] Loading module verification certificates
+[    3.227277] MODSIGN: Loaded cert 'Fedora kernel signing key: 95b0c8df685fb5a900a2c21d2c03a792784557dc'
+[    3.227291] registered taskstats version 1
+[    3.227853]   Magic number: 9:86:239
+[    3.228035] rtc_cmos 00:04: setting system clock to 2013-04-15 17:13:59 UTC (1366046039)
+[    3.228040] powernow-k8: this CPU is not supported anymore, using acpi-cpufreq instead.
+[    3.230659] acpi-cpufreq: overriding BIOS provided _PSD data
+[    3.241132] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input4
+[    3.262091] ata3: SATA link down (SStatus 0 SControl 300)
+[    3.266077] usb 1-3: new high-speed USB device number 2 using ehci-pci
+[    3.408756] usb 1-3: New USB device found, idVendor=064e, idProduct=c107
+[    3.408762] usb 1-3: New USB device strings: Mfr=2, Product=1, SerialNumber=3
+[    3.408768] usb 1-3: Product: HP Webcam
+[    3.408773] usb 1-3: Manufacturer: SuYin
+[    3.408778] usb 1-3: SerialNumber: CN0314-S30C-OV04-VH-R01.00.00
+[    3.417090] ata2: softreset failed (device not ready)
+[    3.419276] ata2: applying PMP SRST workaround and retrying
+[    3.419296] ata1: softreset failed (device not ready)
+[    3.422102] ata1: applying PMP SRST workaround and retrying
+[    3.512080] usb 1-4: new high-speed USB device number 3 using ehci-pci
+[    3.575091] ata2: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+[    3.577086] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    3.577655] ata1.00: ATA-8: FUJITSU MHZ2250BH G2, 8909, max UDMA/100
+[    3.577662] ata1.00: 488397168 sectors, multi 16: LBA48 NCQ (depth 31/32), AA
+[    3.578320] ata1.00: configured for UDMA/100
+[    3.578679] scsi 0:0:0:0: Direct-Access     ATA      FUJITSU MHZ2250B 8909 PQ: 0 ANSI: 5
+[    3.578989] sd 0:0:0:0: [sda] 488397168 512-byte logical blocks: (250 GB/232 GiB)
+[    3.579117] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    3.579154] sd 0:0:0:0: [sda] Write Protect is off
+[    3.579162] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    3.579266] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    3.589104] ata2.00: ATAPI: TSSTcorp CDDVDW TS-L633L, 0400, max UDMA/100
+[    3.602521] ata2.00: configured for UDMA/100
+[    3.605804] scsi 1:0:0:0: CD-ROM            TSSTcorp CDDVDW TS-L633L  0400 PQ: 0 ANSI: 5
+[    3.613048] sr0: scsi3-mmc drive: 24x/24x writer dvd-ram cd/rw xa/form2 cdda tray
+[    3.613053] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    3.613281] sr 1:0:0:0: Attached scsi CD-ROM sr0
+[    3.613427] sr 1:0:0:0: Attached scsi generic sg1 type 5
+[    3.638730] usb 1-4: New USB device found, idVendor=0bda, idProduct=0158
+[    3.638736] usb 1-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    3.638742] usb 1-4: Product: USB2.0-CRW
+[    3.638747] usb 1-4: Manufacturer: Generic
+[    3.638752] usb 1-4: SerialNumber: 20071114173400000
+[    3.658690]  sda: sda1 sda2 sda3
+[    3.659646] sd 0:0:0:0: [sda] Attached SCSI disk
+[    3.659709] Freeing unused kernel memory: 644k freed
+[    3.660550] Write protecting the kernel text: 5656k
+[    3.660665] Write protecting the kernel read-only data: 2232k
+[    3.718119] systemd[1]: systemd 197 running in system mode. (+PAM +LIBWRAP +AUDIT +SELINUX +IMA +SYSVINIT +LIBCRYPTSETUP +GCRYPT +ACL +XZ)
+[    3.718379] systemd[1]: Running in initial RAM disk.
+[    3.718637] systemd[1]: No hostname configured.
+[    3.718650] systemd[1]: Set hostname to <localhost>.
+[    3.718917] systemd[1]: Initializing machine ID from random generator.
+[    3.744785] systemd[1]: Starting Encrypted Volumes.
+[    3.744875] systemd[1]: Reached target Encrypted Volumes.
+[    3.745191] systemd[1]: Starting udev Kernel Socket.
+[    3.745339] systemd[1]: Listening on udev Kernel Socket.
+[    3.745515] systemd[1]: Starting udev Control Socket.
+[    3.745645] systemd[1]: Listening on udev Control Socket.
+[    3.745721] systemd[1]: Starting Journal Socket.
+[    3.745890] systemd[1]: Listening on Journal Socket.
+[    3.745967] systemd[1]: Starting dracut cmdline hook...
+[    3.754782] systemd[1]: Started Load Kernel Modules.
+[    3.754864] systemd[1]: Starting Journal Service...
+[    3.767558] systemd[1]: Started Journal Service.
+[    3.768533] systemd[1]: Starting Sockets.
+[    3.768578] systemd[1]: Reached target Sockets.
+[    3.768651] systemd[1]: Starting Swap.
+[    3.768683] systemd[1]: Reached target Swap.
+[    3.768717] systemd[1]: Starting Local File Systems.
+[    3.768748] systemd[1]: Reached target Local File Systems.
+[    4.073091] usb 4-3: new full-speed USB device number 2 using ohci_hcd
+[    4.094228] RPC: Registered named UNIX socket transport module.
+[    4.094233] RPC: Registered udp transport module.
+[    4.094235] RPC: Registered tcp transport module.
+[    4.094237] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    4.204410] systemd-udevd[153]: starting version 197
+[    4.238127] usb 4-3: New USB device found, idVendor=03f0, idProduct=171d
+[    4.238138] usb 4-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    4.238145] usb 4-3: Product: HP Integrated Module
+[    4.238151] usb 4-3: Manufacturer: Broadcom Corp
+[    4.370626] psmouse serio1: synaptics: Touchpad model: 1, fw: 6.5, id: 0x1c0b1, caps: 0xa04751/0xa00000/0x0, board id: 3655, fw id: 428212
+[    4.450464] input: SynPS/2 Synaptics TouchPad as /devices/platform/i8042/serio1/input/input5
+[    4.468063] usb 5-1: new full-speed USB device number 2 using ohci_hcd
+[    4.479319] acpi device:03: registered as cooling_device2
+[    4.479377] ACPI: Video Device [VGA] (multi-head: yes  rom: no  post: no)
+[    4.479441] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/LNXVIDEO:00/input/input6
+[    4.509175] wmi: Mapper loaded
+[    4.534639] [drm] Initialized drm 1.1.0 20060810
+[    4.538995] r8169 Gigabit Ethernet driver 2.3LK-NAPI loaded
+[    4.542409] r8169 0000:09:00.0: irq 43 for MSI/MSI-X
+[    4.542647] r8169 0000:09:00.0 eth0: RTL8102e at 0xf7c3e000, 00:1e:68:e6:86:2c, XID 14a00000 IRQ 43
+[    4.570263] pata_atiixp 0000:00:14.1: setting latency timer to 64
+[    4.575173] scsi3 : pata_atiixp
+[    4.577350] Initializing USB Mass Storage driver...
+[    4.577476] usbcore: registered new interface driver usb-storage
+[    4.577478] USB Mass Storage support registered.
+[    4.579091] scsi4 : pata_atiixp
+[    4.579508] ata4: PATA max UDMA/100 cmd 0x1f0 ctl 0x3f6 bmdma 0x6000 irq 14
+[    4.579511] ata5: PATA max UDMA/100 cmd 0x170 ctl 0x376 bmdma 0x6008 irq 15
+[    4.580857] [drm] radeon defaulting to kernel modesetting.
+[    4.580862] [drm] radeon kernel modesetting enabled.
+[    4.580947] checking generic (a0000000 300000) vs hw (a0000000 10000000)
+[    4.580949] fb: conflicting fb hw usage radeondrmfb vs VESA VGA - removing generic driver
+[    4.580974] Console: switching to colour dummy device 80x25
+[    4.581339] [drm] initializing kernel modesetting (RS780 0x1002:0x9612 0x103C:0x30F2).
+[    4.581360] [drm] register mmio base: 0xB2300000
+[    4.581363] [drm] register mmio size: 65536
+[    4.582673] ATOM BIOS: HP_QT8
+[    4.582714] radeon 0000:01:05.0: VRAM: 256M 0x00000000C0000000 - 0x00000000CFFFFFFF (256M used)
+[    4.582718] radeon 0000:01:05.0: GTT: 512M 0x00000000A0000000 - 0x00000000BFFFFFFF
+[    4.583664] [drm] Detected VRAM RAM=256M, BAR=256M
+[    4.583669] [drm] RAM width 32bits DDR
+[    4.584311] [TTM] Zone  kernel: Available graphics memory: 435614 kiB
+[    4.584316] [TTM] Zone highmem: Available graphics memory: 1057170 kiB
+[    4.584318] [TTM] Initializing pool allocator
+[    4.584354] [drm] radeon: 256M of VRAM memory ready
+[    4.584357] [drm] radeon: 512M of GTT memory ready.
+[    4.584377] [drm] Supports vblank timestamp caching Rev 1 (10.10.2010).
+[    4.584379] [drm] Driver supports precise vblank timestamp query.
+[    4.584400] [drm] radeon: irq initialized.
+[    4.584408] [drm] GART: num cpu pages 131072, num gpu pages 131072
+[    4.586700] [drm] Loading RS780 Microcode
+[    4.624106] [drm] PCIE GART of 512M enabled (table at 0x00000000C0040000).
+[    4.624319] radeon 0000:01:05.0: WB enabled
+[    4.624324] radeon 0000:01:05.0: fence driver on ring 0 use gpu addr 0x00000000a0000c00 and cpu addr 0xff4b9c00
+[    4.624328] radeon 0000:01:05.0: fence driver on ring 3 use gpu addr 0x00000000a0000c0c and cpu addr 0xff4b9c0c
+[    4.624918] radeon 0000:01:05.0: setting latency timer to 64
+[    4.652126] usb 5-1: New USB device found, idVendor=138a, idProduct=0001
+[    4.652132] usb 5-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    4.653639] scsi5 : usb-storage 1-4:1.0
+[    4.653915] usbcore: registered new interface driver ums-realtek
+[    4.660613] [drm] ring test on 0 succeeded in 0 usecs
+[    4.660679] [drm] ring test on 3 succeeded in 1 usecs
+[    4.660889] [drm] ib test on ring 0 succeeded in 0 usecs
+[    4.660908] [drm] ib test on ring 3 succeeded in 0 usecs
+[    4.662952] [drm] Radeon Display Connectors
+[    4.662958] [drm] Connector 0:
+[    4.662960] [drm]   VGA-1
+[    4.662963] [drm]   DDC: 0x7e40 0x7e40 0x7e44 0x7e44 0x7e48 0x7e48 0x7e4c 0x7e4c
+[    4.662965] [drm]   Encoders:
+[    4.662967] [drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[    4.662968] [drm] Connector 1:
+[    4.662970] [drm]   LVDS-1
+[    4.662973] [drm]   DDC: 0x7e50 0x7e50 0x7e54 0x7e54 0x7e58 0x7e58 0x7e5c 0x7e5c
+[    4.662974] [drm]   Encoders:
+[    4.662976] [drm]     LCD1: INTERNAL_KLDSCP_LVTMA
+[    4.662978] [drm] Connector 2:
+[    4.662980] [drm]   HDMI-A-1
+[    4.662981] [drm]   HPD1
+[    4.662984] [drm]   DDC: 0x7e60 0x7e60 0x7e64 0x7e64 0x7e68 0x7e68 0x7e6c 0x7e6c
+[    4.662985] [drm]   Encoders:
+[    4.662987] [drm]     DFP1: INTERNAL_UNIPHY
+[    4.663216] [drm] radeon: power management initialized
+[    4.671217] systemd-udevd[195]: renamed network interface eth0 to p6p1
+[    5.658407] scsi 5:0:0:0: Direct-Access     Generic- Multi-Card       1.00 PQ: 0 ANSI: 0 CCS
+[    5.659897] sd 5:0:0:0: Attached scsi generic sg2 type 0
+[    5.660517] [drm] fb mappable at 0xA0142000
+[    5.660522] [drm] vram apper at 0xA0000000
+[    5.660526] [drm] size 4096000
+[    5.660529] [drm] fb depth is 24
+[    5.660532] [drm]    pitch is 5120
+[    5.660644] fbcon: radeondrmfb (fb0) is primary device
+[    5.664888] sd 5:0:0:0: [sdb] Attached SCSI removable disk
+[    5.692139] Console: switching to colour frame buffer device 160x50
+[    5.711246] radeon 0000:01:05.0: fb0: radeondrmfb frame buffer device
+[    5.711252] radeon 0000:01:05.0: registered panic notifier
+[    5.711339] [drm] Initialized radeon 2.29.0 20080528 for 0000:01:05.0 on minor 0
+[    5.839271] bio: create slab <bio-1> at 1
+[    6.173967] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: (null)
+[    6.448217] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Opts: (null)
+[    6.999733] systemd-journald[61]: Received SIGTERM
+[    8.223583] SELinux:  Disabled at runtime.
+[    8.223632] SELinux:  Unregistering netfilter hooks
+[    8.253063] type=1404 audit(1366046044.524:2): selinux=0 auid=4294967295 ses=4294967295
+[   12.063943] systemd-udevd[380]: starting version 197
+[   12.965102] EXT4-fs (dm-1): re-mounted. Opts: (null)
+[   12.994380] kvm: Nested Virtualization enabled
+[   13.391921] tun: Universal TUN/TAP device driver, 1.6
+[   13.391930] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   16.057840] microcode: CPU0: patch_level=0x02000057
+[   16.123792] microcode: CPU1: patch_level=0x02000057
+[   16.123967] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[   16.377628] input: HP WMI hotkeys as /devices/virtual/input/input7
+[   16.907853] ACPI Warning: 0x00000b00-0x00000b07 SystemIO conflicts with Region \_SB_.PCI0.SMBS.SMBI 1 (20121018/utaddress-251)
+[   16.907870] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+[   17.132276] ene_ir: chip is 0x3926 - kbver = 0x00, rev = 0xc0
+[   17.132284] ene_ir: PLL freq = 1406
+[   17.132288] ene_ir: KB3926C detected
+[   17.132306] ene_ir: Firmware regs: 00 00
+[   17.132309] ene_ir: Hardware features:
+[   17.132312] ene_ir: * Uses GPIO 40 for IR demodulated input
+[   17.203063] Registered IR keymap rc-rc6-mce
+[   17.203282] input: ENE eHome Infrared Remote Receiver as /devices/virtual/rc/rc0/input8
+[   17.203503] rc0: ENE eHome Infrared Remote Receiver as /devices/virtual/rc/rc0
+[   17.203642] ene_ir: driver has been successfully loaded
+[   17.404287] IR NEC protocol handler initialized
+[   17.455433] sp5100_tco: SP5100/SB800 TCO WatchDog Timer Driver v0.05
+[   17.455559] sp5100_tco: PCI Revision ID: 0x3a
+[   17.455619] sp5100_tco: failed to find MMIO address, giving up.
+[   17.540608] IR RC5(x) protocol handler initialized
+[   17.626437] IR RC6 protocol handler initialized
+[   17.881553] hp_accel: laptop model unknown, using default axes configuration
+[   17.882314] lis3lv02d: 8 bits sensor found
+[   17.920108] input: ST LIS3LV02DL Accelerometer as /devices/platform/lis3lv02d/input/input9
+[   17.959213] IR JVC protocol handler initialized
+[   18.074246] IR Sony protocol handler initialized
+[   18.728247] IR SANYO protocol handler initialized
+[   18.861579] cfg80211: Calling CRDA to update world regulatory domain
+[   19.112159] Adding 2588668k swap on /dev/mapper/vg_caleuche-LogVolSwap.  Priority:-1 extents:1 across:2588668k 
+[   19.140300] input: MCE IR Keyboard/Mouse (ene_ir) as /devices/virtual/input/input10
+[   19.140541] IR MCE Keyboard/mouse protocol handler initialized
+[   19.221896] cfg80211: World regulatory domain updated:
+[   19.221905] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   19.221911] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   19.221917] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   19.221922] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[   19.221926] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   19.221931] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   19.507672] media: Linux media interface: v0.10
+[   19.508096] lirc_dev: IR Remote Control driver registered, major 247 
+[   19.719087] rc rc0: lirc_dev: driver ir-lirc-codec (ene_ir) registered at minor = 0
+[   19.719096] IR LIRC bridge handler initialized
+[   19.748241] ath5k 0000:08:00.0: registered as 'phy0'
+[   19.924390] ALSA sound/pci/hda/hda_intel.c:3040 0000:00:14.2: Using LPIB position fix
+[   19.924437] snd_hda_intel 0000:00:14.2: setting latency timer to 64
+[   19.933036] ALSA sound/pci/hda/hda_intel.c:1716 0000:00:14.2: Enable sync_write for stable communication
+[   19.984791] Linux video capture interface: v2.00
+[   20.235945] Bluetooth: Core ver 2.16
+[   20.235988] NET: Registered protocol family 31
+[   20.235990] Bluetooth: HCI device and connection manager initialized
+[   20.236800] Bluetooth: HCI socket layer initialized
+[   20.236806] Bluetooth: L2CAP socket layer initialized
+[   20.236814] Bluetooth: SCO socket layer initialized
+[   20.304296] usbcore: registered new interface driver btusb
+[   20.333931] ath: EEPROM regdomain: 0x67
+[   20.333939] ath: EEPROM indicates we should expect a direct regpair map
+[   20.333946] ath: Country alpha2 being used: 00
+[   20.333950] ath: Regpair used: 0x67
+[   20.369884] ieee80211 phy0: Selected rate control algorithm 'minstrel_ht'
+[   20.370852] ath5k: phy0: Atheros AR2425 chip found (MAC: 0xe2, PHY: 0x70)
+[   20.385462] ALSA sound/pci/hda/patch_sigmatel.c:5985 mute LED gpio 1 polarity 1
+[   20.385473] ALSA sound/pci/hda/hda_auto_parser.c:306 autoconfig: line_outs=1 (0xd/0x0/0x0/0x0/0x0) type:speaker
+[   20.385477] ALSA sound/pci/hda/hda_auto_parser.c:310    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[   20.385480] ALSA sound/pci/hda/hda_auto_parser.c:314    hp_outs=1 (0xa/0x0/0x0/0x0/0x0)
+[   20.385482] ALSA sound/pci/hda/hda_auto_parser.c:315    mono: mono_out=0x0
+[   20.385484] ALSA sound/pci/hda/hda_auto_parser.c:318    dig-out=0x1e/0x0
+[   20.385486] ALSA sound/pci/hda/hda_auto_parser.c:319    inputs:
+[   20.385489] ALSA sound/pci/hda/hda_auto_parser.c:323      Dock Mic=0xe
+[   20.385492] ALSA sound/pci/hda/hda_auto_parser.c:323      Mic=0xb
+[   20.385837] ALSA sound/pci/hda/patch_sigmatel.c:3150 stac92xx: dac_nids=1 (0x10/0x0/0x0/0x0/0x0)
+[   20.412281] input: HDA ATI SB Mic as /devices/pci0000:00/0000:00:14.2/sound/card0/input11
+[   20.412389] input: HDA ATI SB Dock Mic as /devices/pci0000:00/0000:00:14.2/sound/card0/input12
+[   20.412471] input: HDA ATI SB Front Headphone as /devices/pci0000:00/0000:00:14.2/sound/card0/input13
+[   20.412782] ALSA sound/pci/hda/hda_intel.c:3040 0000:01:05.1: Using LPIB position fix
+[   20.412831] snd_hda_intel 0000:01:05.1: setting latency timer to 64
+[   20.415124] ALSA sound/pci/hda/hda_intel.c:1716 0000:01:05.1: Enable sync_write for stable communication
+[   21.018147] input: HDA ATI HDMI HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:01.0/0000:01:05.1/sound/card1/input14
+[   22.356636] cfg80211: Calling CRDA for country: CL
+[   22.361137] cfg80211: Regulatory domain changed to country: CL
+[   22.361146] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   22.361152] cfg80211:   (2402000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[   22.361157] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[   22.361161] cfg80211:   (5250000 KHz - 5330000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[   22.361165] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[   22.385797] uvcvideo: Found UVC 1.00 device HP Webcam (064e:c107)
+[   22.402322] input: HP Webcam as /devices/pci0000:00/0000:00:12.2/usb1/1-3/1-3:1.0/input/input15
+[   22.402465] usbcore: registered new interface driver uvcvideo
+[   22.402467] USB Video Class driver (1.1.1)
+[   27.437372] EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null)
+[   29.621924] EXT4-fs (dm-2): mounted filesystem with ordered data mode. Opts: (null)
+[   30.724337] systemd-journald[381]: Received SIGUSR1
+[   32.653256] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   32.653265] Bluetooth: BNEP filters: protocol multicast
+[   32.653288] Bluetooth: BNEP socket layer initialized
+[   32.703773] Bluetooth: RFCOMM TTY layer initialized
+[   32.703791] Bluetooth: RFCOMM socket layer initialized
+[   32.703794] Bluetooth: RFCOMM ver 1.11
+[   34.340043] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   35.348849] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   35.593250] r8169 0000:09:00.0 p6p1: link down
+[   35.593303] IPv6: ADDRCONF(NETDEV_UP): p6p1: link is not ready
+[   36.006136] Ebtables v2.0 registered
+[   36.263721] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[   38.216633] wlan0: authenticate with 00:13:46:ab:24:88
+[   38.226253] wlan0: send auth to 00:13:46:ab:24:88 (try 1/3)
+[   38.230455] wlan0: authenticated
+[   38.231725] ath5k 0000:08:00.0 wlan0: disabling HT/VHT due to WEP/TKIP use
+[   38.231735] ath5k 0000:08:00.0 wlan0: disabling HT as WMM/QoS is not supported by the AP
+[   38.231742] ath5k 0000:08:00.0 wlan0: disabling VHT as WMM/QoS is not supported by the AP
+[   38.231753] wlan0: associating with AP with corrupt beacon
+[   38.232071] wlan0: associate with 00:13:46:ab:24:88 (try 1/3)
+[   38.234992] wlan0: RX AssocResp from 00:13:46:ab:24:88 (capab=0x431 status=0 aid=2)
+[   38.235527] wlan0: associated
+[   38.235588] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[   42.626415] Bridge firewalling registered
+[   42.653065] device virbr0-nic entered promiscuous mode
+[   46.375408] virbr0: topology change detected, propagating
+[   46.375417] virbr0: port 1(virbr0-nic) entered forwarding state
+[   46.375452] virbr0: port 1(virbr0-nic) entered forwarding state
+[   46.450471] virbr0: port 1(virbr0-nic) entered disabled state
+[   47.873978] cgroup: libvirtd (1232) created nested cgroup for controller "memory" which has incomplete hierarchy support. Nested cgroups may change behavior in the future.
+[   47.873985] cgroup: "memory" requires setting use_hierarchy to 1 on the root.
+[   47.874550] cgroup: libvirtd (1232) created nested cgroup for controller "devices" which has incomplete hierarchy support. Nested cgroups may change behavior in the future.
+[   47.874624] cgroup: libvirtd (1232) created nested cgroup for controller "blkio" which has incomplete hierarchy support. Nested cgroups may change behavior in the future.
+[   56.355857] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[   56.358230] sd 5:0:0:0: [sdb] Asking for cache data failed
+[   56.358238] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[   73.529965] nf_conntrack: automatic helper assignment is deprecated and it will be removed soon. Use the iptables CT target to attach helpers instead.
+[  108.066943] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  108.069309] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  108.069317] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  152.414862] fuse init (API version 7.20)
+[  159.780032] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  159.782513] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  159.782521] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  211.492072] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  211.494536] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  211.494543] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  263.204059] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  263.206300] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  263.206308] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  314.914031] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  314.916522] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  314.916530] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  366.628030] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  366.630258] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  366.630265] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  418.339911] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  418.342057] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  418.342065] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  470.051882] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  470.054126] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  470.054134] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  472.005145] ath5k: ath5k_hw_get_isr: ISR: 0x00000080 IMR: 0x00000000
+[  521.764083] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  521.766323] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  521.766331] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  573.474831] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  573.477081] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  573.477089] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  625.187984] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  625.190226] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  625.190234] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  676.899833] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  676.902082] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  676.902090] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  728.611961] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  728.614201] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  728.614209] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  780.324049] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  780.326289] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  780.326303] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  832.005704] ath5k: ath5k_hw_get_isr: ISR: 0x00000080 IMR: 0x00000000
+[  832.035972] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  832.038206] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  832.038214] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  883.747952] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  883.750200] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  883.750208] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  935.459952] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  935.462245] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  935.462257] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[  987.171866] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[  987.174128] sd 5:0:0:0: [sdb] Asking for cache data failed
+[  987.174136] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1038.884037] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1038.886260] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1038.886269] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1090.596070] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1090.598553] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1090.598561] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1142.307994] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1142.310375] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1142.310385] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1194.019989] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1194.025128] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1194.025137] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1245.731950] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1245.734201] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1245.734209] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1297.442905] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1297.445140] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1297.445149] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1349.155885] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1349.158255] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1349.158263] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1400.867960] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1400.870333] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1400.870341] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1452.579863] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1452.582230] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1452.582238] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1504.291735] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1504.294108] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1504.294116] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1556.004861] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1556.007240] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1556.007251] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1607.716820] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1607.719096] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1607.719104] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1659.427189] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1659.431334] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1659.431345] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1711.139921] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1711.142291] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1711.142298] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1762.851913] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1762.854282] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1762.854290] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1814.561977] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1814.564605] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1814.564614] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1866.276030] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1866.279420] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1866.279428] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1917.988033] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1917.990262] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1917.990270] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 1969.699903] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 1969.702278] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 1969.702286] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2021.412072] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2021.414298] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2021.414306] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2073.123056] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2073.125298] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2073.125306] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2124.835858] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2124.838105] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2124.838113] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2176.548034] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2176.550523] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2176.550532] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2228.260104] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2228.262412] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2228.262420] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2261.984948] goa-daemon[1823]: segfault at 2f ip 4bfc6d49 sp bff8e2b0 error 4 in libglib-2.0.so.0.3400.2[4bf82000+129000]
+[ 2279.972073] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2279.974718] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2279.974728] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2331.684048] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2331.686528] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2331.686536] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2383.396040] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2383.398289] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2383.398298] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2435.107918] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2435.110174] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2435.110187] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2486.820127] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2486.823494] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2486.823502] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2538.532062] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2538.534306] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2538.534314] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2590.244110] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2590.247516] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2590.247524] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2641.956156] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2641.958393] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2641.958404] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2693.668087] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2693.670330] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2693.670338] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2745.379982] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2745.382213] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2745.382222] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2797.092085] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2797.094327] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2797.094337] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2848.803952] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2848.806202] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2848.806211] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2900.516030] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2900.518261] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2900.518270] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 2952.228054] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 2952.230296] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 2952.230304] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3003.939033] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3003.941258] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3003.941266] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3055.656236] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3055.658558] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3055.658573] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3107.364043] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3107.366496] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3107.366506] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3159.075983] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3159.078216] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3159.078225] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3210.787889] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3210.790139] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3210.790147] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3262.499885] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3262.502135] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3262.502143] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3314.212085] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3314.214311] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3314.214316] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3365.922999] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3365.926231] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3365.926240] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3417.635952] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3417.638200] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3417.638207] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3469.347929] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3469.350182] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3469.350190] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3521.059944] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3521.062186] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3521.062194] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3572.772095] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3572.775484] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3572.775496] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3624.484029] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3624.486253] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3624.486260] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3676.196104] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3676.198353] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3676.198362] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3727.908029] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3727.910265] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3727.910276] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3779.620983] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3779.629906] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3779.629925] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3831.336681] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3831.339707] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3831.339719] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3832.006257] ath5k: ath5k_hw_get_isr: ISR: 0x00000080 IMR: 0x00000000
+[ 3883.043054] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3883.045279] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3883.045287] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3934.755977] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3934.758214] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3934.758222] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 3986.467834] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 3986.470105] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 3986.470115] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4038.179921] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4038.182181] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4038.182189] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4089.891866] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4089.894123] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4089.894133] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4141.603127] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4141.606493] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4141.606501] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4192.005308] ath5k: ath5k_hw_get_isr: ISR: 0x00000080 IMR: 0x00000000
+[ 4193.316038] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4193.318636] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4193.318644] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4245.028167] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4245.031531] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4245.031540] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4296.740054] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4296.742661] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4296.742669] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4348.452062] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4348.454679] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4348.454687] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4400.163055] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4400.165416] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4400.165427] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4451.876118] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4451.878377] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4451.878385] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4503.589237] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4503.591560] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4503.591584] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4555.301042] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4555.303502] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4555.303511] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4607.012065] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4607.014310] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4607.014317] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4658.725262] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4658.727513] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4658.727525] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4710.435975] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4710.438219] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4710.438227] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4762.148030] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4762.150637] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4762.150645] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4813.860358] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4813.862614] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4813.862622] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4865.572072] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4865.574313] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4865.574321] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4917.283003] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4917.286251] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4917.286259] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 4968.994065] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 4968.996291] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 4968.996299] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5020.707964] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5020.711099] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5020.711108] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5072.420674] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5072.422933] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5072.422947] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5124.131953] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5124.134210] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5124.134218] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5175.842903] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5175.845151] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5175.845159] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5227.560785] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5227.564045] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5227.564053] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5279.268132] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5279.272670] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5279.272681] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5330.981779] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5330.984072] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5330.984083] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5382.692055] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5382.694667] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5382.694676] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5434.403121] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5434.405378] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5434.405386] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5486.115925] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5486.118172] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5486.118180] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5500.122346] wlan0: deauthenticating from 00:13:46:ab:24:88 by local choice (reason=3)
+[ 5500.129981] cfg80211: Calling CRDA to update world regulatory domain
+[ 5500.138330] cfg80211: World regulatory domain updated:
+[ 5500.138340] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[ 5500.138346] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 5500.138351] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 5500.138356] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[ 5500.138360] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 5500.138365] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[ 5500.138405] cfg80211: Calling CRDA for country: CL
+[ 5500.148738] cfg80211: Regulatory domain changed to country: CL
+[ 5500.148747] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[ 5500.148751] cfg80211:   (2402000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 5500.148754] cfg80211:   (5170000 KHz - 5250000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 5500.148756] cfg80211:   (5250000 KHz - 5330000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 5500.148758] cfg80211:   (5735000 KHz - 5835000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[ 5500.613227] PM: Syncing filesystems ... done.
+[ 5500.844694] PM: Preparing system for mem sleep
+[ 5500.990676] Freezing user space processes ... (elapsed 0.01 seconds) done.
+[ 5501.002132] Freezing remaining freezable tasks ... (elapsed 0.01 seconds) done.
+[ 5501.013160] PM: Entering mem sleep
+[ 5501.013243] Suspending console(s) (use no_console_suspend to debug)
+[ 5501.014569] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 5501.014777] sd 0:0:0:0: [sda] Stopping disk
+[ 5501.106862] i8042 aux 00:07: System wakeup disabled by ACPI
+[ 5501.107710] i8042 kbd 00:06: System wakeup enabled by ACPI
+[ 5502.282149] radeon 0000:01:05.0: power state changed by ACPI to D3hot
+[ 5502.282295] PM: suspend of devices complete after 1268.607 msecs
+[ 5502.282804] PM: late suspend of devices complete after 0.503 msecs
+[ 5502.288092] pcieport 0000:00:06.0: System wakeup enabled by ACPI
+[ 5502.332352] PM: noirq suspend of devices complete after 49.542 msecs
+[ 5502.332508] ACPI: Preparing to enter system sleep state S3
+[ 5502.338056] PM: Saving platform NVS memory
+[ 5502.339926] Disabling non-boot CPUs ...
+[ 5502.341729] smpboot: CPU 1 is now offline
+[ 5502.342644] ACPI: Low-level resume complete
+[ 5502.342644] PM: Restoring platform NVS memory
+[ 5502.342644] Enabling non-boot CPUs ...
+[ 5502.342644] smpboot: Booting Node 0 Processor 1 APIC 0x1
+[ 5502.341074] Initializing CPU#1
+[ 5502.354696] CPU1 is up
+[ 5502.355698] ACPI: Waking up from system sleep state S3
+[ 5502.412290] radeon 0000:01:05.0: power state changed by ACPI to D0
+[ 5502.456451] PM: noirq resume of devices complete after 88.632 msecs
+[ 5502.456919] PM: early resume of devices complete after 0.365 msecs
+[ 5502.457343] snd_hda_intel 0000:01:05.1: setting latency timer to 64
+[ 5502.462882] pcieport 0000:00:06.0: System wakeup disabled by ACPI
+[ 5502.499758] i8042 kbd 00:06: System wakeup disabled by ACPI
+[ 5502.570233] [drm] PCIE GART of 512M enabled (table at 0x00000000C0040000).
+[ 5502.570427] radeon 0000:01:05.0: WB enabled
+[ 5502.570430] radeon 0000:01:05.0: fence driver on ring 0 use gpu addr 0x00000000a0000c00 and cpu addr 0xff4b9c00
+[ 5502.570433] radeon 0000:01:05.0: fence driver on ring 3 use gpu addr 0x00000000a0000c0c and cpu addr 0xff4b9c0c
+[ 5502.570848] radeon 0000:01:05.0: setting latency timer to 64
+[ 5502.603713] [drm] ring test on 0 succeeded in 0 usecs
+[ 5502.603776] [drm] ring test on 3 succeeded in 1 usecs
+[ 5502.603807] [drm] ib test on ring 0 succeeded in 0 usecs
+[ 5502.603830] [drm] ib test on ring 3 succeeded in 1 usecs
+[ 5502.690095] usb 5-1: reset full-speed USB device number 2 using ohci_hcd
+[ 5502.774085] ata3: SATA link down (SStatus 0 SControl 300)
+[ 5502.919083] ata2: softreset failed (device not ready)
+[ 5502.919087] ata2: applying PMP SRST workaround and retrying
+[ 5502.952106] usb 4-3: reset full-speed USB device number 2 using ohci_hcd
+[ 5503.074048] ata2: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+[ 5503.102174] btusb 4-3:1.0: no reset_resume for driver btusb?
+[ 5503.102178] btusb 4-3:1.1: no reset_resume for driver btusb?
+[ 5503.131973] ata2.00: configured for UDMA/100
+[ 5503.993083] ata1: softreset failed (device not ready)
+[ 5503.993086] ata1: applying PMP SRST workaround and retrying
+[ 5504.148086] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[ 5504.149474] ata1.00: configured for UDMA/100
+[ 5504.149579] sd 0:0:0:0: [sda] Starting disk
+[ 5507.731084] usb 1-3: reset high-speed USB device number 2 using ehci-pci
+[ 5507.885299] PM: resume of devices complete after 5428.370 msecs
+[ 5507.897462] PM: Finishing wakeup.
+[ 5507.897466] Restarting tasks ... done.
+[ 5507.941064] video LNXVIDEO:00: Restoring backlight state
+[ 5508.065027] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ 5508.071239] r8169 0000:09:00.0 p6p1: link down
+[ 5508.071316] IPv6: ADDRCONF(NETDEV_UP): p6p1: link is not ready
+[ 5510.169343] wlan0: authenticate with 00:13:46:ab:24:88
+[ 5510.174920] wlan0: send auth to 00:13:46:ab:24:88 (try 1/3)
+[ 5510.178465] wlan0: authenticated
+[ 5510.178740] ath5k 0000:08:00.0 wlan0: disabling HT/VHT due to WEP/TKIP use
+[ 5510.178744] ath5k 0000:08:00.0 wlan0: disabling HT as WMM/QoS is not supported by the AP
+[ 5510.178747] ath5k 0000:08:00.0 wlan0: disabling VHT as WMM/QoS is not supported by the AP
+[ 5510.178753] wlan0: associating with AP with corrupt beacon
+[ 5510.179262] wlan0: associate with 00:13:46:ab:24:88 (try 1/3)
+[ 5510.183188] wlan0: RX AssocResp from 00:13:46:ab:24:88 (capab=0x431 status=0 aid=2)
+[ 5510.183485] wlan0: associated
+[ 5510.183524] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[ 5536.803969] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5536.806342] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5536.806350] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5588.515875] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5588.518126] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5588.518134] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5640.227965] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5640.231200] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5640.231209] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5691.941229] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5691.943479] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5691.943489] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5743.652117] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5743.654643] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5743.654654] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5795.364264] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5795.366644] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5795.366659] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5847.075865] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5847.078246] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5847.078255] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5898.787866] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5898.790255] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5898.790267] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 5950.499931] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 5950.502302] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 5950.502310] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6002.211918] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6002.214289] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6002.214298] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6053.923070] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6053.925668] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6053.925676] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6105.635869] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6105.638242] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6105.638250] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6157.347849] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6157.350098] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6157.350106] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6209.059926] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6209.062175] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6209.062182] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6260.771947] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6260.774198] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6260.774206] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6312.483940] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6312.486180] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6312.486188] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6364.196161] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6364.198399] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6364.198407] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6415.910251] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6415.912490] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6415.912499] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6467.617732] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6467.620993] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6467.621033] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6519.332063] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6519.334695] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6519.334703] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6571.042988] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6571.046248] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6571.046259] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6622.756037] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6622.758528] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6622.758536] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6674.469089] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6674.471298] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6674.471309] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6726.180160] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6726.182382] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6726.182393] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6777.892097] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6777.894343] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6777.894351] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6829.603080] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6829.606449] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6829.606457] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6881.316075] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6881.318693] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6881.318706] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6933.026915] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6933.029146] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6933.029151] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 6984.740072] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 6984.742381] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 6984.742391] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7036.452954] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7036.456073] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7036.456081] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7088.163871] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7088.166119] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7088.166128] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7139.876054] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7139.878671] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7139.878680] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7191.588035] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7191.590253] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7191.590261] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7243.300052] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7243.303511] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7243.303519] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7295.012053] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7295.014660] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7295.014668] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7346.724037] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7346.726650] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7346.726658] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7398.434064] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7398.436668] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7398.436673] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7450.145966] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7450.148300] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7450.148308] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7501.860108] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7501.862607] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7501.862615] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7553.571923] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7553.574299] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7553.574307] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7605.284978] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7605.287571] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7605.287581] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7656.997040] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7656.999379] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7656.999389] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7708.707934] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7708.710170] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7708.710178] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7760.417950] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7760.421296] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7760.421304] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7812.132136] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7812.134627] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7812.134635] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7863.843903] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7863.847161] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7863.847172] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7915.555976] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7915.559107] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7915.559115] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 7967.268864] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 7967.271251] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 7967.271259] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8018.984297] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8018.986550] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8018.986558] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8070.689729] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8070.692239] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8070.692247] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8122.402959] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8122.405231] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8122.405240] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8174.113902] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8174.116047] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8174.116055] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8225.825960] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8225.829092] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8225.829101] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8277.538916] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8277.541169] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8277.541177] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8329.251904] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8329.254165] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8329.254175] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8380.962954] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8380.966215] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8380.966228] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8432.673893] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8432.677153] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8432.677167] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8484.385818] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8484.387943] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8484.387952] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8536.098037] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8536.102615] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8536.102623] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8587.809642] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8587.812773] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8587.812782] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8639.521787] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8639.525078] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8639.525090] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8691.233896] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8691.237152] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8691.237164] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8742.945865] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8742.948868] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8742.948877] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8794.658049] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8794.660530] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8794.660539] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8846.370699] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8846.372953] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8846.372963] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8898.083900] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8898.086152] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8898.086160] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 8949.793887] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 8949.797139] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 8949.797147] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9001.507867] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9001.510129] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9001.510140] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9053.228160] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9053.230410] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9053.230419] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9104.929592] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9104.932601] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9104.932611] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9156.641883] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9156.644128] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9156.644135] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9208.354852] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9208.357112] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9208.357121] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9260.067929] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9260.070186] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9260.070194] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9311.780287] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9311.782526] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9311.782534] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9363.492175] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9363.494429] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9363.494437] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9415.203115] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9415.205125] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9415.205133] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9466.916073] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9466.918314] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9466.918322] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9518.628041] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9518.631509] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9518.631517] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9570.339989] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9570.343237] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9570.343244] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9622.052039] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9622.054657] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9622.054665] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9673.763929] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9673.766179] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9673.766187] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9725.476090] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9725.478333] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9725.478341] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9777.188114] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9777.191481] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9777.191489] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9828.900073] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9828.902312] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9828.902320] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9880.612035] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9880.614272] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9880.614280] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9932.324136] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9932.327515] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9932.327523] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[ 9984.036204] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[ 9984.039578] sd 5:0:0:0: [sdb] Asking for cache data failed
+[ 9984.039586] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10035.748085] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10035.750326] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10035.750334] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10087.460063] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10087.462305] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10087.462313] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10139.172063] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10139.174290] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10139.174298] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10190.884063] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10190.886651] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10190.886659] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10242.596215] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10242.598416] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10242.598424] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10294.305926] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10294.308321] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10294.308332] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10346.017947] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10346.020199] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10346.020208] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10397.737080] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10397.739516] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10397.739529] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10449.442164] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10449.445565] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10449.445579] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10501.155940] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10501.159069] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10501.159082] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10552.867972] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10552.870216] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10552.870224] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10604.579770] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10604.582036] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10604.582044] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10656.291877] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10656.294126] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10656.294133] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10708.002916] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10708.005163] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10708.005171] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10759.715932] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10759.718182] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10759.718190] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10811.427879] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10811.430125] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10811.430133] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10863.139905] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10863.142152] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10863.142159] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10914.851882] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10914.854131] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10914.854139] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[10966.564080] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[10966.566322] sd 5:0:0:0: [sdb] Asking for cache data failed
+[10966.566330] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[11018.275899] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[11018.278132] sd 5:0:0:0: [sdb] Asking for cache data failed
+[11018.278141] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[11069.987882] sd 5:0:0:0: [sdb] Test WP failed, assume Write Enabled
+[11069.990129] sd 5:0:0:0: [sdb] Asking for cache data failed
+[11069.990137] sd 5:0:0:0: [sdb] Assuming drive cache: write through
+[11077.572119] ------------[ cut here ]------------
+[11077.572268] kernel BUG at fs/buffer.c:1833!
+[11077.572387] invalid opcode: 0000 [#1] SMP 
+[11077.572520] Modules linked in: fuse ebtable_nat xt_CHECKSUM bridge stp llc nf_conntrack_netbios_ns nf_conntrack_broadcast ipt_MASQUERADE ip6table_mangle ip6t_REJECT nf_conntrack_ipv6 nf_defrag_ipv6 iptable_nat nf_nat_ipv4 nf_nat iptable_mangle nf_conntrack_ipv4 nf_defrag_ipv4 xt_conntrack nf_conntrack ebtable_filter ebtables ip6table_filter ip6_tables rfcomm bnep uvcvideo videobuf2_vmalloc snd_hda_codec_hdmi videobuf2_memops videobuf2_core snd_hda_codec_idt arc4 btusb bluetooth videodev snd_hda_intel snd_hda_codec snd_hwdep ath5k ir_lirc_codec snd_seq ath media lirc_dev snd_seq_device mac80211 ir_mce_kbd_decoder cfg80211 snd_pcm ir_sanyo_decoder snd_page_alloc ir_sony_decoder snd_timer ir_jvc_decoder hp_accel snd ir_rc6_decoder ir_rc5_decoder lis3lv02d sp5100_tco soundcore ir_nec_decoder rc_rc6_mce
+[11077.573015]  k10temp ene_ir i2c_piix4 input_polldev hp_wmi joydev sparse_keymap rfkill microcode rc_core vhost_net tun macvtap macvlan kvm_amd kvm uinput ata_generic pata_acpi ums_realtek radeon usb_storage pata_atiixp i2c_algo_bit drm_kms_helper ttm r8169 drm mii i2c_core wmi video sunrpc
+[11077.573015] Pid: 9365, comm: e4defrag Not tainted 3.8.6-203.fc18.i686 #1 Hewlett-Packard HP Pavilion dv5 Notebook PC/30F2
+[11077.573015] EIP: 0060:[<c05757d1>] EFLAGS: 00010206 CPU: 0
+[11077.573015] EIP is at __block_write_begin+0x321/0x330
+[11077.573015] EAX: 80000029 EBX: 00000800 ECX: 00000000 EDX: f40930e0
+[11077.573015] ESI: 00001000 EDI: 00000002 EBP: c7c7fd84 ESP: c7c7fd2c
+[11077.573015]  DS: 007b ES: 007b FS: 00d8 GS: 00e0 SS: 0068
+[11077.573015] CR0: 8005003b CR2: 4bd66f20 CR3: 07fd5000 CR4: 000007d0
+[11077.573015] DR0: 00000000 DR1: 00000000 DR2: 00000000 DR3: 00000000
+[11077.573015] DR6: ffff0ff0 DR7: 00000400
+[11077.573015] Process e4defrag (pid: 9365, ti=c7c7e000 task=f1382610 task.ti=c7c7e000)
+[11077.573015] Stack:
+[11077.573015]  00001ff6 c816cb28 c816cb28 f40930e0 c7c7fd5c c05fddb7 c8314c40 00000800
+[11077.573015]  c8314c40 00001800 f40930e0 c8279ca8 00001ff8 00001ff6 00000002 00024001
+[11077.573015]  00001ff6 00008002 00006ff7 00000800 00001000 00000002 c7c7fe98 c05f309f
+[11077.573015] Call Trace:
+[11077.573015]  [<c05fddb7>] ? jbd2_journal_try_to_free_buffers+0x87/0xf0
+[11077.573015]  [<c05f309f>] ext4_move_extents+0xbff/0x1130
+[11077.573015]  [<c05b9f50>] ? ext4_get_block_write+0x30/0x30
+[11077.573015]  [<c04769ee>] ? check_preempt_wakeup+0x1be/0x260
+[11077.573015]  [<c046d048>] ? ttwu_do_wakeup+0x28/0x110
+[11077.573015]  [<c0562340>] ? mnt_clone_write+0x10/0x30
+[11077.573015]  [<c05630a0>] ? __mnt_want_write_file+0x40/0x60
+[11077.573015]  [<c05bed40>] ext4_ioctl+0x8f0/0xa00
+[11077.573015]  [<c051da7b>] ? tlb_flush_mmu+0x5b/0x90
+[11077.573015]  [<c051dac7>] ? tlb_finish_mmu+0x17/0x40
+[11077.573015]  [<c05be450>] ? ext4_bio_write_page+0x3e0/0x3e0
+[11077.573015]  [<c0558a4b>] do_vfs_ioctl+0x48b/0x590
+[11077.573015]  [<c0523215>] ? remove_vma+0x45/0x60
+[11077.573015]  [<c0525066>] ? do_munmap+0x236/0x2f0
+[11077.573015]  [<c0558bbb>] sys_ioctl+0x6b/0x80
+[11077.600050]  [<c0983ecd>] sysenter_do_call+0x12/0x28
+[11077.600050] Code: 00 00 b8 82 46 b1 c0 e8 4e 91 ec ff 8b 55 e8 e9 28 fe ff ff 0f 0b 8b 4d cc 8b 55 c4 8b 45 d0 e8 96 f7 ff ff e9 4f ff ff ff 0f 0b <0f> 0b e8 2d 16 40 00 90 8d b4 26 00 00 00 00 55 89 e5 83 ec 1c
+[11077.600050] EIP: [<c05757d1>] __block_write_begin+0x321/0x330 SS:ESP 0068:c7c7fd2c
+[11077.677759] ---[ end trace a6871215983d80cd ]---

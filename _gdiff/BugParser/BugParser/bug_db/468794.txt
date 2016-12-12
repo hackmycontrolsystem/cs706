@@ -1,0 +1,28 @@
+------------[ cut here ]------------
+WARNING: at fs/buffer.c:1186 mark_buffer_dirty+0x2f/0x87() (Not tainted)
+Modules linked in: ipt_LOG fuse i915 drm cpufreq_ondemand acpi_cpufreq freq_table dm_multipath uinput snd_hda_intel snd_seq_du
+mmy snd_seq_oss arc4 firewire_sbp2 ecb snd_seq_midi_event crypto_blkcipher snd_seq snd_seq_device iwlagn snd_pcm_oss iwlcore s
+nd_mixer_oss firewire_ohci thinkpad_acpi firewire_core snd_pcm i2c_i801 snd_timer rfkill crc_itu_t btusb video pcspkr hwmon ye
+nta_socket i2c_core snd_page_alloc snd_hwdep rsrc_nonstatic joydev mac80211 snd e1000e output bluetooth battery ac wmi soundco
+re cfg80211 [last unloaded: microcode]
+Pid: 3944, comm: umount Not tainted 2.6.27.12-170.2.5.fc10.x86_64 #1
+
+Call Trace:
+ [<ffffffff81041992>] warn_on_slowpath+0x60/0x90
+ [<ffffffff810ba178>] ? __slab_free+0x83/0x28e
+ [<ffffffff811276d1>] ? journal_destroy+0x1bf/0x1d1
+ [<ffffffff811276d1>] ? journal_destroy+0x1bf/0x1d1
+ [<ffffffff811276d1>] ? journal_destroy+0x1bf/0x1d1
+ [<ffffffff81055475>] ? autoremove_wake_function+0x0/0x38
+ [<ffffffff810e22da>] mark_buffer_dirty+0x2f/0x87
+ [<ffffffff8111b6ef>] ext3_put_super+0x5c/0x1e4
+ [<ffffffff810c2352>] generic_shutdown_super+0x63/0xd9
+ [<ffffffff810c23dd>] kill_block_super+0x15/0x2a
+ [<ffffffff810c24c4>] deactivate_super+0x69/0x7e
+ [<ffffffff810d67d7>] mntput_no_expire+0x106/0x144
+ [<ffffffff810d6dc5>] sys_umount+0x2d7/0x306
+ [<ffffffff810c7757>] ? path_put+0x1d/0x21
+ [<ffffffff8101024a>] system_call_fastpath+0x16/0x1b
+
+---[ end trace bf00bfdfcf20c8f5 ]---
+-- 
